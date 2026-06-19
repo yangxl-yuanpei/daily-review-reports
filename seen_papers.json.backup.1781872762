@@ -1,0 +1,87 @@
+{
+  "arxiv:2606.20105": {
+    "title": "Can DFT-trained neural network potentials reproduce structure, solvation, and water-exchange properties in aqueous magnesium solutions?",
+    "date_seen": "2026-06-19",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface",
+      "dft"
+    ]
+  },
+  "arxiv:2606.19152": {
+    "title": "AdsMind: A Physics-Grounded Multi-Agent System for Self-Correcting Discovery of Adsorption Configurations on Heterogeneous Catalyst Surfaces",
+    "date_seen": "2026-06-19",
+    "tags": [
+      "catalysis",
+      "surface",
+      "dft",
+      "generative"
+    ]
+  },
+  "arxiv:2606.18163": {
+    "title": "Dynamical properties of ab initio water from machine-learning potentials",
+    "date_seen": "2026-06-19",
+    "tags": [
+      "electrochemistry",
+      "dft"
+    ]
+  },
+  "arxiv:2606.15892": {
+    "title": "Scalar-pathway fidelity improves physical accuracy in short-range equivariant interatomic potentials",
+    "date_seen": "2026-06-19",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface"
+    ]
+  },
+  "arxiv:2606.11809": {
+    "title": "Symplectic and Thermodynamically Consistent Molecular Dynamics in the Frequency Domain",
+    "date_seen": "2026-06-19",
+    "tags": [
+      "general"
+    ]
+  },
+  "arxiv:2605.28960": {
+    "title": "How Atoms Interact Within Molecules",
+    "date_seen": "2026-06-19",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "arxiv:2605.25710": {
+    "title": "Machine Learning Multiscale Interactions",
+    "date_seen": "2026-06-19",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "arxiv:2605.25351": {
+    "title": "Anomalous Subsurface Vacancy Stabilization Dictated by Geometry-Electronic Decoupling on Metal Surfaces",
+    "date_seen": "2026-06-19",
+    "tags": [
+      "MLFF",
+      "catalysis",
+      "surface",
+      "dft"
+    ]
+  },
+  "arxiv:2605.24880": {
+    "title": "Machine-learned atomistic simulations reveal the basis of hydrogen-induced crack-plane transition in alpha-Fe",
+    "date_seen": "2026-06-19",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "arxiv:2605.20785": {
+    "title": "Anisotropic Crystallization Kinetics and Interfacial Dynamics of Phase-Change Material Sb$_2$S$_3$ from Machine Learning Force Field Simulations",
+    "date_seen": "2026-06-19",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface"
+    ]
+  }
+}
