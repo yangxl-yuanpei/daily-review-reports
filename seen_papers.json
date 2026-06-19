@@ -69,5 +69,82 @@
     "tags": [
       "general"
     ]
+  },
+  "s2:31c045e76c51e53b74672f18eac279795eaf663d": {
+    "title": "Anomalous Subsurface Vacancy Stabilization Dictated by Geometry-Electronic Decoupling on Metal Surfaces",
+    "date_seen": "2026-06-19",
+    "tags": [
+      "MLFF",
+      "catalysis",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:19065a075c3cacfb49537bdb53075e6badeb4bd5": {
+    "title": "Machine-learned atomistic simulations reveal the basis of hydrogen-induced crack-plane transition in alpha-Fe",
+    "date_seen": "2026-06-19",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:013edcfc3237609f94157588f2849bfae00ad28c": {
+    "title": "Advancements in characterization of protein dynamics with machine learning",
+    "date_seen": "2026-06-19",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:013f4aca68a57e313b2c5879431edf5dd2a89f7f": {
+    "title": "MBD-ML: Many-body dispersion from machine learning for molecules and materials",
+    "date_seen": "2026-06-19",
+    "tags": [
+      "catalysis"
+    ]
+  },
+  "s2:01dd74697240bdd1911c590c7b7f74c4adda6f81": {
+    "title": "Artificial intelligence-facilitated multiscale theoretical modelling to advance battery science",
+    "date_seen": "2026-06-19",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:01e9e03f16814da49371f1d49dab1a5b47125f24": {
+    "title": "Superionic Amorphous Li2ZrCl6 and Li2HfCl6.",
+    "date_seen": "2026-06-19",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:0207e8c081f922ed20957b1595c7c9dae48ab197": {
+    "title": "Physics-Aware Auxiliary Losses Improve Out-of-Distribution Generalization of a GNN Synthesizability Filter",
+    "date_seen": "2026-06-19",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:025d5130a5171e8ed43c025b763f6bea7303cd26": {
+    "title": "Accurate density functional theory for noncovalent interactions in charged systems",
+    "date_seen": "2026-06-19",
+    "tags": [
+      "catalysis",
+      "dft"
+    ]
+  },
+  "s2:02618164e8c6d7abb7c6632d96136510eac118e0": {
+    "title": "Interlayer Force Field for the Anisotropic Interaction between Planar Organic Molecules and Two-Dimensional Hexagonal Boron Nitride.",
+    "date_seen": "2026-06-19",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:026cf18463f7242dae4494d607b8f48cd6e0d5ae": {
+    "title": "Biophysical Considerations for Rational Antibody and ADC Design",
+    "date_seen": "2026-06-19",
+    "tags": [
+      "general"
+    ]
   }
 }
