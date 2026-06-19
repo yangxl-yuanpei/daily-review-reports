@@ -143,23 +143,35 @@ def _render_paper_card(p):
     </div>"""
 
 def load_keywords_for_site():
-    """Read current keywords from keywords.json for display."""
+    """Read current keywords + S2 config from keywords.json for display."""
     try:
         kw = json.loads(KEYWORDS_FILE.read_text(encoding="utf-8"))
-        return kw.get("topics", [])
+        ss = kw.get("semantic_scholar", {})
+        return {
+            "topics": kw.get("topics", []),
+            "fields_of_study": ss.get("fields_of_study", []),
+            "year_range": ss.get("year_range", ""),
+        }
     except Exception:
-        return []
+        return {"topics": [], "fields_of_study": [], "year_range": ""}
 
-def render_keywords_section(topics):
+def render_keywords_section(config):
+    topics = config.get("topics", [])
+    fos = config.get("fields_of_study", [])
+    yr = config.get("year_range", "")
     if not topics:
         return ""
     items = "".join(
         f'<span class="kw-tag">{escape(t)}</span>' for t in topics
     )
+    fos_str = ", ".join(fos) if fos else "不限"
+    yr_str = yr if yr else "不限"
+    config_html = f'<span class="kw-config">🔬 领域: {escape(fos_str)} &nbsp;|&nbsp; 📅 年份: {escape(yr_str)}</span>'
     return f"""
   <div class="keywords-section">
-    <div class="kw-header">🔑 当前追踪关键词</div>
+    <a href="https://github.com/yangxl-yuanpei/daily-review-reports/blob/main/keywords.json" target="_blank" class="kw-header">🔑 当前追踪关键词 ▸</a>
     <div class="kw-tags">{items}</div>
+    <div class="kw-config-row">{config_html}</div>
     <a href="https://github.com/yangxl-yuanpei/daily-review-reports/issues/new?template=keyword-suggestion.md" target="_blank" class="kw-suggest">+ 建议新关键词</a>
   </div>"""
 
@@ -178,8 +190,8 @@ def render_index(reports_sorted):
             <div class="day-card-arrow">→</div>
         </a>"""
 
-    topics = load_keywords_for_site()
-    kw_section = render_keywords_section(topics)
+    kw_config = load_keywords_for_site()
+    kw_section = render_keywords_section(kw_config)
 
     return f"""<!DOCTYPE html>
 <html lang="zh-CN">
@@ -220,10 +232,7 @@ def render_index(reports_sorted):
     background: var(--card-bg); border-radius: 12px; padding: 20px 24px;
     margin-bottom: 20px; border: 1px solid var(--border);
   }}
-  .kw-header {{
-    font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);
-    margin-bottom: 10px;
-  }}
+  /* kw-header moved to lower rule */
   .kw-tags {{
     display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px;
   }}
@@ -231,6 +240,17 @@ def render_index(reports_sorted):
     background: var(--accent-light); color: var(--accent);
     padding: 4px 10px; border-radius: 6px;
     font-size: 0.82rem; font-weight: 500;
+  }}
+  .kw-header {{
+    display: inline-block; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);
+    text-decoration: none; margin-bottom: 10px;
+  }}
+  .kw-header:hover {{ color: var(--accent); }}
+  .kw-config-row {{
+    margin: 4px 0 8px;
+  }}
+  .kw-config {{
+    font-size: 0.78rem; color: var(--text-secondary);
   }}
   .kw-suggest {{
     display: inline-block; font-size: 0.8rem; font-weight: 500;
