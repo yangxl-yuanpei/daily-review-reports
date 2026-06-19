@@ -368,13 +368,26 @@ def render_daily_page(report):
 </body>
 </html>"""
 
-def render_index_page(reports):
+def render_index_page(reports, kw_index=None):
     reports_sorted = sorted(reports, key=lambda r: r["date"], reverse=True)
     day_links = "".join(
         f'<a href="{r["date"]}.html" class="day-link">{r["date"]}</a>'
         for r in reports_sorted
     )
     total_papers = sum(len(r["papers"]) for r in reports_sorted)
+
+    kw_section = ""
+    if kw_index:
+        sorted_tags = sorted(kw_index.keys())
+        kw_badges = ""
+        for slug in sorted_tags:
+            entry = kw_index[slug]
+            count = len(entry["papers"])
+            kw_badges += f'<a href="keywords.html#{slug}" class="kw-badge">{escape(entry["tag"])}<span class="kw-badge-count">{count}</span></a>'
+        kw_section = f"""
+  <h2 style="font-size:1.1rem;font-weight:700;margin:24px 0 12px;">🏷️ 关键词</h2>
+  <div class="kw-cloud">{kw_badges}</div>"""
+
     return f"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -384,7 +397,25 @@ def render_index_page(reports):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>{BASE_CSS}</style>
+<style>{BASE_CSS}
+.kw-cloud {{
+  display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;
+}}
+.kw-badge {{
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 14px; border-radius: 999px;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  border: 1px solid transparent; transition: all 0.12s;
+}}
+.kw-badge:hover {{
+  background: var(--accent); color: #fff; border-color: var(--accent);
+}}
+.kw-badge-count {{
+  font-size: 0.7rem; font-weight: 600; opacity: 0.7;
+}}
+.kw-badge:hover .kw-badge-count {{ opacity: 1; }}
+</style>
 </head>
 <body>
 <header>
@@ -396,7 +427,8 @@ def render_index_page(reports):
 </header>
 <div class="container">
   <div class="day-nav">{day_links}</div>
-  <p style="color:var(--text-secondary);font-size:0.85rem;">共 {len(reports_sorted)} 天报告，{total_papers} 篇论文</p>
+  <p style="color:var(--text-secondary);font-size:0.85rem;margin-bottom:8px;">共 {len(reports_sorted)} 天报告，{total_papers} 篇论文</p>
+  {kw_section}
 </div>
 </body>
 </html>"""
@@ -565,7 +597,7 @@ def main():
         print(f"  ✓ {path}")
 
     # Generate index page
-    index_html = render_index_page(reports)
+    index_html = render_index_page(reports, kw_index)
     (OUTPUT_DIR / "index.html").write_text(index_html, encoding="utf-8")
     print(f"  ✓ {OUTPUT_DIR / 'index.html'}")
 
