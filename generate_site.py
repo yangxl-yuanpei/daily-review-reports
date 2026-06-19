@@ -10,9 +10,8 @@ from pathlib import Path
 from html import escape
 
 PROJECT_DIR = Path(__file__).parent
-DESKTOP_DIR = Path("/mnt/c/Users/94474/Desktop/daily-review-reports")
 REPORTS_DIR = PROJECT_DIR / "reports"
-OUTPUT_DIR = DESKTOP_DIR / "site"
+OUTPUT_DIR = PROJECT_DIR
 
 SEEN_PAPERS_PATH = PROJECT_DIR / "seen_papers.json"
 
@@ -177,52 +176,141 @@ def parse_summary(filepath, tags_lookup=None):
         "key_gap": key_gap,
     }
 
-def render_html(all_reports):
-    """Render all parsed reports into a single modern card-style HTML page.
-    Adds keyword badges linking to keywords.html and a nav link to the keyword page.
-    """
-    reports_sorted = sorted(all_reports, key=lambda r: r["date"], reverse=True)
+BASE_CSS = """
+:root {{
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}}
+* {{ margin: 0; padding: 0; box-sizing: border-box; }}
+body {{
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}}
+.container {{ max-width: 1200px; margin: 0 auto; padding: 24px 16px; }}
+header {{
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}}
+header .container {{ padding-bottom: 0; }}
+header h1 {{ font-size: 1.5rem; font-weight: 700; }}
+header p {{ font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }}
+.stats-row {{
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px; margin-bottom: 24px;
+}}
+.stat-card {{
+  background: var(--card-bg); border-radius: 12px; padding: 16px;
+  text-align: center; border: 1px solid var(--border);
+}}
+.stat-label {{ font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 4px; }}
+.stat-value {{ font-size: 1.1rem; font-weight: 700; color: var(--accent); }}
+.papers-grid {{
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}}
+.paper-card {{
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}}
+.paper-card:hover {{ box-shadow: 0 4px 12px rgba(0,0,0,0.06); }}
+.paper-card.high {{ border-left: 4px solid var(--high); }}
+.paper-card.medium {{ border-left: 4px solid var(--medium); }}
+.paper-card.low {{ border-left: 4px solid var(--low); }}
+.paper-header {{ display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }}
+.paper-num {{ font-weight: 700; color: var(--accent); font-size: 0.9rem; }}
+.relevance-badge {{
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}}
+.relevance-badge.high {{ background: var(--high-bg); color: var(--high); }}
+.relevance-badge.medium {{ background: var(--medium-bg); color: var(--medium); }}
+.relevance-badge.low {{ background: var(--low-bg); color: var(--low); }}
+.paper-title {{ font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }}
+.paper-title a {{ color: inherit; text-decoration: none; }}
+.paper-title a:hover {{ color: var(--accent); text-decoration: underline; }}
+.paper-fields {{ flex: 1; }}
+.field {{ margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }}
+.field-key {{
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}}
+.field-val {{ color: var(--text); display: block; }}
+.highlights, .keygap {{
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}}
+.highlights h3, .keygap h3 {{ font-size: 1rem; margin-bottom: 8px; }}
+.highlight-body, .gap-body {{ font-size: 0.88rem; color: var(--text); line-height: 1.7; }}
+.highlight-body p, .gap-body p {{ margin-bottom: 6px; }}
+.highlight-body strong, .gap-body strong {{ font-weight: 600; }}
+.paper-tags {{ margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }}
+.tag-badge {{
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}}
+.tag-badge:hover {{ background: var(--accent); color: #fff; border-color: var(--accent); }}
+.kw-nav {{
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}}
+.kw-nav:hover {{ background: rgba(255,255,255,0.25); }}
+.day-nav {{ display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }}
+.day-link {{
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}}
+.day-link:hover {{ border-color: var(--accent); color: var(--accent); }}
+.back-link {{ color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }}
+.back-link:hover {{ color: #fff; }}
+@media (max-width: 640px) {{
+  .papers-grid {{ grid-template-columns: 1fr; }}
+  .stats-row {{ grid-template-columns: repeat(2, 1fr); }}
+  header h1 {{ font-size: 1.2rem; }}
+}}
+"""
 
-    # Navigation tabs (day by day)
-    nav_items = "".join(
-        f'<button class="day-tab {"active" if i==0 else ""}" '
-        f'onclick="switchDay({i})">{r["date"]}</button>'
-        for i, r in enumerate(reports_sorted)
-    )
-
-    # Report content for each day
-    day_contents = []
-    for ri, report in enumerate(reports_sorted):
-        active = "active" if ri == 0 else ""
-
-        # Stats cards
-        stats_cards = ""
-        for key, val in report["stats"].items():
-            stats_cards += f'<div class="stat-card"><div class="stat-label">{escape(key)}</div><div class="stat-value">{escape(val)}</div></div>'
-
-        # Papers
-        papers_html = ""
-        for p in report["papers"]:
-            rel_class = p["relevance"]
-            fields_html = ""
-            for key, val in p["fields"].items():
-                fields_html += (
-                    f'<div class="field"><span class="field-key">{escape(key)}</span>'
-                    f'<span class="field-val">{escape(val)}</span></div>'
-                )
-
-            # Keyword badges
-            tags_html = ""
-            if p.get("tags"):
-                tags_html = '<div class="paper-tags">'
-                for tag in p["tags"]:
-                    slug = tag.lower().replace(" ", "-")
-                    tags_html += f'<a href="keywords.html#{slug}" class="tag-badge">{escape(tag)}</a>'
-                tags_html += "</div>"
-
-            paper_url = p['fields'].get('原文链接', '') or p['scholar_url']
-
-            papers_html += f"""
+def render_papers_cards(papers):
+    cards = ""
+    for p in papers:
+        rel_class = p["relevance"]
+        fields_html = ""
+        for key, val in p["fields"].items():
+            fields_html += (
+                f'<div class="field"><span class="field-key">{escape(key)}</span>'
+                f'<span class="field-val">{escape(val)}</span></div>'
+            )
+        tags_html = ""
+        if p.get("tags"):
+            tags_html = '<div class="paper-tags">'
+            for tag in p["tags"]:
+                slug = tag.lower().replace(" ", "-")
+                tags_html += f'<a href="keywords.html#{slug}" class="tag-badge">{escape(tag)}</a>'
+            tags_html += "</div>"
+        paper_url = p['fields'].get('原文链接', '') or p['scholar_url']
+        cards += f"""
             <div class="paper-card {rel_class}">
                 <div class="paper-header">
                     <span class="paper-num">#{p['number']}</span>
@@ -232,186 +320,67 @@ def render_html(all_reports):
                 <div class="paper-fields">{fields_html}</div>
                 {tags_html}
             </div>"""
+    return cards
 
-        # Highlights + Key Gap
-        highlights_html = ""
-        if report["highlights"]:
-            highlights_html = f'<div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body">{markdown_to_html(report["highlights"])}</div></div>'
+KATEX_HEAD = """<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{{delimiters:[{{left:'$$',right:'$$',display:true}},{{left:'$',right:'$',display:false}}]}})"></script>"""
 
-        gap_html = ""
-        if report["key_gap"]:
-            gap_html = f'<div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body">{markdown_to_html(report["key_gap"])}</div></div>'
-
-        day_contents.append(f"""
-        <div class="day-content {active}" data-day="{ri}">
-            <div class="stats-row">{stats_cards}</div>
-            <div class="papers-grid">{papers_html}</div>
-            {highlights_html}
-            {gap_html}
-        </div>""")
-
-    day_js = "\n".join(
-        f"contents[{i}] = document.getElementById('day-{i}');"
-        for i in range(len(reports_sorted))
+def render_daily_page(report):
+    stats_cards = "".join(
+        f'<div class="stat-card"><div class="stat-label">{escape(k)}</div><div class="stat-value">{escape(v)}</div></div>'
+        for k, v in report["stats"].items()
     )
+    papers_html = render_papers_cards(report["papers"])
+    highlights_html = f'<div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body">{markdown_to_html(report["highlights"])}</div></div>' if report["highlights"] else ""
+    gap_html = f'<div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body">{markdown_to_html(report["key_gap"])}</div></div>' if report["key_gap"] else ""
 
     return f"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{escape(report['title'])}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+{KATEX_HEAD}
+<style>{BASE_CSS}</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>{escape(report['title'])}</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-row">{stats_cards}</div>
+  <div class="papers-grid">{papers_html}</div>
+  {highlights_html}
+  {gap_html}
+</div>
+</body>
+</html>"""
+
+def render_index_page(reports):
+    reports_sorted = sorted(reports, key=lambda r: r["date"], reverse=True)
+    day_links = "".join(
+        f'<a href="{r["date"]}.html" class="day-link">{r["date"]}</a>'
+        for r in reports_sorted
+    )
+    total_papers = sum(len(r["papers"]) for r in reports_sorted)
+    return f"""<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>每日文献追踪</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
-      onload="renderMathInElement(document.body,{{delimiters:[{{left:'$$',right:'$$',display:true}},{{left:'$',right:'$',display:false}}]}})"></script>
-    <style>
-      :root {{
-        --bg: #f5f7fa;
-        --card-bg: #ffffff;
-        --text: #1a1a2e;
-        --text-secondary: #555;
-        --accent: #2563eb;
-        --accent-light: #dbeafe;
-        --border: #e2e8f0;
-        --high: #dc2626;
-        --high-bg: #fef2f2;
-        --medium: #d97706;
-        --medium-bg: #fffbeb;
-        --low: #6b7280;
-        --low-bg: #f9fafb;
-      }}
-  * {{ margin: 0; padding: 0; box-sizing: border-box; }}
-  body {{
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    background: var(--bg); color: var(--text); line-height: 1.7;
-    padding: 0;
-  }}
-  .container {{ max-width: 1200px; margin: 0 auto; padding: 24px 16px; }}
-
-  /* Header */
-  header {{
-    background: linear-gradient(135deg, #1e3a5f, #2563eb);
-    color: white; padding: 32px 0 24px; margin-bottom: 24px;
-    border-radius: 0 0 24px 24px;
-  }}
-  header .container {{ padding-bottom: 0; }}
-  header h1 {{ font-size: 1.5rem; font-weight: 700; }}
-  header p {{ font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }}
-
-  /* Day navigation */
-  .day-nav {{
-    display: flex; gap: 8px; flex-wrap: wrap;
-    margin-bottom: 24px;
-  }}
-  .day-tab {{
-    padding: 8px 16px; border: 1px solid var(--border);
-    border-radius: 8px; background: var(--card-bg);
-    cursor: pointer; font-size: 0.85rem; font-weight: 500;
-    transition: all 0.15s;
-  }}
-  .day-tab:hover {{ border-color: var(--accent); color: var(--accent); }}
-  .day-tab.active {{
-    background: var(--accent); color: white; border-color: var(--accent);
-  }}
-
-  /* Day content toggle */
-  .day-content {{ display: none; }}
-  .day-content.active {{ display: block; }}
-
-  /* Stats */
-  .stats-row {{
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 12px; margin-bottom: 24px;
-  }}
-  .stat-card {{
-    background: var(--card-bg); border-radius: 12px; padding: 16px;
-    text-align: center; border: 1px solid var(--border);
-  }}
-  .stat-label {{ font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 4px; }}
-  .stat-value {{ font-size: 1.1rem; font-weight: 700; color: var(--accent); }}
-
-  /* Papers grid */
-  .papers-grid {{
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-    gap: 16px; margin-bottom: 24px;
-  }}
-  .paper-card {{
-    background: var(--card-bg); border-radius: 12px; padding: 20px;
-    border: 1px solid var(--border);
-    transition: box-shadow 0.15s;
-    display: flex; flex-direction: column;
-  }}
-  .paper-card:hover {{ box-shadow: 0 4px 12px rgba(0,0,0,0.06); }}
-  .paper-card.high {{ border-left: 4px solid var(--high); }}
-  .paper-card.medium {{ border-left: 4px solid var(--medium); }}
-  .paper-card.low {{ border-left: 4px solid var(--low); }}
-  .paper-header {{ display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }}
-  .paper-num {{ font-weight: 700; color: var(--accent); font-size: 0.9rem; }}
-  .relevance-badge {{
-    padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
-  }}
-  .relevance-badge.high {{ background: var(--high-bg); color: var(--high); }}
-  .relevance-badge.medium {{ background: var(--medium-bg); color: var(--medium); }}
-  .relevance-badge.low {{ background: var(--low-bg); color: var(--low); }}
-  .paper-title {{ font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }}
-  .paper-title a {{ color: inherit; text-decoration: none; }}
-  .paper-title a:hover {{ color: var(--accent); text-decoration: underline; }}
-  .paper-fields {{ flex: 1; }}
-  .field {{
-    margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5;
-  }}
-  .field-key {{
-    display: block; font-weight: 600; font-size: 0.72rem;
-    text-transform: uppercase; letter-spacing: 0.03em;
-    color: var(--text-secondary); margin-bottom: 2px;
-  }}
-  .field-val {{ color: var(--text); display: block; }}
-  /* Highlights + Key Gap */
-  .highlights, .keygap {{
-    background: var(--card-bg); border-radius: 12px; padding: 20px;
-    margin-bottom: 16px; border: 1px solid var(--border);
-  }}
-  .highlights h3, .keygap h3 {{ font-size: 1rem; margin-bottom: 8px; }}
-  .highlight-body, .gap-body {{ font-size: 0.88rem; color: var(--text); line-height: 1.7; }}
-  .highlight-body p, .gap-body p {{ margin-bottom: 6px; }}
-  .highlight-body strong, .gap-body strong {{ font-weight: 600; }}
-
-  /* Tag badges */
-  .paper-tags {{
-    margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap;
-  }}
-  .tag-badge {{
-    display: inline-block; padding: 2px 10px; border-radius: 999px;
-    font-size: 0.72rem; font-weight: 500;
-    background: var(--accent-light); color: var(--accent);
-    text-decoration: none; border: 1px solid transparent;
-    transition: all 0.12s;
-  }}
-  .tag-badge:hover {{
-    background: var(--accent); color: #fff; border-color: var(--accent);
-  }}
-
-  /* Keywords nav link */
-  .kw-nav {{
-    display: inline-block; margin-left: 12px;
-    padding: 6px 14px; border-radius: 8px;
-    background: rgba(255,255,255,0.15); color: #fff;
-    text-decoration: none; font-size: 0.82rem; font-weight: 500;
-    transition: background 0.12s;
-  }}
-  .kw-nav:hover {{ background: rgba(255,255,255,0.25); }}
-
-  /* Responsive */
-  @media (max-width: 640px) {{
-    .papers-grid {{ grid-template-columns: 1fr; }}
-    .stats-row {{ grid-template-columns: repeat(2, 1fr); }}
-    header h1 {{ font-size: 1.2rem; }}
-  }}
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>{BASE_CSS}</style>
 </head>
 <body>
 <header>
@@ -422,22 +391,9 @@ def render_html(all_reports):
   </div>
 </header>
 <div class="container">
-  <div class="day-nav">{nav_items}</div>
-  {''.join(day_contents)}
+  <div class="day-nav">{day_links}</div>
+  <p style="color:var(--text-secondary);font-size:0.85rem;">共 {len(reports_sorted)} 天报告，{total_papers} 篇论文</p>
 </div>
-<script>
-  const contents = {{}};
-  {day_js}
-  const tabs = document.querySelectorAll('.day-tab');
-  tabs.forEach(t => t.addEventListener('click', () => {{
-    tabs.forEach(tab => tab.classList.remove('active'));
-    t.classList.add('active');
-    const idx = Array.from(tabs).indexOf(t);
-    document.querySelectorAll('.day-content').forEach(d => d.classList.remove('active'));
-    const target = document.querySelector(`.day-content[data-day="${{idx}}"]`);
-    if (target) target.classList.add('active');
-  }}));
-</script>
 </body>
 </html>"""
 
@@ -597,15 +553,25 @@ def main():
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    html = render_html(reports)
-    (OUTPUT_DIR / "index.html").write_text(html, encoding="utf-8")
+    # Generate per-day pages
+    for r in reports:
+        daily_html = render_daily_page(r)
+        path = OUTPUT_DIR / f"{r['date']}.html"
+        path.write_text(daily_html, encoding="utf-8")
+        print(f"  ✓ {path}")
+
+    # Generate index page
+    index_html = render_index_page(reports)
+    (OUTPUT_DIR / "index.html").write_text(index_html, encoding="utf-8")
     print(f"  ✓ {OUTPUT_DIR / 'index.html'}")
 
+    # Generate keywords page
     kw_html = render_keywords_html(kw_index)
     (OUTPUT_DIR / "keywords.html").write_text(kw_html, encoding="utf-8")
     print(f"  ✓ {OUTPUT_DIR / 'keywords.html'}")
 
-    print(f"\nDone! {len(reports)} daily reports, {sum(len(r['papers']) for r in reports)} papers, {len(kw_index)} keywords")
+    total = sum(len(r['papers']) for r in reports)
+    print(f"\nDone! {len(reports)} daily reports, {total} papers, {len(kw_index)} keywords")
 
 if __name__ == "__main__":
     main()
