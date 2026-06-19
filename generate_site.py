@@ -12,7 +12,7 @@ from html import escape
 
 DESKTOP_DIR = Path("/mnt/c/Users/94474/Desktop/daily-review-reports")
 REPORTS_DIR = DESKTOP_DIR / "reports"
-OUTPUT_DIR = DESKTOP_DIR / "site"
+OUTPUT_DIR = DESKTOP_DIR  # root for GitHub Pages
 
 DAILY_PATTERN = re.compile(r"daily-summary-(\d{4}-\d{2}-\d{2})\.md")
 
@@ -444,6 +444,7 @@ def main():
     (OUTPUT_DIR / "index.html").write_text(html, encoding="utf-8")
     print(f"\nDone! Generated {OUTPUT_DIR / 'index.html'}")
     print(f"  {len(reports)} daily reports, {sum(len(r['papers']) for r in reports)} papers total")
+    print(f"  Set GitHub Pages → branch: main, directory: / (root)")
 
 if __name__ == "__main__":
     main()
