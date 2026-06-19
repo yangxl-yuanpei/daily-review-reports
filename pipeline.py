@@ -438,10 +438,79 @@ def infer_tags(title, abstract):
             tags.append(tag)
     return tags if tags else ["general"]
 
+def compute_relevance(p, topics):
+    """Compute relevance score based on keyword overlap with search topics."""
+    text = (p["title"] + " " + p.get("abstract", "")).lower()
+    score = 0
+    for t in topics:
+        words = t.lower().split()
+        for w in words:
+            if w in text:
+                score += 1
+    p["_relevance"] = min(5, score)
+    if score >= 4:
+        p["_relevance_label"] = "⭐⭐"
+    elif score >= 2:
+        p["_relevance_label"] = "⭐"
+    else:
+        p["_relevance_label"] = ""
+
 ###############################################################################
-# 7. Generate Daily Report
+# 7a. Generate Highlights & Key Gap via LLM
 ###############################################################################
-def generate_report(papers_with_summaries, stats):
+HIGHLIGHTS_PROMPT = """你是一位计算化学/电催化领域的研究助理。今天阅读了以下论文，请从研究者的角度分析：
+
+1. 今日亮点（3-4条）：
+   - 最值得精读的一篇：哪篇最有价值？为什么？
+   - 可能与你研究论点冲突的一篇：哪篇的结论或假设可能和你的研究方向矛盾？
+   - 值得追踪的作者或团队有哪些？
+   - 其他值得注意的趋势或发现
+
+2. Key Gap（2-3条）：
+   - 这些论文共同暴露了哪些未解决的科学问题或方法论局限？
+   - 未来值得探索的方向
+
+今天的论文列表（标题 + 核心摘要）："""
+
+def generate_highlights_gaps(papers_with_summaries):
+    """Call LLM to generate 今日亮点 and Key Gap sections."""
+    paper_list = []
+    for i, p in enumerate(papers_with_summaries, 1):
+        summary = p.get("summary", p.get("abstract", "无摘要"))[:500]
+        paper_list.append(f"[{i}] {p['title']}\n摘要: {summary[:200]}...")
+
+    context = "\n\n".join(paper_list)
+    text = truncate_text(context, max_chars=6000)
+
+    if not LLM_API_KEY:
+        print("  ⚠️  未设置 LLM_API_KEY，亮点/Key Gap 使用占位符")
+        return ("", "")
+
+    client = OpenAI(api_key=LLM_API_KEY, base_url=LLM_BASE_URL)
+    try:
+        resp = client.chat.completions.create(
+            model=LLM_MODEL,
+            messages=[
+                {"role": "system", "content": "你是一位严谨的计算化学研究助理，用中文输出，简洁但有洞察力。"},
+                {"role": "user", "content": HIGHLIGHTS_PROMPT + text},
+            ],
+            temperature=0.4,
+            max_tokens=1200,
+        )
+        result = resp.choices[0].message.content.strip()
+        print(f"  ✓ 亮点/Key Gap 已生成 ({len(result)} chars)")
+        parts = result.split("2. Key Gap", 1)
+        highlights = parts[0].strip()
+        gaps = "2. Key Gap" + parts[1] if len(parts) > 1 else "无 Key Gap 分析"
+        return (highlights, gaps)
+    except Exception as e:
+        print(f"  ✗ 亮点/Key Gap LLM 调用失败: {e}")
+        return ("", "")
+
+###############################################################################
+# 7b. Generate Daily Report
+###############################################################################
+def generate_report(papers_with_summaries, stats, topics=None):
     """Generate daily-summary-{TODAY}.md."""
     reports_dir = REPORTS_DIR
     reports_dir.mkdir(exist_ok=True)
@@ -451,6 +520,9 @@ def generate_report(papers_with_summaries, stats):
         source_str += " + Semantic Scholar (不限日期)"
     else:
         source_str += " + Semantic Scholar (不可用)"
+
+    for p in papers_with_summaries:
+        compute_relevance(p, topics or [])
 
     lines = []
     lines.append(f"# 每日文献追踪报告 - {TODAY}\n")
@@ -463,10 +535,12 @@ def generate_report(papers_with_summaries, stats):
     lines.append("")
 
     lines.append("## 📑 论文详情（按相关性排序）\n")
-    for i, p in enumerate(papers_with_summaries, 1):
+    sorted_papers = sorted(papers_with_summaries, key=lambda p: p.get("_relevance", 0), reverse=True)
+    for i, p in enumerate(sorted_papers, 1):
         title = p["title"]
-        tagline = p.get("summary", "")[:60].replace("\n", " ") if p.get("summary") else ""
-        lines.append(f"### {i}. {title} — {tagline}\n")
+        tagline = p.get("summary", p.get("abstract", ""))[:60].replace("\n", " ") if (p.get("summary") or p.get("abstract")) else ""
+        rel_label = p.get("_relevance_label", "")
+        lines.append(f"### {i}. {title} {rel_label}\n")
 
         venue = p.get("venue", "preprint")
         pub_date = p.get("published") or p.get("publicationDate") or p.get("year", "")
@@ -481,10 +555,12 @@ def generate_report(papers_with_summaries, stats):
 
         summary_text = p.get("summary") or ""
         if summary_text:
-            if brief := p.get("_brief", False):
+            if p.get("_brief", False):
                 lines.append(f"- **简要摘要:** {summary_text}")
             else:
                 lines.append(summary_text)
+        elif p.get("abstract"):
+            lines.append(f"- **摘要（原文）:** {p['abstract'][:500]}{'...' if len(p['abstract']) > 500 else ''}")
 
         has_pdf = p.get("_downloaded", False)
         lines.append(f"- **PDF 状态:** {'✅ 已下载' if has_pdf else '⚠️ 仅摘要'}")
@@ -500,13 +576,21 @@ def generate_report(papers_with_summaries, stats):
         lines.append("")
 
     # Highlights / Key Gap sections
-    lines.append("## 💡 今日亮点\n")
-    lines.append("- **最值得精读的一篇:** ...(待补充)")
-    lines.append("- **可能与你研究论点冲突的一篇:** ...")
-    lines.append("- **值得追踪的作者或团队:** ...\n")
+    print("\n  ▶ 生成今日亮点与 Key Gap...")
+    highlights, gaps = generate_highlights_gaps(papers_with_summaries)
+    if highlights:
+        lines.append("## 💡 今日亮点\n")
+        lines.append(highlights + "\n")
+    else:
+        lines.append("## 💡 今日亮点\n")
+        lines.append("- *无可用的 LLM 分析，请检查 API 配置*\n")
 
-    lines.append("## 📌 Key Gap\n")
-    lines.append("{待分析}\n")
+    if gaps:
+        lines.append("## 📌 Key Gap\n")
+        lines.append(gaps + "\n")
+    else:
+        lines.append("## 📌 Key Gap\n")
+        lines.append("- *无可用的 LLM 分析，请检查 API 配置*\n")
 
     report = "\n".join(lines)
     out_path = reports_dir / f"daily-summary-{TODAY}.md"
@@ -661,7 +745,7 @@ def main():
         "deep_read": deep_read,
         "s2_available": s2_available,
     }
-    generate_report(papers_with_summaries, stats)
+    generate_report(papers_with_summaries, stats, topics=kw["topics"])
 
     # 7. Update seen_papers
     print("\n◆ 7. 更新已读库...")
