@@ -33,6 +33,28 @@
   header h1 { font-size: 1.8rem; font-weight: 800; }
   header p { font-size: 0.95rem; opacity: 0.8; margin-top: 4px; }
 
+  .keywords-section {
+    background: var(--card-bg); border-radius: 12px; padding: 20px 24px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+  }
+  .kw-header {
+    font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);
+    margin-bottom: 10px;
+  }
+  .kw-tags {
+    display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px;
+  }
+  .kw-tag {
+    background: var(--accent-light); color: var(--accent);
+    padding: 4px 10px; border-radius: 6px;
+    font-size: 0.82rem; font-weight: 500;
+  }
+  .kw-suggest {
+    display: inline-block; font-size: 0.8rem; font-weight: 500;
+    color: var(--accent); text-decoration: none;
+  }
+  .kw-suggest:hover { text-decoration: underline; }
+
   .day-grid {
     display: flex; flex-direction: column; gap: 12px;
   }
@@ -85,6 +107,12 @@
   </div>
 </header>
 <div class="container">
+  
+  <div class="keywords-section">
+    <div class="kw-header">🔑 当前追踪关键词</div>
+    <div class="kw-tags"><span class="kw-tag">machine learning force field</span><span class="kw-tag">neural network potential</span><span class="kw-tag">constant potential electrochemistry</span><span class="kw-tag">nuclear quantum effect surface catalysis</span><span class="kw-tag">grand canonical simulation</span></div>
+    <a href="https://github.com/yangxl-yuanpei/daily-review-reports/issues/new?template=keyword-suggestion.md" target="_blank" class="kw-suggest">+ 建议新关键词</a>
+  </div>
   <div class="day-grid">
     
         <a href="daily-2026-06-16.html" class="day-card">

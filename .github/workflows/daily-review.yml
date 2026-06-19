@@ -1,0 +1,68 @@
+name: Daily Literature Review
+
+on:
+  schedule:
+    # UTC 1:00 = Beijing 9:00
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+    inputs:
+      log_level:
+        description: 'Log level'
+        required: false
+        default: 'info'
+
+permissions:
+  contents: write
+  issues: read
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          echo "✓ pip dependencies installed"
+
+      - name: Run full pipeline
+        env:
+          S2_API_KEY: ${{ secrets.S2_API_KEY }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL || 'qwen-plus' }}
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL || 'https://dashscope.aliyuncs.com/compatible-mode/v1' }}
+        run: |
+          python pipeline.py
+          echo "✓ pipeline completed"
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          git config user.name "daily-review-bot"
+          git config user.email "bot@daily-review.local"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "No changes to commit"
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push
+        if: steps.git-check.outputs.has_changes == 'true'
+        run: |
+          git commit -m "daily update $(date +'%Y-%m-%d')"
+          git push
+          echo "✓ changes pushed to repository"

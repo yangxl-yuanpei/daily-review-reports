@@ -9,6 +9,8 @@ from pathlib import Path
 from datetime import datetime
 from html import escape
 
+KEYWORDS_FILE = Path(__file__).parent / "keywords.json"
+
 DESKTOP_DIR = Path("/mnt/c/Users/94474/Desktop/daily-review-reports")
 REPORTS_DIR = DESKTOP_DIR / "reports"
 OUTPUT_DIR = DESKTOP_DIR  # root for GitHub Pages
@@ -140,12 +142,32 @@ def _render_paper_card(p):
         </div>
     </div>"""
 
+def load_keywords_for_site():
+    """Read current keywords from keywords.json for display."""
+    try:
+        kw = json.loads(KEYWORDS_FILE.read_text(encoding="utf-8"))
+        return kw.get("topics", [])
+    except Exception:
+        return []
+
+def render_keywords_section(topics):
+    if not topics:
+        return ""
+    items = "".join(
+        f'<span class="kw-tag">{escape(t)}</span>' for t in topics
+    )
+    return f"""
+  <div class="keywords-section">
+    <div class="kw-header">🔑 当前追踪关键词</div>
+    <div class="kw-tags">{items}</div>
+    <a href="https://github.com/yangxl-yuanpei/daily-review-reports/issues/new?template=keyword-suggestion.md" target="_blank" class="kw-suggest">+ 建议新关键词</a>
+  </div>"""
+
 def render_index(reports_sorted):
     """Render the index page listing all days."""
     day_cards = ""
     for r in reports_sorted:
         paper_count = len(r["papers"])
-        sources = r["stats"].get("检索源", "")
         link = f"daily-{r['date']}.html"
         day_cards += f"""
         <a href="{link}" class="day-card">
@@ -155,6 +177,9 @@ def render_index(reports_sorted):
             </div>
             <div class="day-card-arrow">→</div>
         </a>"""
+
+    topics = load_keywords_for_site()
+    kw_section = render_keywords_section(topics)
 
     return f"""<!DOCTYPE html>
 <html lang="zh-CN">
@@ -190,6 +215,28 @@ def render_index(reports_sorted):
   header .container {{ padding-bottom: 0; }}
   header h1 {{ font-size: 1.8rem; font-weight: 800; }}
   header p {{ font-size: 0.95rem; opacity: 0.8; margin-top: 4px; }}
+
+  .keywords-section {{
+    background: var(--card-bg); border-radius: 12px; padding: 20px 24px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+  }}
+  .kw-header {{
+    font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);
+    margin-bottom: 10px;
+  }}
+  .kw-tags {{
+    display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px;
+  }}
+  .kw-tag {{
+    background: var(--accent-light); color: var(--accent);
+    padding: 4px 10px; border-radius: 6px;
+    font-size: 0.82rem; font-weight: 500;
+  }}
+  .kw-suggest {{
+    display: inline-block; font-size: 0.8rem; font-weight: 500;
+    color: var(--accent); text-decoration: none;
+  }}
+  .kw-suggest:hover {{ text-decoration: underline; }}
 
   .day-grid {{
     display: flex; flex-direction: column; gap: 12px;
@@ -243,6 +290,7 @@ def render_index(reports_sorted):
   </div>
 </header>
 <div class="container">
+  {kw_section}
   <div class="day-grid">
     {day_cards if day_cards else '<div class="empty">暂无报告</div>'}
   </div>

@@ -1,0 +1,19 @@
+{
+  "_comment": "在此添加/修改搜索主题，同事也可通过 GitHub Issues 提交。每日 Actions 自动读取。",
+  "topics": [
+    "machine learning force field",
+    "neural network potential",
+    "constant potential electrochemistry",
+    "nuclear quantum effect surface catalysis",
+    "grand canonical simulation"
+  ],
+  "arxiv": {
+    "enabled": true,
+    "max_results": 10
+  },
+  "semantic_scholar": {
+    "enabled": true,
+    "query_a_limit": 30,
+    "query_b_limit": 20
+  }
+}
