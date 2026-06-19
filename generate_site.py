@@ -10,8 +10,9 @@ from pathlib import Path
 from html import escape
 
 PROJECT_DIR = Path(__file__).parent
+DESKTOP_DIR = Path("/mnt/c/Users/94474/Desktop/daily-review-reports")
 REPORTS_DIR = PROJECT_DIR / "reports"
-OUTPUT_DIR = PROJECT_DIR
+OUTPUT_DIR = DESKTOP_DIR / "site"
 
 SEEN_PAPERS_PATH = PROJECT_DIR / "seen_papers.json"
 
@@ -117,6 +118,10 @@ def parse_summary(filepath, tags_lookup=None):
                 val = fm.group(2).strip()
                 fields[key] = val
 
+            # Skip LLM sub-heading blocks that aren't actual papers
+            if "来源" not in fields and "原文链接" not in fields:
+                continue
+
             # relevance tag
             relevance = ""
             rel_field = fields.get("与你研究的相关性", fields.get("与你研究的相关性:", ""))
@@ -215,18 +220,17 @@ def render_html(all_reports):
                     tags_html += f'<a href="keywords.html#{slug}" class="tag-badge">{escape(tag)}</a>'
                 tags_html += "</div>"
 
+            paper_url = p['fields'].get('原文链接', '') or p['scholar_url']
+
             papers_html += f"""
             <div class="paper-card {rel_class}">
                 <div class="paper-header">
                     <span class="paper-num">#{p['number']}</span>
                     <span class="relevance-badge {rel_class}">{p['relevance'].upper() if p['relevance'] else '?'}</span>
                 </div>
-                <h3 class="paper-title">{escape(p['title'])}</h3>
+                <h3 class="paper-title"><a href="{paper_url}" target="_blank">{escape(p['title'])}</a></h3>
                 <div class="paper-fields">{fields_html}</div>
                 {tags_html}
-                <div class="paper-links">
-                    <a href="{p['scholar_url']}" target="_blank" class="scholar-link">🔍 Google Scholar</a>
-                </div>
             </div>"""
 
         # Highlights + Key Gap
@@ -257,25 +261,29 @@ def render_html(all_reports):
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>每日文献追踪</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-  :root {{
-    --bg: #f5f7fa;
-    --card-bg: #ffffff;
-    --text: #1a1a2e;
-    --text-secondary: #555;
-    --accent: #2563eb;
-    --accent-light: #dbeafe;
-    --border: #e2e8f0;
-    --high: #dc2626;
-    --high-bg: #fef2f2;
-    --medium: #d97706;
-    --medium-bg: #fffbeb;
-    --low: #6b7280;
-    --low-bg: #f9fafb;
-  }}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+      onload="renderMathInElement(document.body,{{delimiters:[{{left:'$$',right:'$$',display:true}},{{left:'$',right:'$',display:false}}]}})"></script>
+    <style>
+      :root {{
+        --bg: #f5f7fa;
+        --card-bg: #ffffff;
+        --text: #1a1a2e;
+        --text-secondary: #555;
+        --accent: #2563eb;
+        --accent-light: #dbeafe;
+        --border: #e2e8f0;
+        --high: #dc2626;
+        --high-bg: #fef2f2;
+        --medium: #d97706;
+        --medium-bg: #fffbeb;
+        --low: #6b7280;
+        --low-bg: #f9fafb;
+      }}
   * {{ margin: 0; padding: 0; box-sizing: border-box; }}
   body {{
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -350,6 +358,8 @@ def render_html(all_reports):
   .relevance-badge.medium {{ background: var(--medium-bg); color: var(--medium); }}
   .relevance-badge.low {{ background: var(--low-bg); color: var(--low); }}
   .paper-title {{ font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }}
+  .paper-title a {{ color: inherit; text-decoration: none; }}
+  .paper-title a:hover {{ color: var(--accent); text-decoration: underline; }}
   .paper-fields {{ flex: 1; }}
   .field {{
     margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5;
@@ -360,12 +370,6 @@ def render_html(all_reports):
     color: var(--text-secondary); margin-bottom: 2px;
   }}
   .field-val {{ color: var(--text); display: block; }}
-  .paper-links {{ margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); }}
-  .scholar-link {{
-    color: var(--accent); text-decoration: none; font-size: 0.82rem; font-weight: 500;
-  }}
-  .scholar-link:hover {{ text-decoration: underline; }}
-
   /* Highlights + Key Gap */
   .highlights, .keygap {{
     background: var(--card-bg); border-radius: 12px; padding: 20px;
@@ -498,6 +502,10 @@ def render_keywords_html(kw_index):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{{delimiters:[{{left:'$$',right:'$$',display:true}},{{left:'$',right:'$',display:false}}]}})"></script>
 <style>
   :root {{ --bg: #f5f7fa; --card-bg: #fff; --text: #1a1a2e; --text-secondary: #555; --accent: #2563eb; --accent-light: #dbeafe; --border: #e2e8f0; }}
   * {{ margin: 0; padding: 0; box-sizing: border-box; }}
