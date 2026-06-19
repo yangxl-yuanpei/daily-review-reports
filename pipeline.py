@@ -201,7 +201,10 @@ def search_s2_individual(term, limit=30, sort="relevance", fields=None, fields_o
     if fields_of_study:
         params["fieldsOfStudy"] = ",".join(fields_of_study)
     if year_range:
-        params["year"] = year_range
+        yr = year_range.strip()
+        if yr.endswith("-"):
+            yr = yr + "2026"
+        params["year"] = yr
     url = f"{S2_BULK_API}?{urllib.parse.urlencode(params)}"
     print(f"  S2 URL: {url[:120]}...")
     for attempt in range(3):
@@ -222,7 +225,7 @@ def search_s2_individual(term, limit=30, sort="relevance", fields=None, fields_o
                     "s2_id": pid,
                     "title": p.get("title", ""),
                     "authors": [a.get("name", "") for a in p.get("authors", [])],
-                    "abstract": p.get("abstract", ""),
+                    "abstract": p.get("abstract") or "",
                     "year": str(p.get("year", "")),
                     "publicationDate": p.get("publicationDate", ""),
                     "url": p.get("url", f"https://api.semanticscholar.org/CorpusID:{pid}"),
@@ -279,7 +282,7 @@ def search_s2(query, limit=30, sort="relevance", fields=None):
                     "s2_id": pid,
                     "title": p.get("title", ""),
                     "authors": [a.get("name", "") for a in p.get("authors", [])],
-                    "abstract": p.get("abstract", ""),
+                    "abstract": p.get("abstract") or "",
                     "year": str(p.get("year", "")),
                     "publicationDate": p.get("publicationDate", ""),
                     "url": p.get("url", f"https://api.semanticscholar.org/CorpusID:{pid}"),
@@ -380,7 +383,7 @@ def download_and_extract(p):
     arxiv_id = p.get("arxiv_id")
     if not arxiv_id:
         print(f"    ⚠️  {p['title'][:50]}... 无 arXiv ID，使用摘要")
-        return p.get("abstract", ""), False
+        return (p.get("abstract") or ""), False
 
     pdf_url = p.get("pdf_url", f"https://arxiv.org/pdf/{arxiv_id}.pdf")
     pdf_path = REPO_DIR / "pdfs" / f"{arxiv_id}.pdf"
@@ -410,6 +413,8 @@ def download_and_extract(p):
 
 def truncate_text(text, max_chars=8000):
     """Truncate text for LLM context window."""
+    if not text:
+        return ""
     if len(text) <= max_chars:
         return text
     return text[:max_chars] + "\n\n...[truncated]"
