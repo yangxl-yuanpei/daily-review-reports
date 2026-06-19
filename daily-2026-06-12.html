@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪 - 2026-06-12</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f5f7fa;
+    --card-bg: #ffffff;
+    --text: #1a1a2e;
+    --text-secondary: #555;
+    --accent: #2563eb;
+    --accent-light: #dbeafe;
+    --border: #e2e8f0;
+    --high: #dc2626;
+    --high-bg: #fef2f2;
+    --medium: #d97706;
+    --medium-bg: #fffbeb;
+    --low: #6b7280;
+    --low-bg: #f9fafb;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.7;
+  }
+  .container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+
+  header {
+    background: linear-gradient(135deg, #1e3a5f, #2563eb);
+    color: white; padding: 28px 0 20px; margin-bottom: 24px;
+    border-radius: 0 0 24px 24px;
+  }
+  header .container { padding-bottom: 0; }
+  header h1 { font-size: 1.4rem; font-weight: 700; }
+  header .back-link {
+    display: inline-block; margin-bottom: 8px; color: rgba(255,255,255,0.7);
+    text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  }
+  header .back-link:hover { color: white; }
+
+  .stats-row {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px; margin-bottom: 24px;
+  }
+  .stat-card {
+    background: var(--card-bg); border-radius: 12px; padding: 16px;
+    text-align: center; border: 1px solid var(--border);
+  }
+  .stat-label { font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 4px; }
+  .stat-value { font-size: 1.1rem; font-weight: 700; color: var(--accent); }
+
+  .papers-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 16px; margin-bottom: 24px;
+  }
+  .paper-card {
+    background: var(--card-bg); border-radius: 12px; padding: 20px;
+    border: 1px solid var(--border);
+    transition: box-shadow 0.15s;
+    display: flex; flex-direction: column;
+  }
+  .paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+  .paper-card.high { border-left: 4px solid var(--high); }
+  .paper-card.medium { border-left: 4px solid var(--medium); }
+  .paper-card.low { border-left: 4px solid var(--low); }
+  .paper-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+  .paper-num { font-weight: 700; color: var(--accent); font-size: 0.9rem; }
+  .relevance-badge {
+    padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+  }
+  .relevance-badge.high { background: var(--high-bg); color: var(--high); }
+  .relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+  .relevance-badge.low { background: var(--low-bg); color: var(--low); }
+  .paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+  .paper-title-link { color: var(--text); text-decoration: none; }
+  .paper-title-link:hover { color: var(--accent); text-decoration: underline; }
+  .paper-fields { flex: 1; }
+  .field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+  .field-key {
+    display: block; font-weight: 600; font-size: 0.72rem;
+    text-transform: uppercase; letter-spacing: 0.03em;
+    color: var(--text-secondary); margin-bottom: 2px;
+  }
+  .field-val { color: var(--text); display: block; }
+  .paper-links { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); }
+  .scholar-link {
+    color: var(--accent); text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  }
+  .scholar-link:hover { text-decoration: underline; }
+
+  .highlights, .keygap {
+    background: var(--card-bg); border-radius: 12px; padding: 20px;
+    margin-bottom: 16px; border: 1px solid var(--border);
+  }
+  .highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+  .highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+  .highlight-body p, .gap-body p { margin-bottom: 6px; }
+  .highlight-body strong, .gap-body strong { font-weight: 600; }
+
+  .day-footer {
+    margin-top: 24px; padding: 12px 16px; text-align: center;
+    font-size: 0.78rem; color: var(--text-secondary);
+    border-top: 1px solid var(--border);
+  }
+
+  @media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+    .stats-row { grid-template-columns: repeat(2, 1fr); }
+    header h1 { font-size: 1.2rem; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <a href="index.html" class="back-link">← 返回报告列表</a>
+    <h1>2026-06-12 — 每日文献追踪报告 - 2026-06-12</h1>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-row"></div>
+  <div class="papers-grid">
+    <div class="paper-card high">
+        <div class="paper-header">
+            <span class="paper-num">#1</span>
+            <span class="relevance-badge high">HIGH</span>
+        </div>
+        <h3 class="paper-title"><a href="https://arxiv.org/abs/2407.12458" target="_blank" rel="noopener" class="paper-title-link">Sun2024 — GC-HMC + PIMC + DP-Ne for NQEs in PCET</a></h3>
+        <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Menglin Sun, Bin Jin, Xiaolong Yang, Shenzhen Xu</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在严格恒电位（GC 系综）条件下同时考虑质子 NQE 和界面充分采样？</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">GC-HMC + PIMC + DP-Ne MLFF（Ne 为额外输入，输出包括 ∂E/∂Ne）统一框架</span></div><div class="field"><span class="field-key">关键结果</span><span class="field-val">Volmer ΔEa↓0.13 eV @ -0.9V（50-100× 速率增强）；Heyrovsky ΔEa↓0.09 eV</span></div><div class="field"><span class="field-key">与你研究的相关性</span><span class="field-val"><strong>高</strong> — NQE + GC 系综 + MLFF 三大要素齐聚</span></div></div>
+        <div class="paper-links">
+            <a href="https://scholar.google.com/scholar?q=Sun2024" target="_blank" class="scholar-link">🔍 Google Scholar</a>
+        </div>
+    </div>
+    <div class="paper-card high">
+        <div class="paper-header">
+            <span class="paper-num">#2</span>
+            <span class="relevance-badge high">HIGH</span>
+        </div>
+        <h3 class="paper-title"><a href="https://doi.org/10.1039/D5CP01527H" target="_blank" rel="noopener" class="paper-title-link">Bunting2025 — NQEs of C-H Activation at Pt/Au with ML Potentials</a></h3>
+        <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Rhiannon J. Bunting, María del Carmen Marín, et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">ML 势能面结合 CMD 能否揭示 C-H 活化中 NQEs 的金属依赖性？</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">Allegro MLIP + CMD，对比 Pt(111) vs Au(111) 的 NQE 差异</span></div><div class="field"><span class="field-key">关键结果</span><span class="field-val">Pt 上 NQE 加速 ~20×（ZPE 主导），Au 上无 NQE；谐振近似在 Au 上失效</span></div><div class="field"><span class="field-key">与你研究的相关性</span><span class="field-val"><strong>高</strong> — NQE + MLIP 方法直接相关；金属依赖性值得关注</span></div></div>
+        <div class="paper-links">
+            <a href="https://scholar.google.com/scholar?q=Bunting2025" target="_blank" class="scholar-link">🔍 Google Scholar</a>
+        </div>
+    </div>
+    <div class="paper-card high">
+        <div class="paper-header">
+            <span class="paper-num">#3</span>
+            <span class="relevance-badge high">HIGH</span>
+        </div>
+        <h3 class="paper-title"><a href="https://doi.org/10.1021/acs.jctc.5c00784" target="_blank" rel="noopener" class="paper-title-link">Wang2025 — Constant-Potential MLFF for Electrochemical Interfaces</a></h3>
+        <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Zeyu Wang, Junhan Chang, Jincheng Li, Qi Zhu, Feng Hao</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在恒电位分子动力学中同时保持 MLFF 精度和效率？</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">MACE 架构 + CP-MLFF（Ne → (F, EF) 映射），主动学习集成</span></div><div class="field"><span class="field-key">关键结果</span><span class="field-val">Ea 从 0.894 eV 逐步收敛到 0.460 eV（Ni-N-C CO2RR）; Si(100)-H 测试通过</span></div><div class="field"><span class="field-key">与你研究的相关性</span><span class="field-val"><strong>高</strong> — 恒电位 MLFF 方法论（与 Sun2024 互补）</span></div></div>
+        <div class="paper-links">
+            <a href="https://scholar.google.com/scholar?q=Wang2025" target="_blank" class="scholar-link">🔍 Google Scholar</a>
+        </div>
+    </div>
+    <div class="paper-card high">
+        <div class="paper-header">
+            <span class="paper-num">#4</span>
+            <span class="relevance-badge high">HIGH</span>
+        </div>
+        <h3 class="paper-title"><a href="https://arxiv.org/abs/2311.08779" target="_blank" rel="noopener" class="paper-title-link">Bi2023 — EF-RPMD for Nonadiabatic Dynamics + NQEs</a></h3>
+        <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Rui-Hao Bi, Wenjie Dou</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在电子摩擦模型中纳入 NQE（零点能 + 隧穿）？</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">将平均电子摩擦作用于 RPMD 质心模式（EF-RPMD）+ Ehrenfest 修正</span></div><div class="field"><span class="field-key">关键结果</span><span class="field-val">对称 PES 下与 QME 几乎精确一致；非对称 PES 低温有偏差；仅 Γ &gt; ħω 时有效</span></div><div class="field"><span class="field-key">与你研究的相关性</span><span class="field-val"><strong>高</strong> — 非绝热 + NQE 的简洁方案，可直接嵌入 GC 框架</span></div></div>
+        <div class="paper-links">
+            <a href="https://scholar.google.com/scholar?q=Bi2023" target="_blank" class="scholar-link">🔍 Google Scholar</a>
+        </div>
+    </div>
+    <div class="paper-card high">
+        <div class="paper-header">
+            <span class="paper-num">#5</span>
+            <span class="relevance-badge high">HIGH</span>
+        </div>
+        <h3 class="paper-title"><a href="https://doi.org/10.1021/prechem.4c00099" target="_blank" rel="noopener" class="paper-title-link">Zhang2025 — RPMD Rate Theory for H2 Desorption from Pt(111)</a></h3>
+        <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Yaolong Zhang, Bin Jiang (USTC)</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">RPMD 能否定量预测 H2 在 Pt(111) 上的解离和重组？</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">RPMD 反应速率理论 + 高维 PES（神经网络势）</span></div><div class="field"><span class="field-key">关键结果</span><span class="field-val">解离速率因子 2 以内与实验吻合；ZPE 主导 NQE，隧穿贡献小</span></div><div class="field"><span class="field-key">与你研究的相关性</span><span class="field-val"><strong>中-高</strong> — RPMD 在表面反应的应用基准案例</span></div></div>
+        <div class="paper-links">
+            <a href="https://scholar.google.com/scholar?q=Zhang2025" target="_blank" class="scholar-link">🔍 Google Scholar</a>
+        </div>
+    </div>
+    <div class="paper-card medium">
+        <div class="paper-header">
+            <span class="paper-num">#6</span>
+            <span class="relevance-badge medium">MEDIUM</span>
+        </div>
+        <h3 class="paper-title"><a href="https://doi.org/10.1021/acs.jpcc.4c08188" target="_blank" rel="noopener" class="paper-title-link">Zhou2024 — EEP-MLFF for Constant Potential Cu/MoS2</a></h3>
+        <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Guozhi Zhou, Feng Hao (HIT)</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">恒电位 MLFF 能否避免传统 ESM 的电荷泄漏问题？</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">EEP-MLFF（U 为显式输入 + SO3 Power Spectrum 描述符）</span></div><div class="field"><span class="field-key">关键结果</span><span class="field-val">Cu 团簇在 V &lt; -0.1V 时形成；平躺→倾斜二聚体转变；pCOHP 揭示强 Cu-Cu 键</span></div><div class="field"><span class="field-key">与你研究的相关性</span><span class="field-val"><strong>中</strong> — 恒电位 MLFF（Cu/MoS2 体系），方法有价值</span></div></div>
+        <div class="paper-links">
+            <a href="https://scholar.google.com/scholar?q=Zhou2024" target="_blank" class="scholar-link">🔍 Google Scholar</a>
+        </div>
+    </div>
+    <div class="paper-card medium">
+        <div class="paper-header">
+            <span class="paper-num">#7</span>
+            <span class="relevance-badge medium">MEDIUM</span>
+        </div>
+        <h3 class="paper-title"><a href="https://doi.org/10.1021/acs.jpclett.4c03252" target="_blank" rel="noopener" class="paper-title-link">Joll2025 — Fe(II)/Hematite Reactive Neural Network Potential</a></h3>
+        <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Simon T. Joll, et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">反应性 NNP 能否准确描述 Fe(II)/Hematite 水界面动力学？</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">c-NNP 对比经典 FF，不预设反应坐标</span></div><div class="field"><span class="field-key">关键结果</span><span class="field-val">DFT 级精度（能量 RMSE &lt; 5 meV/atom）; 水交换 k = 1.8×10⁸ s⁻¹; Fe²⁺ 无氧化</span></div><div class="field"><span class="field-key">与你研究的相关性</span><span class="field-val"><strong>中</strong> — MLFF 界面应用案例，但缺乏 CPM 和 NQE 成分</span></div></div>
+        <div class="paper-links">
+            <a href="https://scholar.google.com/scholar?q=Joll2025" target="_blank" class="scholar-link">🔍 Google Scholar</a>
+        </div>
+    </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><li><strong>最值得精读的一篇:</strong> Sun2024 — 首个同时实现 GC 系综 + NQE + 充分采样的电化学模拟框架，DP-Ne MLFF 设计具有直接复用价值</li><li><strong>可能与你研究论点冲突的一篇:</strong> Bi2023 指出 EF-RPMD 仅在 Γ &gt; ħω 时有效，Sun2024 的 GC-HMC + PIMC 框架目前完全忽略非绝热效应——两者结合需要仔细处理适用边界</li><li><strong>值得追踪的作者或团队:</strong> Shenzhen Xu (PKU) — GC-HMC 方法有望拓展到恒 pH 条件; Wenjie Dou (Westlake) — 非绝热动力学+NQE 方法论; Bin Jiang (USTC) — RPMD 在表面反应的系统应用; Feng Hao (HIT) — 恒电位 MLFF</li></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><p>目前尚无方法同时处理 GC 系综 + NQE + 非绝热效应。Sun2024 覆盖 GC + NQE 但缺非绝热；Bi2023 覆盖 NQE + 非绝热但缺 GC 系综。将 EF-RPMD 嵌入 GC-HMC 框架是自然的下一步。此外 Bunting2025 发现 NQE 金属依赖性（Pt 有、Au 无），提示 NQE 贡献大小与金属电子结构相关，这是 GC-NQE 框架需纳入的维度。</p></div></div>
+  <div class="day-footer">检索源: arXiv (last 24h) + Semantic Scholar (不限日期) · 实际精读: 7篇</div>
+</div>
+</body>
+</html>
