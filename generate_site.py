@@ -11,7 +11,7 @@ from html import escape
 
 PROJECT_DIR = Path(__file__).parent
 REPORTS_DIR = PROJECT_DIR / "reports"
-OUTPUT_DIR = PROJECT_DIR / "site"
+OUTPUT_DIR = PROJECT_DIR
 
 SEEN_PAPERS_PATH = PROJECT_DIR / "seen_papers.json"
 
