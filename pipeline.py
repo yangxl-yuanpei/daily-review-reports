@@ -127,7 +127,7 @@ def search_arxiv(query, max_results=10):
         "search_query": f"all:{query}",
         "max_results": str(max_results),
         "sortBy": "submittedDate",
-        "sortOrder": "DOCKING",
+        "sortOrder": "descending",
     }
     url = f"{ARXIV_API}?{urllib.parse.urlencode(params)}"
     print(f"  arXiv URL: {url[:120]}...")
