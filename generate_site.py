@@ -152,7 +152,6 @@ def render_index(reports_sorted):
             <div class="day-card-date">{r['date']}</div>
             <div class="day-card-meta">
                 <span class="day-card-papers">{paper_count} 篇论文</span>
-                {f'<span class="day-card-source">{escape(sources)}</span>' if sources else ''}
             </div>
             <div class="day-card-arrow">→</div>
         </a>"""
@@ -218,9 +217,6 @@ def render_index(reports_sorted):
     background: var(--accent-light); color: var(--accent);
     padding: 4px 10px; border-radius: 6px;
   }}
-  .day-card-source {{
-    font-size: 0.78rem; color: var(--text-secondary);
-  }}
   .day-card-arrow {{
     font-size: 1.2rem; color: var(--text-secondary);
     transition: transform 0.15s;
@@ -280,7 +276,13 @@ def render_daily_page(report):
 
     footer_html = ""
     if footer_notes:
-        note_parts = " · ".join(f"{k}: {v}" for k, v in footer_notes.items())
+        fmt = {}
+        for k, v in footer_notes.items():
+            if "检索源" in k:
+                fmt[k] = normalize_source(v)
+            else:
+                fmt[k] = v
+        note_parts = " · ".join(f"{k}: {v}" for k, v in fmt.items())
         footer_html = f'<div class="day-footer">{note_parts}</div>'
 
     return f"""<!DOCTYPE html>
@@ -419,6 +421,24 @@ def render_daily_page(report):
 
 def bold_to_html(text):
     return re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', text)
+
+def normalize_source(raw):
+    """Normalize 检索源 format to a consistent short form."""
+    parts = re.split(r'\s*\+\s*', raw)
+    names = []
+    for p in parts:
+        p = p.strip()
+        if re.match(r'arXiv', p):
+            names.append("arXiv")
+        elif re.match(r'Semantic Scholar|S2', p):
+            names.append("Semantic Scholar")
+        else:
+            names.append(p)
+    result = " + ".join(names)
+    s2_unavail = re.search(r'S2[^+]*不可', raw) or re.search(r's2_available.*false', raw, re.I)
+    if s2_unavail:
+        result += " (S2 不可用)"
+    return result
 
 def format_venue(venue_str):
     m = re.match(r'arXiv:\s*([^,)]+?)(?:,|\s*\(|$)', venue_str.strip())
