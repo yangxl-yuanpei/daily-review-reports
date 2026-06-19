@@ -215,6 +215,13 @@ def search_s2_individual(term, limit=30, sort="relevance", fields=None, fields_o
                 print(f"  ⚠️  S2 rate limit (429), 等待 {wait}s 后重试 ({attempt+1}/3)")
                 time.sleep(wait)
                 continue
+            if resp.status_code == 400 and attempt == 0:
+                print("  ⚠️  S2 400 错误，尝试去掉 fieldsOfStudy/year 后重试...")
+                for fallback_key in ["fieldsOfStudy", "year"]:
+                    params.pop(fallback_key, None)
+                url = f"{S2_BULK_API}?{urllib.parse.urlencode(params)}"
+                print(f"  S2 URL (fallback): {url[:120]}...")
+                continue
             resp.raise_for_status()
             data = resp.json()
             papers_raw = data.get("data", [])
