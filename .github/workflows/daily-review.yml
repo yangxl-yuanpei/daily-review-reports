@@ -39,6 +39,7 @@ jobs:
 
       - name: Run full pipeline
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           S2_API_KEY: ${{ secrets.S2_API_KEY }}
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           LLM_MODEL: ${{ secrets.LLM_MODEL || 'qwen-plus' }}

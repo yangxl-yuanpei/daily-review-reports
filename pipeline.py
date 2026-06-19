@@ -41,7 +41,60 @@ LLM_BASE_URL = os.environ.get(
 TODAY = datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d")
 
 ###############################################################################
-# 1. Keywords
+# 1a. Keywords from GitHub Issues
+###############################################################################
+def fetch_issue_keywords():
+    """Fetch open Issues with 'keyword' label, extract suggested topics."""
+    token = os.environ.get("GITHUB_TOKEN", "")
+    if not token:
+        print("  ⚠️  未设置 GITHUB_TOKEN，跳过 Issue 关键词获取")
+        return []
+
+    repo = os.environ.get("GITHUB_REPOSITORY", "")
+    if not repo:
+        try:
+            result = subprocess.run(
+                ["git", "remote", "get-url", "origin"],
+                capture_output=True, text=True, cwd=REPO_DIR,
+            )
+            remote = result.stdout.strip()
+            m = re.search(r"github\.com[:/](.+?)(?:\.git)?$", remote)
+            if m:
+                repo = m.group(1)
+        except Exception:
+            pass
+    if not repo:
+        print("  ⚠️  无法确定 GitHub 仓库，跳过 Issue 关键词获取")
+        return []
+
+    url = f"https://api.github.com/repos/{repo}/issues?labels=keyword&state=open"
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Accept": "application/vnd.github.v3+json",
+        "User-Agent": "DailyReviewPipeline/1.0",
+    }
+    try:
+        resp = requests.get(url, headers=headers, timeout=30)
+        resp.raise_for_status()
+        issues = resp.json()
+        new_keywords = []
+        for issue in issues:
+            body = issue.get("body", "")
+            m = re.search(r"\*\*关键词/短语：\*\*\s*(.+?)(?:\r?\n|$)", body)
+            if m:
+                kw = m.group(1).strip().strip('"').strip("'")
+                if kw:
+                    new_keywords.append(kw)
+                    print(f"  ✓ Issue #{issue['number']}: '{kw}'")
+        if new_keywords:
+            print(f"  → 从 Issue 获取到 {len(new_keywords)} 个新关键词")
+        return new_keywords
+    except Exception as e:
+        print(f"  ⚠️  获取 Issue 关键词失败: {e}")
+        return []
+
+###############################################################################
+# 1b. Keywords
 ###############################################################################
 def load_keywords():
     kw = json.loads(KEYWORDS_FILE.read_text(encoding="utf-8"))
@@ -504,8 +557,20 @@ def main():
 
     # 1. Keywords
     print("◆ 1. 加载关键词...")
+
+    # 1a. Fetch issue-suggested keywords
+    issue_keywords = fetch_issue_keywords()
     kw = load_keywords()
+    existing = set(kw["topics"])
+    for ikw in issue_keywords:
+        if ikw not in existing:
+            kw["topics"].append(ikw)
+            existing.add(ikw)
+            print(f"    ➕ 新增 Issue 关键词: {ikw}")
+
     print(f"   主题 ({len(kw['topics'])}): {', '.join(kw['topics'][:5])}")
+    if len(kw['topics']) > 5:
+        print(f"   ... 等共 {len(kw['topics'])} 个")
 
     # 2. Search
     print("\n◆ 2a. arXiv 检索...")
