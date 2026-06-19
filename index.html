@@ -37,10 +37,7 @@
     background: var(--card-bg); border-radius: 12px; padding: 20px 24px;
     margin-bottom: 20px; border: 1px solid var(--border);
   }
-  .kw-header {
-    font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);
-    margin-bottom: 10px;
-  }
+  /* kw-header moved to lower rule */
   .kw-tags {
     display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px;
   }
@@ -48,6 +45,17 @@
     background: var(--accent-light); color: var(--accent);
     padding: 4px 10px; border-radius: 6px;
     font-size: 0.82rem; font-weight: 500;
+  }
+  .kw-header {
+    display: inline-block; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);
+    text-decoration: none; margin-bottom: 10px;
+  }
+  .kw-header:hover { color: var(--accent); }
+  .kw-config-row {
+    margin: 4px 0 8px;
+  }
+  .kw-config {
+    font-size: 0.78rem; color: var(--text-secondary);
   }
   .kw-suggest {
     display: inline-block; font-size: 0.8rem; font-weight: 500;
@@ -109,8 +117,9 @@
 <div class="container">
   
   <div class="keywords-section">
-    <div class="kw-header">🔑 当前追踪关键词</div>
+    <a href="https://github.com/yangxl-yuanpei/daily-review-reports/blob/main/keywords.json" target="_blank" class="kw-header">🔑 当前追踪关键词 ▸</a>
     <div class="kw-tags"><span class="kw-tag">machine learning force field</span><span class="kw-tag">neural network potential</span><span class="kw-tag">constant potential electrochemistry</span><span class="kw-tag">nuclear quantum effect surface catalysis</span><span class="kw-tag">grand canonical simulation</span></div>
+    <div class="kw-config-row"><span class="kw-config">🔬 领域: Chemistry, Physics, Materials Science, Computer Science &nbsp;|&nbsp; 📅 年份: 2023-</span></div>
     <a href="https://github.com/yangxl-yuanpei/daily-review-reports/issues/new?template=keyword-suggestion.md" target="_blank" class="kw-suggest">+ 建议新关键词</a>
   </div>
   <div class="day-grid">

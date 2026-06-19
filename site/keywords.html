@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>关键词索引 - 每日文献追踪</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #f5f7fa; --card-bg: #fff; --text: #1a1a2e; --text-secondary: #555; --accent: #2563eb; --accent-light: #dbeafe; --border: #e2e8f0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; padding: 0; }
+  .container { max-width: 1000px; margin: 0 auto; padding: 24px 16px; }
+
+  header {
+    background: linear-gradient(135deg, #1e3a5f, #2563eb);
+    color: white; padding: 32px 0 24px; margin-bottom: 24px;
+    border-radius: 0 0 24px 24px;
+  }
+  header .container { padding-bottom: 0; }
+  header h1 { font-size: 1.5rem; font-weight: 700; }
+  header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+  .back-link:hover { color: #fff; }
+
+  .kw-summary { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 20px; }
+
+  .kw-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+  .kw-nav-link {
+    padding: 6px 14px; border-radius: 999px; background: var(--card-bg);
+    border: 1px solid var(--border); text-decoration: none; font-size: 0.82rem;
+    color: var(--text); transition: all 0.12s; display: inline-flex; align-items: center; gap: 6px;
+  }
+  .kw-nav-link:hover { border-color: var(--accent); color: var(--accent); }
+  .kw-count { font-size: 0.7rem; color: var(--text-secondary); font-weight: 600; }
+
+  .kw-section {
+    background: var(--card-bg); border-radius: 12px; padding: 20px;
+    margin-bottom: 16px; border: 1px solid var(--border);
+  }
+  .kw-section-title { font-size: 1rem; font-weight: 700; margin-bottom: 12px; }
+  .kw-section-count { font-size: 0.78rem; font-weight: 400; color: var(--text-secondary); margin-left: 8px; }
+
+  .kw-paper-list { display: flex; flex-direction: column; gap: 6px; }
+  .kw-paper {
+    display: flex; align-items: center; gap: 12px;
+    padding: 6px 10px; border-radius: 6px; font-size: 0.85rem;
+    transition: background 0.1s;
+  }
+  .kw-paper:hover { background: var(--bg); }
+  .kw-paper-date {
+    flex-shrink: 0; font-size: 0.75rem; font-weight: 600;
+    color: var(--accent); background: var(--accent-light);
+    padding: 1px 8px; border-radius: 4px;
+  }
+  .kw-paper-title { color: var(--text); }
+
+  @media (max-width: 640px) {
+    header h1 { font-size: 1.2rem; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>🏷️ 关键词索引</h1>
+    <p><a href="index.html" class="back-link">← 返回每日报告</a></p>
+  </div>
+</header>
+<div class="container">
+  <p class="kw-summary">共 132 个关键词，涵盖 204 篇论文</p>
+  <div class="kw-nav"><a href="#ace" class="kw-nav-link">ACE<span class="kw-count">1</span></a><a href="#active-learning" class="kw-nav-link">active-learning<span class="kw-count">1</span></a><a href="#adsorbml" class="kw-nav-link">AdsorbML<span class="kw-count">1</span></a><a href="#benchmark" class="kw-nav-link">benchmark<span class="kw-count">1</span></a><a href="#c-h-activation" class="kw-nav-link">C-H-activation<span class="kw-count">1</span></a><a href="#capacitance" class="kw-nav-link">capacitance<span class="kw-count">1</span></a><a href="#catalysis" class="kw-nav-link">catalysis<span class="kw-count">5</span></a><a href="#cations" class="kw-nav-link">cations<span class="kw-count">1</span></a><a href="#ceriotti-group" class="kw-nav-link">Ceriotti-group<span class="kw-count">1</span></a><a href="#chemisorption" class="kw-nav-link">chemisorption<span class="kw-count">1</span></a><a href="#cmd" class="kw-nav-link">CMD<span class="kw-count">1</span></a><a href="#co-dimerization" class="kw-nav-link">CO-dimerization<span class="kw-count">1</span></a><a href="#co2rr" class="kw-nav-link">CO2RR<span class="kw-count">2</span></a><a href="#co3o4" class="kw-nav-link">Co3O4<span class="kw-count">1</span></a><a href="#constant-charge" class="kw-nav-link">constant-charge<span class="kw-count">1</span></a><a href="#constant-potential" class="kw-nav-link">constant-potential<span class="kw-count">1</span></a><a href="#coupling" class="kw-nav-link">coupling<span class="kw-count">1</span></a><a href="#cp" class="kw-nav-link">CP<span class="kw-count">5</span></a><a href="#cp-gap-identified" class="kw-nav-link">CP-gap-identified<span class="kw-count">1</span></a><a href="#cp-mlff" class="kw-nav-link">CP-MLFF<span class="kw-count">2</span></a><a href="#cp-mlmd" class="kw-nav-link">CP-MLMD<span class="kw-count">5</span></a><a href="#cu" class="kw-nav-link">Cu<span class="kw-count">1</span></a><a href="#cu(111)" class="kw-nav-link">Cu(111)<span class="kw-count">1</span></a><a href="#cu(111)-water" class="kw-nav-link">Cu(111)-water<span class="kw-count">1</span></a><a href="#cu-mos2" class="kw-nav-link">Cu-MoS2<span class="kw-count">1</span></a><a href="#cu/mos2" class="kw-nav-link">Cu/MoS2<span class="kw-count">1</span></a><a href="#curvature" class="kw-nav-link">curvature<span class="kw-count">1</span></a><a href="#descriptor" class="kw-nav-link">descriptor<span class="kw-count">1</span></a><a href="#dft" class="kw-nav-link">DFT<span class="kw-count">1</span></a><a href="#dp" class="kw-nav-link">DP<span class="kw-count">1</span></a><a href="#dp-qeq" class="kw-nav-link">DP-QEq<span class="kw-count">1</span></a><a href="#dynamics" class="kw-nav-link">dynamics<span class="kw-count">1</span></a><a href="#eann" class="kw-nav-link">EANN<span class="kw-count">1</span></a><a href="#ec-interfaces" class="kw-nav-link">EC-interfaces<span class="kw-count">1</span></a><a href="#ec-mlp" class="kw-nav-link">ec-MLP<span class="kw-count">1</span></a><a href="#edl" class="kw-nav-link">EDL<span class="kw-count">1</span></a><a href="#eep-ml" class="kw-nav-link">EEP-ML<span class="kw-count">1</span></a><a href="#eep-mlff" class="kw-nav-link">EEP-MLFF<span class="kw-count">2</span></a><a href="#eis" class="kw-nav-link">EIS<span class="kw-count">1</span></a><a href="#electrocatalysis" class="kw-nav-link">electrocatalysis<span class="kw-count">2</span></a><a href="#electrochemistry" class="kw-nav-link">electrochemistry<span class="kw-count">12</span></a><a href="#electrodeposition" class="kw-nav-link">electrodeposition<span class="kw-count">1</span></a><a href="#electron-density" class="kw-nav-link">electron-density<span class="kw-count">1</span></a><a href="#electronic-friction" class="kw-nav-link">electronic-friction<span class="kw-count">1</span></a><a href="#electronics" class="kw-nav-link">electronics<span class="kw-count">1</span></a><a href="#enhanced-sampling" class="kw-nav-link">enhanced-sampling<span class="kw-count">1</span></a><a href="#equiformerv2" class="kw-nav-link">EquiformerV2<span class="kw-count">1</span></a><a href="#equivalence-proof" class="kw-nav-link">equivalence-proof<span class="kw-count">1</span></a><a href="#equivariant" class="kw-nav-link">equivariant<span class="kw-count">1</span></a><a href="#excited-states" class="kw-nav-link">excited-states<span class="kw-count">2</span></a><a href="#explicit-charging" class="kw-nav-link">explicit-charging<span class="kw-count">1</span></a><a href="#extremal-pooling" class="kw-nav-link">extremal-pooling<span class="kw-count">1</span></a><a href="#femion" class="kw-nav-link">FEMION<span class="kw-count">1</span></a><a href="#finite-size-error" class="kw-nav-link">finite-size-error<span class="kw-count">1</span></a><a href="#flow-electrochemistry" class="kw-nav-link">flow-electrochemistry<span class="kw-count">1</span></a><a href="#flow-model" class="kw-nav-link">flow-model<span class="kw-count">1</span></a><a href="#force-aware" class="kw-nav-link">force-aware<span class="kw-count">1</span></a><a href="#gc-ensemble" class="kw-nav-link">GC-ensemble<span class="kw-count">9</span></a><a href="#gc-sampling" class="kw-nav-link">GC-sampling<span class="kw-count">2</span></a><a href="#generative" class="kw-nav-link">generative<span class="kw-count">1</span></a><a href="#gnn" class="kw-nav-link">GNN<span class="kw-count">1</span></a><a href="#hdnnp" class="kw-nav-link">HDNNP<span class="kw-count">1</span></a><a href="#hematite" class="kw-nav-link">hematite<span class="kw-count">1</span></a><a href="#hessian" class="kw-nav-link">Hessian<span class="kw-count">1</span></a><a href="#hint" class="kw-nav-link">HINT<span class="kw-count">1</span></a><a href="#hybrid" class="kw-nav-link">hybrid<span class="kw-count">1</span></a><a href="#hybrid-dielectric" class="kw-nav-link">hybrid-dielectric<span class="kw-count">1</span></a><a href="#hydrogen-desorption" class="kw-nav-link">hydrogen-desorption<span class="kw-count">1</span></a><a href="#icml2026" class="kw-nav-link">ICML2026<span class="kw-count">1</span></a><a href="#inverse-design" class="kw-nav-link">inverse-design<span class="kw-count">1</span></a><a href="#ion-transport" class="kw-nav-link">ion-transport<span class="kw-count">1</span></a><a href="#knowledge-distillation" class="kw-nav-link">knowledge-distillation<span class="kw-count">1</span></a><a href="#li-dendrite" class="kw-nav-link">Li-dendrite<span class="kw-count">1</span></a><a href="#llm" class="kw-nav-link">LLM<span class="kw-count">1</span></a><a href="#m-n-c" class="kw-nav-link">M-N-C<span class="kw-count">1</span></a><a href="#mace" class="kw-nav-link">MACE<span class="kw-count">5</span></a><a href="#metal-surface" class="kw-nav-link">metal-surface<span class="kw-count">1</span></a><a href="#mineral-surface" class="kw-nav-link">mineral-surface<span class="kw-count">1</span></a><a href="#mlff" class="kw-nav-link">MLFF<span class="kw-count">8</span></a><a href="#mlip" class="kw-nav-link">MLIP<span class="kw-count">7</span></a><a href="#mm" class="kw-nav-link">MM<span class="kw-count">1</span></a><a href="#nanofluidics" class="kw-nav-link">nanofluidics<span class="kw-count">1</span></a><a href="#nanopore" class="kw-nav-link">nanopore<span class="kw-count">1</span></a><a href="#nature2025" class="kw-nav-link">Nature2025<span class="kw-count">1</span></a><a href="#nff" class="kw-nav-link">NFF<span class="kw-count">1</span></a><a href="#nnp" class="kw-nav-link">NNP<span class="kw-count">3</span></a><a href="#non-adiabatic" class="kw-nav-link">non-adiabatic<span class="kw-count">1</span></a><a href="#nqe" class="kw-nav-link">NQE<span class="kw-count">7</span></a><a href="#nse" class="kw-nav-link">NSE<span class="kw-count">1</span></a><a href="#ntk" class="kw-nav-link">NTK<span class="kw-count">1</span></a><a href="#oc25" class="kw-nav-link">OC25<span class="kw-count">1</span></a><a href="#open-shell" class="kw-nav-link">open-shell<span class="kw-count">1</span></a><a href="#orr" class="kw-nav-link">ORR<span class="kw-count">1</span></a><a href="#pcet" class="kw-nav-link">PCET<span class="kw-count">1</span></a><a href="#pd(332)" class="kw-nav-link">Pd(332)<span class="kw-count">1</span></a><a href="#perspective" class="kw-nav-link">perspective<span class="kw-count">1</span></a><a href="#pfp" class="kw-nav-link">PFP<span class="kw-count">1</span></a><a href="#phonon" class="kw-nav-link">phonon<span class="kw-count">1</span></a><a href="#photochemistry" class="kw-nav-link">photochemistry<span class="kw-count">1</span></a><a href="#pimd" class="kw-nav-link">PIMD<span class="kw-count">1</span></a><a href="#pourbaix" class="kw-nav-link">Pourbaix<span class="kw-count">1</span></a><a href="#pt(111)" class="kw-nav-link">Pt(111)<span class="kw-count">3</span></a><a href="#pt(111)-water" class="kw-nav-link">Pt(111)-water<span class="kw-count">1</span></a><a href="#pt-kf" class="kw-nav-link">Pt-KF<span class="kw-count">1</span></a><a href="#pzc" class="kw-nav-link">PZC<span class="kw-count">2</span></a><a href="#quantum-algorithm" class="kw-nav-link">quantum-algorithm<span class="kw-count">1</span></a><a href="#quantum-embedding" class="kw-nav-link">quantum-embedding<span class="kw-count">1</span></a><a href="#radical-polymerization" class="kw-nav-link">radical-polymerization<span class="kw-count">1</span></a><a href="#reactive" class="kw-nav-link">reactive<span class="kw-count">1</span></a><a href="#reactive-nnp" class="kw-nav-link">reactive-NNP<span class="kw-count">1</span></a><a href="#reorganization-energy" class="kw-nav-link">reorganization-energy<span class="kw-count">1</span></a><a href="#review" class="kw-nav-link">review<span class="kw-count">1</span></a><a href="#rpmd" class="kw-nav-link">RPMD<span class="kw-count">3</span></a><a href="#s2-only" class="kw-nav-link">S2-only<span class="kw-count">3</span></a><a href="#sei" class="kw-nav-link">SEI<span class="kw-count">1</span></a><a href="#self-supervised" class="kw-nav-link">self-supervised<span class="kw-count">1</span></a><a href="#solid-liquid" class="kw-nav-link">solid-liquid<span class="kw-count">1</span></a><a href="#solvent-model" class="kw-nav-link">solvent-model<span class="kw-count">1</span></a><a href="#spin-charge" class="kw-nav-link">spin-charge<span class="kw-count">1</span></a><a href="#spin-lattice" class="kw-nav-link">spin-lattice<span class="kw-count">1</span></a><a href="#spin-state" class="kw-nav-link">spin-state<span class="kw-count">1</span></a><a href="#surface" class="kw-nav-link">surface<span class="kw-count">3</span></a><a href="#surface-adsorption" class="kw-nav-link">surface-adsorption<span class="kw-count">1</span></a><a href="#surface-flexibility" class="kw-nav-link">surface-flexibility<span class="kw-count">1</span></a><a href="#tio2-water" class="kw-nav-link">TiO2-water<span class="kw-count">1</span></a><a href="#topological-semimetal" class="kw-nav-link">topological-semimetal<span class="kw-count">1</span></a><a href="#transfer-learning" class="kw-nav-link">transfer-learning<span class="kw-count">2</span></a><a href="#treci" class="kw-nav-link">TRECI<span class="kw-count">1</span></a><a href="#tunneling" class="kw-nav-link">tunneling<span class="kw-count">1</span></a><a href="#umlip" class="kw-nav-link">uMLIP<span class="kw-count">1</span></a><a href="#vssr-mc" class="kw-nav-link">VSSR-MC<span class="kw-count">1</span></a><a href="#wannier" class="kw-nav-link">Wannier<span class="kw-count">1</span></a></div>
+  
+        <section id="ace" class="kw-section">
+            <h2 class="kw-section-title">ACE <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Benchmarking short-range MLIPs for metal/electrolyte interfaces</span>
+            </div></div>
+        </section>
+        <section id="active-learning" class="kw-section">
+            <h2 class="kw-section-title">active-learning <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Force-Aware NTK for Scalable Active Learning of MLIPs</span>
+            </div></div>
+        </section>
+        <section id="adsorbml" class="kw-section">
+            <h2 class="kw-section-title">AdsorbML <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Application of graph neural network in computational heterogeneous catalysis</span>
+            </div></div>
+        </section>
+        <section id="benchmark" class="kw-section">
+            <h2 class="kw-section-title">benchmark <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Benchmarking short-range MLIPs for metal/electrolyte interfaces</span>
+            </div></div>
+        </section>
+        <section id="c-h-activation" class="kw-section">
+            <h2 class="kw-section-title">C-H-activation <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-12</span>
+                <span class="kw-paper-title">Nuclear Quantum Effects of Metal Surface-Mediated C-H Activation</span>
+            </div></div>
+        </section>
+        <section id="capacitance" class="kw-section">
+            <h2 class="kw-section-title">capacitance <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Modeling Electrochemical Interfaces with a Hybrid Dielectric Machine Learning Potential</span>
+            </div></div>
+        </section>
+        <section id="catalysis" class="kw-section">
+            <h2 class="kw-section-title">catalysis <span class="kw-section-count">5 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">CatalyticMLLM: Graph-Text Multimodal LLM for Catalytic Materials</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">CatFlow: generative flow for catalytic structures</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Grand Canonical Ensemble Modeling of Electrochemical Interfaces Made Simple.</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Nuclear Quantum Effects in OH*/OD* Formation Kinetics on Pd(332): A Ring-Polymer Molecular Dynamics Study</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Application of graph neural network in computational heterogeneous catalysis</span>
+            </div></div>
+        </section>
+        <section id="cations" class="kw-section">
+            <h2 class="kw-section-title">cations <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">A constant potential reactor framework for electrochemical reaction simulations</span>
+            </div></div>
+        </section>
+        <section id="ceriotti-group" class="kw-section">
+            <h2 class="kw-section-title">Ceriotti-group <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-16</span>
+                <span class="kw-paper-title">Transferable machine learning of excited-state dynamics with extremal pooling</span>
+            </div></div>
+        </section>
+        <section id="chemisorption" class="kw-section">
+            <h2 class="kw-section-title">chemisorption <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-16</span>
+                <span class="kw-paper-title">Hydrogen Chemisorption and Current-Induced Spin Polarization on NbP</span>
+            </div></div>
+        </section>
+        <section id="cmd" class="kw-section">
+            <h2 class="kw-section-title">CMD <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-12</span>
+                <span class="kw-paper-title">Nuclear Quantum Effects of Metal Surface-Mediated C-H Activation</span>
+            </div></div>
+        </section>
+        <section id="co-dimerization" class="kw-section">
+            <h2 class="kw-section-title">CO-dimerization <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Insights into CO dimerization at electrified Cu interfaces from large-scale ML</span>
+            </div></div>
+        </section>
+        <section id="co2rr" class="kw-section">
+            <h2 class="kw-section-title">CO2RR <span class="kw-section-count">2 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">A constant potential reactor framework for electrochemical reaction simulations</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Impact of charging in constant potential electrochemistry modelling</span>
+            </div></div>
+        </section>
+        <section id="co3o4" class="kw-section">
+            <h2 class="kw-section-title">Co3O4 <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">A high-dimensional neural network potential for Co3O4</span>
+            </div></div>
+        </section>
+        <section id="constant-charge" class="kw-section">
+            <h2 class="kw-section-title">constant-charge <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Converging Divergent Paths: Constant Charge vs Constant Potential Energetics in Computational Electrochemistry</span>
+            </div></div>
+        </section>
+        <section id="constant-potential" class="kw-section">
+            <h2 class="kw-section-title">constant-potential <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Grand Canonical Ensemble Modeling of Electrochemical Interfaces Made Simple.</span>
+            </div></div>
+        </section>
+        <section id="coupling" class="kw-section">
+            <h2 class="kw-section-title">coupling <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Spin-lattice coupling in electrocatalysts</span>
+            </div></div>
+        </section>
+        <section id="cp" class="kw-section">
+            <h2 class="kw-section-title">CP <span class="kw-section-count">5 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">A Machine-Learning Accelerated Grand Canonical Sampling Framework for Nuclear Quantum Effects</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">The Intricacies of Computational Electrochemistry</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Impact of charging in constant potential electrochemistry modelling</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">A Scalable Solution to Constant-Potential Flow Electrochemistry</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Converging Divergent Paths: Constant Charge vs Constant Potential Energetics in Computational Electrochemistry</span>
+            </div></div>
+        </section>
+        <section id="cp-gap-identified" class="kw-section">
+            <h2 class="kw-section-title">CP-gap-identified <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Application of graph neural network in computational heterogeneous catalysis</span>
+            </div></div>
+        </section>
+        <section id="cp-mlff" class="kw-section">
+            <h2 class="kw-section-title">CP-MLFF <span class="kw-section-count">2 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Constant-Potential Machine Learning Force Field for the Electrochemical Interface</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-14</span>
+                <span class="kw-paper-title">Constant-Potential Machine Learning Force Field for the Electrochemical Interface</span>
+            </div></div>
+        </section>
+        <section id="cp-mlmd" class="kw-section">
+            <h2 class="kw-section-title">CP-MLMD <span class="kw-section-count">5 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">A constant potential reactor framework for electrochemical reaction simulations</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Transferable Constant-Potential Machine Learning Molecular Dynamics with Application to the Copper/Water Interface</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">A Unified Framework for Constant-Potential Machine Learning Molecular Dynamics and Electron Density Prediction</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Examining Dendrite Nucleation and Growth via Constant Potential Machine Learning Molecular Dynamics</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Constant-Potential Machine Learning Molecular Dynamics Simulations Reveal Potential-Regulated Cu Cluster Formation on MoS2</span>
+            </div></div>
+        </section>
+        <section id="cu" class="kw-section">
+            <h2 class="kw-section-title">Cu <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Insights into CO dimerization at electrified Cu interfaces from large-scale ML</span>
+            </div></div>
+        </section>
+        <section id="cu(111)" class="kw-section">
+            <h2 class="kw-section-title">Cu(111) <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Impact of charging in constant potential electrochemistry modelling</span>
+            </div></div>
+        </section>
+        <section id="cu(111)-water" class="kw-section">
+            <h2 class="kw-section-title">Cu(111)-water <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Transferable Constant-Potential Machine Learning Molecular Dynamics with Application to the Copper/Water Interface</span>
+            </div></div>
+        </section>
+        <section id="cu-mos2" class="kw-section">
+            <h2 class="kw-section-title">Cu-MoS2 <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Constant-Potential Machine Learning Molecular Dynamics Simulations Reveal Potential-Regulated Cu Cluster Formation on MoS2</span>
+            </div></div>
+        </section>
+        <section id="cu/mos2" class="kw-section">
+            <h2 class="kw-section-title">Cu/MoS2 <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-12</span>
+                <span class="kw-paper-title">Constant-Potential Machine Learning Molecular Dynamics Simulations Reveal Potential-Regulated Cu Cluster Formation on MoS2 (EEP-MLFF)</span>
+            </div></div>
+        </section>
+        <section id="curvature" class="kw-section">
+            <h2 class="kw-section-title">curvature <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Hessian-informed machine learning interatomic potential (Hi-MLIP)</span>
+            </div></div>
+        </section>
+        <section id="descriptor" class="kw-section">
+            <h2 class="kw-section-title">descriptor <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Spin State vs PZC for ORR in M-N-C electrocatalysts</span>
+            </div></div>
+        </section>
+        <section id="dft" class="kw-section">
+            <h2 class="kw-section-title">DFT <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-16</span>
+                <span class="kw-paper-title">Hydrogen Chemisorption and Current-Induced Spin Polarization on NbP</span>
+            </div></div>
+        </section>
+        <section id="dp" class="kw-section">
+            <h2 class="kw-section-title">DP <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Benchmarking short-range MLIPs for metal/electrolyte interfaces</span>
+            </div></div>
+        </section>
+        <section id="dp-qeq" class="kw-section">
+            <h2 class="kw-section-title">DP-QEq <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Examining Dendrite Nucleation and Growth via Constant Potential Machine Learning Molecular Dynamics</span>
+            </div></div>
+        </section>
+        <section id="dynamics" class="kw-section">
+            <h2 class="kw-section-title">dynamics <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Quantum algorithm for non-adiabatic dynamics</span>
+            </div></div>
+        </section>
+        <section id="eann" class="kw-section">
+            <h2 class="kw-section-title">EANN <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Nuclear Quantum Effects in OH*/OD* Formation Kinetics on Pd(332): A Ring-Polymer Molecular Dynamics Study</span>
+            </div></div>
+        </section>
+        <section id="ec-interfaces" class="kw-section">
+            <h2 class="kw-section-title">EC-interfaces <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Benchmarking short-range MLIPs for metal/electrolyte interfaces</span>
+            </div></div>
+        </section>
+        <section id="ec-mlp" class="kw-section">
+            <h2 class="kw-section-title">ec-MLP <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Modeling Electrochemical Interfaces with a Hybrid Dielectric Machine Learning Potential</span>
+            </div></div>
+        </section>
+        <section id="edl" class="kw-section">
+            <h2 class="kw-section-title">EDL <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">The Origin of the Constant Phase Element Behavior of Pt(111) Near the Potential of Zero Charge</span>
+            </div></div>
+        </section>
+        <section id="eep-ml" class="kw-section">
+            <h2 class="kw-section-title">EEP-ML <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">A Unified Framework for Constant-Potential Machine Learning Molecular Dynamics and Electron Density Prediction</span>
+            </div></div>
+        </section>
+        <section id="eep-mlff" class="kw-section">
+            <h2 class="kw-section-title">EEP-MLFF <span class="kw-section-count">2 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Constant-Potential Machine Learning Molecular Dynamics Simulations Reveal Potential-Regulated Cu Cluster Formation on MoS2</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-12</span>
+                <span class="kw-paper-title">Constant-Potential Machine Learning Molecular Dynamics Simulations Reveal Potential-Regulated Cu Cluster Formation on MoS2 (EEP-MLFF)</span>
+            </div></div>
+        </section>
+        <section id="eis" class="kw-section">
+            <h2 class="kw-section-title">EIS <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">The Origin of the Constant Phase Element Behavior of Pt(111) Near the Potential of Zero Charge</span>
+            </div></div>
+        </section>
+        <section id="electrocatalysis" class="kw-section">
+            <h2 class="kw-section-title">electrocatalysis <span class="kw-section-count">2 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Spin-lattice coupling in electrocatalysts</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-16</span>
+                <span class="kw-paper-title">Hydrogen Chemisorption and Current-Induced Spin Polarization on NbP</span>
+            </div></div>
+        </section>
+        <section id="electrochemistry" class="kw-section">
+            <h2 class="kw-section-title">electrochemistry <span class="kw-section-count">12 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Accelerating thermodynamic simulations of electrochemical interfaces</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-16</span>
+                <span class="kw-paper-title">Evolution of Nonlinear Ion Transport in Nanopore Arrays</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">At-Scale Data-Driven Exploration of High-Voltage Cathode-Active Materials for Sodium Batteries</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Grand Canonical Ensemble Modeling of Electrochemical Interfaces Made Simple.</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">The Origin of the Constant Phase Element Behavior of Pt(111) Near the Potential of Zero Charge</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">The Intricacies of Computational Electrochemistry</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Impact of charging in constant potential electrochemistry modelling</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">A Scalable Solution to Constant-Potential Flow Electrochemistry</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Converging Divergent Paths: Constant Charge vs Constant Potential Energetics in Computational Electrochemistry</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-14</span>
+                <span class="kw-paper-title">Constant-Potential Machine Learning Force Field for the Electrochemical Interface</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-12</span>
+                <span class="kw-paper-title">A Machine-Learning Accelerated Grand Canonical Sampling Framework for Nuclear Quantum Effects in Constant Potential Electrochemistry</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-12</span>
+                <span class="kw-paper-title">Constant-Potential Machine Learning Molecular Dynamics Simulations Reveal Potential-Regulated Cu Cluster Formation on MoS2 (EEP-MLFF)</span>
+            </div></div>
+        </section>
+        <section id="electrodeposition" class="kw-section">
+            <h2 class="kw-section-title">electrodeposition <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Examining Dendrite Nucleation and Growth via Constant Potential Machine Learning Molecular Dynamics</span>
+            </div></div>
+        </section>
+        <section id="electron-density" class="kw-section">
+            <h2 class="kw-section-title">electron-density <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">A Unified Framework for Constant-Potential Machine Learning Molecular Dynamics and Electron Density Prediction</span>
+            </div></div>
+        </section>
+        <section id="electronic-friction" class="kw-section">
+            <h2 class="kw-section-title">electronic-friction <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-12</span>
+                <span class="kw-paper-title">Electronic Friction Near Metal Surface: Incorporating Nuclear Quantum Effect with Ring Polymer Molecular Dynamics</span>
+            </div></div>
+        </section>
+        <section id="electronics" class="kw-section">
+            <h2 class="kw-section-title">electronics <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Electronic origin of reorganization energy</span>
+            </div></div>
+        </section>
+        <section id="enhanced-sampling" class="kw-section">
+            <h2 class="kw-section-title">enhanced-sampling <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">A constant potential reactor framework for electrochemical reaction simulations</span>
+            </div></div>
+        </section>
+        <section id="equiformerv2" class="kw-section">
+            <h2 class="kw-section-title">EquiformerV2 <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">CatalyticMLLM: Graph-Text Multimodal LLM for Catalytic Materials</span>
+            </div></div>
+        </section>
+        <section id="equivalence-proof" class="kw-section">
+            <h2 class="kw-section-title">equivalence-proof <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Converging Divergent Paths: Constant Charge vs Constant Potential Energetics in Computational Electrochemistry</span>
+            </div></div>
+        </section>
+        <section id="equivariant" class="kw-section">
+            <h2 class="kw-section-title">equivariant <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Application of graph neural network in computational heterogeneous catalysis</span>
+            </div></div>
+        </section>
+        <section id="excited-states" class="kw-section">
+            <h2 class="kw-section-title">excited-states <span class="kw-section-count">2 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-16</span>
+                <span class="kw-paper-title">Transferable machine learning of excited-state dynamics with extremal pooling</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">OMNI-P2x universal neural network potential for excited-state simulations</span>
+            </div></div>
+        </section>
+        <section id="explicit-charging" class="kw-section">
+            <h2 class="kw-section-title">explicit-charging <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Impact of charging in constant potential electrochemistry modelling</span>
+            </div></div>
+        </section>
+        <section id="extremal-pooling" class="kw-section">
+            <h2 class="kw-section-title">extremal-pooling <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-16</span>
+                <span class="kw-paper-title">Transferable machine learning of excited-state dynamics with extremal pooling</span>
+            </div></div>
+        </section>
+        <section id="femion" class="kw-section">
+            <h2 class="kw-section-title">FEMION <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">FEMION quantum embedding</span>
+            </div></div>
+        </section>
+        <section id="finite-size-error" class="kw-section">
+            <h2 class="kw-section-title">finite-size-error <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Converging Divergent Paths: Constant Charge vs Constant Potential Energetics in Computational Electrochemistry</span>
+            </div></div>
+        </section>
+        <section id="flow-electrochemistry" class="kw-section">
+            <h2 class="kw-section-title">flow-electrochemistry <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">A Scalable Solution to Constant-Potential Flow Electrochemistry</span>
+            </div></div>
+        </section>
+        <section id="flow-model" class="kw-section">
+            <h2 class="kw-section-title">flow-model <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">CatFlow: generative flow for catalytic structures</span>
+            </div></div>
+        </section>
+        <section id="force-aware" class="kw-section">
+            <h2 class="kw-section-title">force-aware <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Force-Aware NTK for Scalable Active Learning of MLIPs</span>
+            </div></div>
+        </section>
+        <section id="gc-ensemble" class="kw-section">
+            <h2 class="kw-section-title">GC-ensemble <span class="kw-section-count">9 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Data-driven mapping of borophene growth pathways</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Mechanochemical Nano-Writing of an Atomically Thin Metal</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Designing Multivalent Copolymers for Selective Targeting of Multicomponent Surfaces</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Machine-learned atomistic simulations reveal the basis of hydrogen-induced crack-plane transition in alpha-Fe</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Monte Carlo simulation of selective adsorption in a binary hard-disk mixture on patterned adhesive surfaces</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Improved Desalination by Polymer Grafting</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">SAFT-P: A plaquette level perturbation for self-assembly in patchy colloids</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Grand Canonical Ensemble Modeling of Electrochemical Interfaces Made Simple.</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Converging Divergent Paths: Constant Charge vs Constant Potential Energetics in Computational Electrochemistry</span>
+            </div></div>
+        </section>
+        <section id="gc-sampling" class="kw-section">
+            <h2 class="kw-section-title">GC-sampling <span class="kw-section-count">2 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">A Machine-Learning Accelerated Grand Canonical Sampling Framework for Nuclear Quantum Effects</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-12</span>
+                <span class="kw-paper-title">A Machine-Learning Accelerated Grand Canonical Sampling Framework for Nuclear Quantum Effects in Constant Potential Electrochemistry</span>
+            </div></div>
+        </section>
+        <section id="generative" class="kw-section">
+            <h2 class="kw-section-title">generative <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">CatFlow: generative flow for catalytic structures</span>
+            </div></div>
+        </section>
+        <section id="gnn" class="kw-section">
+            <h2 class="kw-section-title">GNN <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Application of graph neural network in computational heterogeneous catalysis</span>
+            </div></div>
+        </section>
+        <section id="hdnnp" class="kw-section">
+            <h2 class="kw-section-title">HDNNP <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">A high-dimensional neural network potential for Co3O4</span>
+            </div></div>
+        </section>
+        <section id="hematite" class="kw-section">
+            <h2 class="kw-section-title">hematite <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-12</span>
+                <span class="kw-paper-title">Mechanism of Fe(II) Chemisorption on Hematite(001) Revealed by Reactive Neural Network Potential Molecular Dynamics</span>
+            </div></div>
+        </section>
+        <section id="hessian" class="kw-section">
+            <h2 class="kw-section-title">Hessian <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Hessian-informed machine learning interatomic potential (Hi-MLIP)</span>
+            </div></div>
+        </section>
+        <section id="hint" class="kw-section">
+            <h2 class="kw-section-title">HINT <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Hessian-informed machine learning interatomic potential (Hi-MLIP)</span>
+            </div></div>
+        </section>
+        <section id="hybrid" class="kw-section">
+            <h2 class="kw-section-title">hybrid <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">PFP/MM: Hybrid uMLIP + Classical FF for Large-Scale Reactive Simulations</span>
+            </div></div>
+        </section>
+        <section id="hybrid-dielectric" class="kw-section">
+            <h2 class="kw-section-title">hybrid-dielectric <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Modeling Electrochemical Interfaces with a Hybrid Dielectric Machine Learning Potential</span>
+            </div></div>
+        </section>
+        <section id="hydrogen-desorption" class="kw-section">
+            <h2 class="kw-section-title">hydrogen-desorption <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-12</span>
+                <span class="kw-paper-title">Ring Polymer Molecular Dynamics Rates for Hydrogen Recombinative Desorption on Pt(111)</span>
+            </div></div>
+        </section>
+        <section id="icml2026" class="kw-section">
+            <h2 class="kw-section-title">ICML2026 <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">TriForces: Three-Stream Framework for Transferable MLIPs</span>
+            </div></div>
+        </section>
+        <section id="inverse-design" class="kw-section">
+            <h2 class="kw-section-title">inverse-design <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">CatalyticMLLM: Graph-Text Multimodal LLM for Catalytic Materials</span>
+            </div></div>
+        </section>
+        <section id="ion-transport" class="kw-section">
+            <h2 class="kw-section-title">ion-transport <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-16</span>
+                <span class="kw-paper-title">Evolution of Nonlinear Ion Transport in Nanopore Arrays</span>
+            </div></div>
+        </section>
+        <section id="knowledge-distillation" class="kw-section">
+            <h2 class="kw-section-title">knowledge-distillation <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Distilling First-Principles into Compact Machine Learned Interatomic Potentials</span>
+            </div></div>
+        </section>
+        <section id="li-dendrite" class="kw-section">
+            <h2 class="kw-section-title">Li-dendrite <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Examining Dendrite Nucleation and Growth via Constant Potential Machine Learning Molecular Dynamics</span>
+            </div></div>
+        </section>
+        <section id="llm" class="kw-section">
+            <h2 class="kw-section-title">LLM <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">CatalyticMLLM: Graph-Text Multimodal LLM for Catalytic Materials</span>
+            </div></div>
+        </section>
+        <section id="m-n-c" class="kw-section">
+            <h2 class="kw-section-title">M-N-C <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Spin State vs PZC for ORR in M-N-C electrocatalysts</span>
+            </div></div>
+        </section>
+        <section id="mace" class="kw-section">
+            <h2 class="kw-section-title">MACE <span class="kw-section-count">5 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Benchmarking short-range MLIPs for metal/electrolyte interfaces</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Transferable Constant-Potential Machine Learning Molecular Dynamics with Application to the Copper/Water Interface</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">A Unified Framework for Constant-Potential Machine Learning Molecular Dynamics and Electron Density Prediction</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Constant-Potential Machine Learning Force Field for the Electrochemical Interface</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-14</span>
+                <span class="kw-paper-title">Constant-Potential Machine Learning Force Field for the Electrochemical Interface</span>
+            </div></div>
+        </section>
+        <section id="metal-surface" class="kw-section">
+            <h2 class="kw-section-title">metal-surface <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-12</span>
+                <span class="kw-paper-title">Electronic Friction Near Metal Surface: Incorporating Nuclear Quantum Effect with Ring Polymer Molecular Dynamics</span>
+            </div></div>
+        </section>
+        <section id="mineral-surface" class="kw-section">
+            <h2 class="kw-section-title">mineral-surface <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-12</span>
+                <span class="kw-paper-title">Mechanism of Fe(II) Chemisorption on Hematite(001) Revealed by Reactive Neural Network Potential Molecular Dynamics</span>
+            </div></div>
+        </section>
+        <section id="mlff" class="kw-section">
+            <h2 class="kw-section-title">MLFF <span class="kw-section-count">8 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">OMNI-P2x universal neural network potential for excited-state simulations</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">AIMNet2-NSE: A Transferable Reactive Neural Network Potential for Open-Shell Chemistry</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">A high-dimensional neural network potential for Co3O4</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-14</span>
+                <span class="kw-paper-title">Constant-Potential Machine Learning Force Field for the Electrochemical Interface</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-12</span>
+                <span class="kw-paper-title">A Machine-Learning Accelerated Grand Canonical Sampling Framework for Nuclear Quantum Effects in Constant Potential Electrochemistry</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-12</span>
+                <span class="kw-paper-title">Constant-Potential Machine Learning Molecular Dynamics Simulations Reveal Potential-Regulated Cu Cluster Formation on MoS2 (EEP-MLFF)</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-12</span>
+                <span class="kw-paper-title">Nuclear Quantum Effects of Metal Surface-Mediated C-H Activation</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-12</span>
+                <span class="kw-paper-title">Mechanism of Fe(II) Chemisorption on Hematite(001) Revealed by Reactive Neural Network Potential Molecular Dynamics</span>
+            </div></div>
+        </section>
+        <section id="mlip" class="kw-section">
+            <h2 class="kw-section-title">MLIP <span class="kw-section-count">7 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Benchmarking short-range MLIPs for metal/electrolyte interfaces</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Insights into CO dimerization at electrified Cu interfaces from large-scale ML</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Force-Aware NTK for Scalable Active Learning of MLIPs</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Hessian-informed machine learning interatomic potential (Hi-MLIP)</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">TriForces: Three-Stream Framework for Transferable MLIPs</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-16</span>
+                <span class="kw-paper-title">Transferable machine learning of excited-state dynamics with extremal pooling</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Distilling First-Principles into Compact Machine Learned Interatomic Potentials</span>
+            </div></div>
+        </section>
+        <section id="mm" class="kw-section">
+            <h2 class="kw-section-title">MM <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">PFP/MM: Hybrid uMLIP + Classical FF for Large-Scale Reactive Simulations</span>
+            </div></div>
+        </section>
+        <section id="nanofluidics" class="kw-section">
+            <h2 class="kw-section-title">nanofluidics <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-16</span>
+                <span class="kw-paper-title">Evolution of Nonlinear Ion Transport in Nanopore Arrays</span>
+            </div></div>
+        </section>
+        <section id="nanopore" class="kw-section">
+            <h2 class="kw-section-title">nanopore <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-16</span>
+                <span class="kw-paper-title">Evolution of Nonlinear Ion Transport in Nanopore Arrays</span>
+            </div></div>
+        </section>
+        <section id="nature2025" class="kw-section">
+            <h2 class="kw-section-title">Nature2025 <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Electronic origin of reorganization energy</span>
+            </div></div>
+        </section>
+        <section id="nff" class="kw-section">
+            <h2 class="kw-section-title">NFF <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Accelerating thermodynamic simulations of electrochemical interfaces</span>
+            </div></div>
+        </section>
+        <section id="nnp" class="kw-section">
+            <h2 class="kw-section-title">NNP <span class="kw-section-count">3 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">A constant potential reactor framework for electrochemical reaction simulations</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">OMNI-P2x universal neural network potential for excited-state simulations</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">AIMNet2-NSE: A Transferable Reactive Neural Network Potential for Open-Shell Chemistry</span>
+            </div></div>
+        </section>
+        <section id="non-adiabatic" class="kw-section">
+            <h2 class="kw-section-title">non-adiabatic <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Quantum algorithm for non-adiabatic dynamics</span>
+            </div></div>
+        </section>
+        <section id="nqe" class="kw-section">
+            <h2 class="kw-section-title">NQE <span class="kw-section-count">7 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Distilling First-Principles into Compact Machine Learned Interatomic Potentials</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">A Machine-Learning Accelerated Grand Canonical Sampling Framework for Nuclear Quantum Effects</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Nuclear Quantum Effects in OH*/OD* Formation Kinetics on Pd(332): A Ring-Polymer Molecular Dynamics Study</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-12</span>
+                <span class="kw-paper-title">A Machine-Learning Accelerated Grand Canonical Sampling Framework for Nuclear Quantum Effects in Constant Potential Electrochemistry</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-12</span>
+                <span class="kw-paper-title">Electronic Friction Near Metal Surface: Incorporating Nuclear Quantum Effect with Ring Polymer Molecular Dynamics</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-12</span>
+                <span class="kw-paper-title">Nuclear Quantum Effects of Metal Surface-Mediated C-H Activation</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-12</span>
+                <span class="kw-paper-title">Ring Polymer Molecular Dynamics Rates for Hydrogen Recombinative Desorption on Pt(111)</span>
+            </div></div>
+        </section>
+        <section id="nse" class="kw-section">
+            <h2 class="kw-section-title">NSE <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">AIMNet2-NSE: A Transferable Reactive Neural Network Potential for Open-Shell Chemistry</span>
+            </div></div>
+        </section>
+        <section id="ntk" class="kw-section">
+            <h2 class="kw-section-title">NTK <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Force-Aware NTK for Scalable Active Learning of MLIPs</span>
+            </div></div>
+        </section>
+        <section id="oc25" class="kw-section">
+            <h2 class="kw-section-title">OC25 <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Insights into CO dimerization at electrified Cu interfaces from large-scale ML</span>
+            </div></div>
+        </section>
+        <section id="open-shell" class="kw-section">
+            <h2 class="kw-section-title">open-shell <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">AIMNet2-NSE: A Transferable Reactive Neural Network Potential for Open-Shell Chemistry</span>
+            </div></div>
+        </section>
+        <section id="orr" class="kw-section">
+            <h2 class="kw-section-title">ORR <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Spin State vs PZC for ORR in M-N-C electrocatalysts</span>
+            </div></div>
+        </section>
+        <section id="pcet" class="kw-section">
+            <h2 class="kw-section-title">PCET <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-12</span>
+                <span class="kw-paper-title">A Machine-Learning Accelerated Grand Canonical Sampling Framework for Nuclear Quantum Effects in Constant Potential Electrochemistry</span>
+            </div></div>
+        </section>
+        <section id="pd(332)" class="kw-section">
+            <h2 class="kw-section-title">Pd(332) <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Nuclear Quantum Effects in OH*/OD* Formation Kinetics on Pd(332): A Ring-Polymer Molecular Dynamics Study</span>
+            </div></div>
+        </section>
+        <section id="perspective" class="kw-section">
+            <h2 class="kw-section-title">perspective <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">The Intricacies of Computational Electrochemistry</span>
+            </div></div>
+        </section>
+        <section id="pfp" class="kw-section">
+            <h2 class="kw-section-title">PFP <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">PFP/MM: Hybrid uMLIP + Classical FF for Large-Scale Reactive Simulations</span>
+            </div></div>
+        </section>
+        <section id="phonon" class="kw-section">
+            <h2 class="kw-section-title">phonon <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Hessian-informed machine learning interatomic potential (Hi-MLIP)</span>
+            </div></div>
+        </section>
+        <section id="photochemistry" class="kw-section">
+            <h2 class="kw-section-title">photochemistry <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-16</span>
+                <span class="kw-paper-title">Transferable machine learning of excited-state dynamics with extremal pooling</span>
+            </div></div>
+        </section>
+        <section id="pimd" class="kw-section">
+            <h2 class="kw-section-title">PIMD <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Distilling First-Principles into Compact Machine Learned Interatomic Potentials</span>
+            </div></div>
+        </section>
+        <section id="pourbaix" class="kw-section">
+            <h2 class="kw-section-title">Pourbaix <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Accelerating thermodynamic simulations of electrochemical interfaces</span>
+            </div></div>
+        </section>
+        <section id="pt(111)" class="kw-section">
+            <h2 class="kw-section-title">Pt(111) <span class="kw-section-count">3 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">The Origin of the Constant Phase Element Behavior of Pt(111) Near the Potential of Zero Charge</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-12</span>
+                <span class="kw-paper-title">Nuclear Quantum Effects of Metal Surface-Mediated C-H Activation</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-12</span>
+                <span class="kw-paper-title">Ring Polymer Molecular Dynamics Rates for Hydrogen Recombinative Desorption on Pt(111)</span>
+            </div></div>
+        </section>
+        <section id="pt(111)-water" class="kw-section">
+            <h2 class="kw-section-title">Pt(111)-water <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">A Unified Framework for Constant-Potential Machine Learning Molecular Dynamics and Electron Density Prediction</span>
+            </div></div>
+        </section>
+        <section id="pt-kf" class="kw-section">
+            <h2 class="kw-section-title">Pt-KF <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Modeling Electrochemical Interfaces with a Hybrid Dielectric Machine Learning Potential</span>
+            </div></div>
+        </section>
+        <section id="pzc" class="kw-section">
+            <h2 class="kw-section-title">PZC <span class="kw-section-count">2 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Spin State vs PZC for ORR in M-N-C electrocatalysts</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">The Origin of the Constant Phase Element Behavior of Pt(111) Near the Potential of Zero Charge</span>
+            </div></div>
+        </section>
+        <section id="quantum-algorithm" class="kw-section">
+            <h2 class="kw-section-title">quantum-algorithm <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Quantum algorithm for non-adiabatic dynamics</span>
+            </div></div>
+        </section>
+        <section id="quantum-embedding" class="kw-section">
+            <h2 class="kw-section-title">quantum-embedding <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">FEMION quantum embedding</span>
+            </div></div>
+        </section>
+        <section id="radical-polymerization" class="kw-section">
+            <h2 class="kw-section-title">radical-polymerization <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">AIMNet2-NSE: A Transferable Reactive Neural Network Potential for Open-Shell Chemistry</span>
+            </div></div>
+        </section>
+        <section id="reactive" class="kw-section">
+            <h2 class="kw-section-title">reactive <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">PFP/MM: Hybrid uMLIP + Classical FF for Large-Scale Reactive Simulations</span>
+            </div></div>
+        </section>
+        <section id="reactive-nnp" class="kw-section">
+            <h2 class="kw-section-title">reactive-NNP <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-12</span>
+                <span class="kw-paper-title">Mechanism of Fe(II) Chemisorption on Hematite(001) Revealed by Reactive Neural Network Potential Molecular Dynamics</span>
+            </div></div>
+        </section>
+        <section id="reorganization-energy" class="kw-section">
+            <h2 class="kw-section-title">reorganization-energy <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Electronic origin of reorganization energy</span>
+            </div></div>
+        </section>
+        <section id="review" class="kw-section">
+            <h2 class="kw-section-title">review <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Application of graph neural network in computational heterogeneous catalysis</span>
+            </div></div>
+        </section>
+        <section id="rpmd" class="kw-section">
+            <h2 class="kw-section-title">RPMD <span class="kw-section-count">3 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Nuclear Quantum Effects in OH*/OD* Formation Kinetics on Pd(332): A Ring-Polymer Molecular Dynamics Study</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-12</span>
+                <span class="kw-paper-title">Electronic Friction Near Metal Surface: Incorporating Nuclear Quantum Effect with Ring Polymer Molecular Dynamics</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-12</span>
+                <span class="kw-paper-title">Ring Polymer Molecular Dynamics Rates for Hydrogen Recombinative Desorption on Pt(111)</span>
+            </div></div>
+        </section>
+        <section id="s2-only" class="kw-section">
+            <h2 class="kw-section-title">S2-only <span class="kw-section-count">3 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">A Machine-Learning Accelerated Grand Canonical Sampling Framework for Nuclear Quantum Effects</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Constant-Potential Machine Learning Force Field for the Electrochemical Interface</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Constant-Potential Machine Learning Molecular Dynamics Simulations Reveal Potential-Regulated Cu Cluster Formation on MoS2</span>
+            </div></div>
+        </section>
+        <section id="sei" class="kw-section">
+            <h2 class="kw-section-title">SEI <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Examining Dendrite Nucleation and Growth via Constant Potential Machine Learning Molecular Dynamics</span>
+            </div></div>
+        </section>
+        <section id="self-supervised" class="kw-section">
+            <h2 class="kw-section-title">self-supervised <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">TriForces: Three-Stream Framework for Transferable MLIPs</span>
+            </div></div>
+        </section>
+        <section id="solid-liquid" class="kw-section">
+            <h2 class="kw-section-title">solid-liquid <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Insights into CO dimerization at electrified Cu interfaces from large-scale ML</span>
+            </div></div>
+        </section>
+        <section id="solvent-model" class="kw-section">
+            <h2 class="kw-section-title">solvent-model <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Impact of charging in constant potential electrochemistry modelling</span>
+            </div></div>
+        </section>
+        <section id="spin-charge" class="kw-section">
+            <h2 class="kw-section-title">spin-charge <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">AIMNet2-NSE: A Transferable Reactive Neural Network Potential for Open-Shell Chemistry</span>
+            </div></div>
+        </section>
+        <section id="spin-lattice" class="kw-section">
+            <h2 class="kw-section-title">spin-lattice <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Spin-lattice coupling in electrocatalysts</span>
+            </div></div>
+        </section>
+        <section id="spin-state" class="kw-section">
+            <h2 class="kw-section-title">spin-state <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Spin State vs PZC for ORR in M-N-C electrocatalysts</span>
+            </div></div>
+        </section>
+        <section id="surface" class="kw-section">
+            <h2 class="kw-section-title">surface <span class="kw-section-count">3 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Designing Multivalent Copolymers for Selective Targeting of Multicomponent Surfaces</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Machine-learned atomistic simulations reveal the basis of hydrogen-induced crack-plane transition in alpha-Fe</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Monte Carlo simulation of selective adsorption in a binary hard-disk mixture on patterned adhesive surfaces</span>
+            </div></div>
+        </section>
+        <section id="surface-adsorption" class="kw-section">
+            <h2 class="kw-section-title">surface-adsorption <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Application of graph neural network in computational heterogeneous catalysis</span>
+            </div></div>
+        </section>
+        <section id="surface-flexibility" class="kw-section">
+            <h2 class="kw-section-title">surface-flexibility <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Nuclear Quantum Effects in OH*/OD* Formation Kinetics on Pd(332): A Ring-Polymer Molecular Dynamics Study</span>
+            </div></div>
+        </section>
+        <section id="tio2-water" class="kw-section">
+            <h2 class="kw-section-title">TiO2-water <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Distilling First-Principles into Compact Machine Learned Interatomic Potentials</span>
+            </div></div>
+        </section>
+        <section id="topological-semimetal" class="kw-section">
+            <h2 class="kw-section-title">topological-semimetal <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-16</span>
+                <span class="kw-paper-title">Hydrogen Chemisorption and Current-Induced Spin Polarization on NbP</span>
+            </div></div>
+        </section>
+        <section id="transfer-learning" class="kw-section">
+            <h2 class="kw-section-title">transfer-learning <span class="kw-section-count">2 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">TriForces: Three-Stream Framework for Transferable MLIPs</span>
+            </div>
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Transferable Constant-Potential Machine Learning Molecular Dynamics with Application to the Copper/Water Interface</span>
+            </div></div>
+        </section>
+        <section id="treci" class="kw-section">
+            <h2 class="kw-section-title">TRECI <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Transferable Constant-Potential Machine Learning Molecular Dynamics with Application to the Copper/Water Interface</span>
+            </div></div>
+        </section>
+        <section id="tunneling" class="kw-section">
+            <h2 class="kw-section-title">tunneling <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Nuclear Quantum Effects in OH*/OD* Formation Kinetics on Pd(332): A Ring-Polymer Molecular Dynamics Study</span>
+            </div></div>
+        </section>
+        <section id="umlip" class="kw-section">
+            <h2 class="kw-section-title">uMLIP <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">PFP/MM: Hybrid uMLIP + Classical FF for Large-Scale Reactive Simulations</span>
+            </div></div>
+        </section>
+        <section id="vssr-mc" class="kw-section">
+            <h2 class="kw-section-title">VSSR-MC <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-17</span>
+                <span class="kw-paper-title">Accelerating thermodynamic simulations of electrochemical interfaces</span>
+            </div></div>
+        </section>
+        <section id="wannier" class="kw-section">
+            <h2 class="kw-section-title">Wannier <span class="kw-section-count">1 篇</span></h2>
+            <div class="kw-paper-list">
+            <div class="kw-paper">
+                <span class="kw-paper-date">2026-06-15</span>
+                <span class="kw-paper-title">Modeling Electrochemical Interfaces with a Hybrid Dielectric Machine Learning Potential</span>
+            </div></div>
+        </section>
+</div>
+</body>
+</html>
