@@ -10,9 +10,8 @@ from pathlib import Path
 from html import escape
 
 PROJECT_DIR = Path(__file__).parent
-DESKTOP_DIR = Path("/mnt/c/Users/94474/Desktop/daily-review-reports")
 REPORTS_DIR = PROJECT_DIR / "reports"
-OUTPUT_DIR = DESKTOP_DIR / "site"
+OUTPUT_DIR = PROJECT_DIR / "site"
 
 SEEN_PAPERS_PATH = PROJECT_DIR / "seen_papers.json"
 

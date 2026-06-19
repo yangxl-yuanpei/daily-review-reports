@@ -196,8 +196,9 @@ def search_s2_individual(term, limit=30, sort="relevance", fields=None, fields_o
         "query": term,
         "limit": min(limit, 1000),
         "fields": ",".join(fields),
-        "sort": sort,
     }
+    if sort != "relevance":
+        params["sort"] = sort
     if fields_of_study:
         params["fieldsOfStudy"] = ",".join(fields_of_study)
     if year_range:
