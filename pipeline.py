@@ -180,6 +180,58 @@ def fallback_search_arxiv(query, max_results=10):
 ###############################################################################
 S2_BULK_API = "https://api.semanticscholar.org/graph/v1/paper/search/bulk"
 
+def search_s2_individual(term, limit=30, sort="relevance", fields=None):
+    """Search S2 for a single term (short URL). Returns list of dicts."""
+    if not S2_API_KEY:
+        return [], False
+    if fields is None:
+        fields = [
+            "title", "abstract", "authors", "year", "url",
+            "paperId", "citationCount", "publicationDate",
+        ]
+    headers = {"x-api-key": S2_API_KEY}
+    params = {
+        "query": term,
+        "limit": min(limit, 1000),
+        "fields": ",".join(fields),
+        "sort": sort,
+    }
+    url = f"{S2_BULK_API}?{urllib.parse.urlencode(params)}"
+    print(f"  S2 URL: {url[:120]}...")
+    for attempt in range(3):
+        try:
+            resp = requests.get(url, headers=headers, timeout=60)
+            if resp.status_code == 429:
+                wait = 30 * (attempt + 1)
+                print(f"  ⚠️  S2 rate limit (429), 等待 {wait}s 后重试 ({attempt+1}/3)")
+                time.sleep(wait)
+                continue
+            resp.raise_for_status()
+            data = resp.json()
+            papers_raw = data.get("data", [])
+            papers = []
+            for p in papers_raw:
+                pid = p.get("paperId", "")
+                papers.append({
+                    "s2_id": pid,
+                    "title": p.get("title", ""),
+                    "authors": [a.get("name", "") for a in p.get("authors", [])],
+                    "abstract": p.get("abstract", ""),
+                    "year": str(p.get("year", "")),
+                    "publicationDate": p.get("publicationDate", ""),
+                    "url": p.get("url", f"https://api.semanticscholar.org/CorpusID:{pid}"),
+                    "citationCount": p.get("citationCount", 0),
+                    "source": "s2",
+                    "arxiv_id": None,
+                })
+            print(f"  → {len(papers)} papers for term: {term[:60]}")
+            return papers, True
+        except requests.exceptions.RequestException as e:
+            print(f"  ⚠️  S2 请求失败: {e}")
+            if attempt < 2:
+                time.sleep(10)
+    return [], False
+
 def search_s2(query, limit=30, sort="relevance", fields=None):
     """Search S2 via bulk search API. Returns list of dicts."""
     if not S2_API_KEY:
@@ -669,17 +721,30 @@ def main():
     s2_available = False
     s2_papers = []
     print("\n◆ 2b. Semantic Scholar 检索...")
-    if kw.get("s2_query"):
-        if not S2_API_KEY:
-            print("  → 跳过 S2（无 API Key）")
-        else:
-            s2_papers_a, ok = search_s2(kw["s2_query"], kw["s2_limit_a"])
-            s2_papers = s2_papers_a
+    if kw.get("s2_query") and S2_API_KEY:
+        seen_ids = set()
+        for topic in kw["topics"]:
+            print(f"  ▶ 搜索主题: {topic[:60]}")
+            topic_papers, ok = search_s2_individual(topic, kw["s2_limit_a"])
             if ok:
-                s2_papers_b, _ = search_s2_oa(kw["s2_query"], kw["s2_limit_b"])
-                existing_ids = {p.get("s2_id") for p in s2_papers}
-                s2_papers.extend(p for p in s2_papers_b if p.get("s2_id") not in existing_ids)
-                s2_available = True
+                for p in topic_papers:
+                    pid = p.get("s2_id")
+                    if pid and pid not in seen_ids:
+                        seen_ids.add(pid)
+                        s2_papers.append(p)
+            time.sleep(1.5)
+        # Query B: open access filter
+        s2_papers_b, ok_b = search_s2_individual(kw["topics"][0], kw["s2_limit_b"], sort="publicationDate",
+            fields=["title","abstract","authors","year","url","paperId","citationCount","publicationDate","openAccessPdf"])
+        if ok_b:
+            for p in s2_papers_b:
+                pid = p.get("s2_id")
+                if pid and pid not in seen_ids:
+                    seen_ids.add(pid)
+                    s2_papers.append(p)
+        s2_available = len(s2_papers) > 0
+    elif not S2_API_KEY:
+        print("  → 跳过 S2（无 API Key）")
     else:
         print("  → S2 已禁用")
 
