@@ -10,9 +10,9 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
-  onload="renderMathInElement(document.body,{{delimiters:[{{left:'$$',right:'$$',display:true}},{{left:'$',right:'$',display:false}}]}})"></script>
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
 <style>
-:root {{
+:root {
   --bg: #f5f7fa;
   --card-bg: #ffffff;
   --text: #1a1a2e;
@@ -26,105 +26,105 @@
   --medium-bg: #fffbeb;
   --low: #6b7280;
   --low-bg: #f9fafb;
-}}
-* {{ margin: 0; padding: 0; box-sizing: border-box; }}
-body {{
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   background: var(--bg); color: var(--text); line-height: 1.7;
   padding: 0;
-}}
-.container {{ max-width: 1200px; margin: 0 auto; padding: 24px 16px; }}
-header {{
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
   background: linear-gradient(135deg, #1e3a5f, #2563eb);
   color: white; padding: 32px 0 24px; margin-bottom: 24px;
   border-radius: 0 0 24px 24px;
-}}
-header .container {{ padding-bottom: 0; }}
-header h1 {{ font-size: 1.5rem; font-weight: 700; }}
-header p {{ font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }}
-.stats-row {{
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+.stats-row {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 12px; margin-bottom: 24px;
-}}
-.stat-card {{
+}
+.stat-card {
   background: var(--card-bg); border-radius: 12px; padding: 16px;
   text-align: center; border: 1px solid var(--border);
-}}
-.stat-label {{ font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 4px; }}
-.stat-value {{ font-size: 1.1rem; font-weight: 700; color: var(--accent); }}
-.papers-grid {{
+}
+.stat-label { font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 4px; }
+.stat-value { font-size: 1.1rem; font-weight: 700; color: var(--accent); }
+.papers-grid {
   display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   gap: 16px; margin-bottom: 24px;
-}}
-.paper-card {{
+}
+.paper-card {
   background: var(--card-bg); border-radius: 12px; padding: 20px;
   border: 1px solid var(--border);
   transition: box-shadow 0.15s;
   display: flex; flex-direction: column;
-}}
-.paper-card:hover {{ box-shadow: 0 4px 12px rgba(0,0,0,0.06); }}
-.paper-card.high {{ border-left: 4px solid var(--high); }}
-.paper-card.medium {{ border-left: 4px solid var(--medium); }}
-.paper-card.low {{ border-left: 4px solid var(--low); }}
-.paper-header {{ display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }}
-.paper-num {{ font-weight: 700; color: var(--accent); font-size: 0.9rem; }}
-.relevance-badge {{
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.paper-num { font-weight: 700; color: var(--accent); font-size: 0.9rem; }
+.relevance-badge {
   padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
-}}
-.relevance-badge.high {{ background: var(--high-bg); color: var(--high); }}
-.relevance-badge.medium {{ background: var(--medium-bg); color: var(--medium); }}
-.relevance-badge.low {{ background: var(--low-bg); color: var(--low); }}
-.paper-title {{ font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }}
-.paper-title a {{ color: inherit; text-decoration: none; }}
-.paper-title a:hover {{ color: var(--accent); text-decoration: underline; }}
-.paper-fields {{ flex: 1; }}
-.field {{ margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }}
-.field-key {{
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
   display: block; font-weight: 600; font-size: 0.72rem;
   text-transform: uppercase; letter-spacing: 0.03em;
   color: var(--text-secondary); margin-bottom: 2px;
-}}
-.field-val {{ color: var(--text); display: block; }}
-.highlights, .keygap {{
+}
+.field-val { color: var(--text); display: block; }
+.highlights, .keygap {
   background: var(--card-bg); border-radius: 12px; padding: 20px;
   margin-bottom: 16px; border: 1px solid var(--border);
-}}
-.highlights h3, .keygap h3 {{ font-size: 1rem; margin-bottom: 8px; }}
-.highlight-body, .gap-body {{ font-size: 0.88rem; color: var(--text); line-height: 1.7; }}
-.highlight-body p, .gap-body p {{ margin-bottom: 6px; }}
-.highlight-body strong, .gap-body strong {{ font-weight: 600; }}
-.paper-tags {{ margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }}
-.tag-badge {{
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
   display: inline-block; padding: 2px 10px; border-radius: 999px;
   font-size: 0.72rem; font-weight: 500;
   background: var(--accent-light); color: var(--accent);
   text-decoration: none; border: 1px solid transparent;
   transition: all 0.12s;
-}}
-.tag-badge:hover {{ background: var(--accent); color: #fff; border-color: var(--accent); }}
-.kw-nav {{
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
   display: inline-block; margin-left: 12px;
   padding: 6px 14px; border-radius: 8px;
   background: rgba(255,255,255,0.15); color: #fff;
   text-decoration: none; font-size: 0.82rem; font-weight: 500;
   transition: background 0.12s;
-}}
-.kw-nav:hover {{ background: rgba(255,255,255,0.25); }}
-.day-nav {{ display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }}
-.day-link {{
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
   padding: 8px 16px; border: 1px solid var(--border);
   border-radius: 8px; background: var(--card-bg);
   text-decoration: none; font-size: 0.85rem; font-weight: 500;
   color: var(--text); transition: all 0.15s;
-}}
-.day-link:hover {{ border-color: var(--accent); color: var(--accent); }}
-.back-link {{ color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }}
-.back-link:hover {{ color: #fff; }}
-@media (max-width: 640px) {{
-  .papers-grid {{ grid-template-columns: 1fr; }}
-  .stats-row {{ grid-template-columns: repeat(2, 1fr); }}
-  header h1 {{ font-size: 1.2rem; }}
-}}
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+  .papers-grid { grid-template-columns: 1fr; }
+  .stats-row { grid-template-columns: repeat(2, 1fr); }
+  header h1 { font-size: 1.2rem; }
+}
 </style>
 </head>
 <body>
@@ -142,8 +142,8 @@ header p {{ font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }}
                     <span class="paper-num">#1</span>
                     <span class="relevance-badge ">?</span>
                 </div>
-                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0c4779666637c03c4f1a299bea072d9009ea570e" target="_blank">Critical Assessment of a Structure-Based Pipeline for Targeting the Long Noncoding RNA MALAT1 ⭐⭐</a></h3>
-                <div class="paper-fields"><div class="field"><span class="field-key">来源</span><span class="field-val">None</span></div><div class="field"><span class="field-key">期刊/出处</span><span class="field-val">arXiv preprint</span></div><div class="field"><span class="field-key">发布日期</span><span class="field-val">2026-03-19</span></div><div class="field"><span class="field-key">作者</span><span class="field-val">Riccardo Aguti; Mattia Bernetti; Gian Marco Elisi; A. Cavalli; Matteo Masetti</span></div><div class="field"><span class="field-key">PDF 状态</span><span class="field-val">⚠️ 仅摘要</span></div><div class="field"><span class="field-key">原文链接</span><span class="field-val">https://www.semanticscholar.org/paper/0c4779666637c03c4f1a299bea072d9009ea570e</span></div><div class="field"><span class="field-key">标签</span><span class="field-val">electrochemistry</span></div></div>
+                <h3 class="paper-title"><a href="https://scholar.google.com/scholar?q=Critical Assessment of a Structure" target="_blank">Critical Assessment of a Structure-Based Pipeline for Targeting the Long Noncoding RNA MALAT1 ⭐⭐</a></h3>
+                <div class="paper-fields"></div>
                 
             </div>
             <div class="paper-card ">
@@ -152,16 +152,7 @@ header p {{ font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }}
                     <span class="relevance-badge ">?</span>
                 </div>
                 <h3 class="paper-title"><a href="https://scholar.google.com/scholar?q=Manufacturing &amp; Quality Analytics for Insulator Production: A Data" target="_blank">Manufacturing &amp; Quality Analytics for Insulator Production: A Data-Driven Framework for Process Stability, Defect Prediction, and Reliability Assessment ⭐⭐</a></h3>
-                <div class="paper-fields"><div class="field"><span class="field-key">来源</span><span class="field-val">None</span></div><div class="field"><span class="field-key">期刊/出处</span><span class="field-val">arXiv preprint</span></div><div class="field"><span class="field-key">发布日期</span><span class="field-val">2026-04-20</span></div><div class="field"><span class="field-key">作者</span><span class="field-val">Tushar Jakhaniya; Sahil Kumar</span></div></div>
-                
-            </div>
-            <div class="paper-card ">
-                <div class="paper-header">
-                    <span class="paper-num">#8</span>
-                    <span class="relevance-badge ">?</span>
-                </div>
-                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0ff8426d37cd6fdb8f343ce317b1e0856ebb3cc2" target="_blank">对你研究的启发</a></h3>
-                <div class="paper-fields"><div class="field"><span class="field-key">PDF 状态</span><span class="field-val">⚠️ 仅摘要</span></div><div class="field"><span class="field-key">原文链接</span><span class="field-val">https://www.semanticscholar.org/paper/0ff8426d37cd6fdb8f343ce317b1e0856ebb3cc2</span></div><div class="field"><span class="field-key">标签</span><span class="field-val">surface, generative</span></div></div>
+                <div class="paper-fields"><div class="field"><span class="field-key">痛点</span><span class="field-val">绝缘子生产依赖终检与人工目视，无法在烧结/成型等关键工序中实时识别由原料组分波动（如SiO₂/Al₂O₃比例）、压力/温度偏移引发的<strong>亚表面微裂纹或介电弱区</strong>，导致高废品率与现场失效风险。</span></div><div class="field"><span class="field-key">为什么值得解决</span><span class="field-val">绝缘子是电网安全的关键部件，其批量失效具灾难性后果；但该问题本质是<strong>制造过程鲁棒性问题</strong>，而非电催化中关注的<strong>本征活性-选择性-稳定性（ACS）权衡问题</strong>。</span></div><div class="field"><span class="field-key">数据集</span><span class="field-val">结构化合成数据集（非真实实验数据），模拟瓷绝缘子产线，含12维工艺/成分变量 + 二元缺陷标签。</span></div><div class="field"><span class="field-key">基线方法</span><span class="field-val">规则引擎（如“Fe₂O₃ &gt; 0.8% → 报警”）、Logistic回归、SVM。</span></div><div class="field"><span class="field-key">关键结果</span><span class="field-val">XGBoost+Weibull框架达<strong>F1=96.1%</strong>（vs. 规则法F1≈72%，SVM≈89%）；但<strong>无交叉验证细节、无不确定性量化、未报告特征重要性物理可解释性</strong>——电催化研究中此类黑箱性能指标需辅以SHAP/LIME归因才具说服力。</span></div><div class="field"><span class="field-key">数据真实性存疑</span><span class="field-val">合成数据无法复现真实烧结过程中晶相演变（如莫来石生成动力学）与微观缺陷（气孔/裂纹）的复杂关联；</span></div><div class="field"><span class="field-key">零物理机制嵌入</span><span class="field-val">XGBoost为纯统计模型，未耦合传热/扩散方程或相变热力学——<strong>对比电催化，若仅用ML预测HER过电位而不关联Volmer-Heyrovsky步骤能垒，则结论缺乏机理支撑</strong>；</span></div><div class="field"><span class="field-key">未验证跨工厂泛化性</span><span class="field-val">模型在单一合成产线有效，但绝缘子配方/窑炉型号变更即失效——电催化中类似问题表现为<strong>催化剂载体效应导致DFT描述符迁移失败</strong>。</span></div><div class="field"><span class="field-key">“过程能力导向”的特征筛选范式</span><span class="field-val">在电催化DFT高通量筛选中，可定义“活性窗口”（如ΔG_H* ∈ [−0.2, 0.1] eV）作为特征过滤条件，替代全局相关性分析；</span></div><div class="field"><span class="field-key">可靠性-性能联合建模框架</span><span class="field-val">开发同时输出“初始TOF”和“100 h衰减率”的双头神经网络，推动ACS三要素统一评估；</span></div><div class="field"><span class="field-key">边缘智能部署思维</span><span class="field-val">将简化版DFT模型（如基于SOAP描述符的GPR）部署至电化学工作站，实现实验中实时活性反馈。</span></div><div class="field"><span class="field-key">拒绝“黑箱精度崇拜”</span><span class="field-val">- <strong>PDF 状态:</strong> ⚠️ 仅摘要</span></div></div>
                 
             </div>
             <div class="paper-card ">
@@ -170,16 +161,7 @@ header p {{ font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }}
                     <span class="relevance-badge ">?</span>
                 </div>
                 <h3 class="paper-title"><a href="https://scholar.google.com/scholar?q=Building RNA coarse" target="_blank">Building RNA coarse-grained force fields: Design principles and training strategies. ⭐⭐</a></h3>
-                <div class="paper-fields"><div class="field"><span class="field-key">来源</span><span class="field-val">None</span></div><div class="field"><span class="field-key">期刊/出处</span><span class="field-val">arXiv preprint</span></div><div class="field"><span class="field-key">发布日期</span><span class="field-val">2026-03-01</span></div><div class="field"><span class="field-key">作者</span><span class="field-val">Wenfei Li; Shi-Jie Chen</span></div></div>
-                
-            </div>
-            <div class="paper-card ">
-                <div class="paper-header">
-                    <span class="paper-num">#8</span>
-                    <span class="relevance-badge ">?</span>
-                </div>
-                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/105101b46f5a0a46d3d51fc72bd00a55fb7ae8d2" target="_blank">对你研究的启发（跨领域迁移价值）</a></h3>
-                <div class="paper-fields"><div class="field"><span class="field-key">PDF 状态</span><span class="field-val">⚠️ 仅摘要</span></div><div class="field"><span class="field-key">原文链接</span><span class="field-val">https://www.semanticscholar.org/paper/105101b46f5a0a46d3d51fc72bd00a55fb7ae8d2</span></div><div class="field"><span class="field-key">标签</span><span class="field-val">general</span></div></div>
+                <div class="paper-fields"></div>
                 
             </div>
             <div class="paper-card ">
@@ -188,16 +170,7 @@ header p {{ font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }}
                     <span class="relevance-badge ">?</span>
                 </div>
                 <h3 class="paper-title"><a href="https://scholar.google.com/scholar?q=Machine Learning Driven Advances in Molecular Dynamics of Bulk and Interfacial Aqueous Systems. ⭐⭐" target="_blank">Machine Learning Driven Advances in Molecular Dynamics of Bulk and Interfacial Aqueous Systems. ⭐⭐</a></h3>
-                <div class="paper-fields"><div class="field"><span class="field-key">来源</span><span class="field-val">None</span></div><div class="field"><span class="field-key">期刊/出处</span><span class="field-val">arXiv preprint</span></div><div class="field"><span class="field-key">发布日期</span><span class="field-val">2026-03-04</span></div><div class="field"><span class="field-key">作者</span><span class="field-val">Ruiyu Wang; Vanessa J Meraz; P. Tiwary</span></div></div>
-                
-            </div>
-            <div class="paper-card ">
-                <div class="paper-header">
-                    <span class="paper-num">#7</span>
-                    <span class="relevance-badge ">?</span>
-                </div>
-                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/13016dbf2f730209642406bb4980c38ab1428172" target="_blank">局限性</a></h3>
-                <div class="paper-fields"><div class="field"><span class="field-key">PDF 状态</span><span class="field-val">⚠️ 仅摘要</span></div><div class="field"><span class="field-key">原文链接</span><span class="field-val">https://www.semanticscholar.org/paper/13016dbf2f730209642406bb4980c38ab1428172</span></div><div class="field"><span class="field-key">标签</span><span class="field-val">electrochemistry, catalysis, surface</span></div></div>
+                <div class="paper-fields"><div class="field"><span class="field-key">痛点一（精度局限）</span><span class="field-val">经典力场（如SPC/E, TIP4P）无法描述电荷转移、极化、氢键断裂/形成等电子结构敏感过程（如质子耦合电子转移PCET），导致对催化活性位点溶剂化、界面水结构、反应路径预测严重失真。</span></div><div class="field"><span class="field-key">痛点二（尺度鸿沟）</span><span class="field-val">从头算MD（AIMD）受限于O(N⁴)计算复杂度，仅能处理~100原子、&lt;10 ps尺度，远低于电催化中双电层弛豫（10–100 ps）、气泡成核（μs–ms）等关键过程所需时空尺度。</span></div><div class="field"><span class="field-key">痛点三（解释性缺失）</span><span class="field-val">高维MD轨迹缺乏物理可解释的低维反应坐标（RC），难以建立“微观构型→宏观性质”的因果链（如：为何某界面水网络促进OER？）。</span></div><div class="field"><span class="field-key">为什么重要？</span><span class="field-val">水/界面是电催化（HER/OER/ORR）、生物能量转换（光合PSII、呼吸链）、电池电解液等核心场景的共性介质，其原子级动态直接决定反应选择性、过电位与稳定性。</span></div><div class="field"><span class="field-key">主要体系</span><span class="field-val">- 体相水（bulk H₂O）、气/水界面、电极/水界面（Pt(111)/H₂O, Au(111)/H₂O）、质子交换膜（Nafion）水通道、冰/水相变界面。</span></div><div class="field"><span class="field-key">基线方法对比</span><span class="field-val">经典力场（TIP4P/2005）、半经验方法（DFTB）、短时AIMD（≤5 ps）。</span></div><div class="field"><span class="field-key">关键数值结果</span><span class="field-val">- ✅ <strong>MLFF精度</strong>：在QM9/SPICE水簇数据集上，能量MAE &lt; 1 meV/atom，力MAE &lt; 0.03 eV/Å（vs DFT-PBE），较经典力场误差降低5–10×。</span></div><div class="field"><span class="field-key">数据依赖性风险</span><span class="field-val">MLFF性能高度依赖训练集覆盖度；对罕见构型（如高压冰VII、超临界水）泛化能力弱，</span></div></div>
                 
             </div>
             <div class="paper-card ">
@@ -206,34 +179,25 @@ header p {{ font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }}
                     <span class="relevance-badge ">?</span>
                 </div>
                 <h3 class="paper-title"><a href="https://scholar.google.com/scholar?q=Finite Element Multigrid Simulation of Natural Convection in Hybrid Nanofluids Within Isolated Cavity for Solar Energy Systems: A Machine Learning" target="_blank">Finite Element Multigrid Simulation of Natural Convection in Hybrid Nanofluids Within Isolated Cavity for Solar Energy Systems: A Machine Learning-Levenberg-Marquardt Approach ⭐⭐</a></h3>
-                <div class="paper-fields"><div class="field"><span class="field-key">来源</span><span class="field-val">None</span></div><div class="field"><span class="field-key">期刊/出处</span><span class="field-val">arXiv preprint</span></div><div class="field"><span class="field-key">发布日期</span><span class="field-val">2026-03-13</span></div><div class="field"><span class="field-key">作者</span><span class="field-val">Hamayat Ullah; Muhammad Salim Khan; Z. Shah; Maria Alina Fălădău; Nahid Fatima et al.</span></div></div>
+                <div class="paper-fields"><div class="field"><span class="field-key">标题</span><span class="field-val">Magnetoconvective heat transfer in an enclosure filled with MWCNT–Fe₃O₄/water hybrid nanofluid: FEM analysis and ANN-based surrogate modeling</span></div><div class="field"><span class="field-key">第一作者+et al.</span><span class="field-val">未提供（原文未给出作者姓名；属典型会议/预印本片段）</span></div><div class="field"><span class="field-key">期刊/出处</span><span class="field-val">未明确（文本特征符合*International Communications in Heat and Mass Transfer*或*Applied Thermal Engineering*风格，但无正式引用信息）</span></div><div class="field"><span class="field-key">发布日期/年份</span><span class="field-val">未提供（据术语成熟度与COMSOL/ANN协同建模范式，推测为2022–2024年间工作）</span></div><div class="field"><span class="field-key">痛点</span><span class="field-val">- 太阳能热存储系统中，传统单相流体（水、导热油）导热能力弱；单一纳米流体（如仅Fe₃O₄）热导率提升有限且易团聚；</span></div><div class="field"><span class="field-key">价值</span><span class="field-val">- 为磁响应型相变储热材料、磁驱动微流控热管理器件提供理论依据；</span></div><div class="field"><span class="field-key">（对电催化的间接关联）</span><span class="field-val">磁场已被证实可影响自旋极化电子转移（如OER/ORR中三重态路径），但本文<strong>未涉及任何电极/电解质界面反应</strong>，故不构成电催化直接支撑。</span></div><div class="field"><span class="field-key">体系</span><span class="field-val">二维正方形腔体（冷顶/热底），填充MWCNT–Fe₃O₄/水混合纳米流体（体积分数未说明）；</span></div><div class="field"><span class="field-key">基线方法</span><span class="field-val">纯水（Newtonian, Ha=0, Ra=10⁴）作为基准传热性能参照；</span></div><div class="field"><span class="field-key">关键数值结果</span><span class="field-val">- ↑ Ra 从10⁴到10⁶ → Nu增强<strong>36.54%</strong>（强化浮升对流主导）；</span></div><div class="field"><span class="field-key">未实验验证</span><span class="field-val">全文为纯数值研究，缺乏PIV测速、红外热成像或局部热流传感器的实验对标；</span></div><div class="field"><span class="field-key">忽略纳米粒子动态行为</span><span class="field-val">未模拟MWCNT/Fe₃O₄的布朗运动、团聚/分散动力学及</span></div></div>
                 
             </div>
-            <div class="paper-card ">
-                <div class="paper-header">
-                    <span class="paper-num">#7</span>
-                    <span class="relevance-badge ">?</span>
-                </div>
-                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/143bc9273c18cc7a8ce2d934075d5d1cdb622a6a" target="_blank">局限性</a></h3>
-                <div class="paper-fields"><div class="field"><span class="field-key">PDF 状态</span><span class="field-val">⚠️ 仅摘要</span></div><div class="field"><span class="field-key">原文链接</span><span class="field-val">https://www.semanticscholar.org/paper/143bc9273c18cc7a8ce2d934075d5d1cdb622a6a</span></div><div class="field"><span class="field-key">标签</span><span class="field-val">generative</span></div></div>
-                
-            </div>
-            <div class="paper-card ">
+            <div class="paper-card high">
                 <div class="paper-header">
                     <span class="paper-num">#6</span>
-                    <span class="relevance-badge ">?</span>
+                    <span class="relevance-badge high">HIGH</span>
                 </div>
-                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/154d5a473906fe0465495eb9a03a53e3c3c28486" target="_blank">Force-Aware Neural Tangent Kernels for Scalable and Robust Active Learning of MLIPs ⭐⭐</a></h3>
-                <div class="paper-fields"><div class="field"><span class="field-key">来源</span><span class="field-val">None</span></div><div class="field"><span class="field-key">期刊/出处</span><span class="field-val">arXiv preprint</span></div><div class="field"><span class="field-key">发布日期</span><span class="field-val">2026-05-13</span></div><div class="field"><span class="field-key">作者</span><span class="field-val">E. Varga-Umbrich; Zachary Weller-Davies; Paul Duckworth; Jules Tilly; Olivier Peltre et al.</span></div><div class="field"><span class="field-key">简要摘要</span><span class="field-val">- **核心问题**：如何实现可扩展、力信息感知（force-aware）、且对候选数据分布偏移鲁棒的机器学习原子间势（MLIP）主动学习，尤其在电催化等需高精度能量+力预测的场景中面临训练效率与泛化性双重挑战。</span></div><div class="field"><span class="field-key">PDF 状态</span><span class="field-val">⚠️ 仅摘要</span></div><div class="field"><span class="field-key">原文链接</span><span class="field-val">https://www.semanticscholar.org/paper/154d5a473906fe0465495eb9a03a53e3c3c28486</span></div><div class="field"><span class="field-key">标签</span><span class="field-val">electrochemistry, MLFF, active-learning</span></div></div>
+                <h3 class="paper-title"><a href="https://scholar.google.com/scholar?q=Force" target="_blank">Force-Aware Neural Tangent Kernels for Scalable and Robust Active Learning of MLIPs ⭐⭐</a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">简要摘要:** - **核心问题</span><span class="field-val">如何实现可扩展、力信息感知（force-aware）、且对候选数据分布偏移鲁棒的机器学习原子间势（MLIP）主动学习，尤其在电催化等需高精度能量+力预测的场景中面临训练效率与泛化性双重挑战。</span></div><div class="field"><span class="field-key">方法要点</span><span class="field-val">提出线性可扩展的分块特征空间后验方差筛选框架（避免显式核矩阵构造），并首次将神经正切核（NTK）拓展至力预测任务，构建力NTK与联合能量-力NTK作为向量场相似性度量，支持单模型驱动的主动学习。</span></div><div class="field"><span class="field-key">关键结果</span><span class="field-val">在OC20（含表面吸附构型）上，联合能量-力NTK取得最优能量/力MAE与RMSE；在T1x等多基准测试中，性能媲美集成方法（committee）但计算开销显著更低；在候选池分布偏移场景下仍保持低方差，凸显鲁棒性。</span></div><div class="field"><span class="field-key">与你研究的相关度</span><span class="field-val"><strong>高</strong>——该工作直接支撑电催化中催化剂表面反应路径的高效构象采样与势能面精准建模，其力感知、小数据高效优化及分布鲁棒特性，与我们开展的*基于MLIP的CO₂RR/OER过渡态主动搜索与微环境敏感性分析*高度契合。</span></div></div>
                 
             </div>
-            <div class="paper-card ">
+            <div class="paper-card high">
                 <div class="paper-header">
                     <span class="paper-num">#7</span>
-                    <span class="relevance-badge ">?</span>
+                    <span class="relevance-badge high">HIGH</span>
                 </div>
-                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/1726413fab163a845decf581773d21e0350c6c02" target="_blank">Machine learning molecular dynamics simulations of coordination and diffusion behaviors in lithiated gallium electrodes. ⭐⭐</a></h3>
-                <div class="paper-fields"><div class="field"><span class="field-key">来源</span><span class="field-val">None</span></div><div class="field"><span class="field-key">期刊/出处</span><span class="field-val">arXiv preprint</span></div><div class="field"><span class="field-key">发布日期</span><span class="field-val">2026-02-06</span></div><div class="field"><span class="field-key">作者</span><span class="field-val">Qiuyi Fu; Hao Yuan; Haitang Wang; Wenbin Liu; Guobing Zhou et al.</span></div><div class="field"><span class="field-key">简要摘要</span><span class="field-val">- **核心问题**：液态镓（Ga）作为柔性锂离子电池负极材料潜力巨大，但其在嵌锂过程中形成的多种Li-Ga合金（LGA）相的原子结构演化与Li离子输运机制尚不明确，制约了对电化学性能衰减/活化的微观理解。</span></div><div class="field"><span class="field-key">PDF 状态</span><span class="field-val">⚠️ 仅摘要</span></div><div class="field"><span class="field-key">原文链接</span><span class="field-val">https://www.semanticscholar.org/paper/1726413fab163a845decf581773d21e0350c6c02</span></div><div class="field"><span class="field-key">标签</span><span class="field-val">electrochemistry, MLFF</span></div></div>
+                <h3 class="paper-title"><a href="https://scholar.google.com/scholar?q=Machine learning molecular dynamics simulations of coordination and diffusion behaviors in lithiated gallium electrodes. ⭐⭐" target="_blank">Machine learning molecular dynamics simulations of coordination and diffusion behaviors in lithiated gallium electrodes. ⭐⭐</a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">简要摘要:** - **核心问题</span><span class="field-val">液态镓（Ga）作为柔性锂离子电池负极材料潜力巨大，但其在嵌锂过程中形成的多种Li-Ga合金（LGA）相的原子结构演化与Li离子输运机制尚不明确，制约了对电化学性能衰减/活化的微观理解。</span></div><div class="field"><span class="field-key">方法要点</span><span class="field-val">作者为四种实验确认的LGA相（Li₃Ga₁₄、Li₂Ga₇、LiGa、Li₂Ga）构建了高精度机器学习力场（MLFFs），并开展大规模第一性原理精度分子动力学（AIMD-level MD）模拟，结合多尺度结构分析（配位数统计、多面体模板匹配、van Hove自相关函数）和扩散动力学量化。</span></div><div class="field"><span class="field-key">关键结果</span><span class="field-val">随锂含量增加（脱锂→嵌锂），Li局域环境从Ga主导的配位壳层（低Li相）演变为Li富集网络（高Li相）；结构无序度整体维持但短程有序度上升；Li扩散行为呈现“液态→固态”转变——Li₃Ga₁₄中扩散系数最高（4.46×10⁻¹¹ m² s⁻¹），而LiGa/Li₂Ga中显著局域化，且存在间歇性跳跃（residence-jump）输运模式。</span></div><div class="field"><span class="field-key">与你研究的相关度</span><span class="field-val"><strong>高</strong>；该工作建立的MLFF+多尺度动力学分析框架可直接迁移至你正在开展的Ga基/In基液态金属电催化界面Li/Na/K传输机制研究；其揭示的“成分-局域结构-扩散维度”耦合规律，对设计高倍率、抗粉化液态合金电极具有直接指导价值。</span></div></div>
                 
             </div>
             <div class="paper-card ">
@@ -241,17 +205,17 @@ header p {{ font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }}
                     <span class="paper-num">#8</span>
                     <span class="relevance-badge ">?</span>
                 </div>
-                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/17502ff2b44475d1263e36a1f5dcc16cd2de9252" target="_blank">ARTIFICIAL INTELLIGENCE IN BIOMEDICAL SCIENCES: OPPORTUNITY AND SCOPES ⭐⭐</a></h3>
-                <div class="paper-fields"><div class="field"><span class="field-key">来源</span><span class="field-val">None</span></div><div class="field"><span class="field-key">期刊/出处</span><span class="field-val">arXiv preprint</span></div><div class="field"><span class="field-key">发布日期</span><span class="field-val">2026-01-01</span></div><div class="field"><span class="field-key">作者</span><span class="field-val">Sana Shiekh; N. B. Hirulkar</span></div><div class="field"><span class="field-key">简要摘要</span><span class="field-val">该论文的核心问题聚焦于**如何利用AI（特别是ML/DL）应对生物医学领域中高维、多源、复杂数据（如基因组学、医学影像、临床记录）带来的分析挑战**，以提升疾病诊断、预测与治疗决策的精准性。</span></div><div class="field"><span class="field-key">PDF 状态</span><span class="field-val">⚠️ 仅摘要</span></div><div class="field"><span class="field-key">原文链接</span><span class="field-val">https://www.semanticscholar.org/paper/17502ff2b44475d1263e36a1f5dcc16cd2de9252</span></div><div class="field"><span class="field-key">标签</span><span class="field-val">general</span></div></div>
+                <h3 class="paper-title"><a href="https://scholar.google.com/scholar?q=ARTIFICIAL INTELLIGENCE IN BIOMEDICAL SCIENCES: OPPORTUNITY AND SCOPES ⭐⭐" target="_blank">ARTIFICIAL INTELLIGENCE IN BIOMEDICAL SCIENCES: OPPORTUNITY AND SCOPES ⭐⭐</a></h3>
+                <div class="paper-fields"></div>
                 
             </div>
-            <div class="paper-card ">
+            <div class="paper-card high">
                 <div class="paper-header">
                     <span class="paper-num">#9</span>
-                    <span class="relevance-badge ">?</span>
+                    <span class="relevance-badge high">HIGH</span>
                 </div>
-                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/17adecaafb92c65b2a4c59b7242924929a2a9461" target="_blank">Machine learning nonequilibrium phase transitions in charge-density wave insulators ⭐⭐</a></h3>
-                <div class="paper-fields"><div class="field"><span class="field-key">来源</span><span class="field-val">None</span></div><div class="field"><span class="field-key">期刊/出处</span><span class="field-val">arXiv preprint</span></div><div class="field"><span class="field-key">发布日期</span><span class="field-val">2026-01-12</span></div><div class="field"><span class="field-key">作者</span><span class="field-val">Yunhao Fan; Sheng Zhang; G. Chern</span></div><div class="field"><span class="field-key">简要摘要</span><span class="field-val">- **核心问题**：如何高效、准确地模拟电压驱动下量子材料（如电荷密度波体系）中非平衡电子对晶格的瞬时作用力，以实现长时间尺度的非平衡相变动力学研究；传统NEGF方法计算电子力代价过高，严重制约动力学模拟。</span></div><div class="field"><span class="field-key">PDF 状态</span><span class="field-val">⚠️ 仅摘要</span></div><div class="field"><span class="field-key">原文链接</span><span class="field-val">https://www.semanticscholar.org/paper/17adecaafb92c65b2a4c59b7242924929a2a9461</span></div><div class="field"><span class="field-key">标签</span><span class="field-val">general</span></div></div>
+                <h3 class="paper-title"><a href="https://scholar.google.com/scholar?q=Machine learning nonequilibrium phase transitions in charge" target="_blank">Machine learning nonequilibrium phase transitions in charge-density wave insulators ⭐⭐</a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">简要摘要:** - **核心问题</span><span class="field-val">如何高效、准确地模拟电压驱动下量子材料（如电荷密度波体系）中非平衡电子对晶格的瞬时作用力，以实现长时间尺度的非平衡相变动力学研究；传统NEGF方法计算电子力代价过高，严重制约动力学模拟。</span></div><div class="field"><span class="field-key">方法要点</span><span class="field-val">提出一种机器学习力场框架，利用神经网络直接从当前晶格构型预测局域非平衡电子力，绕过每步迭代中的重复NEGF求解，并耦合布朗动力学实现绝热晶格演化。</span></div><div class="field"><span class="field-key">关键结果</span><span class="field-val">该ML力场在Holstein模型中定量复现了门电压诱导的绝缘体–金属相变及畴壁运动动力学，精度媲美全NEGF模拟，同时提速达数个数量级。</span></div><div class="field"><span class="field-key">与你研究的相关度</span><span class="field-val"><strong>高</strong>——本工作为电催化中电极/电解质界面在偏压下的动态结构响应（如吸附构型演化、表面重构、相变）提供了可迁移的非平衡力建模范式，尤其适用于需耦合外场、电子激发与原子运动的多尺度电催化过程模拟。</span></div></div>
                 
             </div>
             <div class="paper-card ">
@@ -259,12 +223,12 @@ header p {{ font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }}
                     <span class="paper-num">#10</span>
                     <span class="relevance-badge ">?</span>
                 </div>
-                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/17f8aab46024cbbe22d5f0843b3338aded58dac8" target="_blank">MAPLE: a machine-learning force-field-native platform for automated reaction modeling and enzyme design ⭐⭐</a></h3>
-                <div class="paper-fields"><div class="field"><span class="field-key">来源</span><span class="field-val">None</span></div><div class="field"><span class="field-key">期刊/出处</span><span class="field-val">arXiv preprint</span></div><div class="field"><span class="field-key">发布日期</span><span class="field-val">2026-04-30</span></div><div class="field"><span class="field-key">作者</span><span class="field-val">Xujian Wang; Ze-Yu Sun; Yilu Zhang; Carlo Asam; Ruzhan Zhu et al.</span></div><div class="field"><span class="field-key">简要摘要</span><span class="field-val">- **核心问题**：现有机器学习力场（MLFFs）虽具高精度与低计算成本优势，但缺乏统一、自动化、易用的软件平台支撑其在电催化等复杂反应体系中的规模化应用。</span></div><div class="field"><span class="field-key">PDF 状态</span><span class="field-val">⚠️ 仅摘要</span></div><div class="field"><span class="field-key">原文链接</span><span class="field-val">https://www.semanticscholar.org/paper/17f8aab46024cbbe22d5f0843b3338aded58dac8</span></div><div class="field"><span class="field-key">标签</span><span class="field-val">electrochemistry, catalysis</span></div></div>
+                <h3 class="paper-title"><a href="https://scholar.google.com/scholar?q=MAPLE: a machine" target="_blank">MAPLE: a machine-learning force-field-native platform for automated reaction modeling and enzyme design ⭐⭐</a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">简要摘要:** - **核心问题</span><span class="field-val">现有机器学习力场（MLFFs）虽具高精度与低计算成本优势，但缺乏统一、自动化、易用的软件平台支撑其在电催化等复杂反应体系中的规模化应用。</span></div><div class="field"><span class="field-key">方法要点</span><span class="field-val">作者开发了MAPLE工具包，集成了定制化软件框架、并行化算法及对主流反应性MLFF（如ANI、M3GNet、CHGNet等）的标准化接口，支持大规模、多场景的分子动力学与反应路径探索。</span></div><div class="field"><span class="field-key">关键结果</span><span class="field-val">通过系统基准测试与多个生物催化案例（如酶促C–H活化、质子耦合电子转移过程）验证，MAPLE可在保持接近DFT精度的同时实现千倍级加速，显著提升催化机理模拟效率与可扩展性。</span></div></div>
                 
             </div></div>
-  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><p>作为计算化学/电催化方向的研究者，我以**问题驱动、方法论批判、可迁移性评估**为原则，对今日论文列表进行专业研判。尽管多数论文**不属于本领域**，但恰恰因此凸显了跨领域方法迁移的机遇与陷阱——以下分析聚焦“**哪些技术可被电催化研究吸收？哪些看似相关实则危险？哪些空白亟待我们填补？**”</p><br><p>---</p><br><p>### 1. 今日亮点（研究者视角）</p><br><li>✅ **最值得精读的一篇：[6] *Force-Aware Neural Tangent Kernels for Scalable and Robust Active Learning of MLIPs***</li><p>**为什么？** 这是目前**唯一一篇直击电催化MLIP核心痛点**的工作：① 电催化要求**能量+力双精度**（尤其界面吸附构型弛豫、电势依赖的力场偏移）；② 主动学习在稀疏采样（如不同*U*下的OER中间体）中极易因分布偏移失效；③ 其提出的**力NTK**（而非仅能量NTK）和**分块后验方差筛选**，可直接迁移到电极/电解质界面MLIP训练中——例如在Cu(100)/水界面构建*U*-dependent MLFF时，避免传统AL在高电势下因力误差累积导致的结构坍塌。**精读价值在于其数学严谨性与工程可行性平衡，非泛泛而谈的“AI+催化”。**</p><br><li>⚠️ **可能与你研究论点冲突的一篇：[7] *MLMD of lithiated gallium electrodes***</li><p>**冲突点在于对“MLFF普适性”的隐含假设**。该文在Li-Ga合金相上训练MLFF并宣称“第一性原理精度”，但未验证其在**电极/电解质界面、外加电势、溶剂化Li⁺共存**等真实电化学环境下的迁移能力。若我们的研究强调“**界面电势重构会显著扭曲MLFF预测的键级与电荷分布**”（如DFT显示Ga表面在+1.23 V vs. RHE下发生d-band上移），则该文结论可能高估MLFF在电催化中的可靠性——**它回避了电化学边界条件这一关键扰动项**。</p><br><li>👥 **值得追踪的作者或团队：**</li><li>**[6]作者团队**（NTK+MLIP方向）：已建立从理论（NTK扩展至向量场）到实现（线性标度算法）的完整链条，后续工作大概率涉及电化学MLIP的鲁棒性基准测试；</li><li>**[4]综述作者**（水/界面AIMD-ML方向）：虽为综述，但系统梳理了**极化水分子在电极表面的ML建模难点**（如氢键网络断裂/重排的时序依赖性），其指出的“**局部环境敏感性远超体相水**”恰是我们设计电催化MLFF时最易忽视的陷阱；</li><li>**[10] MAPLE平台开发者**：若其真能实现“reaction modeling-native MLFF接口”，将解决电催化领域长期存在的**反应路径搜索与MLFF耦合效率低下**问题（当前需手动切换DFT/ML/NEB流程）。</li><br><li>🔍 **其他值得注意的趋势：**</li><li>**力场开发正从“精度优先”转向“任务定制化”**：[6][9][10]均强调MLIP需适配具体任务（主动学习/非平衡动力学/反应建模），而非追求全局RMSE最小——这对电催化意义重大：我们不需要整个催化剂晶胞的亚meV精度，而需要**吸附位点附近0.5 nm³区域的力误差&lt;0.1 eV/Å**；</li><li>**跨尺度建模的“断层”依然存在**：所有论文均未解决**电子结构变化（如d-band center shift）如何实时反馈至MLFF参数**——这正是电催化中“电势-结构-活性”闭环缺失的核心。</li><br><p>---</p><br><p>###</p></div></div>
-  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><p>2. Key Gap（电催化领域亟待突破）</p><br><li>❗ **Gap 1：电化学MLIP缺乏“电势感知”架构**</li><p>当前所有MLFF（包括[6][7][9][10]）均基于**零电势构型训练**，无法描述外加电势引起的：① 表面偶极重构；② 吸附物电荷转移（如*OH⁻ → *O + H⁺ + e⁻*中的电子耗尽）；③ 溶剂化壳层重排。**尚未有工作将电极电势*U*作为MLFF输入特征，或通过电化学DFT数据显式约束力场输出。**</p><p>→ *未来方向*：开发**U-conditioned MLFF**，以电势为条件变量，联合训练能量/力/电荷密度预测。</p><br><li>❗ **Gap 2：界面反应动力学与MLMD的“时间尺度鸿沟”未弥合**</li><p>[7][9]展示了MLMD在材料相变/扩散中的成功，但电催化关键步骤（如OER中*OOH生成）需μs-ms尺度，而当前MLMD受限于积分步长（fs）与采样效率。**现有MLFF未针对“低频反应坐标”优化——其</p></div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><p>作为计算化学/电催化方向的研究者，我以<strong>问题驱动、方法论批判、可迁移性评估</strong>为原则，对今日论文列表进行专业研判。尽管多数论文<strong>不属于本领域</strong>，但恰恰因此凸显了跨领域方法迁移的机遇与陷阱——以下分析聚焦“<strong>哪些技术可被电催化研究吸收？哪些看似相关实则危险？哪些空白亟待我们填补？</strong>”</p><br><p>---</p><br><p>### 1. 今日亮点（研究者视角）</p><br><li>✅ <strong>最值得精读的一篇：[6] *Force-Aware Neural Tangent Kernels for Scalable and Robust Active Learning of MLIPs</strong>*</li><p><strong>为什么？</strong> 这是目前<strong>唯一一篇直击电催化MLIP核心痛点</strong>的工作：① 电催化要求<strong>能量+力双精度</strong>（尤其界面吸附构型弛豫、电势依赖的力场偏移）；② 主动学习在稀疏采样（如不同*U*下的OER中间体）中极易因分布偏移失效；③ 其提出的<strong>力NTK</strong>（而非仅能量NTK）和<strong>分块后验方差筛选</strong>，可直接迁移到电极/电解质界面MLIP训练中——例如在Cu(100)/水界面构建*U*-dependent MLFF时，避免传统AL在高电势下因力误差累积导致的结构坍塌。<strong>精读价值在于其数学严谨性与工程可行性平衡，非泛泛而谈的“AI+催化”。</strong></p><br><li>⚠️ <strong>可能与你研究论点冲突的一篇：[7] *MLMD of lithiated gallium electrodes</strong>*</li><p><strong>冲突点在于对“MLFF普适性”的隐含假设</strong>。该文在Li-Ga合金相上训练MLFF并宣称“第一性原理精度”，但未验证其在<strong>电极/电解质界面、外加电势、溶剂化Li⁺共存</strong>等真实电化学环境下的迁移能力。若我们的研究强调“<strong>界面电势重构会显著扭曲MLFF预测的键级与电荷分布</strong>”（如DFT显示Ga表面在+1.23 V vs. RHE下发生d-band上移），则该文结论可能高估MLFF在电催化中的可靠性——<strong>它回避了电化学边界条件这一关键扰动项</strong>。</p><br><li>👥 <strong>值得追踪的作者或团队：</strong></li><li><strong>[6]作者团队</strong>（NTK+MLIP方向）：已建立从理论（NTK扩展至向量场）到实现（线性标度算法）的完整链条，后续工作大概率涉及电化学MLIP的鲁棒性基准测试；</li><li><strong>[4]综述作者</strong>（水/界面AIMD-ML方向）：虽为综述，但系统梳理了<strong>极化水分子在电极表面的ML建模难点</strong>（如氢键网络断裂/重排的时序依赖性），其指出的“<strong>局部环境敏感性远超体相水</strong>”恰是我们设计电催化MLFF时最易忽视的陷阱；</li><li><strong>[10] MAPLE平台开发者</strong>：若其真能实现“reaction modeling-native MLFF接口”，将解决电催化领域长期存在的<strong>反应路径搜索与MLFF耦合效率低下</strong>问题（当前需手动切换DFT/ML/NEB流程）。</li><br><li>🔍 <strong>其他值得注意的趋势：</strong></li><li><strong>力场开发正从“精度优先”转向“任务定制化”</strong>：[6][9][10]均强调MLIP需适配具体任务（主动学习/非平衡动力学/反应建模），而非追求全局RMSE最小——这对电催化意义重大：我们不需要整个催化剂晶胞的亚meV精度，而需要<strong>吸附位点附近0.5 nm³区域的力误差&lt;0.1 eV/Å</strong>；</li><li><strong>跨尺度建模的“断层”依然存在</strong>：所有论文均未解决<strong>电子结构变化（如d-band center shift）如何实时反馈至MLFF参数</strong>——这正是电催化中“电势-结构-活性”闭环缺失的核心。</li><br><p>---</p><br><p>###</p></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><p>2. Key Gap（电催化领域亟待突破）</p><br><li>❗ <strong>Gap 1：电化学MLIP缺乏“电势感知”架构</strong></li><p>当前所有MLFF（包括[6][7][9][10]）均基于<strong>零电势构型训练</strong>，无法描述外加电势引起的：① 表面偶极重构；② 吸附物电荷转移（如*OH⁻ → *O + H⁺ + e⁻*中的电子耗尽）；③ 溶剂化壳层重排。<strong>尚未有工作将电极电势*U*作为MLFF输入特征，或通过电化学DFT数据显式约束力场输出。</strong></p><p>→ *未来方向*：开发<strong>U-conditioned MLFF</strong>，以电势为条件变量，联合训练能量/力/电荷密度预测。</p><br><li>❗ <strong>Gap 2：界面反应动力学与MLMD的“时间尺度鸿沟”未弥合</strong></li><p>[7][9]展示了MLMD在材料相变/扩散中的成功，但电催化关键步骤（如OER中*OOH生成）需μs-ms尺度，而当前MLMD受限于积分步长（fs）与采样效率。**现有MLFF未针对“低频反应坐标”优化——其</p></div></div>
 </div>
 </body>
 </html>

@@ -10,9 +10,9 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
-  onload="renderMathInElement(document.body,{{delimiters:[{{left:'$$',right:'$$',display:true}},{{left:'$',right:'$',display:false}}]}})"></script>
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
 <style>
-:root {{
+:root {
   --bg: #f5f7fa;
   --card-bg: #ffffff;
   --text: #1a1a2e;
@@ -26,105 +26,105 @@
   --medium-bg: #fffbeb;
   --low: #6b7280;
   --low-bg: #f9fafb;
-}}
-* {{ margin: 0; padding: 0; box-sizing: border-box; }}
-body {{
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   background: var(--bg); color: var(--text); line-height: 1.7;
   padding: 0;
-}}
-.container {{ max-width: 1200px; margin: 0 auto; padding: 24px 16px; }}
-header {{
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
   background: linear-gradient(135deg, #1e3a5f, #2563eb);
   color: white; padding: 32px 0 24px; margin-bottom: 24px;
   border-radius: 0 0 24px 24px;
-}}
-header .container {{ padding-bottom: 0; }}
-header h1 {{ font-size: 1.5rem; font-weight: 700; }}
-header p {{ font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }}
-.stats-row {{
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+.stats-row {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 12px; margin-bottom: 24px;
-}}
-.stat-card {{
+}
+.stat-card {
   background: var(--card-bg); border-radius: 12px; padding: 16px;
   text-align: center; border: 1px solid var(--border);
-}}
-.stat-label {{ font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 4px; }}
-.stat-value {{ font-size: 1.1rem; font-weight: 700; color: var(--accent); }}
-.papers-grid {{
+}
+.stat-label { font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 4px; }
+.stat-value { font-size: 1.1rem; font-weight: 700; color: var(--accent); }
+.papers-grid {
   display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   gap: 16px; margin-bottom: 24px;
-}}
-.paper-card {{
+}
+.paper-card {
   background: var(--card-bg); border-radius: 12px; padding: 20px;
   border: 1px solid var(--border);
   transition: box-shadow 0.15s;
   display: flex; flex-direction: column;
-}}
-.paper-card:hover {{ box-shadow: 0 4px 12px rgba(0,0,0,0.06); }}
-.paper-card.high {{ border-left: 4px solid var(--high); }}
-.paper-card.medium {{ border-left: 4px solid var(--medium); }}
-.paper-card.low {{ border-left: 4px solid var(--low); }}
-.paper-header {{ display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }}
-.paper-num {{ font-weight: 700; color: var(--accent); font-size: 0.9rem; }}
-.relevance-badge {{
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.paper-num { font-weight: 700; color: var(--accent); font-size: 0.9rem; }
+.relevance-badge {
   padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
-}}
-.relevance-badge.high {{ background: var(--high-bg); color: var(--high); }}
-.relevance-badge.medium {{ background: var(--medium-bg); color: var(--medium); }}
-.relevance-badge.low {{ background: var(--low-bg); color: var(--low); }}
-.paper-title {{ font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }}
-.paper-title a {{ color: inherit; text-decoration: none; }}
-.paper-title a:hover {{ color: var(--accent); text-decoration: underline; }}
-.paper-fields {{ flex: 1; }}
-.field {{ margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }}
-.field-key {{
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
   display: block; font-weight: 600; font-size: 0.72rem;
   text-transform: uppercase; letter-spacing: 0.03em;
   color: var(--text-secondary); margin-bottom: 2px;
-}}
-.field-val {{ color: var(--text); display: block; }}
-.highlights, .keygap {{
+}
+.field-val { color: var(--text); display: block; }
+.highlights, .keygap {
   background: var(--card-bg); border-radius: 12px; padding: 20px;
   margin-bottom: 16px; border: 1px solid var(--border);
-}}
-.highlights h3, .keygap h3 {{ font-size: 1rem; margin-bottom: 8px; }}
-.highlight-body, .gap-body {{ font-size: 0.88rem; color: var(--text); line-height: 1.7; }}
-.highlight-body p, .gap-body p {{ margin-bottom: 6px; }}
-.highlight-body strong, .gap-body strong {{ font-weight: 600; }}
-.paper-tags {{ margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }}
-.tag-badge {{
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
   display: inline-block; padding: 2px 10px; border-radius: 999px;
   font-size: 0.72rem; font-weight: 500;
   background: var(--accent-light); color: var(--accent);
   text-decoration: none; border: 1px solid transparent;
   transition: all 0.12s;
-}}
-.tag-badge:hover {{ background: var(--accent); color: #fff; border-color: var(--accent); }}
-.kw-nav {{
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
   display: inline-block; margin-left: 12px;
   padding: 6px 14px; border-radius: 8px;
   background: rgba(255,255,255,0.15); color: #fff;
   text-decoration: none; font-size: 0.82rem; font-weight: 500;
   transition: background 0.12s;
-}}
-.kw-nav:hover {{ background: rgba(255,255,255,0.25); }}
-.day-nav {{ display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }}
-.day-link {{
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
   padding: 8px 16px; border: 1px solid var(--border);
   border-radius: 8px; background: var(--card-bg);
   text-decoration: none; font-size: 0.85rem; font-weight: 500;
   color: var(--text); transition: all 0.15s;
-}}
-.day-link:hover {{ border-color: var(--accent); color: var(--accent); }}
-.back-link {{ color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }}
-.back-link:hover {{ color: #fff; }}
-@media (max-width: 640px) {{
-  .papers-grid {{ grid-template-columns: 1fr; }}
-  .stats-row {{ grid-template-columns: repeat(2, 1fr); }}
-  header h1 {{ font-size: 1.2rem; }}
-}}
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+  .papers-grid { grid-template-columns: 1fr; }
+  .stats-row { grid-template-columns: repeat(2, 1fr); }
+  header h1 { font-size: 1.2rem; }
+}
 </style>
 </head>
 <body>
@@ -137,35 +137,35 @@ header p {{ font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }}
 <div class="container">
   <div class="stats-row"><div class="stat-card"><div class="stat-label">检索源</div><div class="stat-value">arXiv (last 24h) + Semantic Scholar (不限日期，若命中)</div></div><div class="stat-card"><div class="stat-label">原始候选</div><div class="stat-value">18 篇 (arXiv 18, S2: 0)</div></div><div class="stat-card"><div class="stat-label">有效去重后</div><div class="stat-value">3 篇</div></div><div class="stat-card"><div class="stat-label">过滤已读论文</div><div class="stat-value">5 篇（arXiv: 2606.06848, 2605.27229 + GCMC 类论文）</div></div><div class="stat-card"><div class="stat-label">下载 PDF</div><div class="stat-value">1 篇</div></div><div class="stat-card"><div class="stat-label">实际精读</div><div class="stat-value">3 篇（1 篇全文，2 篇摘要）</div></div></div>
   <div class="papers-grid">
-            <div class="paper-card medium">
+            <div class="paper-card ">
                 <div class="paper-header">
                     <span class="paper-num">#1</span>
-                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="relevance-badge ">?</span>
                 </div>
-                <h3 class="paper-title"><a href="https://arxiv.org/pdf/2606.16994v1" target="_blank">Hydrogen Chemisorption and Current-Induced Spin Polarization on NbP — 拓扑表面态与化学吸附的动量分辨分析</a></h3>
-                <div class="paper-fields"><div class="field"><span class="field-key">来源</span><span class="field-val">arXiv 2606.16994</span></div><div class="field"><span class="field-key">期刊/出处</span><span class="field-val">arXiv: physics.chem-ph, cond-mat.mtrl-sci (preprint)</span></div><div class="field"><span class="field-key">发布日期</span><span class="field-val">2026-06-15</span></div><div class="field"><span class="field-key">作者</span><span class="field-val">Luis Martinez-Gomez, Raphael F. Ribeiro</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">Weyl 半金属 NbP 的 Fermi arcs 表面态在 H 化学吸附中扮演什么角色？</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">DFT + Wannier TBM + pCOHP + 电流诱导自旋极化 (Edelstein 效应)，SOC on/off 对照</span></div><div class="field"><span class="field-key">关键结果</span><span class="field-val">ΔG_H* SOC ≈ -0.60 eV（vs -0.62 eV 非SOC）；H 投影电流诱导磁矩 ~7×10⁻⁶ μB</span></div><div class="field"><span class="field-key">与你研究的相关性</span><span class="field-val">**中** — 拓扑材料表面化学分析范式可迁移，但未涉及电化学恒电位</span></div><div class="field"><span class="field-key">原文链接</span><span class="field-val">https://arxiv.org/pdf/2606.16994v1</span></div><div class="field"><span class="field-key">PDF 状态</span><span class="field-val">✅ 已下载全文</span></div></div>
+                <h3 class="paper-title"><a href="https://scholar.google.com/scholar?q=Hydrogen Chemisorption and Current" target="_blank">Hydrogen Chemisorption and Current-Induced Spin Polarization on NbP — 拓扑表面态与化学吸附的动量分辨分析</a></h3>
+                <div class="paper-fields"></div>
                 
             </div>
-            <div class="paper-card high">
+            <div class="paper-card ">
                 <div class="paper-header">
                     <span class="paper-num">#2</span>
-                    <span class="relevance-badge high">HIGH</span>
+                    <span class="relevance-badge ">?</span>
                 </div>
-                <h3 class="paper-title"><a href="https://arxiv.org/abs/2606.16859" target="_blank">Transferable machine learning of excited-state dynamics with extremal pooling — 激发态 ML 框架</a></h3>
-                <div class="paper-fields"><div class="field"><span class="field-key">来源</span><span class="field-val">arXiv 2606.16859</span></div><div class="field"><span class="field-key">期刊/出处</span><span class="field-val">arXiv: physics.chem-ph (preprint)</span></div><div class="field"><span class="field-key">发布日期</span><span class="field-val">2026-06-15</span></div><div class="field"><span class="field-key">作者</span><span class="field-val">Cesare Malosso, Wei Bin How, Gonzalo Díaz Mirón, Ali Hassanali, Michele Ceriotti</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何将 MLIP 从基态推广到激发态，解决能量非广延性问题？</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">Extremal pooling of atomic HOMO/LUMO contributions；可解释原子级激发能贡献</span></div><div class="field"><span class="field-key">关键结果</span><span class="field-val">在液态光激发溶剂化电子上验证，定量匹配 ROKS，实现周期性体系长时间尺度模拟</span></div><div class="field"><span class="field-key">与你研究的相关性</span><span class="field-val">**高** — Extremal pooling 概念可直接迁移到恒电位电荷转移模拟（电荷非广延性）；Ceriotti 组同时深耕 MLIP + NQE + 激发态</span></div><div class="field"><span class="field-key">原文链接</span><span class="field-val">https://arxiv.org/abs/2606.16859</span></div><div class="field"><span class="field-key">PDF 状态</span><span class="field-val">⚠️ 仅摘要</span></div></div>
+                <h3 class="paper-title"><a href="https://scholar.google.com/scholar?q=Transferable machine learning of excited" target="_blank">Transferable machine learning of excited-state dynamics with extremal pooling — 激发态 ML 框架</a></h3>
+                <div class="paper-fields"></div>
                 
             </div>
-            <div class="paper-card low">
+            <div class="paper-card ">
                 <div class="paper-header">
                     <span class="paper-num">#3</span>
-                    <span class="relevance-badge low">LOW</span>
+                    <span class="relevance-badge ">?</span>
                 </div>
-                <h3 class="paper-title"><a href="https://arxiv.org/abs/2606.17012" target="_blank">Evolution of Nonlinear Ion Transport in Nanopore Arrays — 纳米孔阵列的跨尺度离子输运</a></h3>
-                <div class="paper-fields"><div class="field"><span class="field-key">来源</span><span class="field-val">arXiv 2606.17012</span></div><div class="field"><span class="field-key">期刊/出处</span><span class="field-val">arXiv: cond-mat.mtrl-sci, cond-mat.mes-hall (preprint)</span></div><div class="field"><span class="field-key">发布日期</span><span class="field-val">2026-06-15</span></div><div class="field"><span class="field-key">作者</span><span class="field-val">Chih-Yuan Lin, Marija Drndić</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">从单孔到 N~10000 孔阵列，离子输运的标度行为如何变化？</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">实验制造 sub-3nm/sub-20nm 纳米孔阵列 + 3D 有限元建模；系统测量电导/整流/渗透能</span></div><div class="field"><span class="field-key">关键结果</span><span class="field-val">功率密度随阵列扩展下降三个数量级；表面电荷效应在 N~10000 时消失</span></div><div class="field"><span class="field-key">与你研究的相关性</span><span class="field-val">**低** — 物理机制不同（纯离子输运 vs 电化学反应），但跨尺度非线性行为概念有参考价值</span></div><div class="field"><span class="field-key">原文链接</span><span class="field-val">https://arxiv.org/abs/2606.17012</span></div><div class="field"><span class="field-key">PDF 状态</span><span class="field-val">⚠️ 仅摘要</span></div></div>
+                <h3 class="paper-title"><a href="https://scholar.google.com/scholar?q=Evolution of Nonlinear Ion Transport in Nanopore Arrays" target="_blank">Evolution of Nonlinear Ion Transport in Nanopore Arrays — 纳米孔阵列的跨尺度离子输运</a></h3>
+                <div class="paper-fields"></div>
                 
             </div></div>
-  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><li>**最值得精读的一篇:** 2606.16994 (Martinez-Gomez) — 拓扑表面态与化学吸附的关联是前沿交叉方向，pCOHP + 电流诱导自旋极化的方法论完整</li><li>**可能与你研究论点冲突的一篇:** 2606.16859 (Malosso/Ceriotti) — 如果 extremal pooling 方案被证明有效，可能挑战恒电位 MLFF 中对电荷非广延性的处理方式（当前做法通常保留求和架构 + 电荷补偿）</li><li>**值得追踪的作者或团队:** **Michele Ceriotti 组** (EPFL) — 连续在 MLIP (so3krates)、NQE (PIMD)、和最新的激发态 ML 三个方向上均有突破</li></div></div>
-  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><li>这三篇论文分别覆盖了（a）拓扑材料的表面化学成键分析、（b）激发态 ML 的非广延性架构、和（c）纳米孔阵列的跨尺度离子输运，但**未涉及**恒电位条件下的电化学界面 MLFF 模拟，也未涉及 NQE 对表面催化的定量影响</li><li>**待填补空白**: Ceriotti 组的 extremal pooling 概念 + NQE (PIMD) + 恒电位 MLFF 三者的结合 — 即如何在恒电位框架中处理电子的非广延性（如可变的界面电荷）同时纳入核量子效应</li></div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><li><strong>最值得精读的一篇:</strong> 2606.16994 (Martinez-Gomez) — 拓扑表面态与化学吸附的关联是前沿交叉方向，pCOHP + 电流诱导自旋极化的方法论完整</li><li><strong>可能与你研究论点冲突的一篇:</strong> 2606.16859 (Malosso/Ceriotti) — 如果 extremal pooling 方案被证明有效，可能挑战恒电位 MLFF 中对电荷非广延性的处理方式（当前做法通常保留求和架构 + 电荷补偿）</li><li><strong>值得追踪的作者或团队:</strong> <strong>Michele Ceriotti 组</strong> (EPFL) — 连续在 MLIP (so3krates)、NQE (PIMD)、和最新的激发态 ML 三个方向上均有突破</li></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><li>这三篇论文分别覆盖了（a）拓扑材料的表面化学成键分析、（b）激发态 ML 的非广延性架构、和（c）纳米孔阵列的跨尺度离子输运，但<strong>未涉及</strong>恒电位条件下的电化学界面 MLFF 模拟，也未涉及 NQE 对表面催化的定量影响</li><li><strong>待填补空白</strong>: Ceriotti 组的 extremal pooling 概念 + NQE (PIMD) + 恒电位 MLFF 三者的结合 — 即如何在恒电位框架中处理电子的非广延性（如可变的界面电荷）同时纳入核量子效应</li></div></div>
 </div>
 </body>
 </html>

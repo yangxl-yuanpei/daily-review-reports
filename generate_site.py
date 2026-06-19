@@ -15,6 +15,8 @@ OUTPUT_DIR = PROJECT_DIR
 
 SEEN_PAPERS_PATH = PROJECT_DIR / "seen_papers.json"
 
+GITHUB_REPO = "yangxl-yuanpei/daily-review-reports"
+
 DAILY_PATTERN = re.compile(r"daily-summary-(\d{4}-\d{2}-\d{2})\.md")
 
 PAPER_BLOCK_RE = re.compile(
@@ -422,7 +424,8 @@ def render_index_page(reports, kw_index=None):
   <div class="container">
     <h1>📄 每日文献追踪报告</h1>
     <p>arXiv + Semantic Scholar | 自动检索 · 精读 · 关键缺口分析
-    <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+    <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a>
+    <a href="https://github.com/{GITHUB_REPO}/issues/new?template=keyword-suggestion.md" target="_blank" class="kw-nav">🖊️ 新增关键词</a></p>
   </div>
 </header>
 <div class="container">

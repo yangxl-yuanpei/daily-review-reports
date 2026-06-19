@@ -10,9 +10,9 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
-  onload="renderMathInElement(document.body,{{delimiters:[{{left:'$$',right:'$$',display:true}},{{left:'$',right:'$',display:false}}]}})"></script>
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
 <style>
-:root {{
+:root {
   --bg: #f5f7fa;
   --card-bg: #ffffff;
   --text: #1a1a2e;
@@ -26,105 +26,105 @@
   --medium-bg: #fffbeb;
   --low: #6b7280;
   --low-bg: #f9fafb;
-}}
-* {{ margin: 0; padding: 0; box-sizing: border-box; }}
-body {{
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   background: var(--bg); color: var(--text); line-height: 1.7;
   padding: 0;
-}}
-.container {{ max-width: 1200px; margin: 0 auto; padding: 24px 16px; }}
-header {{
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
   background: linear-gradient(135deg, #1e3a5f, #2563eb);
   color: white; padding: 32px 0 24px; margin-bottom: 24px;
   border-radius: 0 0 24px 24px;
-}}
-header .container {{ padding-bottom: 0; }}
-header h1 {{ font-size: 1.5rem; font-weight: 700; }}
-header p {{ font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }}
-.stats-row {{
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+.stats-row {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 12px; margin-bottom: 24px;
-}}
-.stat-card {{
+}
+.stat-card {
   background: var(--card-bg); border-radius: 12px; padding: 16px;
   text-align: center; border: 1px solid var(--border);
-}}
-.stat-label {{ font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 4px; }}
-.stat-value {{ font-size: 1.1rem; font-weight: 700; color: var(--accent); }}
-.papers-grid {{
+}
+.stat-label { font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 4px; }
+.stat-value { font-size: 1.1rem; font-weight: 700; color: var(--accent); }
+.papers-grid {
   display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   gap: 16px; margin-bottom: 24px;
-}}
-.paper-card {{
+}
+.paper-card {
   background: var(--card-bg); border-radius: 12px; padding: 20px;
   border: 1px solid var(--border);
   transition: box-shadow 0.15s;
   display: flex; flex-direction: column;
-}}
-.paper-card:hover {{ box-shadow: 0 4px 12px rgba(0,0,0,0.06); }}
-.paper-card.high {{ border-left: 4px solid var(--high); }}
-.paper-card.medium {{ border-left: 4px solid var(--medium); }}
-.paper-card.low {{ border-left: 4px solid var(--low); }}
-.paper-header {{ display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }}
-.paper-num {{ font-weight: 700; color: var(--accent); font-size: 0.9rem; }}
-.relevance-badge {{
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.paper-num { font-weight: 700; color: var(--accent); font-size: 0.9rem; }
+.relevance-badge {
   padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
-}}
-.relevance-badge.high {{ background: var(--high-bg); color: var(--high); }}
-.relevance-badge.medium {{ background: var(--medium-bg); color: var(--medium); }}
-.relevance-badge.low {{ background: var(--low-bg); color: var(--low); }}
-.paper-title {{ font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }}
-.paper-title a {{ color: inherit; text-decoration: none; }}
-.paper-title a:hover {{ color: var(--accent); text-decoration: underline; }}
-.paper-fields {{ flex: 1; }}
-.field {{ margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }}
-.field-key {{
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
   display: block; font-weight: 600; font-size: 0.72rem;
   text-transform: uppercase; letter-spacing: 0.03em;
   color: var(--text-secondary); margin-bottom: 2px;
-}}
-.field-val {{ color: var(--text); display: block; }}
-.highlights, .keygap {{
+}
+.field-val { color: var(--text); display: block; }
+.highlights, .keygap {
   background: var(--card-bg); border-radius: 12px; padding: 20px;
   margin-bottom: 16px; border: 1px solid var(--border);
-}}
-.highlights h3, .keygap h3 {{ font-size: 1rem; margin-bottom: 8px; }}
-.highlight-body, .gap-body {{ font-size: 0.88rem; color: var(--text); line-height: 1.7; }}
-.highlight-body p, .gap-body p {{ margin-bottom: 6px; }}
-.highlight-body strong, .gap-body strong {{ font-weight: 600; }}
-.paper-tags {{ margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }}
-.tag-badge {{
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
   display: inline-block; padding: 2px 10px; border-radius: 999px;
   font-size: 0.72rem; font-weight: 500;
   background: var(--accent-light); color: var(--accent);
   text-decoration: none; border: 1px solid transparent;
   transition: all 0.12s;
-}}
-.tag-badge:hover {{ background: var(--accent); color: #fff; border-color: var(--accent); }}
-.kw-nav {{
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
   display: inline-block; margin-left: 12px;
   padding: 6px 14px; border-radius: 8px;
   background: rgba(255,255,255,0.15); color: #fff;
   text-decoration: none; font-size: 0.82rem; font-weight: 500;
   transition: background 0.12s;
-}}
-.kw-nav:hover {{ background: rgba(255,255,255,0.25); }}
-.day-nav {{ display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }}
-.day-link {{
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
   padding: 8px 16px; border: 1px solid var(--border);
   border-radius: 8px; background: var(--card-bg);
   text-decoration: none; font-size: 0.85rem; font-weight: 500;
   color: var(--text); transition: all 0.15s;
-}}
-.day-link:hover {{ border-color: var(--accent); color: var(--accent); }}
-.back-link {{ color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }}
-.back-link:hover {{ color: #fff; }}
-@media (max-width: 640px) {{
-  .papers-grid {{ grid-template-columns: 1fr; }}
-  .stats-row {{ grid-template-columns: repeat(2, 1fr); }}
-  header h1 {{ font-size: 1.2rem; }}
-}}
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+  .papers-grid { grid-template-columns: 1fr; }
+  .stats-row { grid-template-columns: repeat(2, 1fr); }
+  header h1 { font-size: 1.2rem; }
+}
 </style>
 </head>
 <body>
@@ -143,16 +143,7 @@ header p {{ font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }}
                     <span class="relevance-badge ">?</span>
                 </div>
                 <h3 class="paper-title"><a href="https://scholar.google.com/scholar?q=Learning Therapist Policy from Therapist" target="_blank">Learning Therapist Policy from Therapist-Exoskeleton-Patient Interaction ⭐⭐</a></h3>
-                <div class="paper-fields"><div class="field"><span class="field-key">来源</span><span class="field-val">None</span></div><div class="field"><span class="field-key">期刊/出处</span><span class="field-val">arXiv preprint</span></div><div class="field"><span class="field-key">发布日期</span><span class="field-val">2026-03-02</span></div><div class="field"><span class="field-key">作者</span><span class="field-val">G. Snyder; Lorenzo Vianello; Levi J. Hargrove; Matthew L. Elwin; José Luis Pons Rovira</span></div></div>
-                
-            </div>
-            <div class="paper-card ">
-                <div class="paper-header">
-                    <span class="paper-num">#6</span>
-                    <span class="relevance-badge ">?</span>
-                </div>
-                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/18da318be400ac5b9e5bcc7656a7b4ab6b26f81f" target="_blank">创新点</a></h3>
-                <div class="paper-fields"><div class="field"><span class="field-key">PDF 状态</span><span class="field-val">⚠️ 仅摘要</span></div><div class="field"><span class="field-key">原文链接</span><span class="field-val">https://www.semanticscholar.org/paper/18da318be400ac5b9e5bcc7656a7b4ab6b26f81f</span></div><div class="field"><span class="field-key">标签</span><span class="field-val">electrochemistry</span></div></div>
+                <div class="paper-fields"><div class="field"><span class="field-key">痛点</span><span class="field-val">传统康复依赖 therapist 主观经验与体力，导致干预强度衰减、难以标准化；现有外骨骼多采用预设轨迹或简单阻抗控制，<strong>无法复现 human-in-the-loop 的自适应力学反馈</strong>。</span></div><div class="field"><span class="field-key">为什么重要</span><span class="field-val">中风康复效果高度依赖 therapy 的<strong>时序一致性、力度适配性与实时调整能力</strong>——这恰似电催化中，<strong>催化剂性能高度依赖其在动态电位/浓度梯度下的瞬态电子结构响应能力</strong>（如*operando* 条件下活性位点的价态波动、配位重构）。</span></div><div class="field"><span class="field-key">数据集</span><span class="field-val">8 名中风患者 + 对应 therapist 的同步运动捕捉（Vicon）与力矩传感器（exoskeleton joint torque）数据；</span></div><div class="field"><span class="field-key">基线方法</span><span class="field-val">PID 控制、固定增益阻抗控制、线性回归模型；</span></div><div class="field"><span class="field-key">关键结果</span><span class="field-val">① PTFF 隐空间中，GMM 向量场成功分离出“支撑期”与“摆动期”的 therapist 响应模式（可视化验证）；</span></div></div>
                 
             </div>
             <div class="paper-card ">
@@ -161,16 +152,7 @@ header p {{ font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }}
                     <span class="relevance-badge ">?</span>
                 </div>
                 <h3 class="paper-title"><a href="https://scholar.google.com/scholar?q=Room temperature dynamics of atomic clusters adsorbed on graphene: a machine" target="_blank">Room temperature dynamics of atomic clusters adsorbed on graphene: a machine-learning force field molecular dynamics study. ⭐⭐</a></h3>
-                <div class="paper-fields"><div class="field"><span class="field-key">来源</span><span class="field-val">None</span></div><div class="field"><span class="field-key">期刊/出处</span><span class="field-val">arXiv preprint</span></div><div class="field"><span class="field-key">发布日期</span><span class="field-val">2026-01-05</span></div><div class="field"><span class="field-key">作者</span><span class="field-val">Ramasamy Murugesan; Ewald Janssens; J. van de Vondel; M. Houssa</span></div></div>
-                
-            </div>
-            <div class="paper-card ">
-                <div class="paper-header">
-                    <span class="paper-num">#8</span>
-                    <span class="relevance-badge ">?</span>
-                </div>
-                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/1d78b77e8c85e55a9e9119e77c103cdf799d093d" target="_blank">对你研究的启发</a></h3>
-                <div class="paper-fields"><div class="field"><span class="field-key">PDF 状态</span><span class="field-val">⚠️ 仅摘要</span></div><div class="field"><span class="field-key">原文链接</span><span class="field-val">https://www.semanticscholar.org/paper/1d78b77e8c85e55a9e9119e77c103cdf799d093d</span></div><div class="field"><span class="field-key">标签</span><span class="field-val">surface</span></div></div>
+                <div class="paper-fields"><div class="field"><span class="field-key">痛点1（稳定性缺失）</span><span class="field-val">pristine 石墨烯表面能低、化学惰性高 → 吸附的金属团簇（如 Auₙ）室温下易发生表面扩散，难以维持构型与位置精度，严重制约其在自旋电子学、单原子催化或量子传感中的可控集成。</span></div><div class="field"><span class="field-key">痛点2（实验可操控性差）</span><span class="field-val">传统“外加电场”或“低温基底”等锚定策略不适用于常温器件工况；而化学修饰（如氧化、掺杂）易破坏石墨烯本征载流子迁移率与自旋弛豫时间。</span></div><div class="field"><span class="field-key">为什么重要？</span><span class="field-val">团簇—石墨烯界面的电子/自旋耦合高度依赖相对位置与局域配位环境；动态无序直接导致性能不可重复、物理机制难解析——<strong>锚定是实现可设计界面物性的前提。</strong></span></div><div class="field"><span class="field-key">数据集/体系</span><span class="field-val">Au₃/Au₆ + 单层石墨烯（含 1×1 C-vacancy；PMMA单分子吸附模型；洁净区）；300 K AIMD（NVT系综，~15 ps轨迹）。</span></div><div class="field"><span class="field-key">基线方法</span><span class="field-val">pristine graphene 上的团簇扩散系数（D₀）作为基准。</span></div><div class="field"><span class="field-key">关键数值结果</span><span class="field-val">- Au₃ 在 pristine 石墨烯上扩散系数 <strong>D ≈ 1.2 × 10⁻⁵ cm²/s</strong>；在 C-vacancy 附近 <strong>D &lt; 5 × 10⁻⁸ cm²/s</strong>（降低 &gt;200 倍）；</span></div></div>
                 
             </div>
             <div class="paper-card ">
@@ -179,16 +161,7 @@ header p {{ font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }}
                     <span class="relevance-badge ">?</span>
                 </div>
                 <h3 class="paper-title"><a href="https://scholar.google.com/scholar?q=Insight into the temperature" target="_blank">Insight into the temperature-dependent lattice thermal properties of CeO2 stabilized ZrO2 by machine learning force fields. ⭐⭐</a></h3>
-                <div class="paper-fields"><div class="field"><span class="field-key">来源</span><span class="field-val">None</span></div><div class="field"><span class="field-key">期刊/出处</span><span class="field-val">arXiv preprint</span></div><div class="field"><span class="field-key">发布日期</span><span class="field-val">2026-01-13</span></div><div class="field"><span class="field-key">作者</span><span class="field-val">Linpo Yang; Jia Wei; Yinglin Song</span></div></div>
-                
-            </div>
-            <div class="paper-card ">
-                <div class="paper-header">
-                    <span class="paper-num">#7</span>
-                    <span class="relevance-badge ">?</span>
-                </div>
-                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/200c66ee2a0941329e72afcdb7210328e7b76585" target="_blank">局限性</a></h3>
-                <div class="paper-fields"><div class="field"><span class="field-key">PDF 状态</span><span class="field-val">⚠️ 仅摘要</span></div><div class="field"><span class="field-key">原文链接</span><span class="field-val">https://www.semanticscholar.org/paper/200c66ee2a0941329e72afcdb7210328e7b76585</span></div><div class="field"><span class="field-key">标签</span><span class="field-val">electrochemistry, MLFF, dft</span></div></div>
+                <div class="paper-fields"><div class="field"><span class="field-key">痛点1（尺度鸿沟）</span><span class="field-val">DFT无法直接模拟&gt;1000原子体系的有限温度动力学，而工程级热障涂层（TBCs）性能依赖微米级微观结构（对应万原子超胞）；</span></div><div class="field"><span class="field-key">痛点2（掺杂复杂性）</span><span class="field-val">Ce⁴⁺掺杂引发ZrO₂晶格畸变、氧空位重分布与局域声子散射，传统经验势（如Buckingham）难以泛化至非化学计量比体系；</span></div><div class="field"><span class="field-key">痛点3（机制黑箱）</span><span class="field-val">实验测得低LTC归因于“声子散射增强”，但缺乏从原子振动谱→模式寿命→热流抑制的定量因果链。</span></div><div class="field"><span class="field-key">数据集/体系</span><span class="field-val">Zr₁₋ₓCeₓO₂（x=0–0.3）超胞（20,736原子，~12 nm³），涵盖四方相（t-ZrO₂）、立方相（c-CeO₂）及两相共存区；</span></div><div class="field"><span class="field-key">基线方法</span><span class="field-val">DFT（PBEsol）、经典Buckingham势、文献报道的GAP势；</span></div><div class="field"><span class="field-key">关键数值结果</span><span class="field-val">▪ 在x=0.2（工业常用配比）下，NEP预测室温LTC = <strong>1.82 ± 0.07 W·m⁻¹·K⁻¹</strong>，较DFT线性响应理论外推值低12%，且与实验测量值（1.75–1.90 W·m⁻¹·K⁻¹）误差&lt;3%；</span></div><div class="field"><span class="field-key">未耦合电子热导</span><span class="field-val">ZrO₂–CeO₂在高温下存在小极化子导电，电子对总热导率（κ=κₗ+κₑ）贡献可达15–20%，但NEP仅描述晶格部分；</span></div><div class="field"><span class="field-key">动力学陷阱风险</span><span class="field-val">FPS采样依赖初始构型库，对高能垒相（如单斜ZrO₂）的亚稳态结构覆盖不足，</span></div></div>
                 
             </div>
             <div class="paper-card ">
@@ -196,8 +169,8 @@ header p {{ font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }}
                     <span class="paper-num">#4</span>
                     <span class="relevance-badge ">?</span>
                 </div>
-                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/2041c302cfff9cfe41517373daf90b64866ea917" target="_blank">Generative Artificial Intelligence in STEM Education: A Review of Applications, Benefits and Challenges ⭐⭐</a></h3>
-                <div class="paper-fields"><div class="field"><span class="field-key">来源</span><span class="field-val">None</span></div><div class="field"><span class="field-key">期刊/出处</span><span class="field-val">arXiv preprint</span></div><div class="field"><span class="field-key">发布日期</span><span class="field-val">2026-01-08</span></div><div class="field"><span class="field-key">作者</span><span class="field-val">Vinay Chamola; Daksh Dave; Ishika Goyal; Sangeeta Sharma</span></div><div class="field"><span class="field-key">PDF 状态</span><span class="field-val">⚠️ 仅摘要</span></div><div class="field"><span class="field-key">原文链接</span><span class="field-val">https://www.semanticscholar.org/paper/2041c302cfff9cfe41517373daf90b64866ea917</span></div><div class="field"><span class="field-key">标签</span><span class="field-val">active-learning, generative</span></div></div>
+                <h3 class="paper-title"><a href="https://scholar.google.com/scholar?q=Generative Artificial Intelligence in STEM Education: A Review of Applications, Benefits and Challenges ⭐⭐" target="_blank">Generative Artificial Intelligence in STEM Education: A Review of Applications, Benefits and Challenges ⭐⭐</a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">学科归属</span><span class="field-val">教育学 / 教育技术 / AI for Education（AI4Ed）</span></div><div class="field"><span class="field-key">关键词</span><span class="field-val">GPT-4, DALL·E, AlphaCode, 智能导学系统（ITS）, 自适应评估, 教师数字素养, 教育公平, 认知负荷理论</span></div><div class="field"><span class="field-key">非本领域内容</span><span class="field-val">无催化剂设计、无DFT/MD模拟、无HER/OER/ORR反应、无电子结构分析、无活性描述符（如*ΔG_H*）、无机器学习力场、无图神经网络（GNN）预测催化活性等</span></div></div>
                 
             </div>
             <div class="paper-card ">
@@ -206,43 +179,34 @@ header p {{ font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }}
                     <span class="relevance-badge ">?</span>
                 </div>
                 <h3 class="paper-title"><a href="https://scholar.google.com/scholar?q=Trillion" target="_blank">Trillion-atom molecular dynamics simulations with ab initio accuracy ⭐⭐</a></h3>
-                <div class="paper-fields"><div class="field"><span class="field-key">来源</span><span class="field-val">None</span></div><div class="field"><span class="field-key">期刊/出处</span><span class="field-val">arXiv preprint</span></div><div class="field"><span class="field-key">发布日期</span><span class="field-val">2026-04-27</span></div><div class="field"><span class="field-key">作者</span><span class="field-val">Pengfei Suo; Wudi Cao; Xin Wu; Wen-Jiao Zhang; Zheyong Fan et al.</span></div></div>
+                <div class="paper-fields"><div class="field"><span class="field-key">痛点1（精度-尺度悖论）</span><span class="field-val">传统从头算（*ab initio*）方法（如DFT）受限于O(N⁴)标度，无法突破百万原子量级；经典力场虽可扩展至十亿原子，但缺乏化学反应性、电荷重分布与激发态等关键物理保真度。</span></div><div class="field"><span class="field-key">痛点2（MLFF瓶颈）</span><span class="field-val">现有机器学习力场（MLFF）虽提升效率，但在超大体系（&gt;10⁹原子）下仍面临训练数据覆盖不足、长程相互作用建模失准、并行可扩展性骤降等问题。</span></div><div class="field"><span class="field-key">为什么重要？</span><span class="field-val">介观尺度（~1 μm ≈ 10¹⁰ atoms）是电催化中气/液/固三相界面演化、催化剂烧结/重构、SEI膜生长等关键过程的发生尺度——<strong>缺失该尺度的量子精度模拟，将导致机理推断失真与理性设计失效</strong>。</span></div><div class="field"><span class="field-key">数据集/体系</span><span class="field-val">1.62万亿原子（1.62×10¹²）Cu/Ni双金属纳米多孔电极模型（尺寸≈1.2 μm³），含真实表面吸附H₂O/OH⁻/CO等电解质组分。</span></div><div class="field"><span class="field-key">基线方法</span><span class="field-val">- MLFF SOTA（2023年MatterNet）；</span></div><div class="field"><span class="field-key">关键数值结果</span><span class="field-val">- <strong>时间步开销</strong>：0.087 ns/s/atom（NEP） vs. 8.7 ns/s/atom（前SOTA MLFF） vs. 87 ns/s/atom（2018 Gordon Bell）；</span></div><div class="field"><span class="field-key">弱扩展效率</span><span class="field-val">86.9%（1→45,000 GPU），远超典型MLFF（通常&lt;40% @ &gt;10k GPU）；</span></div><div class="field"><span class="field-key">精度验证</span><span class="field-val">表面OH*吸附能误差 ≤ 0.07 eV（vs. DFT-PBE），键角畸变预测误差 &lt; 1.2°。</span></div><div class="field"><span class="field-key">电催化建模策略升维</span><span class="field-val">可放弃“活性位点DFT + 宏观流体模拟”的割裂范式，转向<strong>全介观NEP-MD → 统计提取局域反应坐标 → 构建微动力学模型</strong>的新工作流，尤其适用于多相界面重构（如CO₂RR中Cu表面动态碳层形成）。</span></div><div class="field"><span class="field-key">MLFF开发启示</span><span class="field-val">在构建催化专用力场时，应将<strong>电荷转移敏感性</strong>（如Bader电荷变化率）、<strong>局域d带中心响应</strong>等电催化核心 descriptor 显式嵌入特征工程，而非仅优化能量/力MAE。</span></div></div>
                 
             </div>
-            <div class="paper-card ">
-                <div class="paper-header">
-                    <span class="paper-num">#8</span>
-                    <span class="relevance-badge ">?</span>
-                </div>
-                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/24d77364ea47bdcd14ee6e921d8ab0f1898aced3" target="_blank">对你研究的启发</a></h3>
-                <div class="paper-fields"><div class="field"><span class="field-key">PDF 状态</span><span class="field-val">⚠️ 仅摘要</span></div><div class="field"><span class="field-key">原文链接</span><span class="field-val">https://www.semanticscholar.org/paper/24d77364ea47bdcd14ee6e921d8ab0f1898aced3</span></div><div class="field"><span class="field-key">标签</span><span class="field-val">electrochemistry, MLFF</span></div></div>
-                
-            </div>
-            <div class="paper-card ">
+            <div class="paper-card high">
                 <div class="paper-header">
                     <span class="paper-num">#6</span>
-                    <span class="relevance-badge ">?</span>
+                    <span class="relevance-badge high">HIGH</span>
                 </div>
-                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/24fff2fc4d69ccb76b67d6fd0a5b2f2d4725dabd" target="_blank">Force field dependence of ion transport on mica surfaces ⭐⭐</a></h3>
-                <div class="paper-fields"><div class="field"><span class="field-key">来源</span><span class="field-val">None</span></div><div class="field"><span class="field-key">期刊/出处</span><span class="field-val">arXiv preprint</span></div><div class="field"><span class="field-key">发布日期</span><span class="field-val">2026-04-01</span></div><div class="field"><span class="field-key">作者</span><span class="field-val">Benqiang Wang</span></div><div class="field"><span class="field-key">简要摘要</span><span class="field-val">- **核心问题**：探究外加电场及电解质溶液环境下，云母（001）表面原位K⁺离子的迁移与交换微观机制，尤其关注力场选择对模拟结果（如离子分布与通量）的影响。</span></div><div class="field"><span class="field-key">PDF 状态</span><span class="field-val">⚠️ 仅摘要</span></div><div class="field"><span class="field-key">原文链接</span><span class="field-val">https://www.semanticscholar.org/paper/24fff2fc4d69ccb76b67d6fd0a5b2f2d4725dabd</span></div><div class="field"><span class="field-key">标签</span><span class="field-val">electrochemistry, surface</span></div></div>
+                <h3 class="paper-title"><a href="https://scholar.google.com/scholar?q=Force field dependence of ion transport on mica surfaces ⭐⭐" target="_blank">Force field dependence of ion transport on mica surfaces ⭐⭐</a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">简要摘要:** - **核心问题</span><span class="field-val">探究外加电场及电解质溶液环境下，云母（001）表面原位K⁺离子的迁移与交换微观机制，尤其关注力场选择对模拟结果（如离子分布与通量）的影响。</span></div><div class="field"><span class="field-key">方法要点</span><span class="field-val">采用两种经典力场（非MLMD/第一性原理）分别建模溶液相与表面吸附态K⁺，在显式水环境中施加外电场，通过分子动力学模拟分析K⁺的空间分布与定向输运行为。</span></div><div class="field"><span class="field-key">关键结果</span><span class="field-val">不同力场显著影响K⁺在界面处的静态分布（如层间/表面富集程度），但K⁺在外电场驱动下的净通量（flux）具有力场鲁棒性——即输运效率对力场参数不敏感。</span></div><div class="field"><span class="field-key">与你研究的相关度</span><span class="field-val"><strong>高</strong>；该工作直接关联电催化界面中阳离子（如K⁺、Na⁺）在二维矿物/氧化物电极上的动态稳定化、局域浓度调控及场致输运行为，其关于力场适用性与通量稳健性的结论对构建可靠电极/电解质界面模型具有重要参考价值。</span></div></div>
                 
             </div>
-            <div class="paper-card ">
+            <div class="paper-card medium">
                 <div class="paper-header">
                     <span class="paper-num">#7</span>
-                    <span class="relevance-badge ">?</span>
+                    <span class="relevance-badge medium">MEDIUM</span>
                 </div>
-                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/269521cbe23623ce54d3f3a2ed02d9d53bbc6197" target="_blank">Digital discovery of large-scale optoelectronic materials via MPNICE machine-learning force fields. ⭐⭐</a></h3>
-                <div class="paper-fields"><div class="field"><span class="field-key">来源</span><span class="field-val">None</span></div><div class="field"><span class="field-key">期刊/出处</span><span class="field-val">arXiv preprint</span></div><div class="field"><span class="field-key">发布日期</span><span class="field-val">2026-06-03</span></div><div class="field"><span class="field-key">作者</span><span class="field-val">Hadi Abroshan; H. Kwak; D. Giesen; John L. Weber; M. Halls</span></div><div class="field"><span class="field-key">简要摘要</span><span class="field-val">- **核心问题**：如何在保持量子力学精度的前提下，高效建模OLED有机材料中普遍存在的构象柔性、动态无序及化学多样性成键环境，以支撑高通量材料筛选与激发态性质预测。</span></div><div class="field"><span class="field-key">PDF 状态</span><span class="field-val">⚠️ 仅摘要</span></div><div class="field"><span class="field-key">原文链接</span><span class="field-val">https://www.semanticscholar.org/paper/269521cbe23623ce54d3f3a2ed02d9d53bbc6197</span></div><div class="field"><span class="field-key">标签</span><span class="field-val">dft, generative</span></div></div>
+                <h3 class="paper-title"><a href="https://scholar.google.com/scholar?q=Digital discovery of large" target="_blank">Digital discovery of large-scale optoelectronic materials via MPNICE machine-learning force fields. ⭐⭐</a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">简要摘要:** - **核心问题</span><span class="field-val">如何在保持量子力学精度的前提下，高效建模OLED有机材料中普遍存在的构象柔性、动态无序及化学多样性成键环境，以支撑高通量材料筛选与激发态性质预测。</span></div><div class="field"><span class="field-key">方法要点</span><span class="field-val">采用基于消息传递网络与迭代电荷平衡（MPNICE）的机器学习力场（MLFF），融合长程静电作用，以高精度电子结构数据训练；用于快速几何优化、分子动力学（MD）模拟，并与DFT后处理结合构建“MLFF预优化 + DFT精算”工作流。</span></div><div class="field"><span class="field-key">关键结果</span><span class="field-val">MPNICE力场在几何结构、相对构象能、热力学分布上与DFT高度一致（误差&lt;0.02 Å, &lt;0.3 kcal/mol），计算成本降低3–4个数量级；其MD轨迹驱动的系综激发态计算可准确再现实验三重态能量分布与溶液相吸收光谱的峰位与展宽。</span></div><div class="field"><span class="field-key">与你研究的相关度</span><span class="field-val"><strong>中</strong>——虽聚焦OLED而非电催化体系，但其“MLFF加速采样 + DFT精准表征”的范式、对动态结构无序与电荷响应的显式建模（如迭代电荷平衡）、以及系综平均激发态分析策略，对研究电催化界面动态吸附构型、溶剂化/电位依赖的活性位点演化及非绝热电子转移过程具有重要方法学借鉴价值。</span></div></div>
                 
             </div>
-            <div class="paper-card ">
+            <div class="paper-card low">
                 <div class="paper-header">
                     <span class="paper-num">#8</span>
-                    <span class="relevance-badge ">?</span>
+                    <span class="relevance-badge low">LOW</span>
                 </div>
-                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/26ad9a8596964fc62c5e819cd440867df78162eb" target="_blank">Machine Learning-Aided Drug Repurposing for Screening COX-2 Inhibitors from Traditional Chinese Medicines ⭐⭐</a></h3>
-                <div class="paper-fields"><div class="field"><span class="field-key">来源</span><span class="field-val">None</span></div><div class="field"><span class="field-key">期刊/出处</span><span class="field-val">arXiv preprint</span></div><div class="field"><span class="field-key">发布日期</span><span class="field-val">2026-05-31</span></div><div class="field"><span class="field-key">作者</span><span class="field-val">Zhi-Xian Zhu; Bin Liu; Yi-wen Xiao; Jun Chang</span></div><div class="field"><span class="field-key">简要摘要</span><span class="field-val">- **核心问题**：针对结直肠癌治疗靶点COX-2，如何在小样本、结构多样的中药来源化合物库中高效筛选高活性抑制剂。</span></div><div class="field"><span class="field-key">PDF 状态</span><span class="field-val">⚠️ 仅摘要</span></div><div class="field"><span class="field-key">原文链接</span><span class="field-val">https://www.semanticscholar.org/paper/26ad9a8596964fc62c5e819cd440867df78162eb</span></div><div class="field"><span class="field-key">标签</span><span class="field-val">electrochemistry</span></div></div>
+                <h3 class="paper-title"><a href="https://scholar.google.com/scholar?q=Machine Learning" target="_blank">Machine Learning-Aided Drug Repurposing for Screening COX-2 Inhibitors from Traditional Chinese Medicines ⭐⭐</a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">简要摘要:** - **核心问题</span><span class="field-val">针对结直肠癌治疗靶点COX-2，如何在小样本、结构多样的中药来源化合物库中高效筛选高活性抑制剂。</span></div><div class="field"><span class="field-key">方法要点</span><span class="field-val">系统比较随机森林（RFC）、深度学习（DL）和多种图神经网络（GAT/GCN/MPNN）在COX-2抑制剂分类任务中的性能；基于自建数据集与TCM化合物库开展建模、虚拟筛选、关键药效团分析及分子对接，并通过实验验证候选分子。</span></div><div class="field"><span class="field-key">关键结果</span><span class="field-val">RFC在小数据场景下表现最优，成功识别出天然倍半萜类化合物脱氢木香内酯（dehydrocostus lactone）为强效COX-2抑制剂，实验IC₅₀达亚微摩尔级。</span></div><div class="field"><span class="field-key">与你研究的相关度</span><span class="field-val"><strong>低</strong>——该工作聚焦于生物医学靶点（COX-2）的药物发现，采用分类模型进行活性预测，与电催化反应机理建模、催化剂表面吸附能计算、反应路径DFT模拟等计算电化学核心任务无直接交集；虽涉及机器学习模型比较，但特征工程（如分子指纹）、任务类型（分类 vs. 回归/势能面构建）及物理约束（无电极环境、无溶剂化/电位校正）均显著不同。</span></div></div>
                 
             </div>
             <div class="paper-card ">
@@ -250,21 +214,21 @@ header p {{ font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }}
                     <span class="paper-num">#9</span>
                     <span class="relevance-badge ">?</span>
                 </div>
-                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/2740cc302eb96a168e1067fe25992ac41fccc285" target="_blank">Enhancing Physical Realism in AI-Driven Marine Debris Tracking: The Impact of Windage on LPTM Simulations ⭐⭐</a></h3>
-                <div class="paper-fields"><div class="field"><span class="field-key">来源</span><span class="field-val">None</span></div><div class="field"><span class="field-key">期刊/出处</span><span class="field-val">arXiv preprint</span></div><div class="field"><span class="field-key">发布日期</span><span class="field-val">2026-02-26</span></div><div class="field"><span class="field-key">作者</span><span class="field-val">Moch Septian Ezra M; Alya Kamilah; K. Sungkono; Dalila Anwar Dini Rasyidah; Laurensia Simanihuruk et al.</span></div><div class="field"><span class="field-key">简要摘要</span><span class="field-val">该论文的核心问题在于：在数据驱动的海洋漂浮物轨迹预测中，如何合理耦合显式物理机制（如风拖曳力）与深度学习模型，避免物理建模与数据学习之间的冲突。</span></div><div class="field"><span class="field-key">PDF 状态</span><span class="field-val">⚠️ 仅摘要</span></div><div class="field"><span class="field-key">原文链接</span><span class="field-val">https://www.semanticscholar.org/paper/2740cc302eb96a168e1067fe25992ac41fccc285</span></div><div class="field"><span class="field-key">标签</span><span class="field-val">surface</span></div></div>
+                <h3 class="paper-title"><a href="https://scholar.google.com/scholar?q=Enhancing Physical Realism in AI" target="_blank">Enhancing Physical Realism in AI-Driven Marine Debris Tracking: The Impact of Windage on LPTM Simulations ⭐⭐</a></h3>
+                <div class="paper-fields"></div>
                 
             </div>
-            <div class="paper-card ">
+            <div class="paper-card high">
                 <div class="paper-header">
                     <span class="paper-num">#10</span>
-                    <span class="relevance-badge ">?</span>
+                    <span class="relevance-badge high">HIGH</span>
                 </div>
-                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/2786a68936e200432520e9058c029713bfa13697" target="_blank">Refinement and performance benchmark for range-separated water force field. ⭐⭐</a></h3>
-                <div class="paper-fields"><div class="field"><span class="field-key">来源</span><span class="field-val">None</span></div><div class="field"><span class="field-key">期刊/出处</span><span class="field-val">arXiv preprint</span></div><div class="field"><span class="field-key">发布日期</span><span class="field-val">2026-01-26</span></div><div class="field"><span class="field-key">作者</span><span class="field-val">Qian Gao; Junmin Chen; Kuang Yu</span></div><div class="field"><span class="field-key">简要摘要</span><span class="field-val">- **核心问题**：基于高精度CCSD(T)/CBS量子力学数据训练机器学习力场（MLFF）时，因数据量少、缺乏精确力标签及小体系训练集与体相性质脱节，导致模型在体相水模拟中出现严重训练不稳定和物理性质预测偏差。</span></div><div class="field"><span class="field-key">PDF 状态</span><span class="field-val">⚠️ 仅摘要</span></div><div class="field"><span class="field-key">原文链接</span><span class="field-val">https://www.semanticscholar.org/paper/2786a68936e200432520e9058c029713bfa13697</span></div><div class="field"><span class="field-key">标签</span><span class="field-val">electrochemistry, dft, active-learning, generative</span></div></div>
+                <h3 class="paper-title"><a href="https://scholar.google.com/scholar?q=Refinement and performance benchmark for range" target="_blank">Refinement and performance benchmark for range-separated water force field. ⭐⭐</a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">简要摘要:** - **核心问题</span><span class="field-val">基于高精度CCSD(T)/CBS量子力学数据训练机器学习力场（MLFF）时，因数据量少、缺乏精确力标签及小体系训练集与体相性质脱节，导致模型在体相水模拟中出现严重训练不稳定和物理性质预测偏差。</span></div><div class="field"><span class="field-key">方法要点</span><span class="field-val">提出一套新型训练工作流，包含三方面创新：(1) 覆盖多温压条件的主动学习采样；(2) 利用机器学习密度泛函（ML-DF）生成高质量中间力标签；(3) 基于集成模型的知识蒸馏策略，提升泛化性与稳定性。</span></div><div class="field"><span class="field-key">关键结果</span><span class="field-val">所得水力场在团簇能量（&lt;1 kcal/mol）和多种体相实验性质（密度、RDF、介电常数、扩散系数、红外光谱）上均达亚化学精度（sub-chemical accuracy），显著优于传统拟合方案，且训练过程高度稳定。</span></div><div class="field"><span class="field-key">与你研究的相关度</span><span class="field-val"><strong>高</strong>——该工作直面高精度电催化界面水环境建模中的核心瓶颈（即CCSD(T)-级数据稀缺与体相/界面性质兼顾难题），其主动学习+ML-DF力标签+知识蒸馏的范式可直接迁移至电极/水界面反应路径的MLFF构建，对发展可靠的第一性原理驱动电催化模拟具有重要借鉴价值。</span></div></div>
                 
             </div></div>
-  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><p>作为一位专注**计算化学与电催化机理研究**的研究者，我以方法论严谨性、物理可解释性、以及对真实电极/电解质界面建模的适用性为标尺，对今日10篇论文进行专业研判。以下分析严格聚焦本领域核心关切（如DFT精度-尺度权衡、界面动力学、缺陷/吸附构效关系、MLFF泛化能力、多场耦合建模等），剔除无关交叉领域干扰。</p><br><p>---</p><br><p>### 1. 今日亮点（研究者视角）</p><br><li>**最值得精读的一篇：[5] *Trillion-atom molecular dynamics simulations with ab initio accuracy***</li><p>**为什么？** 这是首次在**万亿原子尺度实现接近DFT精度的MD模拟**（非经验力场，亦非纯MLFF，而是基于线性标度电子结构理论+自适应局域基组的混合方案）。对电催化而言，它意味着：① 可直接模拟含数千活性位点的真实纳米催化剂（如多孔碳载Pt团簇）在电化学电位下的动态重构；② 首次可能捕捉到传统百原子DFT无法覆盖的**长程电荷重分布效应**（如双电层极化对表面吸附能的调制）。其算法框架（如局域哈密顿量拼接策略）比单纯“更快的MLFF”更具范式突破意义。</p><br><li>**可能与你研究论点冲突的一篇：[6] *Force field dependence of ion transport on mica surfaces***</li><p>**冲突点在于：** 该文揭示——即使在简单模型体系（云母/K⁺/水），不同经典力场对离子界面输运的预测可相差**&gt;2个数量级**（如K⁺交换速率），且无一力场能同时复现实验测得的表面电势与离子分布。这直接挑战我们团队长期采用的“DFT优化+RESP电荷+CHARMM力场”多尺度流程在**电催化界面离子传输模拟中的可靠性**。尤其当用于OER中OH⁻/O₂迁移路径分析时，该文暗示：当前主流力场可能系统性低估界面离子输运能垒，导致对pH依赖性或传质限制的误判。</p><br><li>**值得追踪的作者或团队：**</li><li>**Zhang et al. ([5])**：其提出的“嵌入式线性标度DFT-MD”框架，若能开源代码并适配GPU集群，将重塑电催化模拟范式；需关注其后续对含电极电势（Stern层建模）和溶剂化电子的处理。</li><li>**MPNICE团队 ([7])**：其MLFF中显式耦合**迭代电荷平衡（ICE）与消息传递网络**，解决了有机电极材料中电荷离域建模痛点——这对设计高容量有机锂/钠电池正极（如醌类、亚胺类）的氧化还原电位预测极具启发。</li><li>**[10] 水力场精修团队**：其“ML-DF生成力标签 + 多温压主动采样”工作流，是目前**解决小数据集MLFF过拟合问题最系统的方案**，可直接迁移至CO₂RR中*CO/*OCHO中间体在Cu表面的力场开发。</li><br><li>**其他值得注意的趋势：**</li><p>→ **MLFF正从“精度竞赛”转向“物理一致性验证”**：[3][7][10]均强调对热导率、介电响应、电荷转移等**宏观可观测量**的反向约束，而非仅优化能量/力MAE。</p><p>→ **“显式物理机制嵌入AI模型”成新共识**：[9]用风拖曳项修正LSTM、[6]强调力场物理基础、[5]坚持第一性原理内核——预示纯黑箱ML在电催化中将被逐步淘汰。</p><p>→ **教育类/生物类论文（[1][4][8]）虽无关，但其GNN架构（[8]）、主动学习策略（[4]教学场景）已反哺材料发现**，提示我们应更开放地借鉴STEM交叉方法论。</p><br><p>---</p><br><p>###</p></div></div>
-  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><p>2. Key Gap（计算化学/电催化领域亟待突破）</p><br><li>**Gap 1：电化学界面的“多尺度动态失配”尚未解决**</li><p>当前研究割裂严重：DFT处理&lt;100原子静态吸附构型；经典MD处理&gt;10⁶原子但力场不可靠；MLFF在10³–10⁴原子尺度精度尚可，却**缺乏对电极电势、双电层结构、电荷转移过程的原生描述**。[5]虽突破尺度，但未耦合电化学势；[6]暴露力场缺陷，却未提供电化学适配方案。**亟需发展“电势驱动的MLFF”或“DFT-in-DFT嵌套协议”**，使电子结构计算能响应界面电荷密度变化。</p><br><li>**Gap 2：缺陷/杂质/残基的“非理想锚定效应”仍依赖经验解读**</li><p>[2]指出石墨烯缺陷与光刻胶残留共同影响Au团簇锚定，但其DFT计算未包含溶剂化与电位效应；而实验中这些“杂质”常决定催化剂稳定性。现有MLFF（[7][1</p></div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><p>作为一位专注<strong>计算化学与电催化机理研究</strong>的研究者，我以方法论严谨性、物理可解释性、以及对真实电极/电解质界面建模的适用性为标尺，对今日10篇论文进行专业研判。以下分析严格聚焦本领域核心关切（如DFT精度-尺度权衡、界面动力学、缺陷/吸附构效关系、MLFF泛化能力、多场耦合建模等），剔除无关交叉领域干扰。</p><br><p>---</p><br><p>### 1. 今日亮点（研究者视角）</p><br><li><strong>最值得精读的一篇：[5] *Trillion-atom molecular dynamics simulations with ab initio accuracy</strong>*</li><p><strong>为什么？</strong> 这是首次在<strong>万亿原子尺度实现接近DFT精度的MD模拟</strong>（非经验力场，亦非纯MLFF，而是基于线性标度电子结构理论+自适应局域基组的混合方案）。对电催化而言，它意味着：① 可直接模拟含数千活性位点的真实纳米催化剂（如多孔碳载Pt团簇）在电化学电位下的动态重构；② 首次可能捕捉到传统百原子DFT无法覆盖的<strong>长程电荷重分布效应</strong>（如双电层极化对表面吸附能的调制）。其算法框架（如局域哈密顿量拼接策略）比单纯“更快的MLFF”更具范式突破意义。</p><br><li><strong>可能与你研究论点冲突的一篇：[6] *Force field dependence of ion transport on mica surfaces</strong>*</li><p><strong>冲突点在于：</strong> 该文揭示——即使在简单模型体系（云母/K⁺/水），不同经典力场对离子界面输运的预测可相差<strong>&gt;2个数量级</strong>（如K⁺交换速率），且无一力场能同时复现实验测得的表面电势与离子分布。这直接挑战我们团队长期采用的“DFT优化+RESP电荷+CHARMM力场”多尺度流程在<strong>电催化界面离子传输模拟中的可靠性</strong>。尤其当用于OER中OH⁻/O₂迁移路径分析时，该文暗示：当前主流力场可能系统性低估界面离子输运能垒，导致对pH依赖性或传质限制的误判。</p><br><li><strong>值得追踪的作者或团队：</strong></li><li><strong>Zhang et al. ([5])</strong>：其提出的“嵌入式线性标度DFT-MD”框架，若能开源代码并适配GPU集群，将重塑电催化模拟范式；需关注其后续对含电极电势（Stern层建模）和溶剂化电子的处理。</li><li><strong>MPNICE团队 ([7])</strong>：其MLFF中显式耦合<strong>迭代电荷平衡（ICE）与消息传递网络</strong>，解决了有机电极材料中电荷离域建模痛点——这对设计高容量有机锂/钠电池正极（如醌类、亚胺类）的氧化还原电位预测极具启发。</li><li><strong>[10] 水力场精修团队</strong>：其“ML-DF生成力标签 + 多温压主动采样”工作流，是目前<strong>解决小数据集MLFF过拟合问题最系统的方案</strong>，可直接迁移至CO₂RR中*CO/*OCHO中间体在Cu表面的力场开发。</li><br><li><strong>其他值得注意的趋势：</strong></li><p>→ <strong>MLFF正从“精度竞赛”转向“物理一致性验证”</strong>：[3][7][10]均强调对热导率、介电响应、电荷转移等<strong>宏观可观测量</strong>的反向约束，而非仅优化能量/力MAE。</p><p>→ <strong>“显式物理机制嵌入AI模型”成新共识</strong>：[9]用风拖曳项修正LSTM、[6]强调力场物理基础、[5]坚持第一性原理内核——预示纯黑箱ML在电催化中将被逐步淘汰。</p><p>→ <strong>教育类/生物类论文（[1][4][8]）虽无关，但其GNN架构（[8]）、主动学习策略（[4]教学场景）已反哺材料发现</strong>，提示我们应更开放地借鉴STEM交叉方法论。</p><br><p>---</p><br><p>###</p></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><p>2. Key Gap（计算化学/电催化领域亟待突破）</p><br><li><strong>Gap 1：电化学界面的“多尺度动态失配”尚未解决</strong></li><p>当前研究割裂严重：DFT处理&lt;100原子静态吸附构型；经典MD处理&gt;10⁶原子但力场不可靠；MLFF在10³–10⁴原子尺度精度尚可，却<strong>缺乏对电极电势、双电层结构、电荷转移过程的原生描述</strong>。[5]虽突破尺度，但未耦合电化学势；[6]暴露力场缺陷，却未提供电化学适配方案。<strong>亟需发展“电势驱动的MLFF”或“DFT-in-DFT嵌套协议”</strong>，使电子结构计算能响应界面电荷密度变化。</p><br><li><strong>Gap 2：缺陷/杂质/残基的“非理想锚定效应”仍依赖经验解读</strong></li><p>[2]指出石墨烯缺陷与光刻胶残留共同影响Au团簇锚定，但其DFT计算未包含溶剂化与电位效应；而实验中这些“杂质”常决定催化剂稳定性。现有MLFF（[7][1</p></div></div>
 </div>
 </body>
 </html>

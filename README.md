@@ -100,7 +100,10 @@
 ├── seen_papers.json                 # 已读论文缓存（自动维护）
 ├── reports/                         # 每日 markdown 报告
 ├── pdfs/                            # 已下载的 PDF
-└── index.html + daily-*.html        # 生成的 HTML 站点（GitHub Pages）
+├── index.html                       # 报告索引页
+├── YYYY-MM-DD.html                  # 每日独立报告页（GitHub Pages）
+├── keywords.html                    # 关键词索引页
+└── keywords.json                    # 关键词配置
 ```
 
 ## GitHub Pages
