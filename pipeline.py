@@ -358,7 +358,7 @@ def dedup_candidates(papers, seen):
 def normalize_title(title):
     return re.sub(r"[^a-z0-9]", "", title.lower())
 
-def merge_and_dedup(arxiv_papers, s2_papers):
+def merge_and_dedup(arxiv_papers, s2_papers, topics=None):
     all_papers = arxiv_papers + s2_papers
     seen_titles = {}
     merged = []
@@ -367,7 +367,6 @@ def merge_and_dedup(arxiv_papers, s2_papers):
         if nt in seen_titles:
             idx = seen_titles[nt]
             existing = merged[idx]
-            # prefer S2 entry (richer metadata)
             if p["source"] == "s2" and existing["source"] == "arxiv":
                 merged[idx] = p
         else:
@@ -375,13 +374,21 @@ def merge_and_dedup(arxiv_papers, s2_papers):
             merged.append(p)
 
     print(f"  → 合并去重后共 {len(merged)} 篇论文")
-    # sort: arXiv papers first (newest), then S2 by year
+
+    for p in merged:
+        compute_relevance(p, topics or [])
+
     merged.sort(key=lambda p: (
         0 if p["source"] == "arxiv" else 1,
         p.get("published", p.get("year", "")),
     ), reverse=True)
 
-    return merged[:10]
+    before = len(merged)
+    merged.sort(key=lambda p: p.get("_relevance", 0), reverse=True)
+    top = merged[:10]
+    print(f"  → 按相关度排序取 TOP {len(top)} 篇（从 {before} 篇候选）")
+
+    return top
 
 ###############################################################################
 # 5. Download PDF & Extract Text
@@ -791,8 +798,7 @@ def main():
 
     # 4. Merge
     print("\n◆ 4. 合并去重...")
-    top10 = merge_and_dedup(arxiv_new, s2_new)
-    print(f"  → TOP {len(top10)} 篇")
+    top10 = merge_and_dedup(arxiv_new, s2_new, topics=kw["topics"])
 
     # 5. PDF Download + Summarization
     print("\n◆ 5. 精读/简读论文...")
