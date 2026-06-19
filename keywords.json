@@ -14,6 +14,8 @@
   "semantic_scholar": {
     "enabled": true,
     "query_a_limit": 30,
-    "query_b_limit": 20
+    "query_b_limit": 20,
+    "fields_of_study": ["Chemistry", "Physics", "Materials Science", "Computer Science"],
+    "year_range": "2023-"
   }
 }

@@ -114,6 +114,8 @@ def load_keywords():
         "s2_query": build_query(topics) if kw.get("semantic_scholar", {}).get("enabled", True) else None,
         "s2_limit_a": kw.get("semantic_scholar", {}).get("query_a_limit", 30),
         "s2_limit_b": kw.get("semantic_scholar", {}).get("query_b_limit", 20),
+        "s2_fields_of_study": kw.get("semantic_scholar", {}).get("fields_of_study"),
+        "s2_year_range": kw.get("semantic_scholar", {}).get("year_range"),
     }
 
 ###############################################################################
@@ -180,7 +182,7 @@ def fallback_search_arxiv(query, max_results=10):
 ###############################################################################
 S2_BULK_API = "https://api.semanticscholar.org/graph/v1/paper/search/bulk"
 
-def search_s2_individual(term, limit=30, sort="relevance", fields=None):
+def search_s2_individual(term, limit=30, sort="relevance", fields=None, fields_of_study=None, year_range=None):
     """Search S2 for a single term (short URL). Returns list of dicts."""
     if not S2_API_KEY:
         return [], False
@@ -196,6 +198,10 @@ def search_s2_individual(term, limit=30, sort="relevance", fields=None):
         "fields": ",".join(fields),
         "sort": sort,
     }
+    if fields_of_study:
+        params["fieldsOfStudy"] = ",".join(fields_of_study)
+    if year_range:
+        params["year"] = year_range
     url = f"{S2_BULK_API}?{urllib.parse.urlencode(params)}"
     print(f"  S2 URL: {url[:120]}...")
     for attempt in range(3):
@@ -725,7 +731,9 @@ def main():
         seen_ids = set()
         for topic in kw["topics"]:
             print(f"  ▶ 搜索主题: {topic[:60]}")
-            topic_papers, ok = search_s2_individual(topic, kw["s2_limit_a"])
+            topic_papers, ok = search_s2_individual(topic, kw["s2_limit_a"],
+                fields_of_study=kw.get("s2_fields_of_study"),
+                year_range=kw.get("s2_year_range"))
             if ok:
                 for p in topic_papers:
                     pid = p.get("s2_id")
@@ -735,6 +743,8 @@ def main():
             time.sleep(1.5)
         # Query B: open access filter
         s2_papers_b, ok_b = search_s2_individual(kw["topics"][0], kw["s2_limit_b"], sort="publicationDate",
+            fields_of_study=kw.get("s2_fields_of_study"),
+            year_range=kw.get("s2_year_range"),
             fields=["title","abstract","authors","year","url","paperId","citationCount","publicationDate","openAccessPdf"])
         if ok_b:
             for p in s2_papers_b:
