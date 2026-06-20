@@ -263,7 +263,12 @@ def search_s2_individual(term, limit=30, sort="relevance", fields=None, fields_o
 ###############################################################################
 def load_seen():
     if SEEN_FILE.exists():
-        return json.loads(SEEN_FILE.read_text(encoding="utf-8"))
+        try:
+            return json.loads(SEEN_FILE.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as e:
+            print(f"  ⚠️  seen_papers.json 解析失败，将重置为空: {e}")
+            SEEN_FILE.write_text('{\n  "papers": {}\n}', encoding="utf-8")
+            return {"papers": {}}
     return {}
 
 def save_seen(seen):
