@@ -132,7 +132,7 @@ def parse_summary(filepath, tags_lookup=None):
             if not header_match:
                 continue
             num = header_match.group(1)
-            title_str = header_match.group(2).strip()
+            title_str = header_match.group(2).strip().rstrip("⭐")
             body = block[header_match.end():]
             fields = parse_fields(body)
 
