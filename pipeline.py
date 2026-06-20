@@ -30,6 +30,15 @@ SEEN_FILE = REPO_DIR / "seen_papers.json"
 REPORTS_DIR = REPO_DIR / "reports"
 SITE_SCRIPT = REPO_DIR / "generate_site.py"
 
+# ── Load .env (if exists) ──
+_env_file = REPO_DIR / ".env"
+if _env_file.exists():
+    for _line in _env_file.read_text().splitlines():
+        _line = _line.strip()
+        if _line and not _line.startswith("#") and "=" in _line:
+            _k, _v = _line.split("=", 1)
+            os.environ.setdefault(_k.strip(), _v.strip())
+
 # ── Env ──
 S2_API_KEY = os.environ.get("S2_API_KEY", "")
 LLM_API_KEY = os.environ.get("LLM_API_KEY", "")
