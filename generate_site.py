@@ -261,6 +261,7 @@ header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
 .relevance-badge.high { background: var(--high-bg); color: var(--high); }
 .relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
 .relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
 .paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
 .paper-title a { color: inherit; text-decoration: none; }
 .paper-title a:hover { color: var(--accent); text-decoration: underline; }
@@ -367,6 +368,7 @@ def render_papers_cards(papers):
             <div class="paper-card {rel_class}">
                 <div class="paper-header">
                     <span class="relevance-badge {rel_class}">{p['relevance'].upper() if p['relevance'] else '?'}</span>
+                    <span class="mode-badge">{p['fields'].get('阅读模式', '📋 摘要')}</span>
                 </div>
                 <h3 class="paper-title"><a href="{paper_url}" target="_blank">{escape(p['title'])}</a></h3>
                 <div class="paper-fields">{fields_html}</div>

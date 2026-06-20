@@ -69,6 +69,7 @@ header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
 .relevance-badge.high { background: var(--high-bg); color: var(--high); }
 .relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
 .relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
 .paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
 .paper-title a { color: inherit; text-decoration: none; }
 .paper-title a:hover { color: var(--accent); text-decoration: underline; }
@@ -144,80 +145,90 @@ header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
             <div class="paper-card high">
                 <div class="paper-header">
                     <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
                 </div>
-                <h3 class="paper-title"><a href="https://arxiv.org/abs/2606.20105" target="_blank">Can DFT-trained neural network potentials reproduce structure, solvation, and water-exchange properties in aqueous magnesium solutions? ⭐⭐</a></h3>
+                <h3 class="paper-title"><a href="https://arxiv.org/abs/2606.20105" target="_blank">Can DFT-trained neural network potentials reproduce structure, solvation, and water-exchange properties in aqueous magnesium solutions? </a></h3>
                 <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Sebastian Falkner; Pablo Montero de Hijes; Christoph Dellago; Nadine Schwierz</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">DFT训练的神经网络势（NNP）能否在水合镁离子溶液中同时准确再现结构、溶剂化热力学和水交换动力学等多尺度实验性质？</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">基于MACE（Multipole-Aware Cartesian Equivariant）架构构建两种DFT训练的NNP（revPBE-D3/zd与revPBE0-D3/zd），结合过渡态路径采样（TPS）和过渡界面采样（TIS）解析水交换机制与速率。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次对Mg²⁺水溶液NNP开展涵盖结构、热力学、动力学三维度的系统性实验基准测试；② 揭示MACE-NNP可高保真捕捉水交换微观机制（解离路径）及动力学尺度，超越经典力场；③ 发现局部NNP架构在长程静电/电荷转移主导的溶剂化自由能预测中存在固有偏差，明确指出需显式引入长程静电修正。</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">体系为水合MgCl₂溶液；基线为Mamatkulov-Schwierz经典力场+TIP3P水模型；NNP精确再现第一水合壳层八面体结构（Mg–O距离≈2.08 Å）、扩散系数（~0.5×10⁻⁹ m²/s）及解离式水交换机制；TIS计算的水交换速率（k ≈ 10⁶ s⁻¹）与实验值（~3×10⁶ s⁻¹）相差一个数量级；但溶剂化自由能显著低估（NNP: −1600 kJ/mol vs 实验: −1920 kJ/mol）。</span></div></div>
                 
             </div>
             <div class="paper-card high">
                 <div class="paper-header">
                     <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
                 </div>
-                <h3 class="paper-title"><a href="https://arxiv.org/abs/2606.19152" target="_blank">AdsMind: A Physics-Grounded Multi-Agent System for Self-Correcting Discovery of Adsorption Configurations on Heterogeneous Catalyst Surfaces ⭐⭐</a></h3>
+                <h3 class="paper-title"><a href="https://arxiv.org/abs/2606.19152" target="_blank">AdsMind: A Physics-Grounded Multi-Agent System for Self-Correcting Discovery of Adsorption Configurations on Heterogeneous Catalyst Surfaces </a></h3>
                 <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Zongmin Zhang; Yuyang Lou; Bowen Zhang; Junwu Chen; Ryo Kuroki et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在异质催化剂表面海量构型空间中，高效、可靠地自主发现最低能量的吸附构型，克服现有方法在搜索策略上缺乏物理反馈导致的误差累积与失败。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">AdsMind是一种物理机制嵌入的闭环多智能体框架，由LLM规划器与MLFF弛豫器构成双循环反馈回路——LLM生成候选构型→MLFF快速弛豫并返回能量/结构/收敛状态→LLM基于物理反馈诊断错误（如键长异常、位点失配、能量不连续）并重构新假设，实现自主纠错。</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首个将MLFF弛豫结果（能量、力、几何变化、收敛性）显式编码为LLM可解析的物理反馈信号，构建闭环“预测→弛豫→诊断→重构”工作流；② 提出多智能体角色分工（Planner/Refiner/Validator），使LLM超越文本生成，具备基于第一性原理约束的结构合理性推理能力；③ 无需微调LLM或训练专用分类器，仅通过提示工程与结构化反馈协议即实现跨表面/吸附质泛化，显著优于固定策略的图神经网络或单次生成模型。</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">在AA20（20个典型金属/氧化物表面+小分子吸附体系）和OCD-GMAE62（62个含共吸附/柔性分子的挑战性体系）基准上，AdsMind在4种LLM后端下均达100%与98.8%成功率达最低能量构型；相比启发式枚举基线，MLFF弛豫次数仅4.11–4.67次/例（降低约14倍）；DFT（VASP/PBE）验证显示，其预测吸附能符号全部正确，而开环Adsorb-Agent在6个AA20体系中出现3例定性符号错误。</span></div></div>
                 
             </div>
             <div class="paper-card high">
                 <div class="paper-header">
                     <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
                 </div>
-                <h3 class="paper-title"><a href="https://arxiv.org/abs/2606.18163" target="_blank">Dynamical properties of ab initio water from machine-learning potentials ⭐⭐</a></h3>
+                <h3 class="paper-title"><a href="https://arxiv.org/abs/2606.18163" target="_blank">Dynamical properties of ab initio water from machine-learning potentials </a></h3>
                 <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">P. Montero de Hijes; L. Neubeck; G. Kresse; C. Dellago</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">本文试图解决如何准确描述液态水动力学性质（扩散系数、取向弛豫时间、剪切黏度）的科学问题，特别是评估不同密度泛函在机器学习势下的动力学预测能力是否与其热力学性能一致。</span></div><div class="field field-collapsible"><span class="field-key">主要方法</span><span class="field-val">采用多参考MACE（Multi-Atomic Cluster Expansion）机器学习势训练多个DFT泛函（SCAN、RPBE-D3/zd等），结合Green–Kubo关系从时间关联函数提取长时动力学系数；进一步用更高效的Behler–Parrinello神经网络势对最优泛函（RPBE-D3/zd）开展宽温压范围验证。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">首次系统性地将多种先进DFT泛函的动力学性质（而非仅热力学量）置于统一ML势框架下进行横向比较；提出“相图位移解释”（即泛函间动力学差异可部分归因于其各自预测的熔点偏移），为泛函选择提供新物理视角；证实RPBE-D3/zd在动力学上优于更常用但热力学表现相近的PBE0类泛函，挑战了“热力学准=动力学准”的隐含假设。</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">主要体系为常压液态水（300 K）及拓展至宽温压区（250–350 K, 1–1000 MPa）；基线为实验值及各DFT泛函对应的ML势；RPBE-D3/zd预测的扩散系数（2.3×10⁻⁹ m²/s）、第二秩取向弛豫时间（τ₂ ≈ 2.1 ps）和剪切黏度（≈0.8 mPa·s）在常压下与实验最接近，误差分别&lt;10%、~15%、~20%；其扩散系数的反常压力依赖性（随压力增大先降后升）也被成功复现。</span></div></div>
                 
             </div>
             <div class="paper-card high">
                 <div class="paper-header">
                     <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
                 </div>
-                <h3 class="paper-title"><a href="https://arxiv.org/abs/2606.15892" target="_blank">Scalar-pathway fidelity improves physical accuracy in short-range equivariant interatomic potentials ⭐⭐</a></h3>
+                <h3 class="paper-title"><a href="https://arxiv.org/abs/2606.15892" target="_blank">Scalar-pathway fidelity improves physical accuracy in short-range equivariant interatomic potentials </a></h3>
                 <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Jia Bi; Alin Marin Elena; Samuel Pinilla</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何提升短程等变原子间势（short-range equivariant interatomic potentials）中标量路径（scalar pathway）的保真度，以减少因标量压缩导致的物理失真，从而改善能量、力和应力预测的物理准确性。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出Physics-Aware Neighborhood (PAN) 池化与Physics-Guided Spectral (PGS) 混合器——两种轻量级、对称性保持的标量路径修正模块，仅作用于ℓ=0标量通道，不改动原有等变张量主干，分别引入配位敏感的振幅调制与径向+截断谱基增强。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将“标量路径保真度”明确定义为等变势设计的关键独立维度，而非附属实现细节；② 提出PAN（配位感知标量调制）与PGS（物理引导谱混合）两个解耦、可插拔、零对称性破坏的标量增强机制；③ 通过控制变量实验证明：标量瓶颈是独立于张量表达能力的误差源，其优化可带来显著且普适的物理精度增益。</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">在Ag（金属）、Si（共价）、LiF/Li–F子集（短程离子）、MD17/rMD17（分子）及带应力标签的体系上，以MACE为基线，PAN+PGS将力误差降低22–27%、能量误差降低19–22%、应力误差降低27–28%，仅增加约5%推理FLOPs；在Allegro和NequIP上也观察到方向一致的改进，验证跨架构可迁移性。</span></div></div>
                 
             </div>
             <div class="paper-card high">
                 <div class="paper-header">
                     <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
                 </div>
-                <h3 class="paper-title"><a href="https://arxiv.org/abs/2605.28960" target="_blank">How Atoms Interact Within Molecules ⭐⭐</a></h3>
+                <h3 class="paper-title"><a href="https://arxiv.org/abs/2605.28960" target="_blank">How Atoms Interact Within Molecules </a></h3>
                 <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Adil Kabylda; Malte Esders; Matteo Gori; Stefan Chmiela; Klaus-Robert Müller et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">本文试图定量揭示分子内原子间相互作用的深度（strength）与方向性（anisotropy）如何随原子间距、分子尺寸和量子多体环境演化，尤其关注传统经验力场忽略的长程各向异性行为。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“原子对力贡献分解框架”，联合应用量子场论驱动的第二量子化多体色散（SQ-MBD）、物理约束的机器学习力场（PaiNN-MLFF）与机制性经验力场（MEFF），首次在统一尺度上反演分子内每对原子的力矢量Fᵢⱼ及其与键轴夹角θᵢⱼ。</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次将QFT色散理论与MLFF协同用于原子级力分解，突破传统能量/梯度层面分析，直接获得矢量力场；② 揭示“各向异性不随距离衰减反而放大”的普适现象，颠覆经验力场中长程=各向同性的隐含假设；③ 提出“相互作用热点（hotspots）”新范式——即少数高散度、高方向敏感性原子对主导构象演化路径，替代传统全连接两体模型。</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">体系涵盖AcAla₃NMe（42原子）至FIP35 WW结构域（562原子）；基线对比SQ-MBD（含/不含DFT均场）、PaiNN-MLFF、MEFF；关键发现：（1）平均力强度随距离呈~R⁻³.⁵衰减（非经典R⁻⁶），（2）力方向散度（Δθ）在&gt;10 Å仍高达±25°且随分子尺寸增大而增强，在FIP35中长程（8–15 Å）各向异性散度比小分子高3.2倍。</span></div></div>
                 
             </div>
             <div class="paper-card high">
                 <div class="paper-header">
                     <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
                 </div>
-                <h3 class="paper-title"><a href="https://arxiv.org/abs/2605.25710" target="_blank">Machine Learning Multiscale Interactions ⭐⭐</a></h3>
+                <h3 class="paper-title"><a href="https://arxiv.org/abs/2605.25710" target="_blank">Machine Learning Multiscale Interactions </a></h3>
                 <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Àlex Solé; Sergio Suárez-Dou; Albert Mosella-Montoro; Silvia Gómez-Coca; Eliseo Ruiz et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在机器学习力场（MLFF）中准确建模跨越多尺度（局域至长程）的量子力学相互作用，克服传统消息传递神经网络因截断半径和层数限制导致的非局域多体效应丢失问题</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出Multiscale Structural Ensemble（MuSE），通过Soft Coarse-Graining Pooling实现原子到粗粒化节点的平滑分数分配，构建层次化多尺度表征，并与SO3krates/MACE/PaiNN等主流MLFF解耦耦合</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">MuSE在Hessian谱预测、生物分子折叠轨迹模拟及分子–石墨烯纳米结构能量剖面计算中显著优于现有长程ML模型；首次在保持原子分辨率的同时，无解析物理先验地捕获了色散、极化、构象耦合等量子多体长程效应</span></div></div>
                 
             </div>
             <div class="paper-card high">
                 <div class="paper-header">
                     <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
                 </div>
-                <h3 class="paper-title"><a href="https://arxiv.org/abs/2605.25351" target="_blank">Anomalous Subsurface Vacancy Stabilization Dictated by Geometry-Electronic Decoupling on Metal Surfaces ⭐⭐</a></h3>
+                <h3 class="paper-title"><a href="https://arxiv.org/abs/2605.25351" target="_blank">Anomalous Subsurface Vacancy Stabilization Dictated by Geometry-Electronic Decoupling on Metal Surfaces </a></h3>
                 <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Yiming Tan; Pai Li</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">揭示并解释在多种密排金属表面（FCC和HCP）中亚表面空位比表面空位更稳定的反常热力学现象，挑战传统配位数主导的断键模型。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">结合高通量密度泛函理论（DFT）计算与基于神经网络的机器学习力场（MLFF），辅以原子分辨能量分解和电子拓扑分析，解耦几何与电子效应对空位稳定性的贡献。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">① 在Ir/Pt/Au（FCC）和Be/Zn/Cd（HCP）中发现亚表面空位形成能低于表面空位的普适性热力学反转；② 提出“几何–电子解耦”机制，并证实其驱动Pt(111)在HER/ORR中实现动态“自修复”，维持完整最外层且抑制催化降解。</span></div></div>
                 
             </div>
             <div class="paper-card high">
                 <div class="paper-header">
                     <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
                 </div>
-                <h3 class="paper-title"><a href="https://arxiv.org/abs/2605.24880" target="_blank">Machine-learned atomistic simulations reveal the basis of hydrogen-induced crack-plane transition in alpha-Fe ⭐⭐</a></h3>
+                <h3 class="paper-title"><a href="https://arxiv.org/abs/2605.24880" target="_blank">Machine-learned atomistic simulations reveal the basis of hydrogen-induced crack-plane transition in alpha-Fe </a></h3>
                 <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Jiaqin Xu; Zhiqiang Zhao; Kazuma Ito; Shuhei Shinzato; Fanshun Meng et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">氢致α-Fe中穿晶准解理断裂的主导解理面是否从{100}向{110}转变，及其原子尺度热力学机制</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">构建高精度神经网络势（NEP）耦合三维分子动力学与巨正则蒙特卡洛（GCMC），实现裂纹尖端区域在固定氢化学势下的动态氢交换模拟</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">(110)[1̄10]裂纹在充氢后由位错发射主导转变为解理断裂；氢选择性降低{110}族解理面的Griffith阈值，且使表面能主导的解理抗力下降快于非稳定堆垛层错能主导的位错发射抗力</span></div></div>
                 
             </div>
             <div class="paper-card medium">
                 <div class="paper-header">
                     <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
                 </div>
-                <h3 class="paper-title"><a href="https://arxiv.org/abs/2605.20785" target="_blank">Anisotropic Crystallization Kinetics and Interfacial Dynamics of Phase-Change Material Sb$_2$S$_3$ from Machine Learning Force Field Simulations ⭐⭐</a></h3>
+                <h3 class="paper-title"><a href="https://arxiv.org/abs/2605.20785" target="_blank">Anisotropic Crystallization Kinetics and Interfacial Dynamics of Phase-Change Material Sb$_2$S$_3$ from Machine Learning Force Field Simulations </a></h3>
                 <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Souvik Chakraborty; Wen-Qing Li; Yun Liu</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">揭示Sb₂S₃相变材料各向异性结晶动力学及固-液界面原子尺度机制</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">基于矩张量势（MTP）构建高精度机器学习力场，实现大规模（7680原子/40 ns）分子动力学模拟</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">[100]晶面生长最快（源于准一维Sb–S共价链结构）；晶体生长活化能（0.55–0.57 eV）显著低于扩散活化能（1.16–1.56 eV），表明其异质结晶为界面控制而非扩散限制</span></div></div>
                 
             </div>
             <div class="paper-card high">
                 <div class="paper-header">
                     <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
                 </div>
-                <h3 class="paper-title"><a href="https://arxiv.org/abs/2606.11809" target="_blank">Symplectic and Thermodynamically Consistent Molecular Dynamics in the Frequency Domain ⭐⭐</a></h3>
+                <h3 class="paper-title"><a href="https://arxiv.org/abs/2606.11809" target="_blank">Symplectic and Thermodynamically Consistent Molecular Dynamics in the Frequency Domain </a></h3>
                 <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Kyunghoon Han; Alexandre Tkatchenko; Joshua T. Berryman</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在分子动力学模拟中实现频域下的辛（symplectic）且热力学自洽的振动传播，使频带选择成为积分器内建功能而非后处理步骤</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出傅里叶积分器分子动力学（FIMD），在模态空间中精确求解谐振子漂移项，将非谐/外源项作为显式源项处理，保持辛结构与时间可逆性，并原生支持频带限制</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">1）FIMD可在选定频带内高保真复现红外光谱、抑制带外响应、揭示模式耦合；2）低频带限制模拟能高效捕获构型熵主导贡献，且清晰展现力场依赖性（尤其在热力学关键的低频区）</span></div></div>
                 
             </div></div>

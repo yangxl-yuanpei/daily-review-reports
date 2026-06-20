@@ -559,6 +559,8 @@ def generate_report(papers_with_summaries, stats, topics=None):
             lines.append(f"- **摘要（原文）:** {p['abstract'][:500]}{'...' if len(p['abstract']) > 500 else ''}")
 
         has_pdf = p.get("_downloaded", False)
+        is_brief = p.get("_brief", False)
+        lines.append(f"- **阅读模式:** {'🔍 精读' if not is_brief else '📋 摘要'}")
         lines.append(f"- **PDF 状态:** {'✅ 已下载' if has_pdf else '⚠️ 仅摘要'}")
 
         url = p.get("url") or p.get("pdf_url", "")
@@ -720,15 +722,30 @@ def main():
 
     # 5. PDF Download + Summarization
     print("\n◆ 5. 精读/简读论文...")
-    deep_read = min(5, len(top10))
-    brief_read = max(0, len(top10) - deep_read)
+
+    # Select top 5 by relevance + recency for deep read
+    def _recency_score(p):
+        date_str = p.get("published") or p.get("publicationDate") or ""
+        try:
+            dt = datetime.strptime(str(date_str)[:10], "%Y-%m-%d")
+            days_ago = (datetime.now(timezone(timedelta(hours=8))) - dt).days
+            return max(0.0, 3.0 - days_ago / 120.0)
+        except:
+            try:
+                return max(0.0, 3.0 - (2026 - int(str(date_str)[:4])))
+            except:
+                return 0.0
+
+    deep_total = min(5, len(top10))
+    deep_sorted = sorted(top10, key=lambda p: p.get("_relevance", 0) + _recency_score(p), reverse=True)
+    deep_titles = {p["title"] for p in deep_sorted[:deep_total]}
 
     papers_with_summaries = []
     downloaded_count = 0
 
     for idx, p in enumerate(top10):
         print(f"\n  [{idx+1}/{len(top10)}] {p['title'][:70]}...")
-        is_deep = idx < deep_read
+        is_deep = p["title"] in deep_titles
 
         full_text, downloaded = download_and_extract(p)
         if downloaded:
@@ -743,7 +760,7 @@ def main():
         p["venue"] = ", ".join(p.get("categories", [])) if p.get("categories") else "arXiv preprint"
         papers_with_summaries.append(p)
 
-        if is_deep and idx < deep_read - 1:
+        if is_deep and idx < deep_total - 1:
             time.sleep(2)  # rate limit between LLM calls
 
     # 6. Generate Report
@@ -754,7 +771,7 @@ def main():
         "s2_count": len(s2_papers),
         "after_dedup": after_dedup,
         "downloaded": downloaded_count,
-        "deep_read": deep_read,
+        "deep_read": deep_total,
         "s2_available": s2_available,
     }
     generate_report(papers_with_summaries, stats, topics=kw["topics"])
