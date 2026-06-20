@@ -76,5 +76,79 @@
     "tags": [
       "general"
     ]
+  },
+  "s2:0545fda8e56a79f859cc5c5841e64a9d31d9c15d": {
+    "title": "Graph-Based Deep Learning Models for Predicting pK a Values of Protein-Ionizable Residues via Physically Inspired Feature Engineering",
+    "date_seen": "2026-06-20",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:068d98dc12309c0fde47f1c085961cce3a0b2f45": {
+    "title": "Study on Cu\n 50\n Zr\n 50\n Metallic Glass Based on Machine Learning Force Field: Correlation between Virial and Equipartition Theorem Violations and Atomic-Scale Dynamic Behaviors",
+    "date_seen": "2026-06-20",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "dft"
+    ]
+  },
+  "s2:06c0371d6901a93406b2d88ca72ba67d960e289b": {
+    "title": "XGBoost-Powered Predictive Analytics for Early Identification of Thermal Runaway in Lithium-Ion Batteries",
+    "date_seen": "2026-06-20",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:073013ca75437f2950e72682db099fda5a2961c5": {
+    "title": "Rise of the Digital Petroleum Engineer Reshapes the Oil and Gas Industry",
+    "date_seen": "2026-06-20",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:095aca99e2cced31ee4916a70480e93049f3dbf9": {
+    "title": "Why Chemical EOR Fails: A Complex Adaptive Systems Analysis and the Path to Adaptive Management",
+    "date_seen": "2026-06-20",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:0a3b7f2882e3f87826aac32c55da38c0fa6b7e8d": {
+    "title": "Coupled Cluster con M\\=oLe: Molecular Orbital Learning for Neural Wavefunctions",
+    "date_seen": "2026-06-20",
+    "tags": [
+      "dft"
+    ]
+  },
+  "s2:0b0cff7f4e420e3f55e59b99b11770b64c6e914d": {
+    "title": "MARA: Continuous SE(3)-Equivariant Attention for Molecular Force Fields",
+    "date_seen": "2026-06-20",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:0b575456f6a449900101db4ff50b46fee2693025": {
+    "title": "Beyond Partitioning: Using Force Field Science to Evaluate Electrostatics Models",
+    "date_seen": "2026-06-20",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0c4779666637c03c4f1a299bea072d9009ea570e": {
+    "title": "Critical Assessment of a Structure-Based Pipeline for Targeting the Long Noncoding RNA MALAT1",
+    "date_seen": "2026-06-20",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0ff8426d37cd6fdb8f343ce317b1e0856ebb3cc2": {
+    "title": "Manufacturing & Quality Analytics for Insulator Production: A Data-Driven Framework for Process Stability, Defect Prediction, and Reliability Assessment",
+    "date_seen": "2026-06-20",
+    "tags": [
+      "surface",
+      "generative"
+    ]
   }
 }
