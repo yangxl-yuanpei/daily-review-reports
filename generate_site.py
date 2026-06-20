@@ -25,9 +25,22 @@ PAPER_BLOCK_RE = re.compile(
     re.DOTALL,
 )
 
-FIELD_RE = re.compile(r"-\s*\*\*(.+?)\*\*\s*[:：]\s*(.*)")
-
 STATS_RE = re.compile(r"-\s*(.+?):\s*(.+)")
+
+def parse_fields(body):
+    """Parse - **key**：value or - **key:** value style fields from paper body."""
+    fields = {}
+    for line in body.split('\n'):
+        line = line.strip()
+        m = re.match(r'-\s+\*\*(.+?)\*\*(.*)', line)
+        if not m:
+            continue
+        key = m.group(1).strip().rstrip(':：,，')
+        rest = m.group(2).strip()
+        rest = re.sub(r'^[：:，]?\s*', '', rest)
+        if key:
+            fields[key] = rest
+    return fields
 
 def inline_bold(text):
     """Convert **text** to <strong>text</strong>."""
@@ -121,13 +134,9 @@ def parse_summary(filepath, tags_lookup=None):
             num = header_match.group(1)
             title_str = header_match.group(2).strip()
             body = block[header_match.end():]
-            fields = {}
-            for fm in FIELD_RE.finditer(body):
-                key = fm.group(1).strip()
-                val = fm.group(2).strip()
-                fields[key] = val
+            fields = parse_fields(body)
 
-            # relevance tag
+            # relevance tag: check structured field first, then fallback to body text
             relevance = ""
             rel_field = fields.get("与你研究的相关度", fields.get("与你研究的相关性", ""))
             if "高" in rel_field and "低" not in rel_field:
@@ -136,6 +145,18 @@ def parse_summary(filepath, tags_lookup=None):
                 relevance = "medium"
             elif "低" in rel_field:
                 relevance = "low"
+            if not relevance:
+                body_lower = body.lower()
+                if re.search(r'与你研究的相关度[：:].*?[。；;]?\s*\*{0,2}高', body_lower):
+                    relevance = "high"
+                elif re.search(r'与你研究的相关度[：:].*?[。；;]?\s*\*{0,2}中', body_lower):
+                    relevance = "medium"
+                elif re.search(r'与你研究的相关度[：:].*?[。；;]?\s*\*{0,2}低', body_lower):
+                    relevance = "low"
+            if not relevance:
+                rel_match = re.search(r'相关度\s*(高|中|低)', body)
+                if rel_match:
+                    relevance = {"高": "high", "中": "medium", "低": "low"}[rel_match.group(1)]
 
             # Look up tags from seen_papers.json
             paper_tags = []
@@ -213,16 +234,12 @@ header {
 header .container { padding-bottom: 0; }
 header h1 { font-size: 1.5rem; font-weight: 700; }
 header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
-.stats-row {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 12px; margin-bottom: 24px;
-}
-.stat-card {
-  background: var(--card-bg); border-radius: 12px; padding: 16px;
-  text-align: center; border: 1px solid var(--border);
-}
-.stat-label { font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 4px; }
-.stat-value { font-size: 1.1rem; font-weight: 700; color: var(--accent); }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
 .papers-grid {
   display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   gap: 16px; margin-bottom: 24px;
@@ -237,8 +254,7 @@ header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
 .paper-card.high { border-left: 4px solid var(--high); }
 .paper-card.medium { border-left: 4px solid var(--medium); }
 .paper-card.low { border-left: 4px solid var(--low); }
-.paper-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
-.paper-num { font-weight: 700; color: var(--accent); font-size: 0.9rem; }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
 .relevance-badge {
   padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
 }
@@ -256,14 +272,23 @@ header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
   color: var(--text-secondary); margin-bottom: 2px;
 }
 .field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
 .highlights, .keygap {
   background: var(--card-bg); border-radius: 12px; padding: 20px;
   margin-bottom: 16px; border: 1px solid var(--border);
 }
 .highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
-.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
 .highlight-body p, .gap-body p { margin-bottom: 6px; }
 .highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
 .paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
 .tag-badge {
   display: inline-block; padding: 2px 10px; border-radius: 999px;
@@ -292,20 +317,35 @@ header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
 .back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
 .back-link:hover { color: #fff; }
 @media (max-width: 640px) {
-  .papers-grid { grid-template-columns: 1fr; }
-  .stats-row { grid-template-columns: repeat(2, 1fr); }
+    .papers-grid { grid-template-columns: 1fr; }
   header h1 { font-size: 1.2rem; }
 }
 """
+
+FIELD_MAP = {
+    "作者": ["作者"],
+    "核心问题": ["核心问题"],
+    "主要方法": ["方法核心", "方法要点"],
+    "方法创新": ["创新点"],
+    "主要结果": ["关键实验与结果", "关键结果"],
+}
 
 def render_papers_cards(papers):
     cards = ""
     for p in papers:
         rel_class = p["relevance"]
         fields_html = ""
-        for key, val in p["fields"].items():
+        for disp_name, aliases in FIELD_MAP.items():
+            val = None
+            for a in aliases:
+                if a in p["fields"]:
+                    val = p["fields"][a]
+                    break
+            if not val:
+                continue
+            collapsible = ' field-collapsible' if len(val) > 160 else ''
             fields_html += (
-                f'<div class="field"><span class="field-key">{escape(key)}</span>'
+                f'<div class="field{collapsible}"><span class="field-key">{escape(disp_name)}</span>'
                 f'<span class="field-val">{inline_bold(escape(val))}</span></div>'
             )
         tags_html = ""
@@ -315,11 +355,17 @@ def render_papers_cards(papers):
                 slug = tag.lower().replace(" ", "-")
                 tags_html += f'<a href="keywords.html#{slug}" class="tag-badge">{escape(tag)}</a>'
             tags_html += "</div>"
-        paper_url = p['fields'].get('原文链接', '') or p['scholar_url']
+        paper_url = p['fields'].get('原文链接', '')
+        if not paper_url:
+            src = p['fields'].get('来源', '')
+            arxiv_m = re.search(r'arXiv[:\s]*(\d+\.\d+)', src, re.IGNORECASE)
+            if arxiv_m:
+                paper_url = f"https://arxiv.org/abs/{arxiv_m.group(1)}"
+        if not paper_url:
+            paper_url = p['scholar_url']
         cards += f"""
             <div class="paper-card {rel_class}">
                 <div class="paper-header">
-                    <span class="paper-num">#{p['number']}</span>
                     <span class="relevance-badge {rel_class}">{p['relevance'].upper() if p['relevance'] else '?'}</span>
                 </div>
                 <h3 class="paper-title"><a href="{paper_url}" target="_blank">{escape(p['title'])}</a></h3>
@@ -328,19 +374,52 @@ def render_papers_cards(papers):
             </div>"""
     return cards
 
+def render_structured_items(text, cls):
+    if not text:
+        return ""
+    items = []
+    for line in text.strip().split("\n"):
+        line = line.strip()
+        if not line:
+            continue
+        m = re.match(r'- \*\*(.+?)\*\*[：:]\s*(.*)', line)
+        if m:
+            items.append((m.group(1).strip(), m.group(2).strip()))
+    if not items:
+        return f'<div class="{cls}-body">{markdown_to_html(text)}</div>'
+    cards = "".join(
+        f'<div class="{cls}-item">'
+        f'<span class="{cls}-item-key">{escape(k)}</span>'
+        f'<span class="{cls}-item-val">{inline_bold(escape(v))}</span>'
+        f'</div>'
+        for k, v in items
+    )
+    return f'<div class="{cls}-body">{cards}</div>'
+
 KATEX_HEAD = """<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
   onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>"""
 
+TOGGLE_SCRIPT = """<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'\U0001f4d6 \u6536\u8d77\u5168\u90e8':'\U0001f4d6 \u5c55\u5f00\u5168\u90e8'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>"""
+
 def render_daily_page(report):
-    stats_cards = "".join(
-        f'<div class="stat-card"><div class="stat-label">{escape(k)}</div><div class="stat-value">{escape(v)}</div></div>'
-        for k, v in report["stats"].items()
-    )
+    source = report["stats"].get("检索源", "")
+    dedup = report["stats"].get("有效去重后", "")
+    reading = report["stats"].get("实际精读", report["stats"].get("精读", ""))
+    parts = []
+    if source:
+        parts.append(f"🔍 {escape(source)}")
+    if dedup:
+        parts.append(f"📌 有效去重后: {escape(dedup)}")
+    if reading:
+        parts.append(f"📖 {escape(reading)}")
+    stats_line = f'<div class="stats-line">{" | ".join(parts)}</div>' if parts else ""
     papers_html = render_papers_cards(report["papers"])
-    highlights_html = f'<div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body">{markdown_to_html(report["highlights"])}</div></div>' if report["highlights"] else ""
-    gap_html = f'<div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body">{markdown_to_html(report["key_gap"])}</div></div>' if report["key_gap"] else ""
+    highlights_html = f'<div class="highlights"><h3>💡 今日亮点</h3>{render_structured_items(report["highlights"], "highlight")}</div>' if report["highlights"] else ""
+    gap_html = f'<div class="keygap"><h3>📌 Key Gap</h3>{render_structured_items(report["key_gap"], "gap")}</div>' if report["key_gap"] else ""
 
     return f"""<!DOCTYPE html>
 <html lang="zh-CN">
@@ -362,11 +441,13 @@ def render_daily_page(report):
   </div>
 </header>
 <div class="container">
-  <div class="stats-row">{stats_cards}</div>
+  {stats_line}
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
   <div class="papers-grid">{papers_html}</div>
   {highlights_html}
   {gap_html}
 </div>
+{TOGGLE_SCRIPT}
 </body>
 </html>"""
 
