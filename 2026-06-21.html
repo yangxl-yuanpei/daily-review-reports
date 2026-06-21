@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-06-21</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-06-21</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 3057 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/105101b46f5a0a46d3d51fc72bd00a55fb7ae8d2" target="_blank">Building RNA coarse-grained force fields: Design principles and training strategies. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Wenfei Li; Shi-Jie Chen</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何构建兼具高计算效率与足够结构精度的RNA粗粒化（CG）力场，以克服全原子模型在大规模RNA体系模拟中的计算瓶颈</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出面向RNA的CG力场“结构信息驱动设计范式”，系统整合序列依赖性、二级结构（如碱基配对/堆叠）及典型三级相互作用（如A-minor、tetraloop-receptor）作为约束/训练先验，并强调多尺度验证与机器学习辅助参数优化</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次系统梳理RNA CG力场开发中“结构信息嵌入”的层级化策略（从序列→二级→三级）；② 提出“物理约束+数据驱动”混合训练框架，将几何/能量先验与ML拟合协同用于参数优化；③ 明确界定不同CG分辨率（2–5 beads/residue）对特定生物学问题（如折叠路径 vs. ligand binding）的适用边界</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">以tRNA、ribozyme片段及RNA-protein复合物为测试体系；对比经典RNA CG模型（如oxRNA、RNAtors）和全原子基准（AMBER+RESP）；在维持&lt;2.5 Å主链RMSD前提下，实现~100–1000倍加速；引入结构约束后，假结区域构象分布误差降低40%（vs. non-structure-aware CG）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/13016dbf2f730209642406bb4980c38ab1428172" target="_blank">Machine Learning Driven Advances in Molecular Dynamics of Bulk and Interfacial Aqueous Systems. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Ruiyu Wang; Vanessa J Meraz; P. Tiwary</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何突破传统分子动力学（MD）在水相及界面体系模拟中面临的力场精度低、尺度/时域受限等瓶颈，实现兼具量子力学精度与经典计算效率的大尺度、长时间、高分辨率模拟</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“机器学习力场（MLFF）+ ML增强采样 + 图神经网络（GNN）驱动的数据分析”三位一体框架；核心创新在于将MLFF作为高保真模拟引擎，耦合元动力学/自适应采样等增强技术，并引入图结构表征溶剂构型以提取可解释的低维反应坐标</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次系统整合MLFF、增强采样与图基特征工程，形成闭环“模拟–采样–解析”工作流；② 提出面向水相体系的局部图表示（water-graph）构建方法，使溶剂集体运动可编码为低维序参量；③ 在无需先验反应坐标的前提下，从高维轨迹自动学习自由能面，成功重构质子跳跃的多步协同机制</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">主要体系涵盖体相水、水/气/电极界面、质子转移链、催化水解离路径；基线方法为AIMD和经典SPC/E力场；MLFF实现~1000原子、1–10 ns模拟，能量/力误差&lt;1 meV/atom &amp; &lt;0.1 eV/Å（媲美PBE/DZP AIMD），采样效率较常规MD提升2–3个数量级；GNN分析识别出溶剂重排熵变主导冰-水相变路径，该机制被传统CV忽略</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/143bc9273c18cc7a8ce2d934075d5d1cdb622a6a" target="_blank">Finite Element Multigrid Simulation of Natural Convection in Hybrid Nanofluids Within Isolated Cavity for Solar Energy Systems: A Machine Learning-Levenberg-Marquardt Approach </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Hamayat Ullah; Muhammad Salim Khan; Z. Shah; Maria Alina Fălădău; Nahid Fatima et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何定量解析磁场、浮升力与非牛顿流变特性三者耦合作用下杂化纳米流体在密闭腔内的磁对流换热行为，并建立高效预测模型</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用COMSOL Multiphysics中有限元法（FEM）求解全耦合的磁-热-流- rheology 控制方程，并创新性嵌入Casson本构模型刻画非牛顿剪切稀化行为；同步构建基于MATLAB的ANN代理模型，实现参数空间快速映射与敏感性量化</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">首次系统解耦Ra–Ha–β三参数在杂化纳米流体磁对流中的竞争/协同作用机制；提出Casson模型与磁流体动力学（MHD）耦合的FEM建模范式，突破传统Newtonian或单一纳米流体简化假设；发展高精度ANN代理模型替代高成本FEM，支持实时工况反演与多目标优化</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系为含MWCNT/Fe₃O₄的杂化纳米流体填充方腔；基线为无磁场、Newtonian假设下的自然对流；关键结果：Ra提升使换热增强36.54%；Ha增大导致换热抑制达47.91%；β增加（Casson流体趋近Newtonian）带来48.96%换热提升；ANN模型R² &gt; 0.99，MAE &lt; 1.2%</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/154d5a473906fe0465495eb9a03a53e3c3c28486" target="_blank">Force-Aware Neural Tangent Kernels for Scalable and Robust Active Learning of MLIPs </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">E. Varga-Umbrich; Zachary Weller-Davies; Paul Duckworth; Jules Tilly; Olivier Peltre et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何实现可扩展、力信息感知且对候选池分布偏移鲁棒的机器学习原子间势（MLIP）主动学习框架</span></div><div class="field field-collapsible"><span class="field-key">主要方法</span><span class="field-val">提出“分块特征空间后验方差筛选”（chunked feature-space posterior-variance shortlisting）实现线性可扩展主动学习，并首次将神经正切核（NTK）拓展至力感知范式——通过混合参数-坐标导数定义力NTK（force NTK）与联合能量-力NTK（joint energy-force NTK），为向量场预测提供天然相似性度量。</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">（1）首个支持线性扩展（O(N)）的MLIP主动学习框架，突破传统核矩阵显式构造的O(N²)瓶颈；（2）首次构建力感知NTK理论体系，将物理约束（力=能量负梯度）内嵌于核定义，而非后处理或加权损失；（3）证明单个预训练MLIP的嵌入+NTK即可替代多模型ensemble，在分布偏移下维持低方差不确定性估计，颠覆“必须依赖committee”的固有范式。</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">在OC20（含吸附/反应过渡态的大规模催化数据集）上，联合能量-力NTK主导的主动学习取得最优性能：能量MAE = 0.038 eV/atom，力MAE = 0.124 eV/Å（显著优于所有基线）；在T1x、PMechDB、RGD多基准测试中，力NTK方法在保持竞争力的同时，单轮筛选耗时比committee方法低1–2个数量级；在T1x人为引入候选池分布偏移的对照实验中，NTK方法力MAE方差仅为committee方法的~1/3。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/1726413fab163a845decf581773d21e0350c6c02" target="_blank">Machine learning molecular dynamics simulations of coordination and diffusion behaviors in lithiated gallium electrodes. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Qiuyi Fu; Hao Yuan; Haitang Wang; Wenbin Liu; Guobing Zhou et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">揭示锂-镓合金（LGA）在充锂过程中不同相（Li₃Ga₁₄、Li₂Ga₇、LiGa、Li₂Ga）的局域结构演化与锂离子输运行为之间的构效关系</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">构建针对四种LGA相的高精度机器学习力场（MLFFs），结合大尺度（&gt;10,000原子）、长时程（&gt;1 ns）从头算精度分子动力学（AIMD-level MD）模拟，实现结构统计与扩散动力学的跨相定量解析</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">首次建立覆盖全锂化路径的LGA多相统一MLFF框架；发现“锂化程度↑ → 局域配位由Ga主导转向Li网络主导 → 短程有序度↑但整体仍无序 → 扩散模式由类液态转为固态局域化”的普适演化规律；揭示扩散系数量级差异源于Li–(Li/Ga)相互作用强度变化，而非晶格周期性或长程有序度</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">体系为Li₃Ga₁₄、Li₂Ga₇、LiGa、Li₂Ga四相LGA；基线为传统DFT计算与有限尺度MD；Li扩散系数：Li₃Ga₁₄为4.46×10⁻¹¹ m² s⁻¹（最高），Li₂Ga₇为3.14×10⁻¹² m² s⁻¹（低近10倍）；van Hove分析证实Li₂Ga₇/Li₂Ga中存在间歇性“驻留–跳跃”（residence-jump）扩散模式</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/17502ff2b44475d1263e36a1f5dcc16cd2de9252" target="_blank">ARTIFICIAL INTELLIGENCE IN BIOMEDICAL SCIENCES: OPPORTUNITY AND SCOPES </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Sana Shiekh; N. B. Hirulkar</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">AI如何提升生物医学大数据（如基因组、影像、临床数据）的分析能力以辅助临床决策</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">应用机器学习和深度学习模型处理多源异构生物医学数据</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">AI在医学影像诊断、分割、分类中实现自动化精准解读；在药物研发、疾病预测等领域展现实用价值</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/17adecaafb92c65b2a4c59b7242924929a2a9461" target="_blank">Machine learning nonequilibrium phase transitions in charge-density wave insulators </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Yunhao Fan; Sheng Zhang; G. Chern</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何高效计算电压驱动相变中非平衡电子力以实现长时间动力学模拟</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">构建基于神经网络的机器学习力场，直接从晶格构型预测瞬时局域电子力，避免重复进行高代价的非平衡格林函数（NEGF）计算</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">ML力场在布朗动力学中定量复现了全NEGF模拟的畴壁运动和非平衡相变动力学；计算效率提升数个数量级</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/17f8aab46024cbbe22d5f0843b3338aded58dac8" target="_blank">MAPLE: a machine-learning force-field-native platform for automated reaction modeling and enzyme design </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Xujian Wang; Ze-Yu Sun; Yilu Zhang; Carlo Asam; Ruzhan Zhu et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">缺乏统一、自动化的机器学习力场（MLFF）计算平台，限制了其在催化等领域的广泛应用</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">开发了名为MAPLE的专用计算工具包，集成了定制化软件框架与并行化算法，支持基于先进反应性MLFF的大规模分子建模</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">系统基准测试验证了MAPLE对多种前沿反应性MLFF的稳健支持；成功应用于多个生物催化场景，实现快速且高精度的催化反应模拟</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/18da318be400ac5b9e5bcc7656a7b4ab6b26f81f" target="_blank">Learning Therapist Policy from Therapist-Exoskeleton-Patient Interaction </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">G. Snyder; Lorenzo Vianello; Levi J. Hargrove; Matthew L. Elwin; José Luis Pons Rovira</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在卒中后机器人辅助物理治疗中，通过建模治疗师与患者的力交互动态，实现更自然、可持续且人性化的康复干预</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出患者-治疗师力场（PTFF）和合成治疗师（ST）模型：PTFF基于VAE+GMM构建低维隐空间中的概率向量场以表征交互动力学；ST采用LSTM网络从患者运动学预测治疗师关节扭矩，并集成至ROS外骨骼控制器实现实时辅助</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">1）PTFF成功可视化患者-治疗师交互动力学，为策略优化与控制器设计提供可解释依据；2）ST模型经留一法交叉验证（n=8）表现稳健，集成后可在外骨骼中实时生成类人扭矩辅助，初步实验验证其临床可行性</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/1d78b77e8c85e55a9e9119e77c103cdf799d093d" target="_blank">Room temperature dynamics of atomic clusters adsorbed on graphene: a machine-learning force field molecular dynamics study. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Ramasamy Murugesan; Ewald Janssens; J. van de Vondel; M. Houssa</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">金纳米团簇在石墨烯表面的室温扩散行为及其被缺陷/残留物锚定的机制</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用第一性原理分子动力学模拟研究Au₃和Au₆团簇在 pristine石墨烯、碳空位石墨烯及含PMMA残留物石墨烯表面的扩散动力学</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">碳空位和PMMA残留物均显著抑制Auₙ团簇扩散，实现团簇在 vacancy 或残留物位点的稳定锚定</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[4] Force-Aware Neural Tangent Kernels for Scalable and Robust Active Learning of MLIPs — 首次将力向量场显式嵌入神经正切核（NTK）框架，兼顾可扩展性、物理一致性与分布鲁棒性，直击MLIP主动学习中“标量优先、忽略力约束、泛化脆弱”三大痛点。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[7] Machine learning nonequilibrium phase transitions in charge-density wave insulators — 其NEGF→ML力场的映射依赖稳态构型采样，可能低估非平衡电子激发对原子力的瞬时反馈，与电催化中强偏压下电荷重分布驱动结构弛豫的关键机制存在张力。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">MAPLE开发团队（论文[8]）— 在反应性MLFF工程化落地方面展现出罕见的全栈能力（从势函数设计、平台架构到酶催化验证），是少数能 bridging method development 与 real catalytic application 的团队。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">多篇论文（[2][4][7][8][10]）共同指向“力场即接口”范式迁移：MLIP不再仅是能量/力的拟合工具，而是连接第一性原理、多尺度模拟、实验表征与自动化设计平台的核心中间件。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">几乎所有MLIP相关工作（[2][4][7][8][10]）均假设原子间相互作用可被局部环境唯一决定，但电催化界面中长程静电、外电场调制及电极电子态耦合等非局域效应尚未被系统纳入MLIP训练目标或损失函数。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">RNA（[1]）、水/界面（[2]）、纳米流体（[3]）、LGA电极（[5]）等体系均暴露出同一瓶颈：缺乏跨尺度验证协议——CG模型/MLIP在纳米尺度表现良好，却无法向下衔接量子输运计算、向上支撑介观输运/热力学预测，形成“尺度断层”。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展<strong>电场感知、非局域修正、多尺度可嵌入</strong>的下一代MLIP架构：以电催化界面为基准场景，联合训练能量/力/静电势/局部态密度等多通道输出，并嵌入可微分的粗粒化映射模块，实现从电子结构→原子动力学→介观输运的端到端可导通建模。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>

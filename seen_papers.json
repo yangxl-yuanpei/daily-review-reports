@@ -150,5 +150,81 @@
       "surface",
       "generative"
     ]
+  },
+  "s2:105101b46f5a0a46d3d51fc72bd00a55fb7ae8d2": {
+    "title": "Building RNA coarse-grained force fields: Design principles and training strategies.",
+    "date_seen": "2026-06-21",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:13016dbf2f730209642406bb4980c38ab1428172": {
+    "title": "Machine Learning Driven Advances in Molecular Dynamics of Bulk and Interfacial Aqueous Systems.",
+    "date_seen": "2026-06-21",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface"
+    ]
+  },
+  "s2:143bc9273c18cc7a8ce2d934075d5d1cdb622a6a": {
+    "title": "Finite Element Multigrid Simulation of Natural Convection in Hybrid Nanofluids Within Isolated Cavity for Solar Energy Systems: A Machine Learning-Levenberg-Marquardt Approach",
+    "date_seen": "2026-06-21",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:154d5a473906fe0465495eb9a03a53e3c3c28486": {
+    "title": "Force-Aware Neural Tangent Kernels for Scalable and Robust Active Learning of MLIPs",
+    "date_seen": "2026-06-21",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "active-learning"
+    ]
+  },
+  "s2:1726413fab163a845decf581773d21e0350c6c02": {
+    "title": "Machine learning molecular dynamics simulations of coordination and diffusion behaviors in lithiated gallium electrodes.",
+    "date_seen": "2026-06-21",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:17502ff2b44475d1263e36a1f5dcc16cd2de9252": {
+    "title": "ARTIFICIAL INTELLIGENCE IN BIOMEDICAL SCIENCES: OPPORTUNITY AND SCOPES",
+    "date_seen": "2026-06-21",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:17adecaafb92c65b2a4c59b7242924929a2a9461": {
+    "title": "Machine learning nonequilibrium phase transitions in charge-density wave insulators",
+    "date_seen": "2026-06-21",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:17f8aab46024cbbe22d5f0843b3338aded58dac8": {
+    "title": "MAPLE: a machine-learning force-field-native platform for automated reaction modeling and enzyme design",
+    "date_seen": "2026-06-21",
+    "tags": [
+      "electrochemistry",
+      "catalysis"
+    ]
+  },
+  "s2:18da318be400ac5b9e5bcc7656a7b4ab6b26f81f": {
+    "title": "Learning Therapist Policy from Therapist-Exoskeleton-Patient Interaction",
+    "date_seen": "2026-06-21",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:1d78b77e8c85e55a9e9119e77c103cdf799d093d": {
+    "title": "Room temperature dynamics of atomic clusters adsorbed on graphene: a machine-learning force field molecular dynamics study.",
+    "date_seen": "2026-06-21",
+    "tags": [
+      "surface"
+    ]
   }
 }
