@@ -226,5 +226,87 @@
     "tags": [
       "surface"
     ]
+  },
+  "s2:200c66ee2a0941329e72afcdb7210328e7b76585": {
+    "title": "Insight into the temperature-dependent lattice thermal properties of CeO2 stabilized ZrO2 by machine learning force fields.",
+    "date_seen": "2026-06-22",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "dft"
+    ]
+  },
+  "s2:2041c302cfff9cfe41517373daf90b64866ea917": {
+    "title": "Generative Artificial Intelligence in STEM Education: A Review of Applications, Benefits and Challenges",
+    "date_seen": "2026-06-22",
+    "tags": [
+      "active-learning",
+      "generative"
+    ]
+  },
+  "s2:24d77364ea47bdcd14ee6e921d8ab0f1898aced3": {
+    "title": "Trillion-atom molecular dynamics simulations with ab initio accuracy",
+    "date_seen": "2026-06-22",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:24fff2fc4d69ccb76b67d6fd0a5b2f2d4725dabd": {
+    "title": "Force field dependence of ion transport on mica surfaces",
+    "date_seen": "2026-06-22",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:269521cbe23623ce54d3f3a2ed02d9d53bbc6197": {
+    "title": "Digital discovery of large-scale optoelectronic materials via MPNICE machine-learning force fields.",
+    "date_seen": "2026-06-22",
+    "tags": [
+      "dft",
+      "generative"
+    ]
+  },
+  "s2:26ad9a8596964fc62c5e819cd440867df78162eb": {
+    "title": "Machine Learning-Aided Drug Repurposing for Screening COX-2 Inhibitors from Traditional Chinese Medicines",
+    "date_seen": "2026-06-22",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:2740cc302eb96a168e1067fe25992ac41fccc285": {
+    "title": "Enhancing Physical Realism in AI-Driven Marine Debris Tracking: The Impact of Windage on LPTM Simulations",
+    "date_seen": "2026-06-22",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:2786a68936e200432520e9058c029713bfa13697": {
+    "title": "Refinement and performance benchmark for range-separated water force field.",
+    "date_seen": "2026-06-22",
+    "tags": [
+      "electrochemistry",
+      "dft",
+      "active-learning",
+      "generative"
+    ]
+  },
+  "s2:2895164a8d1bd07949849621679445c947d3480d": {
+    "title": "Microscopic contributions to the deviation from Amontons friction law",
+    "date_seen": "2026-06-22",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:2e99b5bd564e1f2fa35540a798c0c7fef635efd3": {
+    "title": "Developing a Machine-Learning Interatomic Potential for Non-Covalent Interactions in Proteins",
+    "date_seen": "2026-06-22",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "active-learning",
+      "generative"
+    ]
   }
 }
