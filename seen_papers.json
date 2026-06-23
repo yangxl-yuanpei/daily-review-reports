@@ -308,5 +308,82 @@
       "active-learning",
       "generative"
     ]
+  },
+  "s2:304d0d66c69cf74afb121800b3ad4e1aeadd33f3": {
+    "title": "Digital shadows with optimized bias correction for accurate wind turbine fatigue load estimation",
+    "date_seen": "2026-06-23",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:326ab318dfb84995201e9d0b6332aacb44b5cedd": {
+    "title": "Hierarchical Reinforcement Learning of a Short-Range Bond-Order Potential for Silica: Analytic Embedding of Coordination with Classical Efficiency.",
+    "date_seen": "2026-06-23",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:32740df965b06bcb0f1fc874ad83a27beeffa70f": {
+    "title": "Multiscale modeling of graphene and carbon nanostructures: advances in atomistic, coarse-grained, and machine learning approaches",
+    "date_seen": "2026-06-23",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:32d87e1c4cc972cdd8fadbb65da1cea42c60cb7a": {
+    "title": "Driving Catalytic Innovation: The Development and Application of Machine Learning Force Fields",
+    "date_seen": "2026-06-23",
+    "tags": [
+      "MLFF",
+      "catalysis",
+      "surface"
+    ]
+  },
+  "s2:34ca4eca144f2ede4629e4c3ba6ee02a26dc9c58": {
+    "title": "Balancing Privacy and Performance: Machine Learning Security in Distributed Edge Networks",
+    "date_seen": "2026-06-23",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:36169dae9560ede42c02eb6cd7fd6195199f2f9a": {
+    "title": "Artificial Intelligence for Multiscale Modeling in Solid‐State Physics and Chemistry: A Comprehensive Review",
+    "date_seen": "2026-06-23",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:3708d3d3296630ef4f09c707b0cb0c64a60a989c": {
+    "title": "Multiscale Biophysical Characterization of Ultra-Short Peptide Hydrogels.",
+    "date_seen": "2026-06-23",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:381eda8c94eb667dd796e8340cb7fc1c5c3ff60f": {
+    "title": "kALDo 2.0: Scalable Thermal Transport from First Principles and Machine Learning Potentials",
+    "date_seen": "2026-06-23",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "generative"
+    ]
+  },
+  "s2:3899c743715d9c4d8e05af4a2043330e38aef7f9": {
+    "title": "Optimization of a Machine Learning Multi-Radar Multi-Sensor (MRMS) Precipitation Estimation Approach over the western United States",
+    "date_seen": "2026-06-23",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:3b7604f0c0b63a188273b8990619977f1d75f32e": {
+    "title": "A Cross-Domain Graph Learning Protocol for Single-Step Molecular Geometry Refinement",
+    "date_seen": "2026-06-23",
+    "tags": [
+      "electrochemistry",
+      "dft",
+      "generative"
+    ]
   }
 }
