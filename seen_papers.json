@@ -385,5 +385,82 @@
       "dft",
       "generative"
     ]
+  },
+  "s2:3e0fc06c560cfe4582882f831f060e05b05fd1af": {
+    "title": "Polarization Dynamics in Ferroelectrics: Insights Enabled by Machine Learning Molecular Dynamics.",
+    "date_seen": "2026-06-24",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:3eb0dd236e140deb48ffba4db0322f8d9daea71c": {
+    "title": "Bounce or coalescence : a physical learning frame",
+    "date_seen": "2026-06-24",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:3f8a0acc72a9c9aff5340682496bf3cac1c2f692": {
+    "title": "The Role of Quantum and Molecular Mechanics in Drug Design: Advanced Hybrid Techniques for Enhanced Therapeutic Precision.",
+    "date_seen": "2026-06-24",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:3fdfb66a31a2358d5e764aafe6fec21dbf479fa5": {
+    "title": "Advances in molecular dynamics simulation of phase equilibrium",
+    "date_seen": "2026-06-24",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:45a96d8765164ebe8ce54095840bc375f2d41e31": {
+    "title": "Machine Learning and Molecular Simulations Reveal Mechanisms of ZIFs Polymorph Selection",
+    "date_seen": "2026-06-24",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:45c34683565b10e8920ba13fc2f8f2fd80aea934": {
+    "title": "Recent advances in the application of Density Functional Theory (DFT) and Molecular Dynamics (MD) simulations to elucidate metal corrosion mechanisms",
+    "date_seen": "2026-06-24",
+    "tags": [
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:48a24c2bf5c55f80f1f8f05a0805b7a0726c72fc": {
+    "title": "Disentangling the Discrepancy Between Theoretical and Experimental Curie Temperatures in Ferroelectric PbTiO$_3$",
+    "date_seen": "2026-06-24",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:49f833e1ae176c7913d46acadd2ad5d7b952b4cb": {
+    "title": "Explicit Electric Potential-Embedded Machine Learning Framework: A Unified Description from Atomic to Electronic Scales",
+    "date_seen": "2026-06-24",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:4a5d63de66265298f01a3fba45b81f82a6729f1d": {
+    "title": "Methodological Frameworks for Computational Electrocatalysis: From Theory to Practice",
+    "date_seen": "2026-06-24",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:4cd0aab882c3b453ec1920cb1f63cf62d3d1b191": {
+    "title": "Advanced Fault Detection of Permanent Magnet Faults in Offshore Wind Turbine Generators Using Finite Element Analysis and Deep Transfer Learning",
+    "date_seen": "2026-06-24",
+    "tags": [
+      "general"
+    ]
   }
 }
