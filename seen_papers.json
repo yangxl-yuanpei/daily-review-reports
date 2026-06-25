@@ -462,5 +462,89 @@
     "tags": [
       "general"
     ]
+  },
+  "s2:4d01a4ebd160617ab04c0f06d7b9d1ca3706254b": {
+    "title": "A consistent dynamics view on nanoporous catalysts in action across length and time scales.",
+    "date_seen": "2026-06-25",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:4dcbc86939ffa443743a10c0f70a5f66e409ee40": {
+    "title": "Advancements in Machine Learning-Assisted Flexible Electronics: Technologies, Applications, and Future Prospects",
+    "date_seen": "2026-06-25",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:4dce12a88f827c16a8986f9c9949c03e3b30dae3": {
+    "title": "Electric Field-Guided Biomimetic Mineralization of Enamel via Interfacial Engineering of Nanostructured HAp/PDA Coatings with Anisotropy and Enhanced Hardness.",
+    "date_seen": "2026-06-25",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "generative"
+    ]
+  },
+  "s2:4febdd449e139c3ddd36febe9638449caaea4dda": {
+    "title": "Atomic Resolution of Solid-Electrolyte Interphase Formation via Off-Lattice On-the-Fly Kinetic Monte Carlo.",
+    "date_seen": "2026-06-25",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:528312193c76f287cfcfb093d51af3e3c47a9134": {
+    "title": "Artificial Intelligence in Participatory Environments: Technologies, Ethics, and Literacy Aspects",
+    "date_seen": "2026-06-25",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:53b5a1b4d3b131efd4fb94424fc878f3fcf266a9": {
+    "title": "ReDD-COFFEE under the Lens: Revealing Adsorption and Separation Performances of Hypothetical COFs Using Molecular Simulations and Machine Learning",
+    "date_seen": "2026-06-25",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:54b1087c3bb140934dc8c4ee5656210a1e81251d": {
+    "title": "Applications, Benefits, and Ethical Challenges of Artificial Intelligence in Palliative Care",
+    "date_seen": "2026-06-25",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:560a19edfcfaa227719ce690c1dbccf19f2653b5": {
+    "title": "A Robust Agentic Framework for Expert-Level Automation of Atomistic Simulations",
+    "date_seen": "2026-06-25",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:56227b4ed7b585faaadd77c0930276d68cc677d6": {
+    "title": "How can machine learning facilitate computational electrochemistry",
+    "date_seen": "2026-06-25",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:56decd9e2ce4fc064a0cc644aebfbf83ea114a52": {
+    "title": "MOFSynth-ADV: An Open-Source Engine for Synthesizability Evaluation of Metal–Organic Frameworks",
+    "date_seen": "2026-06-25",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "generative"
+    ]
   }
 }
