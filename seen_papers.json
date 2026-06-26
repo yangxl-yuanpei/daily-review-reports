@@ -546,5 +546,84 @@
       "MLFF",
       "generative"
     ]
+  },
+  "s2:548d41133b9b3aadcaf8b00535a6ced491082bd6": {
+    "title": "Integration of Multiscale Simulations and AI Models for the Design of High-Performance Dielectric Polymers",
+    "date_seen": "2026-06-26",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:5715189f393cf7cd73f7736221404655005c18cd": {
+    "title": "Variational Autoregressive Networks with probability priors",
+    "date_seen": "2026-06-26",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:57de5848a87e1f782a2a99f0d0f64ff318ee7d01": {
+    "title": "Selectivity- and Activity-Aware Catalyst Descriptors for CO$_2$ Hydrogenation on Alloy Nanocatalysts using Machine-Learned Force Fields",
+    "date_seen": "2026-06-26",
+    "tags": [
+      "catalysis",
+      "surface"
+    ]
+  },
+  "s2:58a762abae3323426f19e8b1a9d0675b10182572": {
+    "title": "Heuristic and machine learning methods for optimizing magnetorheological brake performance",
+    "date_seen": "2026-06-26",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:5966dfec615feed74f9db7ca0821bca16e440f0e": {
+    "title": "Generalizable machine learning potentials for quantum-accurate predictions of non-equilibrium behavior in 2D materials",
+    "date_seen": "2026-06-26",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:5b05663fca55956ffdb92dcdb8a2faf6575c9ecb": {
+    "title": "An Accurate Charge-Aware Machine-Learning Interatomic Potential for the Reduction of Li-Ion Battery Electrolytes in Solution.",
+    "date_seen": "2026-06-26",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:5d601756408f2764980be65c8c6151889680b3e8": {
+    "title": "AceFF: A State-of-the-Art Machine Learning Potential for Small Molecules",
+    "date_seen": "2026-06-26",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "dft"
+    ]
+  },
+  "s2:608dd41e981f57a471a20e5e6a9f7004885bf134": {
+    "title": "Molecular design of electrolyte additives for aqueous zinc-ion batteries via reinforcement learning and quantum chemistry calculations.",
+    "date_seen": "2026-06-26",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:60c997f77875c1649baf0a7d34c559bf8b01ca77": {
+    "title": "Scalable Machine Learning Force Fields for Macromolecular Systems Through Long-Range Aware Message Passing",
+    "date_seen": "2026-06-26",
+    "tags": [
+      "MLFF",
+      "dft"
+    ]
+  },
+  "s2:643ee384ee510af77e44fa15840b3f0686a77665": {
+    "title": "Decoding local framework dynamics in the ultra-small pore MOF MIL-120(Al) CO2 adsorbent using machine-learning potential",
+    "date_seen": "2026-06-26",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
   }
 }
