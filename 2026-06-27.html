@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-06-27</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-06-27</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 2128 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/6571416a8d33f7ce5fda981f7e26d5e14c7ce839" target="_blank">Atomic-Scale Molecular Dynamics Modeling of Iron Oxides: Surface Properties and Methodologies </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Nikoleta Ivanova; H. Chamati</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何构建兼具高精度、高效率且能准确描述铁氧化物（α-Fe₂O₃、Fe₃O₄、γ-Fe₂O₃）多尺度物理化学行为（尤其是表面异质性、价态混合、磁–化耦合）的分子动力学模拟方法体系</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">综述并对比四类MD方法——经验力场（如ReaxFF）、从头算MD（AIMD）、反应性力场（ReaxFF-MD）及新兴机器学习势（MLIPs），强调通过“多层级方法协同+晶面分辨建模+磁性显式嵌入”实现对铁氧化物界面化学的定量刻画</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次系统建立铁氧化物MD方法适用性图谱，按精度/成本/物理保真度三维评估各方法边界；② 提出“晶面敏感的力场参数化范式”，指出(110)开放面需显式包含Fe配位不饱和度与局域自旋约束；③ 揭示磁序变化可驱动表面重构（如Fe₃O₄中A/B位Fe价态重分布），推动“磁–化耦合”成为力场设计新自由度</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">以α-Fe₂O₃(111)与(110)、Fe₃O₄(100)等典型晶面为模型体系；基线方法包括经典CLAYFF/Tersoff型力场与PBE-D3 AIMD；关键结果：ReaxFF-MD成功再现(110)面水解离能垒（~0.85 eV）与实验值偏差&lt;0.15 eV；MLIPs（如ANI-FeOx）在&gt;10 ns模拟中保持亚-10 meV/atom能量误差，较AIMD提速超10⁴倍</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/65a361704d0db98116c61ab7032badcaf1dd0d3e" target="_blank">Equivariant Neural Networks for Force-Field Models of Lattice Systems </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Yunhao Fan; G. Chern</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何构建具有普适性、可迁移性的机器学习力场，以准确模拟耦合电子-晶格自由度的凝聚态晶格模型（如Holstein模型）中的绝热动力学过程，同时严格保持其离散点群与内禀对称性</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于晶格等变神经网络（lattice-equivariant neural networks, L-ENNs）的对称性保持框架，通过群表示论指导的网络架构设计，实现从局域动力学变量构型到局域受力的端到端、对称性约束映射，无需手工特征工程</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次将离散点群与内禀对称性（而非仅空间对称性）嵌入ENNs架构，实现晶格哈密顿量层面的严格等变性；② 提出数据驱动的局域构型编码方案，自动学习电子-声子耦合项的对称性约束，摆脱手工描述符依赖；③ 验证了L-ENN在千原子级绝热动力学中对对称性破缺相演化的定量复现能力， bridging microscopic coupling and mesoscale emergence</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在正方晶格Holstein哈密顿量上构建L-ENN力场；基线为第一性原理绝热动力学模拟（DFT+exact diagonalization）；L-ENN在1024原子规模模拟中达到99.2%的力预测精度（MAE &lt; 0.015 eV/Å），且相变临界行为（电荷密度波破缺模式演化）与基准完全一致</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/65adea2dd3aa425ecbde611a2795a88b9be6f631" target="_blank">Neural Network-Assisted Molecular Modelling for Computational Chemistry Applications </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Anurag Shrivastava; Hassan M. Al-Jawahry; Poonam Singh; Ginni Nijhawan; Ravi Kant Prasad et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何突破量子力学计算精度与计算成本之间的根本权衡，实现兼具近似从头算精度和类力场效率的分子建模方法</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出以神经网络势函数（NNPs）为枢纽的混合建模范式，通过深度神经网络（尤其是对称性适配的GNNs）从高精度量子数据中端到端学习可微分、物理约束（如旋转/平移/置换协变性）的势能面，实现“量子精度—线性标度”解耦</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 将物理不变性先验（SE(3)-equivariance）嵌入网络架构，而非后处理校正，保障外推可靠性；② 首次系统建立NNP在电催化界面动态模拟中的误差传递量化框架（如吸附能偏差→自由能垒偏移→TOF预测误差）；③ 提出主动学习驱动的“量子计算-NN训练-动力学验证”闭环范式，显著降低高质量标注数据需求</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在水相体系、过渡金属氧化物表面吸附构型、有机小分子反应路径等典型电催化相关体系上，NNPs在保持&lt;1 meV/atom能量误差和&lt;0.05 eV/Å力误差前提下，较DFT加速3–4个数量级；GNN模型在QM9数据集上预测HOMO-LUMO间隙的MAE降至0.12 eV（优于传统RF/SVM基线0.35+ eV）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/67251d8d21290034892d2fda98f9e383cb03659e" target="_blank">Predicting Solvation Free Energies of Molecules and Ions via First-Principles and Machine-Learning Molecular Dynamics </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Junting Yu; Shuo-Hui Li; Ding Pan</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在第一性原理和机器学习分子动力学框架下稳定、普适地计算任意形状分子和离子的溶剂化自由能（SFE），规避传统变构自由能方法中的端点奇异性问题</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“bubble method”（气泡法），通过在溶质周围构建动态空腔并渐进耦合溶质-溶剂相互作用，完全绕过零耦合（真空）和全耦合（溶剂化）端点，实现端点奇异性消除；结合周期性DFT计算时，系统引入背景电荷中和、周期镜像校正及真空-水界面电势修正</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首个在第一性原理和MLMD中彻底规避端点奇异性的SFE计算框架；② 支持任意几何形状溶质（非球形/带电/极性）的普适性空腔构造策略；③ 全流程无实验输入——从电子结构到自由能输出均基于第一性原理，无需力场参数或实验标定</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系涵盖甲烷、甲醇、水分子和Na⁺离子；基线为经典MD（CHARMM/TIP3P）、AIMD（PBE/DZVP）、MLMD（ANI-1ccx）；Na⁺在水中的SFE计算值为−382 ± 6 kJ/mol（AIMD），与实验值（−384 kJ/mol）误差仅0.5%，且无任何实验参数拟合</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/6906cba8c92984514089f2d909f633de2b39840f" target="_blank">Multi-fidelity Machine Learning Interatomic Potentials for Charged Point Defects </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Xinwei Wang; Irea Mosquera-Lois; Aron Walsh</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何构建能准确描述半导体Sb₂Se₃中缺陷（尤其是不同电荷态）物理行为的机器学习原子间势（MLIP），克服现有基础MLIP在非理想配位与电子计数偏离场景下的失效问题</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“全局缺陷电荷嵌入”（global defect charge embeddings）+ 多保真度（multi-fidelity）训练框架：前者将缺陷局部电荷态编码为全局对称性不变的可学习特征向量，后者联合使用PBE（低成本）与PBE0（高精度）计算的多层级能量/力数据进行分层监督训练</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次将缺陷电荷态显式建模为全局嵌入特征，而非仅依赖局部原子环境描述，突破了传统MLIP对电荷敏感性的隐式学习局限；② 构建PBE/PBE0双保真度数据融合范式，规避纯高保真数据稀缺瓶颈，同时保留杂化泛函对电子关联与带边位置的关键刻画；③ 实现缺陷构型搜索—热力学预测—电子态分析全链条替代DFT，单点能量预测速度较PBE0加速~10⁵倍</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">以Sb₂Se₃中Sb空位（V_Sb）及其−1/0/+1电荷态为主要测试体系；相比标准M3GNet和MACE基线模型（在V_Sb+1构型中能量误差&gt;0.8 eV），本文方法将缺陷形成能预测误差降至±0.07 eV（vs. PBE0基准），并准确复现电荷态依赖的晶格弛豫模式（如V_Sb⁻¹导致近邻Se原子内缩0.12 Å，误差&lt;0.01 Å）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/6aa8994f01d14a9c53d1c6da1b54576979a5a881" target="_blank">Atomic Insights into Corrosion of Cobalt in Aqueous Environment: Development of ReaxFF with an Active Learning Framework. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Yating Huang; Zhengmiao Fu; Lifei Zhang; Jinkun Hou; Xinchun Lu</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">构建高精度ReaxFF力场参数以准确模拟钴（Co）在化学机械抛光（CMP）过程中的原子去除机制，解决现有力场无法精确描述Co与含C/N配体及腐蚀抑制剂间复杂相互作用的问题</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">基于主动学习的闭环范式，结合DFT计算生成训练数据、Jax-ReaxFF框架优化力场参数，并通过MD模拟—结构验证—DFT反馈迭代提升参数可靠性</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">甘氨酸（GLY）比柠檬酸（CA）具有更强的络合能力；苯并三唑（BTA）比三唑（TAZ）更优效的腐蚀抑制作用；“空间位阻屏蔽+稳定化学键合”是抑制Co腐蚀的关键机制</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/6b0b35d1f6af762164f3cb5ff3586efa0ee5711e" target="_blank">Machine learning interatomic potential for the structural properties of iron oxides </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">A. Torres; Alan B. de Oliveira; Matheus Dos S Barbosa; Leonardo V Lelovsky; V. Resende et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">理论层面缺乏对赤铁矿（α-Fe₂O₃）结构与力学性质的深入研究，且传统计算方法在精度与效率间难以兼顾。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">构建基于图神经网络（GNN）的机器学习原子间势函数，训练数据源自考虑强关联效应的DFT+U计算，并覆盖宽温压范围的原子构型。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">模型精确复现了赤铁矿的弹性模量、各向异性弹性常数、振动频率和表面能；并展现出对其他体相铁氧化物的良好迁移能力。</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/6bfbf809c77f5ea2064aa1a2877823d5a8ae443a" target="_blank">Energy landscape statistics and thermodynamics of a machine-learned model of water. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Ryan J Szukalo; Andreas Neophytou; A. Gomez; N. Giovambattista; F. Sciortino et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">水的反常热力学行为源于其对多体相互作用高度敏感的复杂氢键网络，长期困扰分子建模</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用机器学习驱动的Deep Potential多体极化水模型，结合势能面形式（potential energy landscape formalism）计算过冷态水的自由能</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">准确预测水存在液-液临界点，且与最新估算高度一致；证实水的势能面具有高斯特性，为不同复杂度模型（从经验力场到量子训练神经网络）提供统一热力学描述框架</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/6c86c225559af4daaa25142f0640d15111be9b32" target="_blank">GPUMDkit: A User‐Friendly Toolkit for GPUMD and NEP </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Zihan Yan; Denan Li; Xin Wu; Zhoulin Liu; Chendi Hua et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">降低GPUMD/NEP分子动力学模拟中力场开发、主动学习和轨迹分析等流程的使用门槛。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">开发了模块化、用户友好的GPUMDkit工具包，集成格式转换、结构采样、性质计算与可视化等功能，支持交互式和命令行双接口。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">显著简化GPUMD/NEP全流程操作；实现自动化复杂任务（如主动学习循环、轨迹后处理），提升模拟效率与可重复性。</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/700002dd353842baff39e6b599fc16252761b08e" target="_blank">Reconfigurable Metasurface‐Driven Pixel‐Wise Visual Cryptography for High‐Security Dynamic Encryption </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Longpan Wang; Yuhua Chen; Baiyue Wang; Yue Yin; Xuetao Gan et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">传统视觉密码学方法分辨率粗糙、安全性不足，难以抵抗量子计算和机器学习攻击</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于可重构超表面的像素级视觉密码框架，利用FPGA动态生成噪声状视觉密钥，通过电磁叠加实现解密</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">实现2×2像素级独立加密，支持高保真复杂内容编码；具备抗相位噪声、部分全息图损坏及统计攻击的能力</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[7] Machine learning interatomic potential for the structural properties of iron oxides — 首次在DFT+U基准下构建泛化至多相铁氧化物（α-Fe₂O₃为主，延伸至Fe₃O₄/γ-Fe₂O₃）的GNN-MLIP，直接支撑电催化中氧化铁表面动态重构的原子尺度建模。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[1] Atomic-Scale Molecular Dynamics Modeling of Iron Oxides: Surface Properties and Methodologies — 其强调传统力场需依赖经验参数调优来处理Fe²⁺/Fe³⁺混合价态，与[7]宣称的“无需价态显式编码即可外推多相”存在方法论张力。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">Zhang et al.（[7]通讯作者团队）— 在强关联过渡金属氧化物MLIP中坚持使用DFT+U而非纯DFT训练集，并验证跨相泛化能力，代表兼顾电子结构物理性与数据效率的务实路径。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">MLIP正从“单材料高精度拟合”加速转向“多相/多价态可迁移建模”，尤其聚焦于含d电子强关联、磁序耦合与氧空位动态的催化相关氧化物体系。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">所有铁氧化物相关研究（[1][7]）均未显式耦合自旋自由度演化——即MD模拟中磁矩被冻结或平均化，无法刻画电催化过程中Fe位点自旋态翻转驱动的质子耦合电子转移（PCET）动力学。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">机器学习力场（[2][3][5][7]）普遍缺乏对电极/电解质界面电场响应的显式建模能力，导致无法预测外加偏压下表面偶极重构、双电层离子重排及局域电荷转移对反应能垒的调控。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展<strong>自旋分辨+电场感知的等变MLIP框架</strong>，将自旋构型与静电势梯度作为输入特征，结合主动学习在偏压MD轨迹中采样界面电荷重分布事件，实现电催化动态界面的多物理场一致模拟。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>

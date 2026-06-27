@@ -625,5 +625,91 @@
       "surface",
       "dft"
     ]
+  },
+  "s2:6571416a8d33f7ce5fda981f7e26d5e14c7ce839": {
+    "title": "Atomic-Scale Molecular Dynamics Modeling of Iron Oxides: Surface Properties and Methodologies",
+    "date_seen": "2026-06-27",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface"
+    ]
+  },
+  "s2:65a361704d0db98116c61ab7032badcaf1dd0d3e": {
+    "title": "Equivariant Neural Networks for Force-Field Models of Lattice Systems",
+    "date_seen": "2026-06-27",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:65adea2dd3aa425ecbde611a2795a88b9be6f631": {
+    "title": "Neural Network-Assisted Molecular Modelling for Computational Chemistry Applications",
+    "date_seen": "2026-06-27",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "catalysis",
+      "surface",
+      "generative"
+    ]
+  },
+  "s2:67251d8d21290034892d2fda98f9e383cb03659e": {
+    "title": "Predicting Solvation Free Energies of Molecules and Ions via First-Principles and Machine-Learning Molecular Dynamics",
+    "date_seen": "2026-06-27",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:6906cba8c92984514089f2d909f633de2b39840f": {
+    "title": "Multi-fidelity Machine Learning Interatomic Potentials for Charged Point Defects",
+    "date_seen": "2026-06-27",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:6aa8994f01d14a9c53d1c6da1b54576979a5a881": {
+    "title": "Atomic Insights into Corrosion of Cobalt in Aqueous Environment: Development of ReaxFF with an Active Learning Framework.",
+    "date_seen": "2026-06-27",
+    "tags": [
+      "surface",
+      "dft",
+      "active-learning"
+    ]
+  },
+  "s2:6b0b35d1f6af762164f3cb5ff3586efa0ee5711e": {
+    "title": "Machine learning interatomic potential for the structural properties of iron oxides",
+    "date_seen": "2026-06-27",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:6bfbf809c77f5ea2064aa1a2877823d5a8ae443a": {
+    "title": "Energy landscape statistics and thermodynamics of a machine-learned model of water.",
+    "date_seen": "2026-06-27",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:6c86c225559af4daaa25142f0640d15111be9b32": {
+    "title": "GPUMDkit: A User‐Friendly Toolkit for GPUMD and NEP",
+    "date_seen": "2026-06-27",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "active-learning",
+      "generative"
+    ]
+  },
+  "s2:700002dd353842baff39e6b599fc16252761b08e": {
+    "title": "Reconfigurable Metasurface‐Driven Pixel‐Wise Visual Cryptography for High‐Security Dynamic Encryption",
+    "date_seen": "2026-06-27",
+    "tags": [
+      "surface"
+    ]
   }
 }
