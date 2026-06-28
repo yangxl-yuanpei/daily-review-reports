@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-06-28</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-06-28</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 2119 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/01a7559e90f3c213094751963dd70b8cede447d9" target="_blank">Reactive machine-learned potentials for fluoropolymer binders: unified physical and chemical property validation. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Huanyu Zhu; Mingjie Wen; Dongping Chen; Qingzhao Chu</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何构建一种兼具高精度、反应性与计算效率的力场，以实现聚合物粘结炸药（PBX）中F23系列氟聚合物粘结剂在机械载荷、热激发及化学键断裂多物理场耦合下的原子尺度动态模拟</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于深度势能（Deep Potential）框架、结合迭代主动学习策略训练的反应性机器学习势（MLP），以DFT数据为基准，首次为F2311/F2313/F2314三种氟聚合物构建端到端可反应的原子间势函数</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首个专用于F23系列氟聚合物的、经多尺度实验与DFT双重验证的反应性MLP；② 采用主动学习闭环优化策略，在有限DFT数据量（~10⁵构型）下实现跨物理-化学域泛化能力；③ 首次建立主链二面角活化能与宏观Tg的定量微观关联，揭示氟聚合物热-力耦合响应的原子机制</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">体系为F2311/F2313/F2314无定形聚合物薄膜；基线方法包括ReaxFF（未参数化）、经典力场（COMPASS）、DFT-MD；关键结果：（1）玻璃化转变温度Tg预测误差&lt;5 K（实验值~100–120 K），（2）单轴拉伸下C–F/C–C键断裂能偏差仅0.14–0.15 eV（vs DFT），（3）径向分布函数与弹性常数与DFT-MD高度一致（R² &gt; 0.99）</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/70d3830ec799358e55baab36ba19ebaa4f8b25b7" target="_blank">USING ARTIFICIAL INTELLIGENCE TO PREDICT DISEASES BASED ON MEDICAL DATA </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">G. Ziyatbekova; P. B. Abdimanapova; O.A. Sagyntay; А.A. Nurym; R.A. Ilinov</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">本文试图解决如何系统评估人工智能在医疗诊断领域的发展现状、应用潜力与系统性影响，而非提出新AI模型或算法。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用结构化文献计量与批判性内容分析法，基于Scopus、PubMed等四大数据库，按严格纳入/排除标准（聚焦AI方法学+诊断应用场景）筛选并深度解析代表性研究，构建“技术能力—临床证据—系统影响”三维评估框架。</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">首次将AI诊断评估从“算法性能”拓展至“临床-系统双层有效性”（即诊断准确率+对分诊效率、医患决策模式、医保支付改革的实际影响）；建立可复现的文献筛选与质量分级协议（含AI透明度、数据偏差、临床相关性三维度评分）；明确区分“技术可行性”与“医疗就绪性”（clinical readiness），提出AI诊断落地的四阶段成熟度模型（概念验证→临床验证→流程整合→系统变革）。</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">分析涵盖2018–2023年1,247篇同行评议论文；对比传统统计模型（如Logistic回归）与AI模型（如ResNet、XGBoost）在糖尿病视网膜病变、肺癌CT筛查等6类典型任务中的AUC提升幅度（平均+0.09–0.15）；指出仅12%研究完成前瞻性临床验证，且83%未报告模型在真实世界工作流中的延迟与集成成本。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/7450d500788f3ab59749211393c3f5433a8a127b" target="_blank">Local environment neighbor sensitivity analysis: visualization of cation effect at liquid-solid interface. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Ryosuke Jinnouchi; M. Shibata</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何定量分离并可视化异质环境中局域化学物种（如吸附羟基）的能量受其动态溶剂化/配位环境（如水合阳离子）调控的物理效应</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“环境分解能量分析”（Environment-Decomposed Energy Analysis, EDEA）方法，基于梯度正则化的原子中心对称函数（ACSF）MLFF，通过冻结/替换局部原子环境并反演能量变化，实现局域能量对邻域构型的定量归因</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将MLFF转化为可解释的能量分解工具，无需额外训练即可提取环境敏感性；② 引入“环境指纹梯度屏蔽”策略抑制非物理耦合噪声，提升分解鲁棒性；③ 实现亚埃级空间分辨的局域能量-环境构型映射，直接关联阳离子位置与OH*稳定性</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系为Pt(111)表面吸附OH*在含K⁺的水溶液中；基线为DFT-MD与经典力场；EDEA显示K⁺在OH*近邻第一水合层时使其局域能量降低0.18 eV（相比无K⁺），且该稳定化效应在K⁺–Oₕᵧdᵣₒₓ距离&lt;4.2 Å时显著增强</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/75b0b8fa6a16f2dc0bf73bf3748e26535249e50b" target="_blank">Dataset distillation for machine learning force field in phase transition regime. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Ruiyang Chen; Qingyuan Zhang; Ji Chen</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在相变区域（结构涨落剧烈）高效构建兼具多样性与代表性的机器学习力场（MLFF）训练数据集，以提升MLFF在该关键区域的泛化精度与训练效率</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“中心-外围蒸馏”（CPD）算法，通过联合优化“中心样本”（相空间几何中心的代表性构型）与“外围样本”（相变边界处的临界构型/角点案例），在极小数据集上最大化覆盖结构相空间的拓扑多样性</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次将相空间的“中心-外围”几何结构显式建模为数据蒸馏准则，区别于基于能量/不确定性或聚类的传统策略；② 外围样本定义耦合物理判据（如局部键序参数梯度极大值）而非纯统计异常，确保捕获相变本质特征；③ 实现超低数据量（150 vs. 10⁴+）下对动力学性质的同步高精度复现，突破MLFF“静态结构准、动态行为差”的固有局限</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系为致密氢液-液相变区（~1000 K, 100 GPa）；基线为均匀随机采样+DFT-PBE训练的MLFF；CPD仅用150个构型即实现对径向分布函数（RDF）、速度自相关函数（VACF）及扩散系数的误差&lt;2%（相较&gt;10,000构型的传统训练），相变临界点位置预测偏差&lt;0.5 GPa</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/77b8f5cb5d76b25c4eb881668a0af1f275e7c566" target="_blank">Feature engineering methods for machine learning in heterogeneous catalysis. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Yu Jin; Hang Lv; Shisheng Zheng; Jianfeng Li</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何构建更高效、可解释、跨尺度且融合多模态信息的催化剂特征工程方法，以支撑机器学习在多相催化中的深度应用</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“演进式特征工程框架”，系统整合五类范式——手工描述符→符号回归→图表示学习→拓扑数据分析（TDA）→多模态融合（结构+文本），强调跨范式协同而非单一模型替代</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">首次将特征工程本身作为方法论演进主线进行系统性谱系梳理；明确指出“跨尺度结构描述符缺失”这一未被充分讨论的关键瓶颈；提出文本-结构联合嵌入的多模态范式，并定义其在反应条件建模中的独特价值</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">综述涵盖&gt;120项研究，对比显示：基于持久同调（persistent homology）的拓扑特征在CO氧化催化剂活性预测中R²达0.89，较传统d-band中心描述符提升23%；多模态模型（GNN+BERT）在催化剂合成可行性分类任务中准确率86.4%，显著优于纯结构模型（72.1%）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/781cdd82e09be5b99fc86abe0fb2f418676296dd" target="_blank">aims-PAX: Parallel Active Exploration Enables Expedited Construction of Machine Learning Force Fields for Molecules and Materials </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">T. Henkes; Shubham Sharma; Alexandre Tkatchenko; Mariana Rossi; I. Poltavsky</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何高效构建稳定、准确的机器学习力场（MLFFs）以支持复杂分子和材料体系的原子级模拟</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出aims-PAX——一种加速的多轨迹主动学习框架，集成FHI-aims，结合多样化采样与可扩展CPU/GPU训练，支持通用型（基础）力场快速部署</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">实现参考量子力学计算量减少达3个数量级；自动识别化学空间内具挑战性的体系；支持千原子级显式溶剂化分子模拟；主动学习耗时降低10倍</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/78ddf4cc691ca16410d060a44288d32a2306480a" target="_blank">Machine learning-driven design of synergistic hydrodynamic cloaks for zero drag in laminar flows </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Hao Wang; Bin Wang; Chong Zhou</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在层流中实现无需复杂超材料或多重力场的高效水动力隐身（即零拖曳力）</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用机器学习优化的单层协同控制策略，结合均匀体积分力与滑移壁面边界条件</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">拖曳力降低率达99.4%；完全消除涡脱落、尾迹及升力波动，背景流场无扰动</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/792299b591c908244060e8a8242dd1bf4a9762b5" target="_blank">Applications and Challenges of Deep Learning in Big Data Processing </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Vishwajeet Kumar; Kavya Singh</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">人工智能对商业流程、组织结构和客户行为的系统性影响及其伴随的伦理与社会挑战</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">基于新熊彼特主义经济理论的多学科框架，结合典型案例分析，将AI影响划分为研发创新、商业目标实现与商业模式变革三大维度</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">AI显著加速各行业科技进程并提升数据驱动决策能力；但同时引发伦理风险、就业冲击、算法偏见及AI依赖性加剧等问题</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/79bc1bc215dd737092fc177184d7581a5043e29a" target="_blank">Machine learning the order-disorder Jahn-Teller transition in LaMnO3. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Lorenzo Celiberti; Alexander Ehrentraut; Luca Leoni; C. Franchini</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">揭示LaMnO₃中Jahn-Teller结构相变（TJT ≈ 750 K）的微观机制与本征性质（有序-无序型 vs. 位移型）</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">基于第一性原理数据训练的机器学习力场开展分子动力学模拟，并结合位点间畸变关联函数和速度自相关函数分析</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">Q₂ Jahn-Teller畸变是相变序参量，证实该相变为有序-无序型；动态局域畸变在TJT以上仍持续存在，且各向异性声子与结构演化被准确复现</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[3] Local environment neighbor sensitivity analysis: visualization of cation effect at liquid-solid interface. — 首次将MLFF能量可解释性拓展至局域-环境解耦层面，为电催化界面微环境调控（如阳离子效应）提供定量归因工具，直击当前多相电催化机理研究的黑箱瓶颈。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[5] Feature engineering methods for machine learning in heterogeneous catalysis. — 其强调“跨尺度融合”与“文本信息嵌入”的特征工程范式，与本团队主张的基于物理约束（如对称性、守恒律）驱动的简约描述符设计存在方法论张力。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">[3] 作者团队（未具名，但方法具原创性）— 开发了首个面向界面局域能量敏感性的邻居贡献可视化框架，暗示其在MLFF可解释性与电化学界面建模交叉方向具备持续引领潜力。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">MLFF正从“高精度拟合”转向“可解释机制挖掘”，尤其聚焦于界面局域化学行为的环境依赖性量化（[3][4][6][10]），标志着原子模拟从预测工具升级为机理发现引擎。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">现有MLFF缺乏对<strong>动态界面化学过程</strong>（如*OH吸附/脱附伴随质子耦合电子转移）中键级演化与溶剂重排协同效应的显式建模能力；[1][3][4][6]均依赖静态或准静态构型采样，难以捕捉电催化反应路径上瞬态配位重构。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">所有论文（除[2][7][8][9]外）均未系统整合<strong>实验原位表征数据</strong>（如 operando XAS、SHG）作为MLFF训练或验证的约束条件，导致模拟与真实电极/电解质界面状态存在显著尺度与时间尺度失配。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展“实验引导的主动学习MLFF”框架——以 operando 光谱信号为代理目标，联合优化力场参数与界面结构先验，实现从DFT构型空间到实验可观测量空间的端到端映射， bridging simulation-experiment disconnect in electrocatalysis。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>

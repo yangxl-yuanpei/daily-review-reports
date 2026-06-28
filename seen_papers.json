@@ -711,5 +711,81 @@
     "tags": [
       "surface"
     ]
+  },
+  "s2:01a7559e90f3c213094751963dd70b8cede447d9": {
+    "title": "Reactive machine-learned potentials for fluoropolymer binders: unified physical and chemical property validation.",
+    "date_seen": "2026-06-28",
+    "tags": [
+      "electrochemistry",
+      "dft",
+      "active-learning"
+    ]
+  },
+  "s2:70d3830ec799358e55baab36ba19ebaa4f8b25b7": {
+    "title": "USING ARTIFICIAL INTELLIGENCE TO PREDICT DISEASES BASED ON MEDICAL DATA",
+    "date_seen": "2026-06-28",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:7450d500788f3ab59749211393c3f5433a8a127b": {
+    "title": "Local environment neighbor sensitivity analysis: visualization of cation effect at liquid-solid interface.",
+    "date_seen": "2026-06-28",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:75b0b8fa6a16f2dc0bf73bf3748e26535249e50b": {
+    "title": "Dataset distillation for machine learning force field in phase transition regime.",
+    "date_seen": "2026-06-28",
+    "tags": [
+      "MLFF",
+      "dft"
+    ]
+  },
+  "s2:77b8f5cb5d76b25c4eb881668a0af1f275e7c566": {
+    "title": "Feature engineering methods for machine learning in heterogeneous catalysis.",
+    "date_seen": "2026-06-28",
+    "tags": [
+      "catalysis"
+    ]
+  },
+  "s2:781cdd82e09be5b99fc86abe0fb2f418676296dd": {
+    "title": "aims-PAX: Parallel Active Exploration Enables Expedited Construction of Machine Learning Force Fields for Molecules and Materials",
+    "date_seen": "2026-06-28",
+    "tags": [
+      "MLFF",
+      "active-learning",
+      "generative"
+    ]
+  },
+  "s2:78ddf4cc691ca16410d060a44288d32a2306480a": {
+    "title": "Machine learning-driven design of synergistic hydrodynamic cloaks for zero drag in laminar flows",
+    "date_seen": "2026-06-28",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:78edced9580eb226464b410551e00a431db90d85": {
+    "title": "Applications and Challenges of Deep Learning in Big Data Processing",
+    "date_seen": "2026-06-28",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:792299b591c908244060e8a8242dd1bf4a9762b5": {
+    "title": "Applicability of Artificial Intelligence (AI) Tools to Improve Business\nDevelopment: A Systematic Review",
+    "date_seen": "2026-06-28",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:79bc1bc215dd737092fc177184d7581a5043e29a": {
+    "title": "Machine learning the order-disorder Jahn-Teller transition in LaMnO3.",
+    "date_seen": "2026-06-28",
+    "tags": [
+      "general"
+    ]
   }
 }
