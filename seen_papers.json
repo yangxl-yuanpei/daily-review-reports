@@ -787,5 +787,81 @@
     "tags": [
       "general"
     ]
+  },
+  "s2:01dc19463831965aeeee95256238a2bd6d0af384": {
+    "title": "Low-power analogue neural networks with trainable nonlinear connections for continuous control",
+    "date_seen": "2026-06-29",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:7ac9eb8db203381758c8b885fb274c314d3425f1": {
+    "title": "Energy-Driven Innovations in Computational De Novo Protein Engineering.",
+    "date_seen": "2026-06-29",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:7ec99c1c0a689fa125daa86ee511aab464c20fd8": {
+    "title": "Weakening atmospheric control of Arctic sea ice radiative forcing following the mid-2000 s regime shift",
+    "date_seen": "2026-06-29",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:7ed27abedf6a66d77b8923e2ff09c78c8e7123f0": {
+    "title": "Origin of Reduced Coercive Field in ScAlN: Synergy of Structural Softening and Dynamic Atomic Correlations",
+    "date_seen": "2026-06-29",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:7ee4c44d99b455258b28273f5b5f0ff36aa253b2": {
+    "title": "From O adsorption to Fe oxide growth: Benchmarking reactive force fields and universal machine learning interatomic potentials against DFT for BCC Fe surface oxidation",
+    "date_seen": "2026-06-29",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:80d6ed0eeede401895f020cadbb7ef335c4e60a3": {
+    "title": "Mixture of Experts Framework in Machine Learning Interatomic Potentials for Atomistic Simulations",
+    "date_seen": "2026-06-29",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "catalysis",
+      "surface"
+    ]
+  },
+  "s2:8199958845742d32e0467ba4875bf4f14705c5e3": {
+    "title": "Learning Thermal Response Forces: A Method for Extending the Thermodynamic Transferability of Coarse-Grained Models via Machine-Learning",
+    "date_seen": "2026-06-29",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:851b6dea03fb79b06f8a0db645a6c8d2acc00ed2": {
+    "title": "CMD‐FEP: Machine‐Learned Free‐Energy Prediction for Efficient Screening of Material Interfacial Binder",
+    "date_seen": "2026-06-29",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:87ec477b4727e4f0d0c95c030195c5c5a11f54f9": {
+    "title": "A Pretrain-Finetune-Distill framework for machine learning force fields in doping engineering of solid-state electrolytes",
+    "date_seen": "2026-06-29",
+    "tags": [
+      "MLFF",
+      "dft"
+    ]
+  },
+  "s2:88d0b23082b3639d861396fdfd08debfa9573756": {
+    "title": "From Quantum Mechanics to Coarse-Grained Models: Bridging the Gap toward Polymer Rational Design",
+    "date_seen": "2026-06-29",
+    "tags": [
+      "generative"
+    ]
   }
 }

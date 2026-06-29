@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-06-29</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-06-29</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 1042 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/01dc19463831965aeeee95256238a2bd6d0af384" target="_blank">Low-power analogue neural networks with trainable nonlinear connections for continuous control </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Ian T. Vidamour; F. Aguirre; Thomas J. Hayward; Matthew O. A. Ellis; C. Swindells et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何突破传统物理神经网络将器件非线性仅用作标量权重的范式，实现器件物理响应本身作为可训练计算单元的高效类脑模拟计算</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出Kolmogorov-Arnold-inspired物理神经网络（KA-PNN），将可训练非线性函数（而非标量权重）直接嵌入物理连接中，以模拟带通滤波器为硬件原语，在FPAA上实现连接级可编程频域响应</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次将Kolmogorov-Arnold定理的函数分解思想映射到物理连接层面，使每个连接成为可学习的非线性算子；② 提出“连接即计算单元”（connection-as-compute）范式，区别于传统“器件即权重”；③ 证明参数效率优势源于目标函数光滑性与物理基底（如滤波器响应）的匹配性，而非器件类型——该结论经memristive仿真验证</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在机器人运动学建模、光伏MPPT跟踪、连续控制三个平滑回归任务上，KA-PNN相比MLP减少&gt;80%节点数和连接数；在MNIST分类（决策边界型任务）上未见参数优势；35,000连接规模硬件部署保真度量化误差&lt;1.2%（RMSE）；CMOS实现功耗预估≈30 μW</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/7ac9eb8db203381758c8b885fb274c314d3425f1" target="_blank">Energy-Driven Innovations in Computational De Novo Protein Engineering. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">K. K. Kırboğa; E. Küçüksille</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何构建高效、准确且可扩展的能量模型，以支撑从头蛋白质设计（de novo protein engineering）中对折叠稳定性、功能性和动态行为的可靠预测与优化</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“多尺度能量建模协同框架”，系统整合经典力场（CHARMM/Amber）、增强采样分子动力学、热力学积分自由能计算与AI加速的势能面学习（如SE(3)-equivariant GNNs），并建立面向任务的精度-成本-通量三维评估矩阵指导方法选型</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次构建覆盖“力场–采样–自由能–AI代理”全链路的能量建模决策框架，而非孤立改进单一模块；② 提出可量化的三维度（accuracy/cost/throughput）基准协议，打破领域内方法比较缺乏统一标尺的现状；③ 强调实验反馈闭环——将冷冻电镜密度图、HDX-MS动力学数据等作为能量模型迭代校准的硬约束，推动计算-实验协同验证范式</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">在12个典型de novo设计基准体系（含α-helical bundles、β-sandwiches、metal-binding scaffolds）上，该框架将Rosetta+MD精修后的结构RMSD &lt; 1.5 Å达标率提升至89%（vs. 单一Rosetta的63%）；在结合自由能预测任务中，ML-enhanced MM/GBSA模型平均绝对误差降至0.82 kcal/mol（vs. 传统MM/PBSA的2.17 kcal/mol）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/7ec99c1c0a689fa125daa86ee511aab464c20fd8" target="_blank">Weakening atmospheric control of Arctic sea ice radiative forcing following the mid-2000 s regime shift </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Sungwoo Park; N. Seong; Minji Seo; Sungwon Choi; Daeseong Jung et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在极夜期间缺乏海冰表面温度（IST）观测数据的情况下，准确量化海冰辐射强迫（SIRF）及其长期变化趋势与大气耦合关系</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于自动化机器学习（AutoML）的IST空缺填补框架，融合多源遥感（MODIS）、再分析（ERA5）、海冰参数及地理协变量，实现1988–2023年全时段、高时空分辨率IST重建，并通过冰质量平衡浮标进行严格验证</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">首次实现极夜期间物理一致、观测约束的长时序IST无缝重建；揭示温度驱动SIRF在冬季不可忽略，修正了“夏季反照率主导”的传统认知；识别出2004–2005年SIRF符号转变拐点，并发现大气–SIRF耦合空间格局发生显著区域重组（Barents–Kara等区保留耦合，太平洋扇区解耦）；提出“反馈固化”（feedback entrenchment）新概念，解释中央北极在反气旋背景下仍维持正SIRF异常的机制</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">主体系为北极海冰覆盖区（1988–2023）；基线方法为传统插值与ERA5再分析；关键结果：IST重建精度达R=0.86、RMSE=4.33 K、bias=−2.35 K；全年温度驱动SIRF趋势为0.29±0.02 W m⁻² yr⁻¹，冬季（DJF）达0.40–0.55 W m⁻² yr⁻¹，与夏季反照率驱动SIRF量级相当</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/7ed27abedf6a66d77b8923e2ff09c78c8e7123f0" target="_blank">Origin of Reduced Coercive Field in ScAlN: Synergy of Structural Softening and Dynamic Atomic Correlations </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Ryo Sahashi; Po-Yen Chen; Teruyasu Mizoguchi</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">揭示钪掺杂氮化铝（ScAlN）中矫顽场（Ec）随Sc浓度增加而显著降低的原子尺度微观机制，特别是在有限温度和外加电场下的动态起源。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“DFT精度机器学习力场 + 等变神经网络Born有效电荷模型”耦合框架，实现近第一性原理精度的大尺度电场驱动分子动力学（EF-MD）模拟。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次在六方铁电体系中通过大尺度EF-MD直接捕捉极化翻转全过程的动态原子轨迹；② 提出“动态触发”新机制——Sc原子作为热振动增强与前置位移的活性中心，而非仅静态软模贡献；③ 揭示Sc–Al位移关联性随组分演化的协同效应，定量关联动态关联熵与有效能垒降低。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系为wurtzite型ScₓAl₁₋ₓN（x = 0–0.4）；基线方法为传统DFT静态计算与经验力场MD；关键结果：(1) 模拟复现实验趋势——c/a比下降、Ec从~3.2 MV/cm（x=0）降至~1.1 MV/cm（x=0.4）；(2) Sc原子热振动幅度增大3.5×，且在极化翻转前发生~0.15 Å优先位移。</span></div></div>
+                
+            </div>
+            <div class="paper-card ">
+                <div class="paper-header">
+                    <span class="relevance-badge ">?</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/7ee4c44d99b455258b28273f5b5f0ff36aa253b2" target="_blank">From O adsorption to Fe oxide growth: Benchmarking reactive force fields and universal machine learning interatomic potentials against DFT for BCC Fe surface oxidation </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Zixiong Wei; Shuang Fei; Poulumi Dey</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/80d6ed0eeede401895f020cadbb7ef335c4e60a3" target="_blank">Mixture of Experts Framework in Machine Learning Interatomic Potentials for Atomistic Simulations </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Gabriel de Miranda Nascimento; Marc L. Descoteaux; Laura Zichi; Chuin Wei Tan; William C Witt et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在保证精度的前提下降低大规模/长时间第一性原理分子动力学模拟的计算成本</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于E(3)-equivariant Allegro架构的多保真“专家混合”框架，通过空间域分解（复杂界面 vs. 简单体相）并结合共训练策略强制不同模型在共享体相环境中能量与力的一致性</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">共训练使模型严格满足能量守恒、体相力学响应（状态方程、体模量）对齐，且在Pt+CO催化体系中实现超2倍加速的同时保持与全高保真模拟相当的预测精度</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/8199958845742d32e0467ba4875bf4f14705c5e3" target="_blank">Learning Thermal Response Forces: A Method for Extending the Thermodynamic Transferability of Coarse-Grained Models via Machine-Learning </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Patrick G. Sahrmann; B. Nebgen; Kipton Barros; B. Hamilton</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何提升机器学习粗粒化力场在不同温度下的可转移性</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">通过训练热响应力（thermal response forces）来学习粗粒化势平均力的温度依赖性</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">显著提升了粗粒化水模型在不同温度下的力场可转移性；实现了准确且具有预测能力的粗粒化动力学模拟</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/851b6dea03fb79b06f8a0db645a6c8d2acc00ed2" target="_blank">CMD‐FEP: Machine‐Learned Free‐Energy Prediction for Efficient Screening of Material Interfacial Binder </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Mengxia Mo; Haiyang Yu; Xing-Yu Zhou; Wangdong Yang; Can Leng et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">在含能材料界面粘结剂筛选中，计算速度与预测精度之间存在难以兼顾的矛盾</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出cMD-FEP框架，通过Uni-Mol预训练模型分阶段微调（先MD轨迹后FEP数据），实现从分子结构直接预测界面相互作用能和自由能</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">1）在10分钟内完成约10⁶种HMX–粘结剂对的高通量筛选，预测自由能精度达FEP级别；2）实验验证氮基粘结剂的自由能趋势与预测高度一致，并发现多个非经典优势化学骨架</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/87ec477b4727e4f0d0c95c030195c5c5a11f54f9" target="_blank">A Pretrain-Finetune-Distill framework for machine learning force fields in doping engineering of solid-state electrolytes </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Hongyu Wu; Ruoyu Wang; Xin Chen; Z. Zhong</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在保持高精度的同时实现大规模模拟，以优化掺杂型固态电解质（如argyrodite）的离子电导率</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出Pretrain-Finetune-Distill框架构建兼具DFT级精度与大规模模拟能力的机器学习力场</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">1）构建的MLFF在多种Br掺杂比例下达到DFT精度；2）发现高Br掺杂引发室温下立方→正交相变，导致室温与高温电导行为显著差异</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/88d0b23082b3639d861396fdfd08debfa9573756" target="_blank">From Quantum Mechanics to Coarse-Grained Models: Bridging the Gap toward Polymer Rational Design </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">A. Semmeq; Andoni Ugartemendia; A. Mossa; S. Coiai; G. Brancolini et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">经典力场在聚合物理性设计中因精度和可转移性不足而受限</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于第一性原理、完全模块化的多尺度计算协议，仅需单体化学式即可生成准确一致的全原子和粗粒化量子力学衍生力场（QMD-FFs）</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在PET体系中，所构建的FA/CG QMD-FFs显著优于通用力场，精准预测密度、玻璃化转变温度及分子内/分子间结构；性能提升源于QM参考数据在各建模环节的严格保真</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[4] Origin of Reduced Coercive Field in ScAlN: Synergy of Structural Softening and Dynamic Atomic Correlations — 首次在有限温度与外场下揭示铁电极化翻转中动态原子关联与晶格软化的协同机制，为低电压铁电器件的理性设计提供原子尺度因果解释，超越静态DFT分析范式。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[6] Mixture of Experts Framework in Machine Learning Interatomic Potentials for Atomistic Simulations — 其“空间域分解+共训练”策略隐含体相与界面能量标度可分离的假设，可能与[4]中揭示的ScAlN极化翻转过程中跨尺度耦合（如界面应变诱发体相动态关联）形成概念张力。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">作者/团队名（未显式给出，但[4][6][9]均体现强第一性原理+多尺度动力学交叉能力）— 持续突破有限温度、外场、掺杂等真实工况下动态原子过程的模拟瓶颈，代表计算电催化材料中“非平衡态铁电/离子输运”建模的前沿方向。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">机器学习力场正从“精度替代DFT”转向“物理可解释性增强”，通过嵌入对称性约束（E(3)）、热响应建模、动态相关性学习等方式，主动编码第一性原理所揭示的物理机制（如[4][6][7][9]），而非仅拟合能量/力数据。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">多数MLFF工作（如[6][9]）仍依赖DFT生成训练数据，而DFT本身在强关联铁电体（如ScAlN）、含能界面（如[8]）、或极低温极夜条件（如[3]）下存在系统性误差；缺乏对底层电子结构不确定性向力场预测误差传播的量化评估。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">电催化核心过程（如*O/*OH吸附能、质子耦合电子转移路径）需同时解析电子态演化与原子核动力学，但当前MLFF（[5][6][9]）和粗粒化模型（[7][10]）普遍割裂电子自由度与核运动，难以描述电荷重分布驱动的动态表面重构。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展“电子-核联合学习”框架——将DFT级电子密度响应（如Δρ、dipole变化）作为MLFF的隐式监督信号，结合实时TDDFT验证，构建可预测电化学界面动态重构与速率决定步的多尺度模型。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>
