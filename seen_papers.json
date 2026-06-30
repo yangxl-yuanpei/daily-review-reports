@@ -863,5 +863,78 @@
     "tags": [
       "generative"
     ]
+  },
+  "s2:0012031723cb7c82070f0f4f97be7072cabcd603": {
+    "title": "Machine learning enhanced optical spectroscopy for breast cancer diagnosis: A review",
+    "date_seen": "2026-06-30",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0025acf551bbe6cab931c75b239c8b0ce226f22f": {
+    "title": "Digital Twin Brain: Generating Multitask Behavior from Connectomes for Personalized Therapy",
+    "date_seen": "2026-06-30",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:002858632fddef685bc03b0a91ba52cdb748ece2": {
+    "title": "RABEM: Risk-Adaptive Bayesian Ensemble Model for Credit Card Fraud Detection",
+    "date_seen": "2026-06-30",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:002e9c894969090241e875f40be77afd4f1ed082": {
+    "title": "Lightweight CNN-Based Intrusion Detection for CAN Bus Networks",
+    "date_seen": "2026-06-30",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:003e6b6f7bd3c400b59daa5054b9a0ac7dec3888": {
+    "title": "GRACE Downscaling and Machine Learning Models for Groundwater Prediction: A Systematic Review",
+    "date_seen": "2026-06-30",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:00429050913c7a2b95a755a56f8d75db3ac5e9f9": {
+    "title": "Transformer-CNN Fusion for Sustainable and Equitable Lung Nodule Detection and Clinical Classification in Computed Tomography",
+    "date_seen": "2026-06-30",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00506f709ede9c21dca114a78a1b18612f9db61d": {
+    "title": "All-atomistic Transferable Neural Potentials for Protein Solvation",
+    "date_seen": "2026-06-30",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00550fb9fc74eb1e5fb58033168951f1d4156a1e": {
+    "title": "Advancing brain-computer interfaces with generative AI: A review of state-of-the-art and future outlook",
+    "date_seen": "2026-06-30",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "generative"
+    ]
+  },
+  "s2:00670eb1f63cbf24fb963c92b1c1b960e6c87175": {
+    "title": "A Comparative Evaluation of Deep Learning Models for Road Accident Detection Using CCTV Images and Dashcam Videos",
+    "date_seen": "2026-06-30",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00672f0709cd78b7ccbc5f744f944738f61f3242": {
+    "title": "A Hybrid Ensemble Learning Approach for Robust Tumor Detection and Classification",
+    "date_seen": "2026-06-30",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
