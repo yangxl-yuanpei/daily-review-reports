@@ -936,5 +936,83 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:89ccfa9adbe294fc7828190687f827310f659326": {
+    "title": "Machine learning interatomic potentials with accurate long-range interactions for molecular dynamics collision simulations of atmospherically-relevant molecules",
+    "date_seen": "2026-07-01",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:89d96379f01d3668c6a164434b9e1ce0e0fcd537": {
+    "title": "Learning Hamiltonian Flow Maps: Mean Flow Consistency for Large-Timestep Molecular Dynamics",
+    "date_seen": "2026-07-01",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:89e6c72349beb709232fc09fb6cf1faff253e236": {
+    "title": "Molecular Dynamics Study on the Mechanism of Coal High-Temperature Pyrolysis Based on Machine Learning Potential",
+    "date_seen": "2026-07-01",
+    "tags": [
+      "electrochemistry",
+      "dft"
+    ]
+  },
+  "s2:8b30060ca3b557528d06f48efa2ab7bca79d3446": {
+    "title": "Integrating Quantum Chemistry and Machine Learning for Accurate Modelling of Aromaticity, Hydrogen Bonding, and Metal Co-Factors",
+    "date_seen": "2026-07-01",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "dft"
+    ]
+  },
+  "s2:8f076eb2bb53125384d29a127e0bece6878d441f": {
+    "title": "AI-driven analysis of EMHD Carreau–Maxwell electroosmotic nanofluid flow incorporating activation energy effects",
+    "date_seen": "2026-07-01",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:8f6046aaa796ffa551870c2de4373adc84231d71": {
+    "title": "Slow AI",
+    "date_seen": "2026-07-01",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:908a365d40ef723ccc709fb02046ab23880d204c": {
+    "title": "Molecular Dynamics Simulation of Nano-Aluminum: A Review on Oxidation, Structure Regulation, and Energetic Applications",
+    "date_seen": "2026-07-01",
+    "tags": [
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:98981c6ba39615bba46de9ab38125ada1d7ddd06": {
+    "title": "Machine learning forecasting of electroosmotic MHD flow of a buoyancy-driven ternary nanofluid in converging and diverging channels",
+    "date_seen": "2026-07-01",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:9949943d149750e344c0ccd03bf8617551560514": {
+    "title": "Organic Materials of Tomorrow: Horizons of Artificial Intelligence.",
+    "date_seen": "2026-07-01",
+    "tags": [
+      "MLFF",
+      "active-learning",
+      "generative"
+    ]
+  },
+  "s2:99a4df91df73186876b8116c9dc387cfd3977d3e": {
+    "title": "Achievements and Sustainability",
+    "date_seen": "2026-07-01",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
