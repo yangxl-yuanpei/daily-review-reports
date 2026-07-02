@@ -1014,5 +1014,82 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:95ace2b233b675893d7f73c795aaf2479289d75d": {
+    "title": "Infrared nanoscopy for subcellular chemical imaging",
+    "date_seen": "2026-07-02",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:99f5a6442bb93f6f6e67735f8274e311d11f29b1": {
+    "title": "MeAJOR: Merged email assets from joint open-source repositories",
+    "date_seen": "2026-07-02",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:9b4512dcc8da08774ab0faaf3b081b8b44e6a87b": {
+    "title": "High-quality, high-information datasets for universal atomistic machine learning",
+    "date_seen": "2026-07-02",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "dft",
+      "generative"
+    ]
+  },
+  "s2:9bd703cd31982a9ded2250eb6a275f0c825a0ce7": {
+    "title": "Decoupling structural and bonding effects on ferroelectric switching in ScAlN via molecular dynamics under an applied electric field",
+    "date_seen": "2026-07-02",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:9e95c3d23b64072f2e883d010d464656ed639624": {
+    "title": "ASH: A Multi‐Scale, Multi‐Theory Modeling Program",
+    "date_seen": "2026-07-02",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface",
+      "generative"
+    ]
+  },
+  "s2:9efe46ddc2b640d51821aae730c95c478699aaf6": {
+    "title": "Learning Electronic Polarization in Molecular Systems: Vibrational Spectroscopy of Ethanol–Water Mixtures",
+    "date_seen": "2026-07-02",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:9f256af324775237366dd192724f12cb7a464527": {
+    "title": "Training a force field for proteins and small molecules from scratch",
+    "date_seen": "2026-07-02",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00750a8d53d44ad5984042755f6ec59f5fb4e376": {
+    "title": "ARTIFICIAL INTELLIGENCE AND ROBOTIZATION IN THE SYSTEM OF ECONOMIC ACTIVITY OF HOSPITALITY INSTITUTIONS: AN INNOVATIVE ASPECT OF DIGITAL TRANSFORMATIONS",
+    "date_seen": "2026-07-02",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:007cccc964c2e7412bd29ef9e8f296cd3504b8d3": {
+    "title": "CONSTRUCTION OF A BLSTM NEURAL NETWORK TRAINED ON THE UNSW0NB15 DATASET FOR THREAT DETECTION IN IOT NETWORKS",
+    "date_seen": "2026-07-02",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:008026abc922a3fb9de07bc1dcd4c6f61a5d4749": {
+    "title": "High-fidelity image reconstruction from dynamic nonlinear speckles mediated by chlorophyll solution using deep learning",
+    "date_seen": "2026-07-02",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }

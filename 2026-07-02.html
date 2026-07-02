@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-07-02</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-07-02</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 3081 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/95ace2b233b675893d7f73c795aaf2479289d75d" target="_blank">Infrared nanoscopy for subcellular chemical imaging </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Katerina Kanevche; David J. Burr; Janina Drauschke; J. Kozuch; Carlos R. Baiz et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在纳米尺度上实现无标记、化学特异性的生物样品红外成像与光谱分析，突破传统红外显微镜的衍射极限限制</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用散射型扫描近场光学显微镜（s-SNOM）与纳米级傅里叶变换红外光谱（nano-FTIR）联用技术，利用AFM探针局域增强光学近场并散射探测，通过干涉解调提取振幅/相位信号，实现波长无关、~10–20 nm空间分辨率的红外吸收映射</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次系统综述s-SNOM/nano-FTIR在单细胞代谢动态监测中的定量应用范式；② 提出“近场干涉解调+参考臂相位锁定”方案显著抑制环境噪声，使信噪比提升3–5倍；③ 开创性整合深度学习（U-Net分割+1D-CNN谱识别）用于稀疏采样数据重建与弱信号增强，减少扫描时间达70%</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在多种原代细胞（神经元、癌细胞、免疫细胞）及组织切片上成功解析脂滴分布、核膜轮廓、线粒体嵴结构等亚细胞超微结构；对比常规FTIR显微镜（分辨率≈3 μm），nano-FTIR将空间分辨率提升&gt;150倍；结合PCA-LDA机器学习分析，单细胞代谢状态分类准确率达92%（基于C–H伸缩振动谱区）</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/99f5a6442bb93f6f6e67735f8274e311d11f29b1" target="_blank">MeAJOR: Merged email assets from joint open-source repositories </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">F. Cardoso; João Vitorino; Paulo Mendes; Eva Maia; Isabel Praça</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">构建高质量、多样化、隐私合规的多源钓鱼邮件数据集，以支撑鲁棒的机器学习钓鱼检测模型训练</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">MeAJOR Corpus——通过系统性整合10个开源钓鱼邮件仓库，采用标准化令牌匿名化（保留语法/语义结构）与多维统计标注，构建首个大规模、多战术、隐私安全的统一语料库</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首个经严格匿名化且保留上下文语义的多源钓鱼邮件统一语料库；② 显式标注邮件级战术标签（如credential harvesting、brand impersonation等12类）；③ 提供配套统计特征集（URL密度、HTML熵、词频偏移等）支持可解释性分析</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在包含108,685封邮件（含钓鱼/合法双类别）的MeAJOR上，对比SVM、BERT、PhishBERT等基线模型，PhishBERT在F1-score上达0.923（+4.7% vs. prior best），跨战术迁移测试准确率提升12.1%</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/9b4512dcc8da08774ab0faaf3b081b8b44e6a87b" target="_blank">High-quality, high-information datasets for universal atomistic machine learning </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Cesare Malosso; Filippo Bigi; Paolo Pegolo; Joseph W Abbott; Philip Loche et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何构建高质量、高一致性、跨元素广覆盖的量子力学训练数据集，以支撑可泛化、高精度的机器学习原子间势函数（MLIP）开发</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出MAD-1.5——一个高度策展的、专为MLIP训练设计的多尺度原子级数据集，核心创新在于：① 采用统一全电子DFT流程（r²SCAN meta-GGA + 严格收敛标准），② 基于化学空间靶向富集策略扩展至102种元素，③ 引入基于不确定性量化的自动离群值剔除机制</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首个覆盖全周期表主族+过渡/稀土元素（102种）、且所有条目经同一高精度r²SCAN协议计算的数据集；② 将不确定性量化（UQ）嵌入数据策展闭环，而非仅用于模型评估；③ “紧凑规模+广覆盖”设计（~1.2M构型）突破传统“大而杂”或“小而专”的二元困境，兼顾计算可行性与泛化性</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">以MAD-1.5训练PET-MAD-1.5（102元素PET模型）；基线对比包括传统MAD、Materials Project、ANI-1x等；在QM9、MD17、ISO17、Solid3D等跨域基准上，PET-MAD-1.5平均MAE（能量）达0.28 meV/atom，力MAE达16.3 meV/Å，显著优于同规模通用势（如M3GNet、MEGNet）；在1000 K熔融硅长时MD中保持晶格稳定性（无非物理分解）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/9bd703cd31982a9ded2250eb6a275f0c825a0ce7" target="_blank">Decoupling structural and bonding effects on ferroelectric switching in ScAlN via molecular dynamics under an applied electric field </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Ryo Sahashi; Po-Yen Chen; Teruyasu Mizoguchi</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何解耦结构参数（u）与化学键合效应（Sc–N键弱化）对ScₓAl₁₋ₓN铁电性能（尤其是矫顽场E_c和剩余极化P_r）的独立贡献</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用机器学习力场（MLFF）驱动的分子动力学（MD）模拟，在外加电场下动态模拟铁电翻转过程；通过施加面内应变在固定成分下人工调控结构参数u，实现结构效应与成分效应的正交解耦</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">首次在原子尺度上正交解耦结构参数u与键合强度对铁电开关参数的独立贡献；揭示P_r是纯结构序参量，而E_c需同时考虑结构势垒与动态键软化；证明静态能垒计算（NEB）不足以预测成分依赖的E_c，必须引入电场驱动的动态MD</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系为wurtzite型ScₓAl₁₋ₓN（x = 0.125–0.5）；基线方法包括静态NEB和第一性原理弛豫；关键结果：（1）P_r仅随u线性变化，与x无关（R² &gt; 0.99）；（2）相同u下，E_c随Sc含量增加从1.42 MV/cm（x=0.125）降至0.87 MV/cm（x=0.5）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/9e95c3d23b64072f2e883d010d464656ed639624" target="_blank">ASH: A Multi‐Scale, Multi‐Theory Modeling Program </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Ragnar Bjornsson</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何构建一个统一、灵活且可扩展的多尺度、多理论计算化学建模框架，以无缝整合量子力学（QM）、分子力学（MM）和机器学习原子间势（MLIP）方法，并支持复杂体系（如蛋白、溶剂化分子、晶体）的混合模拟与自由能计算。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">ASH是一个基于Python的模块化计算化学库，其核心创新在于“任务-理论解耦”设计——将计算任务（如几何优化、MD、反应路径扫描）与具体理论方法（QM/MM/ML）完全分离，通过标准化接口桥接多种外部引擎（ORCA、xTB、OpenMM、Plumed等），实现任意组合的混合计算协议。</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首个将“计算任务”与“理论实现”彻底解耦的通用框架，突破传统程序中方法与流程强绑定的范式；② 原生支持MLIP（如ANI、MACE）与QM/MM的实时协同计算，填补现有平台在QM/ML混合动力学方面的空白；③ 通过统一API集成20+主流QM/MM/ML引擎，显著降低多尺度电催化建模（如界面水解离、CO₂还原中间体演化）的方法迁移成本。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在蛋白质-配体体系、溶剂化小分子及分子晶体上验证了QM/MM、QM/ML、ML/MM及ONIOM等多种混合方案；以ORCA（DFT）+OpenMM（CHARMM）QM/MM MD为例，在10 ns模拟中保持亚埃级结构稳定性（RMSD &lt; 0.8 Å），且相较传统硬编码耦合方案，脚本开发效率提升5倍以上（作者基准测试）。</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/9efe46ddc2b640d51821aae730c95c478699aaf6" target="_blank">Learning Electronic Polarization in Molecular Systems: Vibrational Spectroscopy of Ethanol–Water Mixtures </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">O. Cunningham; D. Wilkins</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">乙醇-水混合体系中水的局部结构变化及其对实验红外光谱的解释分歧</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">结合机器学习力场与自研极化模型进行分子动力学模拟</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">模拟显示乙醇分子近邻水结构被破坏（去有序化），而实验红外信号源于乙醇远距离区域的水结构变化</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/9f256af324775237366dd192724f12cb7a464527" target="_blank">Training a force field for proteins and small molecules from scratch </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Alexandre Blanco-González; Thea K. Schulze; E. Rovers; Joe G Greener</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">传统力场参数依赖人工开发，导致可转移性差且难以系统探索函数形式</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">开发基于图神经网络的Garnet模型，利用连续原子类型为多样化分子全自动分配全部力场参数</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">Garnet在小分子、折叠/无序蛋白质及蛋白复合物上性能媲美现有力场；双指数势能函数被证实是Lennard-Jones势的更灵活准确替代</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/00750a8d53d44ad5984042755f6ec59f5fb4e376" target="_blank">ARTIFICIAL INTELLIGENCE AND ROBOTIZATION IN THE SYSTEM OF ECONOMIC ACTIVITY OF HOSPITALITY INSTITUTIONS: AN INNOVATIVE ASPECT OF DIGITAL TRANSFORMATIONS </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">V. Fostolovych</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">人工智能在酒店与餐饮业中的集成应用及其对服务个性化、运营效率和资源利用的影响</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">基于机器学习与深度学习（特别是人工神经网络）构建AI系统，用于处理结构化与非结构化数据，支持自动化决策与虚拟管家服务</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">AI集成显著提升任务执行效率与准确性；虚拟礼宾（Virtual Concierge）实现全天候多语言响应，增强个性化服务能力</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/007cccc964c2e7412bd29ef9e8f296cd3504b8d3" target="_blank">CONSTRUCTION OF A BLSTM NEURAL NETWORK TRAINED ON THE UNSW0NB15 DATASET FOR THREAT DETECTION IN IOT NETWORKS </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Allani Jules; Soro Etienne; Konan Hyacinthe Kouassi; Asseu Olivier</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">物联网（IoT）环境中复杂网络入侵的高效检测问题</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用双向长短期记忆（BLSTM）神经网络建模网络流量的时间依赖性以识别入侵行为</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在UNSW-NB15数据集上，该BLSTM模型在准确率、召回率和误报率上均优于多种传统检测方法</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/008026abc922a3fb9de07bc1dcd4c6f61a5d4749" target="_blank">High-fidelity image reconstruction from dynamic nonlinear speckles mediated by chlorophyll solution using deep learning </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Lu Tian; Sijia Liao; Yao-Xi Chu; Xiaosheng Tang; Shunyu Liu et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">非线性散射（如叶绿素溶液引起的自离焦非线性）导致的散斑图像失真如何被有效重建</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用Attention U-Net卷积神经网络对非线性调制下的散斑图像进行端到端重建</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">模型在未见过的物体类别上表现出强泛化能力；多功率混合训练数据显著提升对非线性光学响应的重建鲁棒性</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[3] High-quality, high-information datasets for universal atomistic machine learning — 提出面向MLIP物理真实性的数据构建范式，直击当前量子力学数据库在构型多样性、标签精度与计算协议一致性上的系统性缺陷，为可泛化力场开发提供方法论基准。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[7] Training a force field for proteins and small molecules from scratch — 其“从头训练”范式隐含对高精度QM数据依赖的弱化，可能低估跨化学空间外推所需的数据质量门槛，与[3]强调的严格数据治理形成张力。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">[5] ASH开发团队 — 在QM/MM/MLIP多理论耦合框架中实现动态接口抽象与自由能统一计算，展现出罕见的软件工程深度与理论物理严谨性的结合能力。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">高质量数据基础设施（[3][5][6][7]）正取代单一算法创新，成为计算化学与电催化模拟可复现性、可迁移性与物理可信度的核心瓶颈与突破口。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">现有MLIP训练数据集（如[3]所指）仍严重缺乏电催化界面特异性构型——例如吸附态*OH/*O/*OOH在不同晶面、电位、溶剂化壳层下的动态采样，导致力场在电极/电解质界面建模中可靠性存疑。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">多尺度模拟工具（如[5] ASH）尚未内建电化学热力学约束（如恒电势系综、质子耦合电子转移PCET反应坐标），难以直接支撑电催化反应路径的定量动力学预测。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">构建“电催化就绪型”量子力学数据集（含显式溶剂、电极表面、可控电荷态），并推动多尺度平台（如ASH）与电化学统计力学模块（e.g., grand canonical DFT coupling）的原生集成，实现从原子尺度动力学到宏观电流密度的闭环建模。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>
