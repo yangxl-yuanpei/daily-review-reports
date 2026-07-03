@@ -1091,5 +1091,79 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:14510bb67fbe306ff7d70a435a03c8b0ae4dc94a": {
+    "title": "A systematic drude-based parameterization workflow and polarizable force field for battery electrolytes",
+    "date_seen": "2026-07-03",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:17e8fa75a97a67401e875463774414c92bc9fff8": {
+    "title": "AI-driven prediction of critical depth of cut in ultra-precision machining of single crystal sapphire",
+    "date_seen": "2026-07-03",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:4d4ba5a0b23959b29f5ea83545ef28a77f3f7e3b": {
+    "title": "Exploring Conformational Transitions of RNA Dimers via Machine Learning Potentials",
+    "date_seen": "2026-07-03",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:55ece31d39acae38c0e9a7fc9694fae615908ffe": {
+    "title": "Enhancing non-local interaction modeling for ab initio biomolecular calculations and simulations with ViSNet-PIMA",
+    "date_seen": "2026-07-03",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:5d3f1cdc125c46be55f4cdb16198aa808481ff9b": {
+    "title": "Assessing machine-learning-based weather forcing in significant wave height prediction",
+    "date_seen": "2026-07-03",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:6c349536a839a54ffa59050b93487c02ea545f55": {
+    "title": "Examining the global application of internet of things (IoT) in agriculture: a bibliometric analysis of research trends",
+    "date_seen": "2026-07-03",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:7518936dac590184eca59035bf258392efbb8d9b": {
+    "title": "AI and shared decision-making: a systematic review",
+    "date_seen": "2026-07-03",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:9760dcb05bc73deab439dbdf5fd7d370731a244b": {
+    "title": "Wearable sensors and machine learning for field-based biomechanical load assessment in sports: a review",
+    "date_seen": "2026-07-03",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:4f4091bf03e2d5146cec04f4d83d4eb22f041cb8": {
+    "title": "Electrochemistry-Enhanced Dynamic Path Sampling for Reaction Rate Calculations Considering Nuclear Quantum Effects.",
+    "date_seen": "2026-07-03",
+    "tags": [
+      "electrochemistry",
+      "NQE",
+      "catalysis",
+      "constant-potential"
+    ]
+  },
+  "s2:622704e501a7574a7b2ed992e913c8bf473a4739": {
+    "title": "Understanding Electrochemical Interactions of Iodide and Chloride Species in LiCl-KCl Molten Salt",
+    "date_seen": "2026-07-03",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }

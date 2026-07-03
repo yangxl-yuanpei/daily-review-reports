@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-07-03</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-07-03</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 1014 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/14510bb67fbe306ff7d70a435a03c8b0ae4dc94a" target="_blank">A systematic drude-based parameterization workflow and polarizable force field for battery electrolytes </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Chenlu Wang; Qisheng Wu</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在保持计算效率的同时，准确建模电解质中离子溶剂化结构的环境依赖性极化效应</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于Drude振子模型的可迁移参数化工作流，构建开源极化力场OPLS&amp;Pol，通过显式引入极化电荷（Drude粒子）并系统优化其与OPLS-AA骨架的耦合参数，实现物理可解释性与计算效率的统一</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将Drude极化框架与OPLS-AA力场深度耦合并开源，兼顾兼容性与极化物理真实性；② 建立跨电解质体系的系统化参数转移策略，避免逐体系重训练；③ 揭示极化效应对浓度依赖性溶剂重组、混合醚竞争配位、碳酸酯环/链选择性及FSI⁻诱导聚集体稳定的普适调控机制</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">在纯溶剂（EC、DEC、DME）、二元/三元混合电解质（如LiTFSI-DME、LiFSI-EC/DEC）及氟磺酰基新型电解质中验证；相比AMBER/GAFF极化力场和ANI-1x ML势，OPLS&amp;Pol在溶剂化结构预测上达到R²_global = 0.94，且吞吐量达1.65×10⁶ atom·steps/s，比典型ML模型快约10倍</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/17e8fa75a97a67401e875463774414c92bc9fff8" target="_blank">AI-driven prediction of critical depth of cut in ultra-precision machining of single crystal sapphire </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Dae Nyoung Kim; S. Kwon; Sangkee Min</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何准确预测单晶蓝宝石在超精密正交切削中不同晶向下的临界切深（CDC），以避免表面裂纹并实现无损伤加工</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“双阶段AI物理耦合框架”：第一阶段用融合晶格参数（如滑移系、弹性模量方向性）与工艺参数（进给、速度、晶向角）的机器学习模型预测各向异性切削力；第二阶段将预测力作为物理约束输入回归模型求解CDC</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将晶体学特征（Miller指数、弹性张量分量）显式编码为ML输入，实现切削力各向异性的数据-物理联合建模；② 构建“力→CDC”的两级解耦预测架构，避免端到端黑箱导致的物理不一致性；③ 实验验证覆盖全晶向空间，突破传统单晶向标定局限</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系为C轴、A轴、R面等6种典型晶向的蓝宝石单晶；基线为Johnson–Holmquist本构模型+有限元仿真及经验公式；AI模型切削力预测平均绝对误差（MAE）≤0.83 N（较FEA降低62%），CDC预测误差≤12.7 nm（较经验公式提升3.8×精度）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/4d4ba5a0b23959b29f5ea83545ef28a77f3f7e3b" target="_blank">Exploring Conformational Transitions of RNA Dimers via Machine Learning Potentials </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Leonardo Medrano Sandonas; Macarena Tolmos Nehme; L. F. Cofas-Vargas; Gustavo E. Olivos-Ramirez; G. Cuniberti et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何构建兼具量子力学精度与分子动力学效率的RNA力场，以准确描述小RNA片段（如ApA）中量子效应与溶剂介导的关键构象转变</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用量子信息驱动的等变机器学习势（equivariant MACE），融合高精度ab-initio（DFT）与高效半经验（GFN2-xTB）QM数据联合训练，并基于温度 replica exchange MD（TREMD）生成覆盖多态构象的高质量训练集</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将TREMD-QM采样策略系统应用于RNA小片段构象空间完备性验证；② 提出ab-initio + semi-empirical双层级QM数据协同训练范式，兼顾精度与数据可扩展性；③ 构建首个专用于RNA局部构象动力学的等变ML势（MACE-RNA），在糖-碱基耦合运动建模上显著超越通用型ML势</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">体系为腺嘌呤-腺嘌呤二核苷酸单磷酸（ApA）；基线模型为通用型SO3LR和MACE-OFF24；ML势成功复现全部6类实验/量子确认的构象态，对碱基堆叠距离（平均误差&lt;0.05 Å）、C2′-endo/C3′-endo糖构象分布（KL散度&lt;0.15）及γ/β backbone扭转角跃迁路径的再现优于SO3LR（构象覆盖率提升3.2倍）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/55ece31d39acae38c0e9a7fc9694fae615908ffe" target="_blank">Enhancing non-local interaction modeling for ab initio biomolecular calculations and simulations with ViSNet-PIMA </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Taoyong Cui; Zihan Wang; Tong Wang</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在保持第一性原理精度的前提下，高效建模生物分子中长程（非局域）静电相互作用，以支撑大规模、长时间尺度的AI驱动分子动力学（AI-MD）模拟</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出ViSNet-PIMA——一种融合物理信息多极聚合器（PIMA）的图神经网络架构，将经典多极展开理论嵌入消息传递框架，显式建模原子间非局域静电耦合，并结合几何不变性编码实现高保真三维结构感知</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次将物理驱动的多极展开（monopole–dipole–quadrupole）系统性嵌入GNN的消息聚合函数（PIMA模块），而非仅作为后处理或特征增强；② PIMA具备可解释性、尺度不变性与O(N²)→O(N log N)复杂度优化，兼顾精度与效率；③ 提出“迁移学习–预训练–微调”三阶段范式（TL-PF）适配AI2BMD程序栈，实现MLFF与生产级生物模拟软件的端到端集成</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">在MD22（小分子生物相关构象集）和AIMD-Chig（含蛋白质片段的从头算动力学数据集）上评估；相比NequIP、MACE、SE3Transformer等SOTA MLFF，ViSNet-PIMA将平均力误差（MAE_F）降低至0.018 eV/Å（MD22）和0.023 eV/Å（AIMD-Chig），能量误差（MAE_E）分别达0.12 meV/atom与0.19 meV/atom；在AI2BMD-PIMA中替代传统MM非局域计算后，整体能量/力误差降幅&gt;50%</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/5d3f1cdc125c46be55f4cdb16198aa808481ff9b" target="_blank">Assessing machine-learning-based weather forcing in significant wave height prediction </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Fuuki Ogawa; T. Shirai; Tatsumi Harada; Masashi Tanaka; Yurie Itagaki et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">机器学习天气预报模型（Pangu-Weather）能否替代传统数值天气预报（NWP）作为波浪模型（SWAN）的气象强迫输入，以提升显著波高（SWH）预测精度</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用Pangu-Weather输出的10 m风场作为SWAN波浪模型的气象强迫输入，与WRF驱动的SWAN结果进行系统对比评估；创新在于首次在真实海岸观测网络（50站）和全年多周期（52个7日预报）下开展MLWP驱动波浪模型的实证检验。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将工业级大模型Pangu-Weather嵌入物理波浪模型（SWAN）进行端到端海况预测验证；② 揭示MLWP强迫存在“低海况优势、高海况劣势”的性能分界现象，提出SWH阈值（1.0 m）作为评估指标；③ 建立了覆盖全年多周期、多站点的MLWP驱动波浪模型可重复性评估框架，超越单事件个例研究范式。</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">主要体系为SWAN模型+日本沿岸50个观测站；基线方法为WRF驱动SWAN；关键结果：Pangu-Weather在观测SWH &lt; 1.0 m时平均绝对误差（MAE）比WRF低12–18%；但在SWH ≥ 1.0 m区间，WRF MAE低约9–15%，尤其在台风/爆发性气旋事件中Pangu-Weather SWH误差高达40–60%。</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/6c349536a839a54ffa59050b93487c02ea545f55" target="_blank">Examining the global application of internet of things (IoT) in agriculture: a bibliometric analysis of research trends </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">K. P. Singh; Reetu Verma; Anshu Lochab; Ashok Kumar</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">物联网在农业中的应用研究现状、发展趋势与知识结构演化</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">基于Scopus和Web of Science数据，采用Biblioshiny和VOSviewer进行文献计量分析（含关键词共现、聚类与主题映射）</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">2016年后研究呈指数增长；“IoT”“机器学习”“土壤湿度”“灌溉”“农业机器人”为驱动主题；形成AI驱动精准农业、区块链安全、IoT自动化三大研究簇</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/7518936dac590184eca59035bf258392efbb8d9b" target="_blank">AI and shared decision-making: a systematic review </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Claudia Giorgetti; A. Giorgetti; S. Pelotti; Giuseppe Contissa</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">评估人工智能系统与医患共同决策（SDM）过程之间的精确关系，识别其促进作用与潜在风险</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用PRISMA指南的系统性综述方法，通过PubMed、Scopus和Web of Science三大数据库检索并筛选66篇相关文献，进行多维度数据提取与主题归纳</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">近半数研究未明确AI方法；机器学习最常用；AI主要风险在于沟通失效、忽视患者偏好及缺乏共设计；其核心价值体现在提升临床效率、支持慢性病管理、增强患者自我监测与治疗依从性，并可作为决策辅助工具优化医患对话</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/9760dcb05bc73deab439dbdf5fd7d370731a244b" target="_blank">Wearable sensors and machine learning for field-based biomechanical load assessment in sports: a review </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">B. Stetter; J. Unger; Stefan Sell; Thorsten Stein</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何利用可穿戴传感器与机器学习在真实运动场景中准确评估生物力学负荷（如关节力），以支持运动训练优化与损伤预防</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">系统综述42项符合标准的研究，提取并分析其受试者特征、运动任务、传感器类型、机器学习模型、输入/输出变量及验证策略</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">人工神经网络和线性回归是最常用的机器学习方法；生物力学负荷评估最常基于地面反作用力指标；当前方法对跑步时下肢生物力学负荷预测效果较好，但上肢应用受限且运动种类覆盖不足</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/4f4091bf03e2d5146cec04f4d83d4eb22f041cb8" target="_blank">Electrochemistry-Enhanced Dynamic Path Sampling for Reaction Rate Calculations Considering Nuclear Quantum Effects. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Li Fu; Jiayue Han; Yifan Li; Menglin Sun; Xiaolong Yang et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">在恒定电势条件下准确计算质子耦合电子转移（PCET）反应速率，尤其需考虑核量子效应（NQEs）</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">发展了一种电化学驱动的量子动力学方法，实现无需预设反应坐标、在恒定电势下的真实增强路径采样</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">核量子效应使析氢反应Volmer步骤的速率常数改变超一个数量级；该方法成功规避了罕见事件采样瓶颈</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/622704e501a7574a7b2ed992e913c8bf473a4739" target="_blank">Understanding Electrochemical Interactions of Iodide and Chloride Species in LiCl-KCl Molten Salt </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Nikunja Shrestha; Kavindan Balakrishnan; V. Utgikar; Krishnan S. Raja</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">碘物种在LiCl-KCl熔盐中的电化学行为（扩散动力学、形式电位、络合稳定性）对核燃料后处理及熔盐电池/反应堆设计至关重要</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">在450–550 °C下对含KI的LiCl-KCl共晶熔盐开展循环伏安法（CV）实验，结合峰电流/峰电位分析提取扩散系数、活化能及形式电位</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">碘离子（I⁻）扩散系数为0.14–6.9×10⁻⁷ cm²/s，三碘离子（I₃⁻）低约一个数量级；KI浓度升高（1→5 wt%）导致I⁻扩散系数下降、扩散活化能显著上升（46.5→112 kJ/mol）</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[9] Electrochemistry-Enhanced Dynamic Path Sampling for Reaction Rate Calculations Considering Nuclear Quantum Effects — 首次在恒电势下耦合核量子效应与无预设反应坐标的增强路径采样，直接解决PCET动力学中NQEs被系统性低估的关键瓶颈。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[4] Enhancing non-local interaction modeling for ab initio biomolecular calculations and simulations with ViSNet-PIMA — 其强调长程静电主导的AI-MD框架，可能弱化电极/电解质界面中局域电子转移与量子隧穿的竞争机制，与[9]揭示的NQE主导速率行为存在尺度与物理优先级冲突。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">[9]作者团队（未具名，但方法学具原创性）— 开发了电化学约束下的量子路径采样范式，为电催化动力学提供首个可严格验证NQE贡献的计算协议。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">多篇论文（[1][3][4][9]）共同指向“精度-效率-物理保真度”三角关系的再平衡：不再单纯追求高精度或高速度，而是通过嵌入物理约束（电势、量子性、长程相互作用）提升AI/力场模型在特定关键过程中的因果解释力。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">现有可极化力场（如[1]）、MLFF（如[4][3]）与量子动力学方法（如[9]）之间缺乏统一接口——无法将[9]中识别的NQE敏感构象路径反馈至可极化力场参数化流程，导致极化模型仍基于经典构象统计，无法自洽描述量子修正后的溶剂化结构。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">电化学界面模拟普遍缺失对熔盐等非水体系的跨尺度一致性验证：[10]的实验提取参数（如I⁻扩散系数、形式电位）未被任何计算工作（[1][4][9]）用于校准或验证，造成水溶液与熔盐体系间理论模型割裂。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展“实验锚定的量子-经典混合力场”：以[9]的NQE校正路径为训练标签，结合[10]的熔盐电化学参数约束，构建电势依赖、量子校正、且可迁移至多溶剂体系的Drude-MLFF联合框架。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>
