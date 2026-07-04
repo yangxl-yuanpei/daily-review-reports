@@ -1165,5 +1165,76 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:1fe67550269f0037645fc3777ed232205d1114b4": {
+    "title": "Field Data Based Modeling and Artificial Intelligence in Sheet Metal Manufacturing: a Review",
+    "date_seen": "2026-07-04",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:7c1986088aac6bd1d6d2d549f2af3db4ead5b35e": {
+    "title": "A Quantum Lens on Molecular Design: A Machine-Learned Energy Function from Interacting Quantum Atoms",
+    "date_seen": "2026-07-04",
+    "tags": [
+      "dft"
+    ]
+  },
+  "s2:8530ef9a280389c7044da964055f56dd6ee730d1": {
+    "title": "A Gradient-Based Machine-Learning Inspired Inverse Modeling Approach for Characterization of Nonlinear Tissue Properties.",
+    "date_seen": "2026-07-04",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:912f8a10ee7297438b4b1383532f2f673039475e": {
+    "title": "Exploring RNA conformational ensembles in silico: progress and challenges",
+    "date_seen": "2026-07-04",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:0089dbc432a818281f1c53303a40ddb841dfc504": {
+    "title": "Development of an Automated Attendance System Based on Facial Recognition Using Convolutional Neural Networks (CNN) for Kaca Super Jaya MSME",
+    "date_seen": "2026-07-04",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00910954f08d4df9bfc6065edeacbdecb7e271f5": {
+    "title": "Extended pseudo-spectral physics-informed neural networks for phase-field models",
+    "date_seen": "2026-07-04",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0091698593127860988be928cc75e5dcbaa266cc": {
+    "title": "Toward Generalization and Interpretable Deep Learning-Based Intrusion Detection System for Heterogeneous Network Environments",
+    "date_seen": "2026-07-04",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:009683f411ecc96f06a06cc5e6d893ae35601bcd": {
+    "title": "Dynamic analysis and reliable mechanical optimization application of ring HNN effected with a memristive neuron.",
+    "date_seen": "2026-07-04",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:009f073bb4c0e81b392e5950298913d9c6c9ab90": {
+    "title": "Lessons Learned in Developing Deep Learning Models for EEG-based ADHD Detection*",
+    "date_seen": "2026-07-04",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:00b0af103fb2bd824d73b32d44e226a4f6233078": {
+    "title": "Optimizing Energy-based Neural Network Training with Coherent Ising Machine",
+    "date_seen": "2026-07-04",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }

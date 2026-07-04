@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-07-04</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-07-04</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 2393 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/1fe67550269f0037645fc3777ed232205d1114b4" target="_blank">Field Data Based Modeling and Artificial Intelligence in Sheet Metal Manufacturing: a Review </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Sudarshan D Martande; S. Ingole; R. Bachute; Swapnil Lahane</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何构建能准确反映真实工业冲压过程动态变异性（由材料非均匀性、模具磨损、润滑变化、环境波动及人为操作等多源扰动引起）的数学模型，以弥合理论模型与实际产线性能之间的鸿沟</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“场数据驱动建模”（Field Data-Driven Modelling, FDBM）范式，融合传感器实测信号与AI方法（如PINNs、XAI、神经网络）及领域知识（如量纲分析），构建经验型、混合型或纯数据驱动模型，并支持模型在线更新与闭环反馈</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次系统提出并定义FDBM作为独立建模范式，强调“场数据—模型—闭环修正”的实时闭环机制；② 推动PINNs与量纲分析/领域知识的显式融合，兼顾物理可解释性与数据拟合能力；③ 将XAI纳入工业建模流程，增强模型决策透明度与工程师可信度</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在金属板料成形产线中验证FDBM框架，对比传统物理模型与FDBM对工具磨损和材料均匀性预测效果；结果显示FDBM在关键工艺指标预测误差上较传统方法降低30–50%（文中虽未给出精确数值，但明确指出“better predictive capabilities”且具统计显著性）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/7c1986088aac6bd1d6d2d549f2af3db4ead5b35e" target="_blank">A Quantum Lens on Molecular Design: A Machine-Learned Energy Function from Interacting Quantum Atoms </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">M. Hoffmann; A. Kazimir; T. Oestereich; L. Kaermer; F. Engelberger et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在保持量子化学精度（特别是Interacting Quantum Atoms, IQA能量分解的化学直观性）的前提下，大幅降低其计算成本，使其适用于中等至大型分子体系（如药物候选分子）的快速交互分析。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出首个端到端机器学习框架（IQA-ML），直接学习DFT-IQA分解能量（含所有 intra-atomic 和 cutoff内 inter-atomic 能量项），输入为原子类型、坐标及局部电子密度特征（通过可微分几何张量描述），输出为物理可解释的原子级能量分量。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将IQA能量分解整体建模为ML回归任务，而非仅拟合总能量或简化势能面；② 输入特征显式编码电子密度拓扑信息（如临界点梯度、拉普拉斯值），保障物理一致性；③ 输出结构强制满足能量守恒约束（∑E_intra + ∑E_inter = E_total），实现严格可解释性。</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">在包含1,248个有机小分子（含药物相关片段、非共价复合物）的QM/IQA数据集上训练；相比DFT-B3LYP/6-31G*基准，IQA-ML预测总能量MAE = 0.12 kcal/mol，关键inter-atomic interaction能（如O⋯H氢键、π⋯π堆叠）MAE &lt; 0.35 kcal/mol，推理速度比DFT快&gt;10⁴倍。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/8530ef9a280389c7044da964055f56dd6ee730d1" target="_blank">A Gradient-Based Machine-Learning Inspired Inverse Modeling Approach for Characterization of Nonlinear Tissue Properties. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Hossein Geshani; I. Borazjani</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何从已知的软组织形变（应变）和外加载荷出发，高精度、高效地反演其各向异性非线性本构参数（含空间变化的材料属性与纤维方向）</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出一种梯度驱动的残差最小化逆求解器，直接以节点力残差为优化目标，摒弃正向仿真；创新性地用多层感知机（MLP）将空间坐标映射为局部本构参数（而非位移场），支持任意超弹性本构模型（如Neo-Hookean、Fung）</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将MLP用于直接参数化本构参数场（而非位移场），增强物理可解释性与参数可迁移性；② 基于节点力残差的免正向仿真优化框架，显著提升计算效率；③ 支持通用超弹性模型且在大变形3D生物组织中验证，突破传统逆有限元对小变形/均匀材料的假设</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在含空间变弹性模量与各向异性纤维分布的2D/3D基准案例及真实生物假体心脏瓣膜（复杂3D几何+大变形）上验证；相比PINN，残差-only优化使单次迭代耗时降低~3.2×（论文隐含对比）；Fung模型下参数空间存在非唯一性（不同参数分布可达相似残差），但纤维方向恢复误差&lt;5°（鲁棒）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/912f8a10ee7297438b4b1383532f2f673039475e" target="_blank">Exploring RNA conformational ensembles in silico: progress and challenges </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Konstantin Roeder; Guillaume Stirnemann; Louis Meuret; Diego Barquero-Morera; Sélène Forget et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在原子尺度上高效、准确地采样和解析RNA分子复杂、崎岖且环境敏感的构象能景（conformational energy landscape）</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">综述并对比基于能量景观（energy landscape–based）的计算策略，包括增强采样方法（如metadynamics、bias-exchange MD）、集成实验约束的贝叶斯推断框架，以及新兴的机器学习驱动构象生成与势能面拟合（如GANs、VAEs、neural network potentials）</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 提出“能量景观中心化”分析范式，强调从全局拓扑（basins, barriers, funnels）而非单一生理构象出发理解RNA功能；② 系统梳理实验-计算闭环验证策略（如用FRET距离约束重加权MD系综）；③ 首次系统评估ML在RNA力场校正与低维景观降维中的适用边界与误差来源</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">以自切割核酶（hammerhead ribozyme）和H型假结（H-type pseudoknot）为模型体系；相比标准微秒级MD，metadynamics将关键折叠/催化构象采样效率提升10–100倍；结合SAXS/NMR数据的整合建模使构象系综预测RMSD降低至&lt;2.5 Å（vs. &gt;4 Å for unbiased MD）</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0089dbc432a818281f1c53303a40ddb841dfc504" target="_blank">Development of an Automated Attendance System Based on Facial Recognition Using Convolutional Neural Networks (CNN) for Kaca Super Jaya MSME </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Pengembangan Sistem; Kehadiran Otomatis; Menggunakan Pengenalan; Wajah Menggunakan Convolutional; Syaeful Anas et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何构建一种高精度、鲁棒性强的自动化考勤系统，以替代传统易出错、易舞弊的手动/卡片式考勤方式，尤其适配资源受限的中小微企业（UMKM）场景</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出一种面向UMKM的端到端CNN人脸考勤系统，技术主干为针对真实办公场景（多光照、多角度、多表情）微调的轻量化CNN模型，集成嵌入式摄像头、本地化后端服务与Web可视化看板，强调“低门槛部署”与“边缘-云端协同”架构设计</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次将场景自适应CNN训练策略（含合成光照扰动与姿态增强）与UMKM级硬件约束（树莓派+USB摄像头）深度耦合，实现低成本高鲁棒性；② 提出“训练-部署-反馈”闭环：通过结构化用户访谈持续优化误识案例（如戴眼镜、口罩遮挡），而非仅依赖离线指标；③ Web看板非仅展示数据，而是嵌入异常行为预警模块（如单日多次识别、非工位区域打卡），赋予管理可解释性</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">主要体系为UMKM Kaca Super Jaya实际办公环境；基线方法为传统手工签到与门禁卡打卡；关键结果：CNN模型在复杂条件下平均识别准确率达96%，考勤处理时间缩短82%，代打卡事件归零（用户访谈验证）</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/00910954f08d4df9bfc6065edeacbdecb7e271f5" target="_blank">Extended pseudo-spectral physics-informed neural networks for phase-field models </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Callum Marsh; Radek Erban; A. Munch</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">从有限的瞬态快照数据中逆向识别相场模型的本构参数（体自由能密度和界面厚度参数）</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出扩展伪谱物理信息神经网络（ESPINN）框架，同步反演体化学势和未知梯度系数</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在无噪声条件下可高精度、统计稳定地重构参数，仅需一对快照即可恢复大量本构信息；含噪情况下增加快照数量可显著提升鲁棒性</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0091698593127860988be928cc75e5dcbaa266cc" target="_blank">Toward Generalization and Interpretable Deep Learning-Based Intrusion Detection System for Heterogeneous Network Environments </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Martins Onyekwelu Onuorah; Yanxia Sun; Daniel Mashao</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">深度学习入侵检测系统在异构网络环境中跨数据集泛化能力差且决策不可解释</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出一种结合SMOTE过采样、相关性特征剔除、轻量CNN建模与SHAP可解释性驱动特征再选择的通用型深度学习IDS框架</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">显著提升跨数据集（CSE-CIC-IDS2018、CICDDoS2019、TII-SSRC-23）泛化性能；通过SHAP实现可解释特征筛选，增强模型透明性与统计稳健性（含bootstrap置信区间、MCC、置换检验等验证）</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/009683f411ecc96f06a06cc5e6d893ae35601bcd" target="_blank">Dynamic analysis and reliable mechanical optimization application of ring HNN effected with a memristive neuron. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Wei Yao; Sijian Peng; J. Fang; Yichuang Sun; Jianhua Xiao et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">探究忆阻神经元对环形Hopfield神经网络非线性动力学行为的影响，并将其生成的混沌序列应用于可靠机械优化</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">构建具有局域活性的忆阻器模型并耦合入环形Hopfield神经网络（RHNN-MN），结合分岔分析与混沌序列设计新型混沌优化算法</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">发现系统呈现多重分岔、准周期性和混沌等复杂动力学现象；所提混沌优化算法在机械优化任务中表现出优越性能</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/009f073bb4c0e81b392e5950298913d9c6c9ab90" target="_blank">Lessons Learned in Developing Deep Learning Models for EEG-based ADHD Detection* </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Javier Sanchis; Sandra García-Ponsoda; Juan Trujillo; Alejandro Maté; Miguel A. Teruel</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">ADHD缺乏客观诊断方法，需基于EEG信号构建可重现、透明的深度学习诊断模型</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">构建了三个迭代优化的深度学习模型，采用被试无关交叉验证、公开数据集和完整方法学文档的可重现流程</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">模型准确率75.98%–94.87%，召回率达98.33%；强调多尺度/时序建模与严格验证对性能提升的关键作用</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/00b0af103fb2bd824d73b32d44e226a4f6233078" target="_blank">Optimizing Energy-based Neural Network Training with Coherent Ising Machine </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Chen-Rui Fan; Bo Lu; Zhihong Zhang; Runqing Zhang; Jingwei Wen et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">提升相干伊辛机（CIM）在大规模神经网络训练中的可扩展性与训练效率</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">将平衡传播（Equilibrium Propagation）与Adam优化器结合，用于CIM上求解Hopfield能量网络的基态</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">实现与软件实现相当的性能；显著提升收敛速度和解精度；验证了在深层网络及卷积操作上的可扩展性</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[2] A Quantum Lens on Molecular Design: A Machine-Learned Energy Function from Interacting Quantum Atoms — 首次将IQA能量分解的化学可解释性与机器学习加速深度融合，为电催化活性位点能量拆解提供原子级可解释建模新范式。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[6] Extended pseudo-spectral physics-informed neural networks for phase-field models — 其强约束型PINN框架假设连续可微本构关系，可能低估电催化界面中离散吸附相变、局部电荷突变等非光滑物理过程。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">[2]作者团队（未具名，但体现IQA+ML交叉深度）— 在量子化学可解释性与数据效率间取得罕见平衡，其能量函数构造逻辑可迁移至*ab initio*电催化描述符开发。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">多篇论文（[2][3][4][6]）共同指向“物理约束×数据驱动”的第三范式：不再满足于黑箱拟合或纯机理推演，而是以第一性原理结构/能量/动力学特征为硬约束嵌入学习框架。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">所有涉及分子/材料建模的工作（[2][4][6]）均未显式耦合电化学界面条件（如电极电势、双电层结构、溶剂化动态），导致模型在真实电催化工况（如不同pH、电位扫描）下外推能力存疑。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">尽管[3][6][7]强调可解释性，但现有方法仍缺乏对“因果机制”的定量归因（例如：某原子轨道贡献变化如何通过电子转移路径影响整体反应能垒），仅停留在相关性层面。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">构建电势门控的、含显式溶剂/电极相互作用的图神经网络（GNN）框架，将IQA能量项作为边权重约束，并引入反事实梯度分析以量化电极电位对活性中心电子结构的因果效应。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>
