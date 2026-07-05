@@ -1236,5 +1236,90 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:0f71dcc3d916d7d50f8546c293bf5421cd2903e8": {
+    "title": "Advanced techniques in molecular docking of inorganic complexes for understanding biological relationships",
+    "date_seen": "2026-07-05",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:605424970f8cf4db214de2866e545947c622d9e5": {
+    "title": "Data-Driven Surrogate Modelling for Industrial Scale-Up of Packed Bed Columns Using Residual Biomass for Pb(II) Removal",
+    "date_seen": "2026-07-05",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:6d7db17d220e46071863e57fdec3b497fffc656f": {
+    "title": "Concurrent Oxidative and Reductive Protometabolic Reactions Driven by Electrochemistry",
+    "date_seen": "2026-07-05",
+    "tags": [
+      "electrochemistry",
+      "constant-potential"
+    ]
+  },
+  "s2:a3e12dc0555f6988fc81a7906a4c000120e79e78": {
+    "title": "Estimating Reaction Rate Constants from Impedance Spectra: Combining Microkinetic Modeling and Experiments of the Oxygen Evolution Reaction",
+    "date_seen": "2026-07-05",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:beaea2dd0400dc18a09a2402e313de2002457388": {
+    "title": "Screening Electrocatalysts at the Level of Kinetic Barriers under Realistic Potential and Solvation",
+    "date_seen": "2026-07-05",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface"
+    ]
+  },
+  "s2:d8e2c1c68565b7098fb1bdebecc6d3712668f703": {
+    "title": "Fundamental Insights into Nanoconfined Devices by Using Electrochemical Impedance Spectroscopy",
+    "date_seen": "2026-07-05",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:ddd03423433b41f30825b3eac5ebc2aed058c1a7": {
+    "title": "Electrochemically modulating the geometry of gold nanostructures for enhanced electrochemistry and antifouling performance.",
+    "date_seen": "2026-07-05",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:f24669f3385ec58df7f82e84d5bfa7b23784f1c7": {
+    "title": "The Origin of the Constant Phase Element Behavior of Pt(111) Near the Potential of Zero Charge",
+    "date_seen": "2026-07-05",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:02b260e26f8e5ca8cb1758bb0ef36c825f866f60": {
+    "title": "Leveraging Machine Learning for Screening Metal-Organic Frameworks with Selective CO2 Recognition for Early Thermal Runaway in Lithium-Ion Batteries",
+    "date_seen": "2026-07-05",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:09f698c9b14373628db576571a3ec3fca1e0acb4": {
+    "title": "Lithium and sodium decorated PHE-graphene for high capacity hydrogen storage: A DFT and GCMC study",
+    "date_seen": "2026-07-05",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
   }
 }
