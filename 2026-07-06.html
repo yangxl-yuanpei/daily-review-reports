@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-07-06</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-07-06</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 2069 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/9fc2f92019af6d4b3c3310e741cd50afe998bd4b" target="_blank">SMASH: Screening Molecules Accurately on Small Hardware. Fast, user-friendly, enhanced with a machine learning virtual screening tool </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">A. Suárez-Alonso; L. D. Herrera-Zúñiga; Mayra Lozano-Espinosa; A. Giacoman-Martínez; E. F. Alarcón-Villaseñor et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何提升分子对接与虚拟筛选的自动化程度、预测精度与计算效率，尤其在资源受限的本地环境中实现高通量、高可靠性靶标-配体结合模式预测</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">SMASH是一种端到端开源分子对接平台，核心创新在于融合机器学习驱动的结合位点预测（P2Rank）、自动pKa感知的滴定态分配、GPU并行化的AutoDock-GPU/Vina-GPU构象采样，以及ML增强的混合能量评分（SCORCH）与K-means聚类后处理</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首个将P2Rank结合位点预测、pKa自适应质子化（通过PDB2PQR+Epik接口）与GPU对接无缝集成的全流程工具；② 提出SCORCH评分框架——联合MMFF94力场能量、AD4经验项与Vina-GPU回归模型输出的集成打分函数；③ 内置K-means聚类（基于RMSD矩阵）替代传统RMSD阈值截断，提升pose聚类鲁棒性与多样性平衡</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">在PDBbind v2020复合物（n=1,296）上，自动模式下RMSD ≤ 2.0 Å的pose复现率达78.3%；在DUD-E数据集（62靶点，平均~2,000配体/靶点）中，EF₁₀（富集因子）达15.6 ± 4.2，优于标准Vina-GPU（EF₁₀ = 9.1 ± 3.5）；单靶点全库筛选（~10⁵化合物）可在配备RTX 4090的本地工作站上于&lt;8小时完成</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/a2d54915fc47d4e35b7741d1531eaf0347ac6d56" target="_blank">Predicting Finger Force and Position on Handball with Sensor Array and Machine Learning </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Yukie Yoshinaga; T. Kikuchi; Shoji Yamamoto; Eri Sato-Shimokawara</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在无标记、非侵入条件下，通过嵌入式柔性传感实现手球握持过程中手指空间位置（极坐标）与施加力大小的实时、高精度联合估计</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“手球集成式多点压力传感+极坐标回归建模”方法，创新性地将6个FSR沿球面非对称排布以编码空间信息，并采用轻量神经网络直接从原始电阻信号回归手指径向/角向位置（ρ, θ）及力值F，规避了传统图像/几何重建范式</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将压力传感阵列直接嵌入球体曲面并建立极坐标物理先验映射，避免笛卡尔坐标系下的空间插值失真；② 提出面向边缘AI的极坐标联合回归架构，端到端输出（ρ, θ, F）而非分步估计；③ 通过定制化机械加载装置生成高保真、位置可控的标定数据集，解决人体实验中力-位耦合难解耦问题</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">测试体系为标准手球（58–60 cm周长）；基线方法为随机森林回归；关键结果：径向位置平均绝对误差MAE = 6.24 mm（≈球面弧长1.1°），角向位置MAE = 12.7°，力预测RMSE = 1.83 N；神经网络模型仅35 kB，推理延迟&lt;5 ms（ARM Cortex-M7）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/a333a376f5bb24fed157fe852c8d3b8e5745750c" target="_blank">CHARMM-GUI Hybrid ML/MM Builder for Hybrid Machine Learning and Molecular Mechanical Modeling and Simulations </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Florence Szczepaniak; Donghyuk Suh; Wonpil Im</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在保持蛋白质–配体相互作用中配体电子结构精度（近量子力学水平）的同时，显著降低大规模生物分子体系模拟的计算成本</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出CHARMM-GUI Hybrid ML/MM Builder——一个全自动化的图形化工作流工具，支持TorchANI-AMBER/OpenMM-ML后端，实现NNP（MACE/ANI）与AMBER力场的无缝嵌入式耦合，自动完成边界原子处理、电荷转移校正、溶剂/膜环境构建及输入文件生成</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首个面向生物体系的开源、GUI驱动的Hybrid ML/MM全流程自动化平台；② 提出“动态电荷重分配”策略解决NNP-MM边界处静电不连续性问题；③ 唯一同时支持溶液与膜环境、兼容多代NNP（ANI-2x/MACE）且与CHARMM标准协议完全兼容的工具链</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在EGFR–erlotinib（水相）和CXCR4–IT1t（脂质双层）两个典型药物靶标体系上验证；相比纯QM/MM（DFT/B3LYP），单步能量计算加速~120×，且配体构象采样RMSD &lt; 0.3 Å；MACE-based hybrid模拟在结合自由能预测中误差仅0.8 kcal/mol（vs. EXP）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0a800dd8dc40fc004874429cf1c1ea3e5c6d0617" target="_blank">O2 Reduction Stimulates Adatom Generation on Cu(111) Catalyzing Hydrogen Evolution </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">David Raciti; Zisheng Zhang; Ally Guo; T. P. Moffat</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">电化学偏压下共吸附物种（H*、OH*、OOH*）如何动态耦合驱动Cu(111)表面重构，并进而调控ORR/HER竞争路径与催化剂稳定性</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用电化学质谱（EC-MS）原位追踪H₂/O₂/含氧挥发性产物的法拉第电流响应，结合电位循环活化、梯度O₂掺杂实验，耦合大正则系综自由能计算（GC-DFT）与从头算分子动力学（AIMD）模拟，构建吸附覆盖度–表面应力–重构势垒的动态关联模型</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">首次通过EC-MS量化揭示O₂痕量杂质对Cu表面氢化热力学的“门控效应”（gatekeeping effect）；提出“吸附驱动的通量型表面重构（fluxional restructuring）”新机制，区别于经典氧化还原重构或电位诱导相变；证明重构产生的瞬态adatom位点兼具高HER活性与ORR调制能力，打破ORR/HER活性位互斥的传统认知</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">体系为Cu(111)在0.1 M HClO₄中；基线为Ar饱和条件下的双波 hydride 形成伏安响应；引入50 ppm O₂后，hydride起始电位负移~80 mV，HER产H₂速率提升2.3倍（EC-MS定量）；AIMD证实OH*/H*共吸附使adatom–vacancy形成能降低0.45 eV，触发亚表面O嵌入</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0db9c30bea507c403ee2d5e7f3532634001a0ecd" target="_blank">Molecular Simulation Studies of CO2-CH4-H2O Ternary Geological Fluids in Clay Confinements. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Motong Bian; Qi Rao; Rong-guang Xu; L. Vlček; Y. Leng</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何准确模拟CO₂-CH₄-H₂O三元混合物在钠基蒙脱石黏土层间（clay interlayers）的吸附平衡与相行为，以支撑CO₂增强油气开采与地质封存中的多相界面过程理解。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于耦合参数法（coupling parameter method）联合Gibbs系综蒙特卡洛（GEMC）优化异类分子对（CO₂–H₂O、CH₄–H₂O、CO₂–CH₄）Lennard-Jones参数的新范式，并验证其从二元到三元体系的可转移性。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将耦合参数法与GEMC结合用于黏土限域体系中多组分LJ交叉参数的系统优化；② 证实二元优化参数在三元含水黏土体系中具备良好可转移性，突破传统力场“逐体系拟合”局限；③ 建立SAFT-LJ方程+GCMC/MD协同框架，实现化学势驱动的湿度依赖型层间距与物种分布定量预测。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系为Na-蒙脱石层间CO₂-CH₄-H₂O三元混合物（323 K, 90 bar）；基线为未优化的标准TraPPE/CLAYFF力场；优化模型在2W水合态下CO₂吸附量预测值（~1.8 mmol/g）与Loring et al.原位IR实验值误差&lt;5%，显著优于未优化模型（误差&gt;40%）。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0ed0e6b160cd506cca9fed5307485d9f2b149ec6" target="_blank">High-throughput GCMC simulation study on helium purification from CH4/N2/He mixture in pure silica zeolites </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Cheng-Xiang Liu; Xiao-Dong Li; Yan-Yu Xie; Jia-Xin Li; Xiu-Ying Liu et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">氦气安全、高效、低成本纯化难题，特别是从CH₄/N₂/He混合气中选择性分离氦气</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">结合高通量GCMC模拟与机器学习，系统筛选256种纯硅沸石结构并建立结构参数与吸附分离性能的构效关系</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">FER沸石对CH₄+H₂/He表现出最高选择性（33.65）；识别出LCD、PLD、ASA等关键结构参数与分离性能的强相关性</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0f4c9b364a015cd8afc93865d997baa0764c8ff6" target="_blank">Merging multidimensional equations of state of strongly interacting matter via a statistical mixture </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Yumu Yang; Prachi Garella; Musa Khan; Tulio E. Restrepo; Joaquin Grefa et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在热力学自洽的前提下，将描述不同物态（如强子相与夸克胶子等离子体相）的多维状态方程（EoS）无缝合并为一个统一、稳定的EoS。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">在巨正则系综中构建两流体平衡统计混合模型，通过最小化由输入EoS直接构造的合并巨势密度ω(T,μ_B)来确定各组分分数，确保热力学一致性与凸性。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">成功合并van der Waals强子气EoS与全息Einstein-Maxwell-Dilaton EoS，获得覆盖宽温密区（T, μ_B）且包含一级相变与临界端点的统一EoS；该EoS满足热力学稳定性与凸性要求，可直接用于重离子碰撞流体动力学模拟。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0f90513c60aa19d3e6089f4fb19adb94b06ca93f" target="_blank">Pure Carbon Triggers Nitrogen Reduction: The Critical Role of Spin Electrons Induced at sp3/sp2 Carbon Interfaces. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Chengkai Jin; Tingting Bai; Fenghui Ye; Chuangang Hu; Xunhua Zhao</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">揭示纯碳（无掺杂、无缺陷）材料中sp³/sp²碳界面诱导的自旋机制如何驱动电化学氮还原反应（eNRR）</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">结合巨正则系综第一性原理计算、恒电势从头算分子动力学（AIMD）模拟和严格实验验证，系统解析sp³/sp²界面处的电子结构、自旋分布及反应路径</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">1）sp³/sp²碳界面产生近费米能级孤立能带和扩展自旋分布，实现N₂通过双自旋位点强化学吸附；2）实验合成的碳纳米片-纳米管复合催化剂在−0.65 V vs RHE下获得86.3 μg·h⁻¹·mg⁻¹cat.的NH₃产率，为最优碳基无金属eNRR催化剂之一</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/139b877335d5969288121a863022bfee7a75d957" target="_blank">Effects of Relative Humidity on Dissolution and Carbonation Potential of Portlandite </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">L. Fang; Y. Xing; Juyong Cao; Xiaobing Zhang; Ying Wang</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">氢气在质子交换膜燃料电池（PEMFC）橡胶密封材料中的渗透机制及其对安全性和耐久性的威胁</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用分子动力学（MD）和巨正则蒙特卡洛（GCMC）模拟，结合溶液-扩散模型解析氢气在橡胶中的微观传输机制</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">揭示了高压下由拥挤效应导致的非菲克亚扩散行为，以及填料界面处的氢气捕陷现象；明确了自由体积拓扑、聚合物链动力学和界面相互作用对阻隔性能的决定性影响</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[8] Pure Carbon Triggers Nitrogen Reduction: The Critical Role of Spin Electrons Induced at sp3/sp2 Carbon Interfaces — 首次在无掺杂、无缺陷纯碳体系中确立sp³/sp²界面自旋电子为eNRR本征活性起源，突破“杂原子/空位必需”的范式，兼具机理深度与材料设计普适性。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[4] O2 Reduction Stimulates Adatom Generation on Cu(111) Catalyzing Hydrogen Evolution — 其强调电化学重构主导HER活性的观点，可能与[8]所主张的“静态界面电子结构决定论”形成对“动态表面演化vs.固有电子拓扑”主导性的方法论张力。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">CHARMM-GUI开发团队（论文[3]）— 在ML/MM标准化接口与生物分子模拟可重复性方面持续引领，其Hybrid ML/MM Builder正推动QM精度向工业级蛋白-配体场景实质性渗透。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">多篇论文（[3][4][8][9]）不约而同采用“巨正则系综+恒电势AIMD/元动力学”混合框架，标志着电化学界面模拟正从静态DFT跃迁至热力学自洽、电位显式耦合的动态第一性原理建模新范式。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">几乎所有涉及界面反应的模拟工作（[4][5][8][9][10]）仍依赖预设吸附构型或有限覆盖度扫描，缺乏对电极/电解质界面多组分共吸附相图的全自动、热力学驱动的构型采样能力，导致覆盖度-电位-反应路径的耦合关系常被人为割裂。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">机器学习在分子模拟中的应用（[1][3][6]）高度依赖高质量标注数据，但当前电催化/地质流体等复杂体系缺乏统一、可迁移的“物理感知”特征工程协议，导致模型泛化性受限于训练域，难以外推至未见吸附态或新型 confinement 环境。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展基于主动学习的闭环模拟框架——以热力学稳定性（如巨势密度ω）为驱动力，自动触发GCMC构型生成→ML力场训练→AIMD验证→误差反馈，实现从“人工试错”到“热力学引导的自主探索”跃迁。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>

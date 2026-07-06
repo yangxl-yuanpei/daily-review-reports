@@ -1321,5 +1321,90 @@
       "surface",
       "dft"
     ]
+  },
+  "s2:9fc2f92019af6d4b3c3310e741cd50afe998bd4b": {
+    "title": "SMASH: Screening Molecules Accurately on Small Hardware. Fast, user-friendly, enhanced with a machine learning virtual screening tool",
+    "date_seen": "2026-07-06",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:a2d54915fc47d4e35b7741d1531eaf0347ac6d56": {
+    "title": "Predicting Finger Force and Position on Handball with Sensor Array and Machine Learning",
+    "date_seen": "2026-07-06",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:a333a376f5bb24fed157fe852c8d3b8e5745750c": {
+    "title": "CHARMM-GUI Hybrid ML/MM Builder for Hybrid Machine Learning and Molecular Mechanical Modeling and Simulations",
+    "date_seen": "2026-07-06",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:0a800dd8dc40fc004874429cf1c1ea3e5c6d0617": {
+    "title": "O2 Reduction Stimulates Adatom Generation on Cu(111) Catalyzing Hydrogen Evolution",
+    "date_seen": "2026-07-06",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:0db9c30bea507c403ee2d5e7f3532634001a0ecd": {
+    "title": "Molecular Simulation Studies of CO2-CH4-H2O Ternary Geological Fluids in Clay Confinements.",
+    "date_seen": "2026-07-06",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:0ed0e6b160cd506cca9fed5307485d9f2b149ec6": {
+    "title": "High-throughput GCMC simulation study on helium purification from CH4/N2/He mixture in pure silica zeolites",
+    "date_seen": "2026-07-06",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:0f4c9b364a015cd8afc93865d997baa0764c8ff6": {
+    "title": "Merging multidimensional equations of state of strongly interacting matter via a statistical mixture",
+    "date_seen": "2026-07-06",
+    "tags": [
+      "electrochemistry",
+      "constant-potential"
+    ]
+  },
+  "s2:0f90513c60aa19d3e6089f4fb19adb94b06ca93f": {
+    "title": "Pure Carbon Triggers Nitrogen Reduction: The Critical Role of Spin Electrons Induced at sp3/sp2 Carbon Interfaces.",
+    "date_seen": "2026-07-06",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface"
+    ]
+  },
+  "s2:12fcaaf036e1d2a70580afa8e74dd061c461f716": {
+    "title": "Effects of Relative Humidity on Dissolution and Carbonation Potential of Portlandite",
+    "date_seen": "2026-07-06",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:139b877335d5969288121a863022bfee7a75d957": {
+    "title": "Microscopic Mechanisms of Hydrogen Permeation in\n PEMFC\n Sealing Materials: A Review of Molecular Simulation Studies",
+    "date_seen": "2026-07-06",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
   }
 }
