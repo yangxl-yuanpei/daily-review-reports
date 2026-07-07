@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-07-07</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-07-07</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 3008 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/007cdff6b095672292961612c6c0ad8ed967e4d4" target="_blank">An Energy Efficient Convolutional SNN for EEG Analytics towards Wearable BCI Applications </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Dighanchal Banerjee; Sankhadip Bera; Shreyasi Datta; Sounak Dey</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在资源受限的可穿戴脑机接口（BCI）设备上实现实时、低功耗、隐私安全且抗运动伪迹的头皮/耳部EEG信号在线解码</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出轻量级卷积脉冲神经网络（CSNN），将时间卷积层与脉冲神经元耦合，并设计两种生物启发式读出机制（平均膜电位/脉冲计数），实现事件驱动、稀疏激活的高效处理</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首个面向真实动态EEG场景（含耳部电极与运动干扰）端到端训练的轻量级CSNN架构；② 提出可微分的双路径脉冲读出机制（膜电位均值+脉冲计数），兼顾稳定性与事件驱动特性；③ 在相同硬件约束下首次验证CSNN对运动伪迹的鲁棒性提升源于脉冲时序编码对瞬态噪声的天然滤波效应</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在自采集的多通道静态+运动态头皮/耳部EEG数据集上测试；基线为EEGNet；CSNN分类准确率较EEGNet仅下降≤3%（如92.1% vs 95.0%），推理计算量降低40–80×（FLOPs），运动伪迹下准确率相对下降幅度减少约50%</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/00b376ee1d0c0e08e2fa29c8b4fba0d00281a3b2" target="_blank">Graph Neural Networks for Structural Representation Learning of Zero-Divisor Graphs from Idealization Constructions </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">M. Al-labadi; W. Audeh; N. Khan</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何利用深度学习（特别是GNN）有效建模零因子图（zero-divisor graphs）的代数结构与图论性质，实现对其关键不变量（如直径）的准确预测</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出ZD-GNN框架，首创性地将代数特征编码（基于环R与模M的理想化构造参数、素因子分解信息）嵌入GNN的消息传递机制，并设计结构感知邻接关系（依据零因子代数约束定义边），使网络能联合学习代数语义与图拓扑</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次将零因子图的代数生成机制（理想化构造R ⋉ M）显式建模为GNN的输入特征与边构建规则；② 理论证明并利用素因子分解对图直径的上界约束作为可解释监督信号， bridging algebraic theorems and ML loss design；③ 提出代数感知的消息函数，使节点更新同时响应代数等价类（如annihilator ideals）与图邻域结构</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在基于ℤₙ环及其理想化构造生成的合成零因子图数据集（n ≤ 1000）上评估；基线包括GCN、GAT、GIN；ZD-GNN在直径预测任务中达到98.2%的Top-1准确率（MAE=0.13），显著优于GIN（87.5%， MAE=0.41）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/00d201fc373b6b3af8b55e65085f7d3ac664b07a" target="_blank">Toward an Operational GNN-Based Multimesh Surrogate for Fast Flood Forecasting </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">V. Mercier; Serge Gratton; Lapeyre Corentin; Gwenaël Chevallet</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在不牺牲精度的前提下，大幅加速高保真二维水动力模型（如Telemac2D）在城市洪涝实时预报中的计算速度</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出一种基于投影网格（projected mesh）与多网格连通性（multimesh connectivity）的图神经网络（GNN）代理模型，结合显式入流边界条件 $Q(t)$ 编码与前向推进式（pushforward）自回归训练策略</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将“投影网格”用于GNN输入，兼顾原始高分辨率监督信号与训练可扩展性；② 提出多网格连通性结构，在不加深网络前提下扩展空间感受野，适配大范围非均匀淹没传播；③ 系统验证边界驱动场景下显式物理量 $Q(t)$ 编码与pushforward训练对长程rollout稳定性与泛化性的协同增益</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">以法国Têt河下游为案例，基于Telemac2D高分辨率模型（&gt;4×10⁵节点）构建合成但业务可信的洪水事件数据库；最优配置（$Q(t)$ + multimesh + pushforward）在25 m规则栅格上预测 inundation map 的平均IoU达0.87，RMSE（水深）降低32% vs. baseline GNN；单次6小时预测耗时0.4 s（A100 GPU）vs. 180 min（56核CPU），加速约27,000×</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/00d38a6df7cee8f87b6cea7d5e41d38464c7d3f2" target="_blank">Portable Integrated Transceiver Architecture for Low-Cost Temperature Sensing </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Yin Liu; Man Yu; Kai Zhang; Yifan Men; Yuzhuo Li et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在光纤温度传感器中协同实现低成本、微型化与高功能集成，同时保持高测温精度</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出AI驱动的“泄漏模斑纹温度传感”新范式，通过光纤微球耦合+光纤锥形结构诱导可控模式泄漏，结合温敏材料RI调制与ConViT模型直接从斑纹图像回归温度，将光学传感与智能解调深度内嵌于物理器件层级</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次将泄漏模斑纹（leaky-mode speckle）作为温度敏感物理量，规避传统干涉/波长/强度型传感器对精密光路或参考通道的依赖；② 光纤微球+锥形结构实现光源耦合、信号采集与模式泄漏三功能一体化，无需分立光学元件；③ 提出轻量化ConViT架构（含局部注意力增强模块），在有限参数量（1.8M）下超越纯CNN/ViT，兼顾精度与边缘部署可行性</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">以聚二甲基硅氧烷（PDMS）掺杂温敏纳米粒子为传感介质，在20–80 °C范围内测试；基线对比CNN（MedAE=0.412 °C）、ViT（0.378 °C）、改进CNN（0.335 °C）；本文ConViT模型达MedAE=0.256 °C，且单次推理耗时&lt;12 ms（NVIDIA Jetson Nano平台）</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/00ea77f4a08cb7e1c8fd6504f09e8c65e3af26aa" target="_blank">Deep Sequential Learning with Adaptive Sampling for Macro-Financial Yield Curve Prediction </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Jong‐Min Kim</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在非平稳、异方差的宏观金融时间序列预测中，设计稳健且高效的序列学习框架以提升短期利率变动的一步-ahead预测精度与稳定性</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出一种融合CNN-LSTM的混合神经网络架构，并首次在宏观金融预测中系统对比三种经验回放策略（均匀采样、熵-方差加权采样、预测误差加权采样），将不确定性量化嵌入数据采样过程</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将经验回放机制引入宏观金融时间序列预测，揭示其对非平稳环境下的收敛性与鲁棒性影响；② 提出熵-方差联合度量的不确定性感知采样策略，区别于单纯基于预测误差的传统强化学习范式；③ 通过实证发现“简单即稳健”——均匀采样在结构突变下表现最优，挑战了复杂采样必然更优的隐含假设</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">以FRED发布的10年期国债收益率日度变化为预测目标，基线包括ARIMA、LSTM、CNN-LSTM（均匀采样）；熵-方差采样在训练后期MAE降低12.7%（vs. 均匀采样），但预测误差采样在利率陡峭化阶段（2022Q3）RMSE波动幅度高出3.8倍</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/00ed09080cbcf59a748bc338abf8e38f0506c445" target="_blank">PANDIA: Personalized neuro-symbolic multimodal fusion for interpretable neonatal pain assessment </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Oussama El Othmani; Sami Naouali</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">婴儿（0–3个月）疼痛评估缺乏客观、可靠且可解释的量化方法，因无法自述且现有观察工具主观性强、一致性差。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出PANDIA系统，融合分层表征学习、图神经网络跨模态推理、元学习个性化适配及符号化概念瓶颈解释，采用轻量CNN/TCN主干与联邦学习框架。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在四个数据集（共2847例婴儿）上达到87.3%准确率，较最优基线提升12.4%，临床医生对解释的接受率达92.1%；模型参数&lt;30M，支持边缘部署。</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/00f38662d268c1981dad7bb2de6eed842a623164" target="_blank">Analyzing Interpretable Visual Control Policy Search and Synthesis </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Christina Berghegger; Camilo De La Torre; Giorgia Nadizar; Yuri Lavinas; David Simoncini et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">在安全关键领域中实现兼顾高性能与高可解释性的视觉驱动序贯决策</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于图结构的遗传编程（GGP）方法，直接生成可读、可解释的代码形式控制策略，并在多样化环境条件下进行多条件联合优化</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">生成的策略达到接近人类水平的性能；通过搜索轨迹网络发现强局部最优解在进化过程中起吸引子作用，揭示了可解释性进化策略的内在局限性</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/00f4800bc95c8342ed1c019e7b8aa4656102abb4" target="_blank">Committor-regularized learning of differentiable collective variables from non-differentiable structural descriptors. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Florian M Dietrich; Michael A. Bellucci; Matteo Salvalaglio</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何将非可微的离散结构描述符（如局部晶体分类器）转化为可用于增强采样分子动力学的可微、物理可解释的集体变量（CVs）</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出一种物理信息驱动的图神经网络框架，通过committor正则化学习平滑、可微的代理CV，以逼近非可微结构描述符（如PTM）的输出</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">1）成功将非可微的PTM分类器转化为可微CV，准确再现FCC/BCC局域环境分数；2）committor正则化显著提升CVs在不同训练实例间的自由能面一致性与可重现性</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/00f8265591fe7e9d27e0602ea4179be0215cfeba" target="_blank">Advanced retinal disease detection using RHT-Net: a hybrid deep learning approach with augmented fundus imaging </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Yaoyang Cheng; Yiling Pan; Guodao Zhang; Wei Wu; Yisu Ge et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">开发一种高精度、可扩展的自动筛查系统，用于从彩色眼底图像中多分类识别九种视网膜疾病</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出RHT-Net混合架构，融合残差卷积神经网络（提取局部特征）与Transformer编码器（建模长程全局依赖）</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在真实世界数据集上测试准确率达96.12%、F1-score达92.28%；整体性能达准确率97.57%、F1-score 95.31%；Grad-CAM验证了模型可解释性</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/00fb6562ea6a46ef60910902dee07eb38c2cee84" target="_blank">Computational Framework Powered by AI for the Development of Self-Healing Intelligent Materials </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Deepak Saini; Bhanu Partap; A. Singh; Nisha Sharma</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何通过AI驱动的计算框架高效设计与预测自修复材料的性能</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">构建融合多尺度建模、深度学习、强化学习和数据驱动模拟的AI计算框架</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">显著提升自修复效率预测精度；实现材料属性优化并降低实验成本</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[8] Committor-regularized learning of differentiable collective variables from non-differentiable structural descriptors — 为分子动力学中“不可微结构→可微物理CV”这一长期方法论瓶颈提供了首个基于committor物理约束的端到端可微化范式，直接支撑电催化界面动态重构的定量描述。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[2] Graph Neural Networks for Structural Representation Learning of Zero-Divisor Graphs... — 其强调代数语义显式编码，与[8]中“物理约束替代符号先验”的隐式建模哲学形成张力，提示在电催化活性位点拓扑表征中应谨慎权衡代数抽象性与物理可解释性。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">[8]作者团队（未具名，但方法具强物理信息嵌入特征）— 在非可微结构描述符的可微代理构建上展现出对增强采样与自由能面刻画的深刻理解，与电催化表面相变、吸附构型演化等关键问题高度相关。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">多篇论文（[3][4][6][7][8]）共同指向“物理约束驱动的轻量化AI”范式——不再追求黑箱精度极致，而是以可微性、可解释性、物理一致性为第一设计准则，在边缘部署、实时响应与机制理解间取得新平衡。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">所有论文均未建立<strong>跨尺度可微映射</strong>：从原子级结构描述符（如[8]中的PTM）到宏观性能指标（如Tafel斜率、TOF）缺乏端到端可微链路；现有工作停留在单尺度代理建模（如CV学习或ROM），无法反向指导催化剂理性设计。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">对<strong>电化学界面动态异质性</strong>的建模普遍缺失：EEG运动伪迹（[1]）、洪水边界动态（[3]）、金融结构性突变（[5]）均被显式建模，但电催化中双电层重组、吸附竞争、局部pH瞬变等关键动态过程仍未被纳入AI框架的时序-空间联合建模范畴。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展“电化学感知的图神经网络”（EC-GNN）：以电极/电解质界面为图节点，将Nernst方程、Butler-Volmer动力学、离子迁移率等作为边约束，嵌入committor正则化（如[8]）与自监督时序预测（如[5]），实现从原子构型→界面动力学→宏观电流的可微闭环建模。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>

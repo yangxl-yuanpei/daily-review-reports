@@ -1406,5 +1406,78 @@
       "constant-potential",
       "surface"
     ]
+  },
+  "s2:007cdff6b095672292961612c6c0ad8ed967e4d4": {
+    "title": "An Energy Efficient Convolutional SNN for EEG Analytics towards Wearable BCI Applications",
+    "date_seen": "2026-07-07",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:00b376ee1d0c0e08e2fa29c8b4fba0d00281a3b2": {
+    "title": "Graph Neural Networks for Structural Representation Learning of Zero-Divisor Graphs from Idealization Constructions",
+    "date_seen": "2026-07-07",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00d201fc373b6b3af8b55e65085f7d3ac664b07a": {
+    "title": "Toward an Operational GNN-Based Multimesh Surrogate for Fast Flood Forecasting",
+    "date_seen": "2026-07-07",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00d38a6df7cee8f87b6cea7d5e41d38464c7d3f2": {
+    "title": "Portable Integrated Transceiver Architecture for Low-Cost Temperature Sensing",
+    "date_seen": "2026-07-07",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00ea77f4a08cb7e1c8fd6504f09e8c65e3af26aa": {
+    "title": "Deep Sequential Learning with Adaptive Sampling for Macro-Financial Yield Curve Prediction",
+    "date_seen": "2026-07-07",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00ed09080cbcf59a748bc338abf8e38f0506c445": {
+    "title": "PANDIA: Personalized neuro-symbolic multimodal fusion for interpretable neonatal pain assessment",
+    "date_seen": "2026-07-07",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00f38662d268c1981dad7bb2de6eed842a623164": {
+    "title": "Analyzing Interpretable Visual Control Policy Search and Synthesis",
+    "date_seen": "2026-07-07",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00f4800bc95c8342ed1c019e7b8aa4656102abb4": {
+    "title": "Committor-regularized learning of differentiable collective variables from non-differentiable structural descriptors.",
+    "date_seen": "2026-07-07",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:00f8265591fe7e9d27e0602ea4179be0215cfeba": {
+    "title": "Advanced retinal disease detection using RHT-Net: a hybrid deep learning approach with augmented fundus imaging",
+    "date_seen": "2026-07-07",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:00fb6562ea6a46ef60910902dee07eb38c2cee84": {
+    "title": "Computational Framework Powered by AI for the Development of Self-Healing Intelligent Materials",
+    "date_seen": "2026-07-07",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
