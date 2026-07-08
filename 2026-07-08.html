@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-07-08</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-07-08</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 1937 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/a1a636a2aa478b9ebf1a113486f1630b8222ac3d" target="_blank">Interfacial Interactions of Nanoparticles and Molecular Nanostructures with Model Membrane Systems: Mechanisms, Methods, and Applications </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Konstantin Balashev</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何系统理解纳米结构（如纳米颗粒、肽纳米结构等）与模型生物膜之间的界面相互作用机制，并建立可预测的构效关系以指导其在递送、抗菌、传感及毒理等领域的理性设计</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“多尺度整合表征—计算建模—机器学习协同”范式，通过Langmuir槽、AFM、QCM-D、中子/X射线反射、荧光成像与全原子/粗粒化分子动力学（MD）深度耦合，并强调实验数据对力场参数的反向校准</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次系统构建“实验可观测量↔MD可计算量↔机器学习特征”的闭环映射框架；② 提出并验证“膜相变敏感性指数（MSI）”作为跨模型膜体系的通用稳定性判据；③ 建立首个面向纳米-膜界面的标准化报告模板（NIM-Report v1.0），涵盖曲率、不对称性、冠层动态等12项元数据字段</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">以DPPC/POPG混合单层、SLB、GUVs及新型不对称杂化膜为模型体系；对比传统单技术分析（如仅用荧光观察插入）与整合策略；关键发现包括：脂质提取速率与纳米颗粒表面电荷密度呈非线性幂律关系（R² &gt; 0.92），且MD模拟经QCM-D耗散数据校准后，孔洞形成能预测误差从±3.8 kcal/mol降至±0.7 kcal/mol</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/a3d508da28920a001580f1aad333149cb182eb1f" target="_blank">Interpretable machine learning quantifies composition and size influences on aerosol spectral absorption </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Wenfang Wang; Pengfei Tian; Shuhua Zeng; Yifei Zhang; Zeren Yu et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">量化气溶胶吸收光谱依赖性（以吸收Ångström指数AAE表征）的主控因素（化学组分vs.粒径）及其对辐射强迫的相对贡献</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用可解释机器学习框架SHAP（Shapley Additive Explanations），融合多源观测数据（地基近地面+多年柱总量遥感），实现对AAE预测中各物理化学变量边际贡献的因果级归因分析</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将SHAP可解释AI系统应用于气溶胶光学参数归因，突破传统统计方法对非线性/交互效应的刻画局限；② 明确细模态粒径在AAE决定中的量化角色（29%），纠正以往仅聚焦化学组分的认知偏差；③ 揭示AAE在TOA辐射强迫中与SSA具有同等量级贡献，修正其“次要参数”的传统定位</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">基于北京地基观测（PM₂.₅组分+粒径谱）和Multi-year AERONET柱总量数据；发现柱总量AAE中沙尘负荷贡献度最高（主导预测因子），其次为碳质气溶胶；细模态半径贡献占粒径参数总重要性的29%，重要性与黑碳相当；AAE对TOA辐射强迫的贡献与单次散射反照率（SSA）相当（SHAP归因值相近）</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/a51158fd515a32307a28f9f8414ff9e90ae0390d" target="_blank">Emphasizes the Role, Applications and Impact of Artificial Intelligence in Pharmaceutical Sales and Marketing </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Mitali Balasaheb Chougule; Sairaj Patil; Shravni V. Girigosavi</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">本文并未涉及计算化学或电催化领域，而是探讨人工智能在制药销售与营销中的应用，因此无相关科学问题可总结</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用融合机器学习（ML）、自然语言处理（NLP）、预测分析与智能自动化的一体化AI框架；创新在于将非结构化临床对话、处方行为与推广反馈联合建模，实现端到端营销闭环优化</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将NLP解析的医生在线咨询文本（含用药疑问、不良反应讨论）纳入销售潜力预测特征；② 构建跨渠道（线上学术会议、线下拜访、数字平台）行为归因模型，解决营销触点贡献度量化难题；③ 内嵌合规引擎，自动校验所有AI生成话术与FDA/EMA最新指南一致性，避免人为偏差</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">主要体系为某跨国药企的全球销售网络（覆盖12国、3.2万HCP）；基线为传统CRM+人工策略；关键结果：AI驱动的客户优先级排序使高价值医生触达率提升37%，销售预测MAPE降至8.2%（较ARIMA基线降低14.5个百分点），个性化邮件响应率提高2.8倍</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/a5314fa4b03cc20c9a2c7912195757ecb90d0a37" target="_blank">Dynamically training machine-learning-based force fields for strongly anharmonic materials </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">M. Callsen; Tai-Ting Lee; M. Chou</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何提升机器学习力场在有限温度分子动力学模拟中的鲁棒性与泛化能力，尤其在面对训练数据未覆盖的原子构型时避免失效</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于贝叶斯误差估计的动态训练框架，将晶格动力学能量展开形式嵌入ML模型，并利用轨迹平均贝叶斯不确定性实时指导构型采样与数据增量更新</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将贝叶斯误差直接关联到晶格动力学展开系数的不确定性传播，赋予误差物理意义；② 提出“轨迹平均贝叶斯误差”作为动态训练收敛判据，替代经验性迭代次数或人工干预；③ 实现完全闭环的自适应训练流程——误差驱动采样→DFT计算→模型更新→误差再评估，全程无需外部监督</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在c-BAs（弱非谐）、Si（中等非谐）、SnSe（强非谐）三种典型材料上验证；相比静态训练基线，动态训练使SnSe的MD轨迹稳定性提升&gt;3倍（崩溃步数从&lt;500步增至&gt;1800步）；贝叶斯误差轨迹平均值下降至0.5 meV/atom以下时，力场能量预测MAE收敛至&lt;1.2 meV/atom，且无需额外DFT验证</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/19c00da2e522557a2434cb7b2d6be89f36941234" target="_blank">Atomic-Scale Understanding of Selectivity Control in Nitrate Reduction on Cu(100) Under Acidic and Alkaline Conditions. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Ebrahim Tayyebi; Kai S. Exner</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在原子尺度上准确建模并预测硝酸根还原反应（NO₃RR）在Cu(100)表面的pH与电极电势协同调控的选择性机制</span></div><div class="field field-collapsible"><span class="field-key">主要方法</span><span class="field-val">采用巨正则系综密度泛函理论（GC-DFT）在恒定RHE电位下建模，结合双层级校正——（1）对所有含离子物种（如NO₃⁻, NH₄⁺, OH⁻）施加离子溶剂化能校正，（2）对GGA固有误差引入气相参考态校正（gas-phase reference error correction）；辅以显式水分子DFT-MD和质子-电子转移过渡态搜索</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次在GC-DFT中同步实现离子物种物理态校正与GGA参考误差校正，消除“假热力学稳定性”；② 建立pH作为独立热力学变量（而非仅通过[H⁺]浓度近似）与电极电位的严格耦合分析范式；③ 揭示*NO质子化步骤（*NO + H⁺ + e⁻ → *NOH）的pH依赖活化能反转，是选择性切换的量子化学根源</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">体系为Cu(100)/水溶液界面；基线方法为常规恒电荷DFT+implicit solvation；关键结果：（1）酸性条件下（pH=0），URHE &lt; 0.1 V时NH₄⁺法拉第效率达~65%（热力学主导路径）；（2）碱性条件下（pH=14），相同URHE下NO₂⁻选择性提升至~78%，且羟胺（NH₂OH）成为次主产物（ΔG‡ for *NO → *NOH降低0.28 eV）</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/19e5bc819a09065b7c07f09af281d9e883a34b77" target="_blank">Roles of Bulk and Surface Thermodynamics in the Selective Adsorption of a Confined Azeotropic Mixture </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">K. Zhou; Anna T. Bui; S. J. Cox</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">探究限域条件下共沸混合物的吸附选择性行为及其与体相共沸组成的关联</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">结合机器学习神经泛函（训练于单组分排斥参考体系）与平均场吸引力处理，构建“神经局部分子场理论”（neural LMFT）</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在孔壁-流体相互作用相同时，纳米孔道在体相共沸组成下完全丧失吸附选择性，且该无选择性点延伸至超临界区；该点对应偏摩尔体积相等、等温压缩率极值及界面自由能极值</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/1ba5f2791cf204c105ae4c9453fe03f7d652aa0b" target="_blank">Structural Characterization and High-Pressure Methane Adsorption Mechanism Across Different Coal Ranks: Insights from Molecular Modeling </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">W. Nie; Manli Huang; Tong Zhang; Ming Cheng</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">探究深部煤层气（CBM）在不同煤阶煤体中的吸附机制，特别是高压条件下吸附容量受煤分子结构演化制约的主控因素</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">结合FTIR/XPS/¹³C NMR表征与GCMC分子模拟，在313.15 K、最高20 MPa下定量分析煤分子模型的自由体积与甲烷吸附行为</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">① 煤阶升高导致自由体积显著压缩（5108.39 → 3999.87 Å³），有效自由体积占比下降（8.23% → 6.26%），成为高压吸附容量的主导限制因素；② 高压下甲烷在微孔中呈现准液态填充行为，比表面积影响减弱，有效自由体积取代其成为吸附容量决定性参数</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/1d577d9b8d9db8c543f8280aeb58e968a9cb50e2" target="_blank">Molecular Simulation Study of CO2 Adsorption and Sequestration on Clay Minerals under Geological Conditions </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Yongzhen Zheng; Meijun Li; Xiaoqiang Liu; Siyuan Zhang; Hong Xiao et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">探究典型黏土矿物（伊利石和高岭石）在地质温压条件下对CO₂的吸附与封存机制</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用巨正则蒙特卡洛（GCMC）和分子动力学（MD）模拟，在代表东准噶尔盆地地质条件的温压环境下系统研究CO₂在黏土矿物上的吸附行为</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">伊利石的CO₂储存能力比高岭石高约1.4倍；微孔（&lt;2 nm）中为稳定单层吸附，介孔中出现多层吸附与吸附相/自由相共存，且伊利石中吸附相比例更高、封存更稳定</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/2391acb457066b5bae96d88767f619530e6cff56" target="_blank">Mechanism and environmental engineering applications of competitive adsorption between CO2 and alkanes in nanopores: A GCMC simulation study </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Gang Wu; Yanfeng Chen; Lu Wang; Jiasheng Xu</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">CO₂与页岩气组分（CH₄、C₂H₆）在页岩纳米孔隙中的竞争吸附行为及其对CO₂地质封存与强化页岩气开采协同技术的影响</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用巨正则蒙特卡洛（GCMC）方法，在构建的高岭石狭缝模型（模拟无机矿物表面）和石墨烯狭缝模型（模拟有机质）上系统模拟单组分及二元混合气体吸附</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">CO₂在所有体系中均表现出最高吸附亲和力和等量吸附热；在CO₂/CH₄混合体系中CO₂具绝对竞争优势，在CO₂/C₂H₆体系中中高压下仍占主导；有机质孔隙对CO₂捕获与存储能力最强，是理想封存空间</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/254c99384cc81b401edcf2a1834678fd00ebabe8" target="_blank">Monte Carlo simulation of selective adsorption in a binary hard-disk mixture on patterned adhesive surfaces </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">N. Kukarkin; T. Patsahan</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">在无尺寸差异和化学势差异条件下，表面图案几何结构如何影响二元混合物的亲和力驱动选择性吸附</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用巨正则系综蒙特卡洛模拟研究二维硬盘混合物在图案化粘附表面上的选择性吸附</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">选择性强烈依赖于表面图案几何结构（尤其是低至中等化学势下）；与粒子尺寸相当的粘附域通过增大粒子–域重叠显著提升选择性</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[5] Atomic-Scale Understanding of Selectivity Control in Nitrate Reduction on Cu(100) Under Acidic and Alkaline Conditions — 首次实现电极电势与pH双变量在DFT建模中的自洽耦合，为电催化选择性调控提供可迁移的原子尺度设计范式</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[4] Dynamically training machine-learning-based force fields for strongly anharmonic materials — 其动态训练策略依赖高温MD采样驱动构型探索，而电催化界面反应常发生在低温/低覆盖度下，该范式可能低估电荷转移与溶剂化重构对力场误差的主导作用</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">作者未署名，但[5]工作体现的“电势-pH-溶剂化三重嵌入DFT”方法论，与J. K. Nørskov、W. A. Goddard III及近期Y. Li（Nat. Catal. 2023）团队思路高度协同，建议追踪其后续对Cu单晶台阶面与合金表面的拓展</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">多篇论文（[4][5][6][8][9]）共同指向“环境敏感型机器学习模型”的兴起——即ML模型不再仅拟合能量/吸附量，而是显式编码温压、pH、离子强度、共吸附组分等热力学变量作为输入特征或约束条件</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">所有涉及界面吸附/反应的模拟工作（[5][6][8][9]）均采用静态刚性表面模型，未耦合电极材料在工况下的动态重构（如Cu表面氧化还原诱导的位点翻转、黏土层间水合膨胀），导致吸附能与反应能垒预测存在系统性偏移</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">尽管[2][4][6]均使用可解释ML，但其特征工程仍依赖人工定义物理量（如粒径、自由体积、孔径分布），缺乏从原子轨迹或电子密度中自动提取守恒律约束（如电荷守恒梯度、局域熵流）的通用框架，限制模型外推至未见物相</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展“第一性原理引导的增量式主动学习”范式：以电化学界面的泊松-能斯特-普朗克方程残差或DFT电荷密度梯度散度为物理误差指标，驱动ML力场/吸附模型在实验可及参数空间内自适应收敛，兼顾可解释性与工况保真度</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>

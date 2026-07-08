@@ -1479,5 +1479,87 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:a1a636a2aa478b9ebf1a113486f1630b8222ac3d": {
+    "title": "Interfacial Interactions of Nanoparticles and Molecular Nanostructures with Model Membrane Systems: Mechanisms, Methods, and Applications",
+    "date_seen": "2026-07-08",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:a3d508da28920a001580f1aad333149cb182eb1f": {
+    "title": "Interpretable machine learning quantifies composition and size influences on aerosol spectral absorption",
+    "date_seen": "2026-07-08",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:a51158fd515a32307a28f9f8414ff9e90ae0390d": {
+    "title": "Emphasizes the Role, Applications and Impact of Artificial Intelligence in Pharmaceutical Sales and Marketing",
+    "date_seen": "2026-07-08",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:a5314fa4b03cc20c9a2c7912195757ecb90d0a37": {
+    "title": "Dynamically training machine-learning-based force fields for strongly anharmonic materials",
+    "date_seen": "2026-07-08",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:19c00da2e522557a2434cb7b2d6be89f36941234": {
+    "title": "Atomic-Scale Understanding of Selectivity Control in Nitrate Reduction on Cu(100) Under Acidic and Alkaline Conditions.",
+    "date_seen": "2026-07-08",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:19e5bc819a09065b7c07f09af281d9e883a34b77": {
+    "title": "Roles of Bulk and Surface Thermodynamics in the Selective Adsorption of a Confined Azeotropic Mixture",
+    "date_seen": "2026-07-08",
+    "tags": [
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:1ba5f2791cf204c105ae4c9453fe03f7d652aa0b": {
+    "title": "Structural Characterization and High-Pressure Methane Adsorption Mechanism Across Different Coal Ranks: Insights from Molecular Modeling",
+    "date_seen": "2026-07-08",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:1d577d9b8d9db8c543f8280aeb58e968a9cb50e2": {
+    "title": "Molecular Simulation Study of CO2 Adsorption and Sequestration on Clay Minerals under Geological Conditions",
+    "date_seen": "2026-07-08",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:2391acb457066b5bae96d88767f619530e6cff56": {
+    "title": "Mechanism and environmental engineering applications of competitive adsorption between CO2 and alkanes in nanopores: A GCMC simulation study",
+    "date_seen": "2026-07-08",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:254c99384cc81b401edcf2a1834678fd00ebabe8": {
+    "title": "Monte Carlo simulation of selective adsorption in a binary hard-disk mixture on patterned adhesive surfaces",
+    "date_seen": "2026-07-08",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
   }
 }
