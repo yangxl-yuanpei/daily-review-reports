@@ -1561,5 +1561,79 @@
       "constant-potential",
       "surface"
     ]
+  },
+  "s2:62511dd37d87b72ae702284e93aecc36142c8b84": {
+    "title": "Ring Polymer Molecular Dynamics Rates for Hydrogen Recombinative Desorption on Pt(111)",
+    "date_seen": "2026-07-09",
+    "tags": [
+      "electrochemistry",
+      "NQE",
+      "catalysis",
+      "surface"
+    ]
+  },
+  "s2:42fe4869728bb46f29e77c16381a427196cd78ee": {
+    "title": "Study of methyl phosphate by molecular dynamics simulations based on first principles and on machine-learning force fields",
+    "date_seen": "2026-07-09",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:85222a3865d5bdb91f6fdcb19b5ea25663902d31": {
+    "title": "Activation energy and Coriolis force impact on three-dimensional dusty nanofluid flow containing gyrotactic microorganisms: Machine learning and numerical approach",
+    "date_seen": "2026-07-09",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:961152deb78ab663648ee95662af5b29f00da666": {
+    "title": "A computationally efficient quasi-harmonic study of ice polymorphs using the FFLUX force field",
+    "date_seen": "2026-07-09",
+    "tags": [
+      "electrochemistry",
+      "dft"
+    ]
+  },
+  "s2:a3bbcac4d372d942e63c1498c0cab8b5c2beea52": {
+    "title": "Leveraging artificial intelligence and advanced food processing techniques for enhanced food safety, quality, and security: a comprehensive review",
+    "date_seen": "2026-07-09",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:aae594b661666da76408f5725e4c59e0c6809cd2": {
+    "title": "Advancements in machine learning applications for mineral prospecting and geophysical inversion: A review",
+    "date_seen": "2026-07-09",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:b8f7a0805e31b4352d28082f8c64b8c4664832e7": {
+    "title": "Data-driven Civic Education: Theory and Practice",
+    "date_seen": "2026-07-09",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:ec544cd06e3d43bd98c90014d5fe27159c8be011": {
+    "title": "ADVANCING ARTIFICIAL INTELLIGENCE: AN IN-DEPTH LOOK AT MACHINE LEARNING AND DEEP LEARNING ARCHITECTURES, METHODOLOGIES, APPLICATIONS, AND FUTURE TRENDS",
+    "date_seen": "2026-07-09",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:e255136099048881e2af94c06ffcb3d64d280bf3": {
+    "title": "On The Emergence of Machine-Learning Methods in Bottom-Up Coarse-Graining",
+    "date_seen": "2026-07-09",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:7582adea87bd855d8b6a895e09b903a7d6612a41": {
+    "title": "Comparative Study on the Application of Gradient Boosting Regression and Single/Double-Layer LSTM Models",
+    "date_seen": "2026-07-09",
+    "tags": [
+      "general"
+    ]
   }
 }
