@@ -1635,5 +1635,81 @@
     "tags": [
       "general"
     ]
+  },
+  "s2:06d59a89f5a6d30c227aab991950c06e9d22f6eb": {
+    "title": "BatteryMat: a hierarchical machine-learning and DFT framework for average-voltage screening of lithium-ion cathode materials",
+    "date_seen": "2026-07-10",
+    "tags": [
+      "dft"
+    ]
+  },
+  "s2:0d46fef00eb93b5d67e9cedc6913b70f4740509e": {
+    "title": "Hydrogen-Bond Network in Equimolar N-Methylacetamide-Water: Integrated Neutron Scattering, Molecular Dynamics, DFT-NBO-AIM, and Machine Learning Analysis.",
+    "date_seen": "2026-07-10",
+    "tags": [
+      "dft"
+    ]
+  },
+  "s2:617a7e988e12ccaf25df9852d5902485f6a59dc1": {
+    "title": "A Multi-Engine Consensus Docking Pipeline for RNA Aptamer Screening Against ACC Oxidase (ACO): Statistical Validation, Machine Learning Analysis, and Pilot Cross-Target Evaluation Against ACC Synthase (ACS)",
+    "date_seen": "2026-07-10",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:00fc6cf8ab0e75cb8560b505d46e8ad2e98ed953": {
+    "title": "Exploring active learning strategies for excited state dynamics: application to uracil.",
+    "date_seen": "2026-07-10",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "active-learning"
+    ]
+  },
+  "s2:00fe5b565067f3750fe477d54834fa61566a0406": {
+    "title": "An Enhanced Air Quality Forecasting Method Integrating Feature Mode Decomposition and Multilayer Plasticity Echo State Network",
+    "date_seen": "2026-07-10",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00ffc15ddf94e27fa214ae2fec37f9e405d6e8aa": {
+    "title": "Bimetallic FeCu-N-C Single-Atom Nanozymes with Triple Enzymatic Activities Enabling a Colorimetric Sensor Array for Machine-Learning-Assisted Pesticide Discrimination.",
+    "date_seen": "2026-07-10",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:01006263299dbccdb020ed5588d779b084644b5d": {
+    "title": "A COMPARATIVE STUDY OF ANN AND LOGISTIC REGRESSION FOR FINANCIAL DISTRESS PREDICTION IN INDONESIAN MANUFACTURING FIRMS",
+    "date_seen": "2026-07-10",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0109f0145aca00d2bfbe9db769c88f1858d0cc13": {
+    "title": "Curvature-guided anisotropic noise injection for robust multimodal data processing in neuroscience and perception science",
+    "date_seen": "2026-07-10",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:01169019f3097e4474ea683a469b4f048343b4c0": {
+    "title": "Graph-Based Anomaly APT Attack Detection via Threat Intelligence",
+    "date_seen": "2026-07-10",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:011a45e156c899d8d84d231891f41b0917e45175": {
+    "title": "Evolution-Inspired Sample Competition for Deep Neural Network Optimization",
+    "date_seen": "2026-07-10",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }

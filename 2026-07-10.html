@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-07-10</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-07-10</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 2983 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/06d59a89f5a6d30c227aab991950c06e9d22f6eb" target="_blank">BatteryMat: a hierarchical machine-learning and DFT framework for average-voltage screening of lithium-ion cathode materials </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Jaehyung Lee; C. Campbell; Ke Zhang; Kamal Choudhary</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在保证热力学一致性前提下，实现大规模电池正极材料平均电压的高效、准确预测</span></div><div class="field field-collapsible"><span class="field-key">主要方法</span><span class="field-val">提出BatteryMat三阶段框架：第一阶段用ALIGNN模型对JARVIS-DFT库中锂化结构进行单次前向推理快速初筛；第二阶段用ALIGNN-FF力场生成delithiation电压曲线并过滤；第三阶段对候选结构自动适配空间群依赖的DFT泛函（PBE+U或optB88-vdW+U），并在统一平面波基组下重算Li金属参考能，消除基准偏移</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将ALIGNN与ALIGNN-FF力场耦合构建热力学一致的电压预测流水线；② 实现DFT泛函按空间群自动选择，并统一Li金属参考计算协议，消除约1 V系统性偏移；③ 不生成新结构，而是对现有数据库（JARVIS/Alexandria）进行热力学感知的优先级排序，输出可验证候选集而非宣称“发现新材料”</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">主体系为JARVIS-DFT中含锂结构（7,610个ALIGNN-FF训练样本）及Alexandria数据库（4.49M结构）；基线为实验电压与PBE+U/optB88-vdW+U超胞DFT；ALIGNN对ALIGNN-FF电压预测MAE=0.17 V, R²=0.94；在LiFePO₄、LiMnPO₄、LiMn₂O₄、LiCoO₂上DFT预测平均电压误差≤0.3 V，理论体积容量误差≤5%</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0d46fef00eb93b5d67e9cedc6913b70f4740509e" target="_blank">Hydrogen-Bond Network in Equimolar N-Methylacetamide-Water: Integrated Neutron Scattering, Molecular Dynamics, DFT-NBO-AIM, and Machine Learning Analysis. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">H. Abdelmoulahi; Sahbi Trabelsi; S. Bouazizi; S. Nasr</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何从电子结构层面定量解析N-甲基乙酰胺–水（NMA-W）混合溶剂中氢键的强度、寿命与局部网络拓扑之间的非平凡关联</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“MD驱动+数据重构+多尺度电子结构验证”三重验证框架：1）AMBER/SPC/E力场MD生成系综；2）随机森林回归器无参数重建中子散射S(Q)，实现Q空间连续表征；3）对MD采样出的三大优势局域簇开展DFT-NBO/AIM联合分析，桥接动态结构与电子拓扑</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">1）首次将非参数机器学习（随机森林）用于中子散射函数的连续数值重建，替代传统拟合模型；2）建立“MD采样→优势簇识别→DFT电子拓扑量化→动力学寿命交叉验证”的闭环分析范式；3）揭示氢键电子密度强度与寿命解耦现象，归因于局域氢键网络拓扑约束（如三中心竞争配位）而非单纯键级大小</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">体系为等摩尔NMA-W液体；基线为纯MD结构因子与实验中子散射数据；随机森林重建S(Q)在Q=0.8–2.5 Å⁻¹区间R²&gt;0.97；AIM分析显示NMA-W氢键BCP处ρ(r_c)=0.028–0.034 a.u.，显著高于典型水二聚体（0.022 a.u.），但其MD平均寿命仅1.2–1.8 ps，证实强电子相互作用≠长寿命</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/617a7e988e12ccaf25df9852d5902485f6a59dc1" target="_blank">A Multi-Engine Consensus Docking Pipeline for RNA Aptamer Screening Against ACC Oxidase (ACO): Statistical Validation, Machine Learning Analysis, and Pilot Cross-Target Evaluation Against ACC Synthase (ACS) </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Héctor Ramón Martínez-de la Hoya; Cristian Patricia Cabrales-Arellano; Josué Ortiz-Medina; Efrén Delgado; J. A. Rojas-Contreras et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何高效、无毒地筛选能特异性抑制乙烯生物合成关键酶（ACO/ACS）的RNA适配体，以减少果蔬采后损失</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出多引擎协同对接计算管线（ITD DOCK + HDOCK Lite + HADDOCK3），结合GPU加速、知识驱动几何势与半柔性精修，并开发端到端自动化工具AptaDock</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次系统评估多对接引擎在RNA适配体-酶复合物筛选中的互补性与非冗余性；② 证明序列特征无法替代结构对接获取结合亲和力信息，确立“对接即必要步骤”的计算范式；③ 开发首个面向RNA适配体-植物酶靶标的开源、桌面级自动化筛选平台AptaDock</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">在ACC氧化酶（ACO）靶标上筛选9813条RNA适配体；三引擎打分互不相关（Spearman |ρ|≤0.013, p&gt;0.20），证实互补性；仅基于序列特征的随机森林模型完全失效（R²=−0.012），而HADDOCK3能量组分模型高度可预测（R²=0.991）；初步验证ACS靶标（n=97）并发现2个潜在双靶点候选适配体</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/00fc6cf8ab0e75cb8560b505d46e8ad2e98ed953" target="_blank">Exploring active learning strategies for excited state dynamics: application to uracil. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Juan Carlos San Vicente Veliz; Mark J. DelloStritto; S. Matsika</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何构建高精度、高效能的机器学习势能面模型，以准确模拟尿嘧啶（uracil）在光激发态下的非绝热动力学过程（特别是经由锥形交叉点的超快弛豫）</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">基于可极化原子相互作用神经网络（PaiNN）架构，构建端到端联合预测能量、梯度（力）和非绝热耦合（NAC）的多任务ML模型；创新性采用asinh损失函数优化力预测，并通过能量间隙驱动的自适应主动学习策略聚焦锥形交叉区域采样</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次在PaiNN框架下实现能量/力/NAC三者联合训练，并证明NAC与力在损失权重中应优先于能量；② 提出基于电子态能量差（ΔE）的主动学习准则，比基于不确定性或能量误差的传统策略更精准捕获锥形交叉拓扑；③ 证实“分支平面（branching plane）+能量间隙采样”双轨数据增强方案可同步提升势能面精度与动力学保真度</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系为气相尿嘧啶S₀/S₁激发态；基线为多参考CASPT2//CASSCF表面跳跃轨迹；引入asinh损失后力预测MAE降低37%；经单轮主动学习（仅新增≈1%训练结构），电子态布居演化误差（vs. CASPT2基准）下降52%；模型成功将可靠动力学模拟时长从~0.5 ps延拓至4–6 ps</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/00fe5b565067f3750fe477d54834fa61566a0406" target="_blank">An Enhanced Air Quality Forecasting Method Integrating Feature Mode Decomposition and Multilayer Plasticity Echo State Network </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Xinghan Xu; Jianwei Liu; Lei Hu; Xingyi Miao; Yufeng Li et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何提升大气污染物时间序列的多步预测精度，以应对非平稳性、空间异质性和复杂污染物交互带来的建模挑战</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出特征模态分解-多层可塑性回声状态网络（FMD-MPESN），创新性融合信号分解（FMD）与具备层级神经可塑性的ESN架构，实现频域解耦+动态连接自适应调整</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将特征模态分解（FMD）引入空气质量预测预处理，提供物理意义明确的频域分量；② 设计多层神经可塑性机制，使ESN内部连接权重能随环境状态动态演化，突破传统ESN静态储备池限制；③ 构建端到端可解释—可学习混合框架，在保持计算效率的同时提升鲁棒性与跨区域泛化能力</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在中国12个重点城市及国际AQ-Bench数据集上测试；基线包括LSTM、GRU、标准ESN、DMD-ESN等；FMD-MPESN在24小时多步预测中RMSE降低11.7%，MAPE降低12.4%，跨区域迁移性能显著优于所有基线</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/00ffc15ddf94e27fa214ae2fec37f9e405d6e8aa" target="_blank">Bimetallic FeCu-N-C Single-Atom Nanozymes with Triple Enzymatic Activities Enabling a Colorimetric Sensor Array for Machine-Learning-Assisted Pesticide Discrimination. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Yanyue Chen; Peng Wei; Linru Bai; Huan Cheng; Hongling Tao et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何通过设计双原子位点纳米酶实现多酶协同催化以提升环境污染物检测性能</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用甲酰胺自缩合法构建Fe-Cu双原子位点氮掺杂碳纳米酶（FeCu-N-C），结合DFT计算揭示d带中心调控机制</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">Fe-Cu邻近位点使Fe的d带中心上移至-0.88 eV，显著增强过氧化物酶/氧化酶/漆酶三重模拟活性；基于该材料构建的单材料比色传感器阵列联合ANN实现五种农药100%准确识别</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/01006263299dbccdb020ed5588d779b084644b5d" target="_blank">A COMPARATIVE STUDY OF ANN AND LOGISTIC REGRESSION FOR FINANCIAL DISTRESS PREDICTION IN INDONESIAN MANUFACTURING FIRMS </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Khusnul Khotimah; Ulfa Puspa; Wanti Widodo</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">比较逻辑回归（LR）与人工神经网络（ANN）在预测印尼制造业上市公司财务困境中的性能优劣</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">基于ROA、DAR、CR等财务比率，构建LR（线性统计模型）和ANN（非线性机器学习模型）进行二分类预测</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">LR模型的召回率（55.56%）高于ANN模型，表明其在识别真实财务困境企业方面更具敏感性</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0109f0145aca00d2bfbe9db769c88f1858d0cc13" target="_blank">Curvature-guided anisotropic noise injection for robust multimodal data processing in neuroscience and perception science </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Yubin Wu; Huilin Liu</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">大批次训练导致多模态模型陷入尖锐的、模态主导的局部极小值，产生持续的泛化差距</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出几何各向异性噪声注入（GANI）框架，通过曲率估计解耦确定性大批次下降与随机几何探索，并注入结构化各向异性噪声</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">GANI显著缩小泛化差距、提升收敛稳定性、约束Hessian最大特征值，并在视觉噪声和文本缺失条件下保持更强鲁棒性</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/01169019f3097e4474ea683a469b4f048343b4c0" target="_blank">Graph-Based Anomaly APT Attack Detection via Threat Intelligence </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Chun-I Fan; Cheng-Han Shie; Yi Chang; Tao Ban; Tomohiro Morikawa et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">传统EDR系统误报率高，导致安全运维人员分析负担过重</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于溯源图（provenance graph）和图神经网络的异常检测系统</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">误报率降低97.67%；图神经网络检测性能优于传统神经网络</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/011a45e156c899d8d84d231891f41b0917e45175" target="_blank">Evolution-Inspired Sample Competition for Deep Neural Network Optimization </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Yingye Zheng; Yiyi Zhang; Yi Wang; Lap-Pui Chau</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">传统深度网络训练采用均匀样本处理范式，忽视样本间异质性竞争，导致类别不平衡偏差、难样本学习不足和噪声样本误强化等问题。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“自然选择”（NS）优化方法，通过将多个样本合成复合图像并基于群体内相对竞争变化动态计算每个样本的选择得分，实现竞争驱动的自适应损失重加权。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在12个公开图像分类数据集上显著提升模型性能；方法兼容多种网络架构且无需任务特定假设，展现出强泛化性与实用性。</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[4] Exploring active learning strategies for excited state dynamics: application to uracil — 首次系统评估主动学习策略在激发态非绝热动力学中的适用性，直接关联电催化中光生载流子界面转移与超快弛豫建模的关键瓶颈</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[1] BatteryMat: a hierarchical machine-learning and DFT framework for average-voltage screening of lithium-ion cathode materials — 其“热力学一致性”约束依赖于基态DFT能量差，未考虑电极/电解质界面极化或激发态电荷重分布对电压平台的潜在修正，可能低估实际工作电压偏差</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">[6] Bimetallic FeCu-N-C Single-Atom Nanozymes...作者团队 — 在单原子催化剂d带中心调控与多酶活性耦合之间建立可计算验证的构效关系，为电催化活性位点理性设计提供跨尺度（DFT→实验→传感）闭环范式</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">多篇论文（[1][4][6]）共同指向“量子力学保真度”与“机器学习效率”的协同增强范式——不再将ML视为DFT替代品，而是作为物理约束嵌入的代理模型构建工具</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">所有涉及DFT的论文（[1][2][4][6]）均未显式处理溶剂化动态效应与电极电势依赖性的联合建模；例如[1]的电压预测忽略电解液介电屏蔽对Li⁺脱嵌自由能的影响，[4]的激发态PES未耦合电场/电势梯度，导致界面过程模拟脱离真实电化学环境</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">机器学习模型普遍缺乏对“不确定性传播”的量化：[1]未给出电压预测置信区间，[4]未评估NAC预测误差对跃迁速率的影响，[6]未报告d带中心计算对泛函选择的敏感性——这阻碍了模型在高风险电催化材料筛选中的可信部署</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展电势-溶剂化联合校准的多尺度代理模型框架：以恒电势DFT（如CP2K+grand canonical DFT）为基准，训练能同步输出能量、力、NAC及溶剂响应函数的图神经网络，并嵌入贝叶斯不确定性估计模块，支撑电催化反应路径的鲁棒性决策</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>
