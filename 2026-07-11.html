@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-07-11</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-07-11</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 2347 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/020e0b61e3029a5291c8ceb032ac2fe579711572" target="_blank">DIGITAL TRANSFORMATION AS A SYSTEMATIC LEVER FOR ENSURING THE COMPETITIVENESS OF FINANCIAL INSTITUTIONS </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">N. Namliyeva</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">本文试图解决人工智能在乌克兰银行业务自动化中的实际应用效果与可行性问题</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用案例研究法，结合定性分析（比较分析、系统分析、综合归纳），深度剖析PrivatBank与monobank两大代表性机构的AI部署实践，强调“技术—流程—服务—竞争力”的传导链条。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次系统梳理乌克兰本土银行AI落地的真实场景与成效，填补东欧新兴市场实证空白；② 聚焦“金融包容性+稳定性”双重目标下的AI适配路径，而非单纯追求技术先进性；③ 将AI效能评估锚定于服务可及性、客户信任度与机构竞争力等非纯技术指标，体现应用导向范式。</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">主要体系为乌克兰PrivatBank（Privat24 App中聊天机器人与自动信贷审批）与monobank（实时授信、个性化推荐、动态风险评估）；基线为传统人工/半自动化流程；关键结果包括：客户咨询响应实现24/7即时化、贷款审批时间从数日缩短至分钟级、运营成本显著降低（文中未给出具体数值，但明确指出“减少运营成本”）。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/011b1a8366a042eb07139e2eb442a227323a8994" target="_blank">Deep Learning Based Framework for Detection and Classification of Leukemia Using Microscopic Images. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">R. Arif; Shahzad Akbar; Usama Shahzore; Faten S. Alamri; Salma Idris et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何利用深度学习从显微镜图像中高精度、自动区分白血病细胞与正常细胞，并实现白血病亚型的多分类诊断</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“U-Net分割 + CNN分类”两阶段深度学习框架；创新性地将细胞级语义分割（U-Net）作为特征预提取前置模块，替代常规全局池化，显著增强对形态异常白血病细胞的判别敏感性</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将U-Net用于白血病显微图像的细胞级实例分割以驱动下游分类，而非仅作辅助可视化；② 设计面向小样本血液图像的数据增强策略（含弹性形变、光照扰动等），有效缓解类别不平衡与过拟合；③ 构建可解释性闭环：分割掩膜可回溯定位决策依据区域，支持临床可信度验证</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在ASH公开显微镜图像数据集（270张原始图像，经数据增强扩增至1268张）上验证；基线为标准CNN（无分割预处理）；二分类准确率99.06%，多分类准确率98.68%，F1-score 96.77% ± 1.09%，显著优于未引入分割的对照模型（文中隐含对比，F1提升约3–5个百分点）</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/01211b8f1bf639c0716b828cb98d23a8497cd7d0" target="_blank">A Multimodal Deep Neural Network for Multiclass Hate Speech Classification </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Mainak Sen; Raj Kumar; Abhishek Malakar; Santanu Pal</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在社交媒体中通过多模态深度学习方法联合建模文本与图像中的隐式线索，实现对网络欺凌与仇恨言论的自动、鲁棒检测</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出一种端到端融合的多模态深度学习框架，主干为并行LSTM（处理经tokenization、padding与预训练词嵌入的文本序列）与微调ResNet50（提取图像高层语义特征），二者特征在晚期（late-fusion）阶段拼接后输入全连接分类器</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将ResNet50-LSTM晚期融合架构系统应用于网络欺凌检测任务（而非仅仇恨言论粗粒度分类）；② 显式建模图文模态间非对齐性——允许文本与图像独立编码后再融合，避免强制对齐导致的语义失真；③ 在真实噪声数据（含OCR错误、低质截图、多语言混杂）上验证了鲁棒性，未依赖人工标注模态对齐标签</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在公开多模态仇恨言论数据集HateSpeech18（含推文文本+对应图片）上评估；基线包括单模态LSTM、ResNet50及早期融合模型；本文方法F1-score达0.823，较最佳单模态基线（LSTM: 0.741）提升8.2个百分点，AUC达0.891</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0124910791483ddcfcd1d216b9f13eff96a8e4c4" target="_blank">HoST: integrating Heuristic knowledge with attention-based LSTM networks for Thunderstorm prediction. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Kalyan Chatterjee; Mudassir Khan; Bhoomeshwar Bala; Meteb M. Altaf; Arathi Chitla et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在短临雷暴预报中兼顾高精度、物理一致性与计算实时性，实现概率化、可解释的强对流事件预测</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">HoST框架——将注意力增强的LSTM时序建模与可微分、软性的物理启发式约束（如CAPE/Shear经验判据、垂直风切变阈值响应函数）联合优化，通过损失函数中的物理正则项实现知识引导的端到端学习</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次将可微分、参数化的气象启发式规则（非固定阈值，而是连续响应函数）嵌入深度时序网络损失函数，实现软物理约束；② 注意力机制聚焦于关键热动力变量（如0–3 km风切变、对流有效位能变化率）的时间滞后耦合特征，而非原始雷达反射率；③ 在准业务化设置中验证了跨lead time（5–60 min）性能稳定性，突破多数DL模型随预报时效延长性能陡降的瓶颈</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">在北美NEXRAD雷达+探空观测融合数据集上评估；基线包括Random Forest、BLSTM-GRU、MetNet、GraphCast、HRRR等；HoST在30分钟提前期下达到0.82 CSI（Critical Success Index），较GraphCast提升12.7%，校准误差（Brier Score）降低23.4%，推理延迟&lt;180 ms/样本</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/012898adf6ac3cd4bfb0dc15939eb7a1ff78ecbd" target="_blank">PoroNet: An Intrinsically Interpretable Pore Graph Neural Network for Resolving Pore-Level Adsorption in Metal–Organic Frameworks </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Chaozhong Zheng; Arun Gopalan; K. Shi</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在保持高预测精度的同时，实现金属有机框架（MOF）吸附性能机器学习模型的内在可解释性，从而支持面向功能的理性孔结构设计。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出PoroNet——一种基于孔网络图（pore graph）的本征可解释图神经网络，其中节点为单个孔、边为孔间连通性，通过消息传递直接建模孔级贡献，无需后处理即可输出物理可诠释的孔级吸附贡献权重。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将MOF抽象为“孔图”而非原子/超胞图，使图结构与吸附物理过程（孔限域、连通传输）直接对应；② 实现孔级贡献的端到端可学习与可监督，兼具内在可解释性与高数据效率；③ 所学孔级权重可定量反演关键孔参数（如尺寸、形状、亲和位点密度），形成可迁移的设计规则。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在H₂吸附量与可交付容量预测任务中，PoroNet在MOF数据集上R² &gt; 0.95；在含球形/线性烷烃的模拟吸附基准数据集上亦保持高精度；在仅用20%分子模拟数据训练时，孔级贡献预测误差（MAE）&lt; 0.1 mmol/g，显著优于标准GNN需全量数据才能达到的同等水平。</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/012d8721bc5985d3503c99012c9658488d525ac1" target="_blank">AI-Based Multi-Disease Diagnosis using Medical Imaging </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Chitra Chaudhari; Cliford Chandrakumar; Chaitrali Chavan</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">在无云基础设施支持下，实现基于本地部署AI模型的多疾病医学影像诊断</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用本地训练与部署的卷积神经网络（CNN）分析X射线、CT和MRI图像进行多病种分类</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">系统在模拟案例中实现91.6%的多疾病分类准确率；保障低延迟、高隐私性及离线可用性</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/013223c78e3a37fa9a31e2b1acdc7628916253c1" target="_blank">AdvSynGNN: Structure-Adaptive Graph Neural Nets via Adversarial Synthesis and Self-Corrective Propagation </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Rong Fu; Muge Qi; Chunlei Meng; Shuo Yin; Kun Liu et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">图神经网络在结构噪声或异质性拓扑下性能显著下降</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出AdvSynGNN框架，融合多分辨率结构合成、拓扑感知的Transformer注意力机制、对抗式传播引擎及基于节点置信度的残差标签修正</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在多样化图分布上显著提升预测精度；通过对抗生成-判别协同机制增强对结构扰动和异质性的鲁棒性</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/014963298a7f1cec9b7a80374c602d3c46f6cad5" target="_blank">Polysynaptic signal propagation in networked neural masses </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Varun Madan Mohan; James A. Roberts; Anagh Pathak; Anthony Harris; Caio Seguin et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">揭示复杂脑网络中非直接解剖连接区域间多突触信息传递的机制</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">在三种神经质量模型（Ornstein-Uhlenbeck、Stuart-Landau、Jansen-Rit）中，通过施加局灶性高幅扰动并追踪其在网络中的传播来研究多突触信号传递</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">多突触传播在所有模型的动力学参数区间内均可出现；存在不同参数域分别最优化直接连接与至少两跳远距离区域的信号传播；Jansen-Rit等模型在模拟电刺激传播时对连接/未连接区域的区分能力依赖于其动力学多样性</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/014a975980d62a940a43f364cad55ee204decc17" target="_blank">Machine Learning Models for Diabetes Prediction Using Clinical Healthcare Data </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">A. Chaudhari</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">利用机器学习模型基于临床数据实现糖尿病的早期、高效、大规模筛查诊断</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">对比评估多种机器学习算法（LR、DT、RF、SVM、KNN、ANN），结合数据归一化、缺失值处理和特征选择进行建模与优化</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">ANN模型获得最高预测准确率；RF和ANN整体性能显著优于其他算法</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/015314d10d8a154fa92ce861862d4ff7b16d666e" target="_blank">Towards Characterizing Crystal Structures with CNNs </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Rodrigo Guedes de Souza; L. Ereno; Analucia S. Morales; A. Sobieranski; F. Ourique et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">自动化晶体形貌与密度表征以替代人工专家分析</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用卷积神经网络（CNN）构建多阶段和单阶段分类模型识别晶体图像的形状与密度</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">多阶段模型在密度和形状分类上分别达到96.25%和82.50%准确率；单阶段模型整体准确率为92.50%</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[5] PoroNet: An Intrinsically Interpretable Pore Graph Neural Network for Resolving Pore-Level Adsorption in Metal–Organic Frameworks — 它首次将图神经网络的内在可解释性与MOF孔结构物理约束深度耦合，为电催化材料理性设计提供了可迁移的“结构-性能”归因范式。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[7] AdvSynGNN: Structure-Adaptive Graph Neural Nets via Adversarial Synthesis and Self-Corrective Propagation — 其对抗式拓扑合成策略未显式嵌入物理先验，可能削弱对MOF等周期性、对称性敏感体系的泛化可靠性。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">PoroNet作者团队 — 在GNN可解释性与多孔材料建模交叉领域持续产出兼具方法严谨性与物理解释力的工作，代表计算材料AI的前沿方向。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">从“预测准确率优先”转向“预测+归因+设计闭环”三位一体建模范式，尤其强调模型内在可解释性与第一性原理约束的协同嵌入。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">现有可解释AI模型（如[5]）仍依赖预定义图表示（如原子/基团节点），难以自适应捕捉电催化中动态演化界面（如*OH/*O吸附态诱导的局域配位重构），导致归因结果静态化、非原位化。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">多尺度建模断层明显：分子/孔尺度GNN（[5]）与介观电极尺度模拟（如DFT+microkinetic）缺乏统一接口，无法闭环验证“孔结构→吸附能→反应路径→宏观电流密度”的因果链。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展面向电催化的“动态图构建器”，结合实时DFT采样与几何/电子结构不变量，驱动GNN在反应坐标上进行可微分拓扑演化；并构建跨尺度代理模型桥接孔级吸附预测与宏观极化曲线仿真。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>

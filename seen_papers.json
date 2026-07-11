@@ -1711,5 +1711,78 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:020e0b61e3029a5291c8ceb032ac2fe579711572": {
+    "title": "DIGITAL TRANSFORMATION AS A SYSTEMATIC LEVER FOR ENSURING THE COMPETITIVENESS OF FINANCIAL INSTITUTIONS",
+    "date_seen": "2026-07-11",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:011b1a8366a042eb07139e2eb442a227323a8994": {
+    "title": "Deep Learning Based Framework for Detection and Classification of Leukemia Using Microscopic Images.",
+    "date_seen": "2026-07-11",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:01211b8f1bf639c0716b828cb98d23a8497cd7d0": {
+    "title": "A Multimodal Deep Neural Network for Multiclass Hate Speech Classification",
+    "date_seen": "2026-07-11",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0124910791483ddcfcd1d216b9f13eff96a8e4c4": {
+    "title": "HoST: integrating Heuristic knowledge with attention-based LSTM networks for Thunderstorm prediction.",
+    "date_seen": "2026-07-11",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:012898adf6ac3cd4bfb0dc15939eb7a1ff78ecbd": {
+    "title": "PoroNet: An Intrinsically Interpretable Pore Graph Neural Network for Resolving Pore-Level Adsorption in Metal–Organic Frameworks",
+    "date_seen": "2026-07-11",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface"
+    ]
+  },
+  "s2:012d8721bc5985d3503c99012c9658488d525ac1": {
+    "title": "AI-Based Multi-Disease Diagnosis using Medical Imaging",
+    "date_seen": "2026-07-11",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:013223c78e3a37fa9a31e2b1acdc7628916253c1": {
+    "title": "AdvSynGNN: Structure-Adaptive Graph Neural Nets via Adversarial Synthesis and Self-Corrective Propagation",
+    "date_seen": "2026-07-11",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:014963298a7f1cec9b7a80374c602d3c46f6cad5": {
+    "title": "Polysynaptic signal propagation in networked neural masses",
+    "date_seen": "2026-07-11",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:014a975980d62a940a43f364cad55ee204decc17": {
+    "title": "Machine Learning Models for Diabetes Prediction Using Clinical Healthcare Data",
+    "date_seen": "2026-07-11",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:015314d10d8a154fa92ce861862d4ff7b16d666e": {
+    "title": "Towards Characterizing Crystal Structures with CNNs",
+    "date_seen": "2026-07-11",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
