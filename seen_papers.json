@@ -1784,5 +1784,92 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:004dd9da3d010d1c264150878bd182aad34c6428": {
+    "title": "Deciphering the Liquid Sulfur Formation Dynamics for Room Temperature Lithium-Sulfur Electrochemistry",
+    "date_seen": "2026-07-12",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:049f9c2e4d69cb4c0936a8a8bacd2b068d15e1a2": {
+    "title": "Activation Protocol of a Gold Catalyst during Ethylene Glycol Oxidation from PET Hydrolysis",
+    "date_seen": "2026-07-12",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:0c2f2614bea2c582bec43d6d64ca2ceb55a27402": {
+    "title": "Self-Protection Mechanism and Mass Transport Governing O2 Tolerance in an Iron Porphyrin Homogeneous Catalyst for CO2 Electroreduction.",
+    "date_seen": "2026-07-12",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "constant-potential"
+    ]
+  },
+  "s2:0f321d15dfc79f45d4ea1820fd79888d7a148da0": {
+    "title": "The Intricacies of Computational Electrochemistry",
+    "date_seen": "2026-07-12",
+    "tags": [
+      "electrochemistry",
+      "constant-potential"
+    ]
+  },
+  "s2:119de19a4fb5bc15232e4081a5ef88dedd4e84c6": {
+    "title": "(Invited) Durability of Oxygen Evolution Reaction Electrodes for Alkaline Water Electrolysis Under Intermittent Operation",
+    "date_seen": "2026-07-12",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface"
+    ]
+  },
+  "s2:23e69a101108a58c6cc6f87eab9e42688987dbe4": {
+    "title": "Ab-Initio Molecular Dynamics with Potential and Charge Fluctuations Applied to Au(111) in Alkaline Solutions",
+    "date_seen": "2026-07-12",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:30653e338742c1de572f5b9a08bf5b191e8a6bbb": {
+    "title": "Voltammetry of Lanthanide Triflate Complexes in Acetonitrile: Catalysis for H\n 2\n and O\n 2",
+    "date_seen": "2026-07-12",
+    "tags": [
+      "electrochemistry",
+      "catalysis"
+    ]
+  },
+  "s2:35dcac2a5ee1d82954619f0e143f57aee6baa8c4": {
+    "title": "Electrochemical C-N Bond Formation Reaction by Using the Halogen Bond Interaction of Haloanthracene and Its Kinetic Analysis",
+    "date_seen": "2026-07-12",
+    "tags": [
+      "electrochemistry",
+      "catalysis"
+    ]
+  },
+  "s2:370e616fe2431fe63689ef60a6f457e557a2697c": {
+    "title": "Nanoscale Structure and Interfacial Electrochemical Reactivity of Moiré-Engineered Atomic Layers.",
+    "date_seen": "2026-07-12",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface"
+    ]
+  },
+  "s2:38de05edff5b3c210fcf649541fb6606d81f4066": {
+    "title": "Diffusioosmosis of electrolyte solutions in uniformly charged channels",
+    "date_seen": "2026-07-12",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "generative"
+    ]
   }
 }

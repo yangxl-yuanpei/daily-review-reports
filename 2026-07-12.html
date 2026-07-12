@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-07-12</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-07-12</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 1123 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/004dd9da3d010d1c264150878bd182aad34c6428" target="_blank">Deciphering the Liquid Sulfur Formation Dynamics for Room Temperature Lithium-Sulfur Electrochemistry </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Qi Qi; Zheng‐Long Xu</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在贫电解液（low E/S ratio）和宽温域条件下维持锂硫电池中多硫化物氧化反应（SOR）过程中液态硫的稳定生成与存在，从而提升硫利用率和倍率性能</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">结合原位光学显微镜与原位拉曼显微镜进行实时、空间分辨的液态硫形貌与化学物种追踪，并通过定量分析不同E/S比和温度下的多硫化物浓度衰减与液硫产率，建立SOR表观动力学模型（识别出伪零级特征与E/S依赖的速率常数）</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">首次系统揭示SOR中液态硫形成的E/S无关性与热稳定性，突破“高E/S利于反应”的经验范式；首次提出并验证SOR在液硫介导下的伪零级动力学模型，区别于传统多步一级/二级反应假设；将液态硫从现象观察升维为可量化、可预测的动力学中间体，为贫电解液LSB设计提供新判据</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">体系为常规Li-S扣式电池（LiNO₃/DOL-DME电解液，S/C复合正极）；基线为常规恒流充放电与离线XRD/XPS；关键结果：（1）液态硫在E/S = 5 μL mg⁻¹至&gt;15 μL mg⁻¹全范围内稳定形成且形貌一致；（2）SOR呈现伪零级动力学（[polysulfide]衰减速率恒定），速率常数k随E/S降低而线性减小；（3）-20 °C下仍可观测到持续液硫生成，证实其动力学鲁棒性</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/049f9c2e4d69cb4c0936a8a8bacd2b068d15e1a2" target="_blank">Activation Protocol of a Gold Catalyst during Ethylene Glycol Oxidation from PET Hydrolysis </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Jan Haß; A. Jupke</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何缓解碱性介质中乙二醇电氧化（EGOR）过程中金电极的快速失活，以实现高转化率与高乙醇酸选择性的稳定电催化过程</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“反应–电化学再生”交替操作协议（reaction-regeneration cycling protocol），通过原位CV扫描在反应液中周期性清除毒化物种，无需催化剂结构修饰，仅利用商用金电极与标准电化学控制即可实现活性维持</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次系统解耦EGOR中金电极失活主因为化学毒化（非传质限制），并通过电位程序直接验证再生可行性；② 提出无需材料合成的“操作协议级”失活管理范式，区别于主流的催化剂本体改性路线；③ 建立基于累积电荷与产物选择性双指标的协议评估框架，兼顾活性维持与过程经济性</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">以平面金电极为模型体系，对比恒电位电解（基线）与多种再生协议（如CV预处理+间歇式反应/再生循环）；最优协议下累积电荷量提升3.2倍（vs. 无再生对照），乙醇酸法拉第效率稳定在~68%（&gt;10循环），远高于持续电解下的&lt;20%（5 h内衰减至本底）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0c2f2614bea2c582bec43d6d64ca2ceb55a27402" target="_blank">Self-Protection Mechanism and Mass Transport Governing O2 Tolerance in an Iron Porphyrin Homogeneous Catalyst for CO2 Electroreduction. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Catherine Harvey; Sylvie Chardon-Noblat; C. Costentin</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何实现分子电催化剂在含氧环境下的CO₂电还原稳定性（即O₂耐受性）</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“自保护机制”（self-protection mechanism），利用TPPFe多级还原态对O₂/ROS的选择性优先还原，原位生成惰性氧化层屏蔽活性中心；结合旋转圆盘电极（RDE）、恒电位电解与原位紫外-可见光谱电化学进行机理验证。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次揭示分子催化剂可通过自身多电子还原态实现O₂“牺牲性自清除”，而非被动失活；② 明确质量传输（搅拌速率）是O₂耐受性的决定性工程参数，打破仅关注电子结构的惯性范式；③ 该机制不依赖外加保护层或修饰，适用于其他具多稳态还原电位的金属络合物（如Co/Mn-porphyrins）。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系为均相TPPFe催化CO₂→CO转化（0.1 M Bu₄NPF₆/DMF，含5–50 ppm O₂）；基线为无O₂条件下的~95% CO法拉第效率（FE_CO）；在50 ppm O₂下，优化搅拌速率（ω = 2500 rpm）可维持FE_CO达82%，而静置时骤降至&lt;20%。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0f321d15dfc79f45d4ea1820fd79888d7a148da0" target="_blank">The Intricacies of Computational Electrochemistry </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Nitish Govindarajan; G. Kastlunger; Joseph A. Gauthier; Jun Cheng; I. Filot et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何建立可靠、一致且可复现的计算电化学方法学框架，以解决当前领域中因理论选择模糊、解释标准缺失和基准不足导致的预测不可靠问题</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">本文非提出新计算方法，而是通过Lorentz Center研讨会共识提炼出一套<strong>方法论反思框架</strong>，聚焦四大争议点（恒电势vs恒电荷、自由能图诠释、PNP模型局限、基准缺失），强调“问题意识先行”的规范性实践路径</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">首次系统梳理并公开界定计算电化学中四大“隐性假设陷阱”；将方法学争议升维为可操作的社区行动建议（如强制报告电极总电荷、定义标准参考电极计算协议）；提出以“基准驱动”替代“方法驱动”的范式转型主张</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">未开展具体计算或实验；以典型电催化体系（如HER/OER/ORR界面）为讨论载体，指出恒电势模拟中电极电荷波动可达±0.5 e⁻，导致同一反应自由能垒偏差&gt;0.3 eV；强调现有Poisson–Boltzmann/PNP模型在双电层原子尺度结构建模中误差常超0.2 V</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/119de19a4fb5bc15232e4081a5ef88dedd4e84c6" target="_blank">(Invited) Durability of Oxygen Evolution Reaction Electrodes for Alkaline Water Electrolysis Under Intermittent Operation </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Yoshiyuki Kuroda; Ashraf Abdelhaleem; S. Mitsushima</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何提升碱性水电解中析氧反应（OER）电极在间歇运行条件下的长期耐久性，并建立可反映真实衰减机制的加速耐久性评价方法。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出一种基于“恒流电解–电位扫描–电位保持”三步循环的加速耐久性测试（ADT）协议，其中电位保持阶段强制完成电极完全放电，精准复现间歇工况下的电化学-化学耦合退化路径。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首个明确将“电极放电行为”纳入设计的ADT协议，突破传统仅关注阳极极化的测试范式；② 提出“原位电化学沉积驱动的自修复”新机制，利用电解液中可溶前驱体在工作电位下自发再生催化层；③ 揭示OER电极衰减存在分阶段化学特异性（Co/Ni选择性溶出→结构坍塌），纠正了“均匀失活”的简化认知。</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">以NiCoOx/Ni电极在7 M KOH中为模型体系，对比传统恒流测试，ADT下600次循环后过电位突增（Δη ≈ +120 mV），ICP-MS证实前200次Co优先溶出（反而增活性面积），后续Ni溶出+催化剂层变薄→基底暴露→最终剥落；自修复型Tris-NH₂修饰Co(OH)₂纳米片（Co-ns）在相同ADT下寿命延长&gt;3倍（&gt;1800次循环仍稳定）。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/30653e338742c1de572f5b9a08bf5b191e8a6bbb" target="_blank">Ab-Initio Molecular Dynamics with Potential and Charge Fluctuations Applied to Au(111) in Alkaline Solutions </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Krysti Knoche Gupta; N. Rathuwadu; K. Dadallagei; J. Coduto; Johna Leddy</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">探究镧系三氟甲磺酸盐（LN(OTf)₃）在不同溶剂（乙腈/水）中对氢析出反应（HER）和氧还原反应（ORR）的电催化作用机制及其与镧系金属电子结构（如未配对f电子数、磁性）的构效关系</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用Nafion修饰电极结合循环伏安法（CV），在无水乙腈和水溶液中系统比较7种LN(OTf)₃络合物的HER/ORR onset电位、峰电位差（ΔEₚ）及异相电子转移速率（k₀）</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">① HER onset电位与镧系离子未配对电子数呈相关性；② Yb(OTf)₃使乙腈中ORR的ΔEₚ降低0.3 V（对应活化能降低30 kJ/mol），k₀提升约20倍；③ 水相中ORR催化效果依赖镧系沉积方式，Yb薄膜使 onset 提前~100 mV，La/Yb混合体系电流密度翻倍</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/35dcac2a5ee1d82954619f0e143f57aee6baa8c4" target="_blank">Electrochemical C-N Bond Formation Reaction by Using the Halogen Bond Interaction of Haloanthracene and Its Kinetic Analysis </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Atsuki Hirama; Shohei Yoshinaga; Naoki Shida; M. Atobe</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何通过电化学氧化激活卤代芳烃的卤键（σ-hole）以驱动电催化C–N键偶联反应</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">利用蒽骨架的氧化还原活性，电化学氧化卤代蒽（haloanthracenes）增强其卤键供体能力，实现分子内电催化C–N成环</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">① 卤代蒽可作为电催化卤键活化催化剂，高效合成N-保护咔唑；② 通过电化学动力学分析定量比较了不同卤素（Cl/Br/I）对反应速率常数的影响</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/370e616fe2431fe63689ef60a6f457e557a2697c" target="_blank">Nanoscale Structure and Interfacial Electrochemical Reactivity of Moiré-Engineered Atomic Layers. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Madeline Van Winkle; Kaidi Zhang; D. K. Bediako</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何通过层间扭转角调控范德华异质结的莫尔超晶格电子结构，从而精确调控固-液界面电子转移动力学</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">结合四维扫描透射电镜、暗场TEM、STM等纳米结构表征与扫描电化学池显微镜（SECCM）进行原位电化学测量，并辅以理论建模</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">发现特定扭转角诱导的莫尔缺陷位点可显著提升标准电子转移速率常数（超越常规非扭转二维材料）；该增强源于莫尔势场导致的局域高密度电子态，而非物理缺陷</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/38de05edff5b3c210fcf649541fb6606d81f4066" target="_blank">Diffusioosmosis of electrolyte solutions in uniformly charged channels </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">E. S. Asmolov; Elena F. Silkina; Olga I. Vinogradova</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">电解质浓度梯度驱动的扩散渗流（diffusio-osmotic flow）在带恒定表面电荷的纳米通道中的定量机理与调控规律</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">基于薄双电层近似，推导出流体流量Q的解析表达式，实现无需数值模拟的快速理论预测</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">① 流量Q仅由表面电荷σ和通道两端浓度差决定，且对每个Q存在两个可能的σ解；② 预测了非线性浓度分布、局部电势变化的紧凑关系式，以及高度不均匀甚至交替变号的表观滑移速度</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[6] Ab-Initio Molecular Dynamics with Potential and Charge Fluctuations Applied to Au(111) in Alkaline Solutions — 首次在AIMD中严格实现恒电位系综（NVTΦ），从根本上弥合电化学模拟与实验热力学条件的鸿沟，为界面反应自由能、双电层结构及动力学建模设立新基准。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[4] The Intricacies of Computational Electrochemistry — 其对“恒电势模拟是否必须引入电荷涨落”的方法论质疑，可能挑战[6]所依赖的FDT-SJM框架的普适性边界（如高曲率/强局域场下的适用性）。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">GPAW/AIMD电化学模拟团队（[6]作者）— 持续推动第一性原理电化学从“固定电荷”走向“真实电位控制”，兼具方法创新与实验可验证性。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">多尺度建模正从“静态结构+热力学估算”转向“动态电位耦合+界面输运显式描述”，尤其强调系综一致性（如NVTΦ）、溶剂化动态与电荷涨落的协同建模。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">实验与计算间缺乏统一的电极电位标定协议——[4][6]均指出当前计算中参比电极（如SHE）映射存在约0.2–0.5 V不确定性，而[5][2]等实验研究未报告溶液电阻校正细节或界面电位分布，导致机理结论难以跨尺度锚定。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">分子催化剂的O₂耐受性（[3]）与电极材料的间歇稳定性（[5]）虽同属“动态工况失效”，但二者降解路径（配体氧化vs.相变/剥离）缺乏交叉建模框架；现有理论未整合痕量O₂吸附动力学与电极电位瞬态响应的耦合效应。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展“电位-时间-组分”三维度联合加速老化协议（融合[5]工况设计与[3]O₂梯度暴露），并构建基于[6]NVTΦ-AIMD的降解路径自动搜索算法，以识别临界电位窗口与分子/界面失活阈值。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>
