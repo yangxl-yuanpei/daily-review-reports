@@ -1871,5 +1871,91 @@
       "surface",
       "generative"
     ]
+  },
+  "s2:4f1f0f81ead780ecef8aeccd79be271cb9259a2c": {
+    "title": "Competitive Hydrogen-Bond Partitioning in Deep Eutectic Solvents: From Cooperative Charge Spreading to Structure–Property Design Rules",
+    "date_seen": "2026-07-13",
+    "tags": [
+      "electrochemistry",
+      "dft",
+      "generative"
+    ]
+  },
+  "s2:61b73e307dd03015f436f8f0e9e8b0cc4a182b73": {
+    "title": "EquiFiLM: Charge-Conditioned Equivariant Force Fields via Feature-wise Linear Modulation",
+    "date_seen": "2026-07-13",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:28008d29ac5927be8c6b7526f8c44a0a42067895": {
+    "title": "Tracking the Lithiation State of Li$_x$Si from Machine-Learned XPS Binding Energies",
+    "date_seen": "2026-07-13",
+    "tags": [
+      "electrochemistry",
+      "constant-potential"
+    ]
+  },
+  "s2:28ad5cc3aba56e3f90859704511018b72055156e": {
+    "title": "Self-single-atomization of active sites in electrochemical ammonia synthesis unveiled by machine learning potential",
+    "date_seen": "2026-07-13",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:2df1f9bebdab2024c2f085989a9e1a8fbd66fef8": {
+    "title": "Thermodynamics and phase behavior of CO on Pt(100): Grand canonical Monte Carlo simulations of the 2D Ising model",
+    "date_seen": "2026-07-13",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:3545511e51f7fbb0139bc940f7b18a316672de04": {
+    "title": "Segregation-Controlled Diffusion-Induced Grain Boundary Migration in Alloy 690",
+    "date_seen": "2026-07-13",
+    "tags": [
+      "constant-potential"
+    ]
+  },
+  "s2:3611aeba5c1b74b079b87910813a72cd165a30e8": {
+    "title": "Integrating Machine Learning With Constant‐Potential Simulation to Unravel Charge‐Transfer Mechanisms in Electrochemical Nitrogen Fixation",
+    "date_seen": "2026-07-13",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface"
+    ]
+  },
+  "s2:3892bd814f47e8612afde91f68e40cb58561c86e": {
+    "title": "Ligand Modulation Induced Spin-State Transition Enhances Oxygen Electrocatalysis in Co Single-Atom Catalysts.",
+    "date_seen": "2026-07-13",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "dft"
+    ]
+  },
+  "s2:397037c4cf49d8e9ffbffca913dd7865fb84cc11": {
+    "title": "Molecular Simulation Study on the Gas Selectivity of the Mixed Carbon Dioxide/Methane Hydrates Confined in Nanoporous Carbon.",
+    "date_seen": "2026-07-13",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:3bed56dcff9ecfa52306fdaf698aba97e87f3d81": {
+    "title": "Hydrogen occurrence in nanopores of coalbed methane formations: A molecular simulation study",
+    "date_seen": "2026-07-13",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
   }
 }

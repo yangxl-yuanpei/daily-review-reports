@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-07-13</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-07-13</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 2041 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/4f1f0f81ead780ecef8aeccd79be271cb9259a2c" target="_blank">Competitive Hydrogen-Bond Partitioning in Deep Eutectic Solvents: From Cooperative Charge Spreading to Structure–Property Design Rules </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Sergio de-la-Huerta-Sainz; Valentín Diez-Cabanes; Alberto Gutiérrez-Vega; S. Santamaria; M. Escobedo et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何系统解析深共熔溶剂（DES）中复杂、动态、多尺度氢键网络的构成与演化规律，并建立其结构–物性定量关系以实现理性设计</span></div><div class="field field-collapsible"><span class="field-key">主要方法</span><span class="field-val">提出“竞争性氢键分配”（competitive hydrogen-bond partitioning）框架，整合多尺度实验（振动光谱、多核NMR、中子/X射线散射、介电弛豫）与计算方法（经典/从头算MD、DFT团簇、机器学习势），并强制采用跨类别技术三角验证（triangulation criterion）以规避方法偏差</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次将DES氢键网络定义为多组分、多模式、动态再分配的竞争性集合，突破二元供体–受体范式；② 提出并验证“三角验证准则”——要求至少两类独立技术（如光谱+散射+模拟）交叉印证，确立DES表征方法论新标准；③ 建立首个涵盖六维氢键结构参数的定量结构–物性（QSPR）模型，且覆盖水含量梯度（4个水合区间）与电极界面重构效应，填补界面氢键动力学空白</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">系统研究了Type III（如ChCl/UREA）、Type V（如ChCl/Gly）、天然DES（NADES）及疏水DES四大类体系；对比基线为单技术分析或二元氢键模型；关键结果：六维氢键描述符（如竞争性水合指数、动态异质性）对粘度（R²=0.93）、电导率（R²=0.87）、玻璃化转变温度（R²=0.91）实现跨体系定量预测；发现Cl⁻上电荷离域协同性每提升1个标准差，熔点降低12.4 K但粘度增加3.8倍（证实协-流动性权衡）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/61b73e307dd03015f436f8f0e9e8b0cc4a182b73" target="_blank">EquiFiLM: Charge-Conditioned Equivariant Force Fields via Feature-wise Linear Modulation </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Samuel Sahel-Schackis; K. Nomura; A. Nakano; Matthias F. Kling; T. Linker</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在保持E(3)-等变性与高精度的前提下，使预训练的通用机器学习力场（MLFF）能够原生建模外部电子调控（如电荷注入、外场、激发）导致的势能面动态变化</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出EquiFiLM——一种轻量级、逐层嵌入的Feature-wise Linear Modulation（FiLM）模块，仅调制标量通道、严格保持E(3)-等变性，将外部条件（如总电荷）作为连续输入注入任意等变foundation MLFF</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首个严格E(3)-等变且支持连续外部条件（如电荷）的模块化扩展方案；② 仅需极小规模条件特异性数据（千级帧）即可赋能foundation模型，避免重训代价；③ FiLM设计解耦条件建模与骨架架构，完全backbone-agnostic，可即插即用于任意含标量通道的等变MLFF</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">以MACE-MatPES为骨干构建E-MACE，训练集仅含4个电荷态（±0.25e, ±0.5e）的数千帧DFT数据；相比无EquiFiLM的基线，力RMSE从21.3 → 6.96 meV/Å（3.1×提升），能量RMSE从6.1 → 0.1 meV/atom（61×提升）；在7个未见电荷态（插值/外推）上力RMSE稳定于18–61 meV/Å，能量RMSE为0.7–5.4 meV/atom</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/28008d29ac5927be8c6b7526f8c44a0a42067895" target="_blank">Tracking the Lithiation State of Li$_x$Si from Machine-Learned XPS Binding Energies </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Michael Hernandez Bertran; Davide Tisi; Federico Grasselli; M. Ceriotti; Elisa Molinari et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何实现对硅基锂电负极在（脱）锂化过程中复杂、非均质微观结构演变的定量XPS谱学解析</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“ML预测芯能级结合GCMC+MD采样”的多尺度计算框架：用机器学习势（MLIP）驱动大规模GCMC/MD模拟生成结构系综，再以ML模型（训练于高精度DFT数据）快速预测各原子位点的Si 2p结合能，最终构建化学态-组分-结构关联的 stoichiometry map</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次将GCMC（控化学势）与MLIP-MD耦合用于电极材料动态组分采样，突破静态结构假设；② 构建端到端ML pipeline实现万级原子构型的芯能级快速预测（较DFT加速&gt;10⁴倍），支持统计级谱图建模；③ 提出“stoichiometry map”新分析范式，将XPS强度分布直接映射至局域Li配位数与Si键合序参量二维空间，实现谱图的定量反演</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系为Si(111)表面及纳米硅团簇的（脱）锂化过程；基线为传统DFT单点计算与经验XPS指认；关键结果：（1）模拟得到的Si 2p谱峰位展宽（~2.8 eV）与实验观测一致；（2）成功复现早期脱锂阶段特征性的~99.2 eV低结合能肩峰，归因于晶态Si–Si键断裂诱导的富Si非晶界面区</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/28ad5cc3aba56e3f90859704511018b72055156e" target="_blank">Self-single-atomization of active sites in electrochemical ammonia synthesis unveiled by machine learning potential </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">J. Long; Chenyu Yang; Huan Li; Hao Li; Jianping Xiao</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">铁基电催化剂在电化学NO还原反应（eNORR）中表现出高氨选择性，其真实活性位点本质是什么？是否为传统认为的金属表面位点，还是动态重构形成的单原子结构？</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“电位驱动的自单原子化（self-single-atomization）”机制，并采用机器学习势（MLP）加速的巨正则蒙特卡洛（GCMC）模拟，结合微动力学建模，在operando电位梯度下大规模采样（∼2.5百万构型）并追踪Fe表面动态重构路径。</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次提出并验证“电位诱导自单原子化”是Fe基eNORR高活性的根源，颠覆静态表面活性认知；② 建立MLP-GCMC-微动力学耦合框架，实现operando电位下千万级构型空间的高效采样与动力学映射；③ 发现FeN₁-top为最优位点，且其活性源于N*强吸附稳定单原子态并优化*NO→*NHO→*NH₂→NH₃路径能垒。</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">主要体系为Fe(100)电极在NO水溶液中的eNORR过程；基线方法为传统DFT+microkinetic modeling（假设静态Fe表面）；关键结果：（1）GCMC揭示&gt;95%覆盖度下Fe表面自发形成FeNx（x=1–3）单原子团簇；（2）微动力学证实孤立FeN₁顶位（top site）的NH₃生成速率为桥位/空穴位的3.2倍；（3）基于重构位点的理论Faradaic效率随电位变化趋势与实验高度吻合（R²=0.98）。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/2df1f9bebdab2024c2f085989a9e1a8fbd66fef8" target="_blank">Thermodynamics and phase behavior of CO on Pt(100): Grand canonical Monte Carlo simulations of the 2D Ising model </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">H. T. Phạm; T. Ngô; Pham Tuong Huy Che</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">揭示CO在Pt(100)表面吸附层的热力学相行为与有序–无序转变的微观机制，特别是横向相互作用如何调控c(2×2)有序相的形成及临界现象。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用二维方格Ising模型结合巨正则系综蒙特卡洛（GCMC）模拟，引入近邻排斥相互作用（J &lt; 0），并通过有限尺寸标度分析（finite-size scaling）精确提取伪临界温度——该方法将吸附热力学映射为自旋模型，显式包含统计涨落与协同效应。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将有限尺寸标度分析系统应用于电催化相关吸附体系，实现临界温度亚百分比精度测定；② 通过GCMC-Ising框架定量分离横向排斥能J对相行为与吸附热非线性的贡献，超越平均场近似；③ 建立等量吸附热阶梯下降与有序相变的直接统计力学关联，为原位谱学信号提供微观解释依据。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系为CO/Pt(100)表面；基线方法为Onsager精确解与实验相图；伪临界温度T_C = 2.2856(7)|J|/k_B（与Onsager解一致）；成功复现θ = 0.5处c(2×2)有序相，并观察到等量吸附热在临界覆盖度附近呈阶梯状下降（Δq_st ≈ 0.3|J|）。</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/3545511e51f7fbb0139bc940f7b18a316672de04" target="_blank">Segregation-Controlled Diffusion-Induced Grain Boundary Migration in Alloy 690 </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Yuntian Jiang; Shuai Zhang; Zhuoming Xie; Xiaohan Bie; Huiqiu Deng et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">晶界迁移与Cr耗竭的耦合机制及其热力学驱动力不明</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用混合分子动力学与半正则系综蒙特卡洛模拟，研究不同晶界构型下溶质扩散与偏析耦合作用对晶界迁移的影响</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">Cr在晶界偏析反而促进扩散诱导的晶界迁移；Cr沿晶界扩散形成局部耗竭区，产生化学驱动力使晶界向Cr富集区迁移，导致持续迁移与Cr耗竭</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/3611aeba5c1b74b079b87910813a72cd165a30e8" target="_blank">Integrating Machine Learning With Constant‐Potential Simulation to Unravel Charge‐Transfer Mechanisms in Electrochemical Nitrogen Fixation </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Yufei Xue; Dushuo Feng; Yuefei Zhang; Yang Zhang; Yalong Jiao et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何设计高效电催化氮还原反应（NRR）催化剂以实现常温常压下可持续氨合成</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用巨正则固定电势法（grand-canonical fixed-potential method）模拟工况电势条件，并结合可解释机器学习挖掘动态界面描述符</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">Cr@NO₂-碳硼烷/石墨烯和Cr@CHO-碳硼烷/石墨烯为最优候选催化剂，极限电势低至−0.220 V和−0.245 V；发现零电荷电势偏移（ΔPZC）是调控N₂活化与电荷转移的关键动态电压响应描述符</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/3892bd814f47e8612afde91f68e40cb58561c86e" target="_blank">Ligand Modulation Induced Spin-State Transition Enhances Oxygen Electrocatalysis in Co Single-Atom Catalysts. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Qingyi Wei; Yiming Song; Chunxia Wu; Ying Liang; Tianyu Qiu et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">配体本征电子结构如何调控单原子催化剂中金属自旋态，进而影响氧电催化性能</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">结合巨正则密度泛函理论与微动力学模拟，定量关联配体共轭度、晶体场分裂能与Co自旋态转变</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">配体共轭度增加诱导Co从低自旋向高自旋转变；高自旋Co位点实现ORR半波电位0.96 V与OER过电位150 mV（10 mA/cm²）的双功能优异性能</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/397037c4cf49d8e9ffbffca913dd7865fb84cc11" target="_blank">Molecular Simulation Study on the Gas Selectivity of the Mixed Carbon Dioxide/Methane Hydrates Confined in Nanoporous Carbon. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Yimeng Fang; Xuan Li; Haifeng Wang; Yang Pan; Meng Guo et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">纳米限域下CO₂/CH₄混合水合物的气体选择性（CO₂对CH₄）如何受孔道表面效应和气体组成影响</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用巨正则系综蒙特卡洛（GCMC）模拟结合密度分布分析，研究体相及纳米多孔碳限域中混合水合物的气体组成与选择性</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">1）纳米限域降低CO₂在混合水合物中的密度、提高CH₄密度，导致CO₂/CH₄选择性显著低于体相；2）气体吸附行为进一步调控限域混合水合物的组成与选择性</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/3bed56dcff9ecfa52306fdaf698aba97e87f3d81" target="_blank">Hydrogen occurrence in nanopores of coalbed methane formations: A molecular simulation study </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Jiajia Zhao; Baiquan Lin; Ting Liu; Tong Liu; Rentao Gou et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">氢气在煤层气纳米孔隙中的存储与扩散行为受温度、压力、孔径、伴生气及含水量耦合影响的分子机制尚不明确</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">结合巨正则蒙特卡洛（GCMC）与分子动力学（MD）的经典分子模拟方法，系统考察多参数条件下H₂在典型CBM纳米孔中的吸附、存储与扩散</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">H₂–煤相互作用以弱范德华力为主，吸附贡献小；CO₂比CH₄对煤表面具有更强亲和力，显著挤压H₂可及体积；含水量增加抑制H₂–煤相互作用并限制分子迁移，但不改变H₂空间分布</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[4] Self-single-atomization of active sites in electrochemical ammonia synthesis unveiled by machine learning potential — 首次用ML势能面原位追踪电催化过程中“自单原子化”动态重构，直接挑战静态表面模型范式，为活性位点本质争议提供原子尺度动态证据。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[7] Integrating Machine Learning With Constant‐Potential Simulation to Unravel Charge‐Transfer Mechanisms in Electrochemical Nitrogen Fixation — 其基于固定构型催化剂的巨正则模拟隐含“位点结构稳定”假设，与[4]揭示的电位驱动下Fe位点动态单原子化现象存在根本性张力。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">Cr@NO₂-碳硼烷/石墨烯工作（论文[7]）团队 — 在NRR中率先将可解释ML与恒电势模拟深度耦合，构建了从电子转移路径到宏观性能的闭环因果链，方法论具有跨反应体系迁移潜力。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">多篇论文（[2][4][7][8]）共同指向“电位/电荷作为第一性调控变量”的范式转移——不再仅优化几何结构，而需在电子态维度上建模、预测并设计动态催化界面。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">所有涉及动态重构的研究（[4][6][7]）均依赖事后分析或准静态采样，缺乏对重构路径的*前向预测能力*：当前ML势能面或DFT+ML方法无法在给定电位/偏压下，实时预报催化剂是否及何时发生单原子化、晶界迁移或相变。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">实验–理论闭环仍断裂：XPS（[3]）、电化学（[4][7]）、吸附相变（[5]）等关键表征数据虽被ML拟合，但尚未建立可逆反馈机制——即ML模型输出能否指导下一代实验参数设计（如最优电位扫描速率、原位XPS采样时机），而非仅拟合已有数据。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展“电位条件嵌入型”生成式ML势能面（如扩展EquiFiLM至重构路径采样），并耦合在线贝叶斯优化框架，使模拟能主动建议实验观测窗口与关键控制变量，实现真正闭环的电催化理性设计。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>
