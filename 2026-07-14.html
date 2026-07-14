@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-07-14</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-07-14</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 2602 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/4456b3b392de849fcfd09d1f13725901a40d73b5" target="_blank">Multiphysics in acoustofluidics for materials science and biochemistry </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Haiwei Lu; Lavonda Li; Shichao Ding; Lijie Yan; Senlin Wang et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何从统一的多物理场耦合视角理解并系统梳理声流控技术中声-电-热等物理场的协同作用机制及其对微尺度输运与反应过程的影响</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“以主导耦合物理场为纲”的分类范式，系统整合声辐射力、声电耦合（如压电效应诱导电场）、声致热效应及声流-声辐射协同等多物理场模型，并强调力平衡分析在功能性能预测中的核心地位</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次建立以“主导耦合场+力平衡”为逻辑主线的声流控理论分类框架，突破传统应用导向综述范式；② 明确量化并对比不同耦合机制（如声辐射力 vs. 声电介电力）在典型工况下的相对贡献权重；③ 系统识别声致多场耦合对材料结晶取向、生物分子构象稳定性等非平衡过程的调控规律，拓展至电催化界面动力学新维度</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">综述涵盖SAW（表面声波）驱动的典型体系，包括微粒/细胞操控（基线：传统单一场模型）、电化学界面调控（基线：纯电化学模型）、纳米材料原位合成（基线：热传导主导模型）；指出声-电耦合可提升电催化反应局部电流密度达2–5倍，声热效应在微反应器中实现温度梯度&gt;10⁴ K/m</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/4ad5789b0971950f19d6641f12e8fd9e07be45e4" target="_blank">From Atomic Channels to Deployable Membranes: A Design-Oriented Framework for Graphene Oxide Transport, Functionalization, and Scalability </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Awad Alzebair; Didem Aydin; İ. H. Gübbük; Mustafa Ersoz</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何系统性地整合机制理解、计算建模与可扩展制备，以突破氧化石墨烯（GO）膜在渗透性-选择性权衡中的实际应用瓶颈</span></div><div class="field field-collapsible"><span class="field-key">主要方法</span><span class="field-val">提出“设计导向型综合框架”（design-oriented framework），融合三层次策略：（i）建立三区段统一传输模型（粘性流/分子跃迁/溶解-扩散）；（ii）通过湿态XRD校准的曲折度-孔隙率因子修正MD预测，并引入机器学习力场（GAP/MACE）缩小残余误差；（iii）制定标准化500-h液压稳定性协议与技术就绪度（TRL）评估体系。</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">（1）首次提出并验证适用于GO膜的三区段统一传输模型，将选择性明确关联至C/O比与层间化学，超越传统“纳米通道尺寸筛分”单一范式；（2）开创性建立“实验校准—模拟修正—力场升级”三级计算验证闭环，而非孤立优化力场参数；（3）提出首个面向GO膜的标准化长期稳定性测试协议（500-h hydraulic stability）及跨领域性能基准对照表（含NF/气体分离/离子回收/渗透能），填补工程转化方法论空白。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">主要体系为GO层状膜（laminate）；基线方法为经典MD（如CHARMM/OPLS-AA）；关键数值结果：（1）经典MD高估水渗透通量3–8×；（2）经XRD校准的曲折度-孔隙率因子可将预测偏差降至合理范围；（3）GAP/MACE力场进一步将残余误差压缩至1.5–2×以内。</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0154216a2ead9f824b187ddd82fbd754371ad65e" target="_blank">Non-Singular Fast Terminal Sliding Mode Active Disturbance Rejection Controller for Attitude Control of Quadrotor Unmanned Aerial Vehicles </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Yue Han; Meini Yuan; Zhenjun Chang; Jian Shen; Pengyun Chen</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">解决四旋翼无人机姿态控制中滑模控制存在的扰动抑制不足、跟踪精度低和奇异性问题</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出一种非奇异快速终端滑模主动扰动抑制控制（SILADRC），融合误差无偏扰动跟踪扩张状态观测器（EFDT-ESO）、PID-ILADRC双环结构、非奇异快速终端滑模律及EFDT-ESO与RBF神经网络协同扰动估计策略</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">相比超扭滑模控制（STSMC）和改进型LADRC（ILADRC），总累积跟踪偏差分别降低59.78%和45.47%；完全消除抖振与奇异性，具备强抗突发/持续扰动鲁棒性</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0158d0a6b0e62b12a76a431dba04e5c02179c6ee" target="_blank">Teaching adolescents pop-jazz singing using neural network technologies </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Evgeny Moiseev</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何科学地将神经网络技术整合为教学中介，以提升青少年流行爵士演唱训练中的声乐表现力、诠释能力与学习动机</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出并验证“教师—神经网络—学习者”三元交互教学模型，将神经网络定位为诊断支持、个性化实时反馈与创造性发展协同的 pedagogical mediator（教学中介），而非替代教师的技术插件</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将神经网络明确定义为具有教育学功能的“教学中介”，强调其在艺术思维与社会文化素养发展中的结构性作用；② 构建可迁移的“教师—NN—学习者”三元协同框架，拒绝AI替代教师，坚守教师主导权；③ 将技术效能指标（如音准误差率）与人文发展指标（如诠释自主性、即兴创造性）同步量化评估，突破纯技术导向范式</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">在青少年流行爵士声乐教学中开展对照实验（控制组 vs 实验组）；基线为传统教师主导教学；实验组使用定制化神经网络系统提供音高/节奏实时评估、风格化模仿建议与即兴引导；结果显示 vocal performance accuracy 提升32%（p&lt;0.01），学习动机量表得分提高27%，即兴表达复杂度提升2.4倍（基于专家编码评估）</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0164962cce3368dbd13fb76f9aa88cf213a38379" target="_blank">Automated Surgical Phase Recognition in Unilateral Biportal Endoscopic Spine Surgery Using Deep Learning </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Takahiro Kitagawa; Yoshiomi Kobayashi; Keitaro Matsukawa; S. Hashimoto; Reo Shibata et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何实现单侧双通道内镜（UBE）脊柱手术中手术阶段的自动、准确识别</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出ResNet-50 + 多阶段时序卷积网络（MS-TCN）联合架构，首次在脊柱手术中分别构建非因果（利用前后帧）与因果（仅用历史帧）两种时序建模范式，兼顾精度与实时部署可行性</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首个面向UBE脊柱手术的端到端AI阶段识别框架；② 首次引入MS-TCN处理脊柱手术长程、低动态视频的时序建模，并系统对比因果/非因果设定对临床可用性的影响；③ 将AI阶段识别结果与外科医师资质关联分析，实现从“识别”到“评估”的功能延伸</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">基于36例单节段UBE腰椎减压术视频（5类手术阶段），四折交叉验证下非因果/因果模型整体准确率分别为86.4% / 84.7%，F1分数为0.753 / 0.727；骨切除与黄韧带切除阶段真阳性率均＞90%；AI预测时长与人工标注高度一致（p&gt;0.05），且成功量化BCS与NBCS在黄韧带切除阶段的显著耗时差异（Δt=127±43 s, p&lt;0.01）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0165de75edeebd70f7723f46d55446739103bb61" target="_blank">DC-TSCM: an interpretable dual-channel traditional Chinese medicine syndrome classification model via semantic-structural fusion </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Jialu Tang; Song He</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何构建一个既能理解中医处方文本语义、又能建模临床实体间结构关系的智能辨证分型模型</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出双通道中医辨证分类模型（DC-TSCM），融合文本通道（TCM differentiation-guided attention fusion）与图通道（TCM differentiation heterogeneous graph + hybrid GNN），首次将中医辨证思维显式编码为注意力机制与异质图结构</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将中医“辨证论治”逻辑形式化为可学习的注意力引导机制（TCM differentiation-guided attention）；② 构建首个面向辨证任务的中医异质图（含证、症、药、体征、体质五类节点及临床因果/配伍/禁忌边）；③ 提出文本-图双通道协同训练范式，通过跨模态对比损失实现语义与结构表征的对齐</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在8280张真实电子病历处方（覆盖24类证型）构成的多标签辨证数据集上，DC-TSCM相比单文本BERT（F1=0.821）、单图GCN（F1=0.796）和早期融合模型（F1=0.853），取得F1-score 0.8930、Accuracy 0.8919的最优性能</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/016d98bf925df18e0503a5d1a51cca88c636a81b" target="_blank">A Deep Learning-Based Framework for Early Detection and Classification of Melanoma Skin Cancer </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Savera Goel</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">传统黑色素瘤临床诊断方法主观性强、耗时且依赖专家经验，难以应对大量皮肤镜图像数据。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于卷积神经网络的深度学习框架，直接从原始皮肤镜病变图像中学习分层视觉表征。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">模型整体分类准确率达99.78%，精确率为1.000，召回率为0.9956。</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/017143b7edbbc173f997a338a627f22a24e1298b" target="_blank">Computationally Efficient Deep Learning Approach Using IQ-MobNet for Radar DoA Estimation in Limited Snapshot Conditions </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Neeraja P. Kovilakam; Bindiya T. Sambasivan; Raghu C. Variyam</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">在资源受限的便携式雷达中实现高精度、低复杂度的波达方向（DoA）估计</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于MobileNet架构的IQ-MobNet模型，直接输入原始IQ数据，统一训练单/多源场景</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在低信噪比和极少快拍数下保持高DoA估计精度；参数量仅0.24M、FLOPs仅0.42M，较近期模型降低96%以上计算开销</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/017bc9c38ef7d924361722039528a5bb954bc85c" target="_blank">Predicting Healthcare System Visitation Flow by Integrating Hospital Attributes and Population Socioeconomics with Human Mobility Data </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Binbin Lin; Lei Zou; Hao Tian; Heng Cai; Yifan Yang et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何整合医院属性、人口社会经济特征和空间因素来系统预测和解释医疗访问流动模式</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">融合SafeGraph移动数据与Google Maps评价数据，构建并比较五种流量预测模型（含Deep Gravity和HGNN），结合SHAP与PDP进行多因素归因分析</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">Deep Gravity模型性能最优；医院容量、ICU占用率、评分和热度显著影响访问模式，且作用随距离变化——短距重便利、长距重评分；不同族裔/教育水平人群对医院评分的敏感性存在显著差异</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0183bf49025b78917ae89aa428e92ec66096f0ec" target="_blank">The answer lies within: Detecting Trojans from DNNs&#x27; inherent characteristics </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Xuchao Liu; Qi Cao; Kaike Zhang; Du Su; Huawei Shen</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">在无良性样本的条件下检测深度神经网络中的木马攻击</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出DTIC方法，通过统一表征空间刻画模型结构与参数的内在特征以实现木马检测</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">仅需一次前向推理即可完成检测；在IARPA TrajAI1基准上展现出优异的有效性、效率与泛化性</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[2] From Atomic Channels to Deployable Membranes: A Design-Oriented Framework for Graphene Oxide Transport, Functionalization, and Scalability — 直击电催化膜材料理性设计的核心矛盾（MD高估通量、机制-制备脱节），提出“原子通道→宏观膜”的跨尺度设计框架，对电催化中质子/离子选择性传输层开发具强迁移价值</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[1] Multiphysics in acoustofluidics for materials science and biochemistry — 其强调声-电-热多场强耦合驱动输运，或挑战电催化中常默认的“电化学主导、辅以传质”简化范式，尤其在流动电解池或超声辅助电合成场景下可能重构速率控制步骤认知</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">GO膜论文作者团队（未具名，但体现计算-实验-工艺闭环能力）— 同时具备第一性原理建模、MD校准实验、可扩展成膜工艺开发能力，是少数能弥合“模拟通量虚高”与“实际性能瓶颈”鸿沟的团队</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">多篇论文（[2][6][10]）共同指向“模型可信度危机”：从MD模拟失真、中医辨证黑箱到DNN木马隐蔽性，凸显领域对<strong>内在可解释性</strong>与<strong>物理一致性验证</strong>的迫切需求，而非单纯追求指标提升</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">电催化界面过程缺乏统一的多物理场耦合描述框架。现有研究常孤立处理电子转移、离子迁移、气泡演化或局部pH变化，而[1]揭示的声流控中多场协同范式提示：电催化中电-力-热-质量传递的瞬态耦合（如气泡诱导局部流场扰动、焦耳热致双电层重构）仍未被系统参数化与量化</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">计算模型与实验现实之间存在“验证断层”。[2]指出MD高估水通量3–8×，[6]强调文本与图结构割裂，[10]暴露DNN内在脆弱性——这反映共性缺陷：模型训练/评估未嵌入<strong>可测量的物理约束</strong>（如Onsager倒易关系、电荷守恒、热力学平衡判据），导致预测失真且难以归因</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展<strong>物理信息嵌入的混合建模范式</strong>：将电催化基本定律（Butler-Volmer、Nernst-Planck、Navier-Stokes）作为神经网络的结构先验或损失项约束；同步构建跨尺度基准数据集（如含原位表征的GO膜离子传输数据库），强制模型输出满足守恒律与实验可观测量一致性</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>

@@ -1957,5 +1957,79 @@
       "constant-potential",
       "surface"
     ]
+  },
+  "s2:4456b3b392de849fcfd09d1f13725901a40d73b5": {
+    "title": "Multiphysics in acoustofluidics for materials science and biochemistry",
+    "date_seen": "2026-07-14",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:4ad5789b0971950f19d6641f12e8fd9e07be45e4": {
+    "title": "From Atomic Channels to Deployable Membranes: A Design-Oriented Framework for Graphene Oxide Transport, Functionalization, and Scalability",
+    "date_seen": "2026-07-14",
+    "tags": [
+      "NQE",
+      "generative"
+    ]
+  },
+  "s2:0154216a2ead9f824b187ddd82fbd754371ad65e": {
+    "title": "Non-Singular Fast Terminal Sliding Mode Active Disturbance Rejection Controller for Attitude Control of Quadrotor Unmanned Aerial Vehicles",
+    "date_seen": "2026-07-14",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0158d0a6b0e62b12a76a431dba04e5c02179c6ee": {
+    "title": "Teaching adolescents pop-jazz singing using neural network technologies",
+    "date_seen": "2026-07-14",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0164962cce3368dbd13fb76f9aa88cf213a38379": {
+    "title": "Automated Surgical Phase Recognition in Unilateral Biportal Endoscopic Spine Surgery Using Deep Learning",
+    "date_seen": "2026-07-14",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:0165de75edeebd70f7723f46d55446739103bb61": {
+    "title": "DC-TSCM: an interpretable dual-channel traditional Chinese medicine syndrome classification model via semantic-structural fusion",
+    "date_seen": "2026-07-14",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:016d98bf925df18e0503a5d1a51cca88c636a81b": {
+    "title": "A Deep Learning-Based Framework for Early Detection and Classification of Melanoma Skin Cancer",
+    "date_seen": "2026-07-14",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:017143b7edbbc173f997a338a627f22a24e1298b": {
+    "title": "Computationally Efficient Deep Learning Approach Using IQ-MobNet for Radar DoA Estimation in Limited Snapshot Conditions",
+    "date_seen": "2026-07-14",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:017bc9c38ef7d924361722039528a5bb954bc85c": {
+    "title": "Predicting Healthcare System Visitation Flow by Integrating Hospital Attributes and Population Socioeconomics with Human Mobility Data",
+    "date_seen": "2026-07-14",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:0183bf49025b78917ae89aa428e92ec66096f0ec": {
+    "title": "The answer lies within: Detecting Trojans from DNNs' inherent characteristics",
+    "date_seen": "2026-07-14",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
