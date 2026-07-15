@@ -2031,5 +2031,90 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:7891743a7d2062723f742f4b8757bce05233d582": {
+    "title": "Benchmarking Universal Machine Learning Force Fields for Molecular Dynamics of Lunar Regolith Minerals",
+    "date_seen": "2026-07-15",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:3468a73d6a1f9881711f7d6fd05daf059fc44ddd": {
+    "title": "Learning to Converge: Warm-Starting DFTB Self-Consistent Charges with Machine Learning",
+    "date_seen": "2026-07-15",
+    "tags": [
+      "dft",
+      "generative"
+    ]
+  },
+  "s2:4159739329410b1d4d867fe2c390301bca38620b": {
+    "title": "Fluorine-Functionalized Pore-Space-Partitioned Metal-Organic Frameworks for One-Step Methane Purification.",
+    "date_seen": "2026-07-15",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:475c1c2df8809071100c8553f0af0c702458e78d": {
+    "title": "Classical Density Functional Theory Coupled to the SAFT-VR Mie Equation of State: Extension to Associating Fluids",
+    "date_seen": "2026-07-15",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:49a5f2beae957d8894e6ecef357e07bee9045b53": {
+    "title": "Mechanochemical Nano-Writing of an Atomically Thin Metal",
+    "date_seen": "2026-07-15",
+    "tags": [
+      "constant-potential",
+      "dft"
+    ]
+  },
+  "s2:49c79be64bcdc51831e088e9344dbe9fe885fb4a": {
+    "title": "Theoretical Study of the Interaction between Graphitic Carbon Nitride and 2,6-Dichloro-1,4-benzoquinone Pollutants: Environmental Applications",
+    "date_seen": "2026-07-15",
+    "tags": [
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:5402a4f90cda6e29274b3bcdfcefd4a1f3c361b7": {
+    "title": "Machine learning interatomic potentials for solid-state precipitation",
+    "date_seen": "2026-07-15",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "constant-potential"
+    ]
+  },
+  "s2:5b68664b6f5b15fa98fc17f61eb64312a14cb0fe": {
+    "title": "Controlled Secondary Growth of CAU-1-NH2 Membranes with Improved CO2 Separation Performance.",
+    "date_seen": "2026-07-15",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:5c0e3a6e83774f2423be8cd0bc2c653908a7beb5": {
+    "title": "Molecular Origins of pH Gradients in Charge-Regulated Biomolecular Condensates",
+    "date_seen": "2026-07-15",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:60148e84e7d393ce59af938a4a987275438adf53": {
+    "title": "Activation energies in the grand canonical ensemble: Diffusion of methane in a zeolite.",
+    "date_seen": "2026-07-15",
+    "tags": [
+      "electrochemistry",
+      "constant-potential"
+    ]
   }
 }

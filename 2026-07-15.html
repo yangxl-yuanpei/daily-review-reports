@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-07-15</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-07-15</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 2036 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/7891743a7d2062723f742f4b8757bce05233d582" target="_blank">Benchmarking Universal Machine Learning Force Fields for Molecular Dynamics of Lunar Regolith Minerals </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Ziyu Huang; K. Nomura</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">评估现有通用机器学习原子间势（MLIPs）在模拟月球风化层相关矿物（硅酸盐、氧化物及含氢表面物种）中的结构保真度与适用性</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用NVT系综MD模拟对六种前沿通用MLIPs（MACE-MH、MatterSim、SevenNet-0、UPET、UMA、NequIP-OAM-L）进行标准化基准测试，以晶体结构参考数据为黄金标准，多维度量化结构保真度（键长/键角分布、部分径向分布函数、热稳定性）</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">首次系统性跨模型 benchmark 通用MLIPs在月球矿物体系的结构可靠性；提出“配位敏感性指数”（CSI）定量化识别Fe/Ti中心的模型失效模式；建立羟基化表面O–H键行为的跨模型一致性判据，为挥发分模拟提供可迁移验证范式</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">体系涵盖四种代表性月球矿物（镁橄榄石、铁橄榄石、钛铁矿、斜长石）及羟基化表面模型；基线为实验晶体结构与DFT参考数据；关键结果：Si–O/Mg–O/Al–O/Ca–O局域环境平均误差&lt;0.03 Å（键长）、&lt;5°（键角），而Fe–O/Ti–O配位数分布展宽达±2、短时涨落幅度超Si–O体系2.1倍；所有模型O–H键长分布集中于0.96–0.98 Å（与DFT一致）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/3468a73d6a1f9881711f7d6fd05daf059fc44ddd" target="_blank">Learning to Converge: Warm-Starting DFTB Self-Consistent Charges with Machine Learning </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Maximilian L. Ach; Karsten Reuter; C. Panosetti</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何加速密度泛函紧束缚（DFTB）中自洽电荷（SCC）迭代的收敛过程，以提升其在大规模和高通量模拟中的计算效率。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于机器学习的初始电荷预测方法，采用元素特异性SOAP描述符+核岭回归（KRR）模型，直接从原子局部化学环境映射到DFTB所需的初始Mulliken电荷。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将原子级电荷作为ML直接预测目标（而非能量/力），实现SCC收敛瓶颈的靶向突破；② 采用元素分解建模+SOAP描述符，在保持物理可解释性的同时兼顾跨体系迁移性；③ 模型训练仅需单点DFTB参考电荷数据，无需额外第一性原理标签，契合DFTB工作流。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在有机分子（QM9子集）、水团簇（(H₂O)ₙ, n=6–20）、生物分子（肽片段）、Co₃O₄表面、Li₃PO₄固态电解质等多类体系上验证；相比默认零电荷初猜，ML初猜使SCC迭代步数平均减少42–68%（如Li₃PO₄中从18步降至6步），且98%以上案例实现收敛（零初猜失败率达12%）。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/4159739329410b1d4d867fe2c390301bca38620b" target="_blank">Fluorine-Functionalized Pore-Space-Partitioned Metal-Organic Frameworks for One-Step Methane Purification. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Jiayi Liu; Liqiu Yang; Yan-Fei Li; Ying Wang; Wenbo Yuan et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在高湿度实际工况下实现天然气中乙烷、丙烷与甲烷的高效选择性分离</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“孔空间分区（pore space partition）+ 氟功能化（fluorine functionalization）”协同孔工程策略，在MOF孔道内构建富氟微环境以增强C–H···π、C–H···F等多重弱相互作用</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将孔空间分区与氟功能化耦合用于烷烃/甲烷分离，实现孔化学与孔几何的协同设计；② 证实C–H···F作用在非极性烷烃识别中的关键贡献，突破传统依赖金属位点或强极性官能团的设计范式；③ 实现98% RH下结构与性能双稳定，解决MOFs在湿天然气分离中易水解失活的核心瓶颈</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">体系为氟代孔分区MOFs SNNU-707/-708；基线对比未明确列出，但文中隐含与常规MOFs（如Mg-MOF-74、HKUST-1）及工业沸石（如4A）性能差异；C₃H₈/CH₄（50/50）IAST选择性达116.6（SNNU-708），突破实验中SNNU-707对C₃H₈/CH₄（5/95）的分离时间达502 min·g⁻¹，产出CH₄纯度&gt;99.5%</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/475c1c2df8809071100c8553f0af0c702458e78d" target="_blank">Classical Density Functional Theory Coupled to the SAFT-VR Mie Equation of State: Extension to Associating Fluids </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">André de Freitas Gonçalves; Nathan Barros de Souza; Luis Fernando Mercier Franco</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在经典密度泛函理论框架下，准确描述纳米限域中关联性流体（如水）的非均匀热力学行为与相变现象（如毛细凝聚与滞后）</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于加权密度泛函（WDA）的非均匀SAFT-VR Mie理论框架，将文献中成熟的缔合项Helmholtz自由能泛函耦合进经典DFT，显式包含方向性氢键缔合贡献</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将SAFT-VR Mie与非均匀DFT严格结合，保留分子尺度缔合物理图像；② 无需拟合新参数，直接复用体相SAFT参数+标准WDA权重函数；③ 实现对滞后回线的热力学自洽解析（通过巨势曲面拓扑判据），超越经验滞后模型</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系为1–3 nm宽石墨烯狭缝孔中水；基线为巨正则蒙特卡洛（GCMC）模拟；模型预测的密度剖面与GCMC吻合（RMSD &lt; 0.02 g/cm³）；毛细凝聚压力偏差&lt;5%，且稳定分支曲线与GCMC吸附/脱附任一分支一致</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/49a5f2beae957d8894e6ecef357e07bee9045b53" target="_blank">Mechanochemical Nano-Writing of an Atomically Thin Metal </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Shuai Zhang; Yanyu Jia; Atanu Samanta; Yutian Bao; Haosen Guan et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在近室温下实现二维材料的原子级精准金属化与超导相合成，并建立机械力—内部应力—反应机制之间的定量物理关联</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“力致催化”（force-enabled catalysis）范式，结合AFM局域加压、vdW封装限域环境与应力辅助热激活模型（Eyring型），实现机械力直接驱动固态界面反应动力学加速</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将宏观机械力通过Eyring应力-应变模型定量关联至原子尺度化学反应势垒调制；② 利用vdW封装构建“应力-化学耦合微反应器”，实现无溶剂、无扩散剂的固态界面选择性 metallization；③ 在非平衡局域加压下获得热力学亚稳但功能优异的Pd₇MoTe₂超导相，突破常规相图限制</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系为vdW封装的MoTe₂/Pd双层堆叠；基线为200 °C热退火法；力致合成在25 °C完成Pd₇MoTe₂超导相形成，横向分辨率达50 nm；反应速率提升达10⁴倍（对应活化能降低~0.8 eV）</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/49c79be64bcdc51831e088e9344dbe9fe885fb4a" target="_blank">Theoretical Study of the Interaction between Graphitic Carbon Nitride and 2,6-Dichloro-1,4-benzoquinone Pollutants: Environmental Applications </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Sara Ruth Ramos Rocha; N. M. Rodrigues; Michael González-Durruthy; Silvete Guerini</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">探究卤代苯醌类污染物DCBQ在两种石墨相氮化碳（t-g-C3N4和h-g-C3N4）上的吸附行为及选择性捕获机制</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">结合巨正则蒙特卡洛（GCMC）模拟（含水竞争吸附）与第一性原理DFT计算，辅以NCI/RDG分析和二聚体模型</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">h-g-C3N4对DCBQ的吸附容量和亲和力显著高于t-g-C3N4，且在高水含量下仍保持高选择性；吸附本质为以色散力和π–π作用主导的物理吸附，并引起带隙调制及费米能级附近分子态出现</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/5402a4f90cda6e29274b3bcdfcefd4a1f3c361b7" target="_blank">Machine learning interatomic potentials for solid-state precipitation </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Lorenzo Piersante; A. Natarajan</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何准确参数化机器学习原子间势（MLIPs）以建模多组分合金中的固态析出相变</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于对称性枚举的相变路径生成算法，以及加权Kendall-τ系数及其半巨正则推广作为低温度热力学预测精度的评估指标</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">成功构建了稀释Mg-Nd合金的MLIP，准确再现实验观测的早期析出行为；大规模模拟揭示了有序-无序与结构转变的竞争，并暗示hcp与bcc结构在时效热处理中存在连续转变</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/5b68664b6f5b15fa98fc17f61eb64312a14cb0fe" target="_blank">Controlled Secondary Growth of CAU-1-NH2 Membranes with Improved CO2 Separation Performance. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Bing-Han Lin; Chia-Hui Chuang; Li-Wei Hsiao; Hsiang-Yu Wang; Li-Tang Chi et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何通过调控MOF膜（CAU-1-NH₂）的合成参数优化其结构以实现高效CO₂分离（尤其在混合气条件下）</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用晶种法在多孔α-Al₂O₃基底上构筑CAU-1-NH₂膜，并系统调控前驱体浓度与配体/金属比，结合SEM/共聚焦荧光显微镜表征及单/混合气渗透测试与GCMC模拟</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">优化膜CAU-1-NH₂(B)在混合气下CO₂/N₂分离因子达59.3–89.2（远高于理想选择性19.4）；GCMC证实CO₂在框架内的强竞争吸附主导混合气高选择性</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/5c0e3a6e83774f2423be8cd0bc2c653908a7beb5" target="_blank">Molecular Origins of pH Gradients in Charge-Regulated Biomolecular Condensates </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Shuo-Lin Weng; Shiv Rekhi; Young C. Kim; Jeremy C. Palmer; J. Mittal</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">生物分子凝聚体中自发形成的电化学微环境（如离子分布不对称性、pH梯度）的机制尚不清晰，缺乏能统一处理质子交换、抗衡离子分配和缓冲平衡的计算框架。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出缓冲型电荷调控蒙特卡洛（b-CR-MC）框架，耦合巨正则系综下离子/缓冲物种交换与可滴定残基的显式电荷调控，并采用受限原始模型提升效率。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">FUS凝聚相呈碱性pH偏移、PGL-3呈酸性pH偏移，均趋近各自等电点；揭示凝聚体界面Donnan电位及连续离子分布，并证实缓冲剂在密相中空间耗竭，表明动态电荷调控是电化学行为的主导因素而非次要修正。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/60148e84e7d393ce59af938a4a987275438adf53" target="_blank">Activation energies in the grand canonical ensemble: Diffusion of methane in a zeolite. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Anjali Radhakrishnan; Micah L. Welsch; Brian B. Laird; W. Thompson</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在巨正则系综下准确计算包含粒子数涨落效应的活化能</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">扩展涨落理论动力学方法，结合巨正则蒙特卡洛（GCMC）与分子动力学（MD）模拟，分离内在能垒与粒子数变化对时间尺度的影响</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">成功分解甲烷在沸石中扩散活化能的两个贡献（本征能垒 + 化学势依赖的粒子数涨落效应）；实现了仅用单个化学势下的模拟即可局域预测扩散系数对化学势的依赖关系</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[4] Classical Density Functional Theory Coupled to the SAFT-VR Mie Equation of State: Extension to Associating Fluids — 首次在经典DFT框架中严格嵌入分子缔合热力学（SAFT-VR Mie），为电催化界面限域水结构与质子传输建模提供了可迁移、非经验的理论基础。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[6] Theoretical Study of the Interaction between Graphitic Carbon Nitride and 2,6-Dichloro-1,4-benzoquinone Pollutants — 其GCMC+DFT吸附分析默认水为竞争吸附“背景噪声”，未耦合水分子间氢键重构对吸附位点可及性的影响，与[4]揭示的限域水非均匀缔合效应存在隐含矛盾。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">[9]作者团队（b-CR-MC框架提出者）— 开发了首个显式处理可滴定残基、缓冲对与抗衡离子协同分配的统计力学框架，直接适用于电催化界面pH敏感反应（如CO₂RR、OER）的微环境建模。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">多篇论文（[2][4][9][10]）共同指向“<strong>非平衡/非均匀热力学量的系综适配建模</strong>”——从SCC收敛加速、缔合流体DFT、电荷调控MC到巨正则活化能分解，均在突破传统方法对固定粒子数、均匀相或静态电荷的隐含假设。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">几乎所有涉及界面吸附/反应的模拟（[3][6][8][10]）仍依赖静态结构或准平衡构型采样，缺乏对<strong>电化学电位驱动下动态电荷重分布与溶剂重组耦合过程</strong>的实时描述能力；现有MLIPs（[1][7]）和DFTB加速（[2]）尚未嵌入电极电势作为控制变量。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">对“<strong>局域化学环境如何定量映射至宏观性能</strong>”仍缺乏统一尺度桥接工具：例如[5]的应力—相变关联、[7]的析出路径枚举、[9]的pH梯度量化，均未建立可跨尺度外推的序参量（如局域配位熵、氢键网络连通度、电荷涨落谱）。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展<strong>电位可控的机器学习增强多尺度框架</strong>——以电极费米能级为输入，联合电荷响应MLIPs（扩展[2]）、缔合DFT（[4]）与缓冲型MC（[9]），在原子精度上同步解析界面电子结构、限域溶剂化壳层与反应中间体稳定性的协同演化。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>
