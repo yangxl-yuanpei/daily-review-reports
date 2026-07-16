@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-07-16</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-07-16</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 1938 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/01737be02d88db040aa92a562cdf190eeacc1874" target="_blank">The Role of Artificial Intelligence and Machine Learning in Revolutionizing Drug Discovery and Pharmacological Research: A Systematic Review </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Zainab G. Aljassim; H. Rajab; H. I. Al-Qadhi</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何系统整合并评估人工智能/机器学习（AI/ML）技术在药物发现全链条中的实际应用效能、成熟度与瓶颈，以厘清其对研发效率与成功率的真实提升潜力</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用系统性文献综述法（SLR），对2018–2026年间53篇高质量研究进行结构化分析，按药物研发管线（靶点识别→分子生成→ADMET预测→临床转化）归类技术路径、验证水平与临床进展，强调“技术-阶段-证据等级”三维映射</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">首次建立AI/ML在药物发现中“技术适用性-实证强度-监管就绪度”三维度评估框架；明确区分学术原型（proof-of-concept）与工业级部署（production-ready）模型的性能鸿沟；系统梳理7个已进入临床试验的AI设计分子（如Insilico Medicine的ISM001-055）作为成功锚点</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">覆盖AlphaFold（蛋白结构预测误差&lt;1 Å RMSD）、GNN/Transformer驱动的de novo生成（如REINVENT在QED&gt;0.9约束下生成率提升3.2×）、QSAR-ML模型（Tox21数据集上hERG抑制预测AUC达0.91）；基线为传统HTS与FEP计算；关键数值：AI有望将早期发现阶段从4–6年压缩至6–18个月，成本降低40–60%</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/017e31d268ec8f5bfa0793250ebebec4fa540fad" target="_blank">1D Convolutional Siamese Neural Networks for Robust Anomaly Detection in Dam Structural Health Monitoring </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">C. Tutivén; Luis Moyón; Fernando Salazar</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在缺乏全面故障标签数据的前提下，实现大坝结构健康监测中未知类型异常的鲁棒检测</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于一维卷积架构的孪生神经网络（SNN），采用单类学习范式（仅用正常数据+少量异常样本训练），通过学习度量空间中的相似性函数实现零样本/少样本异常判别</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将孪生网络引入大坝SHM领域，规避对完备故障标签的依赖；② 设计轻量化1D-CNN孪生分支，显式建模传感器阵列的时空局部相关性；③ 采用“正常主导+稀疏异常注入”的训练策略，在保证泛化性的同时提升难例判别边界清晰度</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在真实大坝多源传感器时序数据上验证；基线方法包括SVM、LSTM-AE和传统阈值法；SNN在正常工况下达到100.0%准确率，在未见异常场景中F1-score达92.3%，显著优于基线（最低仅61.7%）</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/018aca14afa7a48ee1325161a3dd448652840ec6" target="_blank">Optimizing Crop Maximum Carboxylation Rate Using Machine Learning to Improve Maize Yield Estimation Under Drought Conditions </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Liming Yu; Jiahua Zhang; Sha Zhang; Zhiyuan Ma; Xin Jiang et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">遥感过程模型中固定最大羧化速率（Vm25）参数导致区域尺度玉米产量模拟精度不足，尤其在干旱条件下。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">构建融合植被指数（NDVI/EVI/LAI）与干旱相关水文气象因子（ET/VPD/SWC）的卷积神经网络（CNN），动态反演时空变化的Vm25。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">CNN模型Vm25预测R²达0.88、RMSE=2.21 μmol·m⁻²·s⁻¹；集成后PRYM-Maize-Dr模型在市/县尺度产量模拟R²分别提升0.11/0.12，RMSE分别降低0.14/0.07 t·ha⁻¹。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0191c7eb299946cf178d08608b8b0da2d8596d5e" target="_blank">Wavelet-Based multi-frequency image transformation for time series classification </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">M. Kurnaz; Celal Alagoz</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何提升卷积神经网络（CNN）对非平稳、含噪传感器时序信号的分类性能，尤其在保留多频带时序特征方面</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出DWT-Image Hybrid框架——采用两层db4小波分解将时序分离为近似系数（低频）和细节系数（中/高频），再分别映射为MTF（近似）、GAF（中频）、RP（高频）三类图像，融合为多通道输入至轻量CNN</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次系统性将DWT频带分解与多种图像编码（GAF/MTF/RP）进行语义对齐（低频→MTF，中频→GAF，高频→RP），实现频率特异性表征；② 不引入额外可训练参数或模型深度，仅通过预处理级频域解耦即提升鲁棒性；③ 多通道图像融合方式避免了传统多分支CNN的参数冗余与训练不稳定问题</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">在UCR时间序列基准库（含50+数据集）上验证；基线为原始信号图像化（GAF/MTF/RP单图）+CNN；在LongLeadECG（长时、低SNR）上准确率提升3.2%（86.7% → 89.9%），在NonInvasiveFetalECGThorax1上提升2.8%，而对短且干净的Trace数据集性能相当（±0.1%）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/019dca3bbf80af3a8c1c1e2e5ae336ed348abc1a" target="_blank">Improving Agricultural Commodity Trading through Data Imputation Methods for Price Prediction Accuracy </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">P. Thongnim; Sueppong Mueanchamnong</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">在热带水果种植的物联网环境监测系统中，因传感器故障导致的高比例缺失数据如何影响农产品价格预测模型的准确性，以及何种缺失值填补方法最适配此类农业时序数据。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用三类时序感知插补方法（Linear Interpolation、Prophet、Kalman Filter）与四类机器学习回归器（RT、RF、XGBoost、ANN）正交组合，通过10折交叉验证系统评估插补-建模联合性能，并结合时序可视化诊断各方法对数据动态特征（平滑性、季节性、噪声）的保真度。</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次在热带水果农业IoT场景下对插补方法与ML模型进行系统性正交评估，而非孤立优化单一环节；② 引入时序可视化诊断（而非仅依赖统计指标）揭示插补方法对原始数据动力学特征（如突变、趋势转折）的保真能力差异；③ 量化了插补选择对最终决策变量（价格预测值）的实际业务影响幅度（±35 THB/kg），凸显方法选择的经济意义。</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">基于泰国春武里府商业榴莲园2023–2024年真实数据（n=182，环境数据缺失28.02%，价格数据缺失68.13%）；基线为各插补法+各ML模型的全部组合；Kalman Filter + XGBoost取得最优测试性能（R² = 0.9767，MAPE = 1.49%），且不同插补法导致价格预测偏差高达±35泰铢/公斤。</span></div></div>
+                
+            </div>
+            <div class="paper-card ">
+                <div class="paper-header">
+                    <span class="relevance-badge ">?</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/01b389406d42ab4638588061978205b401d24b44" target="_blank">Harnessing the potential of artificial neural networks to study autocatalytic chemical reaction effects on the flow dynamics of Boger fluid squeezed between two parallel disks </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">R. N. Kumar; V. R S; C. K; F. Gamaoun</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/01c3c53c9b5acc10ea2cc6fe2de18824f0f58472" target="_blank">On the Evaluation of Spiking Neural Network Configurations for Network Intrusion Detection </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Raj Patel; David Amebley; Taye Akinrele; Shaswata Mitra; S. Dibbo et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在资源受限场景下实现高效准确的网络入侵检测，特别是评估脉冲神经网络（SNN）中神经元模型与脉冲编码方案对检测性能的影响。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">通过系统性消融实验，组合9种神经元模型与3种脉冲编码方案（共27种变体），在4个基准数据集上使用snntorch框架进行统一评估。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">脉冲编码方案（尤其是延迟编码）比神经元模型对检测性能影响更大；LeakyParallel神经元+延迟编码组合最优，平均准确率92.11%、宏F1为0.80、误报率2.01%，且推理速度最快。</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/01c46c45b7b8b84e0767fc74711203dbc216f948" target="_blank">A Deep Learning Approach for Computing Equilibrium Shapes of Crystals </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Zhipeng Chang; Wei Jiang; Yan Wang; Xiaofei Zhao</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">计算晶体平衡形貌（ESC）问题，即在给定面积/体积约束下最小化取向依赖的界面自由能泛函</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出一种对称化深度神经网络（SDNN），在相场框架下求解带约束的界面自由能最小化问题</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">SDNN能通过相场函数的零水平集精确确定平衡界面；结合预训练、L-BFGS优化器和自适应采样显著提升精度与效率</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/01d05b2fc1c064027b46fa3cfdb22255106f9b49" target="_blank">Artificial intelligence in oncology: Current status and possibilities (Review) </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">A. Roy; Apurva Bhoyar; A. Ahirwar; Yogesh Pawade; N. Chandra</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">AI在肿瘤学中的临床转化受限于数据偏差、泛化能力不足、可解释性差及监管障碍</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">综述机器学习与深度学习（尤其是CNN和Transformer）在癌症影像、数字病理、预后预测及放化疗优化中的应用与挑战</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">AI模型在病灶检测、肿瘤分级、生存预测等方面达到或超过专家水平；多模态AI、联邦学习和可解释AI是突破临床转化瓶颈的新兴方向</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/01d17612903e897df213d4ffd76b1e38d997b79f" target="_blank">Learning-Augmented Primal-Dual Control Design for Secondary Frequency Regulation </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Yixuan Yu; R. Bansal; Yan Jiang; Pengcheng You</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在可再生能源引入不确定性和波动性的背景下，提升电力系统二次调频控制的暂态性能（如频率最低点、控制能耗）同时保证稳定性与稳态最优性</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出一种学习增强的原始-对偶控制器设计框架，通过变量变换将神经网络嵌入控制输入，在保持理论稳定性与稳态最优的前提下，以数据驱动方式优化暂态指标</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">1）证明了控制器具有可证的（潜在指数级）稳定性与稳态最优性；2）仿真表明学习增强后显著改善了频率最低点和累积控制 effort 等关键暂态性能指标</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[8] A Deep Learning Approach for Computing Equilibrium Shapes of Crystals — 该工作将深度学习嵌入相场框架求解带约束的界面自由能最小化问题，为电催化中表面重构、晶面稳定性及活性位点动态演化等第一性原理难以覆盖的介观尺度问题提供了可迁移的方法论范式。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[1] The Role of Artificial Intelligence and Machine Learning in Revolutionizing Drug Discovery... — 其强调AI在药物发现中“缺乏实证导向的整合性评估”，与[8][3][4]等论文中高度定制化、物理约束嵌入、小数据高精度建模的成功实践形成张力，提示“通用AI效能评估”框架可能低估领域专用架构的真实价值。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">作者/团队名（[8]未署名，但方法属计算材料+DL交叉前沿）— 擅长将对称性先验、能量泛函约束与神经网络结构设计耦合，此类“物理引导的深度建模”能力对电催化表界面模拟极具启发性。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">多篇论文（[3][4][8][10]）共同指向“物理驱动的深度学习”范式成熟化：不再仅用AI拟合黑箱映射，而是将守恒律、对称性、热力学约束或微分方程结构显式编码进网络架构或损失函数中。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">几乎所有AI应用研究（[1][3][4][5][9]）均未系统量化模型预测不确定性对下游决策风险的影响——例如[3]中Vm25反演误差如何传播至产量预测置信区间，[8]中ESC形貌偏差是否导致表面能排序错误，这在电催化中直接关系到活性位点筛选的可靠性。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">跨尺度衔接缺失：[8]处理晶体形貌（纳米-微米），[3]聚焦冠层尺度生理参数，[10]面向电网宏观调控，但无一构建从原子吸附能→表面重构→反应通量→器件性能的端到端可微分AI链路，而这是电催化理性设计的核心瓶颈。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展具备不确定性传播能力、支持多尺度耦合梯度回传的“可微分电催化数字孪生”框架：以第一性原理计算为锚点，用物理约束神经网络代理表面重构与覆盖度动力学，并与宏观反应器模型联合优化。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>

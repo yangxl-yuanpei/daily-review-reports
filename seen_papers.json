@@ -2116,5 +2116,78 @@
       "electrochemistry",
       "constant-potential"
     ]
+  },
+  "s2:01737be02d88db040aa92a562cdf190eeacc1874": {
+    "title": "The Role of Artificial Intelligence and Machine Learning in Revolutionizing Drug Discovery and Pharmacological Research: A Systematic Review",
+    "date_seen": "2026-07-16",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:017e31d268ec8f5bfa0793250ebebec4fa540fad": {
+    "title": "1D Convolutional Siamese Neural Networks for Robust Anomaly Detection in Dam Structural Health Monitoring",
+    "date_seen": "2026-07-16",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:018aca14afa7a48ee1325161a3dd448652840ec6": {
+    "title": "Optimizing Crop Maximum Carboxylation Rate Using Machine Learning to Improve Maize Yield Estimation Under Drought Conditions",
+    "date_seen": "2026-07-16",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0191c7eb299946cf178d08608b8b0da2d8596d5e": {
+    "title": "Wavelet-Based multi-frequency image transformation for time series classification",
+    "date_seen": "2026-07-16",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:019dca3bbf80af3a8c1c1e2e5ae336ed348abc1a": {
+    "title": "Improving Agricultural Commodity Trading through Data Imputation Methods for Price Prediction Accuracy",
+    "date_seen": "2026-07-16",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:01b389406d42ab4638588061978205b401d24b44": {
+    "title": "Harnessing the potential of artificial neural networks to study autocatalytic chemical reaction effects on the flow dynamics of Boger fluid squeezed between two parallel disks",
+    "date_seen": "2026-07-16",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "generative"
+    ]
+  },
+  "s2:01c3c53c9b5acc10ea2cc6fe2de18824f0f58472": {
+    "title": "On the Evaluation of Spiking Neural Network Configurations for Network Intrusion Detection",
+    "date_seen": "2026-07-16",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:01c46c45b7b8b84e0767fc74711203dbc216f948": {
+    "title": "A Deep Learning Approach for Computing Equilibrium Shapes of Crystals",
+    "date_seen": "2026-07-16",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:01d05b2fc1c064027b46fa3cfdb22255106f9b49": {
+    "title": "Artificial intelligence in oncology: Current status and possibilities (Review)",
+    "date_seen": "2026-07-16",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:01d17612903e897df213d4ffd76b1e38d997b79f": {
+    "title": "Learning-Augmented Primal-Dual Control Design for Secondary Frequency Regulation",
+    "date_seen": "2026-07-16",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
