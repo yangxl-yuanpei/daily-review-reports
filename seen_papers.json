@@ -2189,5 +2189,87 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:04fdfdd4d6d6bbf6deafa118523c188f6cfe4618": {
+    "title": "Machine Learning the Excited State Properties of Crystalline Organic Semiconductors",
+    "date_seen": "2026-07-17",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface",
+      "dft",
+      "generative"
+    ]
+  },
+  "s2:778df056332eb78514a6e3ee3168ea554e43b321": {
+    "title": "Aromatic Molecule Solvation in Liquid Water with Coupled Cluster Accuracy: The Balance of Pi-Interactions and Hydrophobicity",
+    "date_seen": "2026-07-17",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "dft",
+      "generative"
+    ]
+  },
+  "s2:972e5ff7ecbcfa7964851f1094dac1bff8a420e8": {
+    "title": "Beyond Black-Box Models: A Physics-Driven Computational Paradigm for Low-Temperature Flexible Organic Crystals.",
+    "date_seen": "2026-07-17",
+    "tags": [
+      "MLFF",
+      "generative"
+    ]
+  },
+  "s2:01d44a38c47ee15b0b79fe69e569c8b5515c7df5": {
+    "title": "UNet-Based Keypoint Regression for 3D Cone Localization in Autonomous Racing",
+    "date_seen": "2026-07-17",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:01d6bdd56c13fb7da41745ae1f0dc9a281b29c9a": {
+    "title": "Deep orthogonal decomposition: a continuously adaptive neural network approach to model order reduction of parametrized partial differential equations",
+    "date_seen": "2026-07-17",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:01d847e4dafeaa295023190a7ef1c7dd638a42a5": {
+    "title": "Active learning-driven global search for neutral gold clusters via neural network potential.",
+    "date_seen": "2026-07-17",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface",
+      "active-learning",
+      "generative"
+    ]
+  },
+  "s2:01daa394daace30bd731d36cb470ed3c5b25e07c": {
+    "title": "A Multimode Cooperative Control Architecture for Connected and Automated Vehicle Platoon Splitting and Merging in Mixed Traffic",
+    "date_seen": "2026-07-17",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:01e2d5978e52d046b5e48274493ef2526415d055": {
+    "title": "Unravelling conducting substrate dependent resistive switching in ZnO@β-SiC memristors for neuro-inspired computing",
+    "date_seen": "2026-07-17",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:01f3187fc4e11c16f4729438ee6a4c74afd58311": {
+    "title": "Autism Spectrum Disorder Classification Based on ML and DL Techniques",
+    "date_seen": "2026-07-17",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:01f6cef2d4539d80bc370ee23b9ac01596b6c617": {
+    "title": "Mobile3ViT: An Improved Hybrid CNN‐Visual Transformer Model for Automatic Gastrointestinal Image Recognition",
+    "date_seen": "2026-07-17",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
