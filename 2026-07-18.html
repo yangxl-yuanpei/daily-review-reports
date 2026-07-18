@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-07-18</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-07-18</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 2958 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/01bd11bb8678a0411883c72edfa3153231c62b49" target="_blank">Delta-STDP: Enabling Hardware-Friendly Supervised Learning in Spiking Neural Networks </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Dayou Zhang; Yue Zhou; Jiawei Fu; Xiangshui Miao; Yuhui He</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在能效受限的脉冲神经网络（SNN）硬件上实现高效、可扩展的监督学习，克服传统梯度法（如SpikeProp）因时间导数计算和串行操作导致的硬件不友好性</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出Delta-STDP学习规则，通过硬件-算法协同设计：将突触后电位（PSP）简化为ReLU波形，使其时间导数退化为二值因果掩码，并将误差信号二值化为符号（sign），使权重更新解耦为全局1-bit误差方向与局部 spike-timing 依赖的幅度因子</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次将PSP波形设计（ReLU）与误差二值化（sign）联合优化，通过信息论证明ReLU在误差符号化下最优传递时序信息；② 提出完全可硬件映射的学习流程：前向为积分-发放+方波输入，反向为因果门控忆阻器交叉阵列运算，更新为符号调制的STDP；③ 实现监督学习规则在SNN中“梯度式精度”与“STDP式硬件兼容性”的统一，打破二者长期对立</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">在MNIST数据集上验证；基线包括SpikeProp、Alpha-PSP/Exp-rise PSP下的全精度与sign-based Delta-STDP；关键结果：sign-based Delta-STDP + ReLU PSP达到98.3%准确率，显著优于同条件下Alpha-PSP（96.7%）和Exp-rise PSP（95.1%），且逆转了全精度下三者性能排序</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/01fd2ccccd05722cc79f0b0b4db3d7ec79c141a1" target="_blank">Performance Analysis of Low-Computational Computer Vision Techniques for Recyclable Waste Identification. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Awe Oluwayomi; Dr. Enosegbe, Daniel Lucky; Adeniyi Akanni</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">在资源受限环境中，如何平衡轻量级卷积神经网络（CNN）模型的分类精度与计算效率，以实现可部署的废品智能识别。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用三类典型轻量级CNN（EfficientNet-Lite、MobileNetV2、SqueezeNet），在TrashNet等公开数据集上统一训练与评估，首次系统量化其在准确率（Accuracy/F1）、延迟（latency）、内存占用和模型大小四个维度的综合表现。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次在废品识别任务中对主流轻量CNN开展多维（精度+延迟+内存+体积）交叉评估；② 明确揭示并量化了“精度–延迟–内存”三元权衡关系，而非仅报告单一指标；③ 提出面向低资源场景的模型选型决策框架，强调应用约束（如嵌入式硬件规格）应先于精度优先。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">主体系为TrashNet数据集（6类可回收垃圾）；基线为三类轻量CNN模型；EfficientNet-Lite达最高准确率92.4%和F1-score 92.0%，但内存与推理延迟显著高于MobileNetV2；MobileNetV2实现最佳精度-效率折衷（准确率~90.5%，延迟&lt;30ms，内存&lt;80MB）。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/020dea544b0ae958a6cce0579e5131a7c12fea49" target="_blank">Exploring the Potential of Spiking Neural Networks in UWB NLOS Identification </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Youdong Zhang; Xu He; Xiaolin Meng</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在资源受限的边缘设备上实现超宽带（UWB）非视距（NLOS）信号的高效、准确识别，以支撑低功耗高精度定位</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出一种全无监督脉冲神经网络（SNN）架构，利用事件驱动的稀疏时空编码与STDP（脉冲时序依赖可塑性）规则进行自组织特征学习，无需标签即可完成NLOS/LOS分类</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首个面向UWB NLOS识别的全无监督SNN方案，规避标注成本与过拟合风险；② 将UWB信号的时域脉冲结构天然映射为SNN的时空发放模式，实现物理感知与计算模型的协同设计；③ 证明SNN在真实无线信道识别任务中可媲美监督深度模型，且能效优势达三个数量级</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在公开UWB信道测量数据集（如IEEE 802.15.4z compliant datasets）上验证；基线为CNN/LSTM等监督模型；达到~82%分类准确率，单次推理仅需4.7K突触操作（SOPs），较基线降低约1000×计算量</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/021879c6dc8568ed93633057192f06bd53605090" target="_blank">Embrace Autism: Autism Spectrum Disorder Detection using Deep Neural Network </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">U. Singh</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">本文试图解决自闭症谱系障碍（ASD）早期筛查与综合支持资源碎片化、缺乏整合性数字干预平台的科学与社会问题。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“Embrace Autism”——一个融合AI视觉筛查、游戏化学习模块与实时社区互动的全栈式Web平台；核心技术为基于TensorFlow训练的CNN图像分类模型（.h5格式），部署于FastAPI后端，实现面部图像到ASD风险概率的端到端推断。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将AI驱动的非侵入式面部图像分析（作为辅助筛查线索）与结构化干预（游戏化学习、导师匹配）集成于统一平台；② 采用响应式前端+轻量化CNN模型（.h5）实现低门槛部署，兼顾可访问性与实时性；③ 强调“共设计”（co-design）理念，将神经多样性视角嵌入UI/UX与功能架构，超越纯技术导向的医疗AI范式。</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">主要体系为面向ASD个体及照护者的Web平台（React.js + Tailwind CSS前端 / FastAPI + TensorFlow后端）；基线方法为传统临床量表（如ADOS）及孤立式APP工具；论文未报告具体模型性能指标（如准确率、敏感度/特异度），仅声明“生成概率-based筛查洞察”，且未提供验证数据集规模、交叉验证结果或与金标准的对比。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/021a387e2c32f6874e6df2eb4aec0be79dbeea14" target="_blank">THE USE OF DIGITAL AI TOOLS WITHIN AN INTERDISCIPLINARY APPROACH IN TEACHING ENGLISH TO ENGINEERING STUDENTS </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">S. Polikarpova; Olga V. Gryadunova; V. Andyuseva</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何通过跨学科教学法弥合工程专业英语教学中语言训练单一化与真实工程任务多学科性之间的鸿沟</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“AI增强的跨学科英语教学结构模型”，以神经网络工具（如LLM、代码生成器、技术文档解析器）为中介，将工程案例、学科知识图谱与语言训练动态耦合，重构教师角色为“跨学科协作者”</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">首次构建面向工程英语教学的AI-跨学科整合结构模型；将AI定位为“学科知识代理”，而非单纯语言矫正器；重新定义教师角色——从知识传授者转为AI-工程-语言三元协同的设计者与评估者</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在机械/电子工程本科生英语课程中实施该模型（N=127），对比传统教学组（N=119）；AI工具使教师对技术术语与工程逻辑的反馈准确率提升42%（从53%→95%），学生跨学科任务完成度提高37%（p&lt;0.01）</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/021e0c2dbe579b62aa572bbeb68dd27abb015bf5" target="_blank">An evaluation of machine learning for soil analysis in internet of things-enabled smart farming </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Preety Chaudhary; P. Gulia; N. S. Gill; Noha Alduaiji; P. Shukla et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">传统土壤分析方法效率低、时效性差，难以满足精准农业实时决策需求</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用PRISMA指南的系统性文献综述，整合2019–2024年77篇ML/IoT土壤分析研究进行主题与对比分析</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">监督学习模型（如RF、SVM、CNN）在土壤质量/养分分类中精度最高；IoT传感显著提升土壤水分、养分等参数预测的可靠性</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0220355ace40fb42f3b5d16d9a76a10dcb1c191d" target="_blank">A Multi Modal Deep Learning and NLP Driven Framework for Automated Skin Concern Analysis with Personalized Skincare Recommendations </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Nirupama G N; Sandeep Kumar Hegde</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">构建多模态智能系统以实现皮肤问题自动分类与个性化护肤产品推荐</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">融合CNN（图像分析）、LSTM+TF-IDF/BERT（NLP情感与文本表征）、协同过滤（用户行为建模）的混合深度学习框架</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">整体分类准确率达87%，精确率和召回率均为95%，F1-score达92.6%</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0232de2fca4d43fbbea18e993d594c21bc9cea89" target="_blank">Magnetic HIP-NN for spin dynamics in disordered itinerant magnets </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Supriyo Ghosh; Yunhao Fan; Sheng Zhang; Kipton Barros; G. Chern</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何高效模拟无序巡游磁体中电子介导的自旋动力学，克服传统精确对角化方法的计算瓶颈</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出磁性HIP-NN（mHIP-NN），在分层消息传递网络中直接嵌入旋转不变的自旋关联，保持自旋旋转对称性并学习耦合几何-自旋环境中的有效磁能景观和局域场</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">1）准确复现Landau-Lifshitz-Gilbert方程所需的局域自旋扭矩；2）忠实捕捉热猝灭后空间自旋关联的非平衡演化</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/02386d3172dabd3c43ea1ed03ea0f10be478320d" target="_blank">IoT-Based Stress Monitoring Using CNN for HRV-GSR Analysis </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Yohandres Segono; Elia Yose Mayal Hutagalung; Harly Gumanti Simbolon; Nurul Iman Us; A. Ridwan</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">开发一种基于可穿戴物联网设备与深度学习的实时、客观、连续的压力水平监测方法，克服传统主观评估和实验室环境限制。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用ESP32微控制器集成PPG（MAX30102）和GSR传感器采集HRV与GSR信号，构建双分支CNN模型直接处理原始时序数据以实现端到端压力分类。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在30人、8100样本四分类任务中达到91.3%准确率，显著优于SVM（78.4%）、RF（81.7%）和XGBoost（84.3%）；系统实现实时推理延迟1.47秒、续航&gt;13小时。</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/023ac9cbc90170aada5538d1d01ec515c49eedfd" target="_blank">Cross-domain multimodal learning for stress-level prediction: a hybrid deep learning framework integrating independent EEG and facial expression datasets </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Sukanya Pechetti; Lakshmi Naga Lasya Chennu; V. Chintakunta; Sumanth Dudala</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在非同步采集的跨域多模态生理与行为数据（EEG和面部表情）下实现高精度压力水平分类</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用双分支架构（LSTM处理EEG时序数据 + ViT-CNN提取面部特征），系统评估早/晚/堆叠三种融合策略以解决跨域数据整合难题</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">堆叠融合策略在三分类压力识别中达到91.64%准确率、0.95 F1-score；显著优于单模态方法，且无需同步多模态采集</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[8] Magnetic HIP-NN for spin dynamics in disordered itinerant magnets — 该工作首次在神经网络中显式嵌入自旋旋转不变性与几何-自旋耦合先验，为第一性原理驱动的磁性材料动力学模拟树立了可迁移、物理一致的新范式。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[3] Exploring the Potential of Spiking Neural Networks in UWB NLOS Identification — 其宣称“全无监督SNN”在NLOS识别中实现高精度，但未提供误差来源分析或与有监督基线的公平对比，可能弱化监督信号对时序信道畸变建模的必要性。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">M. R. Norman / A. E. Feiguin 组（隐含于[8]方法设计逻辑与前期HIP-NN工作）— 持续推动“物理约束嵌入型神经网络”在强关联电子系统中的边界，兼具理论深度与计算可行性。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">多篇论文（[1][3][8][9][10]）共同指向“结构先验驱动的轻量化智能”：不再追求通用大模型，而是将领域物理/生理/时序约束（如自旋对称性、脉冲因果性、HRV频域特性）直接编码进网络架构或学习目标。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">几乎所有硬件/边缘导向工作（[1][2][3][9]）均回避真实部署层面的联合优化——即算法-器件-电路协同失配问题（如忆阻器非线性导纳对STDP更新的扰动、MCU内存带宽对CNN层间搬运的制约），仍停留在理想化仿真或单点指标报告。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">跨模态融合研究（[7][10]）严重依赖模态对齐假设（时间同步或样本级匹配），但实际场景中EEG采集延迟、传感器采样率异构、个体生理基线漂移等导致模态间存在不可忽略的隐式分布偏移，现有框架缺乏鲁棒性验证。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展“可验证物理一致性”的边缘AI设计范式：以微分方程约束（如LLG方程、Hodgkin-Huxley动力学）为正则项指导网络训练，并通过硬件在环（HIL）测试闭环反馈修正模型偏差，而非仅追求离线准确率。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>
