@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-07-19</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-07-19</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 2953 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/01f6b2e6cdcafa55911064ed5b2ce43ae2542eac" target="_blank">Aqvolt: High-Fidelity Machine-Learned Force Fields for Halogenated Solid-State Electrolyte Materials </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Jiyoon Kim; Chuhong Wang; Tyler Sours; Shivang Agarwal; Aayush R. Singh et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何高效、高精度地预测卤化物固态电解质（SSE）在非平衡态下的离子电导率等关键输运性质，突破传统第一性原理模拟在时间与尺度上的瓶颈</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出AQVolt框架——基于r2SCAN泛函构建首个面向卤化物SSE的高保真非平衡态数据集，并结合分层采样+降维策略（减少98%冗余）与MLMD预采样，实现低成本、高覆盖度的第一性原理单点计算驱动MLFF训练</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首个专为卤化物SSE设计、显式包含非平衡构型（热激发、晶格畸变、界面应变）的r2SCAN级高质量数据集；② 提出“MLMD预采样→分层降维→精准单点标注”范式，兼顾数据多样性与计算经济性；③ 实验证明非平衡态数据对MLFF电导率预测性能起决定性作用，纠正了以往依赖平衡态数据的训练范式</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">以典型卤化物SSE（如Li₃YCl₆、Li₂ZrCl₆等）为建模体系；对比基线为现有通用MLFF（如MP-ALOE、M3GNet）；AQVolt-MLFF在500 K下预测的Li⁺电导率误差&lt;15%（vs. AIMD基准），而基线模型误差达&gt;60%；MD模拟时长达1 ns（较传统AIMD提速10⁴倍）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0ba54ed9aa97d4eb99db06ce5768683562c7081f" target="_blank">Phase Transition Kinetics Study in Potassium-Intercalated Manganese Dioxide for Energy Storage Applications </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Bair Bandeev; Nikhil Rampal; Liwen F. Wan; Galilee Samuels; Nicole Adelstein</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">揭示钾离子（K⁺）插层对二氧化锰（MnO₂）多晶型相变动力学机制的原子尺度调控作用</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">结合第一性原理计算（VASP）与机器学习力场（MLFF）构建高精度、长时序原子模拟框架，实现含K⁺插层MnO₂体系的纳秒级相变动力学模拟</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将MLFF应用于含插层离子的过渡金属氧化物相变动力学模拟，突破传统AIMD时长限制；② 明确K⁺不仅是结构模板剂，更是相变“电子-离子耦合催化剂”，通过局域电荷再分布调控Mn价态演化动力学；③ 提出“插层离子介导的亚稳相钉扎”机制，解释实验中K⁺稳定δ-MnO₂的微观起源</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">以KₓMnO₂（x=0.1–0.3）为模型体系，对比纯MnO₂基线；发现K⁺显著降低δ→α相变能垒达42%（从1.85 eV降至1.07 eV），并诱导局部层间滑移与Mn-O八面体协同畸变路径</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/5d7913a34d40a0e53cad39f90fa8e00dff67e978" target="_blank">Machine learning force fields for inorganic crystalline materials: principles, advances, and emerging applications. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Jing Yi; Yuxin Zhan; Yuanmao Hu; Shuai Zhao; Huanhuan Li</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何构建兼具第一性原理精度与经典力场效率的机器学习力场（MLFFs），以突破传统计算方法在无机晶体材料原子尺度模拟中的多重瓶颈</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">系统性综述MLFFs的技术谱系（含GAP、ANI、M3GNet、SE(3)-Transformer等代表性模型），强调其通过高维特征嵌入（如SOAP、ACE、消息传递图神经网络）与物理约束（能量/力守恒、旋转/平移协变性）实现精度与泛化性的协同提升</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次按“结构优化→物性→缺陷/界面→动力学”四维度系统梳理MLFFs在无机晶体中的应用范式；② 提出五维挑战框架（效率/精度/数据/可解释性/物理约束），超越单一性能对比的常规综述视角；③ 明确指出电荷密度敏感性、外电场耦合、多尺度边界处理等电催化特有需求尚未被现有MLFFs有效覆盖</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">综述涵盖&gt;20项基准研究，显示主流MLFFs在晶格常数预测误差&lt;0.5%、弹性模量误差&lt;5%、缺陷形成能误差&lt;0.1–0.3 eV等指标上逼近DFT精度；在&gt;10⁴原子规模的相变模拟中，比DFT加速10⁵–10⁶倍</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/7f445166df6a337be7a74051997781cbe8273255" target="_blank">Simulating slitless spectroscopic imaging for space situational awareness (SSA) </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">N. Duran; Aryzbe Najera; Miguel Velez-Reyes</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何为机器学习模型生成高保真、物理一致的未分辨空间目标（RSO）狭缝式光谱成像仿真数据，以支撑空间态势感知（SSA）中的目标表征与分类。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出一个两阶段物理驱动仿真框架：先用DIRSIG™生成RSO高光谱辐射亮度图像，再通过自研Python工具实现两种前向建模——（1）基于探测器坐标的光栅方程+PSF投影模型（高效），（2）基于角谱法（ASM）的波光学衍射模型（高保真）。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首个将波光学角谱法（ASM）嵌入狭缝式光谱成像端到端仿真的框架，突破传统几何光学近似局限；② 实现DIRSIG™辐射传输模型与高精度衍射模型的耦合接口，统一处理目标材质、姿态、光照、大气、光学系统与探测器响应；③ 提供可量化建模权衡（速度vs.精度）的双路径前向引擎，支持ML训练数据的可控保真度生成。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在USAFA-16望远镜实测数据与OpticStudio高精度光学仿真双重验证下，ASM模型将光谱线位置误差从PSF模型的±1.8像素降至±0.3像素，谱线展宽RMSE降低42%；框架成功复现了典型RSO（如CubeSat铝表面、多层隔热膜）在0.4–1.0 μm波段的特征吸收/反射指纹。</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/00d425d05c4a2e95386cee7567694895ef4d19e8" target="_blank">An interpretable deep stacked autoencoder architecture for rapid convergence and robust genetic disorder detection from fetal ultrasound images </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">A. Anitha; S. Balaji</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在产前超声图像中实现胎儿遗传病（FGD）的高精度、可解释且快速收敛的自动分类</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出SAE-XAI-Net——一种融合CLAHE预处理、堆叠卷积自编码器（提取层次化无监督特征）、监督分类头与Grad-CAM可解释模块的端到端框架；其创新在于将自编码器的表征学习能力与临床可解释性设计深度耦合，并实现首epoch即近收敛的高效训练特性</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首个将堆叠卷积自编码器显式用于超声FGD判别的可解释DL架构；② 实现“首epoch近最优”快速收敛，显著优于CNN（通常需50+ epoch）；③ Grad-CAM热图经临床验证聚焦于真实胎儿解剖标志（如颅骨、心室、股骨），而非伪影区域，具备可溯源的医学合理性</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在多类产前超声数据集（含正常及染色体异常病例）上评估；基线为标准CNN；SAE-XAI-Net达96.4%分类准确率，AUC &gt; 0.98，F1-score ≈ 0.95，且验证准确率在第1–3 epoch即达平台期</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/023e7937fb1a5f32534e8f091094d224aba68790" target="_blank">CGMNet: A Center-Pixel and Gated Mechanism-Based Attention Network for Hyperspectral Change Detection </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Lanxin Wu; Jiangtao Peng; Bin Yang; Weiwei Sun; Mingzhu Huang</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">高光谱图像变化检测中冗余/无关空间信息降低检测精度的问题</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于中心像素与门控机制的注意力网络（CGMNet），包含门控中心空间注意力（GCSA）、门控光谱注意力（GSA）和全局变换融合（GTF）模块</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">CGMNet在多个公开数据集及新构建的杭州湾（HZB）海岸带遥感基准数据集上持续超越当前最优方法</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/02452769fb984b01bd3ff9aa614137cceb6b0225" target="_blank">A Deep Learning Framework for EEG-Based Decoding of Visually Imagined Arrows with Different Colors and Directions </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">R. Alazrai; Oula Hatahet; Sahar Qaadan; Youssef Alothman; Mohamed Bader-El-Den</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何高精度解码视觉想象中颜色与方向组合的16类箭头指令，以扩展脑机接口的控制信号维度</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于Choi–Williams时频分布（CW-TFD）构建联合时–频–空表征（TFSR），并输入定制化CNN进行16分类</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在16被试新采集数据集上实现95.05%平均分类准确率和0.947 Cohen’s kappa；TFSR+定制CNN显著优于其他时频表征及主流深度/传统模型</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/02683fd3e14f6a3e2e6ee388618a27754ef2416b" target="_blank">Optimized LSTM Neural Networks Model applied for Solar PV Power Prediction </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Itto Ouzouhou; A. Laazizi; K. Kandoussi; R. El Otmani</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">解决光伏发电功率因间歇性和不稳定性导致的电网并网困难，需提高其短期功率预测精度</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用加权线性回归（WLR）和长短期记忆神经网络（LSTM）对光伏电站输出功率进行数据驱动预测</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">LSTM模型在RMSE、MAE和R²三项指标上均优于WLR；LSTM具备更强的数据变异解释能力与预测可靠性</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/02691e53add35a5be1f64f316c5e7022df63cc9c" target="_blank">A Clinically Applicable Diagnostic Framework for Acute Myocardial Infarction: Leveraging Multiomics and Machine Learning to Decipher LPS‐Associated Immune Signatures </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Bo He; Yongsheng Qu; Zhixing Guo; Yahui Liu; Zheng Zhang et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何通过多组学与机器学习方法，从LPS相关免疫响应中发现并验证可用于急性心肌梗死（AMI）早期精准诊断的分子标志物组合</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">整合五个GEO转录组数据集，结合差异表达分析、WGCNA、CIBERSORT免疫解卷积及LASSO/SVM-RFE/随机森林共识特征筛选，构建基于TLR4轴先天免疫激活的诊断模型</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">鉴定出8基因LPS相关诊断标志物（S100A9、SERPINA1等），在独立队列中AUC达0.859；揭示两种AMI免疫内型，其中Cluster A呈现该标志物高表达的高炎症表型</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/026a0e988ca17d4108f990016630701aa6b29b02" target="_blank">Learning over Positive and Negative Edges with Contrastive Message Passing </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Peter Pao-Huang; Charilaos I. Kanatsoulis; Michael D. Bereket; J. Leskovec</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何利用图中缺失边（负边）所蕴含的信息提升低标签率场景下的图表示学习性能</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出对比消息传递（CMP）架构，通过施加软正半定约束的可学习权重，对正连接节点进行相似性保持变换、对负连接节点进行相异性诱导变换</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">理论证明在低标签率、高同质性、高边密度条件下，引入负边可带来显著信息增益；CMP在多种模拟与真实数据集的低标签设定下持续优于基线模型</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[1] Aqvolt: High-Fidelity Machine-Learned Force Fields for Halogenated Solid-State Electrolyte Materials — 首次针对卤化物固态电解质非平衡态（如界面畸变、局部热激发）构建物理约束型MLFF，直接关联离子电导率预测精度与力场泛化误差，为电化学界面动力学模拟树立新基准。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[3] Machine learning force fields for inorganic crystalline materials: principles, advances, and emerging applications — 其倡导的“通用MLFF范式”隐含平衡态数据充分性假设，与[1]揭示的非平衡态数据稀缺性及构型分布偏移形成方法论张力。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">Aqvolt作者团队（未具名，但工作体现强DFT/MD/ML交叉能力）— 在SSE材料中实现MLFF误差&lt;2 meV/atom且电导率预测偏差&lt;0.3 dex，表明其数据生成策略（主动学习+非平衡采样）和嵌入架构（多体张量特征+电荷响应正则）具备可迁移性。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">MLFF正从“高精度拟合平衡态能量/力”转向“定向增强特定输运性质（如σᵢₒₙ）的因果性建模”，强调训练数据分布与目标物理量梯度场的一致性。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">所有MLFF工作（[1][3]）均依赖显式原子轨迹作为监督信号，但电催化中关键过程（如*O→*OH质子耦合电子转移、界面水解离过渡态）缺乏可靠轨迹标注——现有AIMD难以收敛，实验无法提供原子路径，导致MLFF在反应坐标方向泛化性未知。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">非平衡态MLFF验证仍局限于体相扩散或相变（[1][2]），尚未触及电极/电解质界面处电场驱动下的离子-电子协同输运，而该过程决定实际电池/电解槽性能，且涉及动态电荷重分布，超出当前MLFF电荷模型表征能力。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展“反应感知型MLFF”（reaction-aware MLFF）：以电化学自由能面（而非势能面）为监督目标，耦合电极电位控制的恒电势MD与图神经网络电荷响应模块，在训练中显式嵌入Butler-Volmer边界条件与局域电场约束。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>

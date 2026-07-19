@@ -2343,5 +2343,80 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:01f6b2e6cdcafa55911064ed5b2ce43ae2542eac": {
+    "title": "Aqvolt: High-Fidelity Machine-Learned Force Fields for Halogenated Solid-State Electrolyte Materials",
+    "date_seen": "2026-07-19",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:0ba54ed9aa97d4eb99db06ce5768683562c7081f": {
+    "title": "Phase Transition Kinetics Study in Potassium-Intercalated Manganese Dioxide for Energy Storage Applications",
+    "date_seen": "2026-07-19",
+    "tags": [
+      "MLFF",
+      "catalysis"
+    ]
+  },
+  "s2:5d7913a34d40a0e53cad39f90fa8e00dff67e978": {
+    "title": "Machine learning force fields for inorganic crystalline materials: principles, advances, and emerging applications.",
+    "date_seen": "2026-07-19",
+    "tags": [
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:7f445166df6a337be7a74051997781cbe8273255": {
+    "title": "Simulating slitless spectroscopic imaging for space situational awareness (SSA)",
+    "date_seen": "2026-07-19",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:00d425d05c4a2e95386cee7567694895ef4d19e8": {
+    "title": "An interpretable deep stacked autoencoder architecture for rapid convergence and robust genetic disorder detection from fetal ultrasound images",
+    "date_seen": "2026-07-19",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:023e7937fb1a5f32534e8f091094d224aba68790": {
+    "title": "CGMNet: A Center-Pixel and Gated Mechanism-Based Attention Network for Hyperspectral Change Detection",
+    "date_seen": "2026-07-19",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:02452769fb984b01bd3ff9aa614137cceb6b0225": {
+    "title": "A Deep Learning Framework for EEG-Based Decoding of Visually Imagined Arrows with Different Colors and Directions",
+    "date_seen": "2026-07-19",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:02683fd3e14f6a3e2e6ee388618a27754ef2416b": {
+    "title": "Optimized LSTM Neural Networks Model applied for Solar PV Power Prediction",
+    "date_seen": "2026-07-19",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:02691e53add35a5be1f64f316c5e7022df63cc9c": {
+    "title": "A Clinically Applicable Diagnostic Framework for Acute Myocardial Infarction: Leveraging Multiomics and Machine Learning to Decipher LPS‐Associated Immune Signatures",
+    "date_seen": "2026-07-19",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:026a0e988ca17d4108f990016630701aa6b29b02": {
+    "title": "Learning over Positive and Negative Edges with Contrastive Message Passing",
+    "date_seen": "2026-07-19",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
