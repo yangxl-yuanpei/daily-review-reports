@@ -2418,5 +2418,88 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:5643b60d543e7c983565d17931a3a8647e28669b": {
+    "title": "Multimodal Signatures of Brain Aging: From Descriptive Analyses to Machine Learning-Based Integration",
+    "date_seen": "2026-07-20",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:5a296ffa77d656006c45cf57077bb17f87e6ae19": {
+    "title": "Simulating the Reactivity, Structure, and Li-Ion Diffusivity at the Electrode Electrolyte Interfaces Generated in Li-Ion Batteries",
+    "date_seen": "2026-07-20",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:5a5b44eed2b01742c268f1e43735c946cb561e06": {
+    "title": "(\n Invited\n ) Machine Learned Force Field Accelerated Modeling of Synthetic Pathways for Fe–N–C Fuel Cell Catalysts",
+    "date_seen": "2026-07-20",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "dft",
+      "generative"
+    ]
+  },
+  "s2:6f09ed08b6c7fcfd3431562c7a2f3e37e02b8a66": {
+    "title": "Oxidation Mechanism of MXene in H2O2 Solution: A Machine Learning Potential Molecular Dynamics Study",
+    "date_seen": "2026-07-20",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface",
+      "dft",
+      "active-learning",
+      "generative"
+    ]
+  },
+  "s2:94a953ec7530ff425e9e4f50d79c7b618e9ebfa6": {
+    "title": "Machine-Learning-Accelerated First Principles Investigation of the Li\n                    <sub>9</sub>\n                    Al\n                    <sub>3</sub>\n                    (PO\n                    <sub>4</sub>\n                    )\n                    <sub>2</sub>\n                    (P\n      ",
+    "date_seen": "2026-07-20",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:0288b25d9912b4598a100916e7c02c88f064b93d": {
+    "title": "Network Intrusion Detection and Cyber Attack Classification Using CNN-LSTM Deep Learning Model",
+    "date_seen": "2026-07-20",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:0298e94ef6bb3c305f031111d573d9f2aec6329a": {
+    "title": "Distinguishing Between the Short‐Term Climate Responses to Different Stratospheric Aerosol Injection Latitudes With Explainable Artificial Intelligence",
+    "date_seen": "2026-07-20",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:02b0f11a86c4b9fff8091db4afface393a681c16": {
+    "title": "Robust GNSS/INS integrated navigation in Arctic GNSS-challenged environments based on TCN-LSTM and MDAREKF",
+    "date_seen": "2026-07-20",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:02b86108dbceb4d777016c13d82dae40b639a12f": {
+    "title": "Beyond the cutoff: Hybrid ML/MM electrostatics for neural network potentials.",
+    "date_seen": "2026-07-20",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:02bb972ce55d818d03c205d142642e3cc11ac861": {
+    "title": "A Convolutional Neural Network Model with Feature Fusion for Sperm Morphology Classification",
+    "date_seen": "2026-07-20",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }

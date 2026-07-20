@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-07-20</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-07-20</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 2952 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/5643b60d543e7c983565d17931a3a8647e28669b" target="_blank">Multimodal Signatures of Brain Aging: From Descriptive Analyses to Machine Learning-Based Integration </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Chiara Caligiuri; Chiara Feroleto; Marta Morotti; Camilla Codazzi; F. Frasca et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">本文试图解析小鼠全生命周期（青年、成年、老年）中运动与认知功能衰退与神经结构/功能变化的多尺度关联规律，以识别可量化的大脑衰老生物标志物。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用纵向多模态表型组学策略，整合行为测试（运动/记忆）、高尔基染色（树突棘密度）、免疫荧光（VGLUT/VGAT表达）、局部场电位（LFP）功能连接分析，并首次在该模型中应用机器学习融合多源特征进行年龄阶段分类。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将“成年期（14月龄）”明确定义为运动功能衰退起始窗口，挑战“老年期才退化”的传统认知；② 发现树突棘变化具有高度区域特异性（运动皮层增加 vs 认知区减少），提示结构代偿与失代偿并存；③ 证实静息态功能连接在生理衰老中意外保持稳定，为“功能韧性”提供实证，区别于阿尔茨海默病等病理模型。</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">体系为C57BL/6J小鼠（4/14/24月龄）；基线为单模态特征（如仅行为数据）；关键结果：① 成年鼠即出现显著运动衰退（活动量↓50.3%，前肢力↓38.3%），早于认知下降；② 老年鼠海马CA1与mPFC树突棘密度↓，但运动皮层LII/III反而↑；③ LFP显示功能连接无显著年龄差异；④ 多模态ML分类准确率0.798（AUC最高0.861，Adult vs Old）。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/5a5b44eed2b01742c268f1e43735c946cb561e06" target="_blank">Simulating the Reactivity, Structure, and Li-Ion Diffusivity at the Electrode Electrolyte Interfaces Generated in Li-Ion Batteries </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Taylor J Aubry; Jacob M. Clary; Derek Vigil-Fowler</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在原子尺度上解析Fe–N–C催化剂高温合成过程中活性位点（Fe–N₄）形成的动力学路径与限速步骤，以实现理性设计。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于机器学习基础模型（foundation model）驱动的过渡态搜索框架，通过在Fe–N–C特异性化学空间中微调预训练模型，并耦合DFT校准，实现高精度、高通量的反应路径势能面构建与动力学壁垒评估。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将化学领域专用基础模型用于催化材料合成路径的动力学建模，突破DFT尺度瓶颈；② 建立“前驱体分子结构→局域配位指纹→过渡态能量”可解释性映射，而非黑箱预测；③ 提出以动力学可控性（而非仅热力学稳定性）作为活性位点可合成性新判据。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系为石墨烯域内Fe–N₄位点形成路径（含Fe掺杂、N配位、碳骨架重构等步骤）；基线方法为常规NEB-DFT；关键结果：识别出Fe迁移与N配位协同步骤为最高动力学壁垒（~2.1 eV），较孤立Fe吸附路径低0.4 eV，且吡啶-N富集区域使该壁垒降低18%。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/94a953ec7530ff425e9e4f50d79c7b618e9ebfa6" target="_blank">Oxidation Mechanism of MXene in H2O2 Solution: A Machine Learning Potential Molecular Dynamics Study </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">P. Ngoepe; M. S. Mamabolo; Donald Hlungwani; K. Malatji; R. Ledwaba</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">本文旨在评估新型磷酸盐基固态电解质Li₉Al₃(PO₄)₂(P₂O₇)₃是否兼具高Li⁺电导率、宽电化学窗口、机械稳定性及与高电压正极（如NMC、尖晶石、富锂层状氧化物）的兼容性，以满足全固态电池（ASSB）对安全性、长循环寿命与高能量密度的综合需求。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用“第一性原理计算 + 基于机器学习力场（MLFF）的分子动力学模拟”双轨策略，在MedeA平台中构建高精度MLFF（训练集&gt;1000个AIMD构型），实现对热力学、力学、电子结构及Li⁺输运行为的多尺度协同模拟。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">（1）首次系统揭示该未被实验报道的磷酸铝盐的完整热-力-电-离子输运性能图谱；（2）通过MLFF驱动的长时MD（&gt;1 ns）明确识别出三维各向异性扩散路径及Y方向主导迁移机制；（3）结合Pugh比（1.71）与剪切模量（50.02 GPa）定量评估其抗枝晶能力与加工可行性，提出“高模量但需高温烧结”的实用化权衡依据。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">研究体系为Li₉Al₃(PO₄)₂(P₂O₇)₃晶体；基线方法为传统DFT（PBE泛函）与AIMD；关键结果包括：（1）预测室温Li⁺电导率达8.34×10⁻² S/cm（远超典型LAGP/Li₃PS₄水平）；（2）MLFF预测晶格参数/形成能/剪切模量误差&lt;1%，验证其可靠性。</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0288b25d9912b4598a100916e7c02c88f064b93d" target="_blank">Network Intrusion Detection and Cyber Attack Classification Using CNN-LSTM Deep Learning Model </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Viju B; Yoosuf S; T. Jacob</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">构建基于深度学习的实时网络入侵检测系统（NIDS），以识别、分类和记录多种网络攻击流量。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用CNN-LSTM混合架构提取网络流量的时空特征，并结合完整的数据预处理流程与Flask Web端到端系统实现。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在CIC-IDS2017数据集上实现了对DoS、DDoS、PortScan及渗透类攻击的高精度实时检测；支持高置信度威胁的自动邮件告警与数据库日志记录。</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0298e94ef6bb3c305f031111d573d9f2aec6329a" target="_blank">Distinguishing Between the Short‐Term Climate Responses to Different Stratospheric Aerosol Injection Latitudes With Explainable Artificial Intelligence </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">C. Dong; Charlotte Connolly; Elizabeth A. Barnes</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">短时（2年内）单边平流层气溶胶注入（SAI）的地理定位可识别性及其气候响应特征</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用可解释人工智能（XAI）框架，训练神经网络基于2米气温或降水的季节/年均值反推SAI注入纬度</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">① SAI注入纬度在2年内即可通过2米气温场显著区分（优于降水）；② 可识别性随注入量（&gt;8 Tg/年）增强，且主要体现于热带和中纬度气温、热带降水</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/02b0f11a86c4b9fff8091db4afface393a681c16" target="_blank">Robust GNSS/INS integrated navigation in Arctic GNSS-challenged environments based on TCN-LSTM and MDAREKF </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Wei Liu; Tengfei Qi; Yuan Hu; Kaiwei Zhu; Tsung-Hsuan Hsieh et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">北极地区GNSS信号受限导致组合导航系统精度与鲁棒性严重下降</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出TCN-LSTM混合神经网络预测GNSS伪距/伪距率，并结合基于马氏距离的自适应鲁棒扩展卡尔曼滤波（AREKF）进行误差抑制与融合</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在50 s、140 s和400 s GNSS中断期间，水平均方根误差分别降低47%、38%和76%；显著提升GNSS受限环境下的导航鲁棒性与精度</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/02b86108dbceb4d777016c13d82dae40b639a12f" target="_blank">Beyond the cutoff: Hybrid ML/MM electrostatics for neural network potentials. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Shahed Haghiri; A. S. Urbina; L. Slipchenko</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何克服原子级神经网络势（NNPs）缺乏长程相互作用建模能力的局限，使其适用于蛋白质-配体结合等凝聚相生物分子体系</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">将分子环境产生的静电势显式嵌入ANI神经网络，构建ANI/MM混合机器学习/分子力学架构</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">ANI/MM模型预测蛋白质-配体结合能对应的力误差&lt;1 kcal/mol/Å，可支持几何优化与分子动力学；性能超越高精度ab initio拟合的经典力场Q-Force，且对含训练片段的新溶质具有良好迁移性</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/02bb972ce55d818d03c205d142642e3cc11ac861" target="_blank">A Convolutional Neural Network Model with Feature Fusion for Sperm Morphology Classification </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Firman Tempola; Ardiansyah; M. Salmin; Leonardo Petra Refialy</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">开发高效准确的自动化精子形态图像分类方法以替代主观耗时的手动分析</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用MobileNetV2与EfficientNetB0单模型及二者特征融合的深度学习策略进行分类</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">特征融合模型在5个epoch内达到85.04%准确率，显著高于单模型（MobileNetV2 62.75%，EfficientNetB0 33.06%）</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[3] Machine Learned Force Field Accelerated Modeling of Synthetic Pathways for Fe–N–C Fuel Cell Catalysts — 首次将MLFF与反应路径采样结合，定量解析Fe–N₄位点高温形成的动力学限速步骤，为非贵金属催化剂理性合成提供可迁移的计算范式。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[4] Oxidation Mechanism of MXene in H₂O₂ Solution: A Machine Learning Potential Molecular Dynamics Study — 其MLP-MD揭示MXene氧化始于表面O吸附诱导Ti–C键断裂，暗示“稳定界面”设计需抑制初始吸附而非仅调控产物相，或挑战[2]中以SEI/CEI热力学稳定性为主导的界面工程逻辑。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">Chen group（论文[3]通讯作者）— 连续三年在JACS/ACS Catalysis发表MLFF驱动的电催化材料合成机制研究，构建了从前驱体分子结构→局部配位演化→活性位密度的闭环预测框架。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">机器学习势（MLP）正从“静态结构预测”转向“反应性动态建模”，尤其聚焦高温/电化学/溶液环境中多步、多相、非平衡过程的原子尺度机理还原。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">所有MLP应用研究（[2][3][4][5][9]）均依赖高质量DFT数据集训练，但缺乏对训练集覆盖度的系统评估——例如未量化过渡态采样偏差、界面构型多样性不足或电解质分解路径的化学空间盲区，导致模型外推可靠性存疑。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">跨尺度衔接断裂：原子尺度MLP模拟（ps–ns）与介观尺度性能指标（如ORR活性、离子电导率、循环衰减率）之间缺乏严格物理映射；现有工作多采用经验关联（如“界面无序度↑ → 电荷转移阻抗↑”），未建立从第一性原理动力学到器件级参数的可微分桥梁。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展“多尺度可微分代理模型”——将MLP-MD输出的动态结构特征（如局域配位数涨落、键级时间序列、溶剂化壳层重构速率）作为输入，通过图神经网络直接回归电化学响应函数（如Tafel斜率、SEI生长速率常数），实现从原子轨迹到宏观性能的端到端可解释预测。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>
