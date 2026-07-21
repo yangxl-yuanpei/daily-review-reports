@@ -2501,5 +2501,77 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:00f6009ba4dabc631d08ef15ca6f4e0ae20ab6ac": {
+    "title": "SSA(BBO)-optimized neural networks for remaining useful life estimation and health monitoring of lithium-ion batteries.",
+    "date_seen": "2026-07-21",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:02c657968744df24bd5b0ddc146a5731837001f5": {
+    "title": "Deep Learning-Based Drug Discovery: Predicting Molecular Interactions Using Neural Networks",
+    "date_seen": "2026-07-21",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:02d20940807f54f65f1da1c36c34acb3c11e85de": {
+    "title": "Omnidirectional vector sensing with a single-beam magnetometer via deep learning",
+    "date_seen": "2026-07-21",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:02d422ae1bdf0313ee6581c3b643de766a9315c5": {
+    "title": "Disentangling multispecific antibody function with graph neural networks",
+    "date_seen": "2026-07-21",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:02d7cb70c984f3066661e73b35514bcd6502caf5": {
+    "title": "Leveraging Deep Learning Techniques for Chest X-Ray Tuberculosis Detection",
+    "date_seen": "2026-07-21",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:02dd58ce34898831d17373a137093c3332c0039e": {
+    "title": "A method for calculating structural reliability of MEMS systems by the implicit functional function",
+    "date_seen": "2026-07-21",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:02e20486789f3f2c980e9ea553807d1c9bfee1dd": {
+    "title": "Multi-Graph Contrastive Learning With LLM-Empowered Semantic Augmentation for E-Commerce Recommendation",
+    "date_seen": "2026-07-21",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:02ef4d5e0107be25a4c6c03421c89b75d7306196": {
+    "title": "Investigating the role of artificial intelligence in predicting risk factors after liver transplantation: A systematic review",
+    "date_seen": "2026-07-21",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:02f3f134349f3145b43c2e8b36cd3f3eebcf426f": {
+    "title": "Research on Enterprise Data Classification and Grading Technology Based on Large Models",
+    "date_seen": "2026-07-21",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:02fbcc8209a817c90b6e6ee557cb2cde5e24e6f4": {
+    "title": "Artificial Intelligence in Health Care: Clinical Opportunities, Validation Trends, and Implementation Challenges (2020-2025).",
+    "date_seen": "2026-07-21",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
   }
 }

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-07-21</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-07-21</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 2287 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/00f6009ba4dabc631d08ef15ca6f4e0ae20ab6ac" target="_blank">SSA(BBO)-optimized neural networks for remaining useful life estimation and health monitoring of lithium-ion batteries. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Wenlong Tao; Chao Lu; Yichao Jin</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在动态多变的实际工况下（如变倍率、变温、变负载）实现锂离子电池剩余使用寿命（RUL）的高精度、高鲁棒性预测</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出ISSA-DNN-SVM竞争对抗框架：以改进麻雀搜索算法（ISSA）全局优化DNN超参数与权重，同时引入线性SVM作为物理一致性判别器，构建生成器（DNN）—判别器（SVM）对抗机制，显式约束RUL预测结果满足电池老化物理可解释性边界</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次将轻量级线性SVM嵌入深度学习框架作为物理约束判别器，替代传统GAN中复杂神经网络判别器，兼顾可解释性与计算效率；② 提出ISSA算法专用于DNN参数联合优化，在小样本电池退化数据下避免早熟收敛，提升全局寻优稳定性；③ 系统性整合多维真实运行参数（非仅电压/电流序列）作为输入特征，打破“恒定工况”建模假设，建立面向BMS部署的工况自适应预测范式</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">在NASA PCoE电池数据集基础上注入真实可变工况特征（C-rate、温度、DoD、驾驶循环统计量）；基线方法包括Autoencoder-DNN、LSTM、CNN-LSTM及BBO-DNN-SVM；ISSA-DNN-SVM达RMSE = 2.25 ± 0.12 cycles、MAE = 1.68 ± 0.09 cycles、R² = 0.995 ± 0.002，RMSE较基线提升58–72%，且显著优于BBO优化版本（p &lt; 0.01）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/02c657968744df24bd5b0ddc146a5731837001f5" target="_blank">Deep Learning-Based Drug Discovery: Predicting Molecular Interactions Using Neural Networks </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">D. Kumar B; P. S; M. Kanimozhi</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何利用深度学习实现高精度、可解释且鲁棒的药物-靶标相互作用（DTI）预测，以加速早期药物发现流程。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出一种多模态深度学习框架，核心是“GNN编码药物分子图 + 序列模型（RNN/Transformer）编码蛋白 + 联合特征空间映射”，并引入注意力机制与特征重要性分析提升可解释性。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次在统一框架中协同优化GNN（原子级拓扑感知）与Transformer/RNN（残基级上下文建模）的异构表征对齐；② 显式嵌入注意力权重与梯度加权类激活映射（Grad-CAM-like）用于交互位点可解释性解析；③ 采用对抗性数据增强与重加权损失联合缓解DTI数据固有的长尾分布与负样本偏差。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在Benchmark数据集（如BindingDB、DrugBank）上评估；基线包括SVM、随机森林；AUC-ROC达0.92–0.95（较SVM提升~12–15个百分点），F1-score在稀疏交互子集上提高18.3%，新靶标迁移预测准确率提升9.7%。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/02d20940807f54f65f1da1c36c34acb3c11e85de" target="_blank">Omnidirectional vector sensing with a single-beam magnetometer via deep learning </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Feifan Yang; Gen Hu; Pengcheng Du</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何实现无方向盲区、硬件简化的全向矢量磁场高精度测量</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于深度学习的单光束全光矢量磁力计，构建一维深度残差网络（ResNet），直接从单次通过的87Rb D1线相干布居囚禁（CPT）光谱中端到端解码方位角φ，利用CPT谱对磁场取向的非线性响应特性消除2π周期歧义</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将单光束CPT光谱与深度残差网络结合，实现真正单通道、无死区矢量解算；② 通过神经网络显式建模并破解CPT谱中固有的φ↔φ+180°退化，替代传统硬件/算法级对称破缺手段；③ 建立“智能光谱反演”通用范式，将物理量解耦任务转化为端到端监督学习问题</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">实验体系为87Rb原子气室中的D1线CPT光谱；基线为传统双光束/调制线圈矢量磁力计；实现方位角灵敏度0.01 rad/√Hz、俯仰角灵敏度0.01°/√Hz，且无需额外调制线圈或多光束配置</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/02d422ae1bdf0313ee6581c3b643de766a9315c5" target="_blank">Disentangling multispecific antibody function with graph neural networks </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Joshua Southern; Chang Lu; S. Nerli; Samuel D. Stanton; Andrew Watkins et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在缺乏充足实验数据的情况下，准确预测多特异性抗体（尤其是其三维结构拓扑构型）对生物功能（如效力、毒性）的非线性影响</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出一种“合成功能景观生成 + 拓扑感知图神经网络（GNN）”双模块框架；创新在于：① 首次构建可编程的、含非线性拓扑-功能映射的合成数据生成器；② GNN显式编码域间连接图（domain connectivity graph），将链序、铰链位置、空间邻接等拓扑约束作为图边属性建模，而非仅依赖序列或静态结构</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首个面向多特异性抗体的、可控制拓扑复杂度的合成功能景观生成范式；② 图神经网络首次将“域连接图”（而非蛋白质骨架图）作为核心输入，实现格式级（format-level）而非残基级的功能建模；③ 通过合成预训练+小样本迁移，突破实验数据稀缺瓶颈，在&lt;100个真实样本下实现高保真功能预测</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在三特异性T细胞衔接器（TriTE）和共轻链（CLC）优化任务中验证；基线方法包括ESM-2、AlphaFold-Multimer、以及不编码拓扑的GNN变体；合成训练下模型在仅用50个真实TriTE实验数据微调后，对细胞因子释放（IL-2）毒性的预测R²达0.87，显著优于基线（R² ≤ 0.42）</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/02d7cb70c984f3066661e73b35514bcd6502caf5" target="_blank">Leveraging Deep Learning Techniques for Chest X-Ray Tuberculosis Detection </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">S. S.; S. N; K. B V; S. Patil; Pramod R et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何利用深度学习实现结核病（TB）在胸部X光片上的高精度、可解释、自动化诊断</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出一种融合SqueezeNet迁移学习与Grad-CAM可解释性技术的CNN架构，通过端到端训练优化TB特异性特征提取与决策可视化</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将轻量级SqueezeNet与Grad-CAM深度耦合用于TB X光诊断，兼顾效率与可解释性；② 未依赖额外手工特征或分割预处理，实现全图像端到端判别；③ 通过热力图定位TB典型影像学区域（如上肺野浸润、空洞），增强临床可验证性</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在大规模公开胸部X光数据集（含TB与正常样本）上训练验证；基线方法包括传统机器学习（SVM、RF）及ResNet50、VGG16等主流CNN；达到97.32%分类准确率、8.19%训练损失，假阳性率显著低于对比模型（未给出具体数值但强调“low false positives”）</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/02dd58ce34898831d17373a137093c3332c0039e" target="_blank">A method for calculating structural reliability of MEMS systems by the implicit functional function </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Juan Du; Haibin Li; Yun He</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">提升微机电系统（MEMS）结构可靠性分析的精度</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">构建以指数函数为隐层激活函数的定制化多层神经网络，通过数值模拟/实验数据拟合隐式功能函数</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">显著提高了结构功能拟合精度；通过数值算例验证了该方法对复杂结构系统可靠性建模的有效性</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/02e20486789f3f2c980e9ea553807d1c9bfee1dd" target="_blank">Multi-Graph Contrastive Learning With LLM-Empowered Semantic Augmentation for E-Commerce Recommendation </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Wenhui Chen; Jirui Liu; Bin Li; Zhenyan Ji; Shen Yin</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">解决图神经网络在电商推荐中因交互稀疏导致的用户/商品节点特征表征不足问题</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于大语言模型语义增强的多图对比学习框架（MCLR），构建用户-商品交互图、商品-商品互补图和用户-用户相似图，并设计多图对比学习机制融合多源信息</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">有效缓解了稀疏交互下的特征表征不足问题；实验验证了该方法在推荐性能上的优越性</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/02ef4d5e0107be25a4c6c03421c89b75d7306196" target="_blank">Investigating the role of artificial intelligence in predicting risk factors after liver transplantation: A systematic review </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Aynaz Esmailzadeh; Narges Norouzkhani; Amir Ehsan Heidari; Mohammad Reza Mazaheri Habibi</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">评估人工智能模型预测肝移植术后并发症（如急性肾损伤、肝癌复发等）的性能与局限性</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">系统综述14项应用机器学习/深度学习预测人类肝移植术后结局的原始研究，聚焦模型类型、输入数据、验证方式及性能指标</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">AI模型AUROC范围为0.61–0.96；仅4项研究采用外部验证；集成学习和影像驱动的深度学习模型表现更优</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/02f3f134349f3145b43c2e8b36cd3f3eebcf426f" target="_blank">Research on Enterprise Data Classification and Grading Technology Based on Large Models </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Keming Chen; Heng-Lu Chang; Wulu Li; Chenyu Wang</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">企业数据敏感性识别在多类别、少样本场景下的准确分类与分级</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于ChatGLM与Qwen大语言模型（LLM）的新型数据敏感性识别框架</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在金融证券数据集上达到约90%准确率，显著优于传统方法（68%–80%）；在低数据、高类别设置下泛化能力更强</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/02fbcc8209a817c90b6e6ee557cb2cde5e24e6f4" target="_blank">Artificial Intelligence in Health Care: Clinical Opportunities, Validation Trends, and Implementation Challenges (2020-2025). </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">I. Zehra; Shakir Ali; Seung Won Lee</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">AI在临床医疗中的应用现状、性能表现及实施障碍</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">遵循PRISMA 2020指南，系统检索2020–2025年PubMed、IEEE Xplore和Web of Science中经前瞻性或外部验证的AI临床研究</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">影像类AI模型中位AUC达0.91；外部验证率从23%提升至46.7%；主要障碍为监管合规（53.3%）、算法不透明（40.0%）和数据质量（33.3%）</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[4] Disentangling multispecific antibody function with graph neural networks — 首次将图神经网络用于解耦多特异性抗体拓扑构型与非线性功能关系，为理性设计提供可计算的结构-功能映射范式，对电催化中多活性位点协同机制建模具直接启发。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[6] A method for calculating structural reliability of MEMS systems by the implicit functional function — 其基于指数激活函数的定制化NN强调物理约束下的隐式函数拟合，与当前电催化主流采用的无物理先验端到端GNN/Transformer范式存在方法论张力。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">作者/团队名（未显式给出，但[4]和[3]体现的“GNN+量子/物理传感器数据驱动建模”风格）— 擅长将图表示学习嵌入高维物理响应空间，在缺乏第一性原理闭环时仍保持可解释性边界，契合电催化界面动态建模需求。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">多篇论文（[3][4][5][10]）共同指向“轻量化物理约束+任务驱动表征解耦”的建模范式迁移，即放弃强物理建模或纯黑箱拟合，转向在观测数据中显式分离可泛化结构自由度（如拓扑、方向、敏感性维度）。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">所有论文均未建立预测模型与底层物理过程（如电荷转移路径、表面吸附能垒、局域电子态演化）的可微分耦合；模型输出（RUL、DTI、磁场矢量等）与原子尺度机制间存在不可导断层，导致难以反向指导材料设计。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">跨域论文（[1][2][4][5]）普遍依赖高质量标注数据，但电催化领域缺乏标准化的“反应级”标注协议（如*OH覆盖度变化速率、CO脱附能垒序列），致使迁移学习与小样本泛化策略无法落地。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展“电化学感知图神经网络（EC-GNN）”，以电极/电解质界面为图节点、法拉第电流/阻抗相位为边属性，嵌入电催化微分方程约束（如Butler-Volmer局部形式），实现从操作条件→表面中间体动力学→宏观性能的端到端可微分映射。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>
