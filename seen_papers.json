@@ -2573,5 +2573,79 @@
       "electrochemistry",
       "generative"
     ]
+  },
+  "s2:030ca2303054e98e4ed3c50bc0edd982eeb2e386": {
+    "title": "AI-Driven Optimization of Curcumin-Loaded Polymeric Nanoparticles for Targeted Therapy in Alzheimer's Disease",
+    "date_seen": "2026-07-22",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "generative"
+    ]
+  },
+  "s2:0310825e1ecde1c6740dfb1c9a242c553f6476ee": {
+    "title": "CGRP-empowered stem cell sheet/short nanofiber sponge via enhancing neurovascular coupling for bone regeneration",
+    "date_seen": "2026-07-22",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:031443fbf2d155c646d2fe73a7ff00ed537ed443": {
+    "title": "Deep Neural Network–Based Identification of Protein Secondary Structures and Structural Complexities",
+    "date_seen": "2026-07-22",
+    "tags": [
+      "electrochemistry",
+      "catalysis"
+    ]
+  },
+  "s2:0315ce3d737d2a0c64668726e29386478765dfc0": {
+    "title": "Affinity Is Not Enough: Recovering the Free Energy Principle in Mixture-of-Experts",
+    "date_seen": "2026-07-22",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:031cb817319b089bfaa92f2d8fe9b0f545a924e2": {
+    "title": "Current progress and obstacles for automated classification of causes of death based on death certificates: A systematic review",
+    "date_seen": "2026-07-22",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0325db377289c55ae1b2d8186be8cfdeecd54413": {
+    "title": "CNN2D-Mamba: A Hybrid Deep Learning Architecture for Multi-Temporal SAR Crop Classification in Semi-Arid Regions",
+    "date_seen": "2026-07-22",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:034a8c661cbecfafb7dd46ebf1fb7ea3d26c2781": {
+    "title": "A Neural Network-Driven Adaptive Approach for Maximum Coverage Location with Restricted Zones",
+    "date_seen": "2026-07-22",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0352be4c94db191731d31a89c45a48b5c5d2b3e9": {
+    "title": "A physics-informed neural network for modeling large deformation contact between elastomers and rigid bodies",
+    "date_seen": "2026-07-22",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:0354a7dfc2509d87f0109b674ed8a80fea7dff65": {
+    "title": "Fixed-time Command Filtered Attitude Tracking for Rigid Spacecraft with Neural Networks and Error Compensation",
+    "date_seen": "2026-07-22",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:03554cb4ecd686cf4ed0b5d31ef0832beae75b5b": {
+    "title": "ADVANCES IN MACHINE LEARNING-BASED RAINFALL FORECASTING: A SYSTEMATIC REVIEW",
+    "date_seen": "2026-07-22",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
