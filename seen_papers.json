@@ -2647,5 +2647,81 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:0359129a057d4e541edd7b24cf555586c6a3690b": {
+    "title": "Hierarchical relaxation and the microscopic origin of fast Li+ ions transport in Li7La3Zr2O12.",
+    "date_seen": "2026-07-23",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:035dead6a80bcc236032dc14bb7ceb11190731b1": {
+    "title": "Quantum-Inspired Feature Engineering and Explainable AI for Robust Heart Disease Classification",
+    "date_seen": "2026-07-23",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0360cdf60d8d4b075309d208e3abc71f6b816d71": {
+    "title": "Automated Fruit Disease Detection using Convolutional Neural Networks",
+    "date_seen": "2026-07-23",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0363773cd3118e630ceea3ae3cd6b95197b7349a": {
+    "title": "A Unified Thermodynamic Framework: From Equilibrium and Nonequilibrium to Zentropy, Cross Phenomena, and Applications for AI and AI Safety",
+    "date_seen": "2026-07-23",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0376a73a08b4f510857a47c11c6bb57cb8db0078": {
+    "title": "Nonlinear optimal control for flight vehicles using neural operators and physics-informed neural networks",
+    "date_seen": "2026-07-23",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0377adabc35ea07dd02871fb2cae3ada8335b8b6": {
+    "title": "Uncovering Hidden Systematics in Neural Network Models for High Energy Physics",
+    "date_seen": "2026-07-23",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:051340a46fd70635ee0899162c60f42d62cfea4c": {
+    "title": "Revisiting the Electrical Double Layer through Electrochemical Impedance Spectroscopy: From Ideal Capacitance to Distributed Interfacial Responses",
+    "date_seen": "2026-07-23",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:0e760b972b4d2b607067beccc580d734fdbcc0ec": {
+    "title": "Electrochemistry of Silver Recovery for End-of-Life Solar Module Recycling",
+    "date_seen": "2026-07-23",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:24fbb2a819c2f18591eb51975d16e9426118c949": {
+    "title": "Electrified interfaces from first-principles: continuum electrochemistry and grand canonical density-functional theory",
+    "date_seen": "2026-07-23",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:a360416c70bc6e7ca1583903f28254d014c17e87": {
+    "title": "Enhancing Reverse-Current Durability of NiCo₂O₄ Anodes via Lithium Modification",
+    "date_seen": "2026-07-23",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface"
+    ]
   }
 }

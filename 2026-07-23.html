@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-07-23</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-07-23</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 2523 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0359129a057d4e541edd7b24cf555586c6a3690b" target="_blank">Hierarchical relaxation and the microscopic origin of fast Li+ ions transport in Li7La3Zr2O12. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Jiarui Zhang; Jack F. Douglas; Hao Zhang</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">LLZO中Li⁺超离子传导的微观起源，特别是集体离子运动（如协同跳跃、类玻璃动力学）如何驱动长程离子输运</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">基于深度神经网络势函数（DP-GEN）的大规模分子动力学（MD）模拟，兼顾第一性原理精度与百万原子级、百纳秒尺度的计算可行性，首次在原子尺度解析LLZO全温区（含Tammann温度附近）的动态异质性与协同运动</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将LLZO超离子行为类比玻璃形成液体，提出“振动–协同跃迁”相变新范式；② 通过动态异质性量化指标（α₂、B因子）建立微观结构弛豫与宏观离子电导的定量桥梁；③ 发现低频声子过剩态（&lt;2 THz）直接源于移动Li⁺的集体模式，而非晶格骨架——颠覆“声子软化主导传导”的传统归因</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">体系为无掺杂LLZO（立方相）；基线方法为经典ReaxFF与DFT-MD（受限于时/空尺度）；关键结果：（1）Li⁺动力学在~800 K（Tammann温度）出现非谐振动拐点，非高斯参数α₂峰值达1.8；（2）Debye-Waller参数在该温度陡增42%，标志动态异质性爆发；（3）识别出长度≥5个Li⁺的弦状协同运动，其贡献占总扩散通量的67%</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/035dead6a80bcc236032dc14bb7ceb11190731b1" target="_blank">Quantum-Inspired Feature Engineering and Explainable AI for Robust Heart Disease Classification </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Rashmi Mothkur; S. B</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在保持高预测准确率的同时提升心血管疾病诊断模型的可解释性与鲁棒性</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“经典–量子混合机器学习框架”，主干包括：多策略特征选择 + 正交分量分析（OCA）降维 + 量子启发式特征映射（模拟量子态编码）+ 遗传算法（GA）驱动的特征子集优化 + 并行评估经典/量子分类器（Q-SVC、VQC等）</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将正交分量分析（OCA）与量子启发式特征映射耦合，实现低维空间中保结构的量子态类比编码；② 引入GA驱动的端到端特征选择—融合—映射联合优化，突破传统单阶段特征筛选局限；③ 系统集成SHAP/LIME/DiCE三层次XAI工具，同步保障局部决策溯源与全局模式可解释性</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在UCI Cleveland心脏病数据集（303样本，14特征）上测试；基线为标准RF、GB、LR等；最佳混合模型达90%整体准确率（较最优经典基线RF提升约3–5%），Class 0（无病）召回率0.97，Class 1（患病）精确率0.96，F1-score均为0.90</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0360cdf60d8d4b075309d208e3abc71f6b816d71" target="_blank">Automated Fruit Disease Detection using Convolutional Neural Networks </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">S. G. S. Gomathi; Dr M Praneesh Dr M Praneesh</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何实现水果病害的自动化、高精度、低成本早期识别与分类</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">基于CNN的端到端病害识别框架，创新性融合图像分割（提取病害区域ROI）与轻量化CNN特征学习，实现“分割—特征提取—分类”级联优化</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将ROI分割模块显式嵌入CNN流程，抑制背景噪声干扰；② 针对农业图像小样本、类不平衡特点设计数据增强策略（病斑仿射变形+光照扰动）；③ 模型结构经剪枝优化，支持移动端部署（未明确参数量但强调“轻量化”）</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在自建/公开多类水果（苹果、葡萄、番茄等）病害图像数据集上验证；基线为传统SVM+手工特征（如LBP、HOG）及标准ResNet-50；模型达到95%整体分类准确率，较基线提升约12–18个百分点</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0363773cd3118e630ceea3ae3cd6b95197b7349a" target="_blank">A Unified Thermodynamic Framework: From Equilibrium and Nonequilibrium to Zentropy, Cross Phenomena, and Applications for AI and AI Safety </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Zi-Kui Liu</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何构建一个统一的、跨尺度的热力学理论框架，以严格描述从平衡态到非平衡态、从宏观连续介质到原子级量子统计的材料演化过程，并实现物理可解释的人工智能预测。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“zentropy理论”与“非平衡热力学重构”双轨框架：前者基于对称性破缺构型全系综的量子统计采样计算熵与亥姆霍兹能；后者通过引入组元偏内能、偏熵、偏体积重写热力学基本定律，显式定义化学势并导出物理自洽的交叉输运方程。</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次将偏广延量直接嵌入热力学基本定律，消除传统非平衡形式中熵-体积-成分的隐含耦合假设；② zentropy理论突破“构型采样瓶颈”，通过群论约束+高效构型生成实现全系综熵计算，无需预设有序模型；③ 提出热力学AI（ZENN）范式：将zentropy作为物理嵌入层与神经网络耦合，兼具预测精度与热力学一致性（如自动满足Gibbs-Duhem关系）。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在Fe-Cr-Ni合金、LiₓCoO₂电极材料等体系中验证；相比传统准谐近似（QHA）和Onsager系数拟合方法，zentropy预测的相稳定性边界误差&lt;2 kJ/mol（DFT基准），非平衡相变路径预测准确率提升40%；ZENN模型在10⁴量级构型空间中实现98.7%的结构稳定性分类准确率（F1-score）。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0376a73a08b4f510857a47c11c6bb57cb8db0078" target="_blank">Nonlinear optimal control for flight vehicles using neural operators and physics-informed neural networks </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Kyung-Mi Na; Chang-Hun Lee</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何高效、鲁棒地求解复杂非线性最优控制问题（特别是含物理约束的终端条件优化），兼顾精度、泛化性与计算效率</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“物理信息深度学习+经典最优控制”融合框架：将Euler-Lagrange方程与终端约束编码为PINN损失项，并耦合DeepONet构建控制输入→终端状态的算子映射，实现端到端可微分最优控制求解</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将Euler-Lagrange必要条件显式嵌入PINN损失函数，严格保障解满足一阶最优性条件；② 引入DeepONet作为控制-终端状态响应算子，赋予模型对未见初始/终端条件的零样本泛化能力；③ 实现“训练一次、多场景复用”的闭环最优策略生成范式，突破传统方法逐次求解瓶颈</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在无/有气动阻力的导弹命中时间-命中角联合优化任务中验证；基线为GPOPS（高精度打靶法）；训练损失收敛后，最优控制解与GPOPS结果平均相对误差&lt;0.3%，且单次推理耗时降低2–3个数量级</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0377adabc35ea07dd02871fb2cae3ada8335b8b6" target="_blank">Uncovering Hidden Systematics in Neural Network Models for High Energy Physics </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Lucie Flek; Philipp Alexander Jung; Akbar Karimi; Timo Saala; Alexander Schmidt et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">神经网络在高能物理分析中对输入系统误差的敏感性难以准确量化，导致系统不确定性被低估</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">基于对抗攻击思想，引入与实验不确定性一致的微小输入扰动，定量探测神经网络输出的隐藏敏感性</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在允许的不确定性范围内，神经网络可被显著“欺骗”；提出了一种可量化的框架来评估和控制其系统不确定性</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/051340a46fd70635ee0899162c60f42d62cfea4c" target="_blank">Revisiting the Electrical Double Layer through Electrochemical Impedance Spectroscopy: From Ideal Capacitance to Distributed Interfacial Responses </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">M. Turmine; V. Vivier</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">电化学界面双电层（EDL）的阻抗响应受几何效应、空间非均匀性和频率色散影响，传统CPE模型存在物理意义模糊和有效电容转换不唯一的问题。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">通过局部电化学阻抗测量结合高阶阻抗分析、电容调制等先进EIS技术，分离并定量表征几何边缘效应、局域电流/电位分布及真实欧姆阻抗贡献。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">① 平面圆盘电极在高频下呈现固有频率色散，源于几何与局域电化学响应；② 实验首次明确识别出被全局测量掩盖的真实界面欧姆阻抗成分。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0e760b972b4d2b607067beccc580d734fdbcc0ec" target="_blank">Electrochemistry of Silver Recovery for End-of-Life Solar Module Recycling </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Jackson Lee; Noel Duffy; James Petesic; J. Allen</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">优化电化学回收废弃光伏组件中银的关键工艺参数（硝酸浓度、电极材料、电流密度、铜电解质浓度）以实现高效稳定回收</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">在含20 mM硝酸银的硝酸基电解液中，系统实验考察四种变量对银电沉积效率、形貌及稳定性的影响</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">硝酸浓度2.0–4.0 M时银回收率最高（~96%），且不锈钢电极比银电极更稳定；铜添加剂改变电化学行为但不引起铜共沉积</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/24fbb2a819c2f18591eb51975d16e9426118c949" target="_blank">Electrified interfaces from first-principles: continuum electrochemistry and grand canonical density-functional theory </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">M. Weng; N. Bonnet; O. Andreussi; Nicola Marzari</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在密度泛函理论（DFT）的巨正则系综框架下正确描述电化学界面振动响应性质（特别是Stark调谐率）及其与正则系综的差异</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">通过Legendre变换建立巨正则与正则系综间力常数矩阵的解析修正关系，并推导出振动Stark调谐率的 ensemble-dependent 修正项</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">1）提出了力常数矩阵的显式巨正则-正则修正公式；2）成功解释了CO/Pt(111)体系中垂直表面振动模式具有更大Stark调谐率、以及低覆盖度下ensemble效应消失的物理起源</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/a360416c70bc6e7ca1583903f28254d014c17e87" target="_blank">Enhancing Reverse-Current Durability of NiCo₂O₄ Anodes via Lithium Modification </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Kyounghee Gu; Ashraf Abdelhaleem; Yoshiyuki Kuroda; S. Mitsushima</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">解决NiCo₂O₄基析氧（OER）催化剂在可再生能源间歇运行下因反向电流导致的结构退化与界面失效问题</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">通过Li掺杂构建NiO（岩盐相）与NiCo₂O₄（尖晶石相）复合催化剂，利用Li提升导电性、双相协同增强结构稳定性</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">(Li)NiCo₂O₄电极在2000次反向电流加速衰减测试中维持~1.75 V vs. RHE（600 mA cm⁻²）达1600周期，且Tafel斜率稳定在50–60 mV/dec，显著优于纯NiCo₂O₄和(Li)NiO</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[9] Electrified interfaces from first-principles: continuum electrochemistry and grand canonical density-functional theory — 首次严格推导巨正则DFT中振动Stark调谐率的系综依赖修正项，为电催化界面原位谱学（如SHG、SERS）的定量理论解释提供不可替代的微观基础。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[7] Revisiting the Electrical Double Layer through Electrochemical Impedance Spectroscopy... — 其将EDL响应归因于几何/局域非均匀性，可能弱化[9]所强调的电子结构层面系综效应在低频EIS中的贡献，二者对“界面物理本质”的尺度优先级存在张力。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">作者/团队名（未显式给出，但[9]工作体现的“第一性原理电化学+统计力学系综修正”范式）— 该团队持续突破DFT电化学的热力学一致性边界，是少数能打通量子计算与电极过程动力学建模的前沿力量。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">多篇论文（[4],[9],[7],[10]）共同指向“非平衡界面热力学重建”：从系综修正（[9]）、统一热力学框架（[4]）、局域阻抗解耦（[7]）到反向电流耐久性设计（[10]），均以动态、非平衡、多尺度耦合为默认前提，取代传统平衡近似。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">所有电催化相关研究（[7],[8],[9],[10]）均未建立<strong>电极/电解质界面原子构型演化与宏观电化学响应（如EIS、Tafel）之间的可微分、可验证映射关系</strong>；当前DFT模拟仍停留于静态构型或短时MD，无法覆盖电沉积/腐蚀/重构等毫秒–秒级过程的统计路径。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">[4]提出的统一热力学框架与[9]的系综修正虽具理论深度，但<strong>缺乏面向电催化场景的可计算实现路径</strong>——例如，如何将Zentropy或巨正则力常数矩阵嵌入多尺度反应动力学模拟（如microkinetic modeling with interfacial entropy），尚无可行算法。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展“系综感知的跨尺度模拟协议”：以[9]的巨正则修正为起点，耦合ab initio MD生成界面构型系综 → 构建系综加权的表面自由能景观 → 输入[4]框架下的非平衡热力学方程 → 输出可与EIS/Tafel实验直接比对的动态响应函数；需联合开发支持Legendre变换的开源DFT后处理工具链。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>
