@@ -2723,5 +2723,97 @@
       "catalysis",
       "surface"
     ]
+  },
+  "s2:1a8a1f9cac4e29e1fddba5c484e8064521224210": {
+    "title": "Electronic Polarization Governs Structure-Transport Coupling of Angstrom-Scale Confined Water.",
+    "date_seen": "2026-07-24",
+    "tags": [
+      "constant-potential"
+    ]
+  },
+  "s2:40fa4ac191243621f68db749414fd8887fddce3b": {
+    "title": "Phase-Field Model for Dendrite Evolution in a Lithium-Ion Battery",
+    "date_seen": "2026-07-24",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:4cbc5d7f27058ae509ec685654beed1f28c8c059": {
+    "title": "Enhanced hydrogen diffusivity along tilt grain boundaries of Fe–Cr–Ni alloy revealed by machine learning potential",
+    "date_seen": "2026-07-24",
+    "tags": [
+      "electrochemistry",
+      "constant-potential"
+    ]
+  },
+  "s2:6389c98b2c784e60655604bdb59dd42f73a33dde": {
+    "title": "Generalizable and Transferable Machine Learning Enables Accelerated Metal-Organic Framework Discovery in Gas Separations.",
+    "date_seen": "2026-07-24",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:64b3acf11efd0b733256b35b02e4cecfc0e4426a": {
+    "title": "Transformation Journey of Zr-based MOFs: Study on Mechanics and Hydrogen Storage under Doping Regulation",
+    "date_seen": "2026-07-24",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:64dd28265447fcb193fc87079b3d8b7f7447956c": {
+    "title": "Porous Organic Polymers with Azo, Azoxy, and Azodioxy Linkages: Design, Synthesis, and CO2 Adsorption Properties",
+    "date_seen": "2026-07-24",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "dft",
+      "generative"
+    ]
+  },
+  "s2:6558e74efdc08367af373b45418bc80694f2f939": {
+    "title": "The key role of heteroatom effects in COF separation of SF6/N2: A theoretical study.",
+    "date_seen": "2026-07-24",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:658ab6a29231e8fc3db608e386227ec9a8966f92": {
+    "title": "An AlFFIVE-1-Ni-Based Humidity Sensor with Fast Response-Recovery Speed.",
+    "date_seen": "2026-07-24",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "dft"
+    ]
+  },
+  "s2:6700415c1d2a590a75adb7fb62d3dee2e9907e1b": {
+    "title": "Structural Characterisation of Disordered Porous Materials Using Gas Sorption and Complementary Techniques",
+    "date_seen": "2026-07-24",
+    "tags": [
+      "catalysis",
+      "constant-potential",
+      "dft"
+    ]
+  },
+  "s2:68566f5b73818ce6cc3b7c9ca487a3bbe602d677": {
+    "title": "A Boosted Energy Extraction from the CapMix Process by Grafting with Titratable Polymers",
+    "date_seen": "2026-07-24",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
   }
 }
