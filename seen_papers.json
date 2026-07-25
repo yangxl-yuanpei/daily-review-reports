@@ -2815,5 +2815,87 @@
       "surface",
       "dft"
     ]
+  },
+  "s2:023719529f951621f7e9da762d5e76468094b914": {
+    "title": "Flexible generation of daily Earth system model projections across radiative forcing scenarios",
+    "date_seen": "2026-07-25",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:1a79cca3431a207ee2f99b941f6ebf5a24ad0ed0": {
+    "title": "Toward Predicting Solubility of Arbitrary Solutes in Arbitrary Solvents: Prediction of Density and Refractive Index Using Machine Learning Algorithms with Global Sensitivity Analysis",
+    "date_seen": "2026-07-25",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:84445402498eb0876844052d5e95aa5a62c784b1": {
+    "title": "Graph Neural Network Force Fields (GPTFF-mol) for Organic Molecules from Optimization Trajectories (OpenGEM26)",
+    "date_seen": "2026-07-25",
+    "tags": [
+      "electrochemistry",
+      "dft"
+    ]
+  },
+  "s2:85a57e63d0b376a6470a5f0f628a6bd39cced670": {
+    "title": "Systematic Study of Machine Learning Classification Algorithms of Zeolitic Imidazolate Framework Polymorphs",
+    "date_seen": "2026-07-25",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:01308f6cd12f68296efe38dc2a36586ee3755e92": {
+    "title": "EFFICIENT NETB3-POWERED DEEP LEARNING ARCHITECTURE FOR AUTOMATED SKIN DISEASE IDENTIFICATION IN CLINICAL APPLICATIONS",
+    "date_seen": "2026-07-25",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:d69a30fbbf768bd48b09c6aacb6abe868b0930a3": {
+    "title": "Cathodic Process and Application Limits of Tin Oxide in Acidic Medium",
+    "date_seen": "2026-07-25",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface",
+      "generative"
+    ]
+  },
+  "s2:d957064051c164323210455c22186bb5930d2f76": {
+    "title": "Monitoring Single-Entity Nucleation in Single Nanopipettes and the Foundational Ion Transport Dynamics",
+    "date_seen": "2026-07-25",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:69bfbace76d3555a2bfe047383d382e82033f88a": {
+    "title": "Mechanistic insights into pH-dependent ofloxacin adsorption on nanoporous carbons.",
+    "date_seen": "2026-07-25",
+    "tags": [
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:6d53ec572ff3690aa026a55b22f116ba00c3404c": {
+    "title": "Hydrogen permeation and hydrogen-induced changes in mechanical response of polyethylene and polyamide 6: A molecular dynamics simulation study",
+    "date_seen": "2026-07-25",
+    "tags": [
+      "electrochemistry",
+      "constant-potential"
+    ]
+  },
+  "s2:753d68f10d87a1380e80ad620a85daa76ff38b85": {
+    "title": "Direct Ab Initio Simulation of the Synthesis of BaZrO3 and the Microstructure Impacts on Proton Transport",
+    "date_seen": "2026-07-25",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "constant-potential",
+      "dft"
+    ]
   }
 }

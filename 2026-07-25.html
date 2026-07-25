@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-07-25</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-07-25</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 2909 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/023719529f951621f7e9da762d5e76468094b914" target="_blank">Flexible generation of daily Earth system model projections across radiative forcing scenarios </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Yu Huang; S. Bathiany; Shangshang Yang; Philipp Hess; Michael Aich et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在保持物理一致性前提下，高效生成高时空分辨率、长时序、多情景的气候系统响应投影，以弥补地球系统模型（ESM）在计算成本、分辨率和情景覆盖上的根本性局限</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“响应理论引导的生成式机器学习框架”——先从低分辨率ESM月均场中物理提取辐射强迫的线性/非线性响应算子，再以此物理约束指导条件生成对抗网络（cGAN）或扩散模型生成日尺度全球高分辨率温/降水场</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次将响应理论（response function formalism）显式嵌入生成模型的损失函数与条件输入，实现物理可解释性与数据驱动效率的耦合；② 支持跨模型泛化——同一训练框架可无缝适配未见过的ESM，无需重新训练；③ 实现从月均低分辨率到日尺度全球0.25°×0.25°的端到端生成，且自然满足能量守恒与水循环闭合约束（通过物理正则项隐式保障）</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在CMIP6多模型集合（CESM2、MPI-ESM1-2-HR等）上验证；相比传统偏差校正插值法，生成的日降水空间相关结构误差降低37%（ACC提升0.21），温度趋势一致性达92%（vs. ESM原始趋势）；单次推理耗时&lt;5分钟（对比ESM单成员百年模拟需数月）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/1a79cca3431a207ee2f99b941f6ebf5a24ad0ed0" target="_blank">Toward Predicting Solubility of Arbitrary Solutes in Arbitrary Solvents: Prediction of Density and Refractive Index Using Machine Learning Algorithms with Global Sensitivity Analysis </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Brian Hu; J. Zhai; Xiguang Qi; Xibing He; Nick X. Wang et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何高精度、通用化地预测有机小分子的密度（ρ）和折光率（nD），以支撑工艺开发、力场参数化及溶剂化/溶解度建模</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">构建基于GAFF与RDKit双 descriptor 体系的多算法机器学习预测框架（含XGBoost、RF等），并创新性融合全局敏感性分析（GSA）与Shapley值归因，定量解耦分子特征贡献；首次系统评估温度作为显式特征对ρ/nD预测的影响</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次大规模整合GAFF（物理驱动）与RDKit（数据驱动）描述符进行双属性联合建模与归因分析；② 通过MD模拟+文献复核闭环验证并修正实验异常值，建立“AI预测–MD校验–实验溯源”可信度增强范式；③ 显式建模温度依赖性，并量化其在ρ预测中的特征重要性等级（高于多数结构描述符）</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">训练集涵盖~5000种化合物（ρ）和~4000种（nD）；最优RDKit-XGBoost模型在测试集上ρ的APE = 2.67%（剔除72个异常点后）/3.15%（含异常点），nD的APE = 0.53%；引入温度特征后ρ预测误差进一步降低，验证其非可忽略效应</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/84445402498eb0876844052d5e95aa5a62c784b1" target="_blank">Graph Neural Network Force Fields (GPTFF-mol) for Organic Molecules from Optimization Trajectories (OpenGEM26) </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Yifan Huang; Fankai Xie; Jiangnan Zheng; Tenglong Lu; Sheng Meng et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何构建兼顾高精度（DFT级）与高效率（MLP级）的机器学习力场，以准确描述含硫、氯等杂原子有机分子的复杂构象空间与反应动力学行为</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出OpenGEM26——首个大规模、高精度、含S/Cl的有机分子构象数据库，并基于其训练图神经网络力场GPTFF-mol，创新性地整合完整结构优化轨迹与非平衡构象采样，显式覆盖能量面关键区域（如旋转势垒、tautomerization路径）</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首个系统包含S/Cl且覆盖非平衡构象的DFT级基准数据集（OpenGEM26），突破QM9/ANI系列元素与构象局限；② 首次将完整优化轨迹作为训练数据源，显式编码几何演化信息，提升动力学行为泛化能力；③ GPTFF-mol在杂原子体系与畸变几何下力预测显著优于ANI-2x，验证其对电催化相关弱相互作用与过渡态建模的适配性</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">体系为H/C/N/O/S/Cl≤10重原子有机分子；基线为ANI-2x；GPTFF-mol在测试集上实现16 meV/molecule（0.82 meV/atom）能量MAE，力MAE比ANI-2x低37%；在butane旋转势垒预测中误差&lt;0.05 eV，在keto-enol tautomerization能垒预测中误差仅0.08 eV</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/85a57e63d0b376a6470a5f0f628a6bd39cced670" target="_blank">Systematic Study of Machine Learning Classification Algorithms of Zeolitic Imidazolate Framework Polymorphs </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">E. M&#x27;endez; Léna Triestram; Dune André; Franccois-Xavier Coudert; Rocio Semino Sorbonne Universit&#x27;e et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在分子动力学（MD）模拟中对结构高度相似的ZIF多晶型相（如ZIF-4-cp与ZIF-4-cp-II）进行无先验、自动、实时的相识别与分类</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出一种轻量级、力场无关的神经网络相分类器（NN-PhaseClassifier），以低维局域结构描述符（如Zn–N键长分布、四面体畸变度、短程配位指纹）为输入，通过跨力场（UFF、DREIDING、GAFF）混合训练实现去偏置泛化</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将低维物理可解释描述符与轻量NN结合用于ZIF相在线分类，兼顾精度、速度与可解释性；② 提出“跨力场混合训练”策略，显著削弱力场依赖性，提升模型对未知力场/参数的迁移能力；③ 在ZIF-4相变中首次揭示非协同、局域触发的“成核-传播”双阶段机制，修正了此前认为的均匀相变假设</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系为ZIF-4两种紧密相关的cp/cp-II相；基线方法包括SVM+RDF、手工序参量阈值法；NN-PhaseClassifier在UFF/DREIDING/GAFF混合训练下测试准确率达99.3%（低维输入）和99.8%（高维输入），相变路径识别时间分辨率提升至单帧（1 fs），成功捕获亚毫秒级瞬态中间态</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/01308f6cd12f68296efe38dc2a36586ee3755e92" target="_blank">EFFICIENT NETB3-POWERED DEEP LEARNING ARCHITECTURE FOR AUTOMATED SKIN DISEASE IDENTIFICATION IN CLINICAL APPLICATIONS </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Muthupandian V.; Bindushree K.; A. Ranjini; Anishmija S. L.; Yashaswini S. et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何构建一种计算高效、诊断准确且具备临床实用性的皮肤疾病自动分类模型，以缓解专业 dermatologist 短缺与诊断主观性问题。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于EfficientNetB3的深度迁移学习架构，以ImageNet预训练权重初始化，并融合高级数据增强、批归一化、Dropout正则化及分层微调策略，核心创新在于利用EfficientNetB3的复合缩放机制实现精度-效率帕累托最优。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次系统验证EfficientNetB3在皮肤多病种细粒度分类中的优越性，超越常规骨干网络；② 提出面向皮肤影像的定制化预处理-正则化-微调协同优化流程，显著抑制过拟合并提升跨中心泛化性；③ 明确量化模型边缘部署可行性（延迟/显存/精度三要素），填补临床AI工具“可用性”研究空白。</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">在公开多类皮肤疾病图像数据集（含melanoma、eczema、psoriasis、acne、benign lesions）上评估；基线包括VGG16、ResNet50、DenseNet121及原始EfficientNet系列；模型达98.2%准确率、97.9% F1-score、0.991 AUC，较ResNet50提升+2.4%准确率，推理延迟降低37%（单图&lt;45ms on NVIDIA T4）。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/d69a30fbbf768bd48b09c6aacb6abe868b0930a3" target="_blank">Cathodic Process and Application Limits of Tin Oxide in Acidic Medium </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Luis Corona-Elizarraras; S. Cavaliere; I. Jiménez-Morales; M. Alpuche‐Aviles</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">探究Sb掺杂SnO₂（ATO）在酸性介质中的电化学稳定性及阴极电位下的还原/溶解行为，以评估其作为质子交换膜燃料电池电催化剂载体的适用性。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用三电极体系在0.5 M H₂SO₄中进行开路电位（OCP）和循环伏安（CV）测试，结合Ar脱氧与双盐桥参比电极保障测量准确性。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">CV显示阴极极化后出现两个氧化峰（0.147 V和−0.253 V vs NHE），对应SnO₂还原及后续Sn/Sb物种溶解；证实ATO在酸性阴极电位下存在电化学不稳定性。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/d957064051c164323210455c22186bb5930d2f76" target="_blank">Monitoring Single-Entity Nucleation in Single Nanopipettes and the Foundational Ion Transport Dynamics </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Gangli Wang; Ruoyu Yang; Yusuf Balogun; Dipak Baram; Sarah Ake et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在纳米尺度上实现对生物大分子结晶过程的时空精准调控，以解决传统高通量筛选法效率低、机理不清晰的问题</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">开发单实体纳米电控结晶技术（NanoAC），通过单个纳米移液管调控离子输运，在纳米尖端界面局域化调控过饱和度，结合电场驱动与扩散协同控制相变</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">1）获得高达1.20 Å原子分辨率的溶菌酶单晶；2）在显著未饱和溶液中捕获并分类了前成核团簇的瞬态事件，揭示了纳米限域下离子富集/耗竭的动力学机制</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/69bfbace76d3555a2bfe047383d382e82033f88a" target="_blank">Mechanistic insights into pH-dependent ofloxacin adsorption on nanoporous carbons. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Fatokhoma A Camara; Hamidréza Ramézani; Nathalie Mathieu; S. Delpeux-Ouldriane; Suresh K. Bhatia</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">氟喹诺酮类药物（如氧氟沙星）在无序纳米多孔碳上的pH依赖性吸附机制解析</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用DFT、HRMC、GCMC和MD多尺度模拟联用，并与不同pH下的实验吸附数据相互验证</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">酸性条件下H2Q+物种因弱静电排斥和强π-π/范德华作用实现高效吸附；中性条件下高偶极矩的两性离子主导，吸附性能媲美或优于酸性条件</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/6d53ec572ff3690aa026a55b22f116ba00c3404c" target="_blank">Hydrogen permeation and hydrogen-induced changes in mechanical response of polyethylene and polyamide 6: A molecular dynamics simulation study </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Magdalena Huber; Andreas Kapshammer; Zoltán Major</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">氢气与热塑性聚合物（聚乙烯PE和尼龙6 PA6）相互作用对储氢系统渗透性及力学性能的影响机制</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">结合巨正则蒙特卡洛（GCMC）计算氢溶解度、分子动力学（MD）计算扩散系数，联合得到渗透率，并通过原子尺度单轴拉伸模拟评估氢致力学退化</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">① PE无定形区渗透率比PA6高约一个数量级；② 氢饱和状态下PE和PA6的刚度分别损失高达75%和85%</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/753d68f10d87a1380e80ad620a85daa76ff38b85" target="_blank">Direct Ab Initio Simulation of the Synthesis of BaZrO3 and the Microstructure Impacts on Proton Transport </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Rhys J. Bunting; Reetam Paul; N. Rampal; Brandon C. Wood; Tadashi Ogitsu et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">揭示陶瓷材料（BaZrO₃）中合成过程→微观结构→质子传输性能的构效关系，解决理论预测与实验测量长期存在的偏差</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">耦合密度泛函理论（DFT）、机器学习原子间势（MLIP）驱动的分子动力学和巨正则蒙特卡洛，实现实验尺度多晶微观结构分辨的全原子质子输运模拟</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">① 量化了晶界区与晶内两种质子扩散机制的竞争；② 考虑晶界影响后，质子传输显著偏离体相氧化物极限，成功解释理论与实验的长期偏差</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[6] Cathodic Process and Application Limits of Tin Oxide in Acidic Medium — 直击电催化载体在真实酸性工况（如PEMFC）下的阴极稳定性这一长期被忽视的失效根源，实验设计严谨（Ar脱氧+双盐桥），为氧化物基载体的电位窗口界定提供不可替代的基准数据。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[3] Graph Neural Network Force Fields (GPTFF-mol) for Organic Molecules from Optimization Trajectories — 其训练依赖优化轨迹而非电化学界面构象，难以刻画电极/电解质界面处带电、溶剂化、电场极化共同作用下的杂原子吸附构型，可能高估含S/Cl分子在电催化反应中的结构预测可靠性。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">作者/团队名（未显式给出，但[8][10]体现多尺度联用范式）— 擅长DFT–HRMC–GCMC–MD闭环验证，尤其在吸附/输运机制中嵌入pH、微观结构等关键实验变量，代表电化学界面模拟从“理想表面”走向“真实多相环境”的方法论前沿。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">多篇论文（[3][4][8][10][9]）共同凸显“<strong>界面敏感性驱动的模型特异性</strong>”：通用力场或QSPR模型正快速让位于针对特定界面过程（电极吸附、晶界质子输运、纳米限域结晶）定制的数据生成与特征工程，物理约束（如电荷守恒、局域电中性、相变热力学）成为ML模型可信度的刚性门槛。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">几乎所有电催化/界面模拟工作（[6][8][10][4]）均未耦合<strong>动态电位扫描下的瞬态界面重构</strong>——CV测得的氧化峰对应何种原子尺度结构演变（如SnO₂表面还原为Sn⁰团簇？ZIF相变是否受双电层电势梯度触发？）仍缺乏原位理论映射，导致机理推断停留在“相关性”层面。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">机器学习模型（[2][3][5]）严重依赖静态、平衡态构象或体相性质训练，而电催化核心过程（如*OH脱附、C–O键断裂、质子耦合电子转移）本质是非平衡、低概率、强溶剂/电场调制的——当前数据集与损失函数均未对这类稀有事件进行主动采样与加权。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展<strong>电位可控的主动学习框架</strong>：以电极电位为条件变量，结合电化学过渡态搜索（EC-TS）、电场极化MD与GNN力场在线更新，在CV关键电位点定向生成非平衡界面构象数据集，实现“电位→界面结构→反应能垒”的端到端可微分建模。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>
