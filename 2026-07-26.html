@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-07-26</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-07-26</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 783 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/7fff6cdb73787173e230156efb92fc8895431d15" target="_blank">MLIP-MC: A Framework for Adsorption Simulations using Machine-Learned Interatomic Potentials </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Connor W. Edwards; Fengxu Yang; Konstantin Stracke; Jack D Evans</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何提升通用机器学习原子间势（MLIPs）在金属有机框架（MOFs）气体吸附巨正则蒙特卡洛（GCMC）模拟中的定量预测精度</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出开源Python框架MLIP-MC，首次实现基于通用MLIPs的端到端GCMC模拟流程，并建立包含DFT基准数据（CO₂在ZIF-8/ZIF-4/Mg-MOF-74上的吸附等温线与微分吸附焓）的标准化评估协议</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首个专为MLIP-GCMC耦合设计的开源框架（MLIP-MC），支持自动势调用、热力学一致性校验与误差溯源；② 揭示“训练数据化学空间覆盖度”比模型架构更决定吸附预测精度——MOF-adsorbate交互构型是不可替代的数据要素；③ 发现吸附量依赖的系统性误差增长规律，证实吸附质-吸附质多体相互作用是当前通用MLIPs的主要失效瓶颈</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">体系为CO₂在ZIF-8、ZIF-4和Mg-MOF-74上的吸附；基线为DFT-derived reference（PBE-D3/BASIS）；MACE-MP-0在Mg-MOF-74上298 K/1 bar CO₂ uptake误差达+35%，且所有模型微分吸附焓偏差&gt;15 kJ/mol；仅训练数据含MOF-adsorbate构型的ORB-v3在ZIF-8上相对误差&lt;8%</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/829e63f4b8a8754bfb6d591cb8d5d2a90c88ab07" target="_blank">Predicting copolymer critical parameters with a theory-integrated neural network. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">A. Akkiraju; A. Panagiotopoulos</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何准确预测共聚物序列的相变临界温度与临界体积分数，尤其在考虑序列特异性与溶剂选择性时突破经典平均场理论的局限</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“理论整合型神经网络”（TI-NN），将标度律形式的物理约束（如临界参数对溶剂χ参数和序列分形维数的依赖关系）作为软约束嵌入神经网络损失函数与架构设计中，而非仅用黑箱NN拟合数据</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将共聚物相变标度理论显式编码为可微分物理约束，实现理论引导的ML建模；② 通过特征归因证实“溶剂选择性”与“序列块状度”是主导变量，赋予模型可解释性；③ TI-NN在保持计算效率的同时显著提升外推鲁棒性，克服纯数据驱动模型的领域迁移瓶颈</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">基于3351种模型共聚物序列（含不同组成、长度、拓扑与序列分布）在多类选择性溶剂中的巨正则蒙特卡洛（GCMC）模拟数据；TI-NN将临界温度预测MAE从标准NN的±4.2 K降至±1.8 K，临界体积分数MAE从±0.032降至±0.011，并在训练域外（如更高χ或更长链）实现可靠外推</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/8a8d14367fbae1c32faf4886f0a75fc80499c359" target="_blank">Construction of Octadentate Carboxylate-Based Metal-Organic Framework for Effective Acetylene Purification. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Yuanyuan Zhu; Hongyan Liu; Xiaokang Wang; Ye Tian; Weidong Fan et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何同时提升乙炔（C₂H₂）吸附剂的吸附容量与C₂H₂/CO₂选择性这一相互制约的性能瓶颈</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">设计八齿羧酸配体H₈ETTB构筑的Cu-ETTB MOF，通过稠环芳烃骨架密集分布的π电子云与多羧基氧位点协同构建多重主–客体作用位点（π–π、偶极–四极矩、氢键受体），实现对C₂H₂的选择性富集</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次采用八齿（octatopic）、全芳香刚性配体H₈ETTB构建高连通性Cu-MOF，同步实现大比表面积（&gt;2000 m² g⁻¹，文中隐含）、大孔径与密集功能位点；② 揭示C₂H₂–C₂H₂分子间自聚集效应在限域孔道内被框架芳香环协同增强，构成“双级识别”（framework–guest + guest–guest）新机制；③ 实验证实该MOF在水、酸、热（&gt;300 °C）及10次吸附–脱附循环后性能无衰减，远超多数C₂H₂吸附MOFs的化学稳定性</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系为Cu-ETTB MOF；基线对比未明确列出具体MOF，但文中强调其优于多数文献报道值；静态吸附：C₂H₂容量108 cm³ g⁻¹（298 K, 1 bar），C₂H₂/CO₂等摩尔选择性19.2；动态突破实验：C₂H₂/CO₂混合气（1:1）下动态容量达84.4 cm³ g⁻¹</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/8d0de59271fb78388bc0b5909e4d9e42b20dbb7d" target="_blank">Accelerating discovery of MOFs for hydrogen storage via machine learning in energy related applications </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Saeid Khairandesh; M. Lotfi; A. Larimi; AliAkbar Asgharinezhad; Cyrus Ghotbi</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何高效筛选具有高 gravimetric 和 volumetric 氢气存储容量的金属–有机框架（MOFs）材料，以突破传统试错式实验与单一模拟方法的效率瓶颈。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“GCMC + 多算法协同优化的双神经网络”（FNN与PRNN）集成框架，其中PRNN专为模式识别设计，并首次引入Equilibrium Optimizer（EO）与Genetic Algorithm（GA）联合优化超参数，实现物理模拟数据驱动下的高精度、可解释性预测。</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次将Equilibrium Optimizer与GA混合策略用于MOF吸附预测模型超参优化，显著提升收敛稳定性与全局搜索能力；② 构建面向吸附性能的专用Pattern Recognition NN（PRNN），显式建模孔结构–吸附量非线性响应模式；③ 通过SHAP分析证实“pore volume”与“void fraction”为跨MOF体系的普适主导描述符，赋予模型强物理解释性。</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">在98,695个MOFs数据库上开展T–P摆动条件（77 K, 100 bar）下H₂吸附模拟与预测；基线为纯GCMC及传统ML模型（如RF、SVR）；最优PRNN模型R²达0.98（gravimetric）、0.96（volumetric），预测Top-12 MOFs中最高gravimetric容量达8.27 wt.%（+14.3% vs MOF-5），volumetric达51.94 g-H₂/L（+22.1% vs MOF-5）。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/97cfda3e8ac75c67e4443ea92fc1e34c1a57909c" target="_blank">Functionalized UNT-14 Metal-Organic Frameworks for Enhanced CO2 Adsorption and Separation: Insights from Monte Carlo Simulations and Density Functional Theory. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Sheikh M. S. Islam; Rashida Yasmeen; Jincheng Du; M. Omary</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何通过 linker 功能化调控金属有机框架（MOF）UNT-14的CO₂吸附与分离性能，以提升其在CH₄/CO₂和N₂/CO₂混合气中的选择性捕获能力</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用“DFT + GCMC + IAST”多尺度计算范式，构建并对比-CN和-NO₂功能化的UNT-14衍生物（UNT-14-CN/NO₂），结合径向分布函数（RDF）定位优势吸附位点，从电子结构（DFT）到宏观等温线（GCMC）再到混合气分离性能（IAST）进行全链条预测</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将-CN/-NO₂强吸电子基团引入UNT-14 linker，实现CO₂结合能与孔表面极性的协同增强；② 通过RDF明确揭示吸附位点由Cu簇转移至功能基团附近，修正了“金属中心主导吸附”的惯性认知；③ 建立“基团类型→局部电场→CO₂取向吸附→宏观选择性”可解释的构效关系链，超越经验性筛选</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系为纯相MOF UNT-14及其-CN/-NO₂衍生物；基线为未功能化的UNT-14；功能化后CO₂在0.1 bar下的亨利常数KH提升达~2.3倍（UNT-14-CN），Qst⁰升高至~35 kJ/mol（较母体+8–10 kJ/mol），CO₂/CH₄（10:90）IAST选择性提高约3–5倍</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/99a0cfb2b98b4f16f98ecaf59531aad01262d15c" target="_blank">Molecular Understanding of Hydrogen Behavior in Moist Kerogen Matrix with Residual Methane Presence: Implications for Underground Hydrogen Storage </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Tao Zhang; Bowen Guan; Yulong Zhao; Feng Ge; Xuefeng Yang et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">地下页岩储氢中，残余甲烷和地层水形成的三元混合物在纳米限域下如何影响氢气的吸附行为与储存性能</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用巨正则蒙特卡洛（GCMC）模拟研究潮湿 kerogen 纳米孔隙中 H₂/CH₄/H₂O 三元体系的吸附机理</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">① CH₄ 因更强亲和力优先饱和吸附，H₂ 吸附呈近线性增长，CH₄ 饱和后贡献 41~72% 的吸附增量；② 低含水量轻微促进 H₂ 吸附，高含水量因水簇占据孔隙而显著抑制吸附，但可提升 H₂ 回收率至 65%</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/a14eaa4226a757c2da2d2b14725fb8d4462263c1" target="_blank">Electrochemical Potential Fluctuation Matters in Rate Constant Calculations for Proton-Coupled Electron Transfer. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Menglin Sun; Li Fu; Shenzhen Xu</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在分子模拟中严格处理恒电势（巨正则系综）条件以准确计算质子耦合电子转移（PCET）反应速率常数</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">对比两种施加外加电势的模拟策略——一种通过微态电化学势涨落严格采样巨正则系综，另一种通过迭代调整各微态电子数来固定电势</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">两种方法导致显著不同的热活化能和动态再穿越行为，进而引起不可忽略的反应速率常数量级差异；瞬时电势涨落对PCET动力学模拟至关重要</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/a77bf6171bda21a8e090a96d7bc6b91dd097b94f" target="_blank">Hydrogen adsorption and diffusion in caprock mineral slits: A molecular dynamics study for underground storage </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Qiuyu Zhang; R. Cao; Xinyi Zheng; Linsong Cheng; Gaofei Yan</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">氢气在含水/盐水的地下多孔介质中的吸附与传输行为机制</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">结合巨正则蒙特卡洛（GCMC）与分子动力学（MD）模拟，系统研究多种矿物孔隙中氢气在不同温压、含水量和盐度条件下的行为</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">1）干燥条件下氢气以自由气相为主，扩散系数约10⁻⁶ m²/s，且在不同矿物中扩散速率排序为：高岭石 &gt; 绿泥石 &gt; 方解石 &gt; 蒙脱石；2）水饱和度升高显著抑制氢气吸附与扩散，盐度增加进一步降低扩散率（盐析效应），但矿物间相对排序保持不变</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/ad2e9fdd028265c73d70bebde9eebeb2b55a8b92" target="_blank">Molecular simulations insight into oxygen-containing groups’ impact on CO2, CH4 and N2 adsorption in Ordos Basin deep coal, China </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Fengmei Jiao; Jienan Pan; Guofu Li; Rui Wang; Jianhua Zhang et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">氧官能团如何调控CO₂、CH₄和N₂在煤大分子中的选择性吸附行为及其对CO₂/N₂强化煤层气开采的微观机制</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">基于实测无烟煤构建功能化煤大分子模型（CMM），结合巨正则蒙特卡洛（GCMC）模拟与密度泛函理论（DFT）计算，辅以静电势（ESP）分析</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">COOH修饰显著增强CO₂和N₂吸附（CO₂吸附能约为N₂的2.4倍），但抑制CH₄吸附；CO₂在所有气体中吸附最强，且OFGs（尤其-COOH）增加微孔可及表面积与结合位点数量</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/b341d61423eb49b03c200d860a1c0299fbbd4493" target="_blank">Subsurface hydrogen as a hidden driver of copper surface reconstruction in CO2 electroreduction </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Siwang Zhang; Hang Lv; Zhong-Zhang Shi; Ruoxuan Wang; Shisheng Zheng et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">铜催化剂在CO₂电还原过程中表面重构的原子尺度机制尚不明确，尤其是反应中间体（*CO和*H）如何驱动 facet-dependent 表面粗糙化。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">结合机器学习原子间势函数与大规模巨正则蒙特卡洛（grand canonical Monte Carlo）模拟，系统研究不同Cu晶面在*CO和*H吸附下的表面粗糙化行为。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">1）高表面*H覆盖（*Hsur）可促进(100)主导Cu表面发生*H向次表面（*Hsub）渗透，而(111)类表面几乎不发生；2）*H诱导的六方表面重构（4-fold→3-fold配位转变）通过几何效应降低*Hsub迁移能垒，并单独触发Cu吸附原子形成。</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[7] Electrochemical Potential Fluctuation Matters in Rate Constant Calculations for Proton-Coupled Electron Transfer — 首次定量揭示恒电势模拟中电化学势涨落对PCET速率常数的量级影响，直击电催化动力学模拟的底层系综一致性缺陷。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[10] Subsurface hydrogen as a hidden driver of copper surface reconstruction in CO2 electroreduction — 其将表面重构归因于*H吸附驱动，但未考虑电势涨落导致的局部微态电子分布非均匀性，可能低估电化学环境动态性对重构路径的影响。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">作者/团队名（未显式给出，但[7][10][1]均体现“MLIP+GCMC+电化学系综”交叉范式）— 正系统性构建兼顾电子自由度、原子尺度弛豫与电化学热力学一致性的多尺度模拟新框架。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">巨正则系综（GCMC/Grand Canonical MD）正从传统吸附热力学工具，升级为耦合电子转移、表面重构与界面水/溶剂效应的动态电化学过程核心模拟范式。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">所有基于GCMC或MD的模拟均依赖预设力场（经验或MLIP），但尚未建立可严格传递电子结构信息（如局域态密度、电荷转移）至统计系综采样的跨尺度协议，导致PCET能垒、吸附能排序等关键量仍存在隐含误差。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">MOF/矿物/煤等复杂多孔介质的模型构建高度依赖理想化结构假设（如刚性骨架、均质表面），缺乏对真实材料中缺陷密度、晶界、相分离及动态水合层演化的联合表征-建模闭环。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展“电化学感知型MLIP”（electrochem-aware MLIP）：以DFT计算的微态电化学势∂E/∂Nₑ为监督信号训练势函数，并嵌入GCMC采样器实现电子数-吸附量联合涨落；同步结合原位XAS/SHINERS约束缺陷态分布，驱动模型向真实多相界面收敛。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>

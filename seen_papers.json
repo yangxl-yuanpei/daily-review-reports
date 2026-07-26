@@ -2897,5 +2897,95 @@
       "constant-potential",
       "dft"
     ]
+  },
+  "s2:7fff6cdb73787173e230156efb92fc8895431d15": {
+    "title": "MLIP-MC: A Framework for Adsorption Simulations using Machine-Learned Interatomic Potentials",
+    "date_seen": "2026-07-26",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:829e63f4b8a8754bfb6d591cb8d5d2a90c88ab07": {
+    "title": "Predicting copolymer critical parameters with a theory-integrated neural network.",
+    "date_seen": "2026-07-26",
+    "tags": [
+      "constant-potential"
+    ]
+  },
+  "s2:8a8d14367fbae1c32faf4886f0a75fc80499c359": {
+    "title": "Construction of Octadentate Carboxylate-Based Metal-Organic Framework for Effective Acetylene Purification.",
+    "date_seen": "2026-07-26",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:8d0de59271fb78388bc0b5909e4d9e42b20dbb7d": {
+    "title": "Accelerating discovery of MOFs for hydrogen storage via machine learning in energy related applications",
+    "date_seen": "2026-07-26",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:97cfda3e8ac75c67e4443ea92fc1e34c1a57909c": {
+    "title": "Functionalized UNT-14 Metal-Organic Frameworks for Enhanced CO2 Adsorption and Separation: Insights from Monte Carlo Simulations and Density Functional Theory.",
+    "date_seen": "2026-07-26",
+    "tags": [
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:99a0cfb2b98b4f16f98ecaf59531aad01262d15c": {
+    "title": "Molecular Understanding of Hydrogen Behavior in Moist Kerogen Matrix with Residual Methane Presence: Implications for Underground Hydrogen Storage",
+    "date_seen": "2026-07-26",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:a14eaa4226a757c2da2d2b14725fb8d4462263c1": {
+    "title": "Electrochemical Potential Fluctuation Matters in Rate Constant Calculations for Proton-Coupled Electron Transfer.",
+    "date_seen": "2026-07-26",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:a77bf6171bda21a8e090a96d7bc6b91dd097b94f": {
+    "title": "Hydrogen adsorption and diffusion in caprock mineral slits: A molecular dynamics study for underground storage",
+    "date_seen": "2026-07-26",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:ad2e9fdd028265c73d70bebde9eebeb2b55a8b92": {
+    "title": "Molecular simulations insight into oxygen-containing groups’ impact on CO2, CH4 and N2 adsorption in Ordos Basin deep coal, China",
+    "date_seen": "2026-07-26",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:b341d61423eb49b03c200d860a1c0299fbbd4493": {
+    "title": "Subsurface hydrogen as a hidden driver of copper surface reconstruction in CO2 electroreduction",
+    "date_seen": "2026-07-26",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "constant-potential",
+      "surface"
+    ]
   }
 }
