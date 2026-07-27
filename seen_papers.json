@@ -2987,5 +2987,91 @@
       "constant-potential",
       "surface"
     ]
+  },
+  "s2:0240393fa6ffa2ac21d6549553086b3aebce9d9f": {
+    "title": "Intelligent prediction of thermodynamic performance in MHD Oldroyd B trihybrid nanofluids using artificial neural networks",
+    "date_seen": "2026-07-27",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:276b392f5008e89f8e2e91a60731ee033304a604": {
+    "title": "A review of research on machine learning methods in underwater detection",
+    "date_seen": "2026-07-27",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:2d03a314fdf31f6c66ef7a2f46bc593ea02f8e25": {
+    "title": "Net force analysis of the B3LYP-D3BJ/DZVP subset of the SPICE dataset: A diagnostic tool for machine learning force fields.",
+    "date_seen": "2026-07-27",
+    "tags": [
+      "MLFF",
+      "dft"
+    ]
+  },
+  "s2:31e9efb86d31448a6791f3c3d6754252e30286cc": {
+    "title": "Incorporating Neural Network in the AMOEBA Polarizable Force Field for Ligand Field Effects of Cu 2+ Ion",
+    "date_seen": "2026-07-27",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:3e219b34aef023bb9dde4e59a72631e8b59ffdc7": {
+    "title": "SEI chemistry enlightened by liquid Madelung potential analysis and MLFF-MD simulation.",
+    "date_seen": "2026-07-27",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:b376ac10da5990f70669e93777bd48aace8404ec": {
+    "title": "Chemically Accurate Prediction of CO2 Adsorption Thermodynamics in Metal–Organic Framework CALF‐20: Complementary Ab Initio Modeling and Grand Canonical Monte Carlo Simulations",
+    "date_seen": "2026-07-27",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:b5dd4a5f42ec475bb1ad3a8a6f5892e10dca2a4f": {
+    "title": "Efficient one-step SO2 capture from industrial flue gas via a scalable Zr-based metal-organic framework.",
+    "date_seen": "2026-07-27",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:b88c8e18f09efae8f111f7b6cefb7a7bc5ffe953": {
+    "title": "Stress-Induced Molecular Sieving and Anisotropic Diffusion of CH4/CO2 in Deformed Nanoporous Coal Matrix.",
+    "date_seen": "2026-07-27",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:b92cdb7b466f04698a9e31b91358a46096373397": {
+    "title": "Heteroatom Engineering in Robust Al-Based MOFs for Efficient Separation of Xenon over Krypton",
+    "date_seen": "2026-07-27",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:bb66b06d6fa37f700c2da8753bc02278068bc83c": {
+    "title": "Effective carbon dioxide adsorption in graphene oxide–piperazine‐modified\n Ni\n ‐\n MOF\n ‐74 frameworks",
+    "date_seen": "2026-07-27",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
   }
 }

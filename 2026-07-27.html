@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-07-27</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-07-27</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 2776 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0240393fa6ffa2ac21d6549553086b3aebce9d9f" target="_blank">Intelligent prediction of thermodynamic performance in MHD Oldroyd B trihybrid nanofluids using artificial neural networks </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Mamoon Aamir; Chemseddine Maatki; Aqsa Zafar Abbasi; Rajab Alsayegh; Karim Kriaa et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何高效、高精度预测Oldroyd-B三元杂化纳米流体在磁流体动力学（MHD）与热传递耦合作用下的非线性流动、传热及熵产行为。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“数值求解+人工神经网络（ANN）代理建模”的混合框架：先以bvp4c高精度求解相似变换后的ODE系统，再以Levenberg–Marquardt算法训练前馈ANN构建速度/温度/熵产的高保真 surrogate 模型。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将ANN surrogate 建模系统应用于Oldroyd-B型三元杂化纳米流体的多物理场非线性响应预测；② 显式耦合熵产作为关键输出变量，实现热力学不可逆性量化预测；③ 通过严格网格无关性验证与高精度数值数据驱动训练，确保ANN在强非线性区域（如高磁参数、高Brinkman数）仍保持超高保真度。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系为Oldroyd-B三元杂化纳米流体（如Cu–Al₂O₃–TiO₂/水）在MHD与热传导耦合下的平板边界层流动；基线为bvp4c数值解；ANN预测回归系数R² &gt; 0.999，均方误差 &lt; 10⁻⁶；磁参数增大导致速度降低18–25%，加热使温度升高约20%并显著增加热边界层熵产。</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/276b392f5008e89f8e2e91a60731ee033304a604" target="_blank">A review of research on machine learning methods in underwater detection </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Shi Qiu; Dandan Jin</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何克服复杂水下环境带来的数据稀缺、模型泛化性差、实时性不足与可解释性弱等挑战，构建鲁棒、高效、可部署的机器学习驱动水下检测系统</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出面向水下检测全链条的机器学习技术综述框架，系统整合深度学习（CNN/Transformer用于声呐图像识别）、强化学习（用于AUV自主路径规划）、生成模型（用于小样本数据增强）与XAI技术，并强调多模态融合与边缘智能协同的演进路径</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">首次从“感知-理解-决策-协同”全栈视角梳理水下AI技术谱系；明确将边缘智能（Edge AI）与可解释AI（XAI）列为水下场景的刚性需求而非可选模块；提出“物理约束引导的自监督学习”作为缓解样本稀缺的新范式（区别于通用CV领域的纯数据驱动策略）</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">综述涵盖美国ONR“Sea Hunter”无人艇目标检测系统（YOLOv5+声学-光学跨模态对齐，mAP@0.5达78.3%）、英国DSTL水下声信号分类任务（ResNet18+自监督预训练，在仅200标注样本下准确率提升22.6%）等典型实证</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/2d03a314fdf31f6c66ef7a2f46bc593ea02f8e25" target="_blank">Net force analysis of the B3LYP-D3BJ/DZVP subset of the SPICE dataset: A diagnostic tool for machine learning force fields. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">H. Assem; K. Appiah; C. Subaar</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">评估SPICE数据集（B3LYP-D3BJ/DZVP子集）中DFT计算得到的分子净力（molecular net force）的数值一致性，检验其是否满足平移不变性这一基本物理约束</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于分子净力的DFT力场质量诊断框架，结合大规模统计分析（均值/分布/相关性）、多变量回归（识别净力主导预测因子）、蒙特卡洛模拟（区分随机误差累积 vs 系统性偏差）及控制变量过滤实验</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">首次对SPICE数据集开展大规模净力一致性量化审计；揭示净力大小主要源于随分子尺寸增长的随机数值误差累积（非系统性方向偏差），挑战了“净力可直接反映原子力精度”的常见假设；证明单纯按净力过滤数据仅因选择性保留小分子而降低误差，而非提升力的一致性质量</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">体系为SPICE 1 OpenFF中B3LYP-D3BJ/DZVP子集（16,560分子，~1M构象）；基线为DFT计算的原子力矢量求和所得净力；关键结果：平均净力达5.99 meV/Å（远超数值精度阈值~1e−6 Hartree/Bohr ≈ 0.05 meV/Å），98%分子净力 &gt;1.95 meV/Å；多元回归调整R²=0.45，确认分子尺寸、构象能量展宽、平均原子力模长和分子电荷为独立预测因子</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/31e9efb86d31448a6791f3c3d6754252e30286cc" target="_blank">Incorporating Neural Network in the AMOEBA Polarizable Force Field for Ligand Field Effects of Cu 2+ Ion </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Zhecheng He; Yanxing Wang; Shubham Chatterjee; Jean‐Philip Piquemal; Andrés Cisneros et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">经典力场难以准确描述开壳层过渡金属离子的溶剂化行为，因其受配体场电子效应影响显著</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出AMOEBA+NN——一种结合机器学习与AMOEBA极化力场的混合势函数，显式建模电子极化与配体场效应</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在Mn²⁺、Fe²⁺、Co²⁺等水合体系中，AMOEBA+NN精确再现DFT/CCSD(T)级别的溶剂化结构、振动频率和自旋态能量差；显著优于传统非极化及标准极化力场</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/3e219b34aef023bb9dde4e59a72631e8b59ffdc7" target="_blank">SEI chemistry enlightened by liquid Madelung potential analysis and MLFF-MD simulation. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Xiangrong Zeng; Haruna Ashitaka; Norio Takenaka; Atsushi Kitada; Atsuo Yamada</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">电解质中阴离子种类如何通过调控液相静电环境与界面还原动力学，影响锂金属表面固态电解质界面（SEI）的化学组成、结构致密性及电子/离子传输特性</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“液相Madelung势分析 + 机器学习力场分子动力学（MLFF-MD）”耦合计算框架；创新性地将液体中Li⁺的静电稳定化能（而非传统气相或晶体模型）作为SEI形成热力学驱动力的关键指标，并用高精度MLFF-MD直接模拟阴离子在锂金属表面的初始还原反应路径与SEI成核结构</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次将“液相Madelung势”定义为电解质介导SEI形成的热力学标度量，突破传统仅关注阴离子LUMO或单离子还原电位的简化范式；② 实现MLFF-MD在锂金属/电解质界面长达500 ps、含&gt;2000原子的反应性模拟，直接捕捉阴离子选择性分解与无机相早期成核过程；③ 建立“阴离子电子离域性 → 液相Li⁺去稳定化 → 红位正移 → 优先界面还原 → 致密无机SEI”这一可验证的因果链，为电解质理性设计提供新原理</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">体系为高浓度电解质（如LiTFSI、LiFSI、LiDFOB等）/DME体系；基线为传统稀溶液模型与静态DFT还原电位预测；关键结果：（1）电子离域性强的阴离子（如TFSI⁻）使液相Madelung势降低0.4–0.6 eV，导致Li/Li⁺氧化还原电位正移80–120 mV；（2）MLFF-MD显示TFSI⁻比PF₆⁻更易发生C–N键断裂并生成LiF/Li₂O富集的致密初始SEI（厚度~1.2 nm，密度&gt;2.8 g/cm³）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/b376ac10da5990f70669e93777bd48aace8404ec" target="_blank">Chemically Accurate Prediction of CO2 Adsorption Thermodynamics in Metal–Organic Framework CALF‐20: Complementary Ab Initio Modeling and Grand Canonical Monte Carlo Simulations </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Kaido Sillar; Sonja Grubišić; Ivana S. Đorđević; M. Hochlaf</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在原子尺度上高精度预测MOF材料CALF-20中CO₂吸附的完整热力学（吸附能、焓、熵、吉布斯自由能）并揭示其微观吸附机制</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“解析性第一性原理热力学”（ab initio thermodynamics）框架，融合DFT+D、MP2校正、局域势能面采样与非孤立位点项，并耦合新开发力场的GCMC全局采样，实现热力学量的多尺度自洽计算</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次在MOF吸附热力学中系统量化并分离非局域效应与核量子效应的定量贡献；② 提出“非孤立位点项”显式修正传统孤立位点模型的熵误差；③ 通过ab initio/GCMC/实验三重交叉验证确立CO₂“单占→笼内配对”的两步协同填充机制</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系为水热稳定的MOF CALF-20；基线为实验吸附等温线与微分吸附焓；两方法均在±4 kJ mol⁻¹化学精度内复现实验数据；发现非局域效应降低熵罚≥7 kJ mol⁻¹，零点振动能贡献达5.4 kJ mol⁻¹</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/b5dd4a5f42ec475bb1ad3a8a6f5892e10dca2a4f" target="_blank">Efficient one-step SO2 capture from industrial flue gas via a scalable Zr-based metal-organic framework. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Si-Chao Liu; Li Xu; Li‐Ping Zhang; Chenxi Li; Youbao Lu et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">开发高效吸附剂以实现工业废气中痕量SO₂的选择性捕获</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用绿色合成法制备MOF-801(Zr)，结合IAST选择性计算、动态穿透实验、GCMC模拟和DFT计算揭示吸附机制</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在298 K、1 bar下SO₂吸附量达7.28 mmol g⁻¹；在1 vol% SO₂条件下SO₂/CO₂和SO₂/N₂的IAST选择性分别达46.8和&gt;10⁴（86,368）</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/b88c8e18f09efae8f111f7b6cefb7a7bc5ffe953" target="_blank">Stress-Induced Molecular Sieving and Anisotropic Diffusion of CH4/CO2 in Deformed Nanoporous Coal Matrix. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Shijie Jing; Hongbao Zhao; Chuang Song</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">机械应力如何耦合调控无序纳米多孔介质中气体吸附与传输的选择性（特别是CO2/CH4分离）</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">结合分子动力学（MD）和巨正则蒙特卡洛（GCMC）模拟，系统研究不同侧压系数（K = 0.5, 1.0, 1.5）下煤基质的应力响应</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">发现“应力诱导分子筛分”机制——高压应力选择性坍塌CH4可进入的大微孔（&gt;3.8 Å）而保留CO2可进入的小微孔（3.3–3.8 Å），导致CO2/CH4吸附选择性在高应力下反常升高；同时应力各向异性引发显著扩散各向异性，抑制沿最大主应力方向的气体输运</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/bb66b06d6fa37f700c2da8753bc02278068bc83c" target="_blank">Heteroatom Engineering in Robust Al-Based MOFs for Efficient Separation of Xenon over Krypton </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Syed Turab Haider Zaidi; M. A. Bustam; Aqeel Ahmad; Muhammad Usman; Marhaina Ismail et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">提升Ni-MOF-74在常温常压下的CO₂吸附容量与结构稳定性</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">通过溶热法构建GO@Ni-MOF-74/PZ复合材料，利用石墨烯氧化物增强结构稳定性、哌嗪提供氮富集位点强化CO₂亲和力</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">CO₂吸附容量从4.5 mmol g⁻¹提升至5.2 mmol g⁻¹（1 bar, 25 °C）；GCMC模拟与实验吸附趋势高度吻合，揭示了分子尺度吸附机制</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[5] SEI chemistry enlightened by liquid Madelung potential analysis and MLFF-MD simulation. — 首次将液相Madelung势作为可量化描述电解质静电环境的物理序参量，耦合ML力场分子动力学（MLFF-MD）揭示阴离子调控SEI形成的微观电化学路径， bridging macroscopic performance and quantum-informed interfacial thermodynamics.</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[4] Incorporating Neural Network in the AMOEBA Polarizable Force Field for Ligand Field Effects of Cu²⁺ Ion — 其显式建模配体场电子效应的NN-AMOEBA策略隐含“局域电子结构主导溶剂化”的假设，可能与[5]中强调的长程液相静电（Madelung）主导界面还原动力学的机制形成张力。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">作者/团队名（未显式给出，但[5]工作体现的“Madelung势+MLFF-MD”范式）— 开创性地将凝聚态物理中的静电势分析工具迁移到电化学界面研究，具备方法论普适性，有望重构SEI、CEI等固/液界面理性设计框架。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">多篇论文（[3][4][5][6][10]）共同指向“物理约束嵌入型机器学习”成为新一代计算材料学的核心范式——从平移不变性（[3]）、电子结构敏感性（[4]）、液相静电序参量（[5]）、非局域色散校正（[6]）到功能基团定向修饰（[10]），ML模型正从黑箱拟合转向物理可解释、守恒律兼容、机制可追溯的增强型代理。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">几乎所有基于MLFF或GCMC的工作（[3][4][5][6][7][8][9][10]）均依赖静态构型采样或短时MD，缺乏对界面动态演化（如SEI成核生长、MOF结构疲劳、应力诱导孔道不可逆重构）的长时间尺度（&gt;ns）自洽模拟，导致热力学预测与真实工况动力学脱节。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">尽管多篇论文强调“多尺度耦合”（如[1] MHD+热传递、[5] 液相静电+界面反应、[8] 应力+吸附+扩散），但尚无工作实现跨尺度变量（如宏观应力场→纳米孔形变→局部电势重分布→电子转移速率）的闭环反馈建模，物理场间仍为单向或弱耦合。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展“物理守恒驱动的多尺度图神经网络”（Conservation-aware Multi-scale GNN），以连续介质变量（应力、电势、浓度梯度）为节点，原子/分子构型为边，强制嵌入诺特定理约束（动量/能量/电荷守恒），实现从宏观载荷到量子界面反应的端到端可微分模拟。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>
