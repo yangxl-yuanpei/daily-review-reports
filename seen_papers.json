@@ -3073,5 +3073,87 @@
       "constant-potential",
       "surface"
     ]
+  },
+  "s2:08e41b1bb8a2cd6db912077ed71734c545cba7c0": {
+    "title": "When Two Worlds Collide: How Collisions Between Silicate and Carbonaceous Nanograins can Drive Complex Chemistry",
+    "date_seen": "2026-07-28",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:6c75bc0f888afe9c442f3a4ec0679034d1b3a852": {
+    "title": "On the transferability of pure electron correlation of quantum topologically defined molecular fragments at the CCSD(T) level",
+    "date_seen": "2026-07-28",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:bf2dc92ee2eadf1d61e444fb4750834a5047a532": {
+    "title": "Molecular mechanisms of multicomponent flue gas adsorption and methane displacement in coal nanopores",
+    "date_seen": "2026-07-28",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:c905721538d6063af0dc36542ddfd2347774caf9": {
+    "title": "Improved Desalination by Polymer Grafting",
+    "date_seen": "2026-07-28",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:ca28fcc6a4d37823c946dd210d4c83efd75c1446": {
+    "title": "Molecular Simulation of the Adsorption Separation of Acidic Natural Gas Contaminants with Zeolites",
+    "date_seen": "2026-07-28",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:ca8d8e4dc80026c3f37ca8406a443a18383f571a": {
+    "title": "Molecular Simulation of Multi-Factor Coupling Effects on Nanopore Wettability of Typical Shale Minerals",
+    "date_seen": "2026-07-28",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:ce17545a4acd666be4dd2a90a5fb6bac083b4f58": {
+    "title": "An Ab-Initio Molecular Dynamics Investigation of Surface Charging Effects on Hydrogen Evolution Kinetics",
+    "date_seen": "2026-07-28",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:ce603d2dfb7df0100bb0dc193c9af9723a08bd5a": {
+    "title": "Coal Rank-Driven Macromolecular Reconstruction Regulating Nanopore Topology and CO2 Transport.",
+    "date_seen": "2026-07-28",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:d3ff3fecfa67424b94b6fb2064bb9550125ff0e0": {
+    "title": "Capacity and Selectivity for Carbon Dioxide on Lignin-Derived Adsorbents via Molecular Simulation",
+    "date_seen": "2026-07-28",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:d709d24ee06299dc9ac39fbc63ae70d805bea258": {
+    "title": "Combining Machine-Learning and Classical Potentials for Grand Canonical Monte Carlo Simulation of Chemisorption",
+    "date_seen": "2026-07-28",
+    "tags": [
+      "electrochemistry",
+      "constant-potential"
+    ]
   }
 }
