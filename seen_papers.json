@@ -3155,5 +3155,84 @@
       "electrochemistry",
       "constant-potential"
     ]
+  },
+  "s2:878df2dfbe92e2eadab2dd187eee3735ff773d67": {
+    "title": "From Local Structure to Thermodynamics and Transport of Water with Machine Learning Force Fields",
+    "date_seen": "2026-07-29",
+    "tags": [
+      "MLFF",
+      "dft"
+    ]
+  },
+  "s2:0094733f8a69a49de6fa93ad75896be41317a28e": {
+    "title": "A spatial–temporal normalization framework for Fourier-enhanced physics-informed deep learning in large-scale wave propagation",
+    "date_seen": "2026-07-29",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:d7f18aac4a10a46937f521f9fd216e731236a166": {
+    "title": "KRAS4a and KRAS4b show distinct lipid-dependent regulation of RAS-RAF membrane dynamics",
+    "date_seen": "2026-07-29",
+    "tags": [
+      "constant-potential"
+    ]
+  },
+  "s2:dd596a15bf211712b2b17d430b8a8ce220bbce8e": {
+    "title": "Deciphering borophene growth pathways with data-driven simulations",
+    "date_seen": "2026-07-29",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:df7373de5b06e6eb198fffd93d5845f2708cd8bc": {
+    "title": "Simulation of Charge Distribution and Microstructure in Semicrystalline Polymeric Ionic-Electronic Conductors Using Classical Simulation at Constant Electrochemical Potential",
+    "date_seen": "2026-07-29",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:e101fe17e75390c9dc7e0ee49099c0db86f78eb4": {
+    "title": "Machine Learning-Guided Pore Engineering of Metal-Organic Frameworks for Ultrahigh Volumetric Methane Storage.",
+    "date_seen": "2026-07-29",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:e2d61b7b4f19e302b26269cbad2f49bb39e4a1fb": {
+    "title": "Molecular Insights into Microstructure and CH4/CO2 Adsorption of Mylonitic Coal",
+    "date_seen": "2026-07-29",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:e6a81073c576d02e7c13eeed1442bf967eec53d7": {
+    "title": "Mechanisms of Halomethane Adsorption on Functionalized Carbons: How Surface Chemistry Governs Selectivity in Realistic Gas Mixtures",
+    "date_seen": "2026-07-29",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:e71317e2cf6a19683fbd60081e9289df6dc54828": {
+    "title": "Synthesis and Hydrogen Adsorption Simulation of Carbonized Hyper-Cross-Linked Polymers Derived from Various Green Flavonoid Monomers.",
+    "date_seen": "2026-07-29",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:ee6764b1b4b84b12331bf50694c7faf12feabe54": {
+    "title": "In Silico Models for Predicting Adsorption of Organic Pollutants on Atmospheric Nanoplastics by Combining Grand Canonical Monte Carlo/Density Functional Theory and Quantitative Structure Activity Relationship Approach",
+    "date_seen": "2026-07-29",
+    "tags": [
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
   }
 }

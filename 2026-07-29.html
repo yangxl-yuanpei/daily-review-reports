@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-07-29</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-07-29</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 2470 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/878df2dfbe92e2eadab2dd187eee3735ff773d67" target="_blank">From Local Structure to Thermodynamics and Transport of Water with Machine Learning Force Fields </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">A. Kretschmer; Florian Altmann; Nader Nour; Alper T Celebi; Markus Valtiner</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何评估不同DFT交换关联泛函对机器学习力场（MLFF）预测液态水微观结构、热力学与输运性质准确性的影响</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用基于多种DFT泛函（PBE, RPBE, BLYP, PBE0等）训练的MLFF，结合全六维对关联函数、三体角分布、信息熵分解及Green–Kubo输运计算，构建多维度一致性评估框架</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将六维对关联函数引入MLFF泛函评估，突破传统二维g(r)局限；② 揭示平移熵与取向熵耦合项与归一化扩散系数的线性标度律（R² &gt; 0.98）；③ 发现RPBE-D3的Born有效电荷与SPC/E部分电荷高度相似，为经典力场参数设计提供量子依据</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">体系为300 K常压液态水（NPT系综）；基线包括SPC/E经典力场及各DFT-MLFF；RPBE-D3模型在过剩熵（−0.42 ± 0.03 k&lt;sub&gt;B&lt;/sub&gt;/mol）、自扩散系数（2.30 ± 0.08 × 10&lt;sup&gt;−5&lt;/sup&gt; cm²/s）和O–O径向分布峰位（2.82 Å）上最接近实验值，而PBE-MLFF扩散系数偏低35%，过剩熵过负达−0.65 k&lt;sub&gt;B&lt;/sub&gt;/mol</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0094733f8a69a49de6fa93ad75896be41317a28e" target="_blank">A spatial–temporal normalization framework for Fourier-enhanced physics-informed deep learning in large-scale wave propagation </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Jichao Ma; Dandan Liu; Xi’an Li; Yayong Li; Jinran Wu</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何提升物理信息神经网络（PINNs）在大规模时空域中求解波动方程的稳定性、收敛性与高频率特征表征能力</span></div><div class="field field-collapsible"><span class="field-key">主要方法</span><span class="field-val">提出“时空归一化+傅里叶增强”双驱动框架（Spatial-Temporal Normalization Framework for Fourier-enhanced PINNs），将可学习的时空坐标归一化模块嵌入傅里叶特征映射（FFM）增强的PINNs架构，通过联合优化归一化参数与网络权重，改善梯度流条件并显式注入高频先验</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次提出解耦且可学习的时空联合归一化机制，显式缓解PINNs中固有的尺度失配问题；② 将傅里叶特征映射（FFM）与归一化策略深度耦合，而非简单串联，使FFM输入分布稳定、频谱响应可控；③ 通过系统消融验证不同归一化形式（LayerNorm vs. InstanceNorm vs. 自适应坐标缩放）对波动问题的适用性，建立面向偏微分方程求解的归一化选择准则</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在2D/3D规则（矩形、球形）与非规则（带孔洞、弯曲边界）域上测试声波/弹性波方程；基线为标准PINNs、TFB-PINNs及Gradient-enhanced PINNs；在3D不规则域长时（t∈[0,10]）声波模拟中，相对L²误差降至1.8×10⁻³（基线为7.6×10⁻²），训练迭代收敛速度提升4.2×</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/d7f18aac4a10a46937f521f9fd216e731236a166" target="_blank">KRAS4a and KRAS4b show distinct lipid-dependent regulation of RAS-RAF membrane dynamics </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Konstantia Georgouli; Jeremy O. B. Tempkin; Liam G. Stanton; T. Oppelstrup; R. Shrestha et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">KRAS4a与KRAS4b两种剪接异构体在膜定位、脂质依赖性及信号调控中的功能差异机制尚不明确，尤其缺乏对其在动态脂质环境中构象取向与HVR–脂质互作的定量比较研究</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">扩展Multiscale Machine-Learned Modeling Infrastructure（MuMMI），首次集成宏尺度（grand canonical ensemble）连续介质模拟、粗粒化（CG）与全原子（AA）多尺度建模，实现脂质浓度可调、蛋白异构体可替换、复合物状态可切换的协同采样</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次建立可调控脂质化学势的多尺度框架（MuMMI-GCE），突破传统固定组分MD的局限；② 揭示KRAS4a/4b对PIP2敏感性存在定量差异——4b依赖更强、响应更剧烈，修正“HVR序列差异仅影响锚定强度”的简化认知；③ 发现HVR不仅被动结合脂质，还能主动“排序”局部脂质组成（lipid ordering），且该功能在两异构体中保守但效率不同</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">体系为含PIP2/PS/PC混合脂质双层膜上的KRAS4a、KRAS4b单体及KRAS–RBDCRD复合物；基线为恒定PIP2（5 mol%）下的标准AA-MD；关键结果：PIP2从5%降至1%时，KRAS4b HVR膜插入角分布标准差增大42%（显著宽化），而KRAS4a仅增18%；PIP2耗竭后，PS在KRAS4b周围局部富集达3.2倍（vs. 1.7倍 for 4a）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/dd596a15bf211712b2b17d430b8a8ce220bbce8e" target="_blank">Deciphering borophene growth pathways with data-driven simulations </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">C. Bousige; Jean Furstoss; Julien Lam; Pierre Mignon</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在原子尺度上实现硼烯（borophene）多型体（polymorph）的确定性合成，即精准调控其成核与生长路径以选择性获得目标晶相。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“反应性机器学习势（MLIP）+巨正则蒙特卡洛（GCMC）+数据驱动结构分类”三元耦合方法；创新性地将高精度反应性势函数嵌入统计力学采样，并结合无监督/半监督结构指纹识别，实现从亚纳米核到微米级单层的跨尺度、跨时间尺度动态相变追踪。</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次将反应性MLIP用于硼烯生长的GCMC模拟，突破DFT对&gt;1000原子体系的不可行性；② 提出“空位 motif 指纹—核结构—相选择”三级动力学判据，超越传统基于总能排序的热力学预测范式；③ 构建首个可实验校准的硼烯“温度–化学势”生长相图，明确给出β₁₂纯相合成窗口（T = 320–350 K, μ_B ∈ [−4.12, −3.98] eV）。</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">体系为Ag(111)和Ag(100)衬底上的硼烯生长；基线方法为DFT计算的相稳定性图与已有STM实验报道；关键结果：（1）成功复现实验中β₁₂与χ₃相的共存及其随温度升高的竞争反转（~300 K时β₁₂主导，~400 K时χ₃占比提升&gt;40%）；（2）识别出含双空位（DV）和三空位（TV）的临界核尺寸（~12–18 B原子），其构型决定后续相选择概率达76%。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/df7373de5b06e6eb198fffd93d5845f2708cd8bc" target="_blank">Simulation of Charge Distribution and Microstructure in Semicrystalline Polymeric Ionic-Electronic Conductors Using Classical Simulation at Constant Electrochemical Potential </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Zixuan Wei; Hesam Makki; Paola Carbone; Alessandro Troisi</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在恒定电化学势下定量理解聚合物有机混合离子-电子导体（OMEICs）中聚集链的电荷分布随微结构演变的动态行为</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出一种基于“巨正则分子动力学（GC-MD）+ QM/MM哈密顿量”的恒电化学势经典原子模拟新范式，允许每条聚合物链独立依据其局域氧化还原电位与外加电势的差值发生可逆电子转移</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将巨正则系综思想引入聚合物电化学模拟，实现电子数作为动态变量的原子尺度调控；② 引入局域QM/MM红ox电位校正，使每条链的氧化还原倾向由其微环境（如极化、介电屏蔽）实时决定；③ 揭示“结构稳健性”源于电荷局域化而非长程协同，挑战了传统认为片层耦合主导电荷传输的假设</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">体系为半结晶层状/片层结构聚噻吩类OMEIC；基线为常规NPT-MD与静态DFT计算；在接近材料本征氧化还原电位时，链间电荷涨落增强，相邻片层法向夹角（interlamellar angle）变化达±2.3°；单链电荷态与自身构象高度相关（R² &gt; 0.91），但链间电荷关联性极弱（Pearson |r| &lt; 0.08）</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/e101fe17e75390c9dc7e0ee49099c0db86f78eb4" target="_blank">Machine Learning-Guided Pore Engineering of Metal-Organic Frameworks for Ultrahigh Volumetric Methane Storage. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Mengyao Song; Rui Gao; Jieqiu Huang; Yangzhen Li; Kaiqi Wang et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在温和条件下实现甲烷的高体积存储密度，以推动吸附式天然气技术的实际应用</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">结合机器学习（Extra Trees回归模型）与巨正则蒙特卡洛模拟进行大规模MOF筛选，并指导实验孔工程优化</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">ML预测与实验验证高度一致（R²=0.96），MUF-8-CH₃和MUF-8-C₄H₄实现237 cm³(stp) cm⁻³的创纪录体积工作容量；识别出孔隙率（0.78–0.86）、孔体积（1.20–2.00 cm³ g⁻¹）和骨架密度（0.40–0.70 g cm⁻³）的最优区间</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/e2d61b7b4f19e302b26269cbad2f49bb39e4a1fb" target="_blank">Molecular Insights into Microstructure and CH4/CO2 Adsorption of Mylonitic Coal </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Hanlin Liu; Caineng Zou; Zhen Shen; Qun Zhao; Ze Deng et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">探究糜棱煤（MC）与原生煤（PC）在CO₂/CH₄竞争吸附行为上的差异及其对CO₂-enhanced coalbed methane（CO₂-ECBM）工程适用性的决定机制</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">结合多尺度表征（¹³C NMR、FTIR、HRTEM）与巨正则蒙特卡洛（GCMC）模拟，解析煤的宏观分子结构与气体竞争吸附性能</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">MC比PC具有更高的CO₂/CH₄竞争选择性（SCO₂/CH₄ &gt;1，尤其在&lt;3.0 MPa下更显著）；MC微孔比表面积更大、芳香簇更长且取向性更高，更有利于CO₂吸附与CO₂-ECBM实施</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/e6a81073c576d02e7c13eeed1442bf967eec53d7" target="_blank">Mechanisms of Halomethane Adsorption on Functionalized Carbons: How Surface Chemistry Governs Selectivity in Realistic Gas Mixtures </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">María E. Farías Farías Hermosilla; A. Albesa</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">活性炭表面化学对卤甲烷（CH₃X）在真实环境条件（如湿度、混合气）下的吸附性能影响机制尚不明确</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用巨正则系综蒙特卡洛（GCMC）模拟，结合多种真实碳表面模型（未官能化及含醇、羰基、羧基官能团）研究纯组分与复杂混合气中的吸附行为</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">1）纯组分下未官能化表面（AC0）对CH₃Br吸附最强（Qst≈35–45 kJ/mol），但湿态混合气中容量骤降&gt;90%；2）羧基官能化表面（AC3）在湿态下保持~60%干态吸附能力，且CH₃Br/空气选择性（S&gt;100）显著优于AC0（S≈15）</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/e71317e2cf6a19683fbd60081e9289df6dc54828" target="_blank">Synthesis and Hydrogen Adsorption Simulation of Carbonized Hyper-Cross-Linked Polymers Derived from Various Green Flavonoid Monomers. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Jiahao Cheng; Xingxing Cheng; Zhiqiang Wang; Wenlong Wang</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">开发基于可再生黄酮类单体的超交联聚合物（HCPs）用于固态储氢，并揭示其碳化机制与氢吸附行为</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">通过Friedel-Crafts反应合成黄酮基HCPs，经碳化处理提升石墨化程度和分级孔隙率，并结合ReaxFF MD、DFT和GCMC多尺度模拟解析碳化路径与氢吸附机理</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">实验测得芹菜素衍生HCP在298 K/80 bar下储氢量达0.86 wt %；GCMC预测大豆苷元衍生HCP在77 K/80 bar下储氢量达5.32 wt %，接近美国能源部车载储氢目标</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/ee6764b1b4b84b12331bf50694c7faf12feabe54" target="_blank">In Silico Models for Predicting Adsorption of Organic Pollutants on Atmospheric Nanoplastics by Combining Grand Canonical Monte Carlo/Density Functional Theory and Quantitative Structure Activity Relationship Approach </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Ya Wang; Honghong Yi; Chao Li; Xiaolong Tang; Peng Zhao et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">预测有机污染物在多种纳米塑料上的吸附行为与机制，以评估其生态风险</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">整合巨正则蒙特卡洛模拟、密度泛函理论计算和QSAR建模，构建多维度高通量吸附预测模型</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">发现范德华力和静电相互作用是主要吸附驱动力；开发了可单次输入同步预测多种纳米塑料/污染物吸附容量的新型多维模型</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[1] From Local Structure to Thermodynamics and Transport of Water with Machine Learning Force Fields — 首次系统评估DFT泛函对MLFF预测水多尺度物理量（六维RDF、过剩熵、扩散系数）的影响，直接支撑电催化界面水结构与质子输运的可靠建模。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[5] Simulation of Charge Distribution and Microstructure in Semicrystalline Polymeric Ionic-Electronic Conductors Using Classical Simulation at Constant Electrochemical Potential — 其恒电势分子模拟框架假设局部氧化还原电位可均一化处理，可能低估电极/电解质界面处水分子取向极化与质子耦合电荷转移的非平衡效应。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">Behrens / Scheffler组（论文[1]隐含关联团队）— 持续推动DFT泛函基准化与MLFF在电化学界面水建模中的严格验证，方法论严谨性突出。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">多尺度模拟正从“单点精度”转向“跨尺度一致性验证”，尤其强调热力学（过剩熵）、动力学（扩散）、结构（高维RDF）三者的联合约束，以保障电催化界面模型的物理自洽性。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">所有论文均未显式耦合电极表面电子态（如d-band中心、局域态密度）与溶剂化结构/输运性质的动态反馈——当前MLFF或GCMC模拟普遍将电极视为刚性背景，忽略电荷注入/抽取对水氢键网络和离子分布的瞬时重构作用。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">缺乏针对电催化工况（如OER中&gt;1.6 V vs. RHE、局部pH &lt;2、强电场&gt;1 V/nm）下溶剂/电解质模型的实验可验证性标定；多数模拟仍基于理想化条件，难以区分真实反应界面中竞争吸附、场致解离与溶剂重组的时间尺度。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展“电势驱动的自适应MLFF”框架，在训练数据中嵌入外加电势与电极费米能级偏移作为显式变量，并通过原位XAS/XRD约束水/OH*配位数与扩散系数的联合演化，实现电极-电解质协同建模。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>
