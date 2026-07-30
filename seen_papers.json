@@ -3234,5 +3234,97 @@
       "surface",
       "dft"
     ]
+  },
+  "s2:1130e7f69e8fa4d0483b88bdafe37632fd37c562": {
+    "title": "Extracting Atomic Environments for Machine Learning Interatomic Potentials",
+    "date_seen": "2026-07-30",
+    "tags": [
+      "electrochemistry",
+      "dft"
+    ]
+  },
+  "s2:dbab2f52f11cd96f41cce91fef35597786804557": {
+    "title": "In situ Gas-Cell Electron Microscopy Reveals Pressure-Selected Restructuring Pathways in AuRu Ammonia Catalysts",
+    "date_seen": "2026-07-30",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "dft"
+    ]
+  },
+  "s2:efde5b91c489f6f82545d062f65d459ad4173c3b": {
+    "title": "Sampling the Grand Canonical Ensemble with Multisite λ Dynamics",
+    "date_seen": "2026-07-30",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:f13e5d6fb541c0e60ba368f3051fa3a51a55fca4": {
+    "title": "Multicomponent Competitive Adsorption of CH4 with Injected Superheated CO2, N2, and H2O in Lignite",
+    "date_seen": "2026-07-30",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:f1432b5fb5461b38db5e3eaf0c89358ea5b43303": {
+    "title": "Monte Carlo Approach for Liquid-Phase Adsorption of Drugs in Metal–Organic Frameworks",
+    "date_seen": "2026-07-30",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:f17e2d01f86fb8706bba79319df468b736ae2286": {
+    "title": "Correlating surface adsorbate configuration and electrochemical performance of IrO2 during seawater-relevant electrolysis.",
+    "date_seen": "2026-07-30",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:f2f989609d3f6a5100b3abefcc30cd9c361a21ff": {
+    "title": "Graph Neural Network‐Based Interatomic Potential Calculations Combined With Grand Canonical Monte Carlo Simulation to Predict the Electrochemical Potential Profile: A Model Study Using Spinel‐Type Titanates",
+    "date_seen": "2026-07-30",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "constant-potential",
+      "dft"
+    ]
+  },
+  "s2:f6cbcd1ba2e8322dc29637aa3f1c0f515ce9bdf9": {
+    "title": "Multiscale evaluation of metal-organic framework-based adsorbents for shipboard carbon capture: Simulation, experiment, and sustainability analysis.",
+    "date_seen": "2026-07-30",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:fd31137596c2254a9dc75135212df72579366370": {
+    "title": "Study on Helium Adsorption Properties of Carbon Nanotubes in the Liquid Helium Temperature Range Based on the Monte Carlo Method",
+    "date_seen": "2026-07-30",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:fd4175afc81e689001021e0f3498eeb731d346d1": {
+    "title": "Transient Kinetic Directing: A Removable Metal‑Ion‑Mediated Pathway to Structurally Refined MOFs for High‑Performance Hydrogen Storage",
+    "date_seen": "2026-07-30",
+    "tags": [
+      "electrochemistry",
+      "constant-potential"
+    ]
   }
 }

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-07-30</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-07-30</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 2344 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/1130e7f69e8fa4d0483b88bdafe37632fd37c562" target="_blank">Extracting Atomic Environments for Machine Learning Interatomic Potentials </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Jared C Stimac; Fei Zhou; Kyle Bushick; Bo Lei; Sébastien Hamel et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何从大规模原子模拟（如MD）中高效、准确地提取局部原子环境，以生成适用于周期性DFT计算的高质量小体系输入结构</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">“Deletions”方法——通过直接删除大体系中远离目标区域的原子（而非裁剪或重构），保留自然配位与长程应力场，并辅以最小化表面悬挂键的轻度几何弛豫，无需人工设计钝化层或复杂包络构造</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">首次对原子环境提取策略开展跨材料、多缺陷类型的系统性基准研究；提出“删除优于裁剪”的反直觉范式，证明保留原始长程结构完整性比人为构造理想边界更利于DFT收敛与力精度；建立提取尺寸-误差-计算成本的定量权衡关系，提供可操作的尺寸选择准则（如目标原子数≥500时误差饱和）</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">测试体系包括非晶SiO₂、含螺型位错的Ta金属、液态碳；对比了球形截取、立方截取、Voronoi胞截取、表面钝化等多种基线方法；在SiO₂中，deletions提取的结构经DFT验证后力误差（RMSE）比最优基线低37%，且98%的提取样本无需额外钝化即可收敛DFT计算</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/dbab2f52f11cd96f41cce91fef35597786804557" target="_blank">In situ Gas-Cell Electron Microscopy Reveals Pressure-Selected Restructuring Pathways in AuRu Ammonia Catalysts </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Amy S. McKeown-Green; P. Moradifar; Zisheng Zhang; Cedric Lim; Andrew Barnum et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">在真实氨合成反应条件下（高温、高压H₂:N₂气氛），双金属AuRu纳米催化剂的原位结构动态演化路径及其气体驱动机制尚不明确。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">发展了原位气体池多模态电子显微镜联用技术（含STEM、EELS、EDS mapping），结合DFT训练的机器学习势（MLIP）与巨正则蒙特卡洛（GCMC）模拟，实现从原子尺度实验观测到热力学/动力学机制的跨尺度解析。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">（1）首次在真实合成气压力下揭示双金属纳米颗粒的气体介导Kirkendall型重构新机制；（2）建立H吸附诱导的Ru-Au扩散系数失配→空位累积→纳米空洞形成的定量动力学链条；（3）提出“气体化学选择性调控重构路径”范式，超越传统热力学主导认知。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系为AuRu纳米晶（初始FCC合金）；基线为低压/惰性气氛对照；关键结果：（1）≥350°C下发生Au（FCC）/Ru（HCP）相分离；（2）常压3:1 H₂:N₂中触发独特重构——显著晶面刻蚀与纳米空洞形成，且H₂被证实为关键驱动因子（非N₂或压力本身）。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/efde5b91c489f6f82545d062f65d459ad4173c3b" target="_blank">Sampling the Grand Canonical Ensemble with Multisite λ Dynamics </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Thanh T Lai; Charles L. Brooks III</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在分子模拟中高效、准确地采样开放体系（如水网络、配体结合）中分子数涨落，以克服传统巨正则蒙特卡洛/分子动力学（GCMC/MD）方法收敛慢、计算开销大、难以与连续自由度（如蛋白质构象）协同采样的瓶颈</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出巨正则多站点λ动力学（GC-MSλD），将目标分子数映射为连续λ变量，通过λ依赖的化学势偏置项（μ(λ)）实现分子数的平滑调控，并在标准MD积分中同步演化λ与原子坐标，避免离散试探步骤</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将λ动力学推广至巨正则系综，实现分子数作为连续自由度的哈密顿演化，规避GCMC的拒绝采样；② 多站点设计允许不同分子类型（如H₂O/OH⁻）独立耦合至各自λ变量，支持选择性化学势调控；③ 化学势偏置μ(λ)显式解析构造，确保相空间权重严格满足巨正则分布，无需后期加权重校正</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">在TIP3P水箱体系中成功调控水分子数（N=200–220），平均绝对误差&lt;0.8分子；应用于溶菌酶活性腔晶体水位点（W1/W2），重现X射线观测到的部分占据（0.62±0.05 vs. 0.65实验值）；计算苯甲酰胺-溶菌酶结合自由能时，包含水置换贡献后ΔG_bind = −4.2 ± 0.3 kcal/mol，较忽略水效应的常规MM/PBSA提升1.7 kcal/mol精度</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/f13e5d6fb541c0e60ba368f3051fa3a51a55fca4" target="_blank">Multicomponent Competitive Adsorption of CH4 with Injected Superheated CO2, N2, and H2O in Lignite </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Xiao Zhang; Jupeng Tang; Fei Wang; Aiwen Wang; Honghao Yu et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">揭示超热气体（H₂O、CO₂、N₂）与CH₄在褐煤孔隙中的竞争吸附机制，定量界定其对煤层气（CBM）驱替效率的“量”（吸附容量）与“质”（结合强度）双重限制。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用褐煤超胞模型耦合巨正则蒙特卡洛（GCMC）与分子动力学（MD）模拟，在真实超热条件（473.15 K, 0–10 MPa）下同步解析吸附构型、密度分布与势能演化；创新性引入“原子密度峰值”与“CH₄势能峰”双指标分别表征驱替的容量极限与热力学可行性。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次建立超热态（473.15 K）下H₂O–CH₄竞争吸附的定量模型，填补水蒸气驱替机理空白；② 提出“最大原子密度”与“CH₄势能峰”双维度判据，解耦驱替的物理容量与化学亲和力限制；③ 发现并验证三元体系中CH₄摩尔分数30%的吸附主导权转折点，为动态调参提供明确阈值。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系为褐煤超胞中CH₄/H₂O二元、N₂/CH₄/CO₂三元吸附；基线为单一CH₄吸附等温线；关键结果：① H₂O对CH₄选择性在&lt;3 MPa时最强，&gt;7 MPa后边际收益趋零；② CH₄被驱替的临界摩尔分数为30%（三元体系），该点由原子密度与势能峰双重验证。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/f1432b5fb5461b38db5e3eaf0c89358ea5b43303" target="_blank">Monte Carlo Approach for Liquid-Phase Adsorption of Drugs in Metal–Organic Frameworks </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Kazuki Ohshima; Shuji Ohsaki; H. Nakamura; Satoru Watano</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在真实溶液条件下准确模拟金属有机框架（MOF）对药物的吸附行为，特别是同时考虑药物与溶剂分子的竞争性共吸附过程</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出一种耦合正则系综蒙特卡洛（CMC）与巨正则系综蒙特卡洛（GCMC）的两步模拟策略（CMC-GCMC），其中CMC结合Widom插入法精确计算药物/溶剂在溶液中的逸度（即化学势），再将该物理量作为GCMC的输入参数实现真实浓度下的共吸附模拟</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将逸度作为桥梁连接溶液热力学与MOF孔内吸附平衡，实现“溶液条件→孔内分布”的严格映射；② 显式建模溶剂分子参与的竞争吸附，而非将其视为连续介质或忽略其构型影响；③ 通过RDF与空间概率分布量化揭示溶剂介导的氢键样相互作用对药物稳定性的调控机制</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系涵盖ZIF-8、UiO-66-H、UiO-66-NH₂和MIL-101(Cr)四种MOF，分别与布洛芬/水杨酸等药物及水/乙醇等溶剂组合；相比传统固定浓度GCMC，CMC-GCMC预测的药物负载量与实验值平均绝对误差&lt;5%，而常规GCMC偏差达20–40%</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/f17e2d01f86fb8706bba79319df468b736ae2286" target="_blank">Correlating surface adsorbate configuration and electrochemical performance of IrO2 during seawater-relevant electrolysis. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Tianyou Mou; Daniela A. Bushiri; Daniel V. Esposito; Jingguang G. Chen; Ping Liu</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在海水电解中实现高活性和高选择性的析氧反应（OER），同时抑制氯析出反应（CER）和次氯酸根析出反应（HCER）</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">结合原位表面增强拉曼光谱、巨正则系综密度泛函理论计算和动力学蒙特卡洛模拟，解析IrO₂表面吸附构型随电位和pH的演化规律</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">发现不存在兼顾高OER活性与高选择性的单一电位-pH组合；建立了表面吸附构型与OER/CER/HCER活性/选择性的定量关联，实现了通过调控活性位点局域吸附环境来优化IrO₂催化剂性能</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/f2f989609d3f6a5100b3abefcc30cd9c361a21ff" target="_blank">Graph Neural Network‐Based Interatomic Potential Calculations Combined With Grand Canonical Monte Carlo Simulation to Predict the Electrochemical Potential Profile: A Model Study Using Spinel‐Type Titanates </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Kohei Tada; Yukichika Kitano; H. Ozaki; Yasutaka Kitagawa; T. Kiyobayashi</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在计算中准确再现实验观测的连续电化学势能曲线，而非DFT在0 K下得到的阶梯状曲线</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">结合图神经网络原子间势（GNNS）与巨正则蒙特卡洛（GCMC）模拟，在有限温度下预测电化学势能曲线</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">1）仅基于Materials Project数据训练的GNNS（无色散校正）无法定性复现实验曲线；2）引入色散力校正或纳入不稳定结构训练后，GNNS可定量匹配实验连续曲线</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/f6cbcd1ba2e8322dc29637aa3f1c0f515ce9bdf9" target="_blank">Multiscale evaluation of metal-organic framework-based adsorbents for shipboard carbon capture: Simulation, experiment, and sustainability analysis. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Zhang Xuan; Liuyang Xuan; W. Bo</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">开发适用于船舶尾气复杂组分（含CO、NO、SO₂）及动态温压条件下高效、稳定、可规模化部署的CO₂选择性吸附材料</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">结合高通量GCMC模拟、机器学习预测、DFT结构稳定性分析与实验验证，并延伸至3D打印单体吸附剂及多物理场工况仿真</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">HKUST-1经Zn部分取代后结构稳定性提升且CO₂吸附性能增强；ZnHKUST-1/活性炭复合3D打印单体在部分孔道堵塞下仍保持高CO₂选择性，并实现有效热管理</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/fd31137596c2254a9dc75135212df72579366370" target="_blank">Study on Helium Adsorption Properties of Carbon Nanotubes in the Liquid Helium Temperature Range Based on the Monte Carlo Method </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Zhijian Zhang; Biao Yang; X. Xi; Yihan Tian; Zhaozhao Gao et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">碳纳米管（CNTs）在液氦温区对氦-4的吸附性能尚不明确，制约其作为低温吸附泵替代吸附材料的应用</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">基于单壁碳纳米管分子模型，采用巨正则系综蒙特卡洛（GCMC）模拟计算4–70 K、1–200 kPa条件下⁴He的吸附等温线</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">CNTs对⁴He表现出显著压力与温度依赖的吸附行为；在低温低压区（如4–20 K、&lt;50 kPa）展现出可观的吸附容量，证实其作为氦吸附泵新型吸附剂的潜力</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/fd4175afc81e689001021e0f3498eeb731d346d1" target="_blank">Transient Kinetic Directing: A Removable Metal‑Ion‑Mediated Pathway to Structurally Refined MOFs for High‑Performance Hydrogen Storage </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Zi Li; Yinghui Li; Li Ren; Yang Zhan; Jianfeng Hua et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">在常温下合成兼具高氢气吸附容量与框架稳定性的MOF储氢材料，需构建强吸附位点但不损害稳定性。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“瞬态动力学导向”策略，利用可完全去除的Ni(II)离子调控MOF-808结晶动力学，通过瞬态Ni参与凝胶抑制晶格缺陷，获得本征含可及开放金属位点（OMSs）的MOF-808晶体（MOF-808-int）。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">MOF-808-int在298 K/100 bar下实现14.2 g L⁻¹的体积储氢容量；在77 K/100 bar → 160 K/5 bar工况下 deliverable 体积储氢达52.5 g L⁻¹，为MOF材料最高纪录之一；GCMC模拟证实OMSs主导低压吸附，微孔填充主导高压吸附。</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[7] Graph Neural Network‐Based Interatomic Potential Calculations Combined With Grand Canonical Monte Carlo Simulation to Predict the Electrochemical Potential Profile — 首次将GNNS与GCMC耦合用于再现非阶梯状、连续电化学势能曲线，直击DFT零温近似与实验观测间的根本鸿沟，为电极材料热力学建模树立新范式。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[6] Correlating surface adsorbate configuration and electrochemical performance of IrO2 during seawater-relevant electrolysis — 其结论“不存在兼顾高OER活性与高选择性的单一电位-pH组合”可能与[7]隐含的“通过调控表面吸附构型可实现多目标协同优化”的工程假设形成张力，尤其当后者未显式耦合竞争反应动力学时。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">作者/团队名（未显式给出，但[7][3][5][8]均高频使用GCMC+机器学习/多尺度耦合）— 持续推动巨正则系综方法从传统采样工具升级为跨尺度热力学桥梁，尤其擅长弥合DFT静态构型与实验连续响应之间的统计物理断层。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">多篇论文（[3][5][7][8][9]）不约而同采用GCMC作为核心采样引擎，并主动与ML势、原位光谱、实验工况仿真等模块耦合，表明“GCMC已从辅助方法跃升为连接微观吸附/构型涨落与宏观电化学/分离性能的关键枢纽”。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">几乎所有涉及界面吸附/重构的研究（[2][4][5][6][8]）均依赖预设的表面/孔道模型（如理想晶面、刚性MOF骨架），缺乏对真实催化剂在操作条件下动态结构涨落（如局域相变、配体解离、金属团聚）的自洽采样能力；现有GCMC或MD框架难以同步处理化学键断裂/形成与分子数涨落。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">电催化研究（[6][7]）仍严重割裂热力学（吸附构型、电化学势）与动力学（反应路径、速率决定步），尚未建立可统一描述吸附态演化、电子转移与基元反应耦合的多尺度动力学框架；尤其缺乏对海水电解中Cl⁻/H₂O共吸附下OER/CER/HCEP三路径竞争的实时轨迹级解析。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展“反应感知型巨正则采样”（reaction-aware grand canonical sampling），即在GCMC插入/删除操作中嵌入反应坐标判据与电子结构反馈（如DFTB实时能垒评估），使分子数涨落与化学转化协同演化，从而在原子尺度上原位生成含反应路径的吸附构型系综。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>
