@@ -3326,5 +3326,80 @@
       "electrochemistry",
       "constant-potential"
     ]
+  },
+  "s2:7b032f4d8b0ede5794fc2b36a117966f7dbb3541": {
+    "title": "MAPLE: a machine-learning force-field-native platform for automated reaction modeling and enzyme design",
+    "date_seen": "2026-07-31",
+    "tags": [
+      "electrochemistry",
+      "catalysis"
+    ]
+  },
+  "s2:fd7554a68d67238acb12e8476dfce11ca441ba40": {
+    "title": "Mechanistic Insights into CO2/CH4 Competitive Adsorption in Coal for Enhanced Methane Recovery and Carbon Sequestration",
+    "date_seen": "2026-07-31",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:0080b436b671c79150c6336d2f513eeb99c292ce": {
+    "title": "Entropy-based methods for formulating bottom-up ultra-coarse-grained models.",
+    "date_seen": "2026-07-31",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:00aec1f7d18310f7b1eab6414846e9b0b0637b3f": {
+    "title": "Artificial intelligence-driven advances in medical microbiology: a review on next-generation diagnosis, surveillance, and therapeutics",
+    "date_seen": "2026-07-31",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:027af200ce327fc013eaed2b1a706d79cc356805": {
+    "title": "Empirical Reconstruction of Pre‐1995 Extreme Storms Using ML‐Derived Solar Wind Inputs",
+    "date_seen": "2026-07-31",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:029243b7fcff4ad5d266ce6cc8177c2bbd3a14f8": {
+    "title": "Analysis of existing techniques in human emotion and behavioral analysis using deep learning and machine learning models",
+    "date_seen": "2026-07-31",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:02caf8dede70f350e2e38b73a6309bcdaaed5cff": {
+    "title": "Iterative Pretraining Framework for Interatomic Potentials",
+    "date_seen": "2026-07-31",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:03b60be21ab2e1f93753d6cc73f4b1c467503b68": {
+    "title": "Optimization of Transferable Interatomic Potentials for Glasses toward Experimental Properties",
+    "date_seen": "2026-07-31",
+    "tags": [
+      "electrochemistry",
+      "active-learning"
+    ]
+  },
+  "s2:050433200823f5071077908f7ec94bffb0554f62": {
+    "title": "The Role of Artificial Intelligence (AI) in Education and Its Use in Combating Misinformation",
+    "date_seen": "2026-07-31",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:057185563f93b0e72dca490824aa791cf37a425e": {
+    "title": "Transverse force sensing with a uniform FBG and unpolarized light via machine learning",
+    "date_seen": "2026-07-31",
+    "tags": [
+      "general"
+    ]
   }
 }
