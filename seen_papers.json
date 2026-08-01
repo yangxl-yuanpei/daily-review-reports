@@ -3401,5 +3401,82 @@
     "tags": [
       "general"
     ]
+  },
+  "s2:72380a97081334db87a70d6acaa1dfd77217aa91": {
+    "title": "Physics‐based prediction of protein folding and unfolding rates: Examining the roles of fold topology and core packing",
+    "date_seen": "2026-08-01",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:71ee27cc1fbd2d6febb0bc75ee39fd07b4f7b322": {
+    "title": "CO2 Adsorption in MOFs: A GCMC Framework for Trace Gas Capturing Materials",
+    "date_seen": "2026-08-01",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:05b43a5fc217b282d56ff2351b3f0344ed1c3055": {
+    "title": "Dexterous Manipulation Through Imitation Learning: A Survey",
+    "date_seen": "2026-08-01",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0652becfe36f14a7c2340410a7d54c4d8d3b366b": {
+    "title": "Path-integral molecular dynamics with actively-trained and universal machine learning force fields",
+    "date_seen": "2026-08-01",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "NQE",
+      "surface",
+      "dft",
+      "active-learning"
+    ]
+  },
+  "s2:06993f2d43cde4c816160ac6f3ea566cdb6427e7": {
+    "title": "Precision Strike: Targeted Misclassification of Accelerated CNNs with a Single Clock Glitch",
+    "date_seen": "2026-08-01",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:06a86c04c507ff6da19729e85a883277dea1d88f": {
+    "title": "Machine learning intermolecular transfer integrals with compact atomic cluster representations",
+    "date_seen": "2026-08-01",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:06b8e5f5d2a9309c78907d91a28d4d3113519b1b": {
+    "title": "HlightReaxMD: A Machine Learning-Augmented Multiscale Analysis Framework for Radiation Chemistry Dynamics and Damage Prediction",
+    "date_seen": "2026-08-01",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:06c235d3e5401a588317e0b8c5549e22e23d92e2": {
+    "title": "Bridging quantum mechanics to liquid properties via a universal organic force field.",
+    "date_seen": "2026-08-01",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:072628a395b940775c04d0ee32590fe1716dfc67": {
+    "title": "Predicting Animal Foraging Behaviour Under Climate Variability Using Advanced Ecological Simulation Models",
+    "date_seen": "2026-08-01",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:0750e26e4d500a01623d3aba0303a4b2d6065193": {
+    "title": "A Standardized Benchmark for Machine-Learned Molecular Dynamics using Weighted Ensemble Sampling",
+    "date_seen": "2026-08-01",
+    "tags": [
+      "surface"
+    ]
   }
 }
