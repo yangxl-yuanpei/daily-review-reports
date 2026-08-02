@@ -3478,5 +3478,84 @@
     "tags": [
       "surface"
     ]
+  },
+  "s2:982738f88a78b264ae601c08a6f6013ca26bcdd0": {
+    "title": "Transformation Journey of Zr-Based Metal-Organic Frameworks: Study on Mechanics and Hydrogen Storage Under Doping Regulation.",
+    "date_seen": "2026-08-02",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:079521164fcddf0102200bc9cbc2a60ab569b71d": {
+    "title": "Geometric Formulation of Unified Force-Impedance Control on SE(3) for Robotic Manipulators",
+    "date_seen": "2026-08-02",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:07c800c5c911207c02ad55e330f4c9b0c79da03f": {
+    "title": "AI Techniques and Applications in AEC: Opportunities, Challenges, and Future Perspectives – A Review Paper",
+    "date_seen": "2026-08-02",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:0807d41087beff6a7835237d21edcabc154b98b7": {
+    "title": "Anomalous expansion of interatomic distance in liquid Al-Zn alloy during cooling.",
+    "date_seen": "2026-08-02",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:09148fb15b12def93a668652842a0e035b0cd20f": {
+    "title": "Micro-spring force sensors using conductive photosensitive resin fabricated via two-photon polymerization",
+    "date_seen": "2026-08-02",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:099bddaf1fc2c2c67000cebd812333abccb76470": {
+    "title": "Machine Learned Force Fields: Fundamentals, its reach, and challenges",
+    "date_seen": "2026-08-02",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:09df29200dc4ba064ec66753cc309f3cd0b54989": {
+    "title": "Design and Implementation of an IOT-Enabled Automatic Chemical Pesticide Sprayer Using ESP32 Microcontroller",
+    "date_seen": "2026-08-02",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:0ab280a30f0993e9c2939f6586a46ccb55261ae5": {
+    "title": "Response-Based Forecasting of Vessel Motion Shifts to Data-Driven Methods",
+    "date_seen": "2026-08-02",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:0b0abb8c853a7faa4d5c242528c535ee50f0aac8": {
+    "title": "Research on Mechanisms and Pathways of Generative Artificial Intelligence Empowering Intelligent Manufacturing Curriculum Teaching Reform",
+    "date_seen": "2026-08-02",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:0c52cd88b97e06acdf5f843e3513f6a6bfe81171": {
+    "title": "Accurate Modeling of Interfacial Thermal Transport in van der Waals Heterostructures via Hybrid Machine Learning and Registry-Dependent Potentials.",
+    "date_seen": "2026-08-02",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "dft"
+    ]
   }
 }
