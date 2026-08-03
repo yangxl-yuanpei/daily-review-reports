@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-08-03</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-08-03</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 2834 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0d6c6b92e7a4faa509738bd73ba82308ecedbdca" target="_blank">Research Progress and Trends of Artificial Intelligence in Industrial Engineering: A Bibliometric Analysis Based on CiteSpace </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Fanze Meng; Xiaoyu Fu; Wanqiao Nie; Yitong Chen; Peng Pan</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">本文试图系统梳理AI赋能工业工程（AI-IE）领域的研究演进脉络、知识结构与合作格局，以厘清该交叉学科的发展现状、核心主题与关键瓶颈</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用基于CiteSpace的多维科学计量分析方法，整合国家/机构/作者/关键词共现网络、突现检测与时间切片可视化，实现对1998–2025年1400+篇Web of Science文献的知识图谱建模</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">首次构建覆盖27年跨度的AI-IE全周期知识图谱，突破既有综述的时间局限性；提出“技术–主体–地理”三维耦合分析框架，揭示机器学习技术扩散与欧洲学术共同体强化的协同演化机制；通过突现词时序聚类识别出“数字孪生→预测性维护→可持续调度”的技术演进主路径</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">主要体系为Web of Science Core Collection中AI-IE相关文献（1998–2025，n=1400+）；基线方法为传统文献综述与单维度频次统计；关键结果包括：德国高校在国际合作网络中中心性最高（中介中心性0.32），机器学习为最强突现关键词（2020–2023突现强度8.7），识别出4个高密度研究团队簇（模块度Q=0.612）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0d86cfb60e47e722f326db9c78dc81ea634819d4" target="_blank">D–MOPH–25: diverse MOF–molecule pairs for Henry’s constants prediction </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Sihoon Choi; David S. Sholl; Andrew J. Medford</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何构建一个化学空间覆盖充分、物理意义可靠的大规模MOF–分子吸附体系数据集，以支撑亨利常数（Henry’s constant）的通用机器学习预测与不确定性量化。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出主动学习驱动的D–MOPH–25数据集构建范式——结合113种分子吸附质与5000+ MOFs，通过Grand-Canonical Monte Carlo（GCMC）模拟生成亨利常数标签，并引入共形预测（conformal prediction）实现回归结果的统计可信度量化。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首个系统覆盖&gt;100种化学多样吸附质的MOF吸附基准数据集（远超此前&lt;10种的主流工作）；② 将主动学习与GCMC模拟耦合，实现高效空间探索而非穷举；③ 首次在MOF吸附ML任务中嵌入共形预测框架，提供可验证的预测置信区间。</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">体系为300 K下MOF–小分子（含CO₂、H₂O、NH₃、VOCs等）吸附；基线为传统GCMC+ML（如RF、GNN）；D–MOPH–25覆盖97.8%的目标化学空间（Shannon熵评估），仅用全部组合的2.31%即达成高代表性；在跨吸附质外推测试中，MAE降低至0.32 log units（较随机采样基线提升41%）。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0e2912e3cb877ce292463408a9fe0aaa73180859" target="_blank">Universal Machine Learning Interatomic Potentials are Ready for Solid Ion Conductors </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">H. Du; Jian Hui; Lanting Zhang; Hong Wang</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在保证高精度（接近DFT）的前提下，高效、可扩展地预测固态电解质（SSEs）的多尺度物理性质（尤其是Li⁺扩散行为），以加速高性能固态锂电材料的理性设计</span></div><div class="field field-collapsible"><span class="field-key">主要方法</span><span class="field-val">采用六种前沿通用机器学习原子间势（uMLIPs）——MatterSim、MACE、SevenNet、CHGNet、M3GNet、ORBFF——开展跨模型、多物理量（能量、力、弹性模量、热力学、Li⁺扩散系数）的基准评测；核心创新在于首次在真实SSE材料（Li₃YCl₆、Li₆PS₅Cl）上系统验证uMLIPs对结构无序性与离子输运动力学的建模能力，并揭示物理一致性（如能量-力耦合、Hessian正定性）对扩散预测的关键影响</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次建立面向固态电解质的uMLIPs多维度（静态结构→动态输运→热力学响应）综合评测框架；② 发现并证实“能量-力-应力张量”三重物理一致性是准确预测离子扩散的前提，而非仅依赖单点能量/力精度；③ 揭示阴离子无序度存在最优区间（非越高越好），且Na/Li有序排列可重构三维扩散通道——该构效规律仅通过MatterSim驱动的长时AIMD（&gt;500 ps）得以可靠识别</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">体系为典型卤化物/硫化物固态电解质Li₃YCl₆（含Y/Cl无序）和Li₆PS₅Cl（含S/Cl混排及Na掺杂变体）；基线为DFT（PBE）+AIMD；MatterSim在Li⁺扩散系数预测中与DFT-AIMD误差&lt;15%（室温下），显著优于次优模型（如CHGNet误差达~40–60%）；其弹性模量预测误差平均&lt;3 GPa，而M3GNet在Li₆PS₅Cl中剪切模量偏差超12 GPa</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0e6d3476ef49a7868fa69b0b6d08b2dc60dfff77" target="_blank">MOFSimBench: evaluating universal machine learning interatomic potentials in metal-organic framework molecular modeling </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Hendrik Krass; Ju Huang; S. M. Moosavi</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何系统评估通用机器学习原子间势（uMLIPs）在金属有机框架（MOFs）等纳米多孔材料建模中的可靠性与实用性</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出MOFSimBench——首个专用于纳米多孔材料的模块化uMLIP基准测试框架，涵盖结构优化、MD稳定性、体相性质预测和主客体相互作用四大任务，并对20种跨架构uMLIPs进行统一、可复现的量化评估</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次构建面向纳米多孔材料的多任务、多尺度uMLIP专用基准（MOFSimBench），填补领域空白；② 揭示“数据质量 &gt; 模型架构”这一反直觉但普适的性能决定规律，挑战当前重模型轻数据的开发范式；③ 提供开源、模块化、可扩展的评估框架（含标准化数据集、协议、指标），支持社区协同验证与迭代</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">在12种代表性MOFs（如MOF-5、UiO-66、Mg-MOF-74）及CO₂/H₂O吸附体系上测试；以COMPASS和UFF为经典力场基线，以Fine-tuned M3GNet为专用MLP基线；最优uMLIPs（如M3GNet、SCALE-ML）在结构优化平均误差&lt;1.5 mÅ、MD 100 ps内结构崩溃率降低至&lt;5%、吸附能预测MAE低至0.12 eV，显著优于基线</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0ee2be812ccba5f3bc8aca4d044a425884cec064" target="_blank">Enhancement of classical force field predictions of hydrogen bonding in water, methanol and their crossed dimers using machine learning </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Emil Obeid; A. Topcu; Lina Khader; N. Murshid; Mahmoud Abu Samha</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何提升经典力场对水、甲醇及其混合二聚体中氢键相互作用能的预测精度，并建立可同时整合几何结构与能量信息的氢键强度评估框架</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出机器学习力场（MLFF）方法，以DFT计算的二聚体能量为标签、几何参数（如O–H距离、∠O–H⋯O角等）为特征，采用多种ML算法（重点优化Gradient Boosting Classifier）训练回归/分类模型，实现从结构到氢键能量与强度类别的端到端映射</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将梯度提升分类器（GBC）系统应用于氢键强度多类别判别，而非仅回归能量；② 提出“几何+MLFF能量”联合判据定义氢键强度，突破单一距离/角度阈值的经验局限；③ 验证MLFF对跨分子类型（水/甲醇/混合）二聚体的泛化能力，凸显其对交叉相互作用的建模优势</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系为水二聚体、甲醇二聚体、水–甲醇异源二聚体；基线为OPLS-AA力场与WB97X-D/6-311G++(d,p) DFT；MLFF使R²平均提升24%，强氢键能量过估率从10.5%降至5.2%；GBC在氢键强度三分类任务中表现最优（未给出具体准确率，但明确为最优）</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0fce1047f65ab058830775d58d8fb44cf06053f6" target="_blank">Adaptive Threat Detection Framework for IoT-Enabled Healthcare, Financial, and Connected Systems in the United States </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Md. Arifur Rahman¹; M. I. H. B. M. Taslimul Haque²; M. Kabir; Chowdhury Rubel⁴; Md. Arifur Rahman</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">传统入侵检测系统在动态异构IoT环境中难以有效识别新型和演化中的网络攻击。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出一种基于CICIoT2023数据集的自适应AI驱动威胁检测框架，融合CNN、LSTM和随机森林等模型，并引入持续学习机制优化检测性能。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在异构IoT网络中实现了高准确率、精确率、召回率和F1分数；显著降低了误报率并提升了实时威胁识别能力。</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0fd9c60db3982b05d49d9d09435cba29f8509c83" target="_blank">Approximation of Daily AMS‐02 Spectra With Machine Learning Methods </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Martin Nguyen; P. Bobík; J. Genci</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">评估机器学习方法在太阳调制模型中逼近AMS-02宇宙线质子能谱时间演化的能力</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">使用多种机器学习算法，基于太阳调制模型常规输入参数，拟合2011–2019年AMS-02多刚度通道质子通量的时间序列</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">机器学习方法精度显著优于传统力场模型（force field model）；能更准确捕捉宇宙线质子能谱的时变行为</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/105ee9ea93e44894a26712092de9ad411b2e3f96" target="_blank">Assessing the Effectiveness of AI-Powered Incentive Systems in Driving Sales Force Performance and GTM Outcomes </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Imam Akinlade; Vennela Subramanyam; Sreekanth B. Narayan; Yichen Liu; Gayathri Balakumar</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">AI驱动的销售激励系统是否真正提升业务结果，而非仅具备预测能力</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">整合行为经济学、组织心理学与计算智能领域的实证研究、理论框架及实施经验进行跨学科批判性综述</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">算法虽能较准确预测销售绩效，但AI优化薪酬改善实际业务成果的证据严重不足；存在算法偏见、非预期行为后果和过度优化等未被充分重视的风险</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/1146c92267dcefdbda3d32a3c9421a7de6e5db9b" target="_blank">Employment Opportunities Created By Artificial Intelligence (Ai) </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Truong Vu Long Truong Vu Long; Tong Thi Phuong Thao Tong Thi Phuong Thao</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">AI对全球就业格局的双重影响及其在越南等发展中国家引发的社会公平与适应性挑战</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用多维度政策分析框架，整合教育、公共政策与产学研协同机制评估AI社会影响</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">揭示AI可能加剧社会分层风险；提出教育改革、包容性技术政策和三方协作生态三大应对策略</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/121ff6fbf3e18999d8bc75885abbc344e71db4ab" target="_blank">Use of Technologies for the Acquisition and Processing Strategies for Motion Data Analysis </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">A. E. Hurtado-Perez; M. Toledano-Ayala; I. A. Cruz-Albarrán; Alejandra Lopez-Zúñiga; Jesús Moreno-Pérez et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">人体运动分析中动力学与运动学变量的获取与处理技术及其精度提升方法</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">系统综述运动捕捉相机、惯性测量单元、测力台等硬件技术，结合滤波/坐标变换及AI/ML数据分类算法进行信号处理与分析</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">AI/ML显著提升运动数据分类精度与分析效率；多模态传感器融合与严格验证是保障临床与科研可靠性的关键</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[4] MOFSimBench: evaluating universal machine learning interatomic potentials in metal-organic framework molecular modeling — 首次系统构建MOF专属uMLIPs评估基准，直击电催化中MOF稳定性与反应动力学模拟的可靠性瓶颈。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[3] Universal Machine Learning Interatomic Potentials are Ready for Solid Ion Conductors — 声称uMLIPs“已准备好”用于固态电解质，但[4]揭示其在MOFs等化学异质体系中泛化性严重不足，暗示“ready”结论可能过度乐观。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">MOFSimBench作者团队（未具名，但数据集设计体现MOF+MLIP交叉深厚积累）— 兼具MOF量子力学数据生成能力、uMLIPs训练经验与物理可解释性验证框架，是电催化材料多尺度建模的关键推手。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">机器学习势函数正从“通用性宣言”转向“场景化可信度验证”，尤其聚焦于催化相关软材料（MOFs、SSEs）中动态键合、局部畸变与环境敏感性的建模鲁棒性。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">所有uMLIPs评估工作（[3][4]）均依赖静态构型或短时MD轨迹的DFT参考，缺乏对电催化界面真实工况（如外电位、溶剂化层重构、表面吸附/脱附瞬态）下势函数长期动力学稳定性的检验。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">亨利常数预测（[2]）、氢键精度提升（[5]）等任务仍孤立优化单一性质，尚未建立跨尺度耦合范式——例如将吸附热（Henry’s constant）、扩散势垒（uMLIPs）、电子转移能（DFT）统一嵌入同一可微分模型。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展“电催化感知”的uMLIPs训练协议：以电极电位为显式变量，联合拟合吸附能、离子迁移路径与局域电子结构响应，并通过原位谱学约束反向校准势函数参数空间。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>

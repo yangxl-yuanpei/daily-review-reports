@@ -3557,5 +3557,82 @@
       "surface",
       "dft"
     ]
+  },
+  "s2:0d6c6b92e7a4faa509738bd73ba82308ecedbdca": {
+    "title": "Research Progress and Trends of Artificial Intelligence in Industrial Engineering: A Bibliometric Analysis Based on CiteSpace",
+    "date_seen": "2026-08-03",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:0d86cfb60e47e722f326db9c78dc81ea634819d4": {
+    "title": "D–MOPH–25: diverse MOF–molecule pairs for Henry’s constants prediction",
+    "date_seen": "2026-08-03",
+    "tags": [
+      "surface",
+      "active-learning",
+      "generative"
+    ]
+  },
+  "s2:0e2912e3cb877ce292463408a9fe0aaa73180859": {
+    "title": "Universal Machine Learning Interatomic Potentials are Ready for Solid Ion Conductors",
+    "date_seen": "2026-08-03",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "dft"
+    ]
+  },
+  "s2:0e6d3476ef49a7868fa69b0b6d08b2dc60dfff77": {
+    "title": "MOFSimBench: evaluating universal machine learning interatomic potentials in metal-organic framework molecular modeling",
+    "date_seen": "2026-08-03",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "catalysis"
+    ]
+  },
+  "s2:0ee2be812ccba5f3bc8aca4d044a425884cec064": {
+    "title": "Enhancement of classical force field predictions of hydrogen bonding in water, methanol and their crossed dimers using machine learning",
+    "date_seen": "2026-08-03",
+    "tags": [
+      "dft"
+    ]
+  },
+  "s2:0fce1047f65ab058830775d58d8fb44cf06053f6": {
+    "title": "Adaptive Threat Detection Framework for IoT-Enabled Healthcare, Financial, and Connected Systems in the United States",
+    "date_seen": "2026-08-03",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:0fd9c60db3982b05d49d9d09435cba29f8509c83": {
+    "title": "Approximation of Daily AMS‐02 Spectra With Machine Learning Methods",
+    "date_seen": "2026-08-03",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:105ee9ea93e44894a26712092de9ad411b2e3f96": {
+    "title": "Assessing the Effectiveness of AI-Powered Incentive Systems in Driving Sales Force Performance and GTM Outcomes",
+    "date_seen": "2026-08-03",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:1146c92267dcefdbda3d32a3c9421a7de6e5db9b": {
+    "title": "Employment Opportunities Created By Artificial Intelligence (Ai)",
+    "date_seen": "2026-08-03",
+    "tags": [
+      "electrochemistry",
+      "catalysis"
+    ]
+  },
+  "s2:121ff6fbf3e18999d8bc75885abbc344e71db4ab": {
+    "title": "Use of Technologies for the Acquisition and Processing Strategies for Motion Data Analysis",
+    "date_seen": "2026-08-03",
+    "tags": [
+      "general"
+    ]
   }
 }
