@@ -3634,5 +3634,86 @@
     "tags": [
       "general"
     ]
+  },
+  "s2:122e24bc293c5c70d94dfa6f986d92cf8f4dc70d": {
+    "title": "Mechanism of Fe(II) Chemisorption on Hematite(001) Revealed by Reactive Neural Network Potential Molecular Dynamics",
+    "date_seen": "2026-08-04",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:12f44a35a20ba085e0168f53402367c60f055c42": {
+    "title": "(Invited)\n Scalable and Generalizable Machine Learning Force Fields for Modeling Complex Battery Materials",
+    "date_seen": "2026-08-04",
+    "tags": [
+      "MLFF",
+      "active-learning",
+      "generative"
+    ]
+  },
+  "s2:12fe9a0f1417bb699e118dbe74ea6773c3e1b4c4": {
+    "title": "EXPLORING THE ROLE OF AI IN HRM: A LITERATURE REVIEW",
+    "date_seen": "2026-08-04",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:13239e0d81e82041667f1cc54aa4a83e1e478eed": {
+    "title": "Optimizing Machine Learning Potentials for Hydroxide Transport: Surprising Efficiency of Single-Concentration Training",
+    "date_seen": "2026-08-04",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:144d7cad866a9b98df267234686d3f8aed8b3274": {
+    "title": "Bridging scales and paradigms: a perspective from atomistic simulation to AI-enhanced modeling of sodium-ion capacitors.",
+    "date_seen": "2026-08-04",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:144e8394e1e42c430a4e2644baf77a5848721cfe": {
+    "title": "A Machine Learning Model for the Chemistry of a Solvated Electron",
+    "date_seen": "2026-08-04",
+    "tags": [
+      "dft"
+    ]
+  },
+  "s2:156c9372db12c1af8644272cbc17905fd360d26e": {
+    "title": "Evaluating Fuel Properties of SAF Blends: From Component-Based Estimation to Molecular Dynamics",
+    "date_seen": "2026-08-04",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:15957f69f6a874061ae4648bb8e8b1bf139be403": {
+    "title": "Theoretical study of large-scale graphene on the Cu(111) surface using machine learning potential.",
+    "date_seen": "2026-08-04",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:161796f0762408498a378e6a017d90dd3d9a73b8": {
+    "title": "CGsmiles: A Versatile Line Notation for Molecular Representations across Multiple Resolutions",
+    "date_seen": "2026-08-04",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:1667c9df56ee6c039273338b25ed4916c48b9173": {
+    "title": "FEM‐Assisted Deep Learning for Object Recognition in Wearable Smart Gloves",
+    "date_seen": "2026-08-04",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
