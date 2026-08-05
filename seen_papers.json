@@ -3715,5 +3715,83 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:913ade08d32a8eb006b87eff2741c6bbe34770a4": {
+    "title": "From oligomers to entangled polymers: How to train a transferable machine learning interatomic potential",
+    "date_seen": "2026-08-05",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "active-learning"
+    ]
+  },
+  "s2:16d3789d7163b57f609a1578544c0f631e0dfda3": {
+    "title": "Transferable potential for molecular dynamics simulations of borosilicate glasses and structural comparison of machine learning optimized parameters",
+    "date_seen": "2026-08-05",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:170031955819a36ff864599a707f85a878bd2be5": {
+    "title": "Nature-inspired hierarchical building materials with low CO2 emission and superior performance",
+    "date_seen": "2026-08-05",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:174b1e981233297374e8a8e0caec3aa1df06ad6b": {
+    "title": "Performing Path Integral Molecular Dynamics Using an Artificial Intelligence-Enhanced Molecular Simulation Framework.",
+    "date_seen": "2026-08-05",
+    "tags": [
+      "MLFF",
+      "NQE"
+    ]
+  },
+  "s2:17ac413affd5e4bc00e4f046d116bb5774ce3c01": {
+    "title": "Research Progress on the Optimization Processing of Non-standard Business Information with the Aid of AI",
+    "date_seen": "2026-08-05",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:184d60c72b60c81caaf02f3da95eba0feb6fd057": {
+    "title": "DEQuify your force field: More efficient simulations using deep equilibrium models",
+    "date_seen": "2026-08-05",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:19bfb2d086ffa2f0a68609bd87611edf09a2f7dd": {
+    "title": "(Invited)\n Molecular Insight into Ion Transport and Thermodynamics in Nanoconfined Electrolyte Solutions",
+    "date_seen": "2026-08-05",
+    "tags": [
+      "electrochemistry",
+      "dft"
+    ]
+  },
+  "s2:1a6304114a465151ca03994171b2d4a530699a0c": {
+    "title": "Parameterizing Non-Canonical Amino Acids for Cyclic Peptide Simulations",
+    "date_seen": "2026-08-05",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:1a75c57b13474d415e0b5602ea1bf3e9c38f65b5": {
+    "title": "QCell: comprehensive quantum-mechanical dataset spanning diverse biomolecular fragments",
+    "date_seen": "2026-08-05",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "dft"
+    ]
+  },
+  "s2:1a9c125edce216f074cfdeadc5af7a3fe0de9d64": {
+    "title": "CrystalFormer-CSP: Thinking Fast and Slow for Crystal Structure Prediction",
+    "date_seen": "2026-08-05",
+    "tags": [
+      "MLFF",
+      "surface",
+      "generative"
+    ]
   }
 }
