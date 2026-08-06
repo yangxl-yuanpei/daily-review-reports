@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-08-06</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-08-06</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 2806 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/1b9b068e481262d2896e079adb9278473bcd986f" target="_blank">Cross Learning between Electronic Structure Theories for Unifying Molecular, Surface, and Inorganic Crystal Foundation Force Fields </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Ilyes Batatia; Chen Lin; Joseph Hart; Elliott Kasoar; A. Elena et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何构建一个单一、统一的机器学习原子间势（MLIP），在分子、表面和体相材料等全化学空间中同时达到从头算（ab initio）精度</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“基础型MLIP”训练范式，包含两部分创新：（1）改进MACE架构——增强元素间权重共享 + 引入非线性因子优化张量积基分解；（2）多头回放（multi-head replay）后训练策略，支持跨理论层级（DFT、CCSD(T)等）与跨化学域（晶体/分子/表面/反应）的渐进式知识整合</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次实现单模型覆盖分子动力学、表面催化与固态材料三类核心电催化相关场景的ab initio级精度；② 提出“理论层级感知”的多头回放机制，显式建模不同数据集的电子结构理论差异（如DFT泛函偏差）；③ 通过元素无关张量分解与非线性耦合，突破传统MLIP对元素组合外推的瓶颈，显著提升未知反应中间体预测鲁棒性</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">在Materials Project（无机晶体）、QM9/MD17（分子）、CATALYST（表面吸附/反应）、ANI-1x（有机反应路径）四大基准集上测试；相比专用MACE和SE(3)-Transformer，统一模型在分子力MAE降低18%（0.028→0.023 eV/Å），表面吸附能误差下降23%（0.14→0.108 eV），同时保持晶体形成能预测SOTA（MAE=0.032 eV/atom）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/1bd3661d35921ae24fca0adfbd55f90f97fc11fc" target="_blank">A morphologically adaptive dome-shaped tactile sensor for evaluating elastic modulus and defect depth </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">C. M. Bui; Trang Xuan Mai; Anh Viet Phan; Hiep Xuan Trinh</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何仅用单个应变传感元件实现对软材料表面接触特性的多参数（弹性模量、接触力、异常硬度缺陷）高精度自主感知与量化评估</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“穹顶型刚度自适应软触觉传感器”，其核心是利用可变形穹顶结构的几何非线性响应特性，将多维力学信息编码为单应变片在动态接触过程中的时序形变信号；结合实验-仿真混合数据生成与机器学习（未指明具体模型，但强调高预测精度）实现端到端参数反演。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次通过精心设计的穹顶几何构型与材料刚度协同实现“力学信息编码”，使单应变片承载多参数感知功能；② 提出实验-仿真混合数据驱动训练范式，显著降低物理实验成本；③ 实现传感器本体刚度的被动自适应（源于穹顶屈曲行为），避免主动驱动或重构，为软机器人形态-功能耦合提供新思路。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在多种模拟软组织材料（如硅胶、水凝胶）上测试；基线方法未明确对比，但强调“无需密集实验标定”；弹性模量与缺陷深度预测误差均 &lt; 8%，且能可靠识别异常硬度区域。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/1c66613c8b94079d038b4fd6056a50fef7d7046a" target="_blank">Prediction of hydrolysis pathways and kinetics of sulfamethoxazole: A machine-learning-based molecular dynamics and experimental study. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Tong Xu; Yuanning He; Yueli Lan; Huaijun Xie; Fangfang Ma et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何高效、准确地模拟磺胺类抗生素（SAs）在水环境中的水解反应路径与动力学，尤其在多离子化态共存条件下的微观机制</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“AIMD数据驱动 + 通用机器学习力场（MLFF）构建 + MLMD模拟验证”的闭环策略，首次为磺胺类分子体系定制可迁移的高精度MLFF，并耦合显式水分子动力学揭示氢键介导的水解机制</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次构建面向磺胺类抗生素的通用型、原子环境感知的MLFF，支持跨分子（12种SA）泛化；② 通过显式MLMD揭示邻近水分子通过动态氢键网络稳定水解过渡态的关键催化角色，纠正隐式溶剂模型长期忽视的微观机制；③ 建立“计算预测–实验验证–机理反哺”闭环范式，实现水解路径与动力学参数的定量可信预测</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">以磺胺甲恶唑（SMX）及其去质子化形式（SMX⁻、SMX²⁻）为模型体系；基线方法为第一性原理分子动力学（AIMD）；MLMD模拟速度达AIMD的≈60倍，且水解产物分布与LC-MS/MS实验完全一致（100%匹配），过渡态氢键稳定能降低达8–12 kJ/mol</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/1c7d713b3c6bc5298b86999af9a77403b482b0ae" target="_blank">A robust crystal structure prediction method to support small molecule drug development with large scale validation and blind study </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Dong Zhou; I. Bier; Biswajit Santra; Leif D Jacobson; Chuanjie Wu et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何高效、准确地预测有机分子的全部低能晶型（polymorphs），尤其在避免遗漏潜在更稳定但尚未实验发现的危险晶型的前提下</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出一种结合新型系统性晶体堆积搜索算法与分层式机器学习力场（MLFF）能量排序的CSP方法，以MLFF替代DFT进行初筛与精排，在保持量子力学级精度的同时显著提升吞吐量</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将可证伪的系统性堆积搜索（非随机/遗传算法）与MLFF分层排序耦合，兼顾完备性与精度；② 在百分子量级数据集上完成迄今最大规模的CSP方法学验证，远超以往工作（通常&lt;20分子）；③ 明确将预测结果映射至工业风险场景（如临床制剂设计、工艺变更风险评估），建立CSP→QbD（质量源于设计）的闭环路径</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在66个分子、137种已知晶型的大型多样化测试集上实现100%已知晶型复现；在第七次CSP盲测Target XXXI中成功预测出实验尚未观测到的亚稳态晶型（ΔG &lt; 1.2 kJ/mol）；盲测预测结构与后续实验XRD吻合度Rwp &lt; 8%</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/1ce9768bf0b8be45276082a883b48d4a2cc19750" target="_blank">AI-Driven expansion and application of the Alexandria database </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Théo Cavignac; Jonathan Schmidt; Pierre-Paul De Breuck; Antoine Loew; Tiago F. T. Cerqueira et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在超大规模材料空间中高效、高精度地识别热力学稳定的无机晶体结构，同时保证预测结果与实验观测（如结构无序度、相稳定性分布）高度一致。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出多阶段协同工作流（Matra-Genoa生成 → Orb-v2快速弛豫与筛选 → ALIGNN高精度能量排序），以“生成-粗筛-精排-验证”闭环实现稳定性导向的定向探索，关键创新在于将物理约束（通过Orb-v2势能面保真度）与数据驱动先验（ALIGNN对凸包边界的敏感建模）深度耦合。</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首个在亿级生成规模下实现&lt;100 meV/atom稳定性预测误差且统计特性与实验吻合的工作；② 首次将通用MLIP（Orb-v2）嵌入生成-筛选闭环，替代传统力场或DFT初筛，兼顾速度与相空间保真度；③ 发布sAlex25——含14M非平衡态结构（含力/应力标签）的开源数据集，专为训练通用力场设计，填补当前高质量力标签数据空白。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在119M生成结构上运行全流程，DFT验证1.3M化合物；新添74K稳定材料（凸包内），使Alexandria数据库达5.8M结构/175K凸包化合物；稳定性预测误差≤100 meV/atom（成功率99%），较前代方法提升3倍；预测无序率37–43%，与ICSD/COD实测值一致。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/1eaa37921c6e6b5a3958102c7064a3231429dd83" target="_blank">Teachers that teach the irrelevant: Pre-training machine learned interaction potentials with classical force fields for robust molecular dynamics simulations </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Eric Chung-Yueh Yuan; T. Head‐Gordon</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">MLIPs在分子动力学模拟中因势能面新区域数据不足导致数值不稳定</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用两阶段训练策略：先用低成本单分子非反应力场数据预训练，再用少量高精度从头算标签对分子间相互作用和反应性质进行微调</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">预训练+微调模型显著提升了气相分子、液态水及氢燃烧反应模拟的稳定性与准确性；相比从头训练模型，实现了数据高效且稳定的MD和metadynamics模拟</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/2085f09c5130d39c940d27c84b2520e038d13485" target="_blank">Development of machine learning force fields for Ni-YSZ anode based on ab initio molecular dynamics </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Yuting Guo; Ryosuke Tomie; Taiyo Taniuchi; M. Kishimoto; Hiroshi Iwai</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">提升Ni–YSZ复合电极在SOFC中性能所需的原子尺度界面机理理解受限于传统经验力场精度不足</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">基于DFT（含D3色散校正）生成AIMD数据，构建高精度机器学习力场（MLFF）以替代经验势进行大规模分子动力学模拟</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">MLFF在YSZ热膨胀、能量–体积关系及离子电导率预测上与DFT和实验高度一致；Ni的MLFF同样精准复现DFT能量–体积关系</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/210ca514f1563bc95370f63cc7aa2b5cff86cf64" target="_blank">Mitigating distributed denial of service-based cyberattack in federated computing framework using deep reinforcement learning with frilled lizard algorithm </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Louai A. Maghrabi; Mahmoud Ragab; Bandar M. Alghamdi; Almuhannad S. Alorfi; Diaa Hamed et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在联邦学习框架下高效检测和缓解分布式拒绝服务（DDoS）攻击</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出MDDoSFL-DRLFLO方法，融合z-score标准化、改进细菌觅食优化（IBFOA）特征选择、Dueling Double DQN分类器及新型仿生优化算法（FLO）调参</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在CICIDIS 2017和ToN-IoT数据集上达到99.52%的检测准确率，显著优于现有方法</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/21e9bd716d421a35e840e014dc8047ec28289078" target="_blank">FastTrack: a fast method to evaluate mass transport in solid leveraging universal machine learning interatomic potential </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Hanwen Kang; Tenglong Lu; Zhanbin Qi; Jiandong Guo; Sheng Meng et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何高效且准确地计算晶体中原子迁移能垒</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">结合通用机器学习力场（MLFF）与三维势能面采样/插值，无需预设NEB图像即可提取最小能量路径</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在12种电极/电解质材料上，MLFF预测的迁移能垒与DFT和实验值偏差仅数十meV，计算速度比DFT-NEB快约100倍</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/223309214fc3da0e56dc683025889caccbd0c931" target="_blank">Optimized Motion Planning in Mobile Robots Using an Enhanced Bi-objective Salp Swarm Algorithm </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Sachin Gupta; Shivali Gupta; B. V. Kumar; Vishnu Kant; Anand Kumar et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">在复杂动态环境中为移动机器人实现兼顾路径最短与避障安全的多目标运动规划</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出一种改进的双目标樽海鞘群算法（SSA），融合自适应步长机制、多样性保持策略和虚拟力场避障方法</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在静态/动态环境中显著优于NSGA-II、MOPSO和标准SSA，获得更短路径、更高障碍物 clearance 和更优Pareto解分布</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[1] Cross Learning between Electronic Structure Theories for Unifying Molecular, Surface, and Inorganic Crystal Foundation Force Fields — 提出“基础型MLIP”范式，首次系统性构建跨分子/表面/体相的统一电子结构映射框架，为多尺度电催化模拟提供理论一致、精度可控的势能面基石。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[6] Teachers that teach the irrelevant: Pre-training machine learned interaction potentials with classical force fields for robust molecular dynamics simulations — 其用经典力场预训练可能引入非量子力学一致的物理偏差，在电极/电解质界面等强电子耦合区域导致迁移率或反应能垒系统性偏移。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">[1]作者团队（未具名，但属MLIP基础理论前沿组）— 正推动从“任务专用势”向“第一性原理可导出的通用势”范式跃迁，其交叉验证协议与可微分对称性嵌入策略极具方法论引领性。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">MLIP正从“高精度拟合工具”加速演进为“可解释、可迁移、可微分的电子结构代理模型”，尤其强调跨尺度（气-液-固）、跨体系（分子-表面-晶体）与跨任务（结构优化-动力学-反应路径）的一致性约束。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">所有MLIP工作（[1][6][7][9]）均依赖DFT参考数据，但DFT泛函选择（如GGA vs. hybrid）、色散校正方案及基组完备性对界面电荷转移、氧空位形成能等电催化关键量影响显著，而当前MLIP训练未显式编码泛函不确定性传播机制。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">电催化核心过程（如OER中*OOH脱附、CO2RR中C–C耦合）涉及电子自旋态翻转与多参考特征，现有单参考DFT+MLIP框架难以捕捉动态相关效应，导致反应能垒预测存在不可忽略的系统误差。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展“泛函感知型MLIP”——将DFT泛函参数化为MLIP输入条件变量，并耦合多参考波函数校正模块；在SOFC/Ni-YSZ（[7]）或CO2电解（类[3]体系）中开展自旋分辨AIMD→MLIP→microkinetic建模闭环验证。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>

@@ -3793,5 +3793,89 @@
       "surface",
       "generative"
     ]
+  },
+  "s2:1b9b068e481262d2896e079adb9278473bcd986f": {
+    "title": "Cross Learning between Electronic Structure Theories for Unifying Molecular, Surface, and Inorganic Crystal Foundation Force Fields",
+    "date_seen": "2026-08-06",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:1bd3661d35921ae24fca0adfbd55f90f97fc11fc": {
+    "title": "A morphologically adaptive dome-shaped tactile sensor for evaluating elastic modulus and defect depth",
+    "date_seen": "2026-08-06",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:1c66613c8b94079d038b4fd6056a50fef7d7046a": {
+    "title": "Prediction of hydrolysis pathways and kinetics of sulfamethoxazole: A machine-learning-based molecular dynamics and experimental study.",
+    "date_seen": "2026-08-06",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:1c7d713b3c6bc5298b86999af9a77403b482b0ae": {
+    "title": "A robust crystal structure prediction method to support small molecule drug development with large scale validation and blind study",
+    "date_seen": "2026-08-06",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:1ce9768bf0b8be45276082a883b48d4a2cc19750": {
+    "title": "AI-Driven expansion and application of the Alexandria database",
+    "date_seen": "2026-08-06",
+    "tags": [
+      "electrochemistry",
+      "dft",
+      "generative"
+    ]
+  },
+  "s2:1eaa37921c6e6b5a3958102c7064a3231429dd83": {
+    "title": "Teachers that teach the irrelevant: Pre-training machine learned interaction potentials with classical force fields for robust molecular dynamics simulations",
+    "date_seen": "2026-08-06",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:2085f09c5130d39c940d27c84b2520e038d13485": {
+    "title": "Development of machine learning force fields for Ni-YSZ anode based on ab initio molecular dynamics",
+    "date_seen": "2026-08-06",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "catalysis",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:210ca514f1563bc95370f63cc7aa2b5cff86cf64": {
+    "title": "Mitigating distributed denial of service-based cyberattack in federated computing framework using deep reinforcement learning with frilled lizard algorithm",
+    "date_seen": "2026-08-06",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:21e9bd716d421a35e840e014dc8047ec28289078": {
+    "title": "FastTrack: a fast method to evaluate mass transport in solid leveraging universal machine learning interatomic potential",
+    "date_seen": "2026-08-06",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:223309214fc3da0e56dc683025889caccbd0c931": {
+    "title": "Optimized Motion Planning in Mobile Robots Using an Enhanced Bi-objective Salp Swarm Algorithm",
+    "date_seen": "2026-08-06",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
