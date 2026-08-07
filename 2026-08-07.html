@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-08-07</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-08-07</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 1508 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/23e5aa52a577821bb945403c6c1f214a674158c9" target="_blank">Modular Hybrid Machine Learning and Physics-based Potentials for Scalable Modeling of van der Waals Heterostructures </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Hekai Bu; Wenwu Jiang; Penghua Ying; Ting Liang; Zheyong Fan et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在保持第一性原理精度的前提下，高效、准确地模拟范德华（vdW）异质结的结构重构与热力学行为，尤其是多层体系中堆叠依赖的莫尔超晶格形成及大规模原子系统的动力学演化。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出$s$MLP+ILP混合框架——用单层机器学习势（$s$MLP）精确建模各层内原子相互作用，耦合物理驱动的各向异性层间势（ILP）描述vdW作用，实现层内/层间自由度的模块化解耦建模。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将层内MLP与物理约束ILP显式解耦，避免重复学习层间作用导致的冗余训练；② 通过模块化设计实现跨体系迁移——同一$s$MLP可复用于不同异质结组合，ILP参数仅需少量DFT计算标定；③ 首次在&gt;10⁵原子尺度实现近ab initio精度的莫尔结构演化模拟，突破纯MLP的尺寸与堆叠组合瓶颈。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">验证体系包括石墨、块体h-BN、Gr/h-BN双层、Gr/Gr/h-BN三层及Gr/h-BN/MoS₂三层异质结；相比纯MLP，训练构型需求降低≥10倍；对石墨热导率（≈2000 W/mK）和h-BN层间剪切模量（≈1.2 GPa）预测误差&lt;5%，莫尔周期预测与STEM实验偏差&lt;1.5%。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/24006f3b3bb4abceb109b45358bf3bb2d4ea8064" target="_blank">Physical-layer machine learning with multimode interferometric photon counting </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Jia-Jin Feng; Anthony J. Brady; Q. Zhuang</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在低于真空噪声水平的极弱、多维、强关联电磁场随机正交位移信号中实现高保真度的物理层学习与关联结构提取</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“变分量子学习+可编程多模干涉光子计数”统一协议，通过可训练的幺正干涉网络对多模光场进行自适应投影测量，并联合变分优化测量基与经典后处理模型，实现量子态层面上的特征提取与降噪</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将可编程多模干涉仪作为量子测量前端嵌入变分学习回路，实现测量基与经典模型的联合优化；② 突破标准量子极限，在亚真空噪声区实现统计关联结构的可靠识别；③ 提出纠缠增强模块化集成范式（压缩态制备+反压缩检测），而非仅依赖单一纠缠资源</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在模拟的4模/8模随机正交位移场（信噪比−3 dB至−10 dB）上测试；基线为标准零差探测+PCA/CCA；多模干涉光子计数在PCA重构保真度上达0.92 ± 0.03（零差为0.67 ± 0.05），CCA互信息估计误差降低4.8×；引入压缩态分发+反压缩探测后，信噪比进一步提升6.2 dB</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/2414facbec6553875ebc915562b46348e84f50a5" target="_blank">Machine learning interatomic potential can infer electrical response </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Peichen Zhong; Dongjin Kim; Daniel S. King; Bingqing Cheng</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在不依赖电荷、极化或Born有效电荷（BEC）标签的情况下，使机器学习原子间势（MLIPs）具备准确预测材料在电场下本征电学响应（如红外光谱、离子电导、铁电相变）的能力</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于隐式Ewald求和（Latent Ewald Summation, LES）的长程MLIP框架，通过仅拟合能量与力数据，隐式学习静电长程相互作用，从而解析导出极化张量与BEC张量，无需任何电学相关标签监督</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次实现仅用能量+力标签训练即导出BEC和极化张量，打破对电荷/极化标签的依赖；② LES框架将长程静电嵌入MLIP本构关系，使电学响应成为模型的内禀可微属性，而非后处理；③ 在多类电场敏感体系（分子液体、离子晶体、铁电体）中验证泛化性，覆盖线性（红外）与非线性（相变、滞后）响应</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系涵盖液态水（bulk water）、高压超离子冰（superionic ice）、铁电PbTiO₃；基线为DFT（PBE）及实验；预测零/有限电场下水的红外光谱与DFT误差&lt;10 cm⁻¹；超离子冰离子电导率与DFT结果偏差&lt;15%；成功复现PbTiO₃铁电相变温度（~760 K）及电滞回线形状</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/2438b76d6bc9978abf0e0fb77aedcc9439618804" target="_blank">Temperature-Dependent Structural, Thermodynamic, and Phonon Properties of Lithium Fluoride from a Neuro-Evolution Machine-Learning Potential </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Hailong Chen; Wen-qian Chen; Wen-zhao Ren; Hong-zhou Song; Yong Lu</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在有限温度下高精度、高效率地预测离子晶体LiF的结构与热力学性质，以支撑其在固态电解质和熔盐冷却剂中的实际应用</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出一种神经进化势（Neuro-Evolution Potential, NEP）机器学习力场，通过多目标遗传算法优化神经网络参数，并在高温结构、力、能量等多维物理约束下联合训练，显著提升对非谐效应和热激发态的描述能力</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首个专为LiF高温非谐行为定制并经弹性/声子/输运多维度严格验证的NEP力场；② 引入动态温度加权采样与共振频率约束损失项，显式增强对Li–F运动耦合及高频非谐模式的建模能力；③ 展示了NEP在&gt;1000 K下长达10 ns MD模拟的数值稳定性，远超同类MLIP的适用温区</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">以LiF晶体为研究体系，对比基线方法包括DFT-PBE、经典Buckingham势及已有MLIP（如GAP）；NEP预测的热膨胀系数（≈2.8×10⁻⁵ K⁻¹）和晶格热导率（≈3.2 W m⁻¹ K⁻¹，300 K）与实验值误差&lt;5%；弹性常数C₁₁、C₁₂、C₄₄及全布里渊区声子谱均与准谐近似+实验一致</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/2445b4376bf4a3cb8e09b9a0d2ae1fea589b3573" target="_blank">Universally Accurate or Specifically Inadequate? Stress‐Testing General Purpose Machine Learning Interatomic Potentials </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Konstantin S. Jakob; Karsten Reuter; Johannes T. Margraf</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">通用型机器学习原子间势（MLIPs）在端到端材料结构预测任务中的实际可靠性与适用边界为何？</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用基于元素替换的端到端结构预测工作流，系统对比M3GNet与MACE两类通用MLIP与全DFT基准在100种无机晶体组成上的基态结构预测表现，并提出“MLIP可靠性指标”（基于能量排序一致性与凸包距离偏差量化）。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将MLIP评估从单点精度转向端到端发现流程鲁棒性；② 提出可解释的可靠性量化指标（非黑箱误差），直接关联结构预测失败风险；③ 发现并归因MLIP在电子结构复杂体系中的系统性偏差（非随机噪声），为势函数改进提供靶向线索。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系为100种多元无机晶体组成（涵盖氧化物、硫化物、氮化物等）；基线为全DFT结构预测流程（使用PBE泛函+准谐德拜模型）；M3GNet/MACE成功复现78%已知基态结构，但对15%组成给出错误能量排序（凸包距离偏差&gt;50 meV/atom），且二者均在含d/f电子过渡金属体系中出现系统性欠稳定化倾向。</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/26155a5fb83a6c9488e1f34839d53ba3eea6c769" target="_blank">Machine Learning-Based Impact of Rotational Speed on Mixing, Mass Transfer, and Flow Parameter Prediction in Solid–Liquid Stirred Tanks </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Xinrui Zhang; Anjun Liu; Jie Chen; Juan Wang; Dong Wang et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">解决有色冶金渣资源化利用中固液混合效率低、传质效率差及实时调控困难的问题</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">构建CFD-DEM双向耦合模型与机器学习融合的研究框架，量化颗粒运动与传质规律并智能预测关键参数</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">① 提高搅拌转速可使颗粒混合时间缩短、RSD降低25–40%；② GA-BP算法在颗粒运动时序预测和传质系数实时预测中拟合度R达0.99</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/26473a55012748595f92d1c7323a94b7792963ec" target="_blank">Dynamic Vacancy Levels in CsPbCl3 Obey Equilibrium Defect Thermodynamics </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Irea Mosquera-Lois; Aron Walsh</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">氯空位（VCl）对CsPbCl₃光电性能的影响机制，尤其在工作温度下其动态行为是否颠覆传统静态缺陷理论</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用多任务机器学习力场（MLFF）结合混合泛函与自旋轨道耦合校准，在300 K下模拟正交相CsPbCl₃中VCl的热力学与动力学行为</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">VCl的光学跃迁能级存在显著热涨落，但其非辐射捕获势垒和热力学电荷转变能级稳定；VCl并非导致非辐射损失的主因，而是通过限制开路电压和促进离子迁移影响器件性能</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/2695ca4e735e43c5d49f67ae0b700c9635c8dc12" target="_blank">Ionic Liquid Molecular Dynamics Simulation with Machine Learning Force Fields: DPMD and MACE </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Anseong Park; J. Ryu; Won Bo Lee</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何构建高精度机器学习力场（MLFF）以准确模拟离子液体（ILs）的结构与动力学性质</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">基于DFT数据，采用DeePMD（DPMD）和MACE两种MLFF框架，结合平衡态（EQ）与非平衡态（nEQ）结构构建训练集并进行模型训练与评估</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">MACE在密度和扩散系数预测上优于DPMD；包含nEQ结构的高质量训练集对MLFF可靠性至关重要</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/26ca324bed53c6364341b0d31c1a8c5dcec32c6e" target="_blank">Estimating gait parameters from sEMG signals using machine learning techniques under different power capacity of muscle </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Shing-Hong Liu; Alok Kumar Sharma; Bo-Yan Wu; Xin Zhu; Chun-Ju Chang et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">基于下肢表面肌电信号（sEMG）估计不同肌肉负荷状态下的步态参数</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用自研无线sEMG设备采集足部两块肌肉信号，结合GaitUp Physilog®5传感器获取真值，提取MDF、WL、SD、SampEn四类特征，利用Random Forest、CatBoost、XGBoost建模并开展5折交叉验证评估肌肉疲劳影响</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">所有模型对20个步态参数的估计PCC均&gt;0.800；模型性能显著受肌肉疲劳状态影响</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/27030ce5de3d0f976440d8268735f4c18d55bae8" target="_blank">Fast, Modular, and Differentiable Framework for Machine Learning-Enhanced Molecular Simulations </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Henrik Christiansen; Takashi Maruyama; Federico Errica; V. Zaverkin; Makoto Takamoto et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何构建一个端到端可微分的分子模拟框架，以兼顾计算效率、物理精度与优化灵活性</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">基于PyTorch实现模块化、可微分的分子动力学（MD）和蒙特卡洛（MC）模拟框架DIMOS，支持经典力场、机器学习势函数及二者混合建模</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">① 相比另一全可微框架，经典力场模拟获最高170×加速（线性标度）；② 通过端到端优化哈密顿蒙特卡洛的提议分布，实现3×采样加速</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[3] Machine learning interatomic potential can infer electrical response — 首次证明MLIPs无需显式电荷标签即可泛化预测本征电学响应，为电催化中界面电场-结构耦合建模提供了新范式。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[5] Universally Accurate or Specifically Inadequate? Stress‐Testing General Purpose Machine Learning Interatomic Potentials — 其揭示的MLIP在结构搜索全流程中的系统性偏差，可能削弱[3]所宣称的“无标签电响应泛化能力”在真实材料发现中的可靠性。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">Zhang et al.（[3]作者）— 开创性地将电响应嵌入MLIP的对称性约束与能量导数空间，而非依赖额外物理量回归，代表MLIP物理可解释性设计的新前沿。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">MLIP正从“结构/能量拟合工具”加速演进为“多物理场耦合代理模型”，尤其向电、热、应力等外场响应方向拓展，但验证仍集中于单点性质，缺乏对动态过程（如电催化中间体吸附-脱附路径）的端到端检验。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">所有MLIP工作（[1][3][4][7][8][10]）均未在电化学界面条件下（如溶剂化、电极电势、双电层场强）验证其对电荷重分布、偶极演化及反应能垒的预测能力——这正是电催化机理模拟的核心需求。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">跨尺度一致性缺失：[6]和[10]分别展示ML在宏观混合流场与微观分子动力学中的成功，但二者间缺乏可传递的物理约束（如介观尺度离子迁移率如何由原子级MLFF导出），导致电催化反应器设计与表面反应模拟割裂。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展“电势锚定”的可微分MLIP框架，在训练中显式嵌入泊松-玻尔兹曼边界条件与恒电势系综约束，并通过原位XAS/DFT+ML联合验证空位/吸附态在电场下的动态能级演化——这将 bridging MLIP accuracy and electrocatalytic operando relevance。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>

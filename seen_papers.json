@@ -3877,5 +3877,85 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:23e5aa52a577821bb945403c6c1f214a674158c9": {
+    "title": "Modular Hybrid Machine Learning and Physics-based Potentials for Scalable Modeling of van der Waals Heterostructures",
+    "date_seen": "2026-08-07",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:24006f3b3bb4abceb109b45358bf3bb2d4ea8064": {
+    "title": "Physical-layer machine learning with multimode interferometric photon counting",
+    "date_seen": "2026-08-07",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:2414facbec6553875ebc915562b46348e84f50a5": {
+    "title": "Machine learning interatomic potential can infer electrical response",
+    "date_seen": "2026-08-07",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:2438b76d6bc9978abf0e0fb77aedcc9439618804": {
+    "title": "Temperature-Dependent Structural, Thermodynamic, and Phonon Properties of Lithium Fluoride from a Neuro-Evolution Machine-Learning Potential",
+    "date_seen": "2026-08-07",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:2445b4376bf4a3cb8e09b9a0d2ae1fea589b3573": {
+    "title": "Universally Accurate or Specifically Inadequate? Stress‐Testing General Purpose Machine Learning Interatomic Potentials",
+    "date_seen": "2026-08-07",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "dft",
+      "generative"
+    ]
+  },
+  "s2:26155a5fb83a6c9488e1f34839d53ba3eea6c769": {
+    "title": "Machine Learning-Based Impact of Rotational Speed on Mixing, Mass Transfer, and Flow Parameter Prediction in Solid–Liquid Stirred Tanks",
+    "date_seen": "2026-08-07",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:26473a55012748595f92d1c7323a94b7792963ec": {
+    "title": "Dynamic Vacancy Levels in CsPbCl3 Obey Equilibrium Defect Thermodynamics",
+    "date_seen": "2026-08-07",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:2695ca4e735e43c5d49f67ae0b700c9635c8dc12": {
+    "title": "Ionic Liquid Molecular Dynamics Simulation with Machine Learning Force Fields: DPMD and MACE",
+    "date_seen": "2026-08-07",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "dft"
+    ]
+  },
+  "s2:26ca324bed53c6364341b0d31c1a8c5dcec32c6e": {
+    "title": "Estimating gait parameters from sEMG signals using machine learning techniques under different power capacity of muscle",
+    "date_seen": "2026-08-07",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:27030ce5de3d0f976440d8268735f4c18d55bae8": {
+    "title": "Fast, Modular, and Differentiable Framework for Machine Learning-Enhanced Molecular Simulations",
+    "date_seen": "2026-08-07",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
