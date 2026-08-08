@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-08-08</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-08-08</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 2789 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/6881d39a44f2ee50f6dfb5b6010486cb9a91dd7a" target="_blank">Interface Engineering of Helium Confinement in Argon-Preplated MCM-41 Nanopores </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Rahul Soni; Nathan S. Nichols; Sutirtha Paul; Garfield T. Warren; P. Sokol et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何从原子尺度上定量理解并调控介孔材料（MCM-41）界面预修饰（氩单层预镀）对吸附流体（如氦）微观限域势场的影响</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“氩单层预镀+多模态原子模拟+实验约束”协同策略：利用Ar单层选择性钝化硅羟基强吸附位点，结合巨正则蒙特卡洛（GCMC）、低温分子动力学（MD）与氦探针插入计算，并耦合中子散射与吸附等温线进行实验校验</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将惰性气体单层作为“原子级界面掩模”实现可控钝化，而非依赖化学修饰；② 建立首个经实验（中子散射+吸附）严格约束的、空间分辨的纳米限域势能面；③ 揭示预镀诱导的势场平滑化可被连续圆柱模型描述，为量子蒙特卡洛等高级模拟提供微观基础</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系为Ar预镀MCM-41介孔（孔径~3.5 nm）；基线为未修饰MCM-41；氦探针插入计算显示预镀后吸附自由能极小值由孔壁移至孔内环形区域（径向偏移~0.3 nm），且径向势能起伏降低62%，残余粗糙度被高斯过程 surrogate 精确建模（R² &gt; 0.98）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/281a92430fb32ab6343a7c9db5005144d1bd43a7" target="_blank">From Grotthuss Transfer to Conductivity: Machine Learning Molecular Dynamics of Aqueous KOH </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">V. J. Lagerweij; Sana Bougueroua; P. Habibi; Poulumi Dey; M. Gaigeot et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何准确预测KOH水溶液中OH⁻离子的电导率，特别是量化其通过Grotthuss机制的质子转移动力学及宏观输运性质</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用机器学习分子动力学（MLMD），基于高精度AIMD数据训练神经网络势函数，在保持量子力学精度的同时实现100 ns量级、含数万次Grotthuss事件的高效采样</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次在原子尺度上统计量化50,000次Grotthuss转移事件，建立氢键拓扑演化与转移速率的定量关联；② 揭示“受体氢键数减少 + 供体氢键数微增”是Grotthuss跃迁的普适过渡态特征，证实氢键重排为速率控制步骤；③ 实现MLMD在强碱水溶液中跨温度（273–353 K）电导率的定量预测，填补介观输运性质与微观反应机理间的桥梁空白</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">体系为3.5 mol/kg KOH水溶液（≈10 wt%）；基线方法包括经典力场（如SPC/E+LJ）、早期短时AIMD（≤20 ps）；MLMD预测OH⁻自扩散系数在298 K为2.45 ± 0.08 × 10⁻⁹ m²/s，电导率误差&lt;3%（vs.实验值），显著优于经典力场（偏差&gt;40%）和早期AIMD（偏差~15–20%）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/2823f93da0e9f0f24becaf3ffe2ea51183b3635a" target="_blank">The transformative role of machine learning in advancing MOF membranes for gas separations </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Pelin Sezgin; Seda Keskin</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何高效、准确地预测金属有机框架（MOF）膜的气体分离性能（如渗透率与选择性），以突破实验筛选和传统分子模拟在百万级MOF候选材料空间中的效率瓶颈</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">机器学习（ML）驱动的MOF膜性能预测框架，核心是构建基于MOF晶体结构描述符（如孔径分布、表面化学、拓扑指标）与气体传输性能（CO₂渗透率、CO₂/N₂选择性等）之间的数据驱动映射模型</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次系统整合多尺度结构描述符（几何+化学+拓扑）与气体传输物理约束（如扩散/溶解协同效应）构建可解释ML特征集；② 提出“模拟-学习-验证”闭环范式，将ML预测结果反馈指导靶向分子动力学模拟，减少无效计算；③ 开发开源MOF性能预测工具包（如MOF-ML-Predict），支持跨平台部署与增量学习</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在主流MOF数据集（如CoRE MOF、MOFdb）上训练ML模型，预测CO₂渗透率平均绝对误差（MAE）达0.1–0.3 GPU·log( Barrer)，CO₂/N₂选择性预测R² &gt; 0.85；显著优于传统QSAR模型（R² &lt; 0.6）和快速力场模拟（误差高2–3倍）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/2829cd3f9d35c725a6414c2232f1e6194b89fcb4" target="_blank">Are Foundational Atomistic Models Reliable for Finite-Temperature Molecular Dynamics? </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Denan Li; Jiyuan Yang; Xiangkai Chen; Lintao Yu; Shi Liu</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">基础性原子模型（universal force fields）在有限温度分子动力学模拟中是否具备动态可靠性，尤其能否准确再现相变等非平衡热力学行为</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用PbTiO₃铁电-顺电相变这一经典、敏感且实验标定清晰的热致相变体系作为“压力测试”基准，通过对比多个主流基础原子模型（如M3GNet、ALIGNN、GemNet等）在相同MD协议下的相变温度、晶格失稳行为及轨迹稳定性，聚焦动态可靠性而非静态误差指标</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">（1）首次将“动态可靠性”与“静态精度”解耦评估，揭示二者无必然关联；（2）提出以物理明确的相变现象为诊断探针，替代传统RMSE/Energy MAE等静态指标；（3）指出训练数据中非谐构型覆盖不足与各向异性势能面描述缺失是动态失效的根源，而非单纯拟合能力问题</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系为立方→四方PbTiO₃相变（实验Tc ≈ 763 K）；基线为DFT-MD（含非谐修正）与实验相图；关键结果：（1）多数通用力场预测Tc偏差达±150–300 K，且部分模型在接近Tc时出现晶格崩溃或伪稳定相；（2）同一模型在不同初始取向/超胞尺寸下相变行为不一致，表明动力学结果缺乏可复现性</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/2856836fb6e17d58d27d58fb9ffeab2c6aed1ec0" target="_blank">AI-based Methods for Simulating, Sampling, and Predicting Protein Ensembles </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Bowen Jing; Bonnie Berger; T. Jaakkola</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何利用人工智能方法准确预测蛋白质系综（protein ensembles）而非单一静态结构，以更真实地刻画蛋白质的动态构象分布与功能相关异质性</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“闭环建模”（closing the loop）框架——整合生成式AI（如扩散模型、VAE）、粗粒化力场引导、MSA扰动增强与系综描述符建模，通过仿真-训练-推断迭代反馈提升系综预测的真实性与多样性</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次系统梳理并分类AI驱动的蛋白质系综预测四类技术路径，指出其物理可解释性与数据效率的权衡；② 提出“闭环”范式，强调仿真生成合成数据→AI建模→指导靶向模拟→迭代优化的正向反馈循环；③ 引入系综级描述符（如构象熵、集体模式谱）作为监督信号，突破单结构标签局限</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">在典型柔性蛋白（如GB1、Ubiquitin）和别构蛋白（如PDZ domain）上评估；基线包括传统MD重加权、EM-based ensemble reconstruction及单结构外推法；最佳生成模型在RMSF相关性（vs NMR）达0.78，构象多样性（entropy estimate）较MD采样提升3.2×，且计算成本降低2个数量级</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/286d92f597cfb573d27f56f04ca0e3ad938c2ab5" target="_blank">Construction of PANoptosis‐Inhibiting Carbonized Polymer Dots via Machine Learning Potential for Mitigating Chemodrug‐Induced Nephrotoxicity </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Xinchen Liu; Jiaxin Zhang; Xiangyu Yan; Nuo Li; Yu-Chao Dong et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何通过多机制协同抑制PANoptosis来缓解化疗药物诱导的急性肾损伤（AKI）</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用基于机器学习力场的增强采样分子动力学方法，指导设计具有特定药效团结构的生物活性碳化聚合物点（Lu-CDs）</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">Lu-CDs兼具自由基清除与PANoptosis抑制双重活性；在AKI小鼠模型中，极低剂量即实现长效肾脏蓄积和显著优于传统抗氧化纳米材料及小分子黄酮的肾保护效果</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/28b05468fbce839130d37f02b428ce4153de0ede" target="_blank">Beyond Force Metrics: Pre-Training MLFFs for Stable MD Simulations </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Shagun Maheshwari; Janghoon Ock; Adeesh Kolluru; A. Farimani; John R. Kitchin</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">机器学习力场（MLFF）在从头算分子动力学（AIMD）模拟中如何平衡预测精度与轨迹稳定性</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用图神经网络GemNet-T构建MLFF，对比直接训练（MD17小数据集）与预训练（OC20大数据集）+微调两种策略</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">两种模型力预测MAE均达5 meV/Å，但预训练模型分子动力学轨迹稳定性显著提升（持续时间延长3倍）；预训练使潜在表征更结构化、力响应更平滑、邻近构型间力差更一致</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/29425650284c3ddb49bfa092cf00ef4ddf9b4901" target="_blank">Condensation of Force Field Parameters from Machine Learning Predicted Distributions for High-Throughput Virtual Screening Applications </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Domenico Bonanni; Yuedong Zhang; Davide Gadioli; Gianluca Scarpellini; Pietro Morerio et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在保持分子几何预测精度的同时，大幅提升机器学习力场（MLFF）在高通量虚拟筛选中的计算效率</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出一种基于机器学习的力场参数“凝聚”方法，将MLFF对大量分子预测出的参数分布统计压缩为单值参数，构建兼具泛化性与效率的 condensed FF</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">① 计算效率提升30倍；② 在OpenFF Industry Benchmark上，凝聚力场优化的分子结构仅表现出轻微RMSD和TFD性能下降（相比分子特异性MLFF）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/296b5d145323eb613987fa9b99be7628c9cdb9e9" target="_blank">A focus on delocalization error poisoning the density-functional many-body expansion </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Barbaro Zulueta; John A. Keith</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">密度泛函近似（DFA）中的自相互作用误差（SIE）在多体展开（MBE）中引发能量振荡，威胁基于DFA数据训练的力场和机器学习势函数（MLP）在大尺度模拟中的可靠性</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">显式分解DFA中的自相互作用误差，并系统分析其在三体、四体等多体展开项中的行为特征</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">多种常用DFA在三体项中产生剧烈能量振荡，甚至导致三体项数值异常巨大；这使得基于小体系DFA数据拟合的力场/MLP在大体系中可能严重失效</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/2a4fe0e4f0d3d4e233422b13a2079248c4088baf" target="_blank">Accelerating Battery Innovations through Multiscale Simulations </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Fedor P.M. Goumans; Nicolas Onofrio</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何通过多尺度建模整合分子级理解与宏观电池性能（安全性、可持续性、能量密度等），以加速高性能电池材料与系统的设计。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">基于Amsterdam Modeling Suite构建多尺度建模框架，耦合第一性原理计算（DFT/DFTB/ReaxFF）、极化力场、机器学习势、COSMO-RS热力学模型及动力学蒙特卡洛模拟，并实现ML势对DFT数据的快速微调与跨尺度参数传递。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">1）实现了从原子尺度（如降解路径、氧化还原电位）到宏观尺度（如着火风险、电极膨胀、离子电导率）的关键性能指标的定量预测；2）验证了物理驱动描述符+实验数据可实现高精度ML预测（如离子电导率），且KMC模拟揭示了不同工况下固态电解质界面（SEI）的动态形成机制。</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[9] A focus on delocalization error poisoning the density-functional many-body expansion — 揭示DFA自相互作用误差在多体展开中引发的能量振荡，直接威胁MLP训练数据的物理一致性，是力场可信度的底层根基问题。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[7] Beyond Force Metrics: Pre-Training MLFFs for Stable MD Simulations — 其预训练策略虽提升轨迹稳定性，但若预训练数据源自含SIE污染的DFA（如PBE），可能隐式放大误差传播，削弱物理可迁移性。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">OC20/OC22团队（[7][8]关联） — 在MLFF工业化部署中持续推动数据规模、泛化性与稳定性协同优化，代表计算化学基础设施级演进方向。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">机器学习势函数正从“精度优先”转向“物理保真优先”，关注误差溯源（如[4][9]）、动态稳定性（[7]）、参数可解释性（[8]）与多尺度一致性（[10]），标志领域进入可信AI驱动的模拟范式成熟期。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">当前MLFF训练普遍依赖DFA基准数据（尤其PBE类泛函），但[9]证实其多体展开中存在系统性SIE诱导振荡，导致三/四体项失真；而[4]指出通用力场亦缺乏有限温度下非谐相变验证——二者共同暴露“静态/零温基准→动态/有限温应用”的跨温区可靠性断层。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">高通量筛选（[3][8]）与电催化等实际过程（[2][10]）间存在尺度鸿沟：MOF膜渗透率预测未耦合界面电荷转移动力学，KOH电导率模拟未嵌入电极/电解质界面场效应——宏观性能指标与原子级反应机制仍割裂。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展<strong>误差感知型MLFF训练框架</strong>：联合校正DFA多体误差（[9]）与有限温动力学偏差（[4]），并强制约束MLFF在电化学界面场下的Grotthuss跃迁路径（[2]）与限域吸附势面（[1]）的一致性，实现从“拟合数据”到“编码物理”的范式升级。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>

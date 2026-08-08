@@ -3957,5 +3957,83 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:6881d39a44f2ee50f6dfb5b6010486cb9a91dd7a": {
+    "title": "Interface Engineering of Helium Confinement in Argon-Preplated MCM-41 Nanopores",
+    "date_seen": "2026-08-08",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:281a92430fb32ab6343a7c9db5005144d1bd43a7": {
+    "title": "From Grotthuss Transfer to Conductivity: Machine Learning Molecular Dynamics of Aqueous KOH",
+    "date_seen": "2026-08-08",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:2823f93da0e9f0f24becaf3ffe2ea51183b3635a": {
+    "title": "The transformative role of machine learning in advancing MOF membranes for gas separations",
+    "date_seen": "2026-08-08",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:2829cd3f9d35c725a6414c2232f1e6194b89fcb4": {
+    "title": "Are Foundational Atomistic Models Reliable for Finite-Temperature Molecular Dynamics?",
+    "date_seen": "2026-08-08",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:2856836fb6e17d58d27d58fb9ffeab2c6aed1ec0": {
+    "title": "AI-based Methods for Simulating, Sampling, and Predicting Protein Ensembles",
+    "date_seen": "2026-08-08",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:286d92f597cfb573d27f56f04ca0e3ad938c2ab5": {
+    "title": "Construction of PANoptosis‐Inhibiting Carbonized Polymer Dots via Machine Learning Potential for Mitigating Chemodrug‐Induced Nephrotoxicity",
+    "date_seen": "2026-08-08",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:28b05468fbce839130d37f02b428ce4153de0ede": {
+    "title": "Beyond Force Metrics: Pre-Training MLFFs for Stable MD Simulations",
+    "date_seen": "2026-08-08",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:29425650284c3ddb49bfa092cf00ef4ddf9b4901": {
+    "title": "Condensation of Force Field Parameters from Machine Learning Predicted Distributions for High-Throughput Virtual Screening Applications",
+    "date_seen": "2026-08-08",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:296b5d145323eb613987fa9b99be7628c9cdb9e9": {
+    "title": "A focus on delocalization error poisoning the density-functional many-body expansion",
+    "date_seen": "2026-08-08",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:2a4fe0e4f0d3d4e233422b13a2079248c4088baf": {
+    "title": "Accelerating Battery Innovations through Multiscale Simulations",
+    "date_seen": "2026-08-08",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "dft",
+      "generative"
+    ]
   }
 }
