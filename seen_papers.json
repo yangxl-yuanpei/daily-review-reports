@@ -4035,5 +4035,87 @@
       "dft",
       "generative"
     ]
+  },
+  "s2:06eb8a7a12f8d92cced42f622546232b0333f71d": {
+    "title": "Machine learning force field molecular dynamics simulation of interfacial reactions on platinum in concentrated aqueous electrolytes",
+    "date_seen": "2026-08-09",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:1cbf7df2db834e4f2b4fbf135ccdf3b90c7400af": {
+    "title": "Multiscale and Multi‐Timestep Switching of Multiple Machine Learning Force Fields for Artificial Intelligence‐Driven Materials Simulations",
+    "date_seen": "2026-08-09",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:34d61c0facb1982c003bf8b993b64e3abe900f1e": {
+    "title": "Buffer Region Embedding\nfor Hybrid Machine-Learned/Molecular-Mechanical\nSimulations in Complex Environments",
+    "date_seen": "2026-08-09",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:006172a68fce24384b8f7e6fbc11edbd89976383": {
+    "title": "LCO-sensitive graph neural network framework for high-accuracy energy mapping in NiCoCr medium-entropy alloys",
+    "date_seen": "2026-08-09",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:00672269affd17c3dfd45d2694ec65d1b6af6f8e": {
+    "title": "Application of AI-based Intelligent Control Methods for Enhancing Product Quality in Glass Manufacturing",
+    "date_seen": "2026-08-09",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0203d3ee5c9ac8af20481b21220f04fc5bb57d63": {
+    "title": "Data-driven prediction of chemical oxygen demand in dairy wastewater coagulation using a magnetic Moringa Oleifera–derived coagulant",
+    "date_seen": "2026-08-09",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:02e2450a89b0fe9b6f4bbc6299d5332a6336b569": {
+    "title": "Thermodynamic impedance mismatch in neurodegeneration: A biophysical framework for the prediction of amyloid-related imaging abnormalities.",
+    "date_seen": "2026-08-09",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:1548181bddbebdab9faa31bd45cf5f149911a5ab": {
+    "title": "MOF/Hydrophobic Polymer Composites for Toluene Capture",
+    "date_seen": "2026-08-09",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:c463ee56aaca7ee5926682a31644cf5ebe86586f": {
+    "title": "Black-Box and Interpretable Artificial Intelligence Models for Hydrogen Uptake Across Various Metal–Organic Frameworks",
+    "date_seen": "2026-08-09",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:2b447c2ae35730ae9fbefee4a4926c777198fe6b": {
+    "title": "ReaxFF-nn: a reactive machine-learning potential in GULP/LAMMPS and its applications in the thermal conductivity calculations of carbon nanostructures.",
+    "date_seen": "2026-08-09",
+    "tags": [
+      "electrochemistry",
+      "dft"
+    ]
   }
 }

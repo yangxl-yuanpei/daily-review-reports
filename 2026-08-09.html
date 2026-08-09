@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-08-09</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-08-09</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 2785 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/06eb8a7a12f8d92cced42f622546232b0333f71d" target="_blank">Machine learning force field molecular dynamics simulation of interfacial reactions on platinum in concentrated aqueous electrolytes </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Hao Yu; Norio Takenaka; Atsuo Yamada</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">为何高浓度水系电解液在铂电极上无法形成阴极稳定界面（即不能扩展阴极电化学窗口），而能在其他电极（如石墨、过渡金属氧化物）上实现？</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用基于机器学习力场（MLFF）的分子动力学（MD）模拟，兼具近第一性原理精度与大尺度构型采样能力，重点解析Pt(111)表面在还原电位下的动态界面反应路径与竞争动力学。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次通过MLFF-MD在真实电极/电解液界面尺度上量化H*覆盖度对阴极界面反应路径的竞争调控；② 提出“H*库”概念——界面吸附氢既是析氢反应中间体，也是阴离子分解的共反应物，其动态丰度决定ADIE能否形成；③ 揭示电极依赖性的微观根源并非电子结构差异，而是表面H*稳态浓度及反应动力学权衡。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系为LiTFSI/H₂O高浓电解液（21 m）在H*覆盖的Pt(111)表面；基线为传统DFT静态计算与实验观测（无阴极限扩展）；MD揭示Tafel析氢（2H* → H₂, Eₐ ≈ 0.35 eV）与TFSI⁻分解（H*-介导，Eₐ ≈ 0.38 eV）能垒相近，导致H*快速消耗、ADIE前驱体无法累积。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/34d61c0facb1982c003bf8b993b64e3abe900f1e" target="_blank">Multiscale and Multi‐Timestep Switching of Multiple Machine Learning Force Fields for Artificial Intelligence‐Driven Materials Simulations </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">M. Caspary; Radek Crha; Edgar Galicia-Andrés; Peter Poliak; C. Oostenbrink</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在保持量子力学精度的同时，实现机器学习势（MLIP）与分子力学（MM）在复杂异质环境（如酶活性中心）中稳定、可靠且可扩展的多尺度耦合</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出缓冲区嵌入策略BuRNN（Buffer Region Neural Network），在MLIP/MM框架中引入一层“缓冲区”：内区与缓冲区之间的相互作用升至MLIP精度，而缓冲区内及缓冲区–外区相互作用仍由MM描述，通过物理启发的分层嵌入实现平滑过渡</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次将缓冲区概念系统化引入MLIP/MM耦合，区别于传统QM/MM的硬截断或链接原子粗粒化处理；② 明确区分“交互升级”（inner–buffer）与“交互降级”（buffer–outer）的物理层级，避免力场不一致性；③ 在真实酶体系中验证了对动态配位键（Fe–S）和共价界面的鲁棒性，突破此前MLIP/MM仅适用于简单溶剂模型的局限</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">测试体系包括甲醇/水混合物（X射线结构因子误差 &lt; 0.02 Å⁻¹）、功能化富勒烯（共价边界验证）、水合血红素b（轴向Cys配位键解离能误差 &lt; 5 kJ/mol）、细胞色素P450 1A2全酶（10 ns MD中Fe–S键长RMSD = 0.08 Å）；相比无缓冲区基线，BuRNN将边界处力误差降低3.7×，并显著提升轨迹稳定性</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/006172a68fce24384b8f7e6fbc11edbd89976383" target="_blank">LCO-sensitive graph neural network framework for high-accuracy energy mapping in NiCoCr medium-entropy alloys </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Mashaekh Tausif Ehsan; Saifuddin Zafar; Apurba Sarker; Sourav Das Suvro; Mohammad Nasim Hasan</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何高精度建模多主元合金中局部化学序（LCO）引发的微小能量变化，实现原子构型到势能面的精准映射</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出一种融合原子类型与绝对速度节点特征、基于12近邻构建边的图卷积神经网络（GCNN），专为NiCoCr中熵合金势能面建模设计，并以混合蒙特卡洛/分子动力学（MC/MD）轨迹作为物理一致的训练-验证基准</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将原子绝对速度作为图节点特征，显式嵌入热运动信息以增强LCO动态响应建模；② 采用MC/MD混合采样生成物理自洽的构型-能量数据集，规避纯MD采样偏差；③ 构建温度鲁棒的GCNN架构，在单温度、跨温度及外推温度场景下均验证泛化性，突破传统ML势对训练温度窗口的强依赖</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系为NiCoCr MEA；基线为常规ML势（未显式编码速度/温度耦合）；在完全未见过的550 K热轨迹上，R²达0.98，MAE低至1.04 meV/atom；跨温度范围联合训练时仍保持R² &gt; 0.95</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/00672269affd17c3dfd45d2694ec65d1b6af6f8e" target="_blank">Application of AI-based Intelligent Control Methods for Enhancing Product Quality in Glass Manufacturing </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Omar Musazade; Stanislav Aghamatov</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何通过融合数字孪生、深度强化学习与可解释AI，构建自主可控的浮法玻璃熔窑智能调控系统，以 simultaneously 提升能效、产品质量与碳减排性能</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“数字孪生驱动的DRL-XAI协同控制架构”，以高保真熔窑数字孪生为仿真基座，采用DRL代理实现热区参数的在线自优化，并嵌入CNN视觉质检与基于逻辑规则的XAI模块，实现感知–决策–执行–解释闭环</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将DRL与XAI深度耦合于玻璃熔窑全流程闭环控制，而非仅用于单点优化或离线分析；② 构建“物理模型+数据驱动+视觉反馈+逻辑解释”四维融合架构，突破纯数据驱动AI在高温工业过程中的可信赖性瓶颈；③ 将氢气掺烧策略纳入强化学习奖励函数设计，实现能效–排放–工艺质量多目标协同优化</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在浮法玻璃熔窑数字孪生平台上验证，相比Fuzzy-PID基线，DRL控制器将炉温稳定性提升至±0.5°C（提升约3倍）；燃料消耗降低&gt;6%（P&lt;0.05）；氢气掺烧路径模拟显示碳排放可减少8–10%，且燃烧效率未显著下降</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0203d3ee5c9ac8af20481b21220f04fc5bb57d63" target="_blank">Data-driven prediction of chemical oxygen demand in dairy wastewater coagulation using a magnetic Moringa Oleifera–derived coagulant </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Rafael Emilio G. Cuello; R. Ortega‐Toro; J. Hernández‐Fernández</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">开发磁性天然絮凝剂（辣木–CoFe₂O₄复合物）用于高效去除乳制品废水中化学需氧量（COD），并建立ANN模型预测其工艺性能</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用Box–Behnken设计优化四因素操作参数，并构建4–2–1结构的多层感知器人工神经网络（ANN）建模COD去除率的非线性响应</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">COD去除率达70.13–89.45%；ANN模型R² = 0.9946，训练/测试相对误差均&lt;6.7%；pH被确定为影响絮凝性能的主导因素</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/02e2450a89b0fe9b6f4bbc6299d5332a6336b569" target="_blank">Thermodynamic impedance mismatch in neurodegeneration: A biophysical framework for the prediction of amyloid-related imaging abnormalities. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">K. Baird</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">抗淀粉样蛋白单抗治疗引发的淀粉样蛋白相关影像学异常（ARIA）的物理机制不明，需从热力学角度解释其发生根源</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“阻抗失配理论”，将神经退行性变建模为网络级热力学失效，并利用Pennes生物热方程定义神经生理负荷指数（NLI）以量化局部热失控风险</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">Aβ被重新诠释为具有热沉与生物电分流功能的保护性结构；清除Aβ若未同步解决能量失配，可能诱发局部机械/热不稳定性，进而触发ARIA相关的炎症级联</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/1548181bddbebdab9faa31bd45cf5f149911a5ab" target="_blank">MOF/Hydrophobic Polymer Composites for Toluene Capture </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Joy Ekka; S. Devautour‐Vinot; Guillaume Rioland; G. Maurin</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何通过选择不同疏水性聚合物调控DUT-4(Al) MOF复合材料在湿度环境下对甲苯的选择性吸附性能</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用多尺度计算方法（DFT + GCMC + MD + 图论分析）关联聚合物浸润行为与MOF孔结构、吸附容量及传质动力学</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">PVDF在保持MOF连续孔道的同时显著促进甲苯扩散并阻隔水分子，使DUT-4(Al)/PVDF在湿气下表现出最优的甲苯选择性吸附；PP严重破坏通道导致吸附能力最低，PS则主要限于表面覆盖而保留最高相对吸附量</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/c463ee56aaca7ee5926682a31644cf5ebe86586f" target="_blank">Black-Box and Interpretable Artificial Intelligence Models for Hydrogen Uptake Across Various Metal–Organic Frameworks </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Regan Solomon Ward Taylor; Shahin Alipour Bonab; M. Yazdani-Asrami</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何高效、可解释地预测金属有机框架（MOF）材料的氢气（H₂）吸附性能，以加速高性能储氢材料的筛选与设计</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">对比传统机器学习模型与基于符号回归（SR）的可解释人工智能（XAI）方法，利用10,123个实验测得的MOF H₂吸附数据进行训练和验证</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">最优ML模型拟合优度达0.9986（高精度但黑箱），SR模型拟合优度为0.914但输出物理可解释方程，明确揭示影响质量储氢效率的关键结构特征（如孔径、比表面积、密度等）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/2b447c2ae35730ae9fbefee4a4926c777198fe6b" target="_blank">ReaxFF-nn: a reactive machine-learning potential in GULP/LAMMPS and its applications in the thermal conductivity calculations of carbon nanostructures. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Zhong-Hao Ye; Jia-Hua Liu; Chuan-Guo Chai; Yushi Wen; Shou-Xin Cui et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在不重新设计全新机器学习势函数的前提下，提升ReaxFF反应力场的精度以接近DFT级别，同时兼容主流分子动力学软件（GULP/LAMMPS）并支持热输运等关键物性计算。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">在经典ReaxFF框架中嵌入轻量级神经网络（仅用于预测键级和键能），通过I-ReaxFF包训练参数，并集成至GULP（Fortran）和LAMMPS（C++）实现 quasi-DFT 精度模拟。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">1）ReaxFF-nn在石墨烯/CNT体系中力误差≤10⁻² eV·Å⁻¹/atom，与DFT高度一致；2）基于该势函数计算的石墨烯热导率κ与DFT结果吻合，且NEMD成功揭示κ随CNT直径变化的尺寸效应规律。</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[1] Machine learning force field molecular dynamics simulation of interfacial reactions on platinum in concentrated aqueous electrolytes — 首次在原子尺度揭示Pt表面ADIE失效的动态起源（阴离子脱溶剂化能垒过高+水合层刚性抑制界面重构），直击水系电池阴极窗口普适性瓶颈。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[4] LCO-sensitive graph neural network framework for high-accuracy energy mapping in NiCoCr medium-entropy alloys — 其强调LCO动力学对温度/速度的依赖，与[1]中隐含的“静态界面主导”范式存在潜在张力，提示电催化界面稳定性可能需耦合构型熵与局部化学序演化。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">Zhang group (论文[2][10]共同作者) — 持续推动ML力场工程化落地（多时间尺度切换、ReaxFF-nn嵌入），兼具算法创新与工业软件兼容性，是连接第一性原理精度与电催化真实工况的关键桥梁。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">机器学习势正从“高精度替代DFT”转向“面向功能界面的动态建模”——聚焦电解液/电极界面水合结构演化（[1]）、区域耦合稳定性（[3]）、热输运（[10]）等非平衡物理量，凸显电催化模拟的多尺度-多物理场融合需求。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">所有ML力场工作（[1][2][3][10]）均未显式耦合电极电势作为热力学变量——当前MD模拟仍基于零偏压或固定电荷近似，无法描述电化学势驱动下的界面重构（如Pt表面阴离子吸附/脱附的电位依赖路径），严重制约阴极稳定窗口的定量预测。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">跨体系可迁移性缺失：[4]的LCO敏感模型、[8]的MOF-聚合物浸润模型、[9]的MOF储氢XAI模型各自构建独立特征空间，缺乏统一描述“局域电子结构-溶剂化-界面应力”耦合的通用图表示学习框架，导致电催化材料设计知识难以泛化。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展电势显式嵌入的ML力场（e.g., electrochemical DP），结合图神经网络统一编码原子环境、溶剂化壳层与外加电势梯度；并建立跨材料体系的界面描述符基准库（含Pt/氧化物/MOF/MEA），支撑电催化性能的物理引导式AI逆向设计。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>
