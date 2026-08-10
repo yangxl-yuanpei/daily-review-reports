@@ -4117,5 +4117,83 @@
       "electrochemistry",
       "dft"
     ]
+  },
+  "s2:2b4aab52e89024e958d21bb066e956ddae6887f9": {
+    "title": "Visualizing Interfacial Ion Concentration at Electrified Interfaces Using\n Operando\n Digital Off-Axis Holography Mach-Zehnder Electrochemical Interferometry",
+    "date_seen": "2026-08-10",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:2bf504d8c8d486488f96906f3b07402df18c2a3c": {
+    "title": "Simulations of mechanical responses in v‐B2O3 glass under indentation and shear deformation",
+    "date_seen": "2026-08-10",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:2c88f2ad8281fde7aa4ce46a956f9a0c4e62e5ac": {
+    "title": "Bridging accuracy and efficiency: assessing universal ML potentials for niobiumoxygen clusters",
+    "date_seen": "2026-08-10",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "dft"
+    ]
+  },
+  "s2:2cf47421d9176653fb8364932cb1dd5c07c5d360": {
+    "title": "Data-driven atomistic modeling of crystalline and glassy solid-state electrolytes.",
+    "date_seen": "2026-08-10",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:2d170ebd84e93cb0c1153353b7b476c2673a8939": {
+    "title": "High‐Performance Millimeter Scale Electromagnetic Generator",
+    "date_seen": "2026-08-10",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:2dbdc381c61f579b8b6a7235e209e8c28f51d3b7": {
+    "title": "The physics-AI dialogue in drug design",
+    "date_seen": "2026-08-10",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:2dca17ea5f02a0a64c9146e72dc03ade5855854a": {
+    "title": "Atomic-Level Exploration of Local Structural Heterogeneity in Liquid Ga-In Alloys Using a Machine Learning Potential.",
+    "date_seen": "2026-08-10",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:2e09d129c61a25e66901259673f4d768047f9b2c": {
+    "title": "Interstellar Dust-Catalyzed Molecular Hydrogen Formation Enabled by Nuclear Quantum Effects",
+    "date_seen": "2026-08-10",
+    "tags": [
+      "MLFF",
+      "NQE",
+      "surface"
+    ]
+  },
+  "s2:2fdaee90a728362a8678ad744a7f7f1208dfc6b9": {
+    "title": "Tether Force Estimation Airborne Kite Using Machine Learning Methods",
+    "date_seen": "2026-08-10",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:30babc05bca4c8b8039c201b9710066fa9e24a45": {
+    "title": "Implementation of AI-powered medical diagnosis system",
+    "date_seen": "2026-08-10",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
