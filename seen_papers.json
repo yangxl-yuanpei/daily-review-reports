@@ -4270,5 +4270,89 @@
       "electrochemistry",
       "surface"
     ]
+  },
+  "s2:13e3ff0794b2b6a4858f1f657d17fea182aea05a": {
+    "title": "Bioinformatics-Driven Molecular Docking and Molecular Dynamics Simulation of Gold Nanoparticle Ligand Complexes for Targeted Antimicrobial Applications",
+    "date_seen": "2026-08-12",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:4710234cfc3033128893cd77a6134d1b8028e97c": {
+    "title": "Predictive Simulation of Interphases on Li Metal Surface",
+    "date_seen": "2026-08-12",
+    "tags": [
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:5ba1ce8093b0e019a6542be1cb4efcffe1bd99e8": {
+    "title": "Coordination-Driven Transport in Chloroaluminate Electrolytes",
+    "date_seen": "2026-08-12",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:8cba6df30f0261eaa617f464c6cb48ec76528a1f": {
+    "title": "Boron-Doped Graphite Intercalation Compounds as Mixed Ionic-Electronic Conductors.",
+    "date_seen": "2026-08-12",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:75991f7d6ccc24574f003ddfc5b9de3236da6f9a": {
+    "title": "Kinetic profiling of multi-enzymatic activity in iron single-atom nanozymes via single-particle impact electrochemistry.",
+    "date_seen": "2026-08-12",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "dft"
+    ]
+  },
+  "s2:348554e47020617f0c9d1a5624cc58c2890598e8": {
+    "title": "Leveraging Machine Learning Force Fields (MLFFs) to Simulate Large Atomistic Systems for Fidelity Improvement of Superconducting Qubits and Sensors",
+    "date_seen": "2026-08-12",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:349880165a477b613d9d96790c32e1ffa29bb49f": {
+    "title": "Machine learning force-field model for kinetic Monte Carlo simulations of itinerant Ising magnets",
+    "date_seen": "2026-08-12",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:3553d5edea006af885a8534de9218f4be6499e57": {
+    "title": "floq: Training Critics via Flow-Matching for Scaling Compute in Value-Based RL",
+    "date_seen": "2026-08-12",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:364fd895c3bb53139ce59433b40bac12a4a974bd": {
+    "title": "Efficient and Accurate Machine Learning Interatomic Potential for Graphene: Capturing Stress–Strain and Vibrational Properties",
+    "date_seen": "2026-08-12",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "dft",
+      "generative"
+    ]
+  },
+  "s2:366da1d30f6cb524cb6a52c93bebade22e8bf8db": {
+    "title": "Deep learning framework for analyzing birefringence imaging by incorporating optical polarization overlap in stress-induced ferroelectric SrTiO3",
+    "date_seen": "2026-08-12",
+    "tags": [
+      "general"
+    ]
   }
 }
