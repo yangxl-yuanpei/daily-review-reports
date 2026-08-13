@@ -4354,5 +4354,81 @@
     "tags": [
       "general"
     ]
+  },
+  "s2:01c52f3982d9085a9aeb385a3e23998685854fe0": {
+    "title": "Learning to Synchronize in Minimum Time",
+    "date_seen": "2026-08-13",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:3a54b44bcd9d9ccbc3de275638e9c31a04509fb0": {
+    "title": "Deep Learning-Based Statistical Downscaling of Sea Surface Temperature Using a Residual Corrective Neural Network",
+    "date_seen": "2026-08-13",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:38484ec92524136eeb21f84cb4e6a75ad72a5871": {
+    "title": "Revisiting thermal transport in CuCl: First-principles calculations and machine learning force fields",
+    "date_seen": "2026-08-13",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:38f81ee9cbd36c95fa094f98dbf2760b6085707e": {
+    "title": "Charge integrated graph neural network-based machine learning potential for amorphous and non-stoichiometric hafnium oxide",
+    "date_seen": "2026-08-13",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:3971964ffc6fa9a92dd05427611534a640ee703d": {
+    "title": "Benchmark of Coacervate Formation and Mechanism Exploration Using the Martini Force Field.",
+    "date_seen": "2026-08-13",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:3a09bd47b43589e09a7dd2263aaf1c449bed484e": {
+    "title": "Properties of Electrochemical Interface of Na-Air Battery: A Large-Scale Machine Learning Molecular Dynamics Study",
+    "date_seen": "2026-08-13",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:3a18e82dc29ffcc893267f7ffd2dd53693b749f2": {
+    "title": "Toward Multi-Fidelity Machine Learning Force Field for Cathode Materials",
+    "date_seen": "2026-08-13",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:3a46b44531f635757246a72a0ad477f9c868c673": {
+    "title": "Activation energy of aluminate dissolution in metakaolin: MLFF-accelerated DFT study of vdW and hydration shell effects",
+    "date_seen": "2026-08-13",
+    "tags": [
+      "MLFF",
+      "dft"
+    ]
+  },
+  "s2:3b748d016879ac57bc4363bd0860b51842292e5d": {
+    "title": "Breathing New Life into Classical Force Fields",
+    "date_seen": "2026-08-13",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:3b9396193c4ba34a7c89481f4553af28e2d03905": {
+    "title": "The Future of Geotechnical Engineering Through Deep Learning: A Concise Literature Review",
+    "date_seen": "2026-08-13",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "generative"
+    ]
   }
 }
