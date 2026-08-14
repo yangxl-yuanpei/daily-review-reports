@@ -4430,5 +4430,88 @@
       "surface",
       "generative"
     ]
+  },
+  "s2:0b5f625a4f0003941ddcafadcf308d5a0f970c26": {
+    "title": "Studying Heat Conduction Properties by Using Machine Learning Potentials: a brief review",
+    "date_seen": "2026-08-14",
+    "tags": [
+      "electrochemistry",
+      "dft"
+    ]
+  },
+  "s2:197726d583f73fe726e41cd4c04b3406e71c0c2b": {
+    "title": "Deciphering Chemical\nEnvironments in Conformational\nData Sets Using an IQA Band-Matching Protocol",
+    "date_seen": "2026-08-14",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:1d035941cb5d3a480d5896990a3ff0ae9da9c508": {
+    "title": "An OpenMM-Based\nML/MM–MMGBSA Workflow for End-point\nProtein–Ligand Binding Energy Ranking",
+    "date_seen": "2026-08-14",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "generative"
+    ]
+  },
+  "s2:2792942a2a365b77ace526e7e3314c1dede5c680": {
+    "title": "Internal Electric\nField-Induced “Proton Bridge”\nMechanism in Photo-Self-Fenton Coupled PMS Systems: A Theoretical\nStudy Based on Nonmetal Surface-Engineered Carbon Nitride",
+    "date_seen": "2026-08-14",
+    "tags": [
+      "catalysis",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:47541261b6a4c1b506bc236f7877f45ade2d5ce4": {
+    "title": "Machine learning force field development and basic physical property studies for molten salt reactor fuel salt LiF-BeF2-UF4.",
+    "date_seen": "2026-08-14",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "dft",
+      "active-learning"
+    ]
+  },
+  "s2:006b8e2f1f555976b479cbd4e95c72c74e0ecb1d": {
+    "title": "Exploring Sparse Matrix Multiplication Kernels on the Cerebras CS-3",
+    "date_seen": "2026-08-14",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:3c56c6cf4d0baf9e402814da09e4d5febe4a4974": {
+    "title": "Learning Inter-Atomic Potentials without Explicit Equivariance",
+    "date_seen": "2026-08-14",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:3d0b16d68e3f272cc6d619ff51f9b5aa68c1fa6e": {
+    "title": "Modeling Diffusion in Metal-Organic Frameworks Using On-the-fly Probability Enhanced Sampling-Based Machine Learning Potentials.",
+    "date_seen": "2026-08-14",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "dft",
+      "active-learning"
+    ]
+  },
+  "s2:3d6cbbe4ad3158a607db82b593a1e1a969e66372": {
+    "title": "Machine Learning–Enhanced Evaluation of AI Literary Translation: Logistic Regression, Random Forest, and SVM in a Human–AI Collaborative Framework",
+    "date_seen": "2026-08-14",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:3e4bbf0ccffc5df95166462ab11db0e1f413a51b": {
+    "title": "Low-rank matrix and tensor approximations for compression of machine-learning interatomic potentials.",
+    "date_seen": "2026-08-14",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
   }
 }

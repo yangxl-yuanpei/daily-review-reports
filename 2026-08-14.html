@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-08-14</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-08-14</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 2011 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/2792942a2a365b77ace526e7e3314c1dede5c680" target="_blank">Studying Heat Conduction Properties by Using Machine Learning Potentials: a brief review </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Guofei Jiang; Xinyu Liu; Ke Tang; Haifeng Qiao; Guosheng Li et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">揭示光自芬顿–过一硫酸盐（PSF–PMS）耦合体系中氧化与还原半反应在复杂界面协同进行的微观机制，特别是电子与质子竞争下的动态耦合路径。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">融合密度泛函理论（DFT）与基于Bagging架构的随机森林机器学习（RF-ML），构建“理论计算–数据建模–机制反演”闭环；创新性引入局域内建电场（IEF）、p带中心下移、价带顶（VBM）和功函数等多维描述符协同解析质子迁移驱动力与反应位点调控规律。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次提出并验证“跨位点质子桥”（cross-site proton bridge）机制，将质子视为可迁移活性介质而非静态配体；② 揭示局域内建电场（IEF）通过空间分离氧化/还原位点并驱动质子定向迁移的双重作用；③ 建立首个面向耦合氧化体系的高维DFT描述符–反应能垒非线性映射模型，克服多重共线性干扰。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">以非金属掺杂/缺陷工程化的氮化碳（g-C₃N₄）为模型催化剂；基线方法为传统DFT过渡态搜索与线性描述符回归；关键结果：（1）质子跨界面迁移能垒Eₐ &lt; 0.5 eV，证实“质子桥”机制可行；（2）RF-ML预测反应能垒R² &gt; 0.9，显著优于线性模型（R² ≈ 0.6–0.7）。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/47541261b6a4c1b506bc236f7877f45ade2d5ce4" target="_blank">Machine learning force field development and basic physical property studies for molten salt reactor fuel salt LiF-BeF2-UF4. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Xinyu Li; Yu-Huan Lv; Lei Zhang; Tao Bo</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在高温度、强放射性等实验难以开展的条件下，准确获取FLiBeU（LiF-BeF₂-UF₄）熔盐燃料的微观结构演化规律及其热物理/输运性质随温度与UF₄组分的变化机制。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用“深度势能分子动力学（DPMD）+主动学习（active learning）”双驱动策略构建高精度机器学习力场（MLFF），通过迭代筛选DFT计算中最信息丰富的构型样本，实现精度与效率的协同优化。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次为含锕系元素（U）的多阴离子熔盐（F⁻/BeF₄²⁻/UF₆²⁻等共存）构建经DFT+实验双重验证的DPMD力场；② 揭示UF₄诱导的“配位饱和→阴离子网络僵化→离子迁移受阻”这一跨尺度传导机制链；③ 建立覆盖宽温宽组成范围的系统性物性数据库（密度、Cₚ、σₑ, η、Dᵢ等），填补实验空白。</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">研究体系为FLiBeU（UF₄ 3–50 mol%，773–1173 K）；基线方法包括经典Brenner/MEAM力场与有限DFT单点验证；关键结果：（1）UF₄浓度升至30 mol%时，F⁻自扩散系数下降约65%，剪切黏度呈近指数增长（1173 K下从28.5 cP升至142 cP）；（2）RDF显示U⁴⁺平均配位数从7.2（3 mol% UF₄）增至8.9（50 mol% UF₄），且出现显著U–U近邻峰（&lt;3.8 Å），揭示短程团簇化趋势。</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/006b8e2f1f555976b479cbd4e95c72c74e0ecb1d" target="_blank">Exploring Sparse Matrix Multiplication Kernels on the Cerebras CS-3 </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Milan Shah; Sheng Di; Michela Becchi</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">评估Cerebras CS-3 AI加速器在大规模稀疏线性代数运算（SpMM和SDDMM）中的性能潜力，尤其针对无法以稠密格式装入设备的超大稀疏矩阵。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">为CS-3平台设计并优化低层稀疏核（SpMM与SDDMM），重点提升I/O效率、内存占用与大规模矩阵可扩展性。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在90%稀疏度下，SpMM和SDDMM分别比CPU快最高100×和20×；但当稀疏度&gt;99%时性能显著下降，甚至不如先进CPU库。</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/3c56c6cf4d0baf9e402814da09e4d5febe4a4974" target="_blank">Learning Inter-Atomic Potentials without Explicit Equivariance </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Ahmed A. A. Elhag; Arun Raja; Alex Morehead; Samuel M. Blau; Garrett M. Morris et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在不依赖硬编码的旋转平移对称性架构约束的前提下，构建高精度、可扩展的机器学习原子间势函数（MLIPs）</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出TransIP框架，利用通用非等变Transformer模型，通过在嵌入空间中优化表征来隐式学习SO(3)等变性，而非强制架构等变或依赖数据增强</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在OMol25数据集上达到与当前最优等变模型相当的力场预测精度；相比数据增强基线，在不同数据规模下性能提升40%–60%</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/3d0b16d68e3f272cc6d619ff51f9b5aa68c1fa6e" target="_blank">Modeling Diffusion in Metal-Organic Frameworks Using On-the-fly Probability Enhanced Sampling-Based Machine Learning Potentials. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">S. Ethirajan; Ambarish R. Kulkarni</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何提升机器学习势能（MLPs）对纳米多孔材料中罕见事件（如高能非平衡态过程）的描述能力</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于On-the-fly Probability Enhanced Sampling（OPES）的主动学习课程，结合温度和距离相关的集体变量进行时变偏置采样</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">实现了纳秒尺度、近DFT精度的分子动力学模拟；首次发现咪唑在SALEM-2 MOF中通过4元环窗口的环开机制（涉及Zn–N键瞬态解离）</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/3d6cbbe4ad3158a607db82b593a1e1a969e66372" target="_blank">Machine Learning–Enhanced Evaluation of AI Literary Translation: Logistic Regression, Random Forest, and SVM in a Human–AI Collaborative Framework </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Sirui Wang; Xiang Li</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">AI翻译在科幻文学翻译中的质量表现及人机协同优化路径</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">融合用户感知建模（基于300份问卷的三种监督学习算法）与多引擎译文对比分析（DeepSeek/DeepL/Doubao vs. 人工译本）</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">Logistic Regression对用户满意度预测接近完美准确；DeepL流畅但弱化隐喻力，DeepSeek术语一致但偶有过度推断，Doubao中文表达佳但风格欠雕琢</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/3e4bbf0ccffc5df95166462ab11db0e1f413a51b" target="_blank">Low-rank matrix and tensor approximations for compression of machine-learning interatomic potentials. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">I. Vorotnikov; Fedor Romashov; N. Rybin; Maxim Rakhuba; I. Novikov</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在不损失精度的前提下压缩机器学习原子间势（MLIPs）的参数量以提升计算效率</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用固定秩约束下的低秩矩阵与张量分解，并结合自动秩增广算法优化拟合势能面</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">对Moment Tensor Potential（MTP）实现最高50%参数压缩且精度零损失；方法可推广至原子团簇展开（ACE）等其他MLIPs</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[7] Learning Inter-Atomic Potentials without Explicit Equivariance — 它挑战了MLIPs领域“等变性必须硬编码”的范式共识，证明隐式学习SO(3)对称性可行且精度不损，为轻量化、可解释势函数设计开辟新路径</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[2] Deciphering Chemical Environments in Conformational Data Sets Using an IQA Band-Matching Protocol — 其基于量子拓扑能量（IQA）的原子等价性定义，与[7]中纯数据驱动、无物理约束的嵌入空间优化逻辑存在本体论冲突：前者要求势函数显式承载电子结构可解释性，后者默认放弃该诉求</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">Cerebras Systems（论文[6]）— 在CS-3上实现超稀疏矩阵核的I/O感知优化，表明其正系统性攻克AI for Science中“内存墙”瓶颈，对大规模MLP部署具基础设施级影响</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">MLPs正从“精度优先”单维目标，转向精度-效率-可解释性-硬件适配四维协同优化；物理约束（如等变性、IQA、低秩）不再仅作为归纳偏置，而成为可插拔、可验证、可压缩的模块化组件</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">所有MLP相关工作（[1][3][5][7][8][10]）均假设训练数据覆盖目标相空间，但对热/辐照/电场等强非平衡条件下构象采样偏差导致的外推失效缺乏鲁棒性评估机制——尤其在[4]界面质子桥、[5]熔盐辐射损伤等动态失衡体系中，此缺陷直接威胁预测可信度</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">跨尺度耦合仍严重脱节：[4]的界面反应机制依赖静态DFT计算，[3]的MM/GBSA排名未耦合[8]的OPES增强采样，[5]的熔盐输运性质未链接[1]的热导率模拟——缺乏统一框架将MLP生成的原子轨迹，自动映射为介观输运系数或宏观反应速率</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展“任务驱动的自适应MLP协议”：以终末物理量（如热导率κ、结合自由能ΔG、质子迁移能垒）为损失函数反向调控训练数据生成、等变性注入强度与张量压缩策略，在保证端到端误差可控前提下，实现MLP从“拟合势能面”到“求解物理方程”的范式跃迁</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>
