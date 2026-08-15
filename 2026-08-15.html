@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-08-15</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-08-15</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 2745 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/3f6ca5624ed20d0ef291f3f548836c36331d9e8c" target="_blank">Evaluating Electrostatic Embedding MLIP/MM for Relative Binding Free Energy Calculations </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Stephen E. Farr; G. D. Fabritiis</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在alchemical相对结合自由能（RBFE）计算中准确描述配体-环境静电相互作用，克服经典力场固定电荷近似的局限性</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用静电嵌入式MLIP/MM方案，基于TensorNet2训练多任务模型AceFF-2-RESP-1，联合预测能量、力和RESP电荷；将ML预测的动态RESP电荷嵌入PME静电求和（含Thole阻尼），实现配体电荷随构象与环境自洽演化</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">首次将静电嵌入MLIP/MM完整集成至生产级RBFE工作流并系统验证；提出RESP电荷与AMBER力场兼容的端到端训练策略（非后处理）；引入Thole阻尼抑制alchemical变换中因电荷突变引发的极化灾难</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在Wang等基准集5个靶标（TYK2、CDK2、thrombin、p38、JNK1）上测试，每条转化边3次重复；TYK2上ΔΔG RMSE从GAFF2的0.86 kcal/mol显著降至0.45 kcal/mol；其余4个靶标精度未提升，与经典/机械嵌入基线相当</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/5daf7df904f1dcad1ad2e5b020021c0b3cfa1af3" target="_blank">SensitiveCancerGPT: Generative AI for Actionable Pharmacogenomics in Precision Oncology </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Shaika Chowdhury; Munhwan Lee; Sivaraman Rajaganapathy; Lichao Sun; Liewei Wang et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在患者异质性强、数据稀缺的临床现实中，实现跨癌种泛化且可解释的抗癌药物敏感性预测（DSP），以支持高风险治疗决策</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">SensitiveCancerGPT——首个将大语言模型（LLM）适配至结构化多组学数据的生成式AI框架，通过三阶段系统优化（组学数据tokenization与fine-tuning、任务感知prompt engineering、癌症通路知识图谱注入）实现药敏预测与机制解释联合建模</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将LLM范式迁移至结构化药敏预测任务，突破传统判别式模型边界；② 提出“知识增强型prompting+微调”双路径适配策略，显式整合KEGG/Reactome通路知识；③ 以临床优先目标（高敏感类召回）驱动损失函数设计，而非单纯优化整体准确率</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">在GDSC、CCLE、DrugComb、CTRP四大药敏数据库上验证；基线为XGBoost、RF及Transformer-based DSP模型；跨组织迁移（Rare Cancer Generalization）下F1提升18.7%（p=0.009）；盲测（New Patient/New Drug）平均F1达0.84，敏感类召回率显著优于基线</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/a6318c71168517a464815773469f4d9da1b74f25" target="_blank">Machine Learning-Driven Refinement of Reactive Force Fields via Hierarchical “Center-Environment” Features for Energetic Molecular Crystals </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Yasser Matos‐Peralta; Christopher Panaritis; J. Hagler; Clara Santato; G. Patience</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何弥合经典循环伏安法（CV）理论与电化学工程实际应用中定量、可重现数据分析之间的鸿沟</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“多维定量CV分析框架”，将伏安图视为融合电子转移动力学、质量输运模式、法拉第/非法拉第电流分辨、以及操作条件敏感性的综合信息载体，并配套建立实验可控性指南与不确定性溯源体系</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将CV数据解构为“动力学–传质–界面电容–操作扰动”四维可量化指标体系；② 明确界定并量化工程场景中主要不确定性来源（如薄膜异质性引起的局部传质偏离半无限扩散）；③ 建立CV与operando表征（MS、光谱、纳米成像）的协同分析范式，推动从“单点电化学”到“过程电化学工程”的范式升级</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">以典型电催化体系（如OER/ORR、酶电极、电池电极）为对象，对比传统峰高/峰位分析与本框架下的参数提取（如从i–v斜率与扫描速率依赖性获得表观k₀；结合EIS校正后R&lt;sub&gt;u&lt;/sub&gt;实现真实动力学解析）；示例显示，忽略溶液电阻可使表观速率常数偏差达1–2个数量级</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/2c955c11240102aa6c6c9a3d28bd9b4a662264ab" target="_blank">An exact approach for describing adsorption and catalysis of interacting species in lattice models. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Yanhui Sun; Zeheng Yu; Yuhua Dong; Ming Gong; Yongchao Hao et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">周期性DFT计算REPEAT电荷成本过高，阻碍MOF材料的大规模筛选</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于<strong>全枚举法（full enumeration）求解格点模型巨正则配分函数</strong>的方法，并系统评估其在有限但“适当选择”的小尺寸晶格（如 3×3–4×4）上的收敛性与泛化能力，证明其可通过边界条件设计和构型截断策略逼近大体系极限。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次定量界定全枚举法在表面催化格点模型中的<strong>实用尺度阈值</strong>（非“越小越好”，而是需兼顾周期性与相互作用程）；② 揭示小格点全枚举结果可通过<strong>构型权重重加权或有效化学势映射</strong>外推至热力学极限，无需增大格点；③ 将严格枚举从纯平衡拓展至<strong>速率决定步骤的动力学建模</strong>，建立与微观速率常数直接关联的解析框架。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">以含吸附排斥/吸引相互作用的双组分表面反应（A + B → AB）为模型体系；基线方法包括平均场近似（MFA）、准化学近似（QCA）和蒙特卡洛（MC）模拟（100×100格点）；全枚举在 4×4 格点上复现 MC 吸附等温线误差 &lt; 1%，反应速率预测偏差 &lt; 2%，而 MFA 速率误差达 10⁵ 倍。</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/5669d89f08096a1e3958f8dea16340b1d1935272" target="_blank">Cubic-Equivariant Neural Density Functional Theory for Three-Dimensional Lattice Fluids </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Jens Weimar; Martin Oettel; Alessandro Simon</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何构建能直接作用于三维无约束密度分布的神经经典密度泛函，以提升非均匀流体结构预测精度</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用全卷积神经网络学习单粒子直接关联泛函 $c^{(1)}[\rho]$，通过随机外势下的巨正则蒙特卡洛数据训练，并施加立方点群对称性约束实现精确立方等变性</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">神经泛函显著改进了均匀状态方程和硬壁附近的密度分布；在各向异性粒子对分布中能复现主堆积壳层，但方向依赖性精度与基准泛函互有优劣</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/97df1c924ba1263eb9dee0ea6dda3154bd4104ec" target="_blank">Phase Behavior and Critical Properties of Hydrocarbons in Shale Illite Nanopores </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Sirong Zhu; Ning Li; Zhiwen Huang; Kai Ye; Fangpeng He et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">黏土纳米孔道中烃类流体受限导致的临界性质（Tc、Pc）偏移规律</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用巨正则系综蒙特卡洛（GCMC）模拟研究伊利石狭缝孔中2–20 nm尺度下烷烃的受限相行为</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">① 受限显著降低烃类临界温度（Tc）和临界压力（Pc），n-戊烷偏移幅度大于甲烷；② 20 nm孔径下临界性质趋近体相值，且提出可定量预测该偏移的新关联式</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/a396604ca9992dca59d970965512641c7b54d3d5" target="_blank">A Dataset of Equilibrium State Configurations of Adsorption in Zeolites </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Marko Petković; R. Ramesh; V. Menkovski; S. Calero</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">缺乏坐标分辨的甲烷在铝取代钠型沸石中吸附构型数据集，限制了对吸附微观机制和机器学习建模的研究。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">基于巨正则蒙特卡洛（GCMC）模拟，系统生成涵盖191种拓扑、不同Al含量/分布、Na⁺排布及压力条件下的甲烷吸附平衡构型数据。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">构建了AdsZeo数据集，包含4,775个沸石框架实现、62,075次生产模拟、1241.5万帧构型记录及超12亿粒子坐标记录，全部以DuckDB数据库格式开源。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/3ea1b138fe1a0c634f275b0bf2272ab2d54dd1f5" target="_blank">Stereochemistry at the Single-Molecule Level: From Monitoring to Regulation. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Wenlong Cai; Xinmiao Xie; Zezhou Yang; Xuefeng Guo</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在单分子尺度上实时监测和调控立体化学转化过程，以揭示个体分子动态并 bridging 宏观观测与分子尺度行为</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">整合电学（如单分子结、扫描探针显微镜、纳米孔）与非电学（如圆二色光谱、表面增强拉曼）单分子技术，结合多模态刺激（光、电场、机械力）和新兴策略（机器学习、纳米加工）</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">实现了基于手性诱导自旋选择性（CISS）效应的手性分子识别与操控；系统阐明了构型、构象及构造异构化在光/电/力驱动下的单分子调控机制</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[5] An exact approach for describing adsorption and catalysis of interacting species in lattice models — 提出严格热力学精确的全枚举解析框架，首次在保持可解释性前提下突破平均场近似对强相互作用表面体系的系统性误差（达5个数量级），为电催化微观动力学建模树立新基准。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[1] Evaluating Electrostatic Embedding MLIP/MM for Relative Binding Free Energy Calculations — 其依赖静电嵌入近似处理环境极化，而[5]揭示的多体关联本质暗示：即使在配体-蛋白界面，固定嵌入电势也可能掩盖覆盖度依赖的协同极化效应，从而弱化RBFE预测的物理一致性。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">DeGAT作者团队（论文[6]）— 在MOF电荷预测中实现DFT级精度与图神经网络效率的平衡，并验证其对吸附性质的传递性，为电催化表界面电荷重分布建模提供了可迁移的范式。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">多尺度建模正从“分而治之”转向“跨层耦合验证”：CV实验量化（[4]）、格点精确解（[5]）、神经泛函（[7]）、受限流体模拟（[8]）与构型数据集（[9]）共同指向——微观结构统计精度、热力学严格性与工程可解释性必须同步约束，而非孤立优化。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">所有高精度方法（[1][5][7][9]）均未解决*动态电极/电解质界面*下的实时电荷重分布与反应路径耦合问题；例如[5]的格点模型假设静态位点能量，无法描述电势驱动的双电层重构对吸附能的瞬态调制。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">机器学习模型（[3][6][7]）严重依赖高质量训练数据，但当前缺乏针对*电催化工况*（如偏压、pH、离子强度梯度）下原位结构响应的标准化数据协议，导致模型外推至真实电解池时可靠性未知。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展“电势门控”的多尺度代理模型：以[5]的精确格点解为热力学锚点，嵌入[4]中CV反演的动力学参数，并用[6]类图网络学习电极电势→局部电荷→吸附构型→反应能垒的端到端映射，在避免DFT代价的同时保留电化学边界条件的物理保真性。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>

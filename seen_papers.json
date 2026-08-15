@@ -4513,5 +4513,89 @@
       "electrochemistry",
       "MLFF"
     ]
+  },
+  "s2:3f6ca5624ed20d0ef291f3f548836c36331d9e8c": {
+    "title": "Evaluating Electrostatic Embedding MLIP/MM for Relative Binding Free Energy Calculations",
+    "date_seen": "2026-08-15",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "generative"
+    ]
+  },
+  "s2:5daf7df904f1dcad1ad2e5b020021c0b3cfa1af3": {
+    "title": "SensitiveCancerGPT: Generative AI for Actionable Pharmacogenomics in Precision Oncology",
+    "date_seen": "2026-08-15",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:899363c0b628322907b418656cd1bdf38af22e4d": {
+    "title": "Machine Learning-Driven Refinement of Reactive Force Fields via Hierarchical “Center-Environment” Features for Energetic Molecular Crystals",
+    "date_seen": "2026-08-15",
+    "tags": [
+      "dft"
+    ]
+  },
+  "s2:a6318c71168517a464815773469f4d9da1b74f25": {
+    "title": "Experimental methods in chemical engineering: Cyclic voltammetry—\n CV",
+    "date_seen": "2026-08-15",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface"
+    ]
+  },
+  "s2:21c40cb0542ffbabf7902304759a4d3e149ad0c3": {
+    "title": "An exact approach for describing adsorption and catalysis of interacting species in lattice models.",
+    "date_seen": "2026-08-15",
+    "tags": [
+      "catalysis",
+      "surface"
+    ]
+  },
+  "s2:2c955c11240102aa6c6c9a3d28bd9b4a662264ab": {
+    "title": "DeGAT: A Dual-Expert\nGraph Attention Network for Partial\nCharge Prediction in Metal–Organic Frameworks",
+    "date_seen": "2026-08-15",
+    "tags": [
+      "constant-potential",
+      "surface",
+      "dft",
+      "active-learning"
+    ]
+  },
+  "s2:5669d89f08096a1e3958f8dea16340b1d1935272": {
+    "title": "Cubic-Equivariant Neural Density Functional Theory for Three-Dimensional Lattice Fluids",
+    "date_seen": "2026-08-15",
+    "tags": [
+      "electrochemistry",
+      "dft"
+    ]
+  },
+  "s2:97df1c924ba1263eb9dee0ea6dda3154bd4104ec": {
+    "title": "Phase Behavior and Critical Properties of Hydrocarbons in Shale Illite Nanopores",
+    "date_seen": "2026-08-15",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:a396604ca9992dca59d970965512641c7b54d3d5": {
+    "title": "A Dataset of Equilibrium State Configurations of Adsorption in Zeolites",
+    "date_seen": "2026-08-15",
+    "tags": [
+      "catalysis",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:3ea1b138fe1a0c634f275b0bf2272ab2d54dd1f5": {
+    "title": "Stereochemistry at the Single-Molecule Level: From Monitoring to Regulation.",
+    "date_seen": "2026-08-15",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
   }
 }
