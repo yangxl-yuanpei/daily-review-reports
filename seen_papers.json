@@ -4597,5 +4597,89 @@
       "electrochemistry",
       "surface"
     ]
+  },
+  "s2:3ea7f7d41018ad27bd84a3c44d018c5e077c76de": {
+    "title": "Constructing Accurate Potential Energy Surfaces with Limited High-Level Data Using Atom-Centered Potentials and Density Functional Theory.",
+    "date_seen": "2026-08-16",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:3f52a3d1f4687bba5f32acf727c3a8d11fa7ebba": {
+    "title": "Transferable Neural Network Potentials and Condensed Phase Properties",
+    "date_seen": "2026-08-16",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:3fd3ca2749c5e9945ae40fb1407d955c1bbc7c17": {
+    "title": "(Invited)\n Training Accurate and Physically Meaningful Machine Learning Force Fields for Water",
+    "date_seen": "2026-08-16",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "dft"
+    ]
+  },
+  "s2:40244e4308e70089a4974ea16c70f8adc1dc977a": {
+    "title": "Impact of Derivative Observations on Gaussian Process Machine Learning Potentials: A Direct Comparison of Three Modeling Approaches.",
+    "date_seen": "2026-08-16",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:40482f69ce1efe3317c4a4a97c0937b8c69ebd90": {
+    "title": "Crash testing machine learning force fields for molecules, materials, and interfaces: model analysis in the TEA Challenge 2023",
+    "date_seen": "2026-08-16",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:406017f82f2cd616d1ba21cf34e6641e0a42353b": {
+    "title": "Efficient Long-Range Machine Learning Force Fields for Liquid and Materials Properties",
+    "date_seen": "2026-08-16",
+    "tags": [
+      "MLFF",
+      "dft"
+    ]
+  },
+  "s2:41b3252c633bfdfcfa496925b31b15c153e895ed": {
+    "title": "A scalable machine learning multi-local regression framework for potential energy surface fitting across diverse chemical landscapes.",
+    "date_seen": "2026-08-16",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:42325285a19afdedfc0aa5885e5fe708248839ac": {
+    "title": "An active learning force field for the thermal transport properties of organometallic complex crystals.",
+    "date_seen": "2026-08-16",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "active-learning"
+    ]
+  },
+  "s2:4237b657e87721c0c6f8dc6ea76b6450fc1b545a": {
+    "title": "Electric Field–Driven Interfacial Structuring of Ionic Liquids for Lanthanide Separation in Aqueous Media",
+    "date_seen": "2026-08-16",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:4366f35d96a8e2a86da266cd7032784cfca422bf": {
+    "title": "Improving Robustness and Training Efficiency of Machine-Learned Potentials by Incorporating Short-Range Empirical Potentials",
+    "date_seen": "2026-08-16",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "active-learning"
+    ]
   }
 }
