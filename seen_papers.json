@@ -4681,5 +4681,85 @@
       "MLFF",
       "active-learning"
     ]
+  },
+  "s2:032c997cc9c5bca8b008b2c9ea1c608aa1727133": {
+    "title": "Reservoir computing for network intrusion classification.",
+    "date_seen": "2026-08-17",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:441b261235eb425d337d1da6986deab23d5529fc": {
+    "title": "Spectropolarimetric Inversion in Four Dimensions with Deep Learning (SPIn4D). II. A Physics-informed Machine Learning Method for 3D Solar Photosphere Reconstruction",
+    "date_seen": "2026-08-17",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:4550cb61f5efd173260e3c5751b88b124cde8a83": {
+    "title": "A Review on Artificial Intelligence in High Performance Liquid Chromatography",
+    "date_seen": "2026-08-17",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:47bab9c3cd18a32282330f45992f91b782b589c5": {
+    "title": "Surface reconstructions in thin films of magnetic topological insulator \n<mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"><mml:msub><mml:mi mathvariant=\"normal\">MnBi</mml:mi><mml:mn>2</mml:mn></mml:msub><mml:msub><mml:mi mathvariant=\"normal\">Te</mml:mi><mml:mn>4</mml:mn></mml:msub></mml:math",
+    "date_seen": "2026-08-17",
+    "tags": [
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:48301b39a157676f1fa3e1296b7dd860fe0f5120": {
+    "title": "KNOWLEDGE AND ATTITUDES OF PHYSICAL THERAPISTS AND MEDICAL OFFICERS REGARDING THE APPLICATION OF ARTIFICIAL INTELLIGENCE IN HEALTH CARE AND REHABILITATION: A CROSS-SECTIONAL STUDY",
+    "date_seen": "2026-08-17",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:493d852a49a45115cf554f130c4b5a3a76a2a531": {
+    "title": "Selective Excitation of IR-Inactive Modes via Vibrational Polaritons: Insights from Atomistic Simulations.",
+    "date_seen": "2026-08-17",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:494669b7553ca0affdb4fcc37c85a4172ad6d37f": {
+    "title": "Learning Biomolecular Motion: The Physics-Informed Machine Learning Paradigm",
+    "date_seen": "2026-08-17",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:4b43ad643d656cc3638966c1fbd2fbe24f6a7b79": {
+    "title": "Machine Learning Force Field Predictions of Structural and Dynamical Properties in HOPG Defects and the HOPG-Water Interface with Electronic Structure Analysis",
+    "date_seen": "2026-08-17",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "catalysis",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:4ba1e65d2bfd541805623e017375a0ecaa679b16": {
+    "title": "A Hybrid Physics-Driven Neural Network Force Field for Liquid Electrolytes.",
+    "date_seen": "2026-08-17",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:4c30ffbfbb5dc782ef8eeb7c63f36e44ac6c2ba8": {
+    "title": "Predicting the shapes of Au55 and Au147: Force fields vs density-functional theory.",
+    "date_seen": "2026-08-17",
+    "tags": [
+      "electrochemistry",
+      "dft"
+    ]
   }
 }
