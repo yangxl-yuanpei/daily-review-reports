@@ -4761,5 +4761,90 @@
       "electrochemistry",
       "dft"
     ]
+  },
+  "s2:656790f8b3aedd6fd0f19af2457ef929db506bc7": {
+    "title": "Energy Partitioning in Dust-catalyzed $\\mathrm{H_2}$ and HD Formation Revealed by Molecular Simulations Considering Nuclear Quantum Effects",
+    "date_seen": "2026-08-18",
+    "tags": [
+      "NQE",
+      "surface"
+    ]
+  },
+  "s2:4d2e7782ce541f3dbf9cd648a63f39ebaba74e1e": {
+    "title": "The QCML dataset, Quantum chemistry reference data from 33.5M DFT and 14.7B semi-empirical calculations",
+    "date_seen": "2026-08-18",
+    "tags": [
+      "dft"
+    ]
+  },
+  "s2:4df336ea1dc502eeab8ae4705a8d90397d88fd19": {
+    "title": "From flat to stepped: active learning frameworks for investigating local structure at copper–water interfaces",
+    "date_seen": "2026-08-18",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface",
+      "dft",
+      "active-learning"
+    ]
+  },
+  "s2:4e6cd5ae55fe2c06fa2ed90ca4781d3c9361bf2a": {
+    "title": "The Interdisciplinary Integration of Electronic and Computer Engineering and Artificial Intelligence: Technologies, Applications, and Prospects",
+    "date_seen": "2026-08-18",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:4eb3886f8de9bc7da31f55dde7c1537aa42697e6": {
+    "title": "MLIP Arena: Advancing Fairness and Transparency in Machine Learning Interatomic Potentials via an Open, Accessible Benchmark Platform",
+    "date_seen": "2026-08-18",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "dft"
+    ]
+  },
+  "s2:4f0dacb259ef4219ee5d99ba8879301913c97518": {
+    "title": "Harnessing Machine Learning for Quantum-Accurate Predictions of Non-Equilibrium Behavior in 2D Materials",
+    "date_seen": "2026-08-18",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:4f8407e567e6c3ef7b9dd99865206b6ee5ed82e1": {
+    "title": "Analytic Dipole Moments For Complete Active Space Linearized Pair-Density Functional Theory.",
+    "date_seen": "2026-08-18",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:502dfa88b58a6ac865fb3d61fa4c361511a047b5": {
+    "title": "Learning potential energy surfaces of hydrogen atom transfer reactions in peptides",
+    "date_seen": "2026-08-18",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "dft",
+      "active-learning",
+      "generative"
+    ]
+  },
+  "s2:518e6457f1a8cc72fb666aa2d56008d8297a8577": {
+    "title": "Automated Modeling of an Electromagnet with Magnetorheological Fluid",
+    "date_seen": "2026-08-18",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:52262f7a9f5d48a1a953ec5663e7a3125ca66a0a": {
+    "title": "Advance neural computational scheme for thermal transport of tri-hybrid radiative viscous nanofluid with Hall current aspect over rotating disk",
+    "date_seen": "2026-08-18",
+    "tags": [
+      "generative"
+    ]
   }
 }
