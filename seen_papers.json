@@ -4846,5 +4846,82 @@
     "tags": [
       "generative"
     ]
+  },
+  "s2:ac4c36526bd8bfe47b456537b4450bb178b49061": {
+    "title": "A nuclear-quantum-corrected machine-learning potential reveals quantum-enhanced hydrogen segregation at general grain boundaries in alpha-iron",
+    "date_seen": "2026-08-19",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "NQE",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:52ca073e7f64775f0cb4587de0efbd40324fe616": {
+    "title": "Phonon vibrational and transport properties of SnSe/SnS superlattice at finite temperatures",
+    "date_seen": "2026-08-19",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:53235b3e7dbd4dcb422367b3d53bce6c96a848a9": {
+    "title": "Stiffness Discrimination Threshold Prediction for Haptic Exploration using Deep Learning",
+    "date_seen": "2026-08-19",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:5435731b14b3582d81f1cae35d9389fb5a651502": {
+    "title": "Peridynamic micromechanics of periodic structure composites subjected to body force with compact support",
+    "date_seen": "2026-08-19",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:563b4342cc13d2f632c6d5aebe05f6d17eebe642": {
+    "title": "Hierarchical Deep Potential with Structure Constraints for Efficient Coarse-Grained Modeling",
+    "date_seen": "2026-08-19",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:56b94421d0ee3c56099355f14c91b275393cfd8f": {
+    "title": "Experimental evidence of quantum Drude oscillator behavior in liquids revealed with probabilistic iterative Boltzmann inversion.",
+    "date_seen": "2026-08-19",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:571ff9e101289aa2d400f955ef23526f531afc1d": {
+    "title": "SimPoly: Simulation of Polymers with Machine Learning Force Fields Derived from First Principles",
+    "date_seen": "2026-08-19",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:5729e55645513008b62ecc9071181b26e5d35799": {
+    "title": "SamudrACE: Fast and Accurate Coupled Climate Modeling With 3D Ocean and Atmosphere Emulators",
+    "date_seen": "2026-08-19",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:5761a42595a96ba4d188869700f650e249094eb0": {
+    "title": "PyGAMD: Python graphics processing unit‐accelerated molecular dynamics software",
+    "date_seen": "2026-08-19",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:57b34b8bfdb1d7f8526fb494e1b93d7f485fac5b": {
+    "title": "Biomechanical spatio-temporal data analysis of football based on machine learning",
+    "date_seen": "2026-08-19",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
