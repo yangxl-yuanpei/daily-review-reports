@@ -4923,5 +4923,83 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:47e27e34f707662c6b4d5bdb45c350088269e443": {
+    "title": "Exploring Conformational\nTransitions of Adenine RNA\nDimer via Machine Learning Potentials",
+    "date_seen": "2026-08-20",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0224b2843623072c17df27ae9f5436343d9233f9": {
+    "title": "Neuromorphic Computing",
+    "date_seen": "2026-08-20",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:58790c320bf70f71e1804862edf9491dad638540": {
+    "title": "Molecular Simulations with a Pretrained Neural Network and Universal Pairwise Force Fields",
+    "date_seen": "2026-08-20",
+    "tags": [
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:58da8ccb55234e53b37ec49d7736b7fd1d5ec351": {
+    "title": "The power of simulation: Exploring binary alloys for next-generation applications",
+    "date_seen": "2026-08-20",
+    "tags": [
+      "dft"
+    ]
+  },
+  "s2:58f2078947bd2c91110d477782bd73cb77fc1abc": {
+    "title": "The continuous evolution of biomolecular force fields.",
+    "date_seen": "2026-08-20",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:59ea39a029db651e49365c44153cad875c52cd7a": {
+    "title": "Interpretability analysis and real-time prediction of locked mode-induced disruptions in EAST",
+    "date_seen": "2026-08-20",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:5a0cb00a2e0b2c7d83aab4ba1924583946d552b5": {
+    "title": "Research on the Application of Machine Learning in the Cost Control of Enterprise R&D Projects",
+    "date_seen": "2026-08-20",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:5a58eaab361395dc851c7a67988000278ae6d627": {
+    "title": "DeFecT-FF: a machine learning force field framework for high throughput defect modeling in CdTe-based solar cells.",
+    "date_seen": "2026-08-20",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "dft",
+      "active-learning"
+    ]
+  },
+  "s2:5abacda4a147e2a527b2acbf95bea2080605c95d": {
+    "title": "Accelerating Materials Discovery Through Sparse Gaussian Process Machine Learning Potentials.",
+    "date_seen": "2026-08-20",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:5bedd0ad509c54b33eaeb7adfb2ec30b1db31b33": {
+    "title": "Sequence-Dependent Conformational Landscapes of Intrinsically Disordered Proteins Reveal Asymmetric Chain Compaction",
+    "date_seen": "2026-08-20",
+    "tags": [
+      "general"
+    ]
   }
 }

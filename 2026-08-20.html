@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-08-20</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-08-20</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 2699 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0224b2843623072c17df27ae9f5436343d9233f9" target="_blank">Neuromorphic Computing </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Manjula Biradar</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何突破冯·诺依曼瓶颈，构建兼具高能效、大规模并行性与类脑计算能力的新型计算范式</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">综述性研究，系统梳理2019–2024年神经形态计算的硬件（忆阻器、自旋电子器件、光子处理器、2D材料器件等）与算法（脉冲神经网络SNN训练新策略、e-prop等在线学习规则）协同演进路径，强调“硬件-算法共设计”范式</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次系统整合多物理机制器件（离子输运界面、自旋动力学、光子非线性）与SNN算法进展的跨尺度关联；② 明确提出“存算一体界面离子输运”是类脑高效性的共性物理基础，超越单一器件材料视角；③ 指出e-prop与代理梯度法的结合使SNN训练首次具备可扩展性，打破“脉冲不可微”长期限制</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">涵盖Intel Loihi（~30 pJ/spike）、IBM TrueNorth（&gt;1 million neurons, 5.4 billion synapses, 20 mW）等主流芯片性能；SNN在语音识别（TIDIGITS数据集上98.2%准确率）、图像分类（CIFAR-10上91.7%）中逼近ANN精度且能耗降低1–2个数量级</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/58790c320bf70f71e1804862edf9491dad638540" target="_blank">Molecular Simulations with a Pretrained Neural Network and Universal Pairwise Force Fields </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">A. Kabylda; J. Frank; Sergio Suárez-Dou; Almaz Khabibrakhmanov; Leonardo Medrano Sandonas et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何构建一种兼具高精度、高效率、强泛化性与大规模可扩展性的机器学习力场（MLFF），以支持从有机小分子到含溶剂生物大体系的统一、可靠分子动力学模拟</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出SO3LR力场，创新性地将SO3krates（基于球谐函数的SE(3)-等变神经网络）用于高效建模半局域相互作用，并耦合物理驱动的通用成对势能项（短程排斥+长程静电+MBD色散），实现“数据驱动+物理先验”的混合建模范式</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次将SO3等变神经网络与显式物理势能项（静电+MBD）解耦耦合，兼顾SE(3)对称性与长程物理可解释性；② 训练数据覆盖带电生物分子复合物（如离子对、磷酸化残基、质子化组氨酸），显著提升对生物界面的迁移能力；③ 实现百万原子级显式溶剂生物体系（蛋白+糖链+脂双层）纳秒级MD模拟，突破当前MLFF在真实生物环境中的尺度瓶颈</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在400万PBE0+MBD级别中性/带电分子复合物数据集上训练；在QM9、MD17及自建生物测试集上，SO3LR对能量预测平均绝对误差（MAE）为0.18 kcal/mol，力MAE为0.15 eV/Å；单GPU可扩展至20万原子体系，较同精度的NequIP或MACE提速3–5倍且内存占用降低40%</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/58da8ccb55234e53b37ec49d7736b7fd1d5ec351" target="_blank">The power of simulation: Exploring binary alloys for next-generation applications </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">S. Ţălu; Lam Vu Truong</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何通过计算模拟驱动的方法实现二元合金的理性设计与高效发现，替代传统试错式实验范式</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“模拟驱动设计”（simulation-driven design）框架，核心是DFT–MD–ML–多尺度建模的闭环协同：DFT提供高精度势能面与电子结构基准，MD实现有限温度/压力下的动力学演化与相稳定性评估，ML加速势函数构建与性质预测，多尺度模型桥接原子级机制与宏观性能</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">首次系统整合数字孪生理念与合金计算设计流程，实现虚拟材料原型与真实制造–测试环节的动态反馈；提出“可迁移力场—ML代理模型”双校准策略，缓解DFT训练数据稀缺与MD力场泛化性差的矛盾；建立面向工业落地的分级验证协议（DFT验证→MD稳定性测试→微结构模拟→小试合成），突破学术模拟与工程应用间的鸿沟</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">涵盖半导体（如GaAs基合金）、生物医用（如Ti–Nb、Co–Cr）、能源催化（如Pt–Ni氧还原催化剂）、二维材料（如MoS₂基面内二元合金）四大类体系；相比纯实验筛选，该框架将候选合金初筛效率提升1–2个数量级；在Pt–Ni催化剂设计中，DFT+ML预测的表面偏析行为与原位XAS实验吻合度达92%</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/58f2078947bd2c91110d477782bd73cb77fc1abc" target="_blank">The continuous evolution of biomolecular force fields. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Xiaoli Lu; Jinfeng Chen; Jing Huang</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何通过融合深度学习与多尺度建模方法，提升生物分子力场的精度、可迁移性与计算效率，以支撑精准的生物大分子模拟与药物发现</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“跨尺度力场协同优化框架”，整合极化力场的物理约束、主动学习驱动的MLP训练策略，以及可逆粗粒化-细粒化映射机制，实现多尺度模型间参数与能量面的一致性传递</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将可微分粗粒化作为MLP训练的正则化先验，缓解小样本过拟合；② 提出“极化感知的主动学习”策略，聚焦电荷重分布敏感区域采样，减少QM数据需求；③ 构建统一的能量-力-极化率联合损失函数，保障MLP输出满足基本物理守恒律（如能量-力一致性、极化率对称性）</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">在蛋白质-配体结合自由能（PDBbind v5.0）、离子通道水分子渗透（KcsA体系）及DNA碱基对扭转势能面三个基准上测试；相比AMBER99SB-ILDN，结合自由能预测MAE降低42%（从2.8 → 1.6 kcal/mol）；MLP在仅用0.3% QM数据训练下，对未知构象的静电势预测RMSE达0.012 a.u.（优于ANI-1x）</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/59ea39a029db651e49365c44153cad875c52cd7a" target="_blank">Interpretability analysis and real-time prediction of locked mode-induced disruptions in EAST </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">G. Deng; Youwen Sun; Huihui Wang; T. Shi; S. Gu et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">预测托卡马克装置EAST中锁定模引发的等离子体破裂（LMiDs）事件</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用物理引导特征提取的可解释决策树集成模型，构建 interpretable predictor 和 real-time predictor 两个机器学习模型</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">interpretable predictor 在测试集上 AUC 达 0.997；dedge（磁岛外边界到等离子体最外闭合面的距离）被识别为最关键特征；real-time predictor 在10%误报率下实现94%报警成功率、平均提前报警时间137 ms</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/5a0cb00a2e0b2c7d83aab4ba1924583946d552b5" target="_blank">Research on the Application of Machine Learning in the Cost Control of Enterprise R&amp;D Projects </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Xiu Liu</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">传统研发项目成本控制方法在复杂多变市场与技术环境下失效，亟需高精度、高响应速度的智能成本预测与管控方案</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">构建基于BP神经网络的数据驱动框架，通过学习历史研发项目成本数据挖掘隐含规律，实现成本预测与决策支持</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">该框架显著提升了研发项目成本预测的准确性与成本管控的灵活性/响应速度</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/5a58eaab361395dc851c7a67988000278ae6d627" target="_blank">DeFecT-FF: a machine learning force field framework for high throughput defect modeling in CdTe-based solar cells. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Md Habibur Rahman; Maitreyo Biswas; A. Mannodi-Kanakkithodi</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何高效准确预测Cd/Zn-Te/Se/S锌blend相半导体中各类点缺陷（本征、掺杂、复合）的形成能与基态构型，以指导CdTe太阳能电池吸收层的缺陷工程优化</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">构建基于高通量HSE06-DFT数据训练的晶体图神经网络力场（MLFF），结合主动学习与加速筛选，实现缺陷能量与构型的快速高精度预测</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">1）开发了开源在线工具DeFecT-FF，支持用户自定义结构生成缺陷并计算含费米能级和化学势依赖的缺陷形成能；2）获得包含自旋轨道耦合的高保真缺陷形成能图，发现多个新低能缺陷构型</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/5abacda4a147e2a527b2acbf95bea2080605c95d" target="_blank">Accelerating Materials Discovery Through Sparse Gaussian Process Machine Learning Potentials. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Miran Ha; Saeed Pourasad; C. Myung; Kwang S. Kim</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">量子力学计算精度高但计算成本呈立方级增长，难以用于大规模真实材料体系的电催化等复杂化学过程模拟。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出稀疏高斯过程回归（SGPR）结合鲁棒贝叶斯委员会机（RBCM）的机器学习势框架，通过诱导点选择、自适应采样和模块化专家模型实现小数据量下的量子级精度与可校准不确定性估计。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">① 仅用100–1000个DFT结构训练即实现固体电解质Li₇P₃S₁₁分子动力学模拟（10⁴倍加速），预测本征电导率达数十mS/cm；② 在电催化筛选中发现Pt-C₂N₂单原子催化剂析氯过电位低至∼30 mV，显著优于工业催化剂（∼100 mV）。</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/5bedd0ad509c54b33eaeb7adfb2ec30b1db31b33" target="_blank">Sequence-Dependent Conformational Landscapes of Intrinsically Disordered Proteins Reveal Asymmetric Chain Compaction </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Congze Wang; Bin Zhang</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何从序列特征解析固有无序蛋白（IDP）构象系综中细粒度、序列特异性的结构变异</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">对酵母蛋白质组47个代表性IDP序列开展长时间尺度全原子模拟，并采用UMAP非线性降维分析高维结构数据</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">发现新描述符“局部致密性不对称性”（γRg），其正交于传统全局指标（如Rg、Rₑₑ），且与序列电荷/疏水性不对称性相关，构象动力学优先发生在链的更伸展区域</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[9] Accelerating Materials Discovery Through Sparse Gaussian Process Machine Learning Potentials — 提出SGPR+RBCM框架，在极小DFT数据量（100–1000结构）下实现量子级精度与可校准不确定性，直击电催化模拟中“高精度—低成本—可信度”三角困境。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[5] The continuous evolution of biomolecular force fields — 其强调多尺度融合与物理约束嵌入，而[9]的纯数据驱动SGPR范式在缺乏显式物理先验时，对电荷转移主导的电催化界面反应（如*O → *OH）可能泛化不足。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">DeFecT-FF作者团队（[8]）— 在CdTe缺陷工程中成功耦合HSE06高精度基准、图神经网络与主动学习闭环，为电催化材料中掺杂/空位/吸附共存体系的MLFF构建提供了可复用的高保真训练范式。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">ML力场正从“单一精度优先”转向“精度-不确定性-可解释性-可迁移性”四维协同优化，且显著向“小样本可靠预测”和“面向特定物性（如缺陷能、反应能垒）定制化建模”收敛。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">现有MLFF（包括[3][5][8][9]）普遍依赖静态构型训练集，难以刻画电催化中动态界面重构（如阳极氧化层重排、阴极双电层水结构演变）所需的非平衡态力场响应，导致自由能面采样失真。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">所有论文均未解决MLFF在跨相（固/液/气）、跨尺度（电子结构→微秒MD→宏观传质）耦合时的本构一致性问题——例如[4]的合金设计与[9]的电催化模拟若共享同一MLFF，其对金属表面吸附能与体相弹性常数的相对误差权重无法统一标定。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展“任务感知的分层不确定性传播”框架：底层用物理引导的稀疏GPR（如[9]）保障局部势能面精度；中层嵌入电化学约束（如恒电势、离子浓度梯度）作为软约束项；顶层通过贝叶斯模型平均实现多任务（吸附/扩散/反应）联合校准。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>
