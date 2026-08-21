@@ -5001,5 +5001,83 @@
     "tags": [
       "general"
     ]
+  },
+  "s2:903c4eeb855494d8b640ff1d85ce03d67d2ce7ea": {
+    "title": "The Future of AI and Big Data in Curriculum Evolution and Pedagogical Innovations",
+    "date_seen": "2026-08-21",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:00bb585101e95b8c840f737f54b5c418ed63d7fc": {
+    "title": "Application of Physics-Informed Neural Networks (PINNS) to Solve a Dynamic Model of Drug Abuse",
+    "date_seen": "2026-08-21",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:009b46fa34153941d00d061fd494360e8c5055ca": {
+    "title": "Coupling Molecular\nSimulation and Machine Learning\nfor CO2 Adsorption Prediction on Defective and N/O/S-Doped\nGraphene Models: Insights into Feature Importance and Synergistic\nEffects",
+    "date_seen": "2026-08-21",
+    "tags": [
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:5c3536832fe112f7e143160bbb11e1263cbfc5bb": {
+    "title": "Enhancing Thermal Conductivity Computation of Polymers via Machine Learning Techniques.",
+    "date_seen": "2026-08-21",
+    "tags": [
+      "electrochemistry",
+      "dft"
+    ]
+  },
+  "s2:5c74900a5698d8ece425d4e4ad31fcea6d47bdf2": {
+    "title": "The Real-Time Prediction of Cracks and Wrinkles in Sheet Metal Forming According to Changes in Shape and Position of Drawbeads Based on a Digital Twin",
+    "date_seen": "2026-08-21",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:5d1b70b2c20375a2fb28c4af62623f775d6b8be8": {
+    "title": "Study of Void Evolution in Lithium Solid‐State Batteries: Integrating High‐Throughput Phase‐Field Modeling, Experimental Validation, and Machine Learning",
+    "date_seen": "2026-08-21",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "generative"
+    ]
+  },
+  "s2:5d378b60437b91274dfbad5365d5750dc2cab76a": {
+    "title": "Machine Learning‐Assisted Multi‐Target Coarse‐Graining Strategy for Polystyrene",
+    "date_seen": "2026-08-21",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:5d671e801ea2817a16d10642070773c3a680120a": {
+    "title": "METHODS OF DATA MINING USING MACHINE LEARNING",
+    "date_seen": "2026-08-21",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:5e558809b622a0b9a8bb30429ce3109a21a1a1de": {
+    "title": "The Role of Quantum Neural Networks in Fraud Detection: Opportunities and Challenges",
+    "date_seen": "2026-08-21",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:5ead5a4080a59cfe37604f605add6639646fc5a4": {
+    "title": "Basic Stability Tests of Machine Learning Potentials for Molecular Simulations in Computational Drug Discovery",
+    "date_seen": "2026-08-21",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface",
+      "dft"
+    ]
   }
 }
