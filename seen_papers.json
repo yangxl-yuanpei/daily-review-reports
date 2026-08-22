@@ -5079,5 +5079,81 @@
       "surface",
       "dft"
     ]
+  },
+  "s2:7a67a1ae18b4c4e0e40982944013e894ea095125": {
+    "title": "Variational Quantum Circuit Parameterization of SchNet: A Simulator-Based Feasibility Study for Conservative Molecular Force Fields",
+    "date_seen": "2026-08-22",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:5f55f7e7477ab42b3fecabf2801d2f4704cb212c": {
+    "title": "The Role of Artificial Intelligence in Enhancing Cultural Sustainability Through Visual Design",
+    "date_seen": "2026-08-22",
+    "tags": [
+      "catalysis",
+      "generative"
+    ]
+  },
+  "s2:5fff59cad0949f462133b1e6f2a04a31478ec5d7": {
+    "title": "Predictive free energy simulations through hierarchical distillation of quantum Hamiltonians",
+    "date_seen": "2026-08-22",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:60ee61b813daff177743123d5b81c35a0afc1fac": {
+    "title": "(Invited)\n Interfacial Degradation in All-Solid-State Batteries in Atomic Scale Using Machine Learning Force Fields",
+    "date_seen": "2026-08-22",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:6155dfde1bc26299c92808c90b4f57a1e15970e3": {
+    "title": "Fast evaluation of unbiased atomic forces in ab initio variational Monte Carlo via the Lagrangian technique.",
+    "date_seen": "2026-08-22",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:61aedc0718f44519a7f674e1a9f23481d54133bc": {
+    "title": "A charge-density machine-learning workflow for computing the infrared spectrum of molecules.",
+    "date_seen": "2026-08-22",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:635ce16badbe46884a52efc89b50edc6c44c562a": {
+    "title": "LAMMPS-KOKKOS: Performance Por table Molecular Dynamics Across Exascale Architectures",
+    "date_seen": "2026-08-22",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:641ce92e3ae9f445f2f3afd9522116050f86cc1d": {
+    "title": "A Quantitative Review of Smart Walkers: Trends, Gaps, and a Proposed Evaluation Framework",
+    "date_seen": "2026-08-22",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:643cf0a8c61b8f8c194ef441272dade97d2035d8": {
+    "title": "Machine Learning Force-Field Approach for Itinerant Electron Magnets",
+    "date_seen": "2026-08-22",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:64c0655de40d32762b7a1e41d0a5af7569c4f9e9": {
+    "title": "Efficient Multiscale Simulations of Incremental Sheet Forming Using Machine Learning Surrogate Models for Crystal Plasticity",
+    "date_seen": "2026-08-22",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
   }
 }

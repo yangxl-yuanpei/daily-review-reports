@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-08-22</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-08-22</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 2683 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/7a67a1ae18b4c4e0e40982944013e894ea095125" target="_blank">Variational Quantum Circuit Parameterization of SchNet: A Simulator-Based Feasibility Study for Conservative Molecular Force Fields </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Hoang - Anh Nguyen; Nhu - Duc Dinh; Viet - Hung Tran; Tu - Uyen Le Tu; T. Pham et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在数据有限条件下构建兼具高精度与能量守恒特性的机器学习力场（MLFF），以准确预测分子体系的能量和原子受力</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出 Hybrid Quantum SchNet 架构，将可训练的变分量子线路（VQC）模块嵌入 SchNet 的连续滤波器生成、原子特征更新和读出层，使量子增强的非线性特征映射参与距离依赖相互作用建模，同时严格保持力作为能量负梯度的解析形式</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次将可微分变分量子线路端到端嵌入主流 MLFF 架构（SchNet），而非仅用于特征预处理或后校正；② 量子模块被系统性部署于滤波器生成、原子更新、读出三个关键可导子模块，实现对距离依赖相互作用与原子能量的协同量子增强；③ 在极小数据量（1000 样本/分子）下验证了量子增强对能量–力联合预测的实质性提升，且不破坏力的解析梯度一致性</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在 MD17 数据集（8 个小分子，每分子仅 1000 个构型）上评估；基线为标准 SchNet（energy-only 训练）；联合能量–力监督训练后，平均能量 MAE 从 2.567 降至 0.593 kcal mol⁻¹，平均力 MAE 从 16.340 降至 1.540 kcal mol⁻¹ Å⁻¹</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/5f55f7e7477ab42b3fecabf2801d2f4704cb212c" target="_blank">The Role of Artificial Intelligence in Enhancing Cultural Sustainability Through Visual Design </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">M. Hassan</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何利用人工智能技术在视觉设计中实现文化可持续性，即在数字化与全球化背景下保真、传承并动态重构本土文化身份与叙事。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“文化可持续AI视觉设计框架”，以文化保存—适应性创新—伦理治理三维度为支柱，融合符号级模式识别、上下文感知的生成模型与跨学科文化知识图谱嵌入。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">首次将“文化可持续性”明确定义为可计算的设计目标，并构建其量化评估维度；突破纯数据驱动范式，引入人类学田野知识与设计师协作反馈闭环训练AI；建立首个面向文化符号的轻量级可解释性约束机制（Cultural Constraint Layer, CCL）。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在品牌视觉系统（如东南亚蜡染纹样再设计）、沉浸式数字展馆（中国敦煌壁画交互叙事）等案例中验证；相比传统GAN基线，文化符号语义保真度提升42%（专家盲评），用户文化认同感得分提高3.7/5（p&lt;0.01）；伦理风险识别模块将潜在误用提案拦截率达89%。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/60ee61b813daff177743123d5b81c35a0afc1fac" target="_blank">Predictive free energy simulations through hierarchical distillation of quantum Hamiltonians </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Kwangnam Kim; Suyue Yuan; Brandon C. Wood; Liwen F. Wan</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在原子尺度上揭示全固态电池（ASSB）中固–固界面（包括晶界与电极/电解质界面）的电–化–力耦合退化机制，建立其结构–性能关系</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用经第一性原理数据验证的机器学习力场（MLFF）驱动的大规模分子动力学（MD）模拟，实现LLZO基ASSB体系在真实时间–空间尺度下的高精度、长时程界面演化模拟</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将经严格DFT验证的MLFF用于&gt;10⁶原子规模的ASSB多界面耦合退化全过程模拟；② 从原子轨迹中直接提取“化学降解–结构弛豫–力学响应”协同演化序列，突破静态界面模型局限；③ 发现掺杂元素在晶界/体相的竞争性占位规律及其对局域Li⁺输运的非线性调控效应，超越单一成分–性能经验关联</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">主要体系为LLZO/LiCoO₂（LCO）异质界面与LLZO晶界；基线方法为传统经典MD和DFT计算；关键结果包括：（1）识别出高温共烧结下LCO→LLZO界面氧迁移诱发Co还原并富集于晶界的原子路径；（2）定量揭示Al/Ta共掺杂导致Ta在晶界偏析而Al优先进入体相，显著抑制Li⁺沿晶界堵塞（晶界Li⁺电导率提升~2个数量级）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/6155dfde1bc26299c92808c90b4f57a1e15970e3" target="_blank">Fast evaluation of unbiased atomic forces in ab initio variational Monte Carlo via the Lagrangian technique. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Kousuke Nakano; Stefano Battaglia; Jürg Hutter</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在变分蒙特卡洛（VMC）框架下高效、准确地计算与势能面严格一致的无偏原子力，以支撑大规模动力学模拟和机器学习势能面构建</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于拉格朗日技术的耦合微扰Kohn–Sham（CPKS）单步替代方案，用一次CPKS计算取代原需6N次独立DFT计算，在保持Jastrow-相关Slater行列式Ansatz前提下实现无偏VMC力的高效解析求解</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将量子化学中成熟的拉格朗日/CPKS形式主义系统引入VMC力计算，实现理论自洽与计算效率的统一；② 将无偏力计算复杂度从O(N)次DFT降为O(1)次CPKS，显著提升可扩展性；③ 明确揭示VMC力偏差来源（行列式参数冻结近似），并通过解析梯度修正建立与PES的一致性桥梁</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在rMD17基准集的3个小分子（H₂O、NH₃、CH₄）上验证；基线为CCSD(T)力（金标准）及ωB97X-D3BJ/ωB97M-D3BJ泛函力；无偏VMC力与CCSD(T)的平均绝对误差（MAE）较原始VMC力降低~40–60%，且与杂化/元GGA泛函力高度一致（MAE &lt; 0.01 eV/Å）</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/61aedc0718f44519a7f674e1a9f23481d54133bc" target="_blank">A charge-density machine-learning workflow for computing the infrared spectrum of molecules. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">S. Hazra; U. Patil; S. Sanvito</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何高效计算分子红外光谱等温度依赖的电子可观测量</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用Jacobi-Legendre簇展开预测实空间电荷密度，从而统一获得能量、力及电子可观测量（如偶极矩、能隙）</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">同一模型可同步驱动分子动力学模拟并沿轨迹实时计算电子可观测量；成功应用于气相尿嘧啶红外光谱预测</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/635ce16badbe46884a52efc89b50edc6c44c562a" target="_blank">LAMMPS-KOKKOS: Performance Por table Molecular Dynamics Across Exascale Architectures </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">A. Johansson; Evan Weinberg; Christian Trott; Megan J. McCarthy; Stan Moore</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何实现LAMMPS在异构计算平台（尤其是多厂商GPU及E级超算）上的高性能可移植性</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">通过集成Kokkos性能可移植库重构LAMMPS C++代码，统一支持CPU/GPU多后端并评估三类典型力场（简单对势、多体反应力场、机器学习力场）的跨平台性能</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">1）Kokkos集成显著提升GPU端FLOPS利用率与内存带宽效率，且在NVIDIA/AMD不同代GPU上保持良好可移植性；2）在Frontier、Aurora、El Capitan和Alps四台E级/准E级超算上实现强扩展至百万级MPI进程（三类力场均达良好并行效率）</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/641ce92e3ae9f445f2f3afd9522116050f86cc1d" target="_blank">A Quantitative Review of Smart Walkers: Trends, Gaps, and a Proposed Evaluation Framework </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Muhammad Ishaq; D. Guastella; Giuseppe Sutera; Francesco Cancelliere; Giovanni Muscato</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">智能助行器领域缺乏标准化评估方法，且实验室原型与实用化商业产品之间存在显著差距</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">对2020–2025年47篇近期文献进行定量综述，并提出包含技术性能、可用性量表和临床功能结局的最小公共评估框架</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">惯性测量单元（IMU）和力敏电阻（FSR）是主流传感方案，机器学习应用增长迅速；但LiDAR等先进导航感知技术仍罕见；实验室成果向鲁棒、用户友好型产品转化严重不足</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/643cf0a8c61b8f8c194ef441272dade97d2035d8" target="_blank">Machine Learning Force-Field Approach for Itinerant Electron Magnets </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Sheng Zhang; Yunhao Fan; Kotaro Shimizu; G. Chern</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何构建满足对称性与可微性要求的机器学习力场，以准确模拟巡游电子磁体中的LLG动力学及复杂非共线自旋结构</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">基于参考不可约表示构建对晶格点群和自旋旋转对称性均不变、且对自旋取向可微的磁性描述符，改进自群论幂谱/双谱方法</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">ML力场成功复现三角晶格s-d模型中的120°、四面体和斯格明子晶格等非共线自旋序；大规模热淬火模拟揭示了由斯格明子与双麦伦组成的玻璃态条纹相</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/64c0655de40d32762b7a1e41d0a5af7569c4f9e9" target="_blank">Efficient Multiscale Simulations of Incremental Sheet Forming Using Machine Learning Surrogate Models for Crystal Plasticity </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">J. S. Weeks; Aaron P. Stebner</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">传统多尺度晶体塑性建模在金属成形中因计算成本过高而难以应用于实际制造工艺（尤其是需全场织构预测的场景）。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用循环神经网络（RNN）构建晶体塑性模型的本构响应与织构演化代理模型，嵌入单点渐进成形多尺度工作流。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">计算速度提升达63.6倍；对铝合金融合两种成形路径的模拟结果中，成形力/厚度变化趋势一致、全场面织构演化与真实模型吻合。</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[3] Predictive free energy simulations through hierarchical distillation of quantum Hamiltonians — 首次将量子哈密顿量分层蒸馏嵌入自由能计算框架，在保持QM精度的同时实现凝聚相反应热力学/动力学的可扩展预测，直击电催化中pKa与活化自由能精准建模的核心瓶颈。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[1] Variational Quantum Circuit Parameterization of SchNet: A Simulator-Based Feasibility Study for Conservative Molecular Force Fields — 其基于VQC的SchNet参数化虽强调能量守恒，但未验证对自由能差（如质子耦合电子转移路径）的梯度一致性，可能与[3]所依赖的严格热力学一致性前提存在隐含矛盾。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">[3]作者团队（未具名，但方法体现强量子化学+统计力学交叉素养）— 在不牺牲电子结构物理的前提下实现自由能模拟可扩展性，代表“量子感知型MLFF”的前沿范式跃迁。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">机器学习力场正从“拟合势能面”单任务，加速转向“统一生成能量、力、电子响应、自由能、自旋动力学”等多物理量的可微、守恒、可迁移代理模型。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">所有MLFF工作（[1][3][4][6][9][10]）均依赖静态构型采样或短时MD轨迹训练，缺乏对电催化界面中<strong>电位依赖的动态双电层重构</strong>与<strong>非平衡载流子注入态</strong>的显式建模能力，导致势能面在偏压下的外推可靠性未知。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">尽管[5]提出VMC无偏力计算新策略、[7]优化了MLFF部署效率，但<strong>无一论文建立MLFF误差与电催化关键指标（如Tafel斜率、选择性、稳定性衰减速率）的定量传递关系</strong>，即缺乏从原子力场不确定性到宏观性能预测不确定性的传播分析框架。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展“电位门控”的MLFF训练协议（引入恒电势系综约束与非平衡电子分布先验），并耦合不确定性量化模块，将力场预测方差直接映射至电催化性能置信区间，实现从第一性原理到器件级性能的可信推理闭环。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>
