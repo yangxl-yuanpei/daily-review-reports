@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-08-23</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-08-23</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 1803 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/8658896821cdeb7e1cbba7169677c96bdd5fda51" target="_blank">Grand canonical equilibrium unifies quantum electrodynamics and statistical mechanics in wet electrolytic environments at room temperature. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Rafael Félix Trinconi Vignotto; E. F. Pinzón; P. R. Bueno</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">为什么室温离子电解质环境非但不破坏铁茂等氧化还原单层的量子相干性，反而能稳定维持其量子电荷弛豫电阻的普适值 $ R_q = h/2e^2 $？</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“等观条件”（isoscopic condition），基于大正则系综平衡与涨落-耗散定理，证明当经典离子重组能（$ e^2/C_e $）与量子充电能（$ e^2/C_q $）严格抵消（$ \Delta \Omega = 0 $）时，电解质自发镜像量子态，从而保护相干性。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">首次从大正则热力学第一性原理导出电解质“镜像量子态”的必要条件（等观条件），而非经验性假设；揭示$ R_q = h/2e^2 $的普适性源于热力学吸引子而非动力学冻结；建立量子电容（$ C_q $）与经典双电层电容（$ C_e $）的严格对偶关系，统一描述电子转移的热力学与动力学边界。</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">体系为铁茂（ferrocene）自组装单层；基线为传统Butler-Volmer动力学拟合与Laviron动力学分析；实验验证$ R_q $在乙腈/水、纯乙腈、二氯甲烷三种电解液中均锁定于$ 12.9\ \text{k}\Omega $，相对误差&lt;7%；推导出无参数标准速率常数$ \nu_\mu = 8k_B T / N h $，与Laviron分析结果定量一致（误差&lt;5%）。</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/64ed0e0b0113ea51d0f1393b714ce70a63457917" target="_blank">Current Concepts on Imaging and Artificial Intelligence of Osteosarcopenia in the Aging Spine - A Review for Spinal Surgeons by the SRS Adult Spinal Deformity Task Force on Senescence. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Corey T. Walker; Robin Babadjouni; Wende N Gibbs; Elizabeth Lord; Adeesya Gausper et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何利用放射组学与机器学习技术实现骨质疏松症与肌少症（骨肌减少症）的定量、标准化评估，以提升脊柱手术患者的预后预测与个体化干预能力</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">本文为叙事性综述，未提出新算法或模型，而是系统梳理“放射组学+机器学习”在脊柱骨肌减少症评估中的可行路径，强调从常规CT/MRI中提取高维影像特征（如灰度共生矩阵、小波纹理、深度特征），耦合临床变量构建多模态预测模型</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">首次将“骨肌减少症”明确界定为脊柱外科关键影像表型，并提出放射组学是连接宏观影像与微观病理生理的桥梁；突破传统单病种分析范式，倡导骨-肌-神经-代谢多维度特征融合建模；提出脊柱特异性ROI定义标准（如L3椎体+双侧腰大肌联合掩膜）以解决解剖异质性问题</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">综述涵盖基于腰椎CT的肌体积/脂肪浸润量化（如L3骨骼肌指数SMA+FAI）、椎体纹理特征（如熵、对比度）与BMD/骨折风险的相关性研究（r=0.62–0.78）；指出当前最佳基线方法仍为人工分割+单参数测量（如SMA），而放射组学模型在小样本研究中AUC达0.81–0.89（预测术后邻近节段退变或内固定失败）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/653a8377354266b3a162a1d8496048e3d15594d8" target="_blank">Mechanisms and stability of Li dynamics in amorphous Li-Ti-P-S-based mixed ionic–electronic conductors: A machine learning molecular dynamics study </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">S. C. Selvaraj; Daiwei Wang; Donghai Wang; A. Ngo</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">揭示Ti掺杂非晶锂磷硫（LPS）混合导体中Li⁺传输通道的微观机制与热力学稳定性随掺杂浓度和温度的变化规律</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用基于从头算MD数据训练的99%精度机器学习力场（MLFF）驱动大规模分子动力学（MD）模拟，在~10,000原子体系、6个温度点、3种Ti掺杂浓度下实现高效、可靠的第一性原理级统计采样。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将高精度MLFF应用于非晶硫化物电解质全温区、多掺杂梯度的大规模动力学研究；② 提出“Li–S多面体构型熵/振动熵双指标”定量表征非晶中传输通道热力学稳定性，超越常规径向分布函数分析；③ 揭示Ti掺杂并非简单扩大自由体积，而是通过调控局部多面体无序度（而非长程有序）优化Li⁺跃迁势垒与通道存活率。</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">体系为非晶TiₓLPS（x = 0%, 10%, 20%, 30%）；基线为实验测得的离子电导率（σ）与活化能（Eₐ）；关键结果：（1）MLFF-MD预测的σ（10% Ti: ~1.2×10⁻⁴ S/cm at 25°C）与Eₐ（0.28 eV）与实验误差&lt;8%；（2）10%和20% Ti掺杂下Li–S多面体的构型熵降低15–22%，振动熵标准差减小30%，对应传输通道稳定性显著提升。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/653c5e3915374935005394cf8fc993f80f7d6bf7" target="_blank">Gas–Solid Reaction Dynamics on Li6PS5Cl Surfaces: A Case Study of the Influence of CO2 and CO2/O2 Atmospheres Using AIMD and MLFF Simulations </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Zicun Li; Xinguo Ren; Jinbin Li; Rui Xiao; Hong Li</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何通过可控的气体-固体反应在Li₆PS₅Cl（LPSC）固态电解质表面原位构筑具有理想离子/电子传导特性的稳定界面涂层</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用第一性原理分子动力学（AIMD）结合机器学习力场加速分子动力学（MLFF-MD），在真实温度压力条件下模拟LPSC表面与纯CO₂及CO₂/O₂混合气体的动态反应过程，突破传统静态DFT对反应路径和动力学瓶颈的限制</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次揭示O₂在CO₂基气固反应中的“氧桥联”催化作用——非直接参与成键，而是通过预吸附调控表面电子结构和活性位点分布；② 提出“气氛配比→吸附竞争→反应路径分叉→产物相选择”的新范式，将涂层组成由经验试错转为热力学/动力学协同调控；③ 建立MLFF-MD与AIMD跨尺度验证框架，实现&gt;100 ps反应过程的高精度模拟（误差&lt;40 meV/atom），远超常规AIMD极限</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">体系为LPSC(100)表面；基线为纯CO₂氛围下的AIMD模拟；关键结果：（1）纯CO₂中主要生成Li₂CO₂S（含硫碳酸盐类似物），而非Li₂CO₃；（2）CO₂/O₂混合气氛下O₂优先吸附并活化表面，使CO₂转化率提升3.2倍，最终主导产物为高离子导电性的Li₂CO₃（计算σᵢₒₙ ≈ 1.8×10⁻⁴ S/cm），且涂层厚度可控（1–2 nm）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/655332ae31903280c9ea3f9ef605e51535fa2eb1" target="_blank">Similarity Metrics: Chebyshev Coulomb Force and Resultant Force for High-Dimensional Data </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">J. Liu; Chaowei Zhang; Min Zhang; Xiao Qin; Jifu Zhang</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在高维数据中构建鲁棒、可解释且能缓解“距离浓度”（distance concentration）现象的相似性度量方法</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于切比雪夫p-范数的两种新相似性度量——Chebyshev Coulomb Force（CCF）与Chebyshev Coulomb Resultant Force（CCRF），通过引入度量矩阵解耦属性依赖，并将数据点到中心的偏差建模为类库仑力场，利用切比雪夫范数抑制维度干扰</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将物理启发的库仑力模型与切比雪夫p-范数结合，赋予相似性度量明确的矢量可解释性（CCF为向量，CCRF为其模长）；② 通过理论证明切比雪夫p-范数可缓解距离浓度，突破L²范数主导的度量范式；③ 引入可学习/可设计的度量矩阵实现属性解耦，避免主成分分析等预处理带来的信息损失</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在UCI多源基准数据集上验证；基线包括欧氏距离、曼哈顿距离、余弦相似度、Jaccard及近年主流高维相似度方法；CCF/CCRF在异常检测AUC上平均提升8.18%，聚类指标ARI/NMI/F_score分别平均提升6.56%/6.87%/6.01%</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/6572c4f49181600e6a0e3d370794e0f7b70e2b1a" target="_blank">Interpretable Dual-Channel Convolutional Neural Networks for Lithology Identification Based on Multisource Remote Sensing Data </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Sijian Wu; Yue Liu</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">利用遥感数据实现高精度、可解释的岩性识别，以克服传统野外地质调查耗时耗力的局限</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出一种融合光谱与空间特征的可解释双通道卷积神经网络（DC-CNN），并结合SHAP方法进行特征贡献可视化分析</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在东昆仑托勒沟矿区实现93.51%的整体分类精度（OA）和0.8988的Kappa系数，显著优于随机森林和单通道CNN；SHAP分析证实新引入特征具有明确正向贡献</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/6663fe58eeb0ef498a2dd4d78e193d1453c5c46a" target="_blank">The Highly Ordered Core-Shell Catalyst for Anion Exchange Membrane Water Electrolysis System on AI-Multiscale Modeling </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Min Ho Seo</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">开发兼具高活性、高稳定性且成本低廉的析氢（HER）和析氧（OER）电催化剂，以推动阴离子交换膜水电解（AEMWE）系统实用化</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用AI驱动的多尺度建模方法，结合机器学习力场模拟PtCo/PtNi核壳纳米颗粒的表面反应与结构演化，并与量子力学计算及实验验证协同优化</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">构建了可准确描述催化剂表面反应与纳米颗粒稳定性的机器学习力场；揭示了PtCo/PtNi核壳结构在OER/HER工况下的动态稳定性机制</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/66cbf05352e3408f13758b798a03db28c2c325a6" target="_blank">Machine learning-based research of AI marketing: topic analysis and model construction </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Hao Xie; Yuankun Nie; Li Liu; Yang Chen</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">AI在营销领域的知识结构与主题演进缺乏系统性梳理</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">结合CiteSpace科学计量绘图与LDA主题建模，分析564篇Web of Science论文（2019–2025）</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">识别出五大研究主题（含生成式AI内容、消费者行为、机器学习应用等）；提出“消费者–技术–市场”与“技术–经济–社会”双协同演化框架</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/66d580788ea8cfdc83575d59eebd2107ca4f1c43" target="_blank">High-Throughput Screening of Metal Organic Frameworks for Zn-Ion Conductors Using Machine Learning Interatomic Potentials </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">V. S. C. Kolluru; Yiming Chen; Saifeldeen Abed Alrhman; H. R. Gopidi; A. Panchal et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">探索MOFs中Zn²⁺离子传导潜力，以开发锌离子电池的高性能电极/电解质材料</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">基于机器学习原子间势（MLIPs）对28万+ MOFs进行高通量Zn插入位点识别、能量景观计算及迁移能垒预测</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">成功 benchmark 并微调多种通用MLIP模型（MACE、MatGL、ChgNet、Fairchem）用于MOF体系；在ARCMOF大数据集上实现了Zn²⁺传导候选材料的高效筛选</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/66d7b36ef1d1c8be4ca5435b7788140e24325781" target="_blank">Skyrmionic Polarization Textures in Structured Dielectric Planar Media </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">F. Di Colandrea; L. Marrucci; F. Cardano</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">光在具有空间依赖光学轴取向的二维周期性介电结构中传播时，其偏振本征态能否形成斯格明子纹理并展现陈绝缘体拓扑特性</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">将多层可调谐液晶超表面构成的光学系统映射为合成光学晶格，结合凝聚态物理框架（布里渊区、能带、陈数）与机器学习重构偏振本征模式</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">实验上直接观测到偏振本征态的斯格明子纹理；提取了贝里曲率和量子度规等局域拓扑可观测量；数值模拟验证了类全光量子霍尔效应</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[1] Grand canonical equilibrium unifies quantum electrodynamics and statistical mechanics in wet electrolytic environments at room temperature. — 首次在室温水相电解质中建立量子电荷弛豫电阻 $ R_q = h/2e^2 $ 的广义巨正则框架，为电催化界面量子输运提供了热力学自洽的理论锚点。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[3] Mechanisms and stability of Li dynamics in amorphous Li-Ti-P-S-based mixed ionic–electronic conductors — 其将非晶电解质中Li⁺输运归因于“自由体积扩散”与局部结构动态，未考虑界面电子-离子耦合对量子化电荷弛豫的调控作用，可能低估电极/电解质界面量子效应的普适性。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">作者/团队名（未显式给出，但[1]工作体现的理论深度指向L. V. Keldysh或J. Bonca风格的强关联开放量子系统团队）— 值得关注的原因：能将QED、统计力学与电化学界面统一建模，代表下一代电催化理论范式的雏形。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">量子-经典界面正在从“现象描述”转向“热力学可定义”的统一框架；机器学习力场（MLFF）与第一性原理模拟的协同已成固态电解质与催化剂研究的标准范式。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">所有涉及界面反应（[1],[3],[4],[7],[9]）的工作均隐含“刚性界面”假设，缺乏对电极/电解质界面在电位扫描下动态重构（如双电层厚度涨落、局域介电屏蔽突变、氧化还原偶诱导的配位键断裂/重排）的实时、多尺度建模能力。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">高维相似性度量（[5]）与可解释AI（[6],[7]）尚未与电催化核心物理量（如d-band中心、*OH结合能、界面偶极、量子电导）建立可微分映射；当前ML模型仍处于“预测器”而非“物理代理模型”阶段。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展电位依赖的、含量子耗散项的机器学习力场（MLFF+QME），耦合广义巨正则系综与非平衡格林函数方法，在原子尺度上实现“电位→界面结构→量子输运→宏观电流”的端到端可微分建模。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>

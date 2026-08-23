@@ -5155,5 +5155,81 @@
       "electrochemistry",
       "generative"
     ]
+  },
+  "s2:8658896821cdeb7e1cbba7169677c96bdd5fda51": {
+    "title": "Grand canonical equilibrium unifies quantum electrodynamics and statistical mechanics in wet electrolytic environments at room temperature.",
+    "date_seen": "2026-08-23",
+    "tags": [
+      "electrochemistry",
+      "constant-potential"
+    ]
+  },
+  "s2:64ed0e0b0113ea51d0f1393b714ce70a63457917": {
+    "title": "Current Concepts on Imaging and Artificial Intelligence of Osteosarcopenia in the Aging Spine - A Review for Spinal Surgeons by the SRS Adult Spinal Deformity Task Force on Senescence.",
+    "date_seen": "2026-08-23",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:653a8377354266b3a162a1d8496048e3d15594d8": {
+    "title": "Mechanisms and stability of Li dynamics in amorphous Li-Ti-P-S-based mixed ionic–electronic conductors: A machine learning molecular dynamics study",
+    "date_seen": "2026-08-23",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:653c5e3915374935005394cf8fc993f80f7d6bf7": {
+    "title": "Gas–Solid Reaction Dynamics on Li6PS5Cl Surfaces: A Case Study of the Influence of CO2 and CO2/O2 Atmospheres Using AIMD and MLFF Simulations",
+    "date_seen": "2026-08-23",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:655332ae31903280c9ea3f9ef605e51535fa2eb1": {
+    "title": "Similarity Metrics: Chebyshev Coulomb Force and Resultant Force for High-Dimensional Data",
+    "date_seen": "2026-08-23",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:6572c4f49181600e6a0e3d370794e0f7b70e2b1a": {
+    "title": "Interpretable Dual-Channel Convolutional Neural Networks for Lithology Identification Based on Multisource Remote Sensing Data",
+    "date_seen": "2026-08-23",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:6663fe58eeb0ef498a2dd4d78e193d1453c5c46a": {
+    "title": "The Highly Ordered Core-Shell Catalyst for Anion Exchange Membrane Water Electrolysis System on AI-Multiscale Modeling",
+    "date_seen": "2026-08-23",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface"
+    ]
+  },
+  "s2:66cbf05352e3408f13758b798a03db28c2c325a6": {
+    "title": "Machine learning-based research of AI marketing: topic analysis and model construction",
+    "date_seen": "2026-08-23",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:66d580788ea8cfdc83575d59eebd2107ca4f1c43": {
+    "title": "High-Throughput Screening of Metal Organic Frameworks for Zn-Ion Conductors Using Machine Learning Interatomic Potentials",
+    "date_seen": "2026-08-23",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "dft"
+    ]
+  },
+  "s2:66d7b36ef1d1c8be4ca5435b7788140e24325781": {
+    "title": "Skyrmionic Polarization Textures in Structured Dielectric Planar Media",
+    "date_seen": "2026-08-23",
+    "tags": [
+      "surface"
+    ]
   }
 }
