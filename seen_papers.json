@@ -5231,5 +5231,76 @@
     "tags": [
       "surface"
     ]
+  },
+  "s2:027ff4dc5db422a5bbcf0f9021c4e396279f26bd": {
+    "title": "Quantum-Scale Intelligence: Merging Nanostructures with Predictive\nAlgorithms",
+    "date_seen": "2026-08-24",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:030c00797e3a736502946c8dde7c44474e939980": {
+    "title": "Identifying Brand Advocates: A Neural Network Approach to Social Media Analysis",
+    "date_seen": "2026-08-24",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:4a5089484dce2feb44222d75418f22485554e244": {
+    "title": "Transmutation-accelerated sampling method for multicomponent ZrCu(Al) metallic glasses.",
+    "date_seen": "2026-08-24",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:66f76ebbb99ff44073e783f2a35cf12f7772d039": {
+    "title": "EDBench: Large-Scale Electron Density Data for Molecular Modeling",
+    "date_seen": "2026-08-24",
+    "tags": [
+      "MLFF",
+      "dft"
+    ]
+  },
+  "s2:676b675cbe7cc4079321399c42246efbb485604e": {
+    "title": "Artificial Intelligence for Drug Discovery and Development",
+    "date_seen": "2026-08-24",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:6836a45605d6f06371926fe479dda8dbce58cd0b": {
+    "title": "“Dynamic Cutting Force Estimation via Fourier Neural Operator (FNO) with Inferred 1 Machine Tool Dynamics: A Proof of Concept”",
+    "date_seen": "2026-08-24",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:686d2ac8d4be161900170f89702cf494805c2ab2": {
+    "title": "AI-BASED INNOVATION MANAGEMENT: A BIBLIOMETRIC ANALYSIS",
+    "date_seen": "2026-08-24",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:68a4c2237a6d7daa2655682b3195d44bd3628c3c": {
+    "title": "Hybrid Neural-MPM for Interactive Fluid Simulations in Real-Time",
+    "date_seen": "2026-08-24",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:68f59af8c4b7bfa15556da3ae84128b042b07add": {
+    "title": "UniFFBench: evaluating universal machine learning force fields against experimental measurements",
+    "date_seen": "2026-08-24",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:692731108d37f8feef45da778893d12950201299": {
+    "title": "Charge Scaling Force Field for Biologically Relevant Ions Utilizing a Global Optimization Method",
+    "date_seen": "2026-08-24",
+    "tags": [
+      "general"
+    ]
   }
 }

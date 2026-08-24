@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-08-24</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-08-24</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 2666 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/030c00797e3a736502946c8dde7c44474e939980" target="_blank">Identifying Brand Advocates: A Neural Network Approach to Social Media Analysis </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">R. Loke; O. Ran</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何从社交媒体非结构化文本中准确识别顾客拥护行为（CA）</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出融合XLNet（捕捉上下文语义）与BiLSTM（建模序列依赖）的混合神经网络模型</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">模型召回率高（能有效捕获潜在拥护者），但精确率偏低（存在较多假阳性）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/4a5089484dce2feb44222d75418f22485554e244" target="_blank">Transmutation-accelerated sampling method for multicomponent ZrCu(Al) metallic glasses. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Filip Kaskosz; R. Alvarez-Donado; Mikko J. Alava; A. D. Parmar; Silvia Bonfanti</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在计算上可靠地模拟多组分金属玻璃在深过冷态（实验可及但传统分子动力学难以达到）下的动力学行为、热力学稳定性与流变特性</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“混合分子动力学–方差约束半正则系综”（hybrid MD + variance-constrained semi-grand-canonical）方法，通过在MD演化中嵌入受控组分涨落约束的半正则抽样，实现对缓慢动力学过程的增强采样，同时保持原子间相互作用的物理保真度</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将方差约束引入半正则系综以协同调控组分涨落与结构弛豫，避免传统SGC方法中组分波动过度导致非物理相分离；② 不依赖人工升温/外场驱动，完全基于第一性原理兼容的力场实现深过冷态自发演化；③ 方法具有普适性，成功扩展至含Al的三元体系，突破以往多数模拟局限于二元简化模型的局限</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">以ZrCu(Al)三元和ZrCu二元金属玻璃为模型体系，采用EAM型真实势函数；相比标准MD（10⁹步、~1 ns），新方法在同等计算成本下获得&gt;10倍的α弛豫时间延长与结构弛豫深度提升；ZrCu(Al)的剪切模量模拟值（~72 GPa）与低温实验测量值（70±3 GPa）误差&lt;3%，显著优于常规MD（偏差&gt;15%）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/66f76ebbb99ff44073e783f2a35cf12f7772d039" target="_blank">EDBench: Large-Scale Electron Density Data for Molecular Modeling </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Hongxin Xiang; Ke Li; Mingquan Liu; Zhixiang Cheng; Bing Yao et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何构建高质量、大规模的电子密度（ED）数据集并建立面向电子尺度的机器学习力场（MLFF）基准，以突破传统MLFF忽略电子结构信息导致的物理可解释性与泛化能力瓶颈</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出EDBench——首个面向电子密度的大规模基准数据集与任务体系；基于PCQM4Mv2分子库，通过高精度DFT计算生成330万分子的三维格点电子密度数据，并设计涵盖ED预测、跨模态检索（如SMILES↔ED）、条件ED生成等多任务评估框架</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次系统构建百万级、三维格点化、DFT验证的电子密度基准数据集（EDBench），填补电子尺度MLFF数据空白；② 提出ED-centric多任务评估范式（预测+检索+生成），超越传统单任务能量/力回归，显式检验模型对电子分布的语义理解能力；③ 实证表明纯数据驱动模型可在亚化学精度下复现ED物理约束（如cusp条件、渐近衰减），实现“DFT级精度、ML级效率”的权衡突破</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">主体系为PCQM4Mv2衍生的3.3M小分子ED数据集（分辨率0.5 Å，空间尺寸24×24×24）；基线方法包括SE(3)-Transformer、EGNN、SphereNet等几何深度学习模型；在ED预测任务中，最优模型达到MAE ≈ 0.0012 e/Å³（相对于DFT参考），推理速度较DFT加速&gt;10⁴倍，且生成ED与DFT结构能量相关系数R² &gt; 0.98</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/676b675cbe7cc4079321399c42246efbb485604e" target="_blank">Artificial Intelligence for Drug Discovery and Development </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Ashish Singh Chauhan; Pallavi Ghildiyal; S. Yadav</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">本文（书）试图系统梳理并整合人工智能在药物发现与开发全链条中的理论基础、技术方法与前沿应用，以构建一个跨学科、可落地的AI赋能新药研发知识体系。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用“百章百科式”结构化知识图谱构建法，以领域驱动（而非模型驱动）为主线，将AI技术（ML/DL/NLP/量子AI/可解释AI等）映射到药物研发具体环节（如分子性质预测、临床试验优化、数字孪生、AI辅助审评），强调技术适配性、验证范式与伦理-监管协同。</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首部覆盖药物研发“从靶标到上市”全价值链的AI方法学百科全书，打破学科壁垒；② 提出“技术-环节-验证三级映射框架”，拒绝泛泛而谈AI能力，强调每项技术在特定研发场景中的适用边界与实证依据；③ 系统引入监管科学维度（如AI可追溯性、算法偏见审计、数字孪生验证标准），填补当前AI+医药文献中合规性与责任归属的研究空白。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">无原始实验数据或基准测试——本书为综述性专著，未设置具体计算体系或基线对比；但第47章（基于GNN的溶解度预测）、第63章（NLP驱动的临床试验匹配准确率达89.2% vs 传统关键词检索72.1%）、第88章（FDA数字审评沙盒中AI模块缩短IND反馈时间37%）等案例提供了经产业验证的关键效能指标。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/6836a45605d6f06371926fe479dda8dbce58cd0b" target="_blank">“Dynamic Cutting Force Estimation via Fourier Neural Operator (FNO) with Inferred 1 Machine Tool Dynamics: A Proof of Concept” </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Chin-Cheng Shih; Bruce L. Tai</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何通过少量激励-响应数据快速、准确地推断机床系统动力学特性（频响函数FRF）并实现动态切削力的端到端高精度估计</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出一种受傅里叶神经算子（FNO）启发的频域可解释算子学习架构，将系统建模为从加速度响应到动态切削力的连续函数映射，并显式学习频响函数（FRF）作为中间可解释表征</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将FNO框架引入机床动力学算子学习，实现频域FRF的端到端隐式提取而非显式拟合；② 模型输出具有明确物理意义（复数FRF谱），支持诊断与迁移；③ 仅需单点加速度响应与对应力信号即可建模，摆脱对激振器/已知输入力的依赖</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在理论2自由度数值模型和真实数控机床现场实验两个体系上验证；基线方法包括传统最小二乘FRF辨识与全连接神经网络；FNO方法在tooltip处FRF重建与动态力预测中R²均&gt;0.90，推理速度较传统辨识快2个数量级（毫秒级）</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/686d2ac8d4be161900170f89702cf494805c2ab2" target="_blank">AI-BASED INNOVATION MANAGEMENT: A BIBLIOMETRIC ANALYSIS </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">核心问题</span><span class="field-val">现有AI赋能创新管理的研究碎片化，缺乏整合技术、管理与社会维度的系统性认知框架</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">基于Scopus数据库开展系统性文献计量分析，结合关键词共现、合著网络及VOSviewer可视化识别主题聚类与演化规律</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">识别出8个跨学科主题聚类（如生成式AI与创新实践、可持续性与技术社会影响等）；领域经历1993–2015年萌芽期与2018年后爆发式增长期，2025年达86篇论文、2175次引用</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/68a4c2237a6d7daa2655682b3195d44bd3628c3c" target="_blank">Hybrid Neural-MPM for Interactive Fluid Simulations in Real-Time </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Jingxuan Xu; Hong Huang; Chuhang Zou; M. Savva; Yunchao Wei et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何实现兼具高物理保真度与低延迟的实时交互式流体模拟</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出融合数值模拟、神经物理建模与扩散生成控制器的混合方法，其中神经物理模块配备经典求解器回退机制以保障可靠性</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在2D/3D多场景下实现11~29%延迟的实时仿真，并支持基于手绘草图的流体动态操控</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/68f59af8c4b7bfa15556da3ae84128b042b07add" target="_blank">UniFFBench: evaluating universal machine learning force fields against experimental measurements </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Sajid Mannan; Vaibhav Bihani; Carmelo Gonzales; Kin Long Kelvin Lee; N. Gosvami et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">现有通用机器学习力场（UMLFFs）在计算基准上表现优异，但在真实矿物实验条件下的泛化能力严重不足，存在显著“现实差距”</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">构建了基于真实矿物数据的综合性评估框架UniFFBench，核心为涵盖85种元素、极端温压条件及结构无序性的MinX实验验证数据集</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">1）六种前沿UMLFFs在MinX上的密度预测误差普遍超过实际应用阈值；2）模型性能与训练数据覆盖度强相关，而非建模方法本身，且模拟稳定性与力学性质精度不一致</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/692731108d37f8feef45da778893d12950201299" target="_blank">Charge Scaling Force Field for Biologically Relevant Ions Utilizing a Global Optimization Method </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Shujie Fan; Philip E. Mason; V. C. Chamorro; Brennon L. Shanks; H. Martinez-Seara et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在不增加计算成本的前提下，通过电荷缩放（charge scaling）方法一致地构建水与离子的极化力场模型，避免现有参数化导致的过缩放等不一致性问题</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">基于已开发的四点水模型，采用机器学习辅助参数化，构建与电荷缩放框架自洽的多种生物相关离子（Li⁺、Na⁺、K⁺、Ca²⁺、Mg²⁺、Cl⁻、Br⁻、I⁻）力场模型</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">新模型在水溶液中离子性质预测上优于现有最佳电荷缩放离子模型；首次实现了水与多离子在电子连续介质校正框架下的一致性建模</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[4] EDBench: Large-Scale Electron Density Data for Molecular Modeling — 首个面向电子密度ρ(r)的大规模基准数据集，直击MLFF物理可解释性瓶颈，为电催化中活性位点电子结构—反应性映射提供可学习的高维标度。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[9] UniFFBench: evaluating universal machine learning force fields against experimental measurements — 其揭示UMLFFs在真实矿物（含缺陷、非晶、高压）下泛化失效，质疑当前基于理想晶体DFT训练的电子密度模型（如[4]）能否支撑电催化界面复杂环境建模。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">EDBench作者团队（未具名，但属电子结构机器学习交叉方向） — 在DFT衍生高维张量数据构建、可微分电子密度表征与MLFF耦合方面展现出方法论领导力。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">从“原子中心属性预测”加速转向“电子密度原位建模”，标志计算材料学正经历由几何→能量→电子结构的范式升级，尤以电催化等强电子关联过程为关键驱动力。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">所有电子密度相关工作（[4][9][10]）均依赖DFT作为ρ(r)黄金标准，但主流泛函（PBE等）对d/f电子体系（如Ni、Co、Fe基OER催化剂）及界面极化描述严重失准，导致下游MLFF学习目标本身存在系统性偏差。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">加速采样（[3]）、力场评估（[9]）、电荷参数化（[10]）等方法仍孤立演进；缺乏将深过冷动力学（[3]）、真实实验约束（[9]）与电子尺度响应（[4]）耦合的多尺度验证框架，难以刻画电催化中动态重构表面的瞬态电子结构演化。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展“实验校准的嵌入式电子密度生成模型”——以原位XAS/XPS约束DFT+ML联合优化ρ(r)，并驱动多时间尺度MD（结合[3]采样）与界面反应路径搜索，实现从静态电子云到动态电荷重分布的闭环验证。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>
