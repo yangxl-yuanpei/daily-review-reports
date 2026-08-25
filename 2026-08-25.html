@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-08-25</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-08-25</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 2657 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/6932057aa69ffe143c5fc808127d444272f235f2" target="_blank">Mitigating proton trapping in cubic perovskite oxides via ScO6 octahedral networks </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Kota Tsujikawa; J. Hyodo; S. Fujii; Kazuki Takahashi; Yuto Tomita et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何突破质子导体氧化物中质子浓度与电导率之间的固有权衡，实现高温（300 °C）下兼具高质子电导率（≥0.01 S cm⁻¹）与化学结构稳定性的固体电解质设计</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“重钪（Sc）掺杂立方钙钛矿”策略，结合机器学习力场（MLFF）分子动力学模拟揭示ScO₆八面体网络为快速质子扩散通道，并首次将“晶格柔度（lattice softness）”确立为指导高Sc含量设计的关键结构描述符</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次证实超高Sc含量（≥70% B位）可稳定形成立方钙钛矿并规避相分离，颠覆“Sc易导致结构畸变”的传统认知；② 揭示Sc不仅是掺杂剂，更是质子传输骨架（ScO₆网络主导Grotthuss机制），而非单纯提供氧空位；③ 提出“晶格柔度”这一可计算、可预测的物理描述符，替代经验性的容忍因子，实现从结构稳定性到质子输运性能的跨尺度关联</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系为BaSn₀.₃Sc₀.₇O₃–δ和BaTi₀.₂Sc₀.₈O₃–δ；基线对比为常规Y/Zr掺杂BaZrO₃/BaCeO₃；BaSn₀.₃Sc₀.₇O₃–δ在300 °C下实现总质子电导率0.012 S cm⁻¹，且在还原性气氛及燃料电池运行条件下保持结构完整性</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/6a22630e9d9dc1de545d4b087cffb8ce87a1af4b" target="_blank">Incongruent melting and phase diagram of SiC from machine learning molecular dynamics </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Yu Xie; Menghang Wang; Senja Ramakers; F. Spaepen; Boris Kozinsky</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">厘清碳化硅（SiC）高温高压下熔融行为的本质——究竟是同成分熔融（congruent）还是异成分熔融（incongruent）</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">基于贝叶斯主动学习的机器学习分子动力学（MLMD）方法，以DFT数据为基准高效构建高精度、泛化性强的ML力场，并开展百皮秒至纳秒量级、千原子规模的长时间大体系模拟</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次通过纯计算手段在原子尺度直接“看到”SiC高温熔体的自发分解与碳相成核全过程，突破实验表征盲区；② 提出并验证“压力调控分解可逆性”新机制：高压抑制Si挥发、稳定碳团簇，使加热/冷却路径呈现热力学可逆相变特征；③ 构建首个基于第一性原理精度、覆盖宽温压区的SiC完整相图，定量解释以往实验分歧源于不同P-T路径下的亚稳态捕获</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">体系为320–1000 K、0–20 GPa范围内的SiC液相；基线方法为传统DFT-MD（≤50 ps, ≤128 atoms）及经典力场模拟；关键结果：(1) 明确识别出&gt;3000 K时SiC熔体发生不可逆分解为Si-rich液相 + 碳纳米团簇，证实异成分熔融；(2) 在15 GPa/3500 K冷却路径中观测到碳团簇形核能垒≈0.8 eV，生长速率符合Ostwald熟化规律</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/6af2c785710f1ab8262c608593dd8636310396c6" target="_blank">New RVE concept and FFT methods in micromechanics of composites subjected to body force with compact support </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">V. Buryachenko</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在无边界伪影干扰下，从微观结构出发构建兼具物理可解释性与预测精度的非局部等效本构算子，实现周期性复合材料宏观力学响应的高效数据驱动均质化建模</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“紧支体力场（BFCS）驱动的功能性约化RVE”新范式，结合自研FFT加速求解器与平移平均策略，在有限无界域内生成物理自洽的局部场响应数据集，并以此训练学习非局部 surrogate 算子的ML/NN模型</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将紧支体力场作为物理激励源替代传统位移/牵引边界，从根本上消除RVE截断引入的边界伪影；② 提出“功能性约化RVE”概念——通过BFCS激发+平移平均，使有限域严格等价于无限周期介质的统计响应；③ 构建首个显式编码微结构局域场与非局部耦合关系的可微分surrogate算子框架，兼具物理约束与数据效率</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">以二维/三维周期性弹性复合材料（含孔洞、夹杂等微结构）为测试体系；基线对比包括经典周期性RVE-FEM、标准FFT-Homogenization（Moulinec-Suquet）及局部神经网络本构模型；BFCS-FFT方法将边界误差降低至&lt;0.3%（vs. &gt;5%的传统RVE），且NN surrogate 在未见微结构形貌上对宏观应力-应变响应的预测误差&lt;1.2%（MAE）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/6b26fb5cc29fba7d43bf10024a2d16ba4117407f" target="_blank">Diffusion model for analyzing quantum fingerprints in conductance fluctuation </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">N. Yokoi; Yukiya Tanaka; Y. Nonaka; S. Daimon; J. Haruyama et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何从宏观可测的磁电导涨落（UCF/量子指纹）中逆向解析纳米金属中不可见的杂质构型与电子波函数的非局域量子干涉模式</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出条件扩散生成模型（Conditional Diffusion Model），以磁电导曲线为条件输入，逐步去噪生成对应的杂质势分布与波函数干涉图；创新性地将扩散过程的score function解释为波函数空间中的“力场”，并引入注意力机制显式建模电子态的非局域相干性</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将扩散模型用于量子输运逆问题，突破生成式AI在凝聚态微观结构反演中的应用边界；② 物理驱动的score function诠释——将其映射为波函数希尔伯特空间中的梯度力场，赋予生成过程明确量子力学含义；③ 注意力权重可视化直接揭示电子波函数非局域相干长度，提供可解释的量子关联度量，超越黑箱特征提取</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在二维无序纳米金属（紧束缚模型模拟）上验证，基线对比包括Tikhonov正则化反演和VAE；模型重建杂质位置误差&lt;0.8 nm（真实晶格常数~0.25 nm），UCF预测相关系数达0.97，注意力权重成功定位出&gt;3 nm范围的长程干涉关联</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/6ba7b21cecb64f81aa163d39ca469cbec440e3c6" target="_blank">Development and Evaluation of an AI-based Exergame Training System for Ice-Hockey Players: a Randomized Controlled Trial </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Nicole Sieber; Simone Walser; Thomas Weber; Raphael Gubler; Hannes Badertscher et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何通过运动-认知协同训练（冰球特异性体感游戏）有效提升竞技冰球运动员的执行功能（尤其是认知灵活性与工作记忆）及下肢神经肌肉表现</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">开发基于多摄像头视频动作捕捉+机器学习关节定位算法的冰球特异性体感游戏系统，将颜色/形状编码的认知任务（工作记忆、抑制控制）与高频率冰球专项动作（侧滑跳、单腿跳等）实时耦合，实现高强度、任务特异性的双任务训练</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首个面向冰球专项需求设计的闭环式体感游戏系统，深度融合比赛级物理动作模式与EF子成分靶向任务；② 采用开源数据预训练+多视角同步摄像的轻量化AI动作识别方案，规避可穿戴设备干扰实战训练流；③ 首次在精英运动员群体中证实短周期（5周）、低剂量（仅11 min/次）双任务干预即可驱动EF与神经肌肉功能协同提升</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">36名精英冰球运动员（NL/U20/U17/女子联赛）随机分组；干预组5周×2次/周×11分钟；Switcher任务中认知灵活性/工作记忆指标显著提升（r=0.283, p=0.047）；相对CMJ峰值功率显著增加（r=0.301, p=0.044）；EEQ接受度74.0±8.5，SUS可用性90.5±9.8，依从率9.7/10次</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/6bad0ffc0b73f0df48f821b43bc380f2bd317a3d" target="_blank">Multi-AI Agent Framework Reveals the &quot;Oxide Gatekeeper&quot; in Aluminum Nanoparticle Oxidation </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Yiming Lu; T. Lu; Di Zhang; Lili Ye; Hao Li</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">铝纳米颗粒从钝化态到爆炸反应态的原子机制尚不明确，受限于第一性原理方法尺度小与经验力场缺乏反应精度的矛盾</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用“人在环路”的闭环框架，由自审核AI代理监督机器学习势（MLP）的演化，兼顾量子精度与百万原子/纳秒尺度模拟能力</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">发现温度调控的双模氧化机制（“呼吸模式”与“破裂模式”）；证实铝阳离子外扩散而非氧内扩散主导质量传输，且扩散系数高2–3个数量级</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/6ce237b4cc6c0cef9b642cd24f2d1ab197b0a7dc" target="_blank">Rare-Earth Silicates as High-Temperature Surfactants for the Controlled Synthesis of ε‑Fe2O3 Nanoparticles </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Naureen Khanam; Zheng Ma; Sergi Ortiz Ropero; N. Dix; Ana Vila Costa et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在温和条件下可控合成高长径比、抗磁弛豫的亚稳态ε-Fe₂O₃纳米棒，并阐明其异常各向异性生长机制</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">利用Y³⁺掺杂二氧化硅基质诱导亚稳态双节线分解，原位生成Y₂Si₂O₇纳米液滴选择性包覆ε-Fe₂O₃特定晶面，结合机器学习力场进行界面结构优化与表面能/原子亲和力分析</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">① Y₂Si₂O₇优先包覆ε-Fe₂O₃中高氧原子密度晶面（如(001)、(110)），但不包覆低氧密度的(100)面（即棒轴向端面），导致各向异性Ostwald熟化与高长径比生长；② 替换为La³⁺可进一步增大长径比，且该策略克服Cr³⁺掺杂导致的纳米粒子尺寸减小问题，实现本征磁各向异性参数的准确解析</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/6d5ebc22992bda8a1267d51a63f1726aac35e597" target="_blank">Efficient equivariant model for machine learning interatomic potentials </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Ziduo Yang; Xian Wang; Yifan Li; Qiujie Lv; C. Chen et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">开发兼顾高精度与高效率的原子间势能预测模型，以支持大规模分子动力学模拟</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出一种基于标量-矢量双重表征的等变图神经网络（E2GNN），通过学习几何对称性实现高效且准确的势能与力预测</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">E2GNN在催化剂、分子及有机异构体数据集上预测精度超越主流基线模型，并在固/液/气相体系的MD模拟中达到从头算MD精度</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/6df6dd577b954dcf44df3b47a3ef008e0de2b043" target="_blank">A Machine Learning Framework to Overcome Displacement Underestimation in Acoustic Radiation Force Impulse (ARFI) Imaging </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Junheng Chen; M. A. Rahman; Md Murad Hossain</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">ARFI成像中因超声束点扩散函数的横向/纵向剪切及深度依赖的脉冲重复频率（PRF）导致组织位移被低估，进而降低图像对比度噪声比（CNR）。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">构建基于卷积神经网络（CNN）的位移校正模型，使用LS-DYNA FEM与Field II联合仿真生成含噪声、多参数（剪切模量、黏度、PRF、SNR）的66,000组位移数据进行训练。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">该CNN模型使嵌入3 kPa背景中的12 kPa和6 kPa异质包埋物的平均CNR分别提升36.7%和9.96%；显著缓解PRF相关位移低估问题。</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/6e84867569a328aff771dc930369a26567810419" target="_blank">Design and Simulation of International Trade Risk Control System for Digital Economy Based on Machine Learning Algorithm </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Zhao Yuan; Fei Lei</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">利用机器学习构建国际经贸风险智能识别与管控系统</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">融合多源数据（贸易模式、经济指标、地缘政治信息），采用决策树、支持向量机和神经网络等模型进行风险预测与评估</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">相比传统方法，系统显著提升了风险检测准确率与管理效率；通过案例与仿真验证了其实时预警与主动响应能力</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[1] Mitigating proton trapping in cubic perovskite oxides via ScO6 octahedral networks — 首次通过阳离子配位环境工程（ScO₆网络）定向削弱质子捕获势垒，从结构根源打破载流子浓度–迁移率权衡，为高温质子陶瓷燃料电池提供可实验验证的原子尺度设计范式。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[6] Multi-AI Agent Framework Reveals the &quot;Oxide Gatekeeper&quot; in Aluminum Nanoparticle Oxidation — 其强调Al³⁺外扩散主导氧化动力学，与传统质子导体中“氧空位辅助质子迁移”机制存在阳离子/阴离子传输主导性认知张力，可能挑战质子传导路径中对金属阳离子亚晶格惰性的默认假设。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">作者/团队名（未显式给出，但[1]与[8]均体现“结构–动力学–功能”闭环设计思维）— 擅长将对称性约束、配位化学直觉与机器学习势能联合用于功能氧化物理性设计，方法论兼具物理深度与计算可扩展性。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">多篇论文（[1][6][7][8]）共同指向“AI增强的第一性原理驱动材料机制发现”范式成熟化：不再仅用AI替代势函数，而是以AI为代理协调尺度跨越、误差反馈与物理解释，实现从电子结构到宏观性能的因果链重建。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">几乎所有计算工作（[1][2][4][6][7][8]）仍依赖静态或准静态构型采样，缺乏对真实工况下动态界面重构（如电极/电解质反应界面水解–脱水循环、氧化层周期性破裂–再生）的自适应模拟框架，导致预测的稳定性与实际衰减行为脱节。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">跨尺度关联严重失配：微观模拟（如[6]百万原子MD）与宏观性能指标（如[1]电导率、[3]有效模量）之间缺乏严格热力学一致的粗粒化桥梁，尤其缺失对非平衡涨落（如质子输运中的瞬态氢键网络重排、UCF中的量子临界涨落）的统计表征协议。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展“热力学感知的多保真度代理模型”，将第一性原理计算的自由能面、机器学习势的动力学轨迹、以及实验可观测量（电导/模量/涨落谱）统一嵌入随机微分方程框架，在保持物理守恒律前提下实现跨10⁶倍时间尺度的因果推断。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>

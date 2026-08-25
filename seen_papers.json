@@ -5302,5 +5302,80 @@
     "tags": [
       "general"
     ]
+  },
+  "s2:6932057aa69ffe143c5fc808127d444272f235f2": {
+    "title": "Mitigating proton trapping in cubic perovskite oxides via ScO6 octahedral networks",
+    "date_seen": "2026-08-25",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:6a22630e9d9dc1de545d4b087cffb8ce87a1af4b": {
+    "title": "Incongruent melting and phase diagram of SiC from machine learning molecular dynamics",
+    "date_seen": "2026-08-25",
+    "tags": [
+      "MLFF",
+      "dft",
+      "active-learning",
+      "generative"
+    ]
+  },
+  "s2:6af2c785710f1ab8262c608593dd8636310396c6": {
+    "title": "New RVE concept and FFT methods in micromechanics of composites subjected to body force with compact support",
+    "date_seen": "2026-08-25",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:6b26fb5cc29fba7d43bf10024a2d16ba4117407f": {
+    "title": "Diffusion model for analyzing quantum fingerprints in conductance fluctuation",
+    "date_seen": "2026-08-25",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:6ba7b21cecb64f81aa163d39ca469cbec440e3c6": {
+    "title": "Development and Evaluation of an AI-based Exergame Training System for Ice-Hockey Players: a Randomized Controlled Trial",
+    "date_seen": "2026-08-25",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:6bad0ffc0b73f0df48f821b43bc380f2bd317a3d": {
+    "title": "Multi-AI Agent Framework Reveals the \"Oxide Gatekeeper\" in Aluminum Nanoparticle Oxidation",
+    "date_seen": "2026-08-25",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:6ce237b4cc6c0cef9b642cd24f2d1ab197b0a7dc": {
+    "title": "Rare-Earth Silicates as High-Temperature Surfactants for the Controlled Synthesis of ε‑Fe2O3 Nanoparticles",
+    "date_seen": "2026-08-25",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:6d5ebc22992bda8a1267d51a63f1726aac35e597": {
+    "title": "Efficient equivariant model for machine learning interatomic potentials",
+    "date_seen": "2026-08-25",
+    "tags": [
+      "electrochemistry",
+      "catalysis"
+    ]
+  },
+  "s2:6df6dd577b954dcf44df3b47a3ef008e0de2b043": {
+    "title": "A Machine Learning Framework to Overcome Displacement Underestimation in Acoustic Radiation Force Impulse (ARFI) Imaging",
+    "date_seen": "2026-08-25",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:6e84867569a328aff771dc930369a26567810419": {
+    "title": "Design and Simulation of International Trade Risk Control System for Digital Economy Based on Machine Learning Algorithm",
+    "date_seen": "2026-08-25",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
