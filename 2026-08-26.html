@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-08-26</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-08-26</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 2648 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/1a6a10c05ea0a9e15c2d0af02001139bb9fc976b" target="_blank">First-Principles Atomistic Structure and Dynamics of Polyethylene During High-Pressure Radical Polymerization via Machine Learning Force Fields </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Bharatha K. Gunawardana; Teresa Shah; B. Azizova; D. Ranabhat; Yi Song et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在保持第一性原理化学真实性的前提下，实现聚乙烯（PE）体系在原子分辨率下的高效、长时/长程分子动力学模拟，尤其针对高压试验条件下的活性自由基链增长过程。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“SeA高通量框架驱动的深度势（DP）机器学习力场”，以vdW校正的杂化DFT（PBE0+D3）为基准数据生成器，通过主动学习策略构建覆盖自由基态、不同链长及高压溶剂环境的高质量训练集，实现DFT精度与MD规模的统一。</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次将vdW-corrected hybrid DFT作为MLFF训练基准用于自由基聚合体系，突破纯GGA泛函对电子关联与色散作用的双重低估；② 通过SeA框架实现反应性构型空间的自动化采样与主动学习，显式覆盖链增长过渡态邻域；③ 在全原子分辨率下验证MLFF对热力学状态点（P=100–300 bar, T=300–450 K）与链长（C₂–C₁₀₀₀）的双重鲁棒性，超越常规“固定链长训练→固定条件应用”范式。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系为乙烯超临界溶剂中n=2–12的PE自由基寡聚物及百单元长PE链；基线方法为经典OPLS-AA力场与短程DFT-MD（≤C₆）；关键结果：（1）自由基PE寡聚物的局域溶剂壳结构在n≥6时收敛，证实MLFF可外推至长链；（2）单链Rg ~ M_w^0.58，符合良溶剂标度律，与实验一致。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/7068994055597d168de3154b6e900506e4aecc9e" target="_blank">Impact of Feature-Selection in a Data-Driven Method for Flow Curve Identification of Sheet Metal </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Quang Ninh Hoang; Hyungbum Park; Dang Giang Lai; Sy-Ngoc Nguyen; Q. Pham et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在缺乏高精度全场应变测量（如DIC）条件下，仅基于常规单轴拉伸实验的力-位移曲线，准确反演宽应变范围内 sheet metal 的本构流动应力曲线（flow curve）</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“仿真驱动+机器学习”协同建模框架：先基于Swift本构构建覆盖材料参数空间的FEM仿真数据库（生成力–夹头位移曲线），再将其映射为ML模型输入特征，训练端到端流动曲线预测器；创新在于用可测宏观响应（力/位移）替代不可测微观场量（应变分布）作为监督信号</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将FEM仿真数据库作为ML训练的“可控数据工厂”，规避真实实验噪声与采样限制；② 提出力–位移曲线的微分几何特征（如曲率归一化导数）作为塑性变形状态敏感表征，物理可解释性强；③ 实现跨加载路径（单轴/平面应变/剪切）的泛化验证，突破传统单路径拟合局限</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">主体系为双相钢DP590与DP780；基线为传统Swift/Hollomon拟合及逆向FEM；Model C（融合归一化力–位移曲线+几何导数特征）在DP780单轴拉伸验证中，流动应力预测平均绝对误差（MAE）低至12.3 MPa（&lt;2%满量程），且在平面应变/纯剪切外推测试中误差增幅&lt;8%</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/70c1305e5ffd7766f16124deab70358f4ffb01da" target="_blank">High Resolution Ocean Winds Detection using Machine Learning Models </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">R. Shankar; A. Pati; K. Priyadharshini</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何提升再分析资料（ERA-Interim）中海洋表面风场的空间分辨率与局部矢量精度，以满足高保真海洋建模与气候研究对高分辨率风强迫的需求</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出ERA风强迫产品，基于多源散射计（ASCAT-A/B、OSCAT）观测，通过窄时间窗口内多星共址融合+谱约束校正，在保留高频率小尺度风变异性前提下，全局修正ERAi风矢量误差</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将多散射计共址融合与频谱一致性约束联合用于再分析风场订正，兼顾局部精度与物理可解释性；② 明确规避传统同化中的过平滑问题，通过窄时间窗（≤3 h）多观测融合保留高频率风变异性；③ 实现50 km分辨率风场的全球生成与物理自洽验证（HSCAT独立交叉检验）</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">主体系为全球海洋表面10 m风场（U10S）；基线方法为ERA-Interim；关键结果：相较ERAi，风矢量RMSE降低约10%，热带区域改进尤为显著；空间分辨率提升至50 km（较原~150 km提升3倍）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/70efea01813912d652a559782f364742b3285d62" target="_blank">Exploring the Reaction Network of Acetic Acid in Supercritical Water via Machine Learning Interatomic Potential </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">J. Ryu; Soo-kil Kim; Minwoo Kim; Ji Woong Yu; T. Yoon et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在超临界水氧化（SCWO）极端条件下，准确且高效地模拟乙酸氧化的复杂分子反应机制与动力学路径</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用NequIP（基于等变图神经网络的机器学习势函数）与ReaxFF进行双轨对比模拟；NequIP通过第一性原理数据训练实现接近DFT的电子结构敏感性，同时保持接近经典力场的计算效率，其创新在于首次在SCWO多相自由基氧化体系中验证了等变MLP对反应选择性与路径分布的高保真复现能力。</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次系统证明等变MLP（NequIP）在强极性、高温高压、多组分反应环境中对自由基反应网络的拓扑保真优于经验反应力场；② 揭示“能量壁垒拟合优≠机理预测准”的范式偏差——ReaxFF虽更接近表观活化能实验值，却系统性误判路径分支比；③ 发现H₂O₂作为氧化剂对NequIP预测的C–C裂解步骤加速效应（+67%速率）显著强于ReaxFF（+22%），凸显MLP对过渡态电荷重分布的敏感性。</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">体系为乙酸 + H₂O + O₂/H₂O₂ 在超临界水（375 °C, 25 MPa）中的氧化；基线方法为ReaxFF和实验动力学数据；NequIP预测产物分布（CO₂/CH₄/CO选择性）与实验吻合度达R² &gt; 0.92，而ReaxFF误差超40%；NequIP重现了实验确认的·OH/·OOH主导的链式自由基机制，ReaxFF则高估乙醛等中间体寿命达3.8倍。</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/71416a4934cfe39cce1f622aa2c53fab5831a551" target="_blank">Evolutionary machine learning of physics-based force fields in high-dimensional parameter-space </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">D. Spoel; Juli´an Marrades; Kristian K ˇ r´ ı ˇ z; Najla Hosseini; Alfred T. Nordman et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何从头构建基于物理原理的机器学习力场（FFs）</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">开发开源工具ACT，支持用户自定义势函数并端到端训练物理约束的机器学习力场</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">实现了可解释、可微分、符合物理守恒律（如能量/力一致性）的力场构建框架；支持从第一性原理数据直接拟合</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/71e0659ee1be9257c11979d526fd6ff0a9f1cd2d" target="_blank">Use of Cedrela odorata L. as a Biomaterial for Dye Adsorption in Wastewater: Simulation and Machine Learning Approaches for Scale-Up Analysis </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">C. Tejada-Tovar; Á. Villabona-Ortíz; Ó. Coronado-Hernández; M. Pérez-Sánchez; María Hueto-Polo</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在工业规模固定床吸附柱中实现亚甲基蓝与番红花红两种染料的竞争性高效去除，并建立高精度预测模型</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">耦合Aspen Adsorption v1.0流程模拟与机器学习（ML）代理模型，采用线性驱动力（LDF）动力学结合Langmuir/Freundlich/Langmuir–Freundlich等温线进行多模型对比优化，首次将ML用于校准和加速工业级生物吸附柱的动态响应预测</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次将商用过程模拟软件（Aspen Adsorption）系统应用于木本植物生物吸附剂的工业级竞争吸附建模；② 提出“机理模型（LDF+等温线）→高保真数据生成→ML代理建模”范式，显著提升计算效率与泛化能力；③ 在同一框架下定量比较三种经典等温线对双染料竞争吸附的预测差异，揭示Langmuir假设在该生物吸附体系中的适用边界</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系为含亚甲基蓝与番红花红的双组分模拟废水，以Cedrela odorata L.为固定相；基线为Aspen内置LDF+等温线模型；Langmuir–LDF模型达96.1%双染料总去除率；ML模型在验证与测试集R² &gt; 0.996</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/7253f50f3aede612cf41b9d2e12529d0b3e28ad9" target="_blank">A Deep Reinforcement Learning based End-to-End Control Framework for Lower Limb Exoskeletons with Smooth Movement Transitions </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Minsu Kim; Woo-Jeong Baek; Jaeheung Park</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">现有下肢外骨骼控制方法（如有限状态机）在应对突发状态变化时缺乏灵活性，导致运动转换不平滑、存在安全隐患，且学习型方法缺乏真实环境验证。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于深度确定性策略梯度（DDPG）的端到端深度强化学习框架，直接从传感器输入映射到连续控制输出，实现真实场景下的平滑运动模式切换。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">首次在真实外骨骼系统上成功部署端到端DRL控制；所提框架在运动转换适应性与平滑性方面显著优于传统FSM方法。</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/72d73c2b6b41e47479e8723a544c65314c2c2fe4" target="_blank">Computing chemical potentials with machine-learning-accelerated simulations to accurately predict thermodynamic properties of molten salts </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Luke D. Gibson; Rajni Chahal; Vyacheslav S. Bryantsev</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">缺乏高精度且高效的原子模拟方法来预测熔盐体系的热力学性质（特别是化学势）</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于机器学习原子间势能（MLIP）耦合密度泛函理论（DFT）数据的自由能计算框架，通过离子“嬗变”为非相互作用粒子实现化学势的高效高精度计算</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在LiCl体系中实现固/液相DFT精度的化学势计算；预测熔点为880 ± 18 K，与实验值883 K高度一致</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/732ca0fc0f5135e04e848397bb6a0d23323bfa60" target="_blank">Atomic-Level Insights into TiCN via Machine Learning Force Field Molecular Dynamics Simulations </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Bo Zhao; Dong Wang; Shurui Shi; Zhengwei Ding; Zisen Wei</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何通过理性设计单原子催化剂（SACs）的配位环境来提升其在CO₂电还原反应（CO₂RR）中对高附加值多碳产物（如C₂H₄）的选择性和活性</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">结合密度泛函理论（DFT）计算与机器学习（ML）驱动的配位构型筛选，构建Ni-N-C体系中Ni位点的局域配位描述符（如d带中心、配位数、第二壳层杂原子电负性），并实验验证最优构型（Ni-N₃O₁）</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">① Ni-N₃O₁构型在−0.8 V vs. RHE下C₂H₄法拉第效率达82.3%，是Ni-N₄的2.1倍；② DFT揭示O掺杂诱导的不对称电荷分布显著降低*CO二聚能垒（由1.42 eV降至0.76 eV）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/734113a88af996d7ac298d72db1093e277d95cdf" target="_blank">Modeling Equilibrium Solid-Liquid Interfaces under Effective Constant Chemical Potential Using Machine Learning Interatomic Potentials. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Ademola Soyemi; Khagendra Baral; Tibor Szilvási</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">传统分子动力学模拟无法在非平衡或动态条件下维持溶液中物种的恒定化学势（即目标浓度），导致界面模拟偏离实验真实条件。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出迭代式准恒化学势分子动力学（iqCμMD）方法，通过动态调整溶液中溶质粒子数以快速收敛至目标体相浓度（化学势）。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">iqCμMD可在两轮迭代内高效达到目标离子浓度；结合机器学习原子间势（MLIP），能在小尺度模拟中实现DFT级精度的恒化学势固-液界面建模。</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[9] Atomic-Level Insights into TiCN via Machine Learning Force Field Molecular Dynamics Simulations — 首次将ML驱动的配位构型筛选、d带中心等物理可解释描述符与CO₂RR多碳产物选择性直接关联，并完成实验验证，为SAC理性设计提供闭环范式。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[4] Exploring the Reaction Network of Acetic Acid in Supercritical Water via Machine Learning Interatomic Potential — 其采用的MLIP虽提升尺度，但未显式耦合电荷转移或电极电势效应，可能弱化对电催化界面反应路径（如质子耦合电子转移PCET）的刻画能力，与你关注的电极/电解质界面动态存在建模断层。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">[9]作者团队（未具名，但工作体现“DFT→ML descriptor→合成验证”全链条）— 兼具计算深度与实验闭环能力，且聚焦CO₂RR中长期悬而未决的C–C耦合调控机制，与你课题高度协同。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">机器学习力场正从“保精度”单目标，转向“可解释性+物理约束+实验可验证”的多目标协同；尤其在电催化与极端条件反应体系中，MLIP不再仅作模拟加速器，而成为连接微观构效关系与宏观性能预测的桥梁。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">所有依赖MLIP的研究（[1][4][8][9][10]）均未系统解决<strong>外场（如电势、光场、压力梯度）下MLIP的能量/力一致性保障问题</strong>——当前MLIP训练数据多来自零场DFT，导致在非平衡电化学界面中力误差放大、自由能面畸变，严重制约过电位依赖反应路径的可靠性。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val"><strong>跨尺度衔接失效</strong>：从原子级MLMD（[9][10]）到介观反应器模拟（[6]）或宏观电极动力学（[9]未延伸至Tafel/阻抗分析），缺乏统一的热力学-动力学桥接协议；例如化学势变化如何映射为局部电流密度分布仍无普适降尺度规则。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展<strong>电势显式嵌入的守恒型MLIP框架</strong>（如通过电极费米能级作为输入特征，强制满足电化学基本方程∂G/∂N = μ = eU），并构建“MLIP-Microkinetic-DRT”三级耦合工作流，实现从单活性位点反应能垒到电极级极化曲线的端到端预测。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>

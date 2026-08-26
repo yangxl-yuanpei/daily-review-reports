@@ -5377,5 +5377,82 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:1a6a10c05ea0a9e15c2d0af02001139bb9fc976b": {
+    "title": "First-Principles Atomistic Structure and Dynamics of Polyethylene During High-Pressure Radical Polymerization via Machine Learning Force Fields",
+    "date_seen": "2026-08-26",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "dft"
+    ]
+  },
+  "s2:7068994055597d168de3154b6e900506e4aecc9e": {
+    "title": "Impact of Feature-Selection in a Data-Driven Method for Flow Curve Identification of Sheet Metal",
+    "date_seen": "2026-08-26",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:70c1305e5ffd7766f16124deab70358f4ffb01da": {
+    "title": "High Resolution Ocean Winds Detection using Machine Learning Models",
+    "date_seen": "2026-08-26",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:70efea01813912d652a559782f364742b3285d62": {
+    "title": "Exploring the Reaction Network of Acetic Acid in Supercritical Water via Machine Learning Interatomic Potential",
+    "date_seen": "2026-08-26",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:71416a4934cfe39cce1f622aa2c53fab5831a551": {
+    "title": "Evolutionary machine learning of physics-based force fields in high-dimensional parameter-space",
+    "date_seen": "2026-08-26",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:71e0659ee1be9257c11979d526fd6ff0a9f1cd2d": {
+    "title": "Use of Cedrela odorata L. as a Biomaterial for Dye Adsorption in Wastewater: Simulation and Machine Learning Approaches for Scale-Up Analysis",
+    "date_seen": "2026-08-26",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:7253f50f3aede612cf41b9d2e12529d0b3e28ad9": {
+    "title": "A Deep Reinforcement Learning based End-to-End Control Framework for Lower Limb Exoskeletons with Smooth Movement Transitions",
+    "date_seen": "2026-08-26",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:72d73c2b6b41e47479e8723a544c65314c2c2fe4": {
+    "title": "Computing chemical potentials with machine-learning-accelerated simulations to accurately predict thermodynamic properties of molten salts",
+    "date_seen": "2026-08-26",
+    "tags": [
+      "electrochemistry",
+      "dft"
+    ]
+  },
+  "s2:732ca0fc0f5135e04e848397bb6a0d23323bfa60": {
+    "title": "Atomic-Level Insights into TiCN via Machine Learning Force Field Molecular Dynamics Simulations",
+    "date_seen": "2026-08-26",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:734113a88af996d7ac298d72db1093e277d95cdf": {
+    "title": "Modeling Equilibrium Solid-Liquid Interfaces under Effective Constant Chemical Potential Using Machine Learning Interatomic Potentials.",
+    "date_seen": "2026-08-26",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface",
+      "dft"
+    ]
   }
 }
