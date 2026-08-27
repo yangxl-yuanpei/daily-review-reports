@@ -5454,5 +5454,89 @@
       "surface",
       "dft"
     ]
+  },
+  "s2:00cdae00a4b91c9c1ea7f9f7417b3e8a65b4c509": {
+    "title": "Exploration of Oxygen Reduction Reaction Catalyzed by FePPc and Pz‐FeTPr Conjugated Organic Polymer: Insights From Grand‐Canonical Density Functional Theory",
+    "date_seen": "2026-08-27",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "dft"
+    ]
+  },
+  "s2:058c615b0b90754b08e3cffb189f5945a5672494": {
+    "title": "Computational Screening Guiding the Development of a Covalent-Organic Framework-Based Gas Sensor for Early Detection of Lithium-Ion Battery Electrolyte Leakage",
+    "date_seen": "2026-08-27",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:094a6ce15a64fb9fbff097b2da67243b75e112f6": {
+    "title": "CO2 Sequestration Potential Competitive with H2O and N2 in Abandoned Coal Mines Based on Molecular Modeling",
+    "date_seen": "2026-08-27",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:0c120d6bcffe80297c941b51ed8224b78ec15370": {
+    "title": "Role of Adsorption-Induced Deformation on Gas Self-Diffusivity in a Flexible Microporous Coal Matrix.",
+    "date_seen": "2026-08-27",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:0d6c31e12d5b3740202438eceeff344326c6fc6a": {
+    "title": "A Molecular Simulation Model for Kerogen Reconstruction and Methane Adsorption under Slickwater Exposure.",
+    "date_seen": "2026-08-27",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:0dd9aa0d3eacc06c06110da98012f088fc79df48": {
+    "title": "Copper-Based Metal-Organic Framework as a Potential Therapeutic Gas Carrier: Optimization, Synthesis, Characterization, and Computational Studies.",
+    "date_seen": "2026-08-27",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:122f5656f8e0424ffbbf2d649e64d3bac95b5eef": {
+    "title": "Temperature-driven capillary motion of liquid droplets in rough and chemically heterogeneous nanopores",
+    "date_seen": "2026-08-27",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:13f1f996ddc684cb89b0ad39779378551ac60291": {
+    "title": "A Porous MOF Containing Accessible Open Metal Sites with Low Steric Hindrance for Selective Separation of Hydrocarbons.",
+    "date_seen": "2026-08-27",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:14f6994477e3d44e7e9da74bb087bcf2a84bf877": {
+    "title": "Molecular simulation of the initial stages of drop coalescence.",
+    "date_seen": "2026-08-27",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:190a98b89a5454a8bd91ca7b027ee7c8f9c5e8ab": {
+    "title": "Capturing local compositional fluctuations in NMR modelling of solid solutions",
+    "date_seen": "2026-08-27",
+    "tags": [
+      "dft"
+    ]
   }
 }
