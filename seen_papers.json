@@ -5538,5 +5538,78 @@
     "tags": [
       "dft"
     ]
+  },
+  "s2:61b0a36902f9cefb848e674fd605241b41a073e0": {
+    "title": "Atomistic Insights\ninto SiC Sublimation and Temperature-Dependent\nVapor Composition by ReaxFF Molecular Dynamics Simulations",
+    "date_seen": "2026-08-28",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0198f2d5257d405cdb02c24afd1c5964a410c253": {
+    "title": "Artificial Intelligence in Teaching Russian as a Foreign Language through Urban Texts",
+    "date_seen": "2026-08-28",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:02882702ca5585690bf0599fbc7280616359255b": {
+    "title": "Integrating machine learning and path planning for UAS-based weed recognition and site-specific management in turfgrass systems",
+    "date_seen": "2026-08-28",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:5f6444d28c93bd40171c9f919b37521387873412": {
+    "title": "Bridging quantum mechanics to liquid properties via a universal organic force field",
+    "date_seen": "2026-08-28",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:73459c1bd19d2c0c37e76cf912729cc14cc7de2e": {
+    "title": "Influence of aluminium distribution on the diffusion mechanisms and pairing of [Cu(NH3)2]+ complexes in Cu-CHA",
+    "date_seen": "2026-08-28",
+    "tags": [
+      "catalysis"
+    ]
+  },
+  "s2:7415ecfe965547a4590caea2104fa8eb677ade60": {
+    "title": "Coarse-grained graph architectures for all-atom force predictions",
+    "date_seen": "2026-08-28",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:744f06112e609458f3879a66f1d434846b4f1b63": {
+    "title": "Reactive Chemistry at Unrestricted Coupled Cluster Level: High-throughput Calculations for Training Machine Learning Potentials",
+    "date_seen": "2026-08-28",
+    "tags": [
+      "electrochemistry",
+      "dft",
+      "generative"
+    ]
+  },
+  "s2:74830f36288edd1852d907bb836014d85c3f2fee": {
+    "title": "Framework for classifying gait disorders and fall prevention",
+    "date_seen": "2026-08-28",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:7505ff892a297ac856242094f4232666c6b9df7f": {
+    "title": "Design Principles for Gradient Porous Carbon on Aqueous Zinc-Ion Hybrid Capacitors: A Combined Molecular Dynamic and Machine Learning Study.",
+    "date_seen": "2026-08-28",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:7508be3c8f533af023a159376a07bd1bd6e59338": {
+    "title": "RESEARCH ON CHATTER DETECTION FOR THIN-WALLED WORKPIECE MACHINING BASED ON META-REINFORCEMENT AND HYBRID DEEP CONVOLUTIONAL NEURAL NETWORK",
+    "date_seen": "2026-08-28",
+    "tags": [
+      "surface"
+    ]
   }
 }

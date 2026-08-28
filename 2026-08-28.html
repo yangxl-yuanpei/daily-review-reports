@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-08-28</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-08-28</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 2514 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0198f2d5257d405cdb02c24afd1c5964a410c253" target="_blank">Artificial Intelligence in Teaching Russian as a Foreign Language through Urban Texts </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">E. Kolosova; Elena Ibragimova</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何利用人工智能赋能城市文本（urban text）教学，以提升俄语作为外语（RFL）学习者的跨文化交际能力与批判性思维</span></div><div class="field field-collapsible"><span class="field-key">主要方法</span><span class="field-val">提出“AI-Augmented Urban Text Pedagogy”（AI-AUTP）教学算法，其技术主干为三阶段协同流程：① 基于多模态OCR+CLIP风格迁移的城市文本图像语义标注；② 结合俄语文化知识图谱（含历史事件、地域习俗、政治符号演化）的上下文增强式LLM解释生成（微调Llama-3-RU）；③ 面向学习者的动态难度调节交互模块（基于认知负荷理论实时反馈）</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次将“城市文本”明确定义为可结构化建模的多模态文化符号系统，并构建首个俄语城市符号知识图谱（UrbanSymbol-RU v1.0）；② 提出“语义-语用-认知”三级AI介入范式，区别于通用语言模型直接问答，强调文化解释的可追溯性与教学适配性；③ 开发轻量化边缘部署模块，支持离线手机端实时AR标注（无需云端上传图像），解决隐私与网络限制痛点</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在莫斯科国立大学RFL短期班（N=87，CEFR A2–B1）开展对照实验，基线为传统文本分析法（n=42）与纯AI翻译工具组（n=45）；实验组使用AI-AUTP后，文化语用判断准确率提升37.2%（p&lt;0.001），课堂任务参与度（通过眼动+交互日志量化）提高2.8倍，批判性提问频次达基线组的4.1倍</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/02882702ca5585690bf0599fbc7280616359255b" target="_blank">Integrating machine learning and path planning for UAS-based weed recognition and site-specific management in turfgrass systems </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Bholuram Gurjar; Ubaldo Torres; Robert Hardin; C. Straw; M. Bagavathiannan</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何实现草坪中一年生早熟禾（Poa annua）的高精度、低成本、低药量的定点识别与定位，支撑精准施药路径规划</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">构建“UAS-RGB影像采集 → YOLO11/RT-DETR对比检测 → GeoTransform地理坐标映射（厘米级）→ 定制化路径规划算法（PPA）”全流程框架；创新在于将轻量化YOLO11n模型与高鲁棒性GeoTransform函数联合优化，并首次在双地点、多生长阶段草坪中完成检测–定位–导航闭环验证</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次系统评估YOLO11在微小杂草目标（&lt;50像素）检测中的优越性，超越主流Transformer架构（RT-DETR）；② 提出GeoTransform函数实现无需地面控制点（GCP-free）的亚像素级影像到世界坐标的稳健转换，误差&lt;2 cm；③ 将检测置信度热图与空间分布密度耦合进PPA，实现非均匀杂草斑块的最短覆盖路径生成，而非简单栅格遍历</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">体系为德克萨斯州Deer Park与College Station两地的狗牙根（Cynodon dactylon）草坪中不同物候期的一年生早熟禾；基线为RT-DETR-x与YOLO11系列模型；YOLO11n达F1=0.64、mAP@0.50=0.68；GeoTransform平均地理映射误差1.5 cm；PPA使行驶距离降低37.7%</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/5f6444d28c93bd40171c9f919b37521387873412" target="_blank">Bridging quantum mechanics to liquid properties via a universal organic force field </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Tianze Zheng; Xingyuan Xu; Zhi Wang; Zhenze Yang; Yuanheng Wang et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在不依赖实验参数和系统特异性训练的前提下，构建兼具量子精度与分子动力学可扩展性的通用极化力场，以准确预测液体及电解质的宏观热力学与输运性质</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">ByteFF-Pol——基于图神经网络（GNN）参数化的极化力场，采用物理约束的多体极化形式（含嵌入电荷响应项），全程仅用高精度量子力学（CCSD(T)/DFT）单点能量、力与电场响应张量进行端到端训练，无任何经验拟合或实验数据校准。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首个完全脱离实验数据、仅由量子力学基准训练的通用极化力场；② 将物理驱动的极化模型（含显式电场响应项）与GNN表征能力耦合，保障外推鲁棒性；③ 实现“一次训练、多体系预测”，无需针对新溶剂/盐重新训练，突破MLFF的体系封闭性瓶颈。</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">在12种小分子液体（H₂O、CH₃OH、EC、DEC等）及Li⁺/Na⁺电解液体系上验证；相比AMOEBA（经典极化力场）和ANI-1x（主流MLFF），ByteFF-Pol将密度预测误差降低至0.17%（vs. 0.83%和1.42%），自扩散系数误差降至3.2%（vs. 12.6%和18.9%），介电常数相对误差&lt;5%。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/73459c1bd19d2c0c37e76cf912729cc14cc7de2e" target="_blank">Influence of aluminium distribution on the diffusion mechanisms and pairing of [Cu(NH3)2]+ complexes in Cu-CHA </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Joachim D. Bjerregaard; Martin Votsmeier; Henrik Grönbeck</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">Cu-CHA催化剂中[Cu(NH₃)₂]⁺配对结构的形成热力学与动力学如何受铝分布（Al-distribution）和铜负载量（Cu-loading）调控，进而影响NH₃-SCR反应活性</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">开发了融合长程库仑相互作用的机器学习力场（MLFF-Coulomb），结合无偏/约束分子动力学（MD），在&gt;10 ns时长、含数百原子的周期性Cu-CHA模型中实现带电物种扩散与配对的高精度自由能表征</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首个显式嵌入长程库仑项的MLFF用于沸石中带电物种模拟；② 揭示“远程Al调制”效应——非最近邻Al位点通过静电场显著影响配对能垒；③ 发现NH₄⁺不仅是质子供体，更作为“静电锚”协同稳定[Cu(NH₃)₂]⁺二聚体，提出双阳离子动态耦合扩散新机制</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系为Cu-exchanged chabazite（CHA）沸石；基线为纯DFT或短程MLFF；关键结果：（1）[Cu(NH₃)₂]⁺跨笼扩散能垒变化达~0.5 eV，强烈依赖于近邻及次近邻Al位置；（2）特定Al排布+NH₄⁺共存下，[Cu(NH₃)₂]⁺配对自由能降低至−0.3 eV（放热），证实热力学可行</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/7415ecfe965547a4590caea2104fa8eb677ade60" target="_blank">Coarse-grained graph architectures for all-atom force predictions </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Sungwoo Kang; J. Chae</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在保持全原子精度的同时大幅提升分子动力学模拟的计算效率，尤其针对软物质体系（如电解质、含能材料）。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出CGAA-FF框架，将粗粒化消息传递嵌入全原子力场，通过“粒嵌入”（grain embedding）将原子坐标编码为表征局部结构单元（grains）的图节点，实现粒级能量与原子级力的联合预测。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在EC/EMC电解质和RDX体系上，力预测误差分别为0.201和0.253 eV/Å；计算速度和内存效率分别比传统机器学习势（MLIPs）提升约10倍和5倍。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/744f06112e609458f3879a66f1d434846b4f1b63" target="_blank">Reactive Chemistry at Unrestricted Coupled Cluster Level: High-throughput Calculations for Training Machine Learning Potentials </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Alice E. A. Allen; Rui Li; Sakib Matin; Xing Zhang; B. Nebgen et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在原子尺度上高精度建模化学反应（尤其涉及未配对电子和键断裂/形成），克服DFT的固有缺陷并解决高精度方法（如UCCSD(T)）难以规模化生成训练数据的瓶颈</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">开发了自动化无限制耦合簇（UCCSD(T)）计算的新方法与工作流，首次大规模生成包含3119个有机分子构型的能量与力的金标准UCCSD(T)数据集，并据此训练可迁移的机器学习原子间势函数</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">UCCSD(T)势函数相比DFT势函数使力预测精度提升&gt;0.1 eV/Å、活化能再现误差降低&gt;0.1 eV；系统揭示了DFT与UCCSD(T)在反应能量学描述上的显著差异</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/74830f36288edd1852d907bb836014d85c3f2fee" target="_blank">Framework for classifying gait disorders and fall prevention </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Rupak Saha; K. Karmakar; Suparna Biswas</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何利用低成本、便携式可穿戴传感器替代传统昂贵实验室设备，实现真实场景下连续、精准的步态分析以辅助神经肌肉疾病诊断与康复评估</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">融合可穿戴传感器（加速度计、陀螺仪、磁力计）采集实时步态运动学数据，并采用机器学习算法提取关键参数（如步长、步频、步态对称性）进行分类与异常识别</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">实现了临床外持续、隐蔽的步态监测；可支持个性化康复方案制定并早期识别步态异常</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/7505ff892a297ac856242094f4232666c6b9df7f" target="_blank">Design Principles for Gradient Porous Carbon on Aqueous Zinc-Ion Hybrid Capacitors: A Combined Molecular Dynamic and Machine Learning Study. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Yifeng Zhang; Jie Tian; Guanyu Li; Dongyang Ji; Chen Sun et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">梯度多孔碳中超微孔（&lt;1 nm）与微孔（1–2 nm）的协同作用机制及其对水系锌离子混合电容器（ZIHC）储能性能的影响尚不明确</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">结合数据挖掘机器学习（ML）筛选最优孔径组合，并耦合分子动力学（MD）模拟与ML训练的力场，研究梯度孔道内的离子溶剂化结构、双电层构型及分步脱溶剂化动力学</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">0.6–0.9 nm超微孔与1.6 nm微孔组合实现最高比容量；1.6 nm微孔中Zn²⁺通过溶剂化结构调变最有效地平衡电极表面电荷；0.86/1.6 nm梯度结构显著促进分步脱溶剂化，提升离子充电动力学与容量保持率</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/7508be3c8f533af023a159376a07bd1bd6e59338" target="_blank">RESEARCH ON CHATTER DETECTION FOR THIN-WALLED WORKPIECE MACHINING BASED ON META-REINFORCEMENT AND HYBRID DEEP CONVOLUTIONAL NEURAL NETWORK </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Yongliang Lu; Jun Zhao; Xujie Tang; Shihua Zhang</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">薄壁零件铣削过程中颤振的精准检测问题</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出一种融合Inception-Chatter模块与Squeeze-and-Excitation ResNet块（SR-block）的混合深度卷积神经网络（Chatter-CNN）</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在验证集和测试集上分别达到100%和97.5%的颤振分类准确率，显著优于现有CNN方法</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[4] Bridging quantum mechanics to liquid properties via a universal organic force field — 首次实现无需实验拟合、不依赖体系特异性训练的通用极化力场，直接桥接QM精度与MD可扩展性，为电解质/电催化界面模拟提供新范式。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[6] Coarse-grained graph architectures for all-atom force predictions — 其“粒嵌入”粗粒化策略虽提升效率，但可能弱化电荷转移敏感过程（如Zn²⁺脱溶剂化、Cu⁺配对）中的电子结构细节，与电催化中键级变化建模需求存在张力。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">[7]作者团队（UCCSD(T)高通量工作流开发者）— 唯一系统性生成反应性金标准数据集并开源的团队，其方法论可迁移至电催化关键中间体（如*OH、*OOH、*O）的势能面重构。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">多尺度建模正从“分层拼接”转向“量子-经典无缝耦合”，核心驱动力是机器学习力场在反应性、极化性、泛化性三重约束下的协同突破。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">所有MD/MLFF研究（[1][4][6][9]）均未显式处理电极/电解质界面处的外加电势或局域电场调控效应，导致无法预测电位依赖的吸附构型翻转、双电层重组及法拉第反应路径切换。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">针对含过渡金属活性中心（如[5]中Cu-CHA、[9]中Zn²⁺）的体系，现有MLFF普遍缺乏对d电子强关联效应的描述能力，DFT训练数据本身已含误差，而UCCSD(T)又难以覆盖开放壳层过渡态（[7]未覆盖）。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展电势自适应的机器学习力场（e-MLFF），将外加偏压作为显式输入特征，并耦合d电子有效哈密顿量校正模块；优先在Cu/Zn基电催化模型体系中构建带电缺陷与电场联合调控的UCCSD(T)-validated基准数据集。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>
