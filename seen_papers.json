@@ -5611,5 +5611,87 @@
     "tags": [
       "surface"
     ]
+  },
+  "s2:609a1e380fc5c5363617174aa3343954a7c3ab82": {
+    "title": "Benchmarking of Fast and Interpretable UF Machine Learning Potentials",
+    "date_seen": "2026-08-29",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:7645975bebb292dc03146485c84a8d1f054ae8df": {
+    "title": "Active phase discovery in heterogeneous catalysis via topology-guided sampling and machine learning",
+    "date_seen": "2026-08-29",
+    "tags": [
+      "MLFF",
+      "catalysis",
+      "surface"
+    ]
+  },
+  "s2:76892fd2db21c6a9425d46ee59e959a5bc56bf82": {
+    "title": "DBMLFF: Linear scaling machine learning force fields via electron density decomposition for molecular electrolytes",
+    "date_seen": "2026-08-29",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:76b945830b4d3a0b8ece5d6bd915354518f9ca07": {
+    "title": "A Unique Dataset for Aircraft Maintenance Assistance's Human Following Robot",
+    "date_seen": "2026-08-29",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:76d98ec91c2dce0382ff5ca68a893822638a4ae1": {
+    "title": "On-the-Fly Machine Learning Interatomic Potential for Bulk PdH: Assessing Accuracy and Efficiency",
+    "date_seen": "2026-08-29",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "dft",
+      "active-learning"
+    ]
+  },
+  "s2:76f531fa95da4af919e9fb177aa7bc36013cad04": {
+    "title": "Simulation and Machine Learning Assessment of P-Glycoprotein Pharmacology in the Blood–Brain Barrier: Inhibition and Substrate Transport",
+    "date_seen": "2026-08-29",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:770787b3db87aac5bf835382f216098316e4f7cc": {
+    "title": "The Poetics of Code: Generative AI and the Redefinition of Literary Creativity",
+    "date_seen": "2026-08-29",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:798ac3f3b02b55342872c382082d7ef0a03b52c6": {
+    "title": "The AI Coach: Transforming Physical Education and Human Performance through Personalized, Data-Driven Frameworks",
+    "date_seen": "2026-08-29",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:7aa4461b62f6dc1d3dbdc3850c8bdf15ea1b200f": {
+    "title": "AI-based automated weight prediction in cattle for herd health surveillance.",
+    "date_seen": "2026-08-29",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:7acf70037c4e1a317c455141b77ceb11ede1fd6c": {
+    "title": "Large-Scale Non-Adiabatic Dynamics Simulation Based on Machine Learning Hamiltonian and Force Field: The Case of Charge Transport in Monolayer MoS2.",
+    "date_seen": "2026-08-29",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface",
+      "dft"
+    ]
   }
 }
