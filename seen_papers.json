@@ -5693,5 +5693,90 @@
       "surface",
       "dft"
     ]
+  },
+  "s2:37db6b90afd42e1664674aca616c36dc9bcd7baf": {
+    "title": "Precomputed grid potential (PGP) method: Exact reciprocal-space acceleration of particle mesh Ewald for Monte Carlo simulations.",
+    "date_seen": "2026-08-30",
+    "tags": [
+      "electrochemistry",
+      "constant-potential"
+    ]
+  },
+  "s2:7b454d45e857a82436ef289a10629d17723d4417": {
+    "title": "Electronic Fluctuations and Ionic Dynamics in Molten Silver Iodide",
+    "date_seen": "2026-08-30",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "dft"
+    ]
+  },
+  "s2:7b769e46b67f5a3ca3298d718f56eae8fee1408d": {
+    "title": "A Universal Deep Learning Force Field for Molecular Dynamic Simulation and Vibrational Spectra Prediction",
+    "date_seen": "2026-08-30",
+    "tags": [
+      "MLFF",
+      "NQE"
+    ]
+  },
+  "s2:7ca1bb249b53b304f1bcecac60b3266fde5cf287": {
+    "title": "Influence of finite-temperature effects on CMB power spectrum",
+    "date_seen": "2026-08-30",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:7cd8a802948ed60b6509c56461422b1986d048eb": {
+    "title": "Fast Conversion of Molecular Diagrams into Plausible Crystal Structures Using Graph-Based Force Fields",
+    "date_seen": "2026-08-30",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:7de5060df49af2274b3ac3b00b8648b928e78dba": {
+    "title": "Thermodynamics of Molecular Binding and Clustering in the Atmosphere Revealed through Conventional and ML-Enhanced Umbrella Sampling",
+    "date_seen": "2026-08-30",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:7e37d14d579b79f94313c5bfe071330e4fcb38b6": {
+    "title": "A Simple Iterative Approach for Constant Chemical Potential Simulations at Interfaces",
+    "date_seen": "2026-08-30",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:7efb523516e8ecdc8869fee9b331fb147c2ec940": {
+    "title": "Atomic orbits in molecules and materials for improving machine learning force fields",
+    "date_seen": "2026-08-30",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:7f8293349e03eba0eb939b443e29c3737e5d1e3a": {
+    "title": "Artificial intelligence contributes to the creative transformation and innovative development of traditional Chinese culture",
+    "date_seen": "2026-08-30",
+    "tags": [
+      "electrochemistry",
+      "catalysis"
+    ]
+  },
+  "s2:7fe1d763fd5318329a042302443b14f08d10dde5": {
+    "title": "Charting a New Frontier in Neurology with Artificial Intelligence",
+    "date_seen": "2026-08-30",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface",
+      "generative"
+    ]
   }
 }

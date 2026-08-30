@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-08-30</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-08-30</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 1746 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/37db6b90afd42e1664674aca616c36dc9bcd7baf" target="_blank">Precomputed grid potential (PGP) method: Exact reciprocal-space acceleration of particle mesh Ewald for Monte Carlo simulations. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Mingtian Zhao; Wenbo Yu; Alexander D. MacKerell</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在固定电荷环境的蒙特卡洛（MC）模拟中，将每次粒子插入/删除所需的长程静电相互作用计算复杂度从 O(N log N) 降至常数级，同时严格保持与标准SPME方法同等精度</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出Precomputed Grid Potential (PGP)，对SPME中 stationary-mobile 交叉项进行数学重构——通过B样条插值将静态电荷势精确预存于3D网格，使每次粒子插入仅需O(1)插值查表，且代数上等价于原始SPME交叉项（仅消除离散PME固有的位置依赖性自相互作用伪影）</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首个在数学上严格等价于SPME交叉项（非近似）的O(1)预计算方案；② 显式消除了离散PME中由网格化引入的位置依赖性自相互作用伪影（mesh self-artifact），提升数值纯净度；③ 无需修改力场或采样协议，可即插即用于现有GCMC框架，兼容性极强</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系为含56,000原子的蛋白-水系统；基线为标准SPME-PME；PGP在相同网格尺寸、B样条阶数及哈密顿量下，实现4678×–9857×的每步倒空间计算加速；经独立化学势校准后，水分子平均占据数、相互作用能分布及接受率（差异≤0.23%）与SPME统计不可区分</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/7b454d45e857a82436ef289a10629d17723d4417" target="_blank">Electronic Fluctuations and Ionic Dynamics in Molten Silver Iodide </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Harender S. Dhattarwal; Richard C Remsing</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">电子涨落（特别是阴离子极化涨落）如何影响熔盐中阳离子的扩散动力学与动态结构？</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用通用机器学习势函数Orb（基于密度泛函理论数据训练的神经网络势），首次在原子尺度显式捕捉多体电子极化涨落，并与DFT和经验对势力场（pairwise FF）进行系统对比。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次在液态熔盐中证实“电子桨轮”（electronic paddle-wheel）机制——I⁻极化涨落定向驱动Ag⁺跃迁；② 揭示动态不对称性：Ag⁺运动强烈耦合于瞬时I⁻极化，而I⁻动力学几乎不受电子涨落调制；③ 证明Orb作为通用MLP可无参数迁移地复现DFT级多体极化效应，突破经验力场固有局限。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">体系为熔融AgI；基线方法为DFT分子动力学（DFT-MD）和经验Lennard-Jones+库仑力场；Orb模型在Ag–I径向分布函数（RDF）峰位误差&lt;0.02 Å、Ag⁺自扩散系数误差&lt;8%（vs DFT），而经验力场高估Ag⁺扩散达3.2倍且完全丢失局部结构特征。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/7b769e46b67f5a3ca3298d718f56eae8fee1408d" target="_blank">A Universal Deep Learning Force Field for Molecular Dynamic Simulation and Vibrational Spectra Prediction </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Shengjiao Ji; Yujin Zhang; Zihan Zou; Bin Jiang; Jun Jiang et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在保持量子力学精度的前提下，高效模拟包含非谐效应和核量子效应的红外（IR）与拉曼光谱</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出DetaNet——一种深度等变张量注意力网络，联合速度-维莱特（velocity-Verlet）积分器构建机器学习分子动力学（MLMD）框架；首次实现对能量、力、偶极矩（矢量）、极化率（二阶张量）的端到端等变预测，并耦合环聚合分子动力学（RPMD）以嵌入核量子效应</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首个支持高阶物理张量（标量/矢量/二阶张量）协同等变预测的通用MLFF架构；② 将RPMD与MLMD原生耦合，在不牺牲采样效率前提下严格引入核量子效应；③ 展示跨尺度泛化能力——从孤立分子→晶体→生物大分子，无需重构模型结构或重训</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在QMe14S数据集（186,102个小有机分子）上训练；对萘、蒽等多环芳烃测试显示IR/Raman主峰位置误差&lt;15 cm⁻¹（vs. experiment），线型和相对强度高度一致；相比AIMD加速达1000×（即3个数量级），且在晶体、聚肽等体系中仅需微调即保持MAE &lt; 20 cm⁻¹</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/7ca1bb249b53b304f1bcecac60b3266fde5cf287" target="_blank">Influence of finite-temperature effects on CMB power spectrum </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">I. Park; P. Wui</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">本文试图解决有限温度量子场论效应对ΛCDM宇宙学模型中关键参数（尤其是宇宙学常数）的影响，并评估其对CMB功率谱拟合精度的改进潜力。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“有限温度修正ΛCDM”（T-ΛCDM）模型，通过引入两个温度依赖的额外密度参数Ω_Λ₂和Ω_Λ₃表征量子引力在有限T下的高阶贡献，并耦合CLASS数值求解器与机器学习辅助参数推断（含四次回归与信息准则优化）。</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将有限温度量子引力修正形式化为可观测的、独立密度参数Ω_Λ₂/Ω_Λ₃并嵌入标准宇宙学求解框架；② 采用ML增强的全局参数扫描（而非传统MCMC）高效识别弱信号参数空间；③ 建立可证伪的“热量子修正—CMB谱形变化”映射关系，而非仅拟合H₀或S₈等单点参数。</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">以Planck 2018 TT, TE, EE + lowE数据为基准；对比标准ΛCDM，T-ΛCDM在CMB功率谱拟合中R²提升至0.9987（+0.0012），MSE降低14.3%，AIC/BIC分别下降21.6/19.8；Ω_Λ₂ ≈ 0.0018 ± 0.0004，Ω_Λ₃ ≈ −0.0007 ± 0.0002（95% CL）。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/7cd8a802948ed60b6509c56461422b1986d048eb" target="_blank">Fast Conversion of Molecular Diagrams into Plausible Crystal Structures Using Graph-Based Force Fields </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Didier Mathieu</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何为非专业用户构建一种低成本、高可靠性且无需领域专家干预的分子堆积（MP）计算流程，以准确预测有机晶体结构与性质</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于图神经网络（GNN）预训练模型驱动的“图基力场”（GB-FF）工作流——仅输入分子结构图（SMILES/InChI），自动输出定制化力场参数，并耦合Tinker引擎与USPEX进行全自动晶体结构生成与优化</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将端到端图神经网络嵌入晶体预测全流程，实现“结构图→力场→堆积结构”的全自动闭环；② 力场参数完全由分子拓扑决定，摒弃通用力场假设，兼顾精度与可迁移性；③ 全流程基于开源工具链（PyTorch/Tinker/USPEX），单机Linux环境即可运行，无GPU强制要求，大幅降低使用门槛</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在包含100+有机小分子（含药物分子、光电材料前驱体）的测试集上，GB-FF+USPEX对晶胞参数预测的平均绝对误差（MAE）为0.08 Å（a轴）、0.11 Å（b轴），显著优于传统GAFF力场（MAE=0.25–0.38 Å）；在5个已知多晶型体系中，成功复现热力学稳定相的排序（能量差&lt;0.5 kcal/mol）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/7de5060df49af2274b3ac3b00b8648b928e78dba" target="_blank">Thermodynamics of Molecular Binding and Clustering in the Atmosphere Revealed through Conventional and ML-Enhanced Umbrella Sampling </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">J. Kubečka; Y. Knattrup; Georg Baadsgaard Trolle; B. Reischl; August Lykke-Møller et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">准确计算大气新粒子形成中分子团簇的结合自由能，特别是处理显著非谐性和构型复杂性带来的热力学贡献难题</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用伞形采样增强采样分子动力学，沿蒸发坐标进行，并结合GFN1-xTB半经验量子力学力计算，辅以基于高精度量子化学数据训练的神经网络势能面</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">显著提升结合自由能预测与实验值的一致性；首次在团簇尺度上通过第一性原理方法解析气-粒转化及团簇/气溶胶表面化学过程</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/7e37d14d579b79f94313c5bfe071330e4fcb38b6" target="_blank">A Simple Iterative Approach for Constant Chemical Potential Simulations at Interfaces </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Ademola Soyemi; Khagendra Baral; Tibor Szilvási</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">传统分子动力学模拟无法在固定组分约束下维持溶液中物种的恒定化学势，导致界面处溶质迁移和体相耗尽。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出迭代式恒化学势分子动力学（iCuMD）方法，通过动态调整溶液中物种数量以达到目标浓度（即目标化学势）。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">iCuMD可在两轮迭代内高效实现目标体相离子浓度；可与机器学习原子间势（MLIP）耦合，支持DFT精度级别的恒化学势模拟。</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/7efb523516e8ecdc8869fee9b331fb147c2ec940" target="_blank">Atomic orbits in molecules and materials for improving machine learning force fields </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Anton Charkin-Gorbulin; Artem Kokorin; H. Sauceda; Stefan Chmiela; Claudio Quarti et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在机器学习力场（MLFF）中更准确地区分化学环境相似但局部配位不同的同种原子，以提升模型在化学多样性体系中的泛化能力与精度</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出一种数据驱动的轨道（orbit）识别方法，通过分析原子在训练数据集中的排列对称性，自动识别具有相同化学与结构环境的原子等价类</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">1）sGDML模型中力预测精度与体系轨道数量呈强相关性；2）将orbit表征引入MACE后，模型尺寸减小一个数量级而预测精度保持不变（验证于CsPbI3和含吡啶氮缺陷的石墨烯）</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/7f8293349e03eba0eb939b443e29c3737e5d1e3a" target="_blank">Artificial intelligence contributes to the creative transformation and innovative development of traditional Chinese culture </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Junhao Zhang</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">AI如何推动中国传统艺术（书法、国画等）的保护与创新性发展</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">综述AI技术（机器学习、NLP、计算机视觉）在传统文化分析、修复与再创作中的应用</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">AI在古籍与文物修复中展现出高效模式识别能力；成功支持传统艺术的数字化保存与现代风格再生成</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/7fe1d763fd5318329a042302443b14f08d10dde5" target="_blank">Charting a New Frontier in Neurology with Artificial Intelligence </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Yun Guan</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">该论文摘要并非研究论文，而是新期刊《AI in Neurology》的创刊词，核心问题为阐述人工智能与神经病学交叉领域的研究意义、期刊定位及发展愿景。</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">无具体研究方法，仅为学术期刊的办刊理念阐述与领域综述性介绍。</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">无实验或计算结果；关键信息是期刊正式创刊，聚焦AI在神经病学中的诊断、精准医学、神经影像、临床决策支持等方向，并组建了30余人的国际编委会。</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[7] A Simple Iterative Approach for Constant Chemical Potential Simulations at Interfaces — 提出首个可与DFT级MLIP耦合的、无需重训练即可实现界面恒化学势模拟的通用迭代框架，直击电催化中电极/电解质界面物种浓度控制这一长期方法学空白。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[1] Precomputed grid potential (PGP) method: Exact reciprocal-space acceleration of particle mesh Ewald for Monte Carlo simulations — 其“固定骨架+频繁粒子增删”假设与电催化界面动态重构（如吸附层重组、双电层重排）存在物理前提冲突，可能低估界面离子响应的非平衡性。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">Orb团队（论文[2]）— 在熔盐体系中成功将DFT精度与纳秒级MD结合，其极化感知型ML势构建范式可迁移至电催化电解液（如LiTFSI/DME、KOH水溶液）建模。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">机器学习势正从“静态精度提升”转向“支持特定热力学约束（μ=const, T=const, p=const）的动态协议嵌入”，即MLFF作为可微分模拟基础设施（differentiable simulation stack）的范式成型。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">所有MLFF工作（[2][3][5][6][8]）均依赖高质量DFT训练数据，但电催化关键过程（如*O → *OOH转化、阳极析氧界面水网断裂）涉及强电子关联、溶剂化电子态及瞬态高价金属中心，现有泛函（PBE, SCAN）难以提供可靠参考力/能量，导致势能面底层失真。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">恒化学势模拟（[7]）与长程静电加速（[1]）尚未耦合——当前iCuMD仍采用标准PME，无法在GCMC-type界面采样中实现O(1)插入代价，限制其在毫秒级双电层弛豫模拟中的可扩展性。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展“约束感知”的多尺度MLFF：在DFT训练阶段显式编码化学势约束梯度（∂E/∂Nᵢ），并嵌入PGP类静电加速模块，构建首个支持μ-const + O(1)静电更新的电催化专用模拟协议。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>
