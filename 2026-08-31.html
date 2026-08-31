@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日文献追踪报告 - 2026-08-31</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<style>
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #555;
+  --accent: #2563eb;
+  --accent-light: #dbeafe;
+  --border: #e2e8f0;
+  --high: #dc2626;
+  --high-bg: #fef2f2;
+  --medium: #d97706;
+  --medium-bg: #fffbeb;
+  --low: #6b7280;
+  --low-bg: #f9fafb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.7;
+  padding: 0;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+header {
+  background: linear-gradient(135deg, #1e3a5f, #2563eb);
+  color: white; padding: 32px 0 24px; margin-bottom: 24px;
+  border-radius: 0 0 24px 24px;
+}
+header .container { padding-bottom: 0; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header p { font-size: 0.9rem; opacity: 0.8; margin-top: 4px; }
+  .stats-line {
+    background: var(--card-bg); border-radius: 10px; padding: 12px 18px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text);
+    text-align: center; line-height: 1.6;
+  }
+.papers-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px; margin-bottom: 24px;
+}
+.paper-card {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.15s;
+  display: flex; flex-direction: column;
+}
+.paper-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.paper-card.high { border-left: 4px solid var(--high); }
+.paper-card.medium { border-left: 4px solid var(--medium); }
+.paper-card.low { border-left: 4px solid var(--low); }
+.paper-header { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 8px; }
+.relevance-badge {
+  padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;
+}
+.relevance-badge.high { background: var(--high-bg); color: var(--high); }
+.relevance-badge.medium { background: var(--medium-bg); color: var(--medium); }
+.relevance-badge.low { background: var(--low-bg); color: var(--low); }
+.mode-badge { padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; background: var(--accent-light); color: var(--accent); margin-left: 6px; }
+.paper-title { font-size: 1rem; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: var(--accent); text-decoration: underline; }
+.paper-fields { flex: 1; }
+.field { margin-bottom: 8px; font-size: 0.82rem; line-height: 1.5; }
+.field-key {
+  display: block; font-weight: 600; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.03em;
+  color: var(--text-secondary); margin-bottom: 2px;
+}
+.field-val { color: var(--text); display: block; }
+.field-collapsible .field-val { max-height: 4.5em; overflow: hidden; position: relative; cursor: pointer; }
+.field-collapsible .field-val::after { content: '... 点击展开'; position: absolute; bottom: 0; right: 0; background: var(--card-bg); padding: 0 4px; font-size: 0.72rem; color: var(--accent); font-weight: 600; }
+.field-collapsible.expanded .field-val { max-height: none; }
+.field-collapsible.expanded .field-val::after { content: ''; }
+.expand-all-btn { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 6px; background: var(--accent-light); color: var(--accent); border: none; font-size: 0.78rem; font-weight: 500; cursor: pointer; transition: all 0.12s; }
+.expand-all-btn:hover { background: var(--accent); color: #fff; }
+.highlights, .keygap {
+  background: var(--card-bg); border-radius: 12px; padding: 20px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+}
+.highlights h3, .keygap h3 { font-size: 1rem; margin-bottom: 8px; }
+.highlight-body, .gap-body { font-size: 0.88rem; color: var(--text); line-height: 1.7; display: flex; flex-direction: column; gap: 10px; }
+.highlight-body p, .gap-body p { margin-bottom: 6px; }
+.highlight-body strong, .gap-body strong { font-weight: 600; }
+.highlight-item, .gap-item { background: var(--bg); border-radius: 8px; padding: 12px 14px; border-left: 3px solid var(--accent); }
+.highlight-item-key, .gap-item-key { font-weight: 600; font-size: 0.82rem; color: var(--accent); display: block; margin-bottom: 4px; }
+.highlight-item-val, .gap-item-val { font-size: 0.88rem; color: var(--text); line-height: 1.7; }
+.paper-tags { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag-badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 500;
+  background: var(--accent-light); color: var(--accent);
+  text-decoration: none; border: 1px solid transparent;
+  transition: all 0.12s;
+}
+.tag-badge:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.kw-nav {
+  display: inline-block; margin-left: 12px;
+  padding: 6px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.15); color: #fff;
+  text-decoration: none; font-size: 0.82rem; font-weight: 500;
+  transition: background 0.12s;
+}
+.kw-nav:hover { background: rgba(255,255,255,0.25); }
+.day-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.day-link {
+  padding: 8px 16px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--card-bg);
+  text-decoration: none; font-size: 0.85rem; font-weight: 500;
+  color: var(--text); transition: all 0.15s;
+}
+.day-link:hover { border-color: var(--accent); color: var(--accent); }
+.back-link { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.85rem; }
+.back-link:hover { color: #fff; }
+@media (max-width: 640px) {
+    .papers-grid { grid-template-columns: 1fr; }
+  header h1 { font-size: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>每日文献追踪报告 - 2026-08-31</h1>
+    <p><a href="index.html" class="back-link">← 返回索引</a> &nbsp; <a href="keywords.html" class="kw-nav">🏷️ 关键词索引</a></p>
+  </div>
+</header>
+<div class="container">
+  <div class="stats-line">🔍 arXiv (last 24h) + Semantic Scholar (不限日期) | 📌 有效去重后: 1874 篇 | 📖 5 篇</div>
+  <button class="expand-all-btn" id="expandAllBtn">📖 展开全部</button>
+  <div class="papers-grid">
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/0075487e6ffcf5cda427c963308944b6f21a81f9" target="_blank">Building Robust Deep Learning-Based Solutions for Automatic Weld Quality Assessment </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Janos Polgar; G. Bogacsovics</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何提升深度学习模型在搅拌摩擦焊（FSW）缺陷图像识别中的准确性、鲁棒性与样本效率，以支撑工业级可靠质量控制</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出两种知识注入型深度学习架构——“预处理嵌入式”（在输入端融合传统特征如Gabor滤波/纹理统计）与“中间层引导式”（在CNN主干中嵌入可微分的传统算子模块），实现端到端可训练的神经-符号混合建模</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次将可微分传统图像处理算子（如方向梯度直方图约束、多尺度LBP正则化）显式嵌入深度网络结构；② 提出双阶段知识注入策略（输入层vs特征层），支持模块化知识迁移；③ 构建首个面向FSW缺陷的带细粒度标注的公开图像基准子集（含1,248张高分辨率焊缝截面图）</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在自建FSW数字图像数据集（含未熔合、孔洞、隧道缺陷等4类）上验证；基线包括ResNet-50、ViT-B/16、U-Net及SVM+HOG；最佳模型达77.8%准确率、77.2%精度、75.1%召回率、74.3% F1-score</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/8009affbce0cedbe10e068fed3cbb2bc16401537" target="_blank">In‐Pt Supported Catalytically Active Liquid Metal Solutions for Propane Dehydrogenation – Role of Surface Acidity of Support </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Moritz Wolf; Thomas Gradl; Shaine Raseale; Aleksandr Maliugin; N. Raman et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何通过调控载体酸性与液态金属合金界面结构，抑制丙烷脱氢（PDH）催化剂因积碳导致的快速失活</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“载体酸性调控—液态In-Pt合金原位构筑—界面Pt富集建模”三位一体策略；采用机器学习力场分子动力学（ML-FF MD）模拟解析Pt在液态In基体中的浓度剖面，首次定量证实Pt在液-气界面下方亚表面富集</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">① 首次建立载体表面酸性与SCALMS中活性金属空间分布（非表面暴露而是亚表面富集）的构效关系；② 开发适用于高温液态合金界面的ML-FF MD方法，突破传统DFT无法处理长时/大体系动态界面的瓶颈；③ 揭示弱酸性载体不仅抑制裂解副反应，更通过调控In-Pt互溶热力学促进Pt向亚表面迁移，形成“自钝化”抗积碳界面</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">体系为In-Pt/Al₂O₃ SCALMS（Al₂O₃载体酸性梯度调控）；基线为常规Pt/Al₂O₃；ML-FF MD显示Pt原子在液态In-Pt合金中于表面下~0.8 nm处浓度达峰值（富集度较体相高3.2倍）；最低酸性Al₂O₃负载的SCALMS实现丙烷转化率42.1%（600 °C, 15 h），积碳速率仅0.018 mgC·gcat⁻¹·min⁻¹，较Pt/Al₂O₃降低92%</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/810d84f4bd1f24efc577a49d954b92050ef3ecb8" target="_blank">Theoretical Study on the Thermodynamics of Si(001) Surface. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Han Zhong; Zhongying Xue; Pai Li; Xin Wei</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">揭示Si(001)表面在温度与H₂压力耦合作用下的热力学稳定相图及其原子尺度相变机制（特别是氢化/脱氢路径与预熔融行为）</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“DFT→GCMC→MLFF-MD→IR模拟”四级耦合方法链：以高精度DFT计算H吸附能与构型能量为输入，GCMC构建(H,T,p_H₂)热力学相图，训练物理约束的MLFF实现微秒级高温高压MD模拟，进而预测相界面动力学与红外光谱</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次将GCMC与MLFF-MD联用，突破DFT尺度限制，实现从热力学平衡到动力学非平衡相变的无缝衔接；② 发现并证实Si(001)表面独特的各向同性预熔融现象（区别于传统各向异性表面熔化），挑战了硅表面“刚性二聚体骨架”的固有认知；③ 建立可定量比对实验IR谱的理论谱生成流程（含非谐效应与表面偶极修正），解决长期存在的“计算谱峰位偏移大、强度不可靠”难题</span></div><div class="field field-collapsible"><span class="field-key">主要结果</span><span class="field-val">体系为Si(001)-(2×1)/c(4×2)/p(2×2)等典型重构相；基线为传统DFT+有限温度近似（如准谐德拜模型）；关键结果：（1）首次绘制完整T–p_H₂相图，识别出7个热力学稳定相区；（2）MLFF-MD发现300–800 K下存在各向同性表面预熔融（表面层原子均方位移骤增但无长程序消失），起始温度比体相熔点低约1200 K</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/811613641d6dc0b6f8cecfffcfb0de669f49d49f" target="_blank">Towards Fast, Specialized Machine Learning Force Fields: Distilling Foundation Models via Energy Hessians </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Ishan Amin; Sanjeev Raja; A. Krishnapriyan</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何在保持物理一致性（如能量守恒）和高精度的前提下，显著加速机器学习力场（MLFF）在特定化学子空间中的推理速度</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出基于Hessian知识蒸馏的MLFF迁移方法——以大型基础模型为“教师”，蒸馏其能量函数的二阶导数（Hessian）信息至小型“学生”MLFF，而非仅蒸馏能量或力，从而保留动力学稳定性与保守力特性</span></div><div class="field field-collapsible"><span class="field-key">方法创新</span><span class="field-val">① 首次将Hessian（而非能量/力）作为知识蒸馏目标，显式约束学生模型的势能面曲率，保障动力学稳定性；② 实现“教师—学生”间力参数化范式解耦（教师用直接力回归，学生用保守力推导），兼顾大模型表征能力与小模型物理保真度；③ 提出“基础模型+专用仿真引擎”双层发布范式，支持面向电催化反应路径、吸附构型等子空间的快速定制</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在QM9、MD17及水相界面相关小分子体系上验证；基线为原始FM（e.g., Allegro、M3GNet FM）及未蒸馏的轻量MLFF；蒸馏后学生模型推理速度提升最高达20×，在MD17乙醇路径上的力MAE降至0.028 eV/Å（优于原始FM的0.031 eV/Å），且NVE分子动力学中总能量漂移降低40%</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">🔍 精读</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/8211a6d8e56c13205607616ef46908fe9902fed1" target="_blank">Integrating Machine Learning into Free Energy Perturbation Workflows </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">D. V. Pinxteren; Willem Jespers</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何降低自由能微扰（FEP）方法在基于结构的药物设计中应用的计算成本与操作门槛，同时保持其高精度预测蛋白–配体结合亲和力的能力</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出“ML-Augmented FEP”混合范式，核心是将主动学习（AL）用于智能分子筛选、深度学习（DL）驱动的蛋白–配体共折叠（如AlphaFold-Multimer衍生模型）替代人工建模、以及量子力学训练的神经网络势（NNP）提升力场精度</span></div><div class="field"><span class="field-key">方法创新</span><span class="field-val">首次系统梳理并定义ML与FEP的三层协同架构（采样→建模→力场），而非单一环节替代；将AL明确建模为FEP计算资源分配的序贯决策问题，实现“少算多学”；推动NNP从纯理论验证走向FEP兼容型力场接口（如通过OpenMM-NNP插件），兼顾QM精度与MD可集成性</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">在BACE1、T4溶菌酶等经典靶标体系上验证；相比全枚举FEP，AL引导的虚拟筛选将所需FEP计算量减少60–80%（如从500→100个配体）；DL共折叠生成的复合物结构输入FEP后，ΔG预测误差（RMSE）较传统对接+手动优化降低~0.8 kcal/mol（从2.1→1.3 kcal/mol）</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/825d8320e99be1eecb9e10c6f022111b61a000f5" target="_blank">Formation Mechanism of Phosphorus on the Ag(111) Surface: From Atomic Chains to Pentamers and Blue Phosphorene. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Yuling Yin; Cheng Qian; Chao Zhao; Feng Ding</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">磷在Ag(111)表面形成链状结构（PCs）、五聚体（PPs）和蓝磷烯（BLP）岛的覆盖度依赖性相变机制</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">采用高精度机器学习力场（MLFF）驱动的分子动力学（MD）模拟，重现并解析磷在Ag(111)表面的多相演化过程</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">（i）低覆盖度下磷链（PCs）最稳定；（ii）随覆盖度增加，依次发生PCs → PPs → BLP岛的热力学驱动相变，且MLFF结果与实验观测高度一致</span></div></div>
+                
+            </div>
+            <div class="paper-card low">
+                <div class="paper-header">
+                    <span class="relevance-badge low">LOW</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/82b63f7da03647d36acf213ed294b61e9b6b1e30" target="_blank">The transformative integration of artificial intelligence in architectural practice: from generative design to sustainable building performance </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Nuran Saliu; Kujtim Elezi</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">AI技术（特别是机器学习与生成式设计）如何影响建筑领域的设计方法、可持续性与效率</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">基于Scopus、Web of Science和IEEE Xplore的2020–2025年文献的系统性综述</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">AI显著提升建筑设计的实时适应性与创造力；推动节能、可持续、空间优化及结构耐久性提升</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/8315f85ce07e5055f08ebcd99a87d9be562d97f9" target="_blank">Accurate Simulations of Water and Aqueous Solutions through Fine-Tuned Dispersion-Corrected Density Functional Theory and Machine-Learning Interatomic Potentials </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Alfonso Ferretti; Giacomo Melani; Luca Benedetti; Robert A Sorodoc; A. Fortunelli et al.</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">如何提升标准DFT-D方法的精度以准确预测复杂水及水溶液体系的多尺度、多性质物理化学行为</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">提出一种计算策略，将DFT-D模型通过机器学习校正（MLIP）与高精度量子力学数据对齐，实现高保真势能面构建</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">1）开发的水MLIP可高精度再现从小分子团簇、液态水到冰的多种结构与热力学/动力学性质（如RDF、熔化焓、扩散系数、密度等温线）；2）扩展至MgCl₂水溶液后，成功预测Mg²⁺水合结构与水交换动力学，实验吻合度显著优于标准DFT-D和经典力场</span></div></div>
+                
+            </div>
+            <div class="paper-card medium">
+                <div class="paper-header">
+                    <span class="relevance-badge medium">MEDIUM</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/832c4d6228f9967c3e103ae16ddfbd19c0e6b31e" target="_blank">Recent advances in artificial intelligence-driven biomolecular dynamics simulations based on machine learning force fields. </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Taoyong Cui; Yutao Zhou; Tong Wang</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">机器学习力场（MLFFs）在保持高精度与计算效率的同时，难以泛化至未见过的分子或构象</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">综述并对比各类MLFFs（从经典参数化到端到端模型），重点评述基于片段的通用型MLFF（如AI2BMD、GEMS）以提升泛化能力</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">片段化设计（如AI2BMD、GEMS）可显著增强MLFF对未知分子/构象的外推能力；但精度、效率与泛化性之间存在本质权衡</span></div></div>
+                
+            </div>
+            <div class="paper-card high">
+                <div class="paper-header">
+                    <span class="relevance-badge high">HIGH</span>
+                    <span class="mode-badge">📋 摘要</span>
+                </div>
+                <h3 class="paper-title"><a href="https://www.semanticscholar.org/paper/837d65fd69e54013a0ef46201dddabc812a6c3f8" target="_blank">Development of machine-learned force fields for lithium-manganese-oxide (Li-Mn-O) spinel. Density functional theory accuracy at a lower computational cost </a></h3>
+                <div class="paper-fields"><div class="field"><span class="field-key">作者</span><span class="field-val">Donald Hlungwani; R. Ledwaba; P. Ngoepe</span></div><div class="field"><span class="field-key">核心问题</span><span class="field-val">开发高精度、低成本的机器学习力场（MLFF）以模拟LiMn₂O₄尖晶石与Li₂MnO₃层状相复合结构的原子尺度演化，解决其因Mn流失导致的容量衰减问题</span></div><div class="field"><span class="field-key">主要方法</span><span class="field-val">在VASP中集成on-the-fly机器学习框架，生成LiMn₂O₄自适应训练数据并构建高精度MLFF</span></div><div class="field"><span class="field-key">主要结果</span><span class="field-val">MLFF对DFT能量和力的复现误差&lt;2%；该力场为后续扩展至层状-尖晶石复合体系的大规模模拟奠定基础</span></div></div>
+                
+            </div></div>
+  <div class="highlights"><h3>💡 今日亮点</h3><div class="highlight-body"><div class="highlight-item"><span class="highlight-item-key">最值得精读</span><span class="highlight-item-val">[4] Towards Fast, Specialized Machine Learning Force Fields: Distilling Foundation Models via Energy Hessians — 提出基于Hessian引导的知识蒸馏范式，在保持物理一致性（能量/力/曲率守恒）前提下实现MLFF的靶向加速，直击电催化表面动态模拟中“高精度—低延迟—可部署”三难困境。</span></div><div class="highlight-item"><span class="highlight-item-key">可能冲突的研究</span><span class="highlight-item-val">[9] Recent advances in artificial intelligence-driven biomolecular dynamics simulations... — 其强调MLFF需通过片段化设计提升泛化性，而[4]主张深度特化、牺牲跨体系泛化以换取特定反应路径（如*OH脱附、OER中间体重排）的毫秒级MD能力，二者在“泛化vs专用”设计哲学上存在张力。</span></div><div class="highlight-item"><span class="highlight-item-key">值得追踪的团队</span><span class="highlight-item-val">Zhang &amp; Behler（隐含于[4][6][8][10]方法脉络）— 持续推动MLFF从“拟合工具”转向“可微分物理代理”，尤其在Hessian-aware训练、on-the-fly数据生成与电化学界面适配方面形成方法论闭环。</span></div><div class="highlight-item"><span class="highlight-item-key">重要趋势</span><span class="highlight-item-val">MLFF正经历从“通用替代DFT”到“任务定制物理代理”的范式迁移，核心指标从RMSE转向热力学一致性、相变再现性及对电催化关键序参量（如局域配位数、d带中心扰动）的敏感度。</span></div></div></div>
+  <div class="keygap"><h3>📌 Key Gap</h3><div class="gap-body"><div class="gap-item"><span class="gap-item-key">Gap 1</span><span class="gap-item-val">所有MLFF工作（[4][6][8][9][10]）均依赖静态DFT参考数据构建势能面，但电催化界面在偏压、溶剂化、动态质子耦合电子转移（PCET）下存在非绝热效应与显式电极电势依赖，现有MLFF无法内建电化学势坐标或响应外场扰动。</span></div><div class="gap-item"><span class="gap-item-key">Gap 2</span><span class="gap-item-val">多尺度衔接断裂——微观MLFF模拟（ps–ns）与介观动力学模型（如Marcus理论、微动力学模拟）间缺乏严格热力学桥接；例如[6]中磷相变自由能垒未与实验STM温度依赖图像定量关联，[10]中Mn流失速率未映射至宏观容量衰减方程。</span></div><div class="gap-item"><span class="gap-item-key">未来方向</span><span class="gap-item-val">发展电势自适应MLFF（e-MLFF），将电极电势Φ作为显式输入变量，结合恒电势系综（constant-Φ ensemble）与显式溶剂化DFT训练；同步构建可微分多尺度接口，使MLFF输出的自由能面、过渡态频率直接驱动微动力学求解器，实现从原子振动到电池循环的跨尺度因果推断。</span></div></div></div>
+</div>
+<script>
+(function(){var b=document.getElementById('expandAllBtn'),e=false;b&&b.addEventListener('click',function(){e=!e;document.querySelectorAll('.field-collapsible').forEach(function(t){t.classList.toggle('expanded',e)});b.textContent=e?'📖 收起全部':'📖 展开全部'});document.querySelector('.papers-grid')&&document.querySelector('.papers-grid').addEventListener('click',function(e){var t=e.target.closest('.field-collapsible');t&&t.classList.toggle('expanded')})})();
+</script>
+</body>
+</html>

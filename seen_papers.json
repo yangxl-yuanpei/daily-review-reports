@@ -5778,5 +5778,89 @@
       "surface",
       "generative"
     ]
+  },
+  "s2:0075487e6ffcf5cda427c963308944b6f21a81f9": {
+    "title": "Building Robust Deep Learning-Based Solutions for Automatic Weld Quality Assessment",
+    "date_seen": "2026-08-31",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:8009affbce0cedbe10e068fed3cbb2bc16401537": {
+    "title": "In‐Pt Supported Catalytically Active Liquid Metal Solutions for Propane Dehydrogenation – Role of Surface Acidity of Support",
+    "date_seen": "2026-08-31",
+    "tags": [
+      "MLFF",
+      "catalysis",
+      "surface"
+    ]
+  },
+  "s2:810d84f4bd1f24efc577a49d954b92050ef3ecb8": {
+    "title": "Theoretical Study on the Thermodynamics of Si(001) Surface.",
+    "date_seen": "2026-08-31",
+    "tags": [
+      "MLFF",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:811613641d6dc0b6f8cecfffcfb0de669f49d49f": {
+    "title": "Towards Fast, Specialized Machine Learning Force Fields: Distilling Foundation Models via Energy Hessians",
+    "date_seen": "2026-08-31",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:8211a6d8e56c13205607616ef46908fe9902fed1": {
+    "title": "Integrating Machine Learning into Free Energy Perturbation Workflows",
+    "date_seen": "2026-08-31",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "active-learning",
+      "generative"
+    ]
+  },
+  "s2:825d8320e99be1eecb9e10c6f022111b61a000f5": {
+    "title": "Formation Mechanism of Phosphorus on the Ag(111) Surface: From Atomic Chains to Pentamers and Blue Phosphorene.",
+    "date_seen": "2026-08-31",
+    "tags": [
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:82b63f7da03647d36acf213ed294b61e9b6b1e30": {
+    "title": "The transformative integration of artificial intelligence in architectural practice: from generative design to sustainable building performance",
+    "date_seen": "2026-08-31",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:8315f85ce07e5055f08ebcd99a87d9be562d97f9": {
+    "title": "Accurate Simulations of Water and Aqueous Solutions through Fine-Tuned Dispersion-Corrected Density Functional Theory and Machine-Learning Interatomic Potentials",
+    "date_seen": "2026-08-31",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "dft"
+    ]
+  },
+  "s2:832c4d6228f9967c3e103ae16ddfbd19c0e6b31e": {
+    "title": "Recent advances in artificial intelligence-driven biomolecular dynamics simulations based on machine learning force fields.",
+    "date_seen": "2026-08-31",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:837d65fd69e54013a0ef46201dddabc812a6c3f8": {
+    "title": "Development of machine-learned force fields for lithium-manganese-oxide (Li-Mn-O) spinel. Density functional theory accuracy at a lower computational cost",
+    "date_seen": "2026-08-31",
+    "tags": [
+      "electrochemistry",
+      "dft"
+    ]
   }
 }
