@@ -5862,5 +5862,86 @@
       "electrochemistry",
       "dft"
     ]
+  },
+  "s2:83b2a2efbda9473e1ca04fa59ae0f11addf8a8f5": {
+    "title": "Multi-fidelity learning for atomistic models via trainable data embeddings",
+    "date_seen": "2026-09-01",
+    "tags": [
+      "MLFF",
+      "dft"
+    ]
+  },
+  "s2:842d63eed6f5072e943f6e1b58ecf8306567616e": {
+    "title": "Towards Improved Quantum Machine Learning for Molecular Force Fields",
+    "date_seen": "2026-09-01",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:849e1ce1466fbc6989a70286e8577557d4e85e13": {
+    "title": "Innovations and Future Directions in Securing Digital Environments",
+    "date_seen": "2026-09-01",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:85281bb6018352a66264923165ae41de2a827d15": {
+    "title": "Fundamental invariant-neural network as a correction to the intramolecular force field illustrated for the full-dimensional potential energy surface of propane.",
+    "date_seen": "2026-09-01",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:85b490a123a2e45a8dc86a99c678f69dfc3f82f6": {
+    "title": "Applications of machine learning in surfaces and interfaces",
+    "date_seen": "2026-09-01",
+    "tags": [
+      "MLFF",
+      "catalysis",
+      "surface"
+    ]
+  },
+  "s2:869f4d2c790d1f1ad3f98ad087639b47e2145078": {
+    "title": "(Invited)\n Are Pre-Trained Universal Machine Learning Interatomic Potentials Ready for Solid Electrolyte Discovery?",
+    "date_seen": "2026-09-01",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:86a0d15638a2337b0fcd6b926559fdd8ddc004d1": {
+    "title": "Exploring the Intricacies of Glycerol Hydrodeoxygenation on Copper Surface: A Comprehensive Investigation with the Aid of Machine Learning Force Field",
+    "date_seen": "2026-09-01",
+    "tags": [
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:86f22329fb29140b8f1651ff3e1ae47b12ea35ed": {
+    "title": "Dynamic identification of longitudinal impulse of heavy-haul locomotive: an effective intelligent method for comprehensive index",
+    "date_seen": "2026-09-01",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:86f2e9083555aa63c47be6fb83c8a20904698f7f": {
+    "title": "Accelerating and Enhancing Thermodynamic Simulations of Electrochemical Interfaces",
+    "date_seen": "2026-09-01",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface"
+    ]
+  },
+  "s2:872107e84b2b574e72093ec3d3f5bbf5fc925bae": {
+    "title": "utils4VASP: Setup and Evaluation of Electronic Structure and Machine-Learned Interatomic Potential Simulations with VASP.",
+    "date_seen": "2026-09-01",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface"
+    ]
   }
 }
