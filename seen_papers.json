@@ -5943,5 +5943,80 @@
       "MLFF",
       "surface"
     ]
+  },
+  "s2:8875fe1f714a5f1a3d38d31bea53580be4625904": {
+    "title": "(\n Keynote\n ) Active Learning of Structure-Dependent Electrochemical Reactivity on the Nanometer Scale with the ML-Enabled Electrochemical Strain Microscopy",
+    "date_seen": "2026-09-02",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "active-learning",
+      "generative"
+    ]
+  },
+  "s2:88ae5e5992f25efa9579415bfed591b706224f93": {
+    "title": "On Free Energy Calculations in Drug Discovery",
+    "date_seen": "2026-09-02",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:893db803d3289a6f56f0289f1533e0881de7c0e3": {
+    "title": "Elucidating Anisotropic Ionic Diffusion Mechanism in Li\n 3\n YCl\n 6\n with Molecular Dynamics Simulations",
+    "date_seen": "2026-09-02",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:8988f797f2e0a3dcc92b04e55d70ff8847a55c71": {
+    "title": "A quantum chemical dataset of interacting molecular pairs for chemical reaction studies",
+    "date_seen": "2026-09-02",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:899f882ce9affb400fd3a5608cf9fadbcba2072a": {
+    "title": "The Role of Artificial Intelligence in Protein Structural and Functional Prediction: Current Status and Future Prospective",
+    "date_seen": "2026-09-02",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:89d2777e7c0694381f9f3908106a8c2da6c8df7d": {
+    "title": "Enhancing Machine Learning Potentials through Transfer Learning across Chemical Elements",
+    "date_seen": "2026-09-02",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:8a03acd31cdd2fcd484c83ba4dc07947daab9aa2": {
+    "title": "Computational condensed matter science contributions to addressing water emerging contaminant pollution: a comprehensive review",
+    "date_seen": "2026-09-02",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:8a202483c915fd0ddcc1319b7d2f00e0c1c1ab5b": {
+    "title": "Machine-Learning Force Fields Reveal Shallow Electronic States on Dynamic Halide Perovskite Surfaces",
+    "date_seen": "2026-09-02",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:8a6c64d08837c96ccc422fbb00cc87ffb70211d4": {
+    "title": "Molecular Simulation in Phosphate Ore Interfacial Separation: Research Progress, Innovations, and Industrial Prospects",
+    "date_seen": "2026-09-02",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:8a7a6eccf3454dbaa2634578be496bd3ae7f06f9": {
+    "title": "Predictive HR Analytics: Leveraging AI for Employee Retention and Experience Optimization",
+    "date_seen": "2026-09-02",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
