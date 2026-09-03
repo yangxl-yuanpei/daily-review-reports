@@ -6018,5 +6018,81 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:711129cab36ec13b350609e7ca3e6f91bb93fc27": {
+    "title": "Mechanism-driven gas sensing in MOF and COF materials: bridging adsorption thermodynamics, electronic structure, and signal transduction.",
+    "date_seen": "2026-09-03",
+    "tags": [
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:fc9b208c4f384d8f34832b460f2b34996d7001fb": {
+    "title": "Phase stability, charge ordering, and charge-liquid formation in the Falicov-Kimball model on triangular and kagome lattices",
+    "date_seen": "2026-09-03",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:8aa64d589ab9ab3daa2dbad2fdbbd6b137cbc9d5": {
+    "title": "A Review of Literature on Artificial Intelligence and Human Society: Opportunities, Challenges, and Future Prospects",
+    "date_seen": "2026-09-03",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:8ae7a091e2412871601b90ca19cb6883cee0e923": {
+    "title": "A U-Net-Based Prediction of Surface Pressure and Wall Shear Stress Distributions for Suboff Hull Form Family",
+    "date_seen": "2026-09-03",
+    "tags": [
+      "surface",
+      "generative"
+    ]
+  },
+  "s2:8b102c46017f5ccd0a825347e83a360f7dcf22dc": {
+    "title": "INN-FF: A Scalable and Efficient Machine Learning Potential for Molecular Dynamics",
+    "date_seen": "2026-09-03",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:8bc1fd256f69c8473f27c4610c7fa7367916f3ac": {
+    "title": "Machine Learning Analysis of Localized Vibrations in Perturbed Square Tellurene and Selenene Lattices",
+    "date_seen": "2026-09-03",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:8cb8c4285672f3ee875ba7365c8af982408a1d9d": {
+    "title": "Impact and optimization of vehicle charging scheduling on regional clean energy power supply network management",
+    "date_seen": "2026-09-03",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:8de212bd8675f64bef33729547a2795e998e1f20": {
+    "title": "Literature Review of AI in Healthcare",
+    "date_seen": "2026-09-03",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:8e26aa46b55e310b9326f778b1deee789076595d": {
+    "title": "Electronic fluctuations, cation clustering, and ionic dynamics in molten silver iodide.",
+    "date_seen": "2026-09-03",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "dft"
+    ]
+  },
+  "s2:8e3b280f3ed68f5921e58520f8685cf51a670e1e": {
+    "title": "In-Silico Stability Predictors: Investigation of Performance Towards balanced Experimental Data",
+    "date_seen": "2026-09-03",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
