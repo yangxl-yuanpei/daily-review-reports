@@ -6165,5 +6165,90 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:35f8a5d724e9f671acc45f2c106ae9d05b46aec5": {
+    "title": "Elastic properties of amorphous\n                    <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\">\n                      <mml:msub>\n                        <mml:mi>LiTaCl</mml:mi>\n                        <mml:mn>6</mml:mn>\n                      </mml:msub>\n                    </mml:math>\n",
+    "date_seen": "2026-09-05",
+    "tags": [
+      "dft"
+    ]
+  },
+  "s2:491d54e7472fb158239dd142eacb260bd7c9c3e3": {
+    "title": "ResNet-assisted coarse-grained modeling of CH4-CO2 hydrates: Linking structural descriptors to interaction potentials.",
+    "date_seen": "2026-09-05",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:8eb7a4db39ed0eb29e5e3b60c3f4e376f5b61b69": {
+    "title": "Active Learning\nof a Neural Network Potential for\nLarge-Scale Atomistic Simulations of Polymer Electrolyte Membranes",
+    "date_seen": "2026-09-05",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "dft",
+      "active-learning",
+      "generative"
+    ]
+  },
+  "s2:8f490b7809e0dc4007b7e35e28c8b64fe14568c1": {
+    "title": "Benchmarking Universal Machine Learning Force Fields with Hydrogen-Bonding Cooperativity",
+    "date_seen": "2026-09-05",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:8f69965f302693a590b3a99399315966cc376372": {
+    "title": "Modeling the Behavior of Complex Aqueous Electrolytes Using Machine Learning Interatomic Potentials: The Case of Sodium Sulfate.",
+    "date_seen": "2026-09-05",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "dft"
+    ]
+  },
+  "s2:8f9d1638e987e6fb13fa7b05f9a6208eae9346c9": {
+    "title": "Systematic softening in universal machine learning interatomic potentials",
+    "date_seen": "2026-09-05",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:90c7026d31d0e39292c63621e84a5b0b6aaa0379": {
+    "title": "A new perspective on the neurotoxic mechanisms of six typical per- and polyfluoroalkyl substances (PFAS): insights from integrating network toxicology and random forest algorithm",
+    "date_seen": "2026-09-05",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:3928d04ac554272811e9a084ad45d80aa30a3b27": {
+    "title": "Teaching an Old Dog New Tricks: The Hydrogen Oxidation Reaction on Platinum as a Counter Electrode for Precise Electrochemical Systems",
+    "date_seen": "2026-09-05",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:39b27f61c7037a3819c3cf482b1ae247465fd994": {
+    "title": "Efficient capture and conversion of H2S into H2 and sulfur in guanidinium ionic liquid-NaOH aqueous solution.",
+    "date_seen": "2026-09-05",
+    "tags": [
+      "electrochemistry",
+      "constant-potential"
+    ]
+  },
+  "s2:581e2f2dd6393e77374d469fb9b50f33b4db7fe4": {
+    "title": "A charge calibration strategy for describing the charge transfer during the electrochemical elementary step.",
+    "date_seen": "2026-09-05",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "constant-potential",
+      "surface"
+    ]
   }
 }
