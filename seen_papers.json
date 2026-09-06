@@ -6250,5 +6250,76 @@
       "constant-potential",
       "surface"
     ]
+  },
+  "s2:0c2affd487056aba4913d80b9987e87e7349dca5": {
+    "title": "Efficient rigorous stress field calculations for machine learning interatomic potentials",
+    "date_seen": "2026-09-06",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:10a2f79e8c30562899709bc05ea48972a4a2ef4b": {
+    "title": "Shielding-Aware Pairwise Atomic Descriptors for Deep-Learned Molecular-Dynamics Force Fields",
+    "date_seen": "2026-09-06",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:e0ab0dca39112d3625e460cd096b435382f13094": {
+    "title": "A study on the simulation of reversible and irreversible cyclic voltammetry using MATLAB",
+    "date_seen": "2026-09-06",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:000a7bfb539b5184183199116ed146bbb39ab115": {
+    "title": "Research on an Acupuncture Manipulation Recognition System Based on Lstm and Cnn Fusion",
+    "date_seen": "2026-09-06",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:000adf6645cf625645959ac61fa458f06156493a": {
+    "title": "RACNet: A Deep Learning Approach for Underwater Source Number Estimation",
+    "date_seen": "2026-09-06",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:000eac668a240eb0cede775569af684c11fa5f33": {
+    "title": "Towards Multimodal Solar Flare Prediction Using Magnetic Polarity Inversion Lines",
+    "date_seen": "2026-09-06",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0011ac72d407f0aaad1b5ddd1124d91f794c90a5": {
+    "title": "A Deep Learning-Based Method for Detection of Multiple Maneuvering Targets and Parameter Estimation",
+    "date_seen": "2026-09-06",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00138a369a495df91f2ad939df5830073d8fbed8": {
+    "title": "Novel Learning Framework with Generative AI X-Ray Images for Deep Neural Network-Based X-Ray Security Inspection of Prohibited Items Detection with You Only Look Once",
+    "date_seen": "2026-09-06",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:00156904065db292a68dc77f5f8b1c5eb67e3761": {
+    "title": "OculusNet: Detection of retinal diseases using a tailored web-deployed neural network and saliency maps for explainable AI",
+    "date_seen": "2026-09-06",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0024c33a8cca7175b92880b8c47940deeb05e87c": {
+    "title": "An Explainable Artificial Intelligence Model for the Classification of Breast Cancer",
+    "date_seen": "2026-09-06",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
