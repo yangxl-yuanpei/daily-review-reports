@@ -6321,5 +6321,81 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:0128f4986f28118f13341da0d50b6f77f95cd657": {
+    "title": "Colorimetric-Catalytic-SERS Trimodal Immunochromatographic Assay for Multi-Scenario Monitoring of Gastrointestinal Infections.",
+    "date_seen": "2026-09-07",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface"
+    ]
+  },
+  "s2:0027641833d92fe0237e19c8ec8e7e065b0869fa": {
+    "title": "Feasibility Study on Identifying Seed Variety of Soybean With Hyperspectral Imaging and Deep Learning",
+    "date_seen": "2026-09-07",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:002794efc1dc13b9540c33c51757e5fe7ac8291e": {
+    "title": "Topology-aware Detection and Localization of Distributed Denial-of-Service Attacks in Network-on-Chips",
+    "date_seen": "2026-09-07",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:002f2da8ed449a561aad99cdf20615fa8ee57084": {
+    "title": "Non-intrusive reduced basis approximation to the solution of Helmholtz equation: The magnetotellurics case",
+    "date_seen": "2026-09-07",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:002ffef6985b3e212e58dbf2cd97fb2219c9da92": {
+    "title": "DermaSense AI: Revolutionizing Skin Disease Detection with Artificial Intelligence",
+    "date_seen": "2026-09-07",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:0031c7152b3d3228a45cfa18d6cd5331f3ca34d0": {
+    "title": "Trend Identification using LSTM vs. Convolutional Neural Networks on the NASDAQ market",
+    "date_seen": "2026-09-07",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:003422dd5fbb493e7f87cb941d23332af7d2b4f4": {
+    "title": "The Role of Deep Learning in Advancing Computer Vision Applications: A Comprehensive Systematic Review",
+    "date_seen": "2026-09-07",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:00380680621d1df033aa4239ff2678035894dc1f": {
+    "title": "EARLY DETECTION OF ALZHEIMER’S DISEASE USING CONVOLUTIONAL NEURAL NETWORK",
+    "date_seen": "2026-09-07",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:003ff5d132f57c4eab3190d821498f042e48b30f": {
+    "title": "Physics-Informed Neural Networks for Advanced Thermal Management in Electronics and Battery Systems: A Review of Recent Developments and Future Prospects",
+    "date_seen": "2026-09-07",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00423eacb0e99e8ea4e8789295bf78d3fd1666a6": {
+    "title": "Automated Bipolar Disorder Detection and Phenotype Stratification via Deep Learning Models",
+    "date_seen": "2026-09-07",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
