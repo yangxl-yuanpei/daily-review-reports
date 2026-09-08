@@ -6397,5 +6397,93 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:632257677c15d6391f14bcf8581e472ef6849d5c": {
+    "title": "Constant-Potential MD with Neural Network Potentials Reveals Cation Effects on CO2 Reduction at Au-Water Interfaces",
+    "date_seen": "2026-09-08",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "constant-potential",
+      "surface",
+      "dft",
+      "active-learning"
+    ]
+  },
+  "s2:6a7695211ae354f75c37d2d040cc91fcfef48e1c": {
+    "title": "Electrostatic Work Alters Thermodynamics of Electron Transfer in Ion-Pairs in Low Dielectric Solvents",
+    "date_seen": "2026-09-08",
+    "tags": [
+      "electrochemistry",
+      "catalysis"
+    ]
+  },
+  "s2:7ffe5209d9256189c370450e28bc8fff46c971cb": {
+    "title": "Revealing the Effect of Pendant Identity on the Electrochemistry of Non‐Conjugated Redox Active Polymers",
+    "date_seen": "2026-09-08",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:8882b12404655519a3df0780c61b54bda38ce315": {
+    "title": "Evaluation of the Solid-Electrolyte Interphase Formation in a Bis(fluorosulfonyl)Amide Based Ionic Liquid in the Presence of Lithium Ion Using Different Redox Probes",
+    "date_seen": "2026-09-08",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:88eabb2207c033bd00de4b6a69a5408b54bf6d26": {
+    "title": "Electrified interfaces from first-principles: continuum electrochemistry and grand canonical density-functional theory",
+    "date_seen": "2026-09-08",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:8a9feaeae82282a504b83bc1b5dc9ac123420fc9": {
+    "title": "Reversible enzyme-catalysed NAD+/NADH electrochemistry",
+    "date_seen": "2026-09-08",
+    "tags": [
+      "electrochemistry",
+      "catalysis"
+    ]
+  },
+  "s2:8cf4d110b8f5590cbd1ae29a7da3020926b549ad": {
+    "title": "Electrode-Electrolyte Interfaces of Al-C Batteries by Constant Potential Method Molecular Simulations",
+    "date_seen": "2026-09-08",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:8daf07d31240ac063b63eb15621729035c5cbe78": {
+    "title": "(\n Invited\n ) Dynamics of Atoms and Clusters Under the Fast Scanning Tunneling Microscope - from UHV Studies to Electrochemistry",
+    "date_seen": "2026-09-08",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface"
+    ]
+  },
+  "s2:93f2ecaf024ee91abe116b373411945879c06fb8": {
+    "title": "(Invited) Manipulation of Concentration Gradients and Overpotentials at Microband Electrode Arrays to Extract Reaction Mechanisms and Heterogeneous Electron Transfer Kinetics Using Generation-Collection Electrochemistry",
+    "date_seen": "2026-09-08",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:a5bcd8e1d66c62e5df739e5d48ced5fd1b1bd3eb": {
+    "title": "Electrochemistry-Enhanced Dynamic Paths Sampling Unveiling Nuclear Quantum Effects in Electrocatalysis",
+    "date_seen": "2026-09-08",
+    "tags": [
+      "electrochemistry",
+      "NQE",
+      "catalysis",
+      "constant-potential"
+    ]
   }
 }
