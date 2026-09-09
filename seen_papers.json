@@ -6485,5 +6485,79 @@
       "catalysis",
       "constant-potential"
     ]
+  },
+  "s2:10b6f391df2c7f471d306c3b36fcae61ef0a06c6": {
+    "title": "Molecular Dynamics Simulations in Modern Medicinal Chemistry",
+    "date_seen": "2026-09-09",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:36acf935de14acc51af39d3aa36d40553d7b59ff": {
+    "title": "Ab Initio Modeling of Aqueous Methanol Mixtures at DFT-SCAN Level Using Machine Learning Interatomic Potentials.",
+    "date_seen": "2026-09-09",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "dft"
+    ]
+  },
+  "s2:3f943051db555fce136005a1987a777b50ccefef": {
+    "title": "In Situ UV-vis Quantification of Chlorobasicity in Binary Molten Chlorides.",
+    "date_seen": "2026-09-09",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:847ef51dfc71469f649d46f3fbefa6348e9a5383": {
+    "title": "Ethical Considerations on Artificial Intelligence, Health and Health Care. All That Glisters Is Not Gold",
+    "date_seen": "2026-09-09",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:01521d83ce0cd7bf69cd69c62a2dad4daca1d5c2": {
+    "title": "Weather Prediction Using CNN-LSTM-Based AI for Weather Pattern Analysis in Banten Province",
+    "date_seen": "2026-09-09",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:01583034f72ef7951c3606de0a334d3f89eb2ca9": {
+    "title": "A Survey on Parallelization and Optimization for Distributed Deep Learning",
+    "date_seen": "2026-09-09",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:b7ff0573fa0d7976b48310c0de0529bcb0dad17e": {
+    "title": "Continuous-time optical-electrothermal SOC model for lithium-ion batteries under random dynamic loads",
+    "date_seen": "2026-09-09",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:004391ad2c07424fa22313c42a42dcb9276bb265": {
+    "title": "AI-Based Forecasting in Renewable-Rich Microgrids: Challenges and Comparative Insights",
+    "date_seen": "2026-09-09",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:004657c7fb557257e93201781e084c3376f7b10c": {
+    "title": "A dual-phase hybrid framework for real-time grayscale image denoising in structured noise",
+    "date_seen": "2026-09-09",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0046c3e8248edbac155f0548c9492ea816e5fae9": {
+    "title": "Teleportation With Null Space Gradient Projection for Optimization Acceleration",
+    "date_seen": "2026-09-09",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
