@@ -6559,5 +6559,100 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:1c37bec57212b2a49d5f2b67f955d61ee701568a": {
+    "title": "Electrochemical potential-driven water dynamics control CO2 electroreduction at the Ag/H2O interface",
+    "date_seen": "2026-09-10",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:1d2ddafdf1544ce885935846dab952a55d67bcac": {
+    "title": "Two-Dimensional Lattice-Gas model for methane clathrate Hydrates: Comparative analysis with experiments and Three-Dimensional simulations",
+    "date_seen": "2026-09-10",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:1e651169767743de32802ec7dec074890e175694": {
+    "title": "Accurate DDEC-charge-guided screening of high-performance metal–organic frameworks for SF6/N2 separation",
+    "date_seen": "2026-09-10",
+    "tags": [
+      "constant-potential",
+      "surface",
+      "dft",
+      "generative"
+    ]
+  },
+  "s2:1eac77bcd142478d847f613309b3a30d0f0fa98b": {
+    "title": "Expanding Cluster, Enhancing Adsorption: Investigating the Role of Electrostatic Configurations on Water Vapor Adsorption.",
+    "date_seen": "2026-09-10",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:22228cb56737ccc2b54e011f06883da79391161a": {
+    "title": "Identification of Metal–Organic Frameworks for near Practical Energy Limit CO2 Capture from Wet Flue Gases: An Integrated Atomistic and Process Simulation Screening of Experimental MOFs",
+    "date_seen": "2026-09-10",
+    "tags": [
+      "constant-potential",
+      "surface",
+      "generative"
+    ]
+  },
+  "s2:22422cdfb68f424ebafc8ba200e249ec965c046e": {
+    "title": "Synthesis of Multivariate Indolo[3,2-b]carbazole-Based Zr-MOFs via In Situ Synthetic Modification for Propane Recovery from Simulated Natural Gas.",
+    "date_seen": "2026-09-10",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:250eb559e5036ae5247b1b8ad90318dfe2f941f6": {
+    "title": "Ultrafast CO2 Capture from Dilute Streams in Quasi-Equipotential Pores of Metal–Organic Frameworks",
+    "date_seen": "2026-09-10",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:251ac713e5051ca1703bdac97d9cda02b5cfe243": {
+    "title": "Grow p‐type MoS2 on FeNC for CO2 Sensing in Complex Environments with Intelligent Recognition",
+    "date_seen": "2026-09-10",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:2523c1dbc013298d1b7fe52ec741ace0055defd7": {
+    "title": "Molecular and Continuum Scale Modeling of CO2 Adsorption in Caprock of Geological Storage",
+    "date_seen": "2026-09-10",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:27d8fb2ea8c969c56330d9516f3c59b22bb01189": {
+    "title": "Density-Potential Functional Theoretic (DPFT) Schemes of Modeling Reactive Solid–Liquid Interfaces",
+    "date_seen": "2026-09-10",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "dft"
+    ]
   }
 }
