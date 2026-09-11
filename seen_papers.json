@@ -6654,5 +6654,79 @@
       "surface",
       "dft"
     ]
+  },
+  "s2:185777102c0ba78a146f13619d5eef9d62c26284": {
+    "title": "A Modular Classical\nDensity-Functional Framework for\nGas Adsorption in Nanoporous Materials: From First-Principles Binding\nEnergies to Kinetic Molecular Sieving",
+    "date_seen": "2026-09-11",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:82e50bd9f1b0212cf16c7910683967314312840d": {
+    "title": "Machine Learning and Molecular Simulations Reveal Mechanisms of ZIFs Polymorph Selection.",
+    "date_seen": "2026-09-11",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:8988939d78b5b59dd4825bdfff7ec12d6dfb3d42": {
+    "title": "Data-driven neural surrogates for ReaxFF molecular dynamics simulations in engine-relevant combustion chemistry",
+    "date_seen": "2026-09-11",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:ae4708225cbc18e831ee00bae75a145cc2c17769": {
+    "title": "Electrochemistry at 3D-Printed Electrodes: Revealing How Nanoscale Features Contribute to Macroscopic Properties",
+    "date_seen": "2026-09-11",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:004bf67d4489be2db1e59522e881167895b8fe51": {
+    "title": "Impulsive Exponential Synchronization of Fractional-Order Multi-Delayed Neural Networks via a Hybrid Control Strategy",
+    "date_seen": "2026-09-11",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00545537969eb054e8c1211327f499b37a22f2b0": {
+    "title": "Graph-theoretic approach to mobility-aware frequency assignment via deep Q-learning",
+    "date_seen": "2026-09-11",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:005b128b1c74db706800a1581f33ea02fc5550b7": {
+    "title": "Spiking Vision Transformer with Saccadic Attention",
+    "date_seen": "2026-09-11",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:005cb2ae685af53cd8d98bb5fd6c3a0a4acd7d42": {
+    "title": "ON THE DYNAMICS OF MAGNETIC-FIELD COUPLED HETEROGENEOUS OSCILLATORS: A CASE STUDY WITH CHUAOSCILLATOR AND LC TANK CIRCUIT",
+    "date_seen": "2026-09-11",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:005fb3845ffad70bfa6719e1bb18fe175e262e15": {
+    "title": "A comprehensive review on encoder–decoder architectures in ECG signal compression and denoising: opportunities, challenges, and prospects",
+    "date_seen": "2026-09-11",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:0063da7f8e445621790af3123aea4b73fa45a6db": {
+    "title": "IGNN: An Attentional Graph-Based Approach for Vision Transformer-Empowered Plant Disease Detection",
+    "date_seen": "2026-09-11",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
