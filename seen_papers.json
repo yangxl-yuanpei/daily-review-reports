@@ -6728,5 +6728,86 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:161a4d45bc645c6354a9b5f9b131c101a1e34de1": {
+    "title": "Artificial Intelligence in Quantitative Trading: Application Pipeline, Prospects, and Risk Governance",
+    "date_seen": "2026-09-12",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:21ec14d73a7afdee4fe63a12c55680076dc21297": {
+    "title": "Quantum computing in drug discovery",
+    "date_seen": "2026-09-12",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:3ffcb74a17fd09180053bb4d9ca1a133110a78b2": {
+    "title": "Developing Explicit\nBase Stacking Potentials for the\nIsRNA2+ Coarse-Grained RNA Force Field Using Iterative Reweighting",
+    "date_seen": "2026-09-12",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:40144e4a5d923832e9a99c12e1af8cb68a53aad8": {
+    "title": "Application of a Machine Learning-Based Topology Optimization Method on an Automotive B-Pillar for Crashworthy Lightweight Design",
+    "date_seen": "2026-09-12",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:48fd381d2616ec2c5f0ab4e59283c756675f4aec": {
+    "title": "Tracking down the structural and enthalpic changes in molecular materials upon melting.",
+    "date_seen": "2026-09-12",
+    "tags": [
+      "electrochemistry",
+      "dft"
+    ]
+  },
+  "s2:0342205b97b91216dea70c29920af8deca558455": {
+    "title": "Development of interpretable machine learning models for predicting the probability of sepsis in patients with pulmonary fibrosis in the intensive care unit: based on MIMIC-IV and multi-database validation",
+    "date_seen": "2026-09-12",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:356bcc66904c1d9733191c809222caa63f003a4a": {
+    "title": "n\n -Butane\nCapture Accompanied\nby a Colorimetric Response in a Flexible Thiazolothiazole Metal–Organic\nFramework",
+    "date_seen": "2026-09-12",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:3c0d165fed4c49580748a9a1d0b9ed79a141625b": {
+    "title": "A convergence-guided molecular modeling framework for CO2/N2/CH4 competitive adsorption in coal during hot flue gas enhanced methane recovery",
+    "date_seen": "2026-09-12",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:526b21d42f8c294423b2b81948dfc72dfa7f2e11": {
+    "title": "In Situ\n Gas-Cell Electron Microscopy\nReveals Pressure-Selected Restructuring Pathways in AuRu Ammonia Catalysts",
+    "date_seen": "2026-09-12",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "constant-potential",
+      "dft"
+    ]
+  },
+  "s2:aaf0ca581bfc15bee3474bbef0a46c01f04070da": {
+    "title": "Molecular Simulation\nand Multistate Analysis for Efficient\nProperty Estimation in Polymeric Systems: A Case Study on PIM-1",
+    "date_seen": "2026-09-12",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
   }
 }
