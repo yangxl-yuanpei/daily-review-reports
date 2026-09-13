@@ -6809,5 +6809,75 @@
       "constant-potential",
       "surface"
     ]
+  },
+  "s2:0064ca0fcd18824f4e4df510c91c5cb48b35a1b5": {
+    "title": "Comparative study of multivariate hybrid neural networks for global sea level prediction through 2050",
+    "date_seen": "2026-09-13",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00677420036b3bc58ca6354e933bcd0d4a742aa4": {
+    "title": "One Spiking Neuron Classification Based on Kolmogorov Complexity",
+    "date_seen": "2026-09-13",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0067adfda918f53d3f3a1e4e9b25cebe82daa4e0": {
+    "title": "Efficient and accurate modeling of double-gate MOSFETs: a computationally feasible approach for potential, subthreshold, and drain current characteristics",
+    "date_seen": "2026-09-13",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:006822df530dfa1e2bacac4ee1243c9e8496d4bc": {
+    "title": "ACP-CLB: An Anticancer Peptide Prediction Model Based on Multichannel Discriminative Processing and Integration of Large Pretrained Protein Language Models",
+    "date_seen": "2026-09-13",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:006abcb195af2c5a81d83117c6448a4833a89b8d": {
+    "title": "An Integrated Molecular Modeling with MPNN, MD Simulations, MM/PBSA, ADMET, and SHAP Analyses to Identify GyrB/PqsR Inhibitors Against Pseudomonas aeruginosa",
+    "date_seen": "2026-09-13",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:006d0a0c1221ac8aea94e0930b8520a6d16d2b2a": {
+    "title": "Enhancing Fracture Detection in Different Bones Using Deep Learning and YOLO Frameworks",
+    "date_seen": "2026-09-13",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0071934a582363751361a7a2020423433e14b53b": {
+    "title": "27‐2: Invited Paper: Floating gate synaptic transistors based on graphene oxide charge storage sites",
+    "date_seen": "2026-09-13",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00728114883b1677c013d02f18be83768709ef6d": {
+    "title": "A Hybrid Deep Learning Approach for Chronic Kidney Disease Detection Using Convolutional Neural Networks and Support Vector Machines",
+    "date_seen": "2026-09-13",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00750c21a34bf6dd6eb98184a73d24df5fe49c07": {
+    "title": "First measurement of neutron capture multiplicity in neutrino-oxygen neutral-current quasi-elastic-like interactions using an accelerator neutrino beam",
+    "date_seen": "2026-09-13",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0076f668f2fe48fbe7f6816eebc7e41936482796": {
+    "title": "Nonlinear inference capacity of fiber-optical extreme learning machines",
+    "date_seen": "2026-09-13",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
