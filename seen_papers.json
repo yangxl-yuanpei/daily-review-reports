@@ -6879,5 +6879,80 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:8873d6c109c61f3fe08b8a131ffabc7f92541c38": {
+    "title": "Bridging the accuracy-speed divide in reactive molecular dynamics with QuantaMind MD.",
+    "date_seen": "2026-09-14",
+    "tags": [
+      "MLFF",
+      "catalysis",
+      "dft"
+    ]
+  },
+  "s2:007b08a8850a72f858991cf8802be794ad4153d0": {
+    "title": "Genotype-Phenotype Integration through Machine Learning and Personalized Gene Regulatory Networks for Cancer Metastasis Prediction",
+    "date_seen": "2026-09-14",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:007bf187c27320ab9e81ff90edc3534d38a0d708": {
+    "title": "Understanding the Impact of Seasonal Weather Dynamics on Rice Disease Occurrence Using Neural Networks: A Case Study of Panicle Blast and Grain Rot.",
+    "date_seen": "2026-09-14",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00829386e66cfea04ec89d61479335e54a449b17": {
+    "title": "Real-Time Fall Detection With Hybrid CNN-LSTM Using IWR6843AOP FMCW Radar",
+    "date_seen": "2026-09-14",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:008441a06675cb6dc032126fbc5592347e614bbc": {
+    "title": "Harnessing Machine Learning for Wear Prediction in Sustainable Fibre-Reinforced Hybrid Composites",
+    "date_seen": "2026-09-14",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:0086c36516439cccd27bdf911cf1a0875fe47c00": {
+    "title": "Machine Learning Prediction of Pharmacogenetic Test Uptake Among Opioid-Prescribed Patients Using Electronic Health Records: A Retrospective Cohort Study",
+    "date_seen": "2026-09-14",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0086c60898301890f2979440ed634b14aae63777": {
+    "title": "A Survey on the Applications of Artificial Intelligence in Cryptanalysis and Cryptographic Design",
+    "date_seen": "2026-09-14",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:00893cdb0ae54f1183b9c94a1609d7ee12460efa": {
+    "title": "Research on Deep Learning Network Sample Generation Method Based on Abnormal Examples",
+    "date_seen": "2026-09-14",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:008b4e9286ffd915377e2dbea576ce604db8f644": {
+    "title": "RCPTU evaluation and artificial neural network prediction of diesel contamination in silty clay: a study of resistivity response",
+    "date_seen": "2026-09-14",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:008c905b157c482b9bb37decd5f3bc0ab6fa9cfa": {
+    "title": "Beyond ReLU: Chebyshev-DQN for Enhanced Deep Q-Networks",
+    "date_seen": "2026-09-14",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
