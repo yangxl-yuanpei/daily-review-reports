@@ -7029,5 +7029,82 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:34b8f5bf862f416a2421f304c9ed89ff40d366c5": {
+    "title": "A Graph-Based Machine Learning Framework to Assign Empirical Interaction Parameters for Novel Molecules.",
+    "date_seen": "2026-09-16",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:000e6126db2480fc03068f2f2a41dc24796d1559": {
+    "title": "Mechanistic\nDiversity of Mg(I)-Mediated 2–6-CO\nCoupling Revealed through Computational Reaction Path Exploration",
+    "date_seen": "2026-09-16",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:05833c282ad9f74d82835ca238d1b6dc3dca5ae8": {
+    "title": "Interfacial\nTension of Confined Hydrocarbons in Nitrogen-Functionalized\nNanopores: Coupled Effects of Surface Chemistry and Confinement",
+    "date_seen": "2026-09-16",
+    "tags": [
+      "constant-potential",
+      "surface",
+      "dft",
+      "generative"
+    ]
+  },
+  "s2:009d43fa8ed07fee40b09acad231758da199cdbe": {
+    "title": "Sparse Communication Mechanism for Federated Learning in IoT Systems",
+    "date_seen": "2026-09-16",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00a3390788448ee415a2cbdb13d196958ed20200": {
+    "title": "ANALYSIS OF ARTIFICIAL INTELLIGENCE MODELS FOR PREDICTING VICAT TEMPERATURE OF VARIOUS COMPOUNDS BASED ON BIOHDPE COMPARING DIFFERENT MACHINE LEARNING TECHNIQUES",
+    "date_seen": "2026-09-16",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00b20d52d5747fb4ce273154f979d158c9605239": {
+    "title": "Single-qudit quantum neural networks for multiclass classification",
+    "date_seen": "2026-09-16",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00b59c6f2293bfebfb68e4cee3503438f1f214fa": {
+    "title": "Thermal Sensor-Based Analysis for Animal Detection and Classification Utilizing Machine Learning",
+    "date_seen": "2026-09-16",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00b71f9fb6616d32b7b44d6c5e9043cd0c066ddf": {
+    "title": "Globally accurate neural network potential energy surface and state-to-state quantum dynamics calculations on Ne(2S) + H2+/D2+ → NeH+/NeD+ + H/D reactions.",
+    "date_seen": "2026-09-16",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:00bd1389f26d9af43b3b73dc959e28d802d488fc": {
+    "title": "A Comprehensive Survey on Deep Learning Techniques for Embryo Quality Assessment in IVF",
+    "date_seen": "2026-09-16",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:00c45f4f6ec1618d0a9ed133995ef51c28025d42": {
+    "title": "Automatic Detection of Psoriasis Using Advanced Image Processing and Deep Learning",
+    "date_seen": "2026-09-16",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
