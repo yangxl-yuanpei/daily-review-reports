@@ -7106,5 +7106,81 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:722d731902c5309e87b9a40c978b6514a6d56573": {
+    "title": "Symbolic Ensemble Learning Enables Discovery of Fast Accurate Physics-Based Interatomic Potentials",
+    "date_seen": "2026-09-17",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:10a78edbd599158ed39ac5fe1eec726b1852c95d": {
+    "title": "Enhanced electrochemical and optical properties of polyaniline-based Ag2O/NiO/ reduced carbon black nanocomposites for renewable energy applications",
+    "date_seen": "2026-09-17",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface"
+    ]
+  },
+  "s2:25a593152131217ac6c781d57213bc9b5e473980": {
+    "title": "Molecular origins of pH gradients in charge-regulated biomolecular condensates.",
+    "date_seen": "2026-09-17",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:00c60dbe2f14eda7a48152534cb2c87b92a535d9": {
+    "title": "Assessing the Effectiveness of Neural Networks and Molecular Dynamics Simulations in Predicting Viscosity of Small Organic Molecules.",
+    "date_seen": "2026-09-17",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00c74b641f3e05c6fb4634add8184628eaa7bd38": {
+    "title": "TwinTac: A Wide-Range, Highly Sensitive Tactile Sensor with Real-To-Sim Digital Twin Sensor Model",
+    "date_seen": "2026-09-17",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00c83948fd289bcf18f6c43338379fe37254fd05": {
+    "title": "Leveraging AI Chatbots to Foster Engaged Community Waste Management: A Case Study of Takhian Tia Community",
+    "date_seen": "2026-09-17",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00c86e3c60bcfb3bf1dce12a69b3c256f05c01db": {
+    "title": "CNN-Based Plant Leaf Disease Identification and Classification for Sustainable Agriculture",
+    "date_seen": "2026-09-17",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00dce962ba2c78e430f40d2e873cfda3d250a282": {
+    "title": "Geospatial Representation Learning: A Survey from Deep Learning to The LLM Era",
+    "date_seen": "2026-09-17",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00dd4c9bace3784205848fb1de97f28aaa1e8de4": {
+    "title": "A State of Charge Estimation Method of Lithium-Ion Batteries Using Ultrasonic Multifeature Stacking Models",
+    "date_seen": "2026-09-17",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:00e1f02e8fd104fc6c706052c1d5237fe3906085": {
+    "title": "Towards Culturally Adaptive Mental Healthcare: A Design and Engineering Approach to Speech-Based Psychosis Detection using Deep Learning",
+    "date_seen": "2026-09-17",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
