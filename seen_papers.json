@@ -7255,5 +7255,79 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:0209491638cf4cdf47d36598ed2f2242e7cd2391": {
+    "title": "An Automated Framework for Brain Tumor Detection Using HIPI and Hadoop Distributed File System",
+    "date_seen": "2026-09-19",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:9ca087d3f0913b437e92cdc368d39b2ddfa95d70": {
+    "title": "Modulation of the Pore Environment of Zr-MOFs by Alkoxy Engineering for Efficient Natural Gas Purification.",
+    "date_seen": "2026-09-19",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:00f591e92ee0c2567f782f5a05dcceaee7453262": {
+    "title": "A Robust Deep Vision Transformer Model For Early Diagnosis Of Alzheimers Disease",
+    "date_seen": "2026-09-19",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00f612ad33224f088ca268332c421a4928e341bc": {
+    "title": "Smart Breast Cancer Detection: Enhancing Early Breast Cancer Diagnosis-Transitioning from Convolutional Neural Network to Involutional Neural Network and Using Smart Wearable Devices",
+    "date_seen": "2026-09-19",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00f65e87560840ff6c796531745150c83230b36b": {
+    "title": "Understanding Non-Verbal Vocalizations from Minimally-Verbal Autistic Individuals: A Transfer Learning Approach",
+    "date_seen": "2026-09-19",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00f6882bd99278d2fc678a7e7f7aa5d0d19ecdd7": {
+    "title": "Deep learning-based 3D image reconstruction and damage mapping using neural radiance fields (Nerfacto)",
+    "date_seen": "2026-09-19",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00f708941d3736f65288484013512671d4859b87": {
+    "title": "Better Reliability Compression: Model Pruning with Calibrated Uncertainty Estimation for Mobile Deep Learning Applications",
+    "date_seen": "2026-09-19",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00fb93a9502db3d930fe3bbe5efa9b94b43c9e0f": {
+    "title": "Advanced Sentiment Analysis of M-Paspor Application Using Integrated Machine Learning and Deep Learning Approaches",
+    "date_seen": "2026-09-19",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00fbdcbe6fe21ce71cb1dd11f502843b1b32abcb": {
+    "title": "Enacting a Hybrid Ensemble Framework to Predict and Prevent Diabetes: Combining ANN, ETC, Random Forest, and Stack-CNN",
+    "date_seen": "2026-09-19",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:010120d24b4ea3a291873c45a43990db816d6dac": {
+    "title": "Development of a Novel Machine Learning Model to Automate Vertebral Column Segmentation Utilizing Biplanar Full-body Imaging.",
+    "date_seen": "2026-09-19",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
   }
 }
