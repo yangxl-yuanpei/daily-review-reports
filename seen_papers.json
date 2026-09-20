@@ -7329,5 +7329,88 @@
       "electrochemistry",
       "generative"
     ]
+  },
+  "s2:0de11931b7995fceb0a8fe2067dd14866c569c89": {
+    "title": "Revisiting nuclear quantum effects on the mechanism of electrochemical reduction of CO at Cu(111) surface.",
+    "date_seen": "2026-09-20",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "NQE",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:16c42e2a858bd8f9ff555410c4ad9cf4327eac74": {
+    "title": "Selective laser melting of LM25 aluminium alloy reinforced with boron carbide and graphite for machine learning based wear prediction and microstructural characterization",
+    "date_seen": "2026-09-20",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:5520c19a9d943e99b9a16e4e99cba9f569c0ec2c": {
+    "title": "Deep potential modeling of oxygen adsorption and surface reconstruction on silica.",
+    "date_seen": "2026-09-20",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "catalysis",
+      "surface"
+    ]
+  },
+  "s2:7c8faae20eb39b4cf2e5ff11bf8de8a0e5cb1a6b": {
+    "title": "An Evaluation of Developments in Image Processing Through Artificial Intelligence Methods: Review",
+    "date_seen": "2026-09-20",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:7e30d999bb503564c360f09fc09a29344428b2f6": {
+    "title": "Probing the full cooperative structure of actinide chloride molten salts with Raman spectroscopy",
+    "date_seen": "2026-09-20",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:af4ac917f5f96ef9c8e1c2b84bd79e980b4e7e35": {
+    "title": "Analysis of melatonin simulated metabolism based on electrochemistry coupled online with high performance liquid chromatography-mass spectrometry.",
+    "date_seen": "2026-09-20",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:c47ac62ae5ee74bc0a7b69c74ab22c21a5237d38": {
+    "title": "Electrochemical Characterization of Actinides in Molten Salt Media at the European Commission’s Joint Research Centre",
+    "date_seen": "2026-09-20",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:c56b10a0c32439ecedb315409ee6ed24c250d016": {
+    "title": "(Industrial Electrochemistry and Electrochemical Engineering Division H.H. Dow Memorial Student Achievement Award) From Atoms to Agriculture: Engineering Electrocatalytic Reactive Separations for Wastewater Nitrate Refining",
+    "date_seen": "2026-09-20",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface",
+      "generative"
+    ]
+  },
+  "s2:c9a637ffd489dfe52047dfe1ee0d7917369f40e3": {
+    "title": "From theory to simulation: Open interactive MATHCAD simulation protocols for exploring common electrode mechanisms in cyclic voltammetry",
+    "date_seen": "2026-09-20",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:cb621ae0418fea6e6f3bc34187923252e8a6bfd5": {
+    "title": "Enhancing Efficiency of Electrochemical Carbon Capture Using Pulsed Chronopotentiometry with Hydrophilic Graphite Electrode",
+    "date_seen": "2026-09-20",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
   }
 }
