@@ -7412,5 +7412,91 @@
       "electrochemistry",
       "surface"
     ]
+  },
+  "s2:0b6e01da9bf4fb78097f65faaccec723f21ea8f4": {
+    "title": "Rational Coformer Screening of Multicomponent Crystals of Abiraterone Acetate Using Machine Learning (ML) and Multicomponent Hydrogen Bond Propensity (MCHBP): A Comprehensive Structural and Computational Investigation",
+    "date_seen": "2026-09-21",
+    "tags": [
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:1a34fbcff65870e2a1aa1fa19f65516d821435c7": {
+    "title": "A machine-learning-driven dataset of 144,111 polycyclic aromatic hydrocarbon infrared spectra for interpreting aromatic infrared bands",
+    "date_seen": "2026-09-21",
+    "tags": [
+      "dft"
+    ]
+  },
+  "s2:27eb3c0939e20b5a987738475767716cf27d51b2": {
+    "title": "The Bose-Hubbard polaron from weak to strong coupling",
+    "date_seen": "2026-09-21",
+    "tags": [
+      "electrochemistry",
+      "constant-potential"
+    ]
+  },
+  "s2:2a5a25c614a1043e802a6676edc37fa01d99d498": {
+    "title": "Nucleation Landscape of Biomolecular Condensates in the Grand Canonical Ensemble via Monte Carlo Simulations",
+    "date_seen": "2026-09-21",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:2a6b47b2e13fd899acb107893a5ea315e19aa0ed": {
+    "title": "Simulation of gas adsorption on single-walled carbon nanotubes",
+    "date_seen": "2026-09-21",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:2a72c2f210d7bc2b513d5049ce8b9a4b5f325b2c": {
+    "title": "Investigation of metal-organic frameworks and fluorocarbon refrigerants promising for adsorption cooling systems.",
+    "date_seen": "2026-09-21",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:2ae16de2dc9364a56f7e41a6de7c9db10df065c4": {
+    "title": "Computational Design of 3D Porous Aluminum Nitride Assembled From AlN‐Biphenylene Nanoribbons for Reversible Hydrogen Storage",
+    "date_seen": "2026-09-21",
+    "tags": [
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:2c9a2f6f80915170d2b8ef614be79483644eccf0": {
+    "title": "Virtual Database Construction and Machine-Learning-Assisted High-Throughput Evaluation of Amorphous Porous Carbon Materials as Iodine Sorbents.",
+    "date_seen": "2026-09-21",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:2cbf68cfd42848a528c9de5ce83ddd9eb940dc8b": {
+    "title": "Theoretical study on the selective adsorption of SF6/N2 by covalent triazine frameworks.",
+    "date_seen": "2026-09-21",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:32441837586b5a99bbb20b3f326f197e539788ce": {
+    "title": "Physics-Informed Machine Learning for Fast Screening High Hydrogen Storage MOFs with Monotonicity Constraints.",
+    "date_seen": "2026-09-21",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
   }
 }
