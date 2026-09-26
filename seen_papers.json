@@ -7790,5 +7790,84 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:0cc5b48936b37821fedf03d4b11b41b5ac766c2e": {
+    "title": "PVmatAgent: A Large Language Model (LLM) Agent for Perovskite Photovoltaic Material Design and Analysis",
+    "date_seen": "2026-09-26",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:61702e62767d39e7d165e686e03e67f868a8114c": {
+    "title": "Hamiltonian learning reveals optoelectronic mechanisms across thermodynamic state space in soft semiconductors",
+    "date_seen": "2026-09-26",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:670ce8078230525fd5c354bde5084708b549b85c": {
+    "title": "Hydrogen‐Dominated Iron Phase Stability and the Structure of the Earth's Inner Core",
+    "date_seen": "2026-09-26",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:771d2ed4e2f49d456b2972055e8d3ad6a65b09f8": {
+    "title": "A Comparative Study of Multiwalled WS2 Nanotubes Using Universal Machine Learning Interatomic Potentials and an Atomistic Force Field.",
+    "date_seen": "2026-09-26",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:01e95c9fe689ada4d843a60046e4a0ce344e9938": {
+    "title": "A CNN Based Bird Species Classification from Their Unique Acoustic Signature",
+    "date_seen": "2026-09-26",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:ea834e20caf82fb64795d3da16666780c83e0ba8": {
+    "title": "A unified model for voltage-dependent capacitance in supercapacitors for physics teaching",
+    "date_seen": "2026-09-26",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:1d0c3b371334c6c1cf6ad7fb0d968ae472176a0e": {
+    "title": "Electronic Confinement Induced Single Atom Functionality in Hydroxylamine Synthesis Unveiled by Constant Potential Simulation.",
+    "date_seen": "2026-09-26",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:6a40392e5d5cd3b102c65e7e1a5e984983b59db6": {
+    "title": "Investigation of\nSurface Carburization on Fe5C2(111) Based on\nthe GRL Framework",
+    "date_seen": "2026-09-26",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:9c79c0f4eae6287d74cb94a69af39b8f6a17d063": {
+    "title": "Modified Ewald\nSummation Method for Slab Geometries:\nApplication to Donnan Potentials, Confinement Electrostatics, and\nTitration Simulations",
+    "date_seen": "2026-09-26",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:a6fe89dca96d8649edfe3f187d807b572922c054": {
+    "title": "The quadratic density response function for non-interacting fermions at arbitrary temperature",
+    "date_seen": "2026-09-26",
+    "tags": [
+      "electrochemistry",
+      "constant-potential"
+    ]
   }
 }
