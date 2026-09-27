@@ -7869,5 +7869,78 @@
       "electrochemistry",
       "constant-potential"
     ]
+  },
+  "s2:69220095cfeb93a3bea9828936183a6df388f802": {
+    "title": "Basics Aspects to Identify Different Structures by Using Vibrational Spectroscopy Combined with the SQMFF Approach and Machine Learning",
+    "date_seen": "2026-09-27",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:014ddd0f9d19082f06cc844a05d502227ab51413": {
+    "title": "A Neuro-Fuzzy Hybrid Control Framework for Optical Comb Frequency Locking",
+    "date_seen": "2026-09-27",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:01693a6806708407213a9c87ec85f873ece2afa7": {
+    "title": "Towards Intelligent Home Monitoring: A CNN Framework for Environmental Sound Event Detection",
+    "date_seen": "2026-09-27",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:0169b6b72e7eef80d577363bb81345e852089832": {
+    "title": "Comparison of Projection and Reconstruction Techniques in Sinograms for Breast Lesion Classification",
+    "date_seen": "2026-09-27",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:016a7b25589d76bf4d1fecc4bcaaba8596499bc9": {
+    "title": "Integrating Actor–Critic Reinforcement Learning With Evolutionary Algorithm for Multimodal Multiobjective Optimization",
+    "date_seen": "2026-09-27",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:016b4061f225ead55ccb98ec8bb15b544ab13a7f": {
+    "title": "Automatic English Essay Grading using Convolutional Neural Networks and Semantic Similarity Scoring",
+    "date_seen": "2026-09-27",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:016bd3bd67531440e95fc2f6f8e08b39315cb3bf": {
+    "title": "Deep Learning-Based Bone Age Growth Disease Detection (BAGDD) Using RSNA Radiographs",
+    "date_seen": "2026-09-27",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:016d1303edf71991827f4e02714e545ed9d14b83": {
+    "title": "Enhancing LoRaWAN Sensor Networks: A Deep Learning Approach for Performance Optimizing and Energy Efficiency",
+    "date_seen": "2026-09-27",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:016d80af4574d88e6b962a9ce1760042019067b9": {
+    "title": "S-KEY: Self-supervised Learning of Major and Minor Keys from Audio",
+    "date_seen": "2026-09-27",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:016e812e1a74ed70c6bfeb67bf04d4cdad23f67d": {
+    "title": "Analysis of convolutional neural networks and vision transformers in direct imaging for high-contrast exoplanet detection",
+    "date_seen": "2026-09-27",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
