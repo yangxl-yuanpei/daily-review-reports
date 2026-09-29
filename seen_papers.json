@@ -8015,5 +8015,90 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:042e665460832c832428134c63829a43acfa0fd6": {
+    "title": "<i>P‐T‐H</i>\n                    <sub>2</sub>\n                    <i>O</i>\n                    Dependence on Structure and Transport Properties in Supercritical SiO\n                    <sub>2</sub>\n                    ‐H\n                    <sub>2</sub>\n                    O Fluids",
+    "date_seen": "2026-09-29",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:1647986285d4e3918813e716ab3b3f1d69e3e154": {
+    "title": "Learning Hierarchical Causal Representations of the Effects of Forcings on Temperature in Climate Models",
+    "date_seen": "2026-09-29",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:30c4fd23b21ed334f4e04b9f97c637f8bdf163cf": {
+    "title": "Zn2\n +\n Coordination and Ligand-Exchange\nDynamics in a ZnCl2-Based Deep Eutectic Electrolyte\nfrom Machine-Learning Molecular Dynamics",
+    "date_seen": "2026-09-29",
+    "tags": [
+      "electrochemistry",
+      "dft"
+    ]
+  },
+  "s2:7a4c2ef74d75422cc0fa281804ad90818e5b96a0": {
+    "title": "Site-Selective Initial Hydration of Boron at Multicomponent Borosilicate Glass–Water Interfaces Revealed Using Machine Learning Molecular Dynamics",
+    "date_seen": "2026-09-29",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:1309dc3779f3b3b53374ae450b911cfec630ce9f": {
+    "title": "Collision-programmed Selectivity in CO2 Electrochemical Reduction via Co-engineering Electron Transfer Duty Cycle and Proton Transport.",
+    "date_seen": "2026-09-29",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:157f7cdb30b0eb526d7b45ad4d76d229a0f9ba2a": {
+    "title": "Electrochemistry of U(IV/III) in LiCl–KCl Molten Salt With Free‐Standing Boron‐Doped Diamond",
+    "date_seen": "2026-09-29",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:848ee1560764cef2bde123da735551672f11b89e": {
+    "title": "How Do Alkali Cations Affect Alkaline HER Activity of Nickel and Platinum?",
+    "date_seen": "2026-09-29",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "dft"
+    ]
+  },
+  "s2:a8a76cf2a35420905f5578276e07d6d6637bc76d": {
+    "title": "First-principles calculations of the thermodynamic factor of multicomponent alloys",
+    "date_seen": "2026-09-29",
+    "tags": [
+      "electrochemistry",
+      "constant-potential"
+    ]
+  },
+  "s2:bdffecbfc1915ccccef7a815a346d1f1d1ba93a7": {
+    "title": "Modeling of CO2/CH4 Mixture\nAdsorption in Flexible Mg-MOF-74 via Machine-Learned Potentials",
+    "date_seen": "2026-09-29",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:0191edb62351d344405067fdb8650efd7b313986": {
+    "title": "Comparative Analysis of Deep Neural Networks for Automated Ulcerative Colitis Severity Assessment",
+    "date_seen": "2026-09-29",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
