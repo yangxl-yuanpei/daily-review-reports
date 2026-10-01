@@ -8174,5 +8174,76 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:7c29643003be9b82b6f0a2161cb1516556dc4ab5": {
+    "title": "A Physics-Informed Surrogate Model for Flows Around Near-Seabed Pipeline Based on Separable PINNs",
+    "date_seen": "2026-10-01",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:021fad29902c608d9e05d35218047a1998e14863": {
+    "title": "Fourier-enhanced separable physics-informed neural networks for plasma kinetic simulations",
+    "date_seen": "2026-10-01",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:02deeed83d673e4544db143981e6f33ef65d7c14": {
+    "title": "Enforcing Energy Conservation in ML-Based Approximations of Nonlinear Four-Wave Interactions",
+    "date_seen": "2026-10-01",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:01ab442de980725a09f6c36667655a26c228784b": {
+    "title": "Research on the Prediction of Tourism Short Video Dissemination Trends based on SOM Neural Network",
+    "date_seen": "2026-10-01",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:01ad735438d332aba109f142df36f97ac31e2f39": {
+    "title": "A graph neural network approach for hierarchical mapping of breast cancer protein communities",
+    "date_seen": "2026-10-01",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:01af9cd6599f489254856aaf12023117b5f62f2d": {
+    "title": "Large-Scale Geomagnetic Navigation for High-Speed Aircraft Based on the Gradient Extraction Neural Network",
+    "date_seen": "2026-10-01",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:01b36d4e98015cf7377c9e8ed7c12c180b3a7ca0": {
+    "title": "Heterogeneous CPU-GPU-Quantum Accelerator",
+    "date_seen": "2026-10-01",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:01bc2ae6d484a07c9eb934144b38798962ad0a73": {
+    "title": "Inverse Physics-informed neural networks procedure for detecting noise in open quantum systems",
+    "date_seen": "2026-10-01",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:01bebb9d5a051e3cb867d78e07737e6e578979c9": {
+    "title": "HemaX - A CNN-Based Approach for Anemia Detection from Conjunctiva Pallor Images",
+    "date_seen": "2026-10-01",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:01cd1967928f6a86a02d8fabbf73c0ed284d8f7f": {
+    "title": "Rapid Fluorescence Lifetime Imaging through One-Dimensional Deep Learning Optimization.",
+    "date_seen": "2026-10-01",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
