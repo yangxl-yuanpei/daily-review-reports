@@ -8245,5 +8245,83 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:4db90a1c1259cac8986ad85b685d99fb281e7d0b": {
+    "title": "Thermal Stability, Negative Thermal Expansion, and Pore Accessibility of HKUST‐1 From M3GNet Machine Learning Molecular Dynamics",
+    "date_seen": "2026-10-02",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:00c0fc3783f86a3c8978d49e889fb5aba88b8d67": {
+    "title": "Machine Learning-based Spatial Mapping of Urban-Rural Air Quality: A Case Study of Mymensingh district in Bangladesh",
+    "date_seen": "2026-10-02",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:e71c9342942cf1569d63b2e5f343eeddffb65242": {
+    "title": "Multi-Level Structural Descriptors for Deep Learning–Based Prediction of Hydrogen Storage in Metal–Organic Frameworks",
+    "date_seen": "2026-10-02",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:01d09fd1faee7f32a74d0f3dc029ae3f49f183f4": {
+    "title": "Few Edges are Enough: Few-Shot Network Attack Detection with Graph Neural Networks",
+    "date_seen": "2026-10-02",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:01d4229fbf8d5f75387ae3c8903f9030e30a7f8d": {
+    "title": "A potential technique for SAR ocean surface current speed retrieval based on machine learning",
+    "date_seen": "2026-10-02",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:01d5317e5a59c58784d5b0702d9e3c906a0c5d79": {
+    "title": "Abstract LB189: Prospective AI/ML-driven computational approaches for predicting T cell-mediated immunity and beyond",
+    "date_seen": "2026-10-02",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:01d66c622f420298e7d7d5b7acce2c49e87bb40e": {
+    "title": "An Intelligent Decision-Support Framework Using Mobile and Virtual Reality Technologies for Optimising Intangible Cultural Heritage Management",
+    "date_seen": "2026-10-02",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:01d771cd3d0ea939649c84476625679f35bcec7b": {
+    "title": "Self-optimizing machine learning potential assisted automated workflow for highly efficient complex systems material design",
+    "date_seen": "2026-10-02",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface",
+      "generative"
+    ]
+  },
+  "s2:01d7950a4efb6a77245bd1d3ae827bf6296cc858": {
+    "title": "Simulations of dielectric permittivity of water by machine learned potentials with long-range Coulombic interactions.",
+    "date_seen": "2026-10-02",
+    "tags": [
+      "electrochemistry",
+      "dft"
+    ]
+  },
+  "s2:01d81adafd2f1038abfce849c6a3d890053197d7": {
+    "title": "QSMnet-INR: Single-Orientation Quantitative Susceptibility Mapping via Implicit Neural Representation in k-Space",
+    "date_seen": "2026-10-02",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
