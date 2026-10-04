@@ -8398,5 +8398,83 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:0ffc29da9de0e4dc215bba6f8deb3c432cf4f97a": {
+    "title": "Efficient and Transferable\nMachine Learning Potentials\nfor Zn-Coordinated Zeolitic Imidazolate Frameworks Through Structural\nDiversity Sampling and Transfer Learning",
+    "date_seen": "2026-10-04",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "dft",
+      "generative"
+    ]
+  },
+  "s2:2a9461cd330b174d938af777b7937a0941a5df05": {
+    "title": "Artificial Intelligence, Fintech, and Green Investment: Examining the Role of AI-Driven Climate-Risk Assessment in Sustainable Financial Decision-Making",
+    "date_seen": "2026-10-04",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:70afa2af5257a5f020006e91d22af463c1e90d1a": {
+    "title": "Field-Applicable Ground Reaction Force Estimation Through Deep Learning: Enhancing Biomechanical and Ergonomic Assessments",
+    "date_seen": "2026-10-04",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:01f5c59d68245d31b333e706e378129b15404caf": {
+    "title": "ChemGraph: An Agentic Framework for Computational Chemistry Workflows",
+    "date_seen": "2026-10-04",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface",
+      "dft",
+      "generative"
+    ]
+  },
+  "s2:01f88494a7da7e6cc424a2450ddf2c7d320368c8": {
+    "title": "UTILIZATION OF ROVER AI AGENTS FOR PALM OIL PLANTATION AUTOMATION",
+    "date_seen": "2026-10-04",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:01fed31bcf7812f4d236098a0020dd26b395ec79": {
+    "title": "Performance Evaluation of Various Deep Learning Models for Sign Language Recognition",
+    "date_seen": "2026-10-04",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0200595362fe66eaf592fe712d096a073751d2a6": {
+    "title": "Hybrid Intelligence as a Tool for Managing Sustainable Innovations in Industrial and Energy Systems",
+    "date_seen": "2026-10-04",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0205a4f797f904e01daf2d2f0c653899b4acaf67": {
+    "title": "Harnessing Deep Learning for Scalp and Hair Disease Classification: A Comparative Study of Convolutional Neural Networks Architectures",
+    "date_seen": "2026-10-04",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:0205a5fd23906bbb64d20ed1412b78733b999787": {
+    "title": "Enhancing Real-Time Violence Detection in Video Surveillance Using Hybrid Deep Learning Model",
+    "date_seen": "2026-10-04",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:02078773c867cc9fc2c71a2332ae40aebcc0d71f": {
+    "title": "Deep Stroke Detect: Optimizing Stroke Risk Prediction Using SMOTEENN and Transfer Learning",
+    "date_seen": "2026-10-04",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
