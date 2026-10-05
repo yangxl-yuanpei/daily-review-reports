@@ -8476,5 +8476,78 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:5fd1adc466bad967cfdd9b7133cd92475282dee9": {
+    "title": "Atom-scale contributions to nanofriction response in transition metal dichalcogenides",
+    "date_seen": "2026-10-05",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:9ac8a0dcd4b5a6fce690885130793fabb858a0a2": {
+    "title": "High-Throughput\nComputational Study of CH3I/H2O Adsorption and\nSeparation in MTV-MOFs with Machine-Learning\nAnalysis",
+    "date_seen": "2026-10-05",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:b175503c611851ead1af8cf64020c71591a24e89": {
+    "title": "Competitive\nAdsorption and Diffusion Behavior of H2 and CH4 in Anthracite: Insights from Experiment\nand Molecular Simulation",
+    "date_seen": "2026-10-05",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:0208366ed88f60c5cd586bcb487ce6a8dd8c836b": {
+    "title": "Comparative Analysis of Brain Tumor Segmentation Methods Using the BraTS Dataset (2020–2025)",
+    "date_seen": "2026-10-05",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:020a376dd64a570f32803f47719a1f2c7f2691c7": {
+    "title": "Algorithmic Transparency for Accessible Robotics",
+    "date_seen": "2026-10-05",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:020c4e3309666be4a5f9d298d0baf0bcfd891e37": {
+    "title": "Deep Transfer Learning for Hematologic Image Analysis: An Evaluation of Six CNN Architectures for B-Cell Disease Detection",
+    "date_seen": "2026-10-05",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:020c7ab76d7b65b88a6f24cc38311cd01441855c": {
+    "title": "Lung Functions and Self-Reported Physical Activity Level for the Classification of Physical Frailty in Older Adults Using a Machine Learning Approach",
+    "date_seen": "2026-10-05",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:020df64a5d1b856304c02dac64a74d22fcdf31a0": {
+    "title": "A Novel Fragmentation-based Approach for Accurate Segmentation of Small-sized Brain Tumors in MRI Images",
+    "date_seen": "2026-10-05",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:021148fd0bba1348659cb182dc007068977e840a": {
+    "title": "Artificial Intelligence Revolution in Pharmaceutical Sciences: Advancements, Clinical Impacts, and Applications.",
+    "date_seen": "2026-10-05",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0215c2de704e675c9b292f377caa782a45261399": {
+    "title": "Early Diagnosis of Lung Cancer Through VOC Detection Using an Affine Deep Learning E-Nose System",
+    "date_seen": "2026-10-05",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
