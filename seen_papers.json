@@ -8626,5 +8626,75 @@
       "electrochemistry",
       "generative"
     ]
+  },
+  "s2:0231d8345902c6c8b25568aa93349c9885bf435f": {
+    "title": "Performance and Efficiency of Climate In Situ Data Reconstruction: Why Optimized IDW Outperforms Kriging and Implicit Neural Representation",
+    "date_seen": "2026-10-07",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0231e5ff4731724c5d0baa33114517182f33a970": {
+    "title": "Exploring the Translation Lookaside Buffer (TLB) for Low-Level Task Differentiation and Classification",
+    "date_seen": "2026-10-07",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0233311b34221ea86ff3d7f39d05bc2bd3fa0d96": {
+    "title": "Anatomical Plane Classification for Fetal Head Ultrasound - Addressing Class Imbalance with Deep Learning",
+    "date_seen": "2026-10-07",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:02370e297b85eae8efa638db6c407c97af6e790e": {
+    "title": "A hybrid self attentive linearized phrase structured transformer based RNN for financial sentence analysis with sentence level explainability",
+    "date_seen": "2026-10-07",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:023767b70f9c1f119656abf72310b2a653f3399b": {
+    "title": "PLI and CNN-BiLSTM: An Enhanced Data Augmentation and Deep Learning Approach for Defect Recognition in Spiral Welded Pipe Based on Ultrasonic Guided Waves",
+    "date_seen": "2026-10-07",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:02378d6fc294dcc870bf748b4f16c126a8d69f03": {
+    "title": "Ga2O3 Optoelectronic Array with Solar-Blind Ultraviolet Perception for Neuron Spatiotemporal Integration and Forgetting-Enabled Neuromorphic Computing.",
+    "date_seen": "2026-10-07",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:02382fb36718a338c10a79cff55757dafb601fd4": {
+    "title": "Combining Supervised and Semi-Supervised Models to Enhance Personalized Education",
+    "date_seen": "2026-10-07",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0239e3c9f19b6f8ce8def8bfc85adc7eccdae02e": {
+    "title": "Review on Machine Learning Models for Efficient Queen Bee Identification in Beehives",
+    "date_seen": "2026-10-07",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:023b40b70d384adec7d64c232b8727bc2818a00f": {
+    "title": "Enhanced Deep Learning Framework for Corn Leaf Disease Classification Using ResNet and GoogleNet",
+    "date_seen": "2026-10-07",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0240c8f4ddecfa183e52b762fc300593db9c4e9c": {
+    "title": "Application of deep learning in behavior recognition and early warning system for campus safety management",
+    "date_seen": "2026-10-07",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
