@@ -8696,5 +8696,85 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:5c75d533c2ea4e083cd2bdac2144ce6bdd2f9ab3": {
+    "title": "Learning consistent molecular mechanics force fields from first principles",
+    "date_seen": "2026-10-08",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:024492f9d02b2beb5da008340ce494cb55d175be": {
+    "title": "Machine Learning and Deep Learning Techniques for Fault Location in Transmission Lines",
+    "date_seen": "2026-10-08",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:6b16736d0f0e181309bc33a81b0d6fef4b40d472": {
+    "title": "Interpretable machine learning reveals geometry-dominated design rules for atmospheric CO2 capture in metal-organic frameworks.",
+    "date_seen": "2026-10-08",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:aa3de321e8dcfe240f4968bfdb7ca81a92b44906": {
+    "title": "Hydrogen-bond-directed regulation of the stacking pattern in MOF adsorbents for efficient reversed C3H8/C3H6 separation.",
+    "date_seen": "2026-10-08",
+    "tags": [
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:cf2ece903b48511b544d06f97c3da553434ebdd0": {
+    "title": "Hybrid sampling approach to machine-learning potentials for gas adsorption: Hydrogen adsorption in MOF-303",
+    "date_seen": "2026-10-08",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:f33d728fb2bd8485acfe31afd7abfc6767c6f150": {
+    "title": "Particle-Number-Preserving Quantum Signal Processing for Thermal Properties: Canonical-Ensemble Estimation and Grand-Canonical Reconstruction",
+    "date_seen": "2026-10-08",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:02415fcd85a18655d9190b467f6cc3ed782c3eb1": {
+    "title": "SCLN: Stacked Channel Learning Network for Imaging Mass Cytometry (IMC) cell segmentation",
+    "date_seen": "2026-10-08",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:024841b91df085e428ed23ac1b35cfc669dc11be": {
+    "title": "Enhancing Diagnostic Precision for Lung and Colon Cancers Using an Advanced Xception Deep Learning Model on Histopathological Imagery",
+    "date_seen": "2026-10-08",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:024a4a04761d150c5b2b0b76759a830e27d166d9": {
+    "title": "SpikeDet: Better Firing Patterns for Accurate and Energy-Efficient Object Detection with Spiking Neural Networks",
+    "date_seen": "2026-10-08",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:024b71c5ee661319cbf72a8de75f025f48e02c09": {
+    "title": "High-Accuracy Potato Leaf Disease Classification Using Transfer Learning with ResNet50",
+    "date_seen": "2026-10-08",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
