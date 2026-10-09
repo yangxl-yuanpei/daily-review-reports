@@ -8776,5 +8776,82 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:2fa13fd10c020be4a92e403fe74a5c9ccc5931c6": {
+    "title": "Milling ITwin: An Intelligent Digital Twin of Milling Dynamics for Process Monitoring and Chatter Suppression",
+    "date_seen": "2026-10-09",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:02a3ec998f8d84cd932aa8c0fad799db4646ebb3": {
+    "title": "Temporal-Aware Graph Attention Network with XGBoost Ensemble for Blockchain Transaction Fraud Detection",
+    "date_seen": "2026-10-09",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:51c4074346c671f3d0b21c7928af9af11f05f0c3": {
+    "title": "SurFF: a foundation model for surface exposure and morphology across intermetallic crystals",
+    "date_seen": "2026-10-09",
+    "tags": [
+      "catalysis",
+      "surface",
+      "dft",
+      "active-learning"
+    ]
+  },
+  "s2:00f82cefde08857425e91661b4bc9a82c914ca8d": {
+    "title": "Artificial Neural Network–Based Validation, DFT, Thermal and Biological Evaluation of 4-Aminoantipyrine-Derived Ru(III) Complexes",
+    "date_seen": "2026-10-09",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "dft"
+    ]
+  },
+  "s2:0250d9bb7ce3fb1b9994296663bb6f68ac571800": {
+    "title": "AmesFormer: State-of-the-Art Mutagenicity Prediction with Graph Transformers.",
+    "date_seen": "2026-10-09",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0252ce7c27edf858b6800dd1b050d4c09812c43a": {
+    "title": "Research on ink color matching method based on CNN-Transformer model",
+    "date_seen": "2026-10-09",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:0253399121b61469439f97b67020c7f2d6953a12": {
+    "title": "Development of a visual analogy model using transfer learning techniques",
+    "date_seen": "2026-10-09",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:025512fdc7084f1bd02c87e14ef945fb43db211a": {
+    "title": "Pumpkin Leaf Disease Classification: A Comparative Study of SimCLR and Traditional Supervised Learning Approaches",
+    "date_seen": "2026-10-09",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:025e75c299c65f01b21d70db58f36ce919e7a914": {
+    "title": "Event-based SerDes telemetry network for distributed brain computer interfaces",
+    "date_seen": "2026-10-09",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:026024583ba8c4eef93d14157e4d213870c217e4": {
+    "title": "ECG Signal Classification Using Continuous Wavelet Transform and Deep Neural Network",
+    "date_seen": "2026-10-09",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
