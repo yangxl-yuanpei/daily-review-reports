@@ -8853,5 +8853,78 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:2eb3212a1b5af5d5681e1e60e08cd6e5f22f12d7": {
+    "title": "Confined Mg2+-Directed Interfacial Evolution of Primary Structural Units of Mg-MOF-74 on Platelet Clinoptilolite for CO2/CH4, CH4/N2, and CO2/N2 Separations",
+    "date_seen": "2026-10-10",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:026300b6d6de27eca1529d55224a78459d210bbb": {
+    "title": "Energy-Harvesting Reinforcement Learning-based Offloading Decision Algorithm for Mobile Edge Computing Networks (EHRL)",
+    "date_seen": "2026-10-10",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:026664374ad169a838b14c49e23f9805c200ee1e": {
+    "title": "Interpretable Machine Learning Model for Early Mortality Prediction in Septic Patients Using Routine Post-Diagnosis Clinical Data: A Multicenter Study",
+    "date_seen": "2026-10-10",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:026b9693db43e5f09d46ce2feb28bc4c99281fb9": {
+    "title": "OFPoint: Real-Time Keypoint Detection for Optical Flow Tracking in Visual Odometry",
+    "date_seen": "2026-10-10",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:026f8f7f05c2254caef5b624a7999472bcb8873a": {
+    "title": "Voice-enabled human-robot interaction: adaptive self-learning systems for enhanced collaboration",
+    "date_seen": "2026-10-10",
+    "tags": [
+      "electrochemistry",
+      "active-learning"
+    ]
+  },
+  "s2:02708e427c89aa4777cfa1c0924fe440c4b39359": {
+    "title": "Determining an approach to iris recognition depending on shooting conditions",
+    "date_seen": "2026-10-10",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:027233acc0d070dc280177f8698c39fb13c47f34": {
+    "title": "Network-based drug repurposing for psychiatric disorders using single-cell genomics",
+    "date_seen": "2026-10-10",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:027b04ae95f6afc298c793c69ee90404e8497e9d": {
+    "title": "New Deep Learning Approaches for Binary Skin Cancer Classification",
+    "date_seen": "2026-10-10",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0286a955fa57d85daca466ce896c027736478410": {
+    "title": "Comparing machine learning methods on Raman spectra from eight different spectrometers.",
+    "date_seen": "2026-10-10",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:02946362bbebfa36ae4c4ac35ddd1b2dc6d27c5f": {
+    "title": "A Comparative Analysis of Chest X-ray Examination with AI Enhancement Using XAI Techniques",
+    "date_seen": "2026-10-10",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
