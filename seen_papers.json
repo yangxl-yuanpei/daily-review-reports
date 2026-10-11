@@ -8926,5 +8926,80 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:6028d2853fb18725eb0393861fe1ef74e5c442a7": {
+    "title": "Specialized machine learning force fields for materials dynamics",
+    "date_seen": "2026-10-11",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:63b71bd4f6422266f019c1ea33ca67b1e35483e1": {
+    "title": "Benchmarking machine learning and molecular dynamics methods for the prediction of the thermophysical properties of organic liquids",
+    "date_seen": "2026-10-11",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:020e98df5ebb55ef8015e86bfbfe9c28810ce603": {
+    "title": "Guided Training of Spiking Neural Networks via an Auxiliary Artificial Neural Network",
+    "date_seen": "2026-10-11",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:dcdefb8f33d35bb3afcf32b624176ee0748917a5": {
+    "title": "Varying Mechanisms Dominate Formate Formation in Electrochemical CO2 Reduction on Cu, Au, and Pb: A Constant Potential DFT-Based Microkinetic Analysis",
+    "date_seen": "2026-10-11",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "constant-potential",
+      "dft"
+    ]
+  },
+  "s2:02aaf30bdb60f453b336439cbe12f2338ea7dcd0": {
+    "title": "Machine Learning in Medical Diagnosis: From Image Analysis to EHRs",
+    "date_seen": "2026-10-11",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:02ae93708713a3b915fe84a3c8f532c357fbad9a": {
+    "title": "Energy Efficient Exact and Approximate Systolic Array Architecture for Matrix Multiplication",
+    "date_seen": "2026-10-11",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:02af8908ac8b871814995a7b6a34459c6ddffabc": {
+    "title": "Intelligent diagnostic model for pulmonary disease based on auto-metric graph neural network with chest CT images",
+    "date_seen": "2026-10-11",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:02b33126a263790e72df3855521ddba6406858d5": {
+    "title": "Artificial Intelligence for EMS Triage: A Data-Driven Approach to Emergency Patient Prioritization in Kalasin Province, Thailand",
+    "date_seen": "2026-10-11",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:02b3eb8df36d327fe6e91966e8ca85eb73eaaa19": {
+    "title": "Deep Learning-Based Multi-Class Classification of Lung Diseases on Chest X-ray A Comparative Study",
+    "date_seen": "2026-10-11",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:02b3f10f8d6b4a2188f5449bae098d5b909c067a": {
+    "title": "Spiking Neural Networks for Mental Workload Classification with a Multimodal Approach",
+    "date_seen": "2026-10-11",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
