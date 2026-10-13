@@ -9071,5 +9071,80 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:4f46c599f4930b09b92f2b4ee6803c43fdb33767": {
+    "title": "Accuracy of Vibrational Properties of Machine-Learning Force Fields for Molecular Crystal Transformations",
+    "date_seen": "2026-10-13",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:02cc1f253d0b9573aedd13e0174a2f4c728fd851": {
+    "title": "Deep Learning Meets Early Diagnosis: A Hybrid CNN-DNN Framework for Lung Cancer Prediction and Clinical Translation",
+    "date_seen": "2026-10-13",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:02ce949891533a904338ba0e5e33e09367d020c0": {
+    "title": "Automated lung cancer diagnosis from chest X-ray images using convolutional neural networks",
+    "date_seen": "2026-10-13",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:02cf078906203eb3970f045e2aa2091209cb8998": {
+    "title": "AI-Driven Prediction of IVF Success: A Hybrid Machine Learning Approach for Personalized Fertility Treatment",
+    "date_seen": "2026-10-13",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:02cf10a5557d0720e5e8135a4b8f263564e035ce": {
+    "title": "RTSSNN: Efficient Image Classification for Latency-Critical and Energy-Constrained SNNs Through a Time-Step Reduction Technique",
+    "date_seen": "2026-10-13",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:02d412948251d985924b5ec345dfdb9dc9d9b700": {
+    "title": "MonkeyPix: A Vision Transformer Solution for Efficient Monkeypox Detection in Low-resource Settings",
+    "date_seen": "2026-10-13",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:02d45db7c7668815b01e76d7b4f2062fa6754f8d": {
+    "title": "ANALYSIS OF REAL RELATIVE ASYMMETRY IN URBAN TRANSPORTATION NETWORK PROBLEMS USING SPACE SYNTAX, REDS, AND MACHINE LEARNING CONCEPTS",
+    "date_seen": "2026-10-13",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:02d5c743cc2618dc9101a788cc489e6c2c05d8bc": {
+    "title": "Mobile phone-based plasmodium parasites stage detection from Giemsa stained blood smear by convolutional neural networks",
+    "date_seen": "2026-10-13",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:02d980146d98b3b62220a89f62bde000e5ab6053": {
+    "title": "Diffusion Graph Neural Networks and Dataset for Robust Olfactory Navigation in Hazard Robotics",
+    "date_seen": "2026-10-13",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:02dbdc972007f38d6a1fdd397c51eaf4a2ef025c": {
+    "title": "An Automatic Modulation Recognition Preprocessing Method for Multiple Symbol Rate Signals",
+    "date_seen": "2026-10-13",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
