@@ -9216,5 +9216,92 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:6d63142e475042591feb53f85186c3cd23268b89": {
+    "title": "Multiscale\nOrigins of Low Temperature Induced Gas\nAdsorption Promotion and Desorption Inhibition in Coking Coal: Insights\nfrom Pore Structure and Molecular Dynamics",
+    "date_seen": "2026-10-15",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:8f18efa543996bc0bdb5f06cd803a3d0f28f80ed": {
+    "title": "Solubility of poorly soluble species in bulk and nanopores from grand-canonical Wang-Landau sampling",
+    "date_seen": "2026-10-15",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:e5b56667bd0b36dd882d858e59c8f4c4bb6d26f3": {
+    "title": "Electrochemical Acetone/Isopropanol Hydrogenation Cycle for Hydrogen Storage: Investigation of Mass Transfer Limitations via Catalyst Layer Design",
+    "date_seen": "2026-10-15",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface"
+    ]
+  },
+  "s2:f76f68c44be12440f9e1978ae34aa7409f9ccd4d": {
+    "title": "Electrode Flexibility Enhances Electrolyte Dynamics during Supercapacitor Charging.",
+    "date_seen": "2026-10-15",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:f9b03fcd32ce30d4003639e9ea2d46a1baa7d324": {
+    "title": "Controlling plasma produced fluxes to liquid surfaces by acoustic structuring: applications to plasma driven solution electrochemistry",
+    "date_seen": "2026-10-15",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "generative"
+    ]
+  },
+  "s2:335ad91438f1d04c8f7d10e92dddfdb111d7c635": {
+    "title": "Intelligent screening of porous materials: A review of active-learning approaches in MOF research",
+    "date_seen": "2026-10-15",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "catalysis",
+      "constant-potential",
+      "surface",
+      "dft",
+      "active-learning",
+      "generative"
+    ]
+  },
+  "s2:33942dc5245283a04ca9a1e33f5344fbed63084b": {
+    "title": "Multivariate Metal Organic Frameworks for High-Efficiency H2S/CO2/CH4 Adsorption and Separation: A Combined Molecular Simulation and Machine Learning Study.",
+    "date_seen": "2026-10-15",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:3455055f50d19e6c146b12f6c66ae41fe6d1202c": {
+    "title": "Liquid Phase Modeling in Porous Media: Adsorption of Methanol and Ethanol in H-MFI in Condensed Water.",
+    "date_seen": "2026-10-15",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:3627d27396c9765a51b06ac2dad52a7b71f7528f": {
+    "title": "Simulating charging characteristics of lithium iron phosphate by electro-ionic optimization on a quantum annealer",
+    "date_seen": "2026-10-15",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:3775546cf364e2cdf1d29da04ee2bf4310771a10": {
+    "title": "Neural ordinary differential equations (ODEs) for smooth, high-accuracy isotherm reconstruction, interpolation, and extrapolation",
+    "date_seen": "2026-10-15",
+    "tags": [
+      "constant-potential",
+      "surface",
+      "generative"
+    ]
   }
 }
