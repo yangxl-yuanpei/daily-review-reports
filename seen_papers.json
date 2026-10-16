@@ -9303,5 +9303,77 @@
       "surface",
       "generative"
     ]
+  },
+  "s2:178304f60d9b6ec89ed6c9a4edf26a92fccbe44a": {
+    "title": "A foundational deep learning force field for simulating IR and Raman spectra via molecular dynamics",
+    "date_seen": "2026-10-16",
+    "tags": [
+      "MLFF",
+      "NQE"
+    ]
+  },
+  "s2:26d5c520c1e3dd204765f7e9934081b11614fe49": {
+    "title": "Transition-Metal Chalcogenide Nanowires: A First-Principles Study of Stability, Electronic Structure, and Mechanical Response",
+    "date_seen": "2026-10-16",
+    "tags": [
+      "dft"
+    ]
+  },
+  "s2:5581066fc1a4cb4792cdf17a25f5f790c2982040": {
+    "title": "Trust-Limited Machine-Learning-Accelerated Nudged Elastic Band Calculations for Small-Polaron Hopping in Rutile TiO2",
+    "date_seen": "2026-10-16",
+    "tags": [
+      "dft",
+      "generative"
+    ]
+  },
+  "s2:6dd2aa6aa44af32d46397e507938602550eac1b0": {
+    "title": "Modelling the dynamics of the martensitic transformation in Ni$_2$MnGa with machine-learning force-fields",
+    "date_seen": "2026-10-16",
+    "tags": [
+      "dft"
+    ]
+  },
+  "s2:02ff201bd2b7673b6bb1f7cf9a2fc3bd88acdd3e": {
+    "title": "Smart Wireless Sensor Networks with Virtual Sensors for Forest Fire Evolution Prediction Using Machine Learning",
+    "date_seen": "2026-10-16",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:030182eecd1957e6bdfaa16501e622e06897ce1d": {
+    "title": "Artificial Intelligence in Cerebrovascular Imaging: A Targeted Review of Aneurysm Detection and Rupture Risk Prediction",
+    "date_seen": "2026-10-16",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:030670cf7878c2b7aacc5b1fad9e6c60c49b2090": {
+    "title": "An Efficient Hybrid Feature Selection and Classification Model for Anomaly Detection in Smart Healthcare Monitoring",
+    "date_seen": "2026-10-16",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:03082ba192f6e08ace959940aa44b0ff8be0b197": {
+    "title": "Image Caption Generator Using LSTM",
+    "date_seen": "2026-10-16",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:030a10297b6755ca534813e1168cb80cd139aa9a": {
+    "title": "A Novel & Hybrid Algorithm for Real Time Depression Detection via EEG Analysis",
+    "date_seen": "2026-10-16",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:030a72e786e208b2502f891decf6d50847a773df": {
+    "title": "DIGITAL IMAGE QUALITY OPTIMIZATION USING DEEP NEURAL NETWORK",
+    "date_seen": "2026-10-16",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
