@@ -9375,5 +9375,86 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:055c49806657df55d390d614701aeca54a91bf3d": {
+    "title": "Multiscale Digital-Twin Modeling of Energy-Storage Materials by Integrating First-Principles Calculations and Machine-Learning Interatomic Potentials",
+    "date_seen": "2026-10-17",
+    "tags": [
+      "electrochemistry",
+      "active-learning"
+    ]
+  },
+  "s2:19573be57faaa71bb0ba7c778c4dd8f820974441": {
+    "title": "Artificial Intelligence in Protein Engineering: From Therapeutic Design to Precision Medicine",
+    "date_seen": "2026-10-17",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:25311421225ccbc2704d551f24f4ca15dc14aef9": {
+    "title": "Rollout-Aware Graph Neural Network-Based Simulator for Hydraulic Fracture",
+    "date_seen": "2026-10-17",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:65cc721170ee7588b3b69372d39650ff772994f3": {
+    "title": "Prediction of solvent aggregation in CO2-loaded aqueous amines using machine learning molecular dynamics simulations.",
+    "date_seen": "2026-10-17",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:c6ac65bb15bb65422b8851bfa529fe1fc5ed840b": {
+    "title": "From Solution to a Silver Surface: Combining Raman Spectroscopy, Potential-Dependent SERS, Finite Silver-Cluster DFT, and Electromagnetic FDTD Modeling of Methylene Blue",
+    "date_seen": "2026-10-17",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:5f996b0d86f37f7df0e141905870a13e2d618998": {
+    "title": "Rough-Surface-Dominated Knudsen Gas Flow in Heterogeneous\nNanochannels",
+    "date_seen": "2026-10-17",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "generative"
+    ]
+  },
+  "s2:38e826b656e1a3343d1c78cb2a0f6195d2a6a78a": {
+    "title": "Decoding BCL6 Inhibitors: Computational Insights into the Impact of Water Networks on Potency",
+    "date_seen": "2026-10-17",
+    "tags": [
+      "constant-potential"
+    ]
+  },
+  "s2:3add4df13d29cc235978e6be42f36464bde93463": {
+    "title": "Hydration-Driven Interfacial Behaviors of Nanoconfined Sodium Montmorillonite.",
+    "date_seen": "2026-10-17",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:3c2f1c1aef77ed1a016f1f161485a0d6181f00bd": {
+    "title": "Quantitative Assessment of Free and Adsorbed Shale Oil in Kerogen Pores Using Molecular Dynamics Simulations and Experiment Characterization",
+    "date_seen": "2026-10-17",
+    "tags": [
+      "constant-potential",
+      "surface",
+      "generative"
+    ]
+  },
+  "s2:3dbd55b284a171197119122e146e44bae8d75653": {
+    "title": "Revealing the Mechanism of Pore Surface Structure in Adsorption of Trace Formaldehyde by Constructing Monolithic Carbon with Multiple Uniform Micropores and Surface Species.",
+    "date_seen": "2026-10-17",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
   }
 }
