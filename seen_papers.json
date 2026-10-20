@@ -9599,5 +9599,86 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:0d4b3019f2afd4e8502bbdd15888f05f3130dc84": {
+    "title": "Formation of Twisted Copper Phosphide on Cu(111) Surface Predicted by Machine Learning Simulations",
+    "date_seen": "2026-10-20",
+    "tags": [
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:4e31920f58c5bc33f6c105f076f0437e305a3f20": {
+    "title": "Synthesis and Exchange\nReactions of Methane Isotopologues\nfor Impurity Removal and Recovery of Tritium",
+    "date_seen": "2026-10-20",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:642aebe0e5efa56501bf61b202c81f2419f9462b": {
+    "title": "Advanced Variance Reduction Methods for Monte Carlo Particle Transport: A Comprehensive Review",
+    "date_seen": "2026-10-20",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:717282463bc0762b4a9e8de133d70b8697b00104": {
+    "title": "Active Learning for Interatomic Potentials: A Review of Uncertainty-Driven Data Efficiency",
+    "date_seen": "2026-10-20",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "active-learning",
+      "generative"
+    ]
+  },
+  "s2:a0f75a28158a20400791a67cda30fd918b90637a": {
+    "title": "Accelerating Particle-Mesh Algorithms with FPGAs and OmpSs@OpenCL",
+    "date_seen": "2026-10-20",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:e152da02a08b56d31f18d8a7f2e26b8010c398ab": {
+    "title": "Automated and Efficient Sampling of Chemical Reaction Space",
+    "date_seen": "2026-10-20",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface",
+      "generative"
+    ]
+  },
+  "s2:b7599d9ce39a0ddb553db02be05df89c765809b2": {
+    "title": "Inference of Onsager coefficient from microscopic simulations by machine learning.",
+    "date_seen": "2026-10-20",
+    "tags": [
+      "surface",
+      "dft",
+      "generative"
+    ]
+  },
+  "s2:fe429c774e26730f6462be6633d4361a525bcede": {
+    "title": "Gaussian Process Approach to Constructing Transferable Force Fields for Thiolate-Protected Gold Nanoclusters",
+    "date_seen": "2026-10-20",
+    "tags": [
+      "MLFF",
+      "dft",
+      "active-learning"
+    ]
+  },
+  "s2:d31e2ab6de5da52266654c869ce23ca6e3436468": {
+    "title": "Atomistic Origin of Microsecond Carrier Lifetimes at Perovskite Grain Boundaries: Machine Learning-Assisted Nonadiabatic Molecular Dynamics",
+    "date_seen": "2026-10-20",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:af50a6d56eaa4adff76533635b171ca507a21dae": {
+    "title": "BARNN: A Bayesian Autoregressive and Recurrent Neural Network",
+    "date_seen": "2026-10-20",
+    "tags": [
+      "MLFF"
+    ]
   }
 }
