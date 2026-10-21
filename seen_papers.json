@@ -9680,5 +9680,87 @@
     "tags": [
       "MLFF"
     ]
+  },
+  "s2:00c64c48e180e04d5bc2c0b6839ebb0d148cf87c": {
+    "title": "AI-INTEGRATED PHARMACY INFORMATICS SYSTEMS: PRESENT IMPACT AND FUTURE POTENTIAL",
+    "date_seen": "2026-10-21",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0201874d1b9499f0d5e3ef51ef58fc0f9353f18f": {
+    "title": "Artificial Neural Networks for RF Passive-Device Modeling and Design: A Review",
+    "date_seen": "2026-10-21",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:13186100d503f5d03655deb2154d7fb0b107a624": {
+    "title": "From Surface Reactions to Inhibitor Coverage: A Machine-Learning-Assisted Computational Study of Area-Selective Atomic Layer Deposition",
+    "date_seen": "2026-10-21",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "generative"
+    ]
+  },
+  "s2:cb19fe6535f021c4e83c41311fa89fa42ba1189c": {
+    "title": "Influence\nof a Nanoparticle-Enhanced Gemini VES Fracturing\nFluid on Methane Adsorption Characteristics of Coal",
+    "date_seen": "2026-10-21",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:034777dec95df8893efcc34e253692b3370bc605": {
+    "title": "Hybrid MambaVision and Transformer-Based Architecture for 3D Lane Detection",
+    "date_seen": "2026-10-21",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:034875f53fd90d906fc6931a2e72d7661b30d407": {
+    "title": "Automated early detection of androgenetic alopecia using deep learning on trichoscopic images from a Korean cohort: a retrospective model development and validation study",
+    "date_seen": "2026-10-21",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:03488ef9bac836e4c1dc223c0f6ee0a549d2fa9b": {
+    "title": "Bald Eagle Search Optimized Deep CNN-Based Routing Scheme for WSN Using IoT-Based Blockchain Technology",
+    "date_seen": "2026-10-21",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:3e468997858f8e5f356e228bfa0a02627e5bb9cf": {
+    "title": "Learned free-energy functionals from pair-correlation matching for dynamical density functional theory.",
+    "date_seen": "2026-10-21",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "dft",
+      "generative"
+    ]
+  },
+  "s2:463b386c79ed6f796bf5b7fb0153522354c03496": {
+    "title": "Computational modeling of PROTAC ternary complexes as ensembles using SILCS-xTAC",
+    "date_seen": "2026-10-21",
+    "tags": [
+      "electrochemistry",
+      "constant-potential"
+    ]
+  },
+  "s2:47754e14e376a1447c7808b2a38efc6311b09f2d": {
+    "title": "Size-dependent phase change in energy storage materials: Comparing the impact of solid-state wetting and of coherency stress.",
+    "date_seen": "2026-10-21",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
   }
 }
