@@ -9762,5 +9762,90 @@
       "constant-potential",
       "surface"
     ]
+  },
+  "s2:7f918cb5610c9de184cb965fd1a9c3871bf9798e": {
+    "title": "On the Role of the Interfacial Capacitance in Grand-Canonical Simulations of Electrocatalysis",
+    "date_seen": "2026-10-22",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface"
+    ]
+  },
+  "s2:4aab90823d1213be8fe56069be85e5f114cc9579": {
+    "title": "Stability of hydrogen-filled hexagonal ice under high pressure.",
+    "date_seen": "2026-10-22",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:4ca5a33a279f54679a8a7bab382078db6f0a5ea3": {
+    "title": "A Set of Tutorials for the LAMMPS Simulation Package [Article v1.0]",
+    "date_seen": "2026-10-22",
+    "tags": [
+      "constant-potential"
+    ]
+  },
+  "s2:4e4499983facdf7534b98668fc46b98346c9e1a0": {
+    "title": "Python Library for Monte Carlo Simulations with Ab Initio and Machine-Learned Interatomic Potentials.",
+    "date_seen": "2026-10-22",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "constant-potential",
+      "surface",
+      "generative"
+    ]
+  },
+  "s2:527f0b7c87b794d61aaef7a3b3906f0b5e594a96": {
+    "title": "Colloidal Monolayers with Short-Range Attractions and Dipolar Repulsions.",
+    "date_seen": "2026-10-22",
+    "tags": [
+      "constant-potential"
+    ]
+  },
+  "s2:55427945bf9750ec86317f4ca6a583433c7d1629": {
+    "title": "Reweighting Scheme for the Calculation of Grand‐Canonical Expectation Values in Quantum Monte Carlo Simulations With a Fermion Sign Problem",
+    "date_seen": "2026-10-22",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:56375c4f307d87f6d2557420946adfd0561c1d25": {
+    "title": "Electrode Potential Dependent Differential Capacitance in Electrocatalysis: a Novel, Ab Initio Computational Approach",
+    "date_seen": "2026-10-22",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:57cb57d6db78bb6ec666c37e031a7b31c73ffca6": {
+    "title": "Classical density functional theory for alkane adsorption in cationic Faujasites: comparison with grand canonical Monte Carlo simulations",
+    "date_seen": "2026-10-22",
+    "tags": [
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:5851f2fc5ef6afdd193b009ab2d114299a1f2af9": {
+    "title": "Electronic energy levels of aqueous hydroxyl species.",
+    "date_seen": "2026-10-22",
+    "tags": [
+      "electrochemistry",
+      "dft"
+    ]
+  },
+  "s2:597909d2d86d3fd1c520bf9906a65d3bd2bd5970": {
+    "title": "Comparison of simulation methods for studying CO₂ storage in mining waste",
+    "date_seen": "2026-10-22",
+    "tags": [
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
   }
 }
