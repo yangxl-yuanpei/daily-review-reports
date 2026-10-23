@@ -9847,5 +9847,87 @@
       "surface",
       "dft"
     ]
+  },
+  "s2:008fbc1d549b0c3c3a3797d2bab37fb784af2568": {
+    "title": "COMPUTER VISION FOR INTELLIGENT OBJECT DETECTION: MODELS, APPLICATIONS, AND CHALLENGES",
+    "date_seen": "2026-10-23",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:01d132a556ce4760ebddea2a099b6e1d3db7cf18": {
+    "title": "Colorization via Self-Organizing Neural Cellular Automata",
+    "date_seen": "2026-10-23",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:5a262272bcb87ca95e9bb708a4f08fe4cffc4c67": {
+    "title": "Computational analysis to identify key factors governing drug encapsulation of cyclodextrin-based metal-organic frameworks.",
+    "date_seen": "2026-10-23",
+    "tags": [
+      "electrochemistry",
+      "constant-potential"
+    ]
+  },
+  "s2:5b124b91f0acbc222daa9ed5c5ebbfca16250f9e": {
+    "title": "Highly effective microporous and mesoporous metal–organic frameworks for effective ivermectin adsorption in water treatment and delivery systems",
+    "date_seen": "2026-10-23",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:61a47e1570fad0d7cff5c9999dd03da50c5fd2d9": {
+    "title": "Depletion of superfluid density: Universal low-temperature thermodynamics of superfluids",
+    "date_seen": "2026-10-23",
+    "tags": [
+      "constant-potential"
+    ]
+  },
+  "s2:677f1846124a01eb0e1cc3d16be36b90189a81df": {
+    "title": "Assessing UFF and DFT-Tuned Force Fields for Predicting Experimental Isotherms of MOFs",
+    "date_seen": "2026-10-23",
+    "tags": [
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:6ee074bfdfad595b2323a899a84770a1ef5f837a": {
+    "title": "Machine Learning-Guided High-Throughput Screening of Metal-Organic Frameworks for Atmospheric Ozone Capture: A Computational Materials Informatics Approach",
+    "date_seen": "2026-10-23",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:71a6f222fb5bfe2d3571fdcad26c8d5d8defb5b7": {
+    "title": "Competitive Adsorption of Small Molecule Inhibitors and Trimethylaluminum Precursors on the Cu(111) Surface during Area-Selective Atomic Layer Deposition: A GCMC Study.",
+    "date_seen": "2026-10-23",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:76de782b005b93c7e9161843e2eba51e9a54de0d": {
+    "title": "Confinement-modulated diffusion of alkenes in NU-1000 framework material.",
+    "date_seen": "2026-10-23",
+    "tags": [
+      "catalysis",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:7ad951a903105d02259987d95d6c2d6a5d30c5f6": {
+    "title": "Grand‐Canonical DFT Study of Potential‐Induced Charge Redistribution at the Metal/Graphene/Electrolyte Interface",
+    "date_seen": "2026-10-23",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface",
+      "dft"
+    ]
   }
 }
