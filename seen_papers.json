@@ -9929,5 +9929,96 @@
       "surface",
       "dft"
     ]
+  },
+  "s2:7c5fedee424bcc3653b1480b4dae47d017086b63": {
+    "title": "(Invited)\n Density-Potential Functional Theoretic Models for Electrochemical Interfaces",
+    "date_seen": "2026-10-24",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:80995ff8fbe074d5bf0a1ae96f842ef783a24e63": {
+    "title": "Exclusion statistics for structured particles on topologically correlated states. I. Single species lattice gases.",
+    "date_seen": "2026-10-24",
+    "tags": [
+      "electrochemistry",
+      "constant-potential"
+    ]
+  },
+  "s2:82a615c6854a760c52c12d216f631f73e8b88b7f": {
+    "title": "Parametrized, Transferable Classical Density Functional Theory for Alkane/Alkene Separation in Cationic Zeolites.",
+    "date_seen": "2026-10-24",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:877f92aa5f77e144645d9da48aa11e91f8dee451": {
+    "title": "Structure-Property Relationships in MIL-101 MOFs: Influence of Organic Ligands on CO2 Adsorption.",
+    "date_seen": "2026-10-24",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:8bdb64ef0a5cd573a41c892c62b46eb048401d56": {
+    "title": "Prediction of siloxane adsorption in activated carbons by molecular simulation",
+    "date_seen": "2026-10-24",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:8c64d3187c3939a3a569fd3e8bbd9141b8777bc5": {
+    "title": "Upscaling from ab initio atomistic simulations to electrode scale: The case of manganese hexacyanoferrate, a cathode material for Na-ion batteries",
+    "date_seen": "2026-10-24",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:920a24e2cb0d7743f4611512c089dc976d6df71e": {
+    "title": "Study on the Effect of Coal Slit Pore Size on CH4 and CO2 Adsorption Characteristics Based on Grand Canonical Monte Carlo.",
+    "date_seen": "2026-10-24",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:96b4a940c773c03f6cdddf96bde8e22a5ed07913": {
+    "title": "(Invited)\n Elemental Processes in Nanoscale Electrocatalytic Interfaces for Photocatalytic and Photoelectrochemical Water Splitting",
+    "date_seen": "2026-10-24",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:96caba5fbcebecff63dfd331968049912f91e9df": {
+    "title": "Predicting Methane Adsorption in Metal-Substituted MOFs: A Comparative Study between Density Functional Theory and Machine Learning",
+    "date_seen": "2026-10-24",
+    "tags": [
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:97423b3a966aa26ab83d45963b6209f77484c0db": {
+    "title": "Interface engineering between two-dimensional materials and magnesium borohydride to synergistically optimize its hydrolysis kinetics and hydrogen storage capacity.",
+    "date_seen": "2026-10-24",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
   }
 }
