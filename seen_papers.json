@@ -10020,5 +10020,81 @@
       "surface",
       "dft"
     ]
+  },
+  "s2:60ac84fbccd8c038982c7c363eaae3dc13d20e88": {
+    "title": "Transition-Metal Chalcogenide Nanowires: A First-Principles Study of Stability, Electronic Structure, and Mechanical Response",
+    "date_seen": "2026-10-25",
+    "tags": [
+      "dft"
+    ]
+  },
+  "s2:bf3c6d039bc31650114b7eaf4443e71e115d2d57": {
+    "title": "Lewis-acid activation of persulfate enables oxidation of antibiotics: a new green low-cost advanced oxidation process",
+    "date_seen": "2026-10-25",
+    "tags": [
+      "electrochemistry",
+      "dft"
+    ]
+  },
+  "s2:f35c378c14358c78c0cce0dd8d1cddd1c5e927f4": {
+    "title": "Development of an in-situ mechanical property identification system for use in high radiation fields",
+    "date_seen": "2026-10-25",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:b0c11304fa645dfcf8b38b3e40b0afd3c0555551": {
+    "title": "Application of Wearable Insole Sensors in In-Place Running: Estimating Lower Limb Load Using Machine Learning",
+    "date_seen": "2026-10-25",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:bf461dbbdfaa43b80cdb01abf3c1e531847c722b": {
+    "title": "Deep neural network-based prediction and computational fluid dynamics analysis of convective heat transfer in dusty fluid flow over heated surface",
+    "date_seen": "2026-10-25",
+    "tags": [
+      "surface",
+      "generative"
+    ]
+  },
+  "s2:ad65d7b68d530095eecc88f9a6ddb1345269e9ff": {
+    "title": "Crash testing machine learning force fields for molecules, materials, and interfaces: molecular dynamics in the TEA challenge 2023",
+    "date_seen": "2026-10-25",
+    "tags": [
+      "MLFF",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:b20b859cf34987a328d5d3fa74a4400d8adf031c": {
+    "title": "Accelerating charge estimation in molecular dynamics simulations using physics-informed neural networks: corrosion applications",
+    "date_seen": "2026-10-25",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:ee46d2bbd9b557090791fc9be41e65db462d0eb4": {
+    "title": "ABFML: A problem-oriented package for rapidly creating, screening, and optimizing new machine learning force fields.",
+    "date_seen": "2026-10-25",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:ec995451221feb2ea2b83123ff636930da6a8797": {
+    "title": "NepoIP/MM: Toward Accurate Biomolecular Simulation with a Machine Learning/Molecular Mechanics Model Incorporating Polarization Effects.",
+    "date_seen": "2026-10-25",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:a47555607db3d6a340bb35f4153af241afb139c5": {
+    "title": "Machine-Learning Interatomic Potentials for Long-Range Systems",
+    "date_seen": "2026-10-25",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
