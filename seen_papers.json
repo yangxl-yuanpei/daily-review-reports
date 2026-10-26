@@ -10096,5 +10096,89 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:01b7fc42b3ac9bc5caa2bf520b8d8b1a7bcaeac1": {
+    "title": "Application of a Capacitive Sensor with a ZrO2 Thin Coating and Artificial Intelligence to Determine the Amount of Diesel in Water",
+    "date_seen": "2026-10-26",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:9b33bd2cf9ace72791cb06c70192e3da88200f6e": {
+    "title": "Gaussian-Based Periodic Grand Canonical Density Functional Theory with Implicit Solvation for Computational Electrochemistry.",
+    "date_seen": "2026-10-26",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:9da6f04ce5fd76e7335e5fb9391105e22f25af68": {
+    "title": "Droplets, Bubbles and Confined Water at the Nanoscale: Reaching the Thermodynamic Limit.",
+    "date_seen": "2026-10-26",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:9ebbe62fea6c8354578ad55ab2ea0100e46f3a10": {
+    "title": "Efficiency of carbon dioxide capture with metal substitutions in the MIL-88A metal–organic framework",
+    "date_seen": "2026-10-26",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:a240e8bbf1f6de50f893f0f22186d144010c5e30": {
+    "title": "Modeling ethanol/water adsorption in all-silica zeolites using the real adsorbed solution theory.",
+    "date_seen": "2026-10-26",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:a242180862a6374d238cd7b8a0d28c6af7f154bc": {
+    "title": "Density-dependent sodium-storage mechanisms in hard carbon materials",
+    "date_seen": "2026-10-26",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:a29e307f9522e6f55cc2c0469d34930603771f0b": {
+    "title": "Computational Screening and Design of Metal-Organic Frameworks for CO2 Separation from Flue Gas",
+    "date_seen": "2026-10-26",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:a31dd9aa97f54222e218197874c6233bc47df7e2": {
+    "title": "CH4 Purification by a Carborane-Based Metal-Organic Framework with Rare Tetranuclear Copper Nodes.",
+    "date_seen": "2026-10-26",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:a44cb6095639a118f524d0e6f33bd911e85f18a4": {
+    "title": "Development of SAFT-based heteronuclear fused coarse-grained models of short alkanes and their mixtures with carbon dioxide and nitrogen",
+    "date_seen": "2026-10-26",
+    "tags": [
+      "electrochemistry",
+      "constant-potential"
+    ]
+  },
+  "s2:a4e56e6bda3fba17b655acff3490433d10a853c6": {
+    "title": "Pseudo-grand canonical molecular dynamics via volumetrically controlled osmotic pressure.",
+    "date_seen": "2026-10-26",
+    "tags": [
+      "electrochemistry",
+      "constant-potential"
+    ]
   }
 }
