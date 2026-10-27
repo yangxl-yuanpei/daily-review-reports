@@ -10180,5 +10180,100 @@
       "electrochemistry",
       "constant-potential"
     ]
+  },
+  "s2:a4ea0b57f0fd761fc49aa2a13028049c811d973a": {
+    "title": "A Facile Two-Step High-Throughput Screening Strategy of Advanced MOFs for Separating Argon from Air",
+    "date_seen": "2026-10-27",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:a98916aad604eba50c987370e826d709ff8966f7": {
+    "title": "Versatile functionalization of de-fluorinated FMOF-1 towards enhanced carbon capture and separation: a predictive molecular simulation study.",
+    "date_seen": "2026-10-27",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:a99d3f5103052efd071625b568304d001b0d8e30": {
+    "title": "Bridging Oxide Thermodynamics and Site-Blocking: A Computational Study of ORR Activity on Platinum Nanoparticles",
+    "date_seen": "2026-10-27",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:ab426917411367dea8426e23777a21c8bdafe481": {
+    "title": "Probing nuclear quantum effects in electrocatalysis via a machine-learning enhanced grand canonical constant potential approach",
+    "date_seen": "2026-10-27",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "NQE",
+      "catalysis",
+      "constant-potential"
+    ]
+  },
+  "s2:ad67bf60919f4752e3218295ab17167783485e58": {
+    "title": "The phase transition characteristics of n-pentane in silica slits with different wettability by Monte Carlo method",
+    "date_seen": "2026-10-27",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:ae49cebd015fa85e178956571fd82eea29974a48": {
+    "title": "Modeling Gas Adsorption and Mechanistic Insights into Flexibility in Isoreticular Metal–Organic Frameworks Using High-Dimensional Neural Network Potentials",
+    "date_seen": "2026-10-27",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:aff8febf326ab711397ec18c3da5ab50f3d7a237": {
+    "title": "Modeling CO2 adsorption in flexible MOFs with open metal sites via fragment-based neural network potentials.",
+    "date_seen": "2026-10-27",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "constant-potential",
+      "surface",
+      "dft",
+      "generative"
+    ]
+  },
+  "s2:b07506e3ba9b4df1704447cdc4298c17de6ae01e": {
+    "title": "Molecular Insights into the Control Mechanism of the Solid-Liquid Interface Interaction on Shale Oil Occurrence: Grand Canonical Monte Carlo and Molecular Dynamics Simulations Investigation.",
+    "date_seen": "2026-10-27",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:b99fa0dfa2d5318a4dd4085b9260082a2718e3c1": {
+    "title": "Implementation of Genetic Algorithms to Optimize Metal-Organic Frameworks for CO2 Capture.",
+    "date_seen": "2026-10-27",
+    "tags": [
+      "electrochemistry",
+      "constant-potential"
+    ]
+  },
+  "s2:bc6cf63629ba5978c80bf268f6c378f37ceba098": {
+    "title": "Temperature-Dependent Adsorbate-Induced Surface Roughening Onset in Electrochemical CO2 Reduction on Copper.",
+    "date_seen": "2026-10-27",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
   }
 }
