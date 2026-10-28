@@ -10275,5 +10275,95 @@
       "surface",
       "dft"
     ]
+  },
+  "s2:25b77921cce21d71a24d25ce7fceca4bff3ed656": {
+    "title": "Toward Predictive Modeling of Li-Si Anode Interfaces: From Atomistic Mechanisms to Machine Learning Force Fields",
+    "date_seen": "2026-10-28",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:68f71e7c220da57ee17b97d0df28c82b675e4229": {
+    "title": "Dataset merging strategy for efficient construction of a machine-learning force field: A case of CeO2 surfaces with an oxygen vacancy.",
+    "date_seen": "2026-10-28",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:02a6ea085c4e233d8aa424d28a59caca59eea6d2": {
+    "title": "Artificial Intelligence-Driven Multimodal Integration of Genomic, Pathological, and Clinical Data in Breast Cancer: A Narrative Review of Clinical Applications and Translational Challenges",
+    "date_seen": "2026-10-28",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:bcea2f3a0c7d2f1b01ea22b67e913f8fe3ffd763": {
+    "title": "$\\beta$-Ga$_2$O$_3$(001) surface reconstructions from first principles and experiment",
+    "date_seen": "2026-10-28",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface"
+    ]
+  },
+  "s2:bcf309d7c413af0995dd9ad7a28ce3df60715f48": {
+    "title": "A complementary experimental and computational study on methanol adsorption isotherms of H-ZSM-5.",
+    "date_seen": "2026-10-28",
+    "tags": [
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:c06ed8a064aec51c6b6ef410cf99ef54fafcdb56": {
+    "title": "Electrified metal–water interfaces at constant potential: Data-efficient transfer learning for machine-learning-based molecular dynamics",
+    "date_seen": "2026-10-28",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "generative"
+    ]
+  },
+  "s2:c190f8d27e64c32143bebc085152c08d8e24fbe0": {
+    "title": "Grand-Canonical Equivariant Neural Potentials for Electrochemical Interfaces.",
+    "date_seen": "2026-10-28",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:c19716341ff445a9db2d1f225e10e252e5b4da1e": {
+    "title": "Adsorption of hydrogen, methane, CO2 and their binary mixtures in silicalite-1: role of pore characteristics revealed by molecular simulations",
+    "date_seen": "2026-10-28",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:c4050761d2ec6cad5d5a586a9848fc380d5548e3": {
+    "title": "Toward rational understanding of the hydrogen evolution polarization curves through multiscale simulations",
+    "date_seen": "2026-10-28",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "constant-potential",
+      "dft"
+    ]
+  },
+  "s2:c4270e028a36470c3e9ad4345f4a36b8474822b1": {
+    "title": "Surface-Controlled TiO2 Nanocrystals with Catalytically Active Single-Site Co Incorporation for the Oxygen Evolution Reaction",
+    "date_seen": "2026-10-28",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "constant-potential",
+      "surface"
+    ]
   }
 }
