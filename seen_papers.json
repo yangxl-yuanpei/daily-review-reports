@@ -10365,5 +10365,82 @@
       "constant-potential",
       "surface"
     ]
+  },
+  "s2:32b2b299296feecdabf9c4e13c48f315d6a2b25e": {
+    "title": "Machine-learning-based intraventricular flow and pressure mapping with moving boundaries for color doppler",
+    "date_seen": "2026-10-29",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:06fa59166d95c80a033c66a90b52e7c104ccf3c8": {
+    "title": "The Impact of Artificial Intelligence on Visual and Performing Arts: A Comprehensive Literature Review",
+    "date_seen": "2026-10-29",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:01e740516d8f6c3bd9dd6348a5f6316b1b53ab70": {
+    "title": "Quantitative Structure-activity Relationship-based Neural Network Model in Screening Potential Inhibitors from Brown Algae against RelA in Oral Squamous Cell Carcinoma",
+    "date_seen": "2026-10-29",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0209fc7329da5a7238256afb07215e305d63db91": {
+    "title": "Application of artificial intelligence for predicting injury risk in athletes: an approach using recurrent neural networks",
+    "date_seen": "2026-10-29",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0282e764f50c731edc068d6b67c5bff5ae3f6a6d": {
+    "title": "Applications of artificial intelligence and advanced imaging in pediatric diffuse midline glioma",
+    "date_seen": "2026-10-29",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:c6fb37b9ebef6e5875a145193cc608a844f36be8": {
+    "title": "Surface chemistry-mediated porewater fluctuations boost CO2 docking in calcium silicate hydrates",
+    "date_seen": "2026-10-29",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:c862ece05ff2a7693e5cdc29dc71992ebe5b6323": {
+    "title": "A Molecular Perspective on Hydrogen Behavior in Moist Depleted Shale: Implications for Geological Storage",
+    "date_seen": "2026-10-29",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:cb354d076f3de65bc70f28439cc3582e0780de44": {
+    "title": "Freezing line of polydisperse hard spheres via direct-coexistence simulations.",
+    "date_seen": "2026-10-29",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:cc12bf46c29dc7a22bde3a63e60cc866c342b47a": {
+    "title": "Effects of de-fluorination on hydrophobicity and on CO2 and CH4 adsorption under high humidity in MeMOFs, methylated analogues of FMOFs.",
+    "date_seen": "2026-10-29",
+    "tags": [
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:d6bba21fae96ed9a54fd38af1fdeb93cd67793c5": {
+    "title": "Data-Driven Discovery of Water-Stable Metal-Organic Frameworks with High Water Uptake Capacity.",
+    "date_seen": "2026-10-29",
+    "tags": [
+      "constant-potential"
+    ]
   }
 }
