@@ -10442,5 +10442,99 @@
     "tags": [
       "constant-potential"
     ]
+  },
+  "s2:a5f3e4c6ce1d1b57afa9c1f27a06d1cb44f58d27": {
+    "title": "A Two-State Core–Surface Enhanced Single Particle Model for Real-Time Thermal Gradient Estimation of Lithium-Ion Batteries in Electric Vehicles",
+    "date_seen": "2026-10-30",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:dc4305468f81e28bd7ca89deb7fd7436ab0b5ffa": {
+    "title": "Interlayer Magnetic Ordering in Two-Dimensional Metal-Organic Frameworks for Electrocatalytic Oxygen Reduction: A Grand Canonical Density Functional Theory Study.",
+    "date_seen": "2026-10-30",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "constant-potential",
+      "dft"
+    ]
+  },
+  "s2:ddbbc447743d05e38960d8403162b8bc23a47551": {
+    "title": "Effective Separation of Acetylene/Ethylene by the Mesoporous MIL-100(Cr) MOF.",
+    "date_seen": "2026-10-30",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:dfa5bece059b50f6e62be4dde5e5c97ac3dbbd6e": {
+    "title": "Noncovalent guest-host interactions unlock the potential of MOFs for anesthetic xenon recovery: GCMC and DFT insights into real anesthetic conditions.",
+    "date_seen": "2026-10-30",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:e094c32ead1c3a5dbb3dc827b2365747314c2b41": {
+    "title": "From informal markets to Limit Order Book dynamics: a mean field connection",
+    "date_seen": "2026-10-30",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:e523f110fed21ee998c2162736a015a1be6420b0": {
+    "title": "Grand Canonical Monte Carlo Simulations for Hydrogen Adsorption on Metal Surfaces Using Neural Network Potentials.",
+    "date_seen": "2026-10-30",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "catalysis",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:e5a87dd462165043dd8893c5d78c0349173fddf2": {
+    "title": "Amino‐functionalized bimetallic MOFs with ultrahigh CF4/N2 selectivity for efficient greenhouse gas separation",
+    "date_seen": "2026-10-30",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:e6297a8475d0b1e39a313395d2cd27d87cde2e55": {
+    "title": "Molecular Understanding of CO2 Absorption by Choline Chloride/Urea Confined within Nanoslits.",
+    "date_seen": "2026-10-30",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:e6abbaf71f731403a2b2162db5c98833e44c0ff4": {
+    "title": "Constant-Potential Machine Learning Force Field for the Electrochemical Interface.",
+    "date_seen": "2026-10-30",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "catalysis",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:e7259b7de06ba0ac3218f8181256fcc3f81189b2": {
+    "title": "CH4 Adsorption Behavior on Coals with Different Ranks by Grand Canonical Monte Carlo Simulations",
+    "date_seen": "2026-10-30",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
   }
 }
