@@ -10536,5 +10536,94 @@
       "constant-potential",
       "surface"
     ]
+  },
+  "s2:01ff6b96d1ffbe2254c1570cfeeaec690b3d02c7": {
+    "title": "Optimization of NaCl-assisted starch extraction from Alocasia macrorrhizos corms and characterization of the extracted starch",
+    "date_seen": "2026-10-31",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:175fe95981463731cf93cd0336182286c2281cf2": {
+    "title": "Differentiable Electronic Grand Canonical Learning for Electrochemistry",
+    "date_seen": "2026-10-31",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:1b5b5bc74b8f8c458c948bd3e578e6b8060ff71c": {
+    "title": "LASPAI-Assisted Mechanistic Investigation of Carbon Poisoning in Molecular Copper-Catalyzed CO2 Reduction",
+    "date_seen": "2026-10-31",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface"
+    ]
+  },
+  "s2:eae1fbab38959b8035784d93f142271dae9e6f37": {
+    "title": "Active learning-guided catalyst design for selective acetate production in CO electroreduction",
+    "date_seen": "2026-10-31",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "dft",
+      "active-learning"
+    ]
+  },
+  "s2:eb76493b1ea0eb4555e33dcca137f84bfd33b415": {
+    "title": "New perspectives on the models of porous carbon",
+    "date_seen": "2026-10-31",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:f02003f108ec2b9c7c54367968a272b2de213b9e": {
+    "title": "Practical Applications of Grand-canonical Electronic Structure Calculations in Electrochemical Simulation.",
+    "date_seen": "2026-10-31",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:f1a9e957bda71496c98acc07422831ff0fc63f63": {
+    "title": "Adsorption of Methane, Ethane and Their Equimolar Mixture in NIIC‐20‐Bu Metal‐Organic Framework from Grand Canonical Monte Carlo Simulations and Artificial Neural Networks",
+    "date_seen": "2026-10-31",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:f4d921236959260e874ff379988d13283ca5ee43": {
+    "title": "Development of SAFT-Based Coarse-Grained Models of Carbon Dioxide and Nitrogen",
+    "date_seen": "2026-10-31",
+    "tags": [
+      "constant-potential"
+    ]
+  },
+  "s2:f7f9c7ae6e99555c7ef7fcefed2421842d0f0f2d": {
+    "title": "CO2 adsorption mechanisms in hydrated silica nanopores: Insights from grand canonical Monte Carlo to classical and ab initio molecular dynamics",
+    "date_seen": "2026-10-31",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:f8881e78e5ea7601bd190346d258e6d6d4be61ab": {
+    "title": "Integrating Molecular Simulations with Machine Learning to Discover Selective MOFs for CH4/H2 Separation",
+    "date_seen": "2026-10-31",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
   }
 }
