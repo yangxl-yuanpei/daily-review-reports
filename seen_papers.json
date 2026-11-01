@@ -10625,5 +10625,89 @@
       "constant-potential",
       "surface"
     ]
+  },
+  "s2:59921503d50cd96412ddf206a3a089ad27d9d231": {
+    "title": "Distilling Large-Scale Machine Learning Interatomic Potentials to Predict Long-Timescale Electrolyte Transport Properties",
+    "date_seen": "2026-11-01",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:5d77e1bf2a15dc4c6296707459f4e87715cf3911": {
+    "title": "Unraveling Structure and Spectroscopic Signatures of Pt/γ-Al2O3 via an Artificial Intelligence-Enabled Simulation Framework.",
+    "date_seen": "2026-11-01",
+    "tags": [
+      "MLFF",
+      "catalysis"
+    ]
+  },
+  "s2:616fbe8ae98c8d9f45d06caca9023260cea0564e": {
+    "title": "Computational advances in electrochemical CO2 reduction: design of copper-based and atomically dispersed catalysts, interfacial dynamics, and machine learning",
+    "date_seen": "2026-11-01",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "constant-potential",
+      "surface",
+      "dft",
+      "generative"
+    ]
+  },
+  "s2:67c44c6f98f60169dd84fb9b489f6de28915b088": {
+    "title": "Energy Partitioning in Dust-catalyzed $\\mathrm{H_2}$ and HD Formation Revealed by Molecular Simulations Considering Nuclear Quantum Effects",
+    "date_seen": "2026-11-01",
+    "tags": [
+      "NQE",
+      "surface"
+    ]
+  },
+  "s2:82450789f34f50f376e10951397d1c96c1bb42c3": {
+    "title": "Ultrafast Nonlinear Vibrational Spectroscopy of Aqueous\nSolutions at Surfaces and in Heterogeneous Environments",
+    "date_seen": "2026-11-01",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:0325898c835d2fcf7343276d368f81c66a2dd949": {
+    "title": "Cellulase production, optimization and characterization from Bacillus velezensis 2H using carrot waste as a substrate; response surface methodology (RSM) and Artificial Neural Network (ANN) modeling",
+    "date_seen": "2026-11-01",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:f9f853dd7724d4bbea99eb85f0765bab34abd98c": {
+    "title": "Accelerated Screening of Zeolites for Methanol-to-Propylene Conversion Using Machine Learning with Interpretable Selectivity Function",
+    "date_seen": "2026-11-01",
+    "tags": [
+      "catalysis",
+      "constant-potential",
+      "dft"
+    ]
+  },
+  "s2:fdd0cf2b26de4006a1710121019d462227bf2d26": {
+    "title": "Computational Study on the Separation of Pentane Isomers in Functionalized UiO-66 Metal-Organic Frameworks",
+    "date_seen": "2026-11-01",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:c61c9b4161840c1ef013b090649e22e072cbb02e": {
+    "title": "Vibrational properties and lattice thermal conductivity of bulk and monolayer ZrS2 at finite temperatures",
+    "date_seen": "2026-11-01",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:cc795858a71d0bb097310c1562007571154fdd6c": {
+    "title": "Accurate prediction of electron correlation energies of topological atoms by delta learning from the Müller approximation.",
+    "date_seen": "2026-11-01",
+    "tags": [
+      "general"
+    ]
   }
 }
