@@ -10709,5 +10709,90 @@
     "tags": [
       "general"
     ]
+  },
+  "s2:e54d11bb9c6e701d51bedc5824cd07a418f15ae2": {
+    "title": "Thermodynamically Consistent Machine Learning Potentials for Constant-Potential Simulations.",
+    "date_seen": "2026-11-02",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:d8e29dda547430130f017eea72676888af35da0d": {
+    "title": "Effect of Cs vacancy on thermal conductivity in CsPbBr3 perovskites unveiled by deep potential molecular dynamics.",
+    "date_seen": "2026-11-02",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "dft"
+    ]
+  },
+  "s2:98ef330e8e6319b6f8be38aaaa42681bf335f99b": {
+    "title": "Accurate Lattice Free Energies of Packing Polymorphs from Probabilistic Generative Models",
+    "date_seen": "2026-11-02",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:b0026c16c051087b06ba03123c3c3d48080cf88f": {
+    "title": "Design and Fabrication of Wearable Flexible 3D Tactile Sensors",
+    "date_seen": "2026-11-02",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:b0af8e79fcdb303fbf993d7c507c88098c22c0a3": {
+    "title": "Machine Learning Force Field for Optimization of Isolated and Supported Transition Metal Particles",
+    "date_seen": "2026-11-02",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "catalysis",
+      "dft"
+    ]
+  },
+  "s2:babdce4b4bcfe59c7fb3d94e7190d6d6a5579204": {
+    "title": "Methods for Theoretical Treatment of Local Fields in Proteins and Enzymes.",
+    "date_seen": "2026-11-02",
+    "tags": [
+      "electrochemistry",
+      "catalysis"
+    ]
+  },
+  "s2:f1d3adf6ec85f6257f349f25495bbb3e4b6d061f": {
+    "title": "Active-Learning Assisted General Framework for Efficient Parameterization of Force-Fields.",
+    "date_seen": "2026-11-02",
+    "tags": [
+      "surface",
+      "active-learning"
+    ]
+  },
+  "s2:a5a3ebd87758dccdb8c6c46703eb31a471622864": {
+    "title": "DeePMD-kit v3: A Multiple-Backend Framework for Machine Learning Potentials",
+    "date_seen": "2026-11-02",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:cf4c044d12951721092734193a093685214cc8b2": {
+    "title": "Machine-learning prediction of facet-dependent CO coverage on Cu electrocatalysts",
+    "date_seen": "2026-11-02",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:a1416ea4f0fc732ee6e7737fea70b689b535ea76": {
+    "title": "Multiscale Force Field Model Based on a Graph Neural Network for Complex Chemical Systems.",
+    "date_seen": "2026-11-02",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface",
+      "dft"
+    ]
   }
 }
