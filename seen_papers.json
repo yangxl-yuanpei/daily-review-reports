@@ -10794,5 +10794,85 @@
       "surface",
       "dft"
     ]
+  },
+  "s2:6b22886d927778460d3f426461daee9cd7b0fa3b": {
+    "title": "Generative Design and Graph Neural Network Screening of Novel Bimetallic Alloy Catalysts for the Hydrogen Evolution Reaction",
+    "date_seen": "2026-11-03",
+    "tags": [
+      "catalysis",
+      "surface",
+      "dft",
+      "generative"
+    ]
+  },
+  "s2:0fb303a8e864feb8dbbab8da4dbf79592c09beb7": {
+    "title": "A Hybrid Message-Passing and Electric-Field Representation for Electrostatic QM/MM Embedding with Machine Learning Interatomic Potentials",
+    "date_seen": "2026-11-03",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:7d18a1fac00b83bb357ce02bd93831849fb6d41a": {
+    "title": "Unlocking the electronic and adsorption origin of doping-engineered WS2 monolayers: a DFT investigation with machine learning validation",
+    "date_seen": "2026-11-03",
+    "tags": [
+      "MLFF",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:ce22d20c7cee6bc74b3d7d4dbd8d4b1c29275cec": {
+    "title": "AI-Driven Field Enablement Systems for Oncology Commercial Strategy: A Framework for Enhancing Decision-Making and Market Execution",
+    "date_seen": "2026-11-03",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:936ca02377bfde8bc01bfadcdbabfccd53f22139": {
+    "title": "Control Stiffness-Based Motion Reproduction for Environmental Impedance Variation",
+    "date_seen": "2026-11-03",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:9b8958280bac96a79e37b8fe4eaee259c2d3d123": {
+    "title": "Pre-training, fine-tuning, and distillation (PFD): Automatically generating machine learning force fields from universal models",
+    "date_seen": "2026-11-03",
+    "tags": [
+      "MLFF",
+      "surface",
+      "generative"
+    ]
+  },
+  "s2:d4f24dee5cfa4d7aa0c87042425f06103a142261": {
+    "title": "Alkaline Earth Metal Ions Dynamics in Mixed Ionic-Electronic Conductors of Graphite Intercalation Compounds.",
+    "date_seen": "2026-11-03",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:ed96c96e611f348afbd2d7b5ef51c8a44c680944": {
+    "title": "Skittles: GNN‐Assisted Pseudo‐Ligands Generation and Its Application for Binding Sites Classification and Affinity Prediction",
+    "date_seen": "2026-11-03",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:f123f3c8baf6702f2e8b2bcb0db49fb8abc8687d": {
+    "title": "Artificial Intelligence in Non-Invasive Skin Oxygenation Monitoring: Advances, Challenges, and Future Directions",
+    "date_seen": "2026-11-03",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:a88d964863800457a8aa75fa763008333e4becab": {
+    "title": "A transient temperature measurement method for extreme environments based on the combination of MF-LIBS and machine learning.",
+    "date_seen": "2026-11-03",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
