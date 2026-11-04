@@ -10874,5 +10874,88 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:0e4eca6e464888a46159f34d11e2ff2ea879a968": {
+    "title": "Balance between\nGeometric Confinement and Hydrogen\nBond Strength Controls Water Dynamics in 2D hBN Nanopores",
+    "date_seen": "2026-11-04",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:100eedd6c5709d0b06e9fffb51e1e73823586d01": {
+    "title": "Physical determinants of reliable RNA-ligand binding prediction revealed by P-RISE.",
+    "date_seen": "2026-11-04",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:0061d67195af0149c69916d41935870c3b0fdffb": {
+    "title": "Hybrid AI Framework for Predicting Crop Root Intrusion and Structural Degradation in Agricultural Irrigation Networks",
+    "date_seen": "2026-11-04",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:1d8e281669f0b3d2d3ceff92bdb10a5c8481fc85": {
+    "title": "Intrinsic mechanism-guided constant-potential density functional theory screening of two-dimensional conjugated metal-organic frameworks for CO2 electroreduction.",
+    "date_seen": "2026-11-04",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:51449bafc91263a86dc699718e096c074b9464ea": {
+    "title": "Species- and Site-Dependent Adsorption of Iodine-Bearing Molecules on Porous Organic Polymer Fragments and Amorphous Graphene",
+    "date_seen": "2026-11-04",
+    "tags": [
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:521c98dd9a2cbfd3a47c48ceb7cbe438c0a108da": {
+    "title": "Boosted Energy\nExtraction from the CapMix Process\nby Grafting with Titratable Polymers",
+    "date_seen": "2026-11-04",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:a8b4de45126fc139f0d1fec95a92283026efeef7": {
+    "title": "From Ideal Order to Real Disorder: Research Progress in Molecular Simulation of Porous Materials for CO₂ Adsorption",
+    "date_seen": "2026-11-04",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:b4f1587df049f8c1281ef13d362ee5ce612f3c8d": {
+    "title": "Atomistic simulation of batteries via machine learning force fields: from bulk to interface",
+    "date_seen": "2026-11-04",
+    "tags": [
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:c95e3e2557bd6e402cdabe3ce835b156bd60924d": {
+    "title": "Efficient Training of Neural Network Potentials for Chemical and Enzymatic Reactions by Continual Learning",
+    "date_seen": "2026-11-04",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:b157b340936c4311e7c72e21f0acbd4c627739eb": {
+    "title": "Fingerprint Classification Based on Multilayer Extreme Learning Machines",
+    "date_seen": "2026-11-04",
+    "tags": [
+      "general"
+    ]
   }
 }
