@@ -10957,5 +10957,79 @@
     "tags": [
       "general"
     ]
+  },
+  "s2:1a0af79ccfab702f91813ec46a4e36087cf5bb21": {
+    "title": "When do machine-learning potentials need a configuration-dependent kernel? Learning long-range interactions with Fourier neural operators",
+    "date_seen": "2026-11-05",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:6a2cd3407398845c57853af97ec1cff5052f6cc2": {
+    "title": "Novel Approach to Reservoir History Matching to Cut Simulator Dependency by a Cell-Resolution Graph Neural Network Proxy: Fault-Aware Multi-Hop Connectivity, Autoregressive Dynamics, and Partial-Horizon Training",
+    "date_seen": "2026-11-05",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:92190523ef7100f2de783e42c23402ed298283a4": {
+    "title": "The JARVIS infrastructure is all you need for materials design",
+    "date_seen": "2026-11-05",
+    "tags": [
+      "dft"
+    ]
+  },
+  "s2:925c1224216124c51cfeb3020b4bca068cf39e2a": {
+    "title": "Atomistic Molecular Dynamics Simulations of Intrinsically Disordered Proteins",
+    "date_seen": "2026-11-05",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:cb621178a70b3632a88bcca6fc7f897bdf6b84aa": {
+    "title": "Understanding and Mitigating Distribution Shifts For Machine Learning Force Fields",
+    "date_seen": "2026-11-05",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:dbbcdfb7a697fc70470d96f7e75b325c6d0c8eaa": {
+    "title": "Revealing the Proton Slingshot Mechanism in Solid Acid Electrolytes through Machine-Learning Molecular Dynamics.",
+    "date_seen": "2026-11-05",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:cf402c93d874886a779ce1d470521d0428c127c6": {
+    "title": "Quality prediction of steel pipe extrusion based on RBF neural network",
+    "date_seen": "2026-11-05",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:a4d6dc0dae49aea5d1458c4adc1c4b3c75f72d04": {
+    "title": "Efficient exploration of reaction pathways using reaction databases and active learning.",
+    "date_seen": "2026-11-05",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "active-learning"
+    ]
+  },
+  "s2:e2c88f1a496d1cb473d8ae4ce0dba2c932ac3def": {
+    "title": "Enhanced Microfiber Vector Haptic Skin for Texture Angle Information Extraction",
+    "date_seen": "2026-11-05",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:ec935d20934938fb57768d750ea7d2de6f9bbde8": {
+    "title": "Amplifying UHECR arrival direction information using mass estimators at the Pierre Auger Observatory",
+    "date_seen": "2026-11-05",
+    "tags": [
+      "surface"
+    ]
   }
 }
