@@ -11031,5 +11031,80 @@
     "tags": [
       "surface"
     ]
+  },
+  "s2:25d45fbdb5da0c646333a5e29fb1c535a842ffa4": {
+    "title": "Does AI application promote enterprises cross-regional investment? From the perspective of industrial chain synergy",
+    "date_seen": "2026-11-06",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:5824d0df2afa982cf634a79c1a56009a23968a7d": {
+    "title": "A Potential-Gated\nMolecular Circuit with Frictionless\nHydride Transfer for Formic Acid Oxidation",
+    "date_seen": "2026-11-06",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface"
+    ]
+  },
+  "s2:d37507b3ffd1089d9963582b9b453754d33c9a77": {
+    "title": "Beyond\nSwelling: Electrochemical Doping Tunes the\nBalance between Ion Compensation and Exchange in a Hydrated Organic\nMixed Ionic–Electronic Conductor",
+    "date_seen": "2026-11-06",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:ef7411312bffa5fb97291511d5ed929572a63fcf": {
+    "title": "Multiscale modeling of shale-gas flow in nanopores with multiple transport mechanisms",
+    "date_seen": "2026-11-06",
+    "tags": [
+      "constant-potential",
+      "surface",
+      "generative"
+    ]
+  },
+  "s2:9dcfbcfdb3b5c35d46e40088226f49b1089bb60d": {
+    "title": "Universally applicable and tunable graph-based coarse-graining for Machine learning force fields",
+    "date_seen": "2026-11-06",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:96f97820dd6984b88c52cfb581662f00c73fb446": {
+    "title": "Phase transition of Fe under extreme conditions studied by using an anharmonic phonon approach based on machine learning force fields.",
+    "date_seen": "2026-11-06",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:a6736080565e3dda9cba04c8cc2cef7f509840a2": {
+    "title": "Robo-Advisors in Wealth Management: A Bibliometric Study of Research Evolution",
+    "date_seen": "2026-11-06",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:99a3bd5a6cbe97284f32171e0442ea30031da590": {
+    "title": "Using Machine Learning to Generate a GISS ModelE Calibrated Physics Ensemble (CPE)",
+    "date_seen": "2026-11-06",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:d9ef718c7b4433d959d9d8b83b4cf8574310fffd": {
+    "title": "Multiscale metal-based nanocomposites for bone and joint disease therapies",
+    "date_seen": "2026-11-06",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:fa99a36f9225f393788062106a02ece67458a9aa": {
+    "title": "A deep neural network for tactile perception in open scenes",
+    "date_seen": "2026-11-06",
+    "tags": [
+      "general"
+    ]
   }
 }
