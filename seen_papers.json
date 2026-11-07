@@ -11106,5 +11106,81 @@
     "tags": [
       "general"
     ]
+  },
+  "s2:25da8d8505c59bbaf2969d51a822ca00347f695b": {
+    "title": "A Machine Learning Approach to Coupling Photoionization&Multi-Frequency Radiation Hydrodynamics",
+    "date_seen": "2026-11-07",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:02ccc823a67d5e939dedf686d761a312686d5257": {
+    "title": "Neural Network Approximation Aided Kinetic Parameter Inference of Compartment Models in Dynamic PET",
+    "date_seen": "2026-11-07",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:ac56ae00c7ae7f6aff2024db7e889710c09b70ed": {
+    "title": "ART-SM: Boosting Fragment-Based Backmapping by Machine Learning.",
+    "date_seen": "2026-11-07",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:b7ca5880ef667dd409cf86fd69aba729027c1f3a": {
+    "title": "Enhanced Security: Combining ANN and SVM for Superior Brute Force Attack Detection in Cloud Environments",
+    "date_seen": "2026-11-07",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:a316730508dc95db75c99e52c3ddcde73f42568b": {
+    "title": "Diffusion-Driven Inertial Generated Data for Smartphone Location Classification",
+    "date_seen": "2026-11-07",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:a69ed1fa8113fd6a792fbaae06bc7b298add3638": {
+    "title": "Beyond Numerical Hessians: Higher-Order Derivatives for Machine Learning Interatomic Potentials via Automatic Differentiation",
+    "date_seen": "2026-11-07",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:d7e1f60aa00be806685b7d073e91c1aa170a0015": {
+    "title": "Revisiting Machine Learning Potentials for Silicate Glasses: The Missing Role of Dispersion Interactions",
+    "date_seen": "2026-11-07",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:af45b0d58a00c0d214d71dc30a3d34b2e263d071": {
+    "title": "Mapping the impacts of neural networks on human resource management research: a bibliometric analysis",
+    "date_seen": "2026-11-07",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:b6e5b36d446e8f189ee1185fae06067fdeb6aa87": {
+    "title": "Stability of sp3 Hybridized Amorphous Carbon and its Transformation to Nanodiamond",
+    "date_seen": "2026-11-07",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:cc92b3d3fc1a063ceadd704371840534b939dfb2": {
+    "title": "Interfacial behavior from the atomic blueprint: Machine learning-guided design of spatially functionalized α-SiO2 surfaces.",
+    "date_seen": "2026-11-07",
+    "tags": [
+      "catalysis",
+      "surface",
+      "dft",
+      "generative"
+    ]
   }
 }
