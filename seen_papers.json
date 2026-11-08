@@ -11182,5 +11182,86 @@
       "dft",
       "generative"
     ]
+  },
+  "s2:bd25b5983a707c4ca96f79d54133cb96e3dde3e4": {
+    "title": "A Review of Nanowire Devices Applied in Simulating Neuromorphic Computing",
+    "date_seen": "2026-11-08",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:e5d40d1a7814c5cbac3b59e80163e02103636b0c": {
+    "title": "Improving SLICES crystal representation through CHGNet integration and parameter tuning",
+    "date_seen": "2026-11-08",
+    "tags": [
+      "MLFF",
+      "generative"
+    ]
+  },
+  "s2:aa160d10fcaa836809b2be5a4e15a4ca349afc3b": {
+    "title": "Machine Learning Based Drone Detection: Differentiating sUAS from Birds for Base Security",
+    "date_seen": "2026-11-08",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:c31b69d17a28b31990fa6d5cb4e198d26878e965": {
+    "title": "Efficient treatment of long-range electrostatics in charge equilibration approaches.",
+    "date_seen": "2026-11-08",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:d80b2881e65ad58028348d5ebc31c67a83dbc05c": {
+    "title": "Optimizing machine learning interatomic potentials for hydroxide transport: Surprising efficiency of single-concentration training.",
+    "date_seen": "2026-11-08",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:9678d2ad8a758693c2e69e74f6eac41d0cada15f": {
+    "title": "Benchmarking machine learning models for predicting lithium ion migration",
+    "date_seen": "2026-11-08",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "dft",
+      "generative"
+    ]
+  },
+  "s2:924f7561997fa1a12577d96218002a6f29665aed": {
+    "title": "Accurate Prediction of Open-Circuit Voltages of Lithium-Ion Batteries via Delta Learning",
+    "date_seen": "2026-11-08",
+    "tags": [
+      "electrochemistry",
+      "dft"
+    ]
+  },
+  "s2:cc1f461cac3cc468de3090a318a61b49314283bf": {
+    "title": "Atomic‐Scale Dynamics at the Interface of Doped Liquid Gallium: Contrasting Effects of Gallium Oxide and Vacuum",
+    "date_seen": "2026-11-08",
+    "tags": [
+      "MLFF",
+      "catalysis",
+      "surface"
+    ]
+  },
+  "s2:a44ee75a7a96a9b1a513e4a97db0d2b234ff59dd": {
+    "title": "LaPON: A Lagrange's-mean-value-theorem-inspired operator network for solving PDEs and its application on NSE",
+    "date_seen": "2026-11-08",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:efed2b8461e91a7547e72832852c2648c42f08df": {
+    "title": "Artificial Intelligence‐Based Waste Management: A Review of Classification, Techniques, Issues, and Challenges",
+    "date_seen": "2026-11-08",
+    "tags": [
+      "general"
+    ]
   }
 }
