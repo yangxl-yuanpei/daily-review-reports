@@ -11263,5 +11263,76 @@
     "tags": [
       "general"
     ]
+  },
+  "s2:00334df78513256b76ed7cca6ff916353be9c8e8": {
+    "title": "Thermomechanical Properties of Transition Metal Dichalcogenides Predicted by a Machine Learning Parameterized Force Field.",
+    "date_seen": "2026-11-09",
+    "tags": [
+      "dft"
+    ]
+  },
+  "s2:00d5f848a045fcc104632e0cf691156a32aa75f0": {
+    "title": "An MXene/cellulose nanofiber-based multi-parametric tactile sensor for object material identification",
+    "date_seen": "2026-11-09",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:01b801498a89d4c0ec018144997ce7a6cd7256ab": {
+    "title": "CycloWatt: An Affordable, TinyML-Enhanced IoT Device Revolutionizing Cycling Power Metrics",
+    "date_seen": "2026-11-09",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:045c4090c34250b9e2dcd0fdda00791553d4cb64": {
+    "title": "Cost-Based Modeling and Optimization of Secure Matrix Multiplication in the Cloud",
+    "date_seen": "2026-11-09",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:05597f067e65a6ef0559a75fe079da75227607af": {
+    "title": "MOLPIPx: An end-to-end differentiable package for permutationally invariant polynomials in Python and Rust.",
+    "date_seen": "2026-11-09",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:05eb14ac8b4c90653a7bd851f9baf35fb25884ea": {
+    "title": "Machine learning assisted crystal structure prediction made simple",
+    "date_seen": "2026-11-09",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:0638b1b285edc7f77a93b039d42d6174a5fcbc5a": {
+    "title": "Anticipating and examining the alignment of the neck in head impacts using Explainable Artificial Intelligence",
+    "date_seen": "2026-11-09",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:07669dc0b5877284a715bc79a1e88b8b11e5164f": {
+    "title": "Machine Learning-Based Gesture Recognition Glove: Design and Implementation",
+    "date_seen": "2026-11-09",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:07c0e3c9b1391bddc1b43dd14054e61bc97769b1": {
+    "title": "Understanding the Role of 1/2 ⟨110⟩ Dislocations in Deformation Mechanisms of Single-Crystal High-Entropy Carbide Ceramics from Machine Learning Force Field Simulations",
+    "date_seen": "2026-11-09",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:091882a1fb7053431ef521d6367d3fe0ca39bd3c": {
+    "title": "Comparative Study on Cassava Leaf Disease Classification",
+    "date_seen": "2026-11-09",
+    "tags": [
+      "general"
+    ]
   }
 }
