@@ -11334,5 +11334,91 @@
     "tags": [
       "general"
     ]
+  },
+  "s2:02f2126d39657f188855a8a3c9b9fb0d15266106": {
+    "title": "The Quantum Pendulum of Turbulent Flow: Decaying turbulence as a thermal state of an integrable system",
+    "date_seen": "2026-11-10",
+    "tags": [
+      "constant-potential",
+      "generative"
+    ]
+  },
+  "s2:09da8fc1439d975f3350f0580a802be4ca1343ec": {
+    "title": "Neural Network Potentials for Enabling Advanced Small-Molecule Drug Discovery and Generative Design",
+    "date_seen": "2026-11-10",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "generative"
+    ]
+  },
+  "s2:0a7ed38f2b35c5fcce1453f581658599b003211f": {
+    "title": "EXPLORING DEEP TECH: STUDENT PERSPECTIVES AND CROSS-UNIVERSITY ANALYSIS",
+    "date_seen": "2026-11-10",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0a92faa79f4fb2937668e2b10296a922fd1eb077": {
+    "title": "Quantum-accurate machine learning potentials for metal-organic frameworks using temperature driven active learning",
+    "date_seen": "2026-11-10",
+    "tags": [
+      "electrochemistry",
+      "dft",
+      "active-learning",
+      "generative"
+    ]
+  },
+  "s2:0d1eb9c6986252cc83811dac3cc4ec88e68504e1": {
+    "title": "Considerations in the use of machine learning force fields for free energy calculations.",
+    "date_seen": "2026-11-10",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface",
+      "generative"
+    ]
+  },
+  "s2:0d64da3e90bf8f89db9cea86f69c52bfe4bcf882": {
+    "title": "Practical Applications of Advanced Cloud Services and Generative AI Systems in Medical Image Analysis",
+    "date_seen": "2026-11-10",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:0e49bc3c937b7dac2b1c27e7eb4ba83e6352e13e": {
+    "title": "Constant-Potential Machine Learning Molecular Dynamics Simulations Reveal Potential-Regulated Cu Cluster Formation on MoS$_{2}$",
+    "date_seen": "2026-11-10",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "catalysis"
+    ]
+  },
+  "s2:0e80cfaa80572155dbb399f36579eeb98cac3198": {
+    "title": "Time Series Data Generation by Linear Response Model",
+    "date_seen": "2026-11-10",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:0f3211f06a9dee4b5aac336a9adef9c51f190e7a": {
+    "title": "Hybrid Quantum Mechanical, Molecular Mechanical, and Machine Learning Potential for Computing Aqueous-Phase Adsorption Free Energies on Metal Surfaces.",
+    "date_seen": "2026-11-10",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "catalysis",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:0f7160cea1a99ed8c21134661413abc3803ae23e": {
+    "title": "A quantum neural network-based approach to power quality disturbances detection and recognition",
+    "date_seen": "2026-11-10",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
