@@ -11420,5 +11420,89 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:698c96493c212825e26f437303a642adc8973c6a": {
+    "title": "Site Sensitivity Resulting\nin Selective Hydroxylamine\nElectrosynthesis",
+    "date_seen": "2026-11-11",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:c8259f2e6a430cda69e44c3cc33cd477fe114174": {
+    "title": "Dynamic Zn-Based Ensembles Govern CO2 Hydrogenation to Methanol on Cu/ZnO/Al2O3 Catalyst",
+    "date_seen": "2026-11-11",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:cdbfbe5c8a1444f3be47c9d06990e3d007cf052c": {
+    "title": "Unveiling catalytic microenvironments: the convergence of conventional computations and machine learning paradigms",
+    "date_seen": "2026-11-11",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "catalysis",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:f69304c927f18e4441cf5361bbf963d9f22f7524": {
+    "title": "Unraveling Multiphase Growth Dynamics of Phosphorus on Ag(111): Machine Learning‐Driven Design Principles for Controlled Synthesis",
+    "date_seen": "2026-11-11",
+    "tags": [
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:bf3a7eeed5e7fe3a33e7ff355e14ee41799c7260": {
+    "title": "SHAPE MEMORY ALLOYS AND MACHINE LEARNING: A REVIEW",
+    "date_seen": "2026-11-11",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:f2567d1fcd7b7d1a891f06d73ae46f8d10892b4c": {
+    "title": "Machine Learning Guided the Discovery of Superionic Delafossite AgFeO2.",
+    "date_seen": "2026-11-11",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:ec3bcd7dc1431858e1127bb6b457e0d00e922773": {
+    "title": "Kernel Ridge Regression for conformer ensembles made easy with Structured Orthogonal Random Features",
+    "date_seen": "2026-11-11",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:b19ab8f14d3ab9105707804aac058933a85babeb": {
+    "title": "Machine Learning Interatomic Potentials: library for efficient training, model development and simulation of molecular systems",
+    "date_seen": "2026-11-11",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "dft"
+    ]
+  },
+  "s2:c21be6d7cbaf8191dc93c6b4188003579a4606f4": {
+    "title": "Open-set classification and network calibration for multisensor fusion in the transfer learning domain",
+    "date_seen": "2026-11-11",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:cf67486b9fa46dd3b6aaf753101c4f0ca6754141": {
+    "title": "Representing local protein environments with machine learning force fields",
+    "date_seen": "2026-11-11",
+    "tags": [
+      "MLFF"
+    ]
   }
 }
