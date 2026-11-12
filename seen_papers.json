@@ -11504,5 +11504,82 @@
     "tags": [
       "MLFF"
     ]
+  },
+  "s2:a86f83e93779d315140388f1e828daa037931ddc": {
+    "title": "Comparing classical and machine learning force fields for modeling deformation of solid sorbents relevant for direct air capture",
+    "date_seen": "2026-11-12",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:f4a88fbc6bc4b6808ba4ad4e237ea3a9250afe78": {
+    "title": "The Alignment Trap: Complexity Barriers",
+    "date_seen": "2026-11-12",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:d1495dba182c1e3f024fb1c9cd1268c1e6715a46": {
+    "title": "Active vibration reduction of tool holder in hole turning process using machine learning with the assistance of magnetic force",
+    "date_seen": "2026-11-12",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:f30bcb175d574b3458fe6730f1a66134a06f82fe": {
+    "title": "LumiCharge: Spherical Harmonic Convolutional Networks for Atomic Charge Prediction in Drug Discovery.",
+    "date_seen": "2026-11-12",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:efff32fb9c3acb16a445b99fd795437df9e02208": {
+    "title": "Machine Learning Force Fields in Electrochemistry: From Fundamentals to Applications",
+    "date_seen": "2026-11-12",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:b16b4679dd8b76a45f2db61b8b6db70b4ba61d52": {
+    "title": "Size-Dependent Tensile Behavior of Nanocrystalline HfNbTaTiZr High-Entropy Alloy: Roles of Solid-Solution and Short-Range Order",
+    "date_seen": "2026-11-12",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:dac66f18bd5c3fbc7fdf70b43c92b1659ac7063a": {
+    "title": "ШТУЧНИЙ ІНТЕЛЕКТ У СУЧАСНІЙ СТОМАТОЛОГІЇ",
+    "date_seen": "2026-11-12",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:dfae890fe8cb512287229ab7efabe140ae802fea": {
+    "title": "Joint optimization of sensor placement and sparse pressure field reconstruction with a two-stage framework for limited data",
+    "date_seen": "2026-11-12",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:ea6b2857927287aa789d709b4af7700b28b2b6ec": {
+    "title": "Forecasting of heat and mass transfer in Casson nanofluid flow with entropy optimization: Machine learning approach",
+    "date_seen": "2026-11-12",
+    "tags": [
+      "surface",
+      "generative"
+    ]
+  },
+  "s2:f14cf19e1d2d7d93c4ff744bb5cc8ecf3d4cbe31": {
+    "title": "Robust Deep Neural Network for Classification of Diseases from Paddy Fields",
+    "date_seen": "2026-11-12",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
