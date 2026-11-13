@@ -11581,5 +11581,84 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:00bc6a79e2eb472e609f5f4547803c17361f3cd3": {
+    "title": "Orchestr.AI: A Unified Workflow for Training and Benchmarking of Machine-Learned Interatomic Potentials",
+    "date_seen": "2026-11-13",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface",
+      "generative"
+    ]
+  },
+  "s2:465d5773b28e828a11b5e66fd9f27ea24ddf1cd6": {
+    "title": "Graphics processing unit-accelerated quantum simulation for molecular biology and drug discovery: algorithms, platforms, and emerging applications",
+    "date_seen": "2026-11-13",
+    "tags": [
+      "dft",
+      "generative"
+    ]
+  },
+  "s2:0f77b7ffd95073425744d99ca3c94bb5eeacfbbc": {
+    "title": "Artificial Intelligence in Clinical Practice: Unlocking New Horizons in Drug Repurposing for Disease Treatment",
+    "date_seen": "2026-11-13",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:104a4e14caff69eb61fd0bcaf848e5acb8f96ba4": {
+    "title": "Predicting solvation free energies with an implicit solvent machine learning potential",
+    "date_seen": "2026-11-13",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:108326d5d33471c34143699d2a8697c6de196832": {
+    "title": "Deciphering the Mystery in p300 Taz2-p53 TAD2 Recognition.",
+    "date_seen": "2026-11-13",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:1273f8308a73975b6faf76168ca4e36489670a31": {
+    "title": "Effect of Interlayer Bonding on Superlubric Sliding of Graphene Contacts: A Machine-Learning Potential Study",
+    "date_seen": "2026-11-13",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:134c659ff104ed9b6316765d40fce5e67a0e6d14": {
+    "title": "Predictive crystallography at scale: mapping, validating, and learning from 1000 crystal energy landscapes",
+    "date_seen": "2026-11-13",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:14562b6c18eeaba988bed477a0f10fe70954a4e2": {
+    "title": "Artificial intelligence as a catalyst for sustainable business innovation: Perspectives from finance and marketing",
+    "date_seen": "2026-11-13",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "generative"
+    ]
+  },
+  "s2:14e3a1463e13a393f2bf8a894c28c45f8fba4b0d": {
+    "title": "Breast cancer prediction: a CNN approach",
+    "date_seen": "2026-11-13",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:15f045df9de9030384cbcf0997529c60b477e04e": {
+    "title": "A Euclidean transformer for fast and stable machine learned force fields",
+    "date_seen": "2026-11-13",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
