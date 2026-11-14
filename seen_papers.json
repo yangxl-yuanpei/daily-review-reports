@@ -11660,5 +11660,85 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:0034e658122c98893b6b6de8b952727263cfb9cd": {
+    "title": "Binary Classification of Hip Osteoarthritis in Pelvic X-Ray Images Using Deep Learning and Grad-CAM Explainability",
+    "date_seen": "2026-11-14",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0bcff3ed7bbf63ce6812994887b93611b765f6c7": {
+    "title": "Open Quantum System Embedded in an Optimized Reservoir of Molecules",
+    "date_seen": "2026-11-14",
+    "tags": [
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:6faba574f709b2f6da08a44bc0e07146e5474711": {
+    "title": "Coverages and configurations of CO* and H* on Pt(111) under realistic reaction conditions.",
+    "date_seen": "2026-11-14",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:a18f2d9408630b169c52533058d1dda6654affba": {
+    "title": "Dynamic\nMetal Encapsulation in a Pt/TiO\n x\n system\nRegulated by Pt-Assisted TiO2 Amorphization",
+    "date_seen": "2026-11-14",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:faf1563ed54e03ef7653686e476c5a302d449e4a": {
+    "title": "Grand-Canonical Path Reweighting for Constant-Potential Langevin Dynamics.",
+    "date_seen": "2026-11-14",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:fba05cb3676eced0a6cd8fc9571d173e01aec61a": {
+    "title": "Artificial Intelligence in Primary Malignant Bone Tumor Imaging: A Narrative Review",
+    "date_seen": "2026-11-14",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:cf21ead594014fcd21f4c8f29b64caed18f0f6d0": {
+    "title": "ABEEM Polarizable Force Field for PC Lipids: Parameterization and Molecular Dynamics Simulations.",
+    "date_seen": "2026-11-14",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:bb543aa58a4f4330443ffa9f1bd325ddc9972b69": {
+    "title": "Accurate Free Energy Calculation via Multiscale Simulations Driven by Hybrid Machine Learning and Molecular Mechanics Potentials",
+    "date_seen": "2026-11-14",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:f640fee084b09dbf75532355d5170af7c0f5a9d7": {
+    "title": "Machine learning study of surface reconstructions of the\n                    <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\">\n                      <mml:msub>\n                        <mml:mrow>\n                          <mml:mi>Cu</mml:mi>\n                        </mml:mrow>\n               ",
+    "date_seen": "2026-11-14",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:16ae6d73584b3400a7e1954f9b4661dbc0b1e7aa": {
+    "title": "Atomic Diffusivities of Yttrium, Titanium and Oxygen Calculated by Ab Initio Molecular Dynamics in Molten 316L Oxide-Dispersion-Strengthened Steel Fabricated via Additive Manufacturing",
+    "date_seen": "2026-11-14",
+    "tags": [
+      "MLFF"
+    ]
   }
 }
