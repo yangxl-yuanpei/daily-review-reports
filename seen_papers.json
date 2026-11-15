@@ -11740,5 +11740,78 @@
     "tags": [
       "MLFF"
     ]
+  },
+  "s2:02a55b04cbaa0d1ce969cb9b7aedfcd11e945e91": {
+    "title": "A Data‐Driven Framework for Assessing Damage Development in Coupling Joints of Prestressed Concrete Bridges",
+    "date_seen": "2026-11-15",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:59b808a092fe919211058711cc28f2902b789be0": {
+    "title": "Molecular Scale Modelling and Chemical and Mechanical Characterization of Graphene-Oxide-Reinforced Calcium Silicate Hydrate (C-S-H) Using Reactive Force Field (ReaxFF)",
+    "date_seen": "2026-11-15",
+    "tags": [
+      "constant-potential"
+    ]
+  },
+  "s2:0003fa20e0e737ee4479023c3befaaff7172a7b7": {
+    "title": "Implementation of a Convolutional Neural Network Using Artificial Intelligence for Facial Recognition and Automated Attendance Recording in a Workplace Environment",
+    "date_seen": "2026-11-15",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0004d2c1fc1012a1776defe874939fc784d44db0": {
+    "title": "CERVICAL SPINE FRACTURE DETECTION USING DEEP LEARNING",
+    "date_seen": "2026-11-15",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:0006402b0fcd56a7d3dd759df5ff77bbdb808762": {
+    "title": "Multifrequency Encoding in PINNs for Precision Wave Equation Modeling in Inhomogeneous Media",
+    "date_seen": "2026-11-15",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0007785afd21e63ce13892a1383cc3708142830c": {
+    "title": "Application of artificial intelligence algorithms in the diagnosis of temporal lobe epilepsy compared to conventional methods: a systematic review",
+    "date_seen": "2026-11-15",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:0008b7644fc892cea54dfe9cfb75dcd9a418bcef": {
+    "title": "Brain-Inspired Architecture for Spiking Neural Networks",
+    "date_seen": "2026-11-15",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:000a9872fa93aad5ad0bb29afa191ac3d266362a": {
+    "title": "Transferability of datasets between Machine-Learning Interaction Potentials",
+    "date_seen": "2026-11-15",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:000d124c440c335e0447469df6c99bc44972ad55": {
+    "title": "Federated Learning Driven Sparse Code Multiple Access in V2X Communications",
+    "date_seen": "2026-11-15",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00110bf432d0cb376c56e6bf9c1fcd7c545ff978": {
+    "title": "Revealing Vulnerabilities of Neural Networks in Parameter Learning and Defense Against Explanation-Aware Backdoors",
+    "date_seen": "2026-11-15",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
