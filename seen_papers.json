@@ -11813,5 +11813,78 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:ee8437b84896da19a891ac296df29341d9cf6f77": {
+    "title": "Study On the effects of surfactants on CH4-CO2 competitive adsorption of jincheng anthracite based on molecular simulation",
+    "date_seen": "2026-11-16",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:177029e44494126a24bc67b7ba40f5fe5f5de87f": {
+    "title": "Atomic-scale insights into graphene/fullerene tribological mechanisms and machine learning prediction of properties",
+    "date_seen": "2026-11-16",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:177e3d199ea20c634e1f39ea6faf9eadc698fcf2": {
+    "title": "Unveiling the Complexities of the Human Body: Advanced Computational Anatomy for Precision Medicine",
+    "date_seen": "2026-11-16",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:1886bd34f7f1da3290e4a0a7563e5626a2372258": {
+    "title": "Artificial Intelligent based Cost Optimized Smart Energy Distribution and Management",
+    "date_seen": "2026-11-16",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:18ec93bf5919e2be624506b169ceba87aaa799b4": {
+    "title": "COmoving Computer Acceleration (COCA): N-body simulations in an emulated frame of reference",
+    "date_seen": "2026-11-16",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:1a2755424766ae1964c76c5affab7d664c148d86": {
+    "title": "Proof of Concept For a Liquid Gyroscope",
+    "date_seen": "2026-11-16",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:1a79b633e5903190e668b34e5acd785b1ea9e1c2": {
+    "title": "A Critical Analysis of Artificial Intelligence Technology in Accounting",
+    "date_seen": "2026-11-16",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:1b0279c5dcea953d91e3b4a1561115dcefa0c2ce": {
+    "title": "Active learning graph neural networks for partial charge prediction of metal-organic frameworks via dropout Monte Carlo",
+    "date_seen": "2026-11-16",
+    "tags": [
+      "electrochemistry",
+      "active-learning"
+    ]
+  },
+  "s2:1c7334ecabe53720a331d33ffd1a070fba8c74e0": {
+    "title": "Unravelling nitrate transformation mechanisms in karst catchments through the coupling of high-frequency sensor data and machine learning.",
+    "date_seen": "2026-11-16",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:1c838b94f1df2dc9b0f1b31cabfb5472e3700ef4": {
+    "title": "Machine Learning Force Field beyond the Limits of Classical and First-Principles Molecular Dynamics Simulations: The Case of Kaolinite Hydration",
+    "date_seen": "2026-11-16",
+    "tags": [
+      "MLFF"
+    ]
   }
 }
