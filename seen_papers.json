@@ -11886,5 +11886,77 @@
     "tags": [
       "MLFF"
     ]
+  },
+  "s2:5455fc48c693768a181b691908a26c0f1f13b513": {
+    "title": "Machine learning of strength surfaces enables high regularization length phase-field fracture",
+    "date_seen": "2026-11-17",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:1e01f47b57328368b1269f5881a124dfc8b1d641": {
+    "title": "Absolute standard hydrogen electrode potential and redox potentials of atoms and molecules: machine learning aided first principles calculations",
+    "date_seen": "2026-11-17",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:1e07727b688db5c41a4ac879e880bfeb8f61b259": {
+    "title": "Machine learning in drug delivery",
+    "date_seen": "2026-11-17",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:1eb397aa29da1c490fd2536a3bad10a7a4e8793c": {
+    "title": "Research on Dynamic Control of Robot Joint Based on Neural Network",
+    "date_seen": "2026-11-17",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:1ed19c80632ecef2677e7aa03fa183b27a421665": {
+    "title": "OpenQDC: Open Quantum Data Commons",
+    "date_seen": "2026-11-17",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:1ed1e5cdc772e4f06428478ac6783a2826ce0053": {
+    "title": "Spatiotemporal characterization of water diffusion anomalies in saline solutions using machine learning force field",
+    "date_seen": "2026-11-17",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:1ed3085d3ec8012f659f23af311b8934af6a0288": {
+    "title": "AI-Powered Innovations in Electrical Engineering: Enhancing Efficiency, Reliability, and Sustainability",
+    "date_seen": "2026-11-17",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:1f11e09614bfebeb37931be634d56e7744bde317": {
+    "title": "Mathematics of Machine Learning: An Introduction",
+    "date_seen": "2026-11-17",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:200d6e9f07e478c30fa6b3bb972984e347eca0aa": {
+    "title": "IoT Attacks Detection Using Supervised Machine Learning Techniques",
+    "date_seen": "2026-11-17",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:213a312b62d84743d7957c7e868c53f6d0acf4ed": {
+    "title": "Competing Phases of Iron at Earth's Core Conditions From Deep‐Learning‐Aided ab‐initio Simulations",
+    "date_seen": "2026-11-17",
+    "tags": [
+      "general"
+    ]
   }
 }
