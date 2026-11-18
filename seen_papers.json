@@ -11958,5 +11958,80 @@
     "tags": [
       "general"
     ]
+  },
+  "s2:01bba8b40886d967d66fcddce375d35f92949c23": {
+    "title": "FiuMD: Heterogeneous Batching for Coarse-Grained Molecular Dynamics with Neural Network Potentials",
+    "date_seen": "2026-11-18",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:1d20e23aa3fdcd48c5e06e4ab325d9253bdb0fd5": {
+    "title": "Enhanced CO\n 2\n Capture in Type\nIII Porous Liquids via Steric Solvent Structure Regulation",
+    "date_seen": "2026-11-18",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:878d0aa4bb1a1bfde6a88f0224afa9e331f55b12": {
+    "title": "A Neural Density Functional for Spatial Structure and Orientational Ordering in Two-Dimensional Lattice Hard Rods",
+    "date_seen": "2026-11-18",
+    "tags": [
+      "dft"
+    ]
+  },
+  "s2:f6205c82dcc05790cd187aa5dbf8e0ec3c692d52": {
+    "title": "Canonical partition function and equation of state in the heavy quark region of finite-density lattice gauge theory",
+    "date_seen": "2026-11-18",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00192cad54349fb002caf298fa899aa91b846c7a": {
+    "title": "Quantum Entanglement Path Selection and Qubit Allocation via Adversarial Group Neural Bandits",
+    "date_seen": "2026-11-18",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:002cb5be63bcaf31febbb30b0f4e1347018124f9": {
+    "title": "FIPSER: Improving Fairness Testing of DNN by Seed Prioritization",
+    "date_seen": "2026-11-18",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:002cb7fdca2837d0c51cd8eeece112475aa73866": {
+    "title": "Pioneering Dermatological Disease Detection with CNNs",
+    "date_seen": "2026-11-18",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:002f00c16a55ab1b38b75bc2405d2997928feb6d": {
+    "title": "Spatial localisation and sensing in two dimensions via metasurfaces",
+    "date_seen": "2026-11-18",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:0030fb4004f6160d3393aa06a32d136a68cc377f": {
+    "title": "Deep Learning-Based Pre- trained Model for Classification and Detection of Potato Leaf Disease",
+    "date_seen": "2026-11-18",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00342bbadd38eb967ed257d8567b540d7270efa0": {
+    "title": "Neural networks empowered: a machine learning-enabled, Gyro mmID for enhanced virtual reality and motion tracking applications",
+    "date_seen": "2026-11-18",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
