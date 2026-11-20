@@ -12106,5 +12106,83 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:352e5d9bb899bd84299c2af033241d8308a95c9e": {
+    "title": "Characterizing adsorption thermodynamics in carbon capture materials: an efficient first-principles approach",
+    "date_seen": "2026-11-20",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:716f0e5a53ce8a9306ca51053899c681fdab0019": {
+    "title": "Three-dimensional, time-dependent investigation of thermal enhancement in single rock fractures using magnetohydrodynamics and ternary hybrid nanofluids with predictive linear and nonlinear modeling",
+    "date_seen": "2026-11-20",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:7336d78a207579c0e6fbb7461e22268427bcf8be": {
+    "title": "Scaling a Universal Graph Neural Network Force Field to Billions of Atoms on Desk-Side GPUs",
+    "date_seen": "2026-11-20",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:0227cc09414de371f4f4f62a1a52aec0ed9ac0a6": {
+    "title": "AI-native 6G networks: architectures and protocols",
+    "date_seen": "2026-11-20",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:213f7dc0960f052d7d33f98f0ddfa7b82a243ed7": {
+    "title": "Electronic Structure and Functions of Carbon Nitride in Frontier Green Catalysis.",
+    "date_seen": "2026-11-20",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface"
+    ]
+  },
+  "s2:2151c41e84c517c23a00793f9f2891ee602e7818": {
+    "title": "Lattice thermal conductivity of \nZrSe2\n based on the anharmonic phonon approach and on-the-fly machine learning force fields",
+    "date_seen": "2026-11-20",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:22559e3c8042cccd407681d7492ed432cee254e0": {
+    "title": "Efficient Composite Infrared Spectroscopy: Combining the Double-Harmonic Approximation with Machine Learning Potentials",
+    "date_seen": "2026-11-20",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:228a7aedb0054500a325a0744fb078c69aba2b10": {
+    "title": "Evaluating the Effectiveness of Transfer Learning for Predicting the Risk of Autosomal Recessive Diseases Using Pre-Trained Deep Learning Models.",
+    "date_seen": "2026-11-20",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:22bc3f3862180fc0e77cd3db1bef53946f3ad19d": {
+    "title": "FeNNol: an Efficient and Flexible Library for Building Force-field-enhanced Neural Network Potentials",
+    "date_seen": "2026-11-20",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:23ea53f8d3d183de6c9c0d24ab3d03d3e66f3b54": {
+    "title": "Competing nucleation pathways in nanocrystal formation",
+    "date_seen": "2026-11-20",
+    "tags": [
+      "general"
+    ]
   }
 }
