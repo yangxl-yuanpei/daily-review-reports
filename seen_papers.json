@@ -12184,5 +12184,91 @@
     "tags": [
       "general"
     ]
+  },
+  "s2:e3b33d67031021ffd863a639b2407ed5e5f6e6c1": {
+    "title": "Electrochemistry\nGoes Mainstream: Applications in\nModern Total Synthesis",
+    "date_seen": "2026-11-21",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:17472ea114a46d0531451557e13b7b42be9401b6": {
+    "title": "Bifunctional Oxygen Electrodes for PEM-Unitized Regenerative Fuel Cell Fabricated By Inkjet Printing",
+    "date_seen": "2026-11-21",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "generative"
+    ]
+  },
+  "s2:22336ff29d96457c48cb2c2291c87114a7ec7c0a": {
+    "title": "Revisiting Microemulsion Electrochemistry",
+    "date_seen": "2026-11-21",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "generative"
+    ]
+  },
+  "s2:22b0c7d95f8233ed0488207ef215553070c03bcb": {
+    "title": "Investigating Cathode Dynamics in Realistic Desalination Reactors Using Operando High-Energy Synchrotron X-Ray Microscopy",
+    "date_seen": "2026-11-21",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "generative"
+    ]
+  },
+  "s2:25d65970cf9ed1e6fc4cdb425f72716f6e0ff329": {
+    "title": "Magnetic field-enhanced two-electron oxygen reduction reaction using CeMnCo nanoparticles supported on different carbonaceous matrices",
+    "date_seen": "2026-11-21",
+    "tags": [
+      "electrochemistry",
+      "catalysis"
+    ]
+  },
+  "s2:26334c4d2ff9b0568d7fc3ac0b9e54caab14eb1d": {
+    "title": "The effect of ionic association on the electrochemistry of redox mediators for Li–O2 batteries: developing a theoretical framework",
+    "date_seen": "2026-11-21",
+    "tags": [
+      "electrochemistry",
+      "catalysis"
+    ]
+  },
+  "s2:26cbe29c5318b525b995e678da7764fd426b6b71": {
+    "title": "Reversible and irreversible reaction mechanisms of Li–CO2 batteries",
+    "date_seen": "2026-11-21",
+    "tags": [
+      "electrochemistry",
+      "catalysis"
+    ]
+  },
+  "s2:284795a60bf4e5e879f84aef567acf0fa77d1c24": {
+    "title": "Synthesis of Alkoxy-TEMPO Aminoxyl Radicals and Electrochemical Characterization in Acetonitrile for Energy Storage Applications",
+    "date_seen": "2026-11-21",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:2a95049208f93fb1bb7724021d2cd1202d93fc35": {
+    "title": "Electronic structure methods for simulating the applied potential in semiconductor electrochemistry",
+    "date_seen": "2026-11-21",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:3d2ad94d69069af55e4f7e3ca5fb91b286c17fc4": {
+    "title": "Quantum Chemistry Based Battery Electrochemistry: The Effect of Entropy and Anode Surface Structure",
+    "date_seen": "2026-11-21",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "dft"
+    ]
   }
 }
