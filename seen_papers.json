@@ -12270,5 +12270,81 @@
       "surface",
       "dft"
     ]
+  },
+  "s2:775482c064e73bab83c0bf1ef11bb135879803c8": {
+    "title": "AI-assisted high-throughput screening of MOFs for formaldehyde capture.",
+    "date_seen": "2026-11-22",
+    "tags": [
+      "constant-potential",
+      "surface",
+      "generative"
+    ]
+  },
+  "s2:25648093439b28e87fbbaa31257a10cb2e5659cc": {
+    "title": "Hybrid 3D printed three-axis force sensor aided by machine learning decoupling",
+    "date_seen": "2026-11-22",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:2656eb8fe1b5c6c085c57c1a8a717b22088e1316": {
+    "title": "Automated Waste Management using a Customized Vision-based Transformer Model",
+    "date_seen": "2026-11-22",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:26b8e3b3b3d2f485d0c90177447530f973c0de64": {
+    "title": "Deep Learning Techniques for Image Recognition (Machine Learning)",
+    "date_seen": "2026-11-22",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:26d9776d22e0af8d5133eef1db662a70cd2824de": {
+    "title": "Transformers in Cybersecurity: Advancing Threat Detection and Response through Machine Learning Architectures",
+    "date_seen": "2026-11-22",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:27e0aa89088dbb6665e86ab4f430a9ce62addffa": {
+    "title": "Enhancing ferroelectric characterization at nanoscale: A comprehensive approach for data processing in spectroscopic piezoresponse force microscopy",
+    "date_seen": "2026-11-22",
+    "tags": [
+      "surface"
+    ]
+  },
+  "s2:2a2be86d49a0cf1742d725471c06d6aa884b3269": {
+    "title": "Artificial Intelligence in stock broking: A systematic review of strategies and outcomes",
+    "date_seen": "2026-11-22",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:2e169de3840e4c8362c91aadf6d343ac845e39ae": {
+    "title": "Low-index mesoscopic surface reconstructions of Au surfaces using Bayesian force fields",
+    "date_seen": "2026-11-22",
+    "tags": [
+      "catalysis",
+      "surface",
+      "active-learning"
+    ]
+  },
+  "s2:2e381a5588608d20e6e1e112cc938b8879da7f6d": {
+    "title": "Hydrogen diffusion in magnesium using machine learning potentials: a comparative study",
+    "date_seen": "2026-11-22",
+    "tags": [
+      "electrochemistry",
+      "dft",
+      "active-learning"
+    ]
+  },
+  "s2:2fb33aed4aab742ad027a1378038d1777517f31c": {
+    "title": "Phonon and Thermal Properties of Silicon Carbide: A Comparison of Empirical and Machine Learning Potentials",
+    "date_seen": "2026-11-22",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
