@@ -12346,5 +12346,91 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:46613490dcf36f818b419db537c6980f7cdb7732": {
+    "title": "On the Thermodynamic Equivalence of Grand Canonical, Infinite-Size, and Capacitor-Based Models in First-Principle Electrochemistry.",
+    "date_seen": "2026-11-23",
+    "tags": [
+      "electrochemistry",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:47c76e5f3aab4968b23e699cf098bd4597281817": {
+    "title": "(Digital Presentation) Study of Hexylamine Adsorption on a Gold Electrode",
+    "date_seen": "2026-11-23",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:4a3968cdf7a9b9c41a3319e4a4b1d3f1c9ef8be9": {
+    "title": "Efficient Electrochemical Reduction through Flow Cells Using Spherical-Polymer Based Carbon Supported Catalysts as Fixed-Bed Electrode",
+    "date_seen": "2026-11-23",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "surface",
+      "generative"
+    ]
+  },
+  "s2:57205fbac0204100564ad9632068129730932425": {
+    "title": "Li Plating/Stripping Behaviors in Li+/Na+ Mixed Li+ Conductor",
+    "date_seen": "2026-11-23",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:5c3c48497a0ca67d8e4cab7ae61aa24495ad03de": {
+    "title": "A Machine-Learning Accelerated Grand Canonical Sampling Framework for Nuclear Quantum Effects in Constant Potential Electrochemistry",
+    "date_seen": "2026-11-23",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "NQE",
+      "catalysis",
+      "constant-potential"
+    ]
+  },
+  "s2:5d49b6df772358e0dadc0734876656445a9dcfe5": {
+    "title": "Modulating the ion-transfer electrochemistry of perfluorooctanoate with serum albumin and β-cyclodextrin.",
+    "date_seen": "2026-11-23",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:67fa40f4389cbeeb2cd4c4878ee6b4ac2a28256e": {
+    "title": "Titanium Hydride Growth and Tix Fe Intermetallic Particle Dissolution on Grade-2 Titanium Under Simulated Crevice Corrosion Conditions",
+    "date_seen": "2026-11-23",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:689723ea8cc515c7cba59a408a9d342f815403ec": {
+    "title": "Electrochemical Properties of Copper Oxides Obtained from Layered Copper Hydroxide Acetate for Nonenzymatic Glucose Sensing",
+    "date_seen": "2026-11-23",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:6cbadd5a032caaf93d0c30d7e1d5f57b43413740": {
+    "title": "New Insights Into Zinc Passivation Through In‐Operando Measured Zincate Concentrations",
+    "date_seen": "2026-11-23",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:6fed5c6974b8fc7623423fb9e4708e3d17ecef7b": {
+    "title": "Analytical Electrochemistry of Nickel and Platinum Electrolytes",
+    "date_seen": "2026-11-23",
+    "tags": [
+      "electrochemistry",
+      "catalysis"
+    ]
   }
 }
