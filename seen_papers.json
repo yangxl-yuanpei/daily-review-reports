@@ -12432,5 +12432,76 @@
       "electrochemistry",
       "catalysis"
     ]
+  },
+  "s2:0307cc9c10cb2a95f419f8b8ee86e442580c0edf": {
+    "title": "Enhanced conversion of nitrilotris(methylene phosphonic acid) by self-excited oscillation cavitation-activated peroxymonosulfate: synergistic effects and artificial neural network modelling.",
+    "date_seen": "2026-11-24",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00008165007b440179d42a49c7c786477e24f6ed": {
+    "title": "Advanced Diagnosing and Localizing Melanoma from Whole-Slide Images with Convolutional Neural Networks",
+    "date_seen": "2026-11-24",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:2fd504dd845f10e1a7b07fe579d86494ca4a460f": {
+    "title": "Embracing exascale computing in nucleic acid simulations",
+    "date_seen": "2026-11-24",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:3116a013c459ba80b8e3e3d50dd0d777b7ce70d5": {
+    "title": "Quantum mechanical-based strategies in drug discovery: Finding the pace to new challenges in drug design.",
+    "date_seen": "2026-11-24",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:3139e0c7002df948519a66b5a57a43fab9e013b9": {
+    "title": "Artificial intelligence in cybersecurity: Protecting national infrastructure: A USA review",
+    "date_seen": "2026-11-24",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:314a90cfd6dcf83681810afd2c64da0f8699053c": {
+    "title": "Predicting Chemical Biodegradability for Sustainable Chemical Manufacturing: A Machine Learning Approach Using 3D Molecular Descriptors",
+    "date_seen": "2026-11-24",
+    "tags": [
+      "general"
+    ]
+  },
+  "s2:31cd7490c0d1fa8c525d03377fabaab14f880034": {
+    "title": "Collective Variable-Based Enhanced Sampling: From Human Learning to Machine Learning.",
+    "date_seen": "2026-11-24",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:32c54de525d88a936560781397884573a79b09c8": {
+    "title": "Parameter-Free and Electron Counting Satisfied Material Representation for Machine Learning Potential Energy and Force Fields",
+    "date_seen": "2026-11-24",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:34af84b5a9b52551a370ee6770e45cc5198216d9": {
+    "title": "Secure Enhancement for MQTT Protocol Using Distributed Machine Learning Framework",
+    "date_seen": "2026-11-24",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:34e5759e4f04ab9d7ff9e3680a663b56e316cdf1": {
+    "title": "Learning physics-consistent material behavior from dynamic displacements",
+    "date_seen": "2026-11-24",
+    "tags": [
+      "general"
+    ]
   }
 }
