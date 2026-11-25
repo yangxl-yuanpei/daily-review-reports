@@ -12503,5 +12503,77 @@
     "tags": [
       "general"
     ]
+  },
+  "s2:00509cf9f42d96334c6829a7608355bf4c16a81d": {
+    "title": "Advances in Infrared Detectors for In-Memory Sensing and Computing",
+    "date_seen": "2026-11-25",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0063581e1b2646179c00523916c1196414e99923": {
+    "title": "Enhancing skin lesion classification with advanced deep learning ensemble models: a path towards accurate medical diagnostics.",
+    "date_seen": "2026-11-25",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:006a48cbb2a630486e901cbaf73a6434d04f4bc3": {
+    "title": "Data-driven continuum damage mechanics with built-in physics",
+    "date_seen": "2026-11-25",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:006c13d76a401a142f0ac49149031806c0fa51b2": {
+    "title": "Neural Network Matrix Product Operator: A Multi-Dimensionally Integrable Machine Learning Potential",
+    "date_seen": "2026-11-25",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:006d058f09af61bcd7046792616e59dfe53e7eff": {
+    "title": "The application of artificial intelligence for Rapid On-Site Evaluation during flexible bronchoscopy",
+    "date_seen": "2026-11-25",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0073dd3b9952b388e5545fb3a88fb5936decce28": {
+    "title": "Fracture Forecasting through Deep Learning's Role in Bone Injury Detection and Classification",
+    "date_seen": "2026-11-25",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:00769b370880d736472d92d4e654699b9e04cb0b": {
+    "title": "Automatic Feature Extraction from High-Resolution Satellite Imagery using Deep Learning techniques",
+    "date_seen": "2026-11-25",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:00795c0fdfb74f627fd5c61ce2f2f9404822b14d": {
+    "title": "Price Prediction for Fresh Agricultural Products Based on a Boosting Ensemble Algorithm",
+    "date_seen": "2026-11-25",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:007b4cbe54be55eda02112a60558dfe1e7249a23": {
+    "title": "Enhanced BPINN Training Convergence in Solving General and Multi-scale Elliptic PDEs with Noise",
+    "date_seen": "2026-11-25",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:007cc3ab885e933562c534045ab6b4f1c7d39af3": {
+    "title": "A fast general thermal simulation model based on Multi-Branch Physics-Informed deep operator neural network",
+    "date_seen": "2026-11-25",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
