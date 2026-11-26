@@ -12575,5 +12575,86 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:033789349747da720f76593deacd4a5273b96507": {
+    "title": "Efficient spin-lattice dynamics and spin thermometry with machine-learned magnetic potentials",
+    "date_seen": "2026-11-26",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:79bc04417a9d0c15e8bf03c87d8c76141dcc185f": {
+    "title": "Computing hydration free energies and crystalline solubility of drug-like molecules with MACE",
+    "date_seen": "2026-11-26",
+    "tags": [
+      "electrochemistry",
+      "dft",
+      "generative"
+    ]
+  },
+  "s2:001c9f3407777560ea9203e3b9136c442c0e6465": {
+    "title": "Design an Intelligent Robotic Material Inspection System for EV Components",
+    "date_seen": "2026-11-26",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:7b926f17c3938335198ce6505f2626a6f491c471": {
+    "title": "Donnan Grand Canonical Monte Carlo Simulations with Fast Ewald Summation for Calculating Individual Ionic Chemical Potentials",
+    "date_seen": "2026-11-26",
+    "tags": [
+      "electrochemistry",
+      "constant-potential"
+    ]
+  },
+  "s2:99daea73453f45bbbb68809b55e4691dba0ffde4": {
+    "title": "Atomistic insight into defect-mediated boron redistribution and high-temperature strengthening in TiAl alloys",
+    "date_seen": "2026-11-26",
+    "tags": [
+      "electrochemistry",
+      "surface",
+      "generative"
+    ]
+  },
+  "s2:00d1a9d5d76fe48cbad182d6cb65a2c8bd780712": {
+    "title": "Behind the Search Rankings: How AI is Learning to Explain Itself",
+    "date_seen": "2026-11-26",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:352dc4317d22dab64117865f5f72c3e30dcbcfe9": {
+    "title": "Synergistic Integration of Physical Embedding and Machine Learning Enabling Precise and Reliable Force Field.",
+    "date_seen": "2026-11-26",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface",
+      "dft"
+    ]
+  },
+  "s2:36b5033b18a26a60d9b8265428bb3d616d90cb79": {
+    "title": "A Machine Learning Force Field for Bio-Macromolecular Modeling Based on Quantum Chemistry-Calculated Interaction Energy Datasets",
+    "date_seen": "2026-11-26",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:36fb35c3c451cf9aefe38ecaf0f84c4cb73689c0": {
+    "title": "Generative Artificial Intelligence [GAI]: Enhancing Future Marketing Strategies with Emotional Intelligence [EI], and Social Skills?",
+    "date_seen": "2026-11-26",
+    "tags": [
+      "electrochemistry",
+      "generative"
+    ]
+  },
+  "s2:370ffd8c1f964ef5095dc097b0816010195564d0": {
+    "title": "Exploring inhomogeneous surfaces: Ti-rich SrTiO3(110) reconstructions via active learning",
+    "date_seen": "2026-11-26",
+    "tags": [
+      "surface",
+      "dft",
+      "active-learning"
+    ]
   }
 }
