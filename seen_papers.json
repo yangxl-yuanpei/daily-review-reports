@@ -12656,5 +12656,83 @@
       "dft",
       "active-learning"
     ]
+  },
+  "s2:77c80ac65355c5414f7033942b989b6b2c0b5252": {
+    "title": "FLAMES – A flexible and extensible code for Monte Carlo simulations of nanoporous materials",
+    "date_seen": "2026-11-27",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "constant-potential",
+      "surface"
+    ]
+  },
+  "s2:00853b8ffe9f9731d74f495655d4fe6074d2fea7": {
+    "title": "Modeling Zinc Complexes Using Neural Networks",
+    "date_seen": "2026-11-27",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface"
+    ]
+  },
+  "s2:008a4a5cbcc960f8045061cb852b430f4c8ffb5f": {
+    "title": "Enhancing Intake Monitoring: Transfer Learning for Audio-Based Detection of Swallowing Events",
+    "date_seen": "2026-11-27",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:008a739d22ff944ee6e7086eb759f1e61f92de23": {
+    "title": "From Epilepsy Seizures Classification to Detection: A Deep Learning-based Approach for Raw EEG Signals",
+    "date_seen": "2026-11-27",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:008e767c5e7de1e730327d0d4a433095d4a285ca": {
+    "title": "High-throughput investigation of stability and Li diffusion of doped solid electrolytes via neural network potential without configurational knowledge",
+    "date_seen": "2026-11-27",
+    "tags": [
+      "electrochemistry",
+      "MLFF"
+    ]
+  },
+  "s2:00914799fe3d1551e1b9fad7f873de2cb18c71b6": {
+    "title": "Evaluation of Electrical Properties and Uniformity of Single Wall Carbon Nanotube Dip-Coated Conductive Fabrics Using Convolutional Neural Network-Based Image Analysis",
+    "date_seen": "2026-11-27",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:0094182f8bd1d2c276b4b1cf324d57f48ecde078": {
+    "title": "Customized Convolutional Neural Network for Glaucoma Detection in Retinal Fundus Images",
+    "date_seen": "2026-11-27",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:0095911342e08e2d14088618bdc3be8809352108": {
+    "title": "Green Synthesis and Zinc-Oxide Nanoparticles for Corrosion Inhibition and Modeling Corrosion Inhibition of Mild Steel in HCl Solutions",
+    "date_seen": "2026-11-27",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:009a6216ea151a88af1d48d450eb480f99c41a9d": {
+    "title": "Input signal accumulation capability of the FitzHugh-Nagumo neuron.",
+    "date_seen": "2026-11-27",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:009fd3acf421c73a47a98e498cb3b452bbffcef5": {
+    "title": "A Unified Framework for Depth-Assisted Monocular Object Pose Estimation",
+    "date_seen": "2026-11-27",
+    "tags": [
+      "electrochemistry"
+    ]
   }
 }
