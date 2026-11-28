@@ -12734,5 +12734,91 @@
     "tags": [
       "electrochemistry"
     ]
+  },
+  "s2:5c9d6dfd175c70288a652c05ea60d0a18800cac9": {
+    "title": "Machine-Learning-Enhanced Mapping of Activity and Selectivity in CO$_2$ Hydrogenation across Metal-Alloy Surfaces",
+    "date_seen": "2026-11-28",
+    "tags": [
+      "catalysis",
+      "surface"
+    ]
+  },
+  "s2:0187cbf33752eec5cea23ce92ca89472271012af": {
+    "title": "A hybrid model based on Boruta feature selection and neural network for forecasting hydrological drought",
+    "date_seen": "2026-11-28",
+    "tags": [
+      "electrochemistry",
+      "surface"
+    ]
+  },
+  "s2:64fed38d31d6130c141b00a3b9e2b7cffe0f2cc4": {
+    "title": "Learning Accurate and Transferable Force Fields for Physical Property Predictions of Organic Liquids",
+    "date_seen": "2026-11-28",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "NQE",
+      "dft",
+      "active-learning",
+      "generative"
+    ]
+  },
+  "s2:380107edb5b7113451b5eb35b20685df5c1dd387": {
+    "title": "Determining the hydrogen production potential of ConMo6Se8 chevrel phases",
+    "date_seen": "2026-11-28",
+    "tags": [
+      "electrochemistry",
+      "catalysis",
+      "dft"
+    ]
+  },
+  "s2:38ea7ecaabf0f9bdf4fae71287275765aac296e1": {
+    "title": "Advancing tribological simulations of carbon-based lubricants with active learning and machine learning molecular dynamics",
+    "date_seen": "2026-11-28",
+    "tags": [
+      "electrochemistry",
+      "MLFF",
+      "surface",
+      "dft",
+      "active-learning",
+      "generative"
+    ]
+  },
+  "s2:39563e37aa6f7bf1c07104fc4552e13d29f0591b": {
+    "title": "(Invited) Machine Learning in Chemistry: Reactive Force Fields for Carbon Structure Formation",
+    "date_seen": "2026-11-28",
+    "tags": [
+      "electrochemistry",
+      "active-learning"
+    ]
+  },
+  "s2:3c034cd975cadc0b84fb27d8ebf70447e7b20a13": {
+    "title": "The next revolution in computational simulations: Harnessing AI and quantum computing in molecular dynamics.",
+    "date_seen": "2026-11-28",
+    "tags": [
+      "electrochemistry"
+    ]
+  },
+  "s2:3c1bbe27b18936e6fc89b6601523df8a9fb2c696": {
+    "title": "Lattice thermal conductivity of solid LiF based on machine learning force fields and the Green–Kubo approach",
+    "date_seen": "2026-11-28",
+    "tags": [
+      "MLFF"
+    ]
+  },
+  "s2:3cb76593954a3fd7aa5fa3d5a3da007d6fceec84": {
+    "title": "A data‐driven turbulence modeling for the Reynolds stress tensor transport equation",
+    "date_seen": "2026-11-28",
+    "tags": [
+      "generative"
+    ]
+  },
+  "s2:3cf76891ebb5a6545ce2660fcea84a456418d928": {
+    "title": "Quantum Topological Atomic Properties of 44K molecules",
+    "date_seen": "2026-11-28",
+    "tags": [
+      "surface",
+      "dft"
+    ]
   }
 }
